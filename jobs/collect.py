@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from sources.base import LISTING_TYPES, County, Source  # noqa: E402
 from sources.http import BlockedError  # noqa: E402
+from jobs.progress import Progress  # noqa: E402
 
 
 def make_source(name: str) -> Source:
@@ -54,6 +55,7 @@ class Collector:
         self.out, self.run_id, self.max_pages = out, run_id, max_pages
         self.lock = threading.Lock()
         self.results: list[dict] = []
+        self.progress = None
 
     def checkpoint(self, src: str, c: County, t: str) -> Path:
         return self.out / "checkpoints" / self.run_id / src / c.state.lower() / f"{c.fips}_{t}.json"
@@ -65,7 +67,11 @@ class Collector:
         cp = self.checkpoint(source.name, c, t)
         if cp.exists():
             res = json.loads(cp.read_text()); res["resumed"] = True
+            if self.progress:
+                self.progress.set(source.name, c.state, c.fips, t, "done", res.get("pages", 0), res.get("records", 0))
             return res
+        pr = self.progress.set if self.progress else (lambda *a, **k: None)
+        pr(source.name, c.state, c.fips, t, "running")
         bronze = self.out / "bronze" / source.name / c.state.lower() / c.fips / self.run_id
         bronze.mkdir(parents=True, exist_ok=True)
         seen, rows, pages, total = set(), [], 0, None
@@ -84,6 +90,7 @@ class Collector:
                 seen.add(rec["source_id"])
                 rec["county_fips"], rec["fetched_at"] = c.fips, fetched
                 rows.append(rec)
+            pr(source.name, c.state, c.fips, t, "running", pages, len(rows))
         part = self.part(source.name, c, t)
         part.parent.mkdir(parents=True, exist_ok=True)
         part.write_text("".join(json.dumps(r) + "\n" for r in rows))
@@ -94,6 +101,7 @@ class Collector:
         cp.parent.mkdir(parents=True, exist_ok=True)
         cp.write_text(json.dumps(res))
         cp.with_suffix(".error.json").unlink(missing_ok=True)
+        pr(source.name, c.state, c.fips, t, "done", pages, len(rows))
         return res
 
     def record_error(self, src: str, c: County, t: str, e: Exception, blocked: bool) -> None:
@@ -103,6 +111,8 @@ class Collector:
         p.write_text(json.dumps({"source": src, "state": c.state, "fips": c.fips, "type": t, "blocked": blocked,
                                  "error": f"{type(e).__name__}: {e}"[:2000],
                                  "at": datetime.now(timezone.utc).isoformat()}))
+        if self.progress:
+            self.progress.set(src, c.state, c.fips, t, "blocked" if blocked else "failed")
 
     def assemble(self, src: str) -> Path:
         parts = sorted((self.out / "silver" / src / self.run_id / "parts").glob("*.jsonl"))
@@ -138,6 +148,8 @@ def main(argv=None) -> int:
 
     tasks = [(s, c, t) for c in counties for s in sources.values() for t in types if s.supports(c)]
     skipped = [(s.name, c.fips) for c in counties for s in sources.values() if not s.supports(c)]
+    col.progress = Progress(a.run_id)
+    col.progress.queue_many([(s.name, c.state, c.fips, t) for s, c, t in tasks])
     print(f"run {a.run_id}: {len(tasks)} tasks over {len(counties)} counties; {len(skipped)} unsupported county/source pairs", flush=True)
 
     def job(s, c, t):
