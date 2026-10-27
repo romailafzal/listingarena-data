@@ -24,20 +24,42 @@ Create one connector per provider under `sources/`. Candidate sources to evaluat
 
 Redfin and Realtor.com are collected from their public website search endpoints by owner decision (terms-of-service risk accepted; see `docs/providers.md`). Never bypass logins, CAPTCHAs or other access controls. Other providers still need an official API, licensed feed, or written permission.
 
-## Phase 1 collector (Redfin + Realtor search results)
+## Pipeline (collect -> normalize -> merge -> load -> publish)
+
+Sibling repos: `../listingarena-orchestrator` (Dagster, :3070) and `../listingarena-monitor` (map dashboard, :8090).
+This repo is an installable package (`listingarena-data`, Python 3.12, uv).
 
 ```bash
-python3 -m venv --system-site-packages .venv   # or: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-.venv/bin/python -m jobs.collect --states TX,FL --sources redfin,realtor --types sale,rent,sold --workers 4
-.venv/bin/python -m jobs.collect --states TX --counties 48015,48453 --max-pages 2 --run-id live_test   # small test
-.venv/bin/python -m unittest discover tests
+~/.local/bin/uv sync                                   # .venv (Python 3.12) + uv.lock
+cp .env.example .env                                   # DATABASE_URL=postgresql://listingarena:listingarena@localhost:5434/listingarena
+docker compose up -d postgres                          # postgres:16 on 127.0.0.1:5434, volume pgdata
+uv run la-migrate                                      # apply db/migrations/*.sql
+uv run la-collect --states TX --counties 48015 --max-pages 8 --run-id my_run     # = python -m jobs.collect
+uv run la-load --run-id my_run                         # Postgres + change tracking
+uv run la-publish --dry-run /tmp/payload.json          # or with LISTINGARENA_API_URL + LISTINGARENA_ADMIN_TOKEN
+uv run pytest -q tests                                 # DB tests use a scratch DB listingarena_test, skip without Postgres
 ```
 
-- `states/<st>.json`: counties (Census FIPS) with `redfin_region_id` and `realtor_location`; rebuild with `python -m tools.build_state_configs --seed <dir>`.
-- `sources/base.py`: `Source.search(county, type)` yields raw pages, `normalize(raw, type)` maps to the silver schema (`normalization/schema.py`). New sources (Homes.com, detail pages) subclass it and register in `jobs/collect.py:make_source`.
-- `sources/http.py`: per-source pacing, retries/backoff on 403/429/5xx, rotating browser headers, `<SOURCE>_PROXY`.
-- Output: bronze `exports/bronze/<source>/<st>/<fips>/<run_id>/<type>_pNNNN.json.gz`, silver `exports/silver/<source>/<run_id>.jsonl`, checkpoints `exports/checkpoints/<run_id>/...` (rerun with the same `--run-id` to resume; default run id is today's date).
-- `SOLD_WITHIN_DAYS` (default 90) sets the sold window. `python -m tools.realtor_fields` re-discovers Realtor's widest field set; `python -m tools.field_inventory --run-id <id>` regenerates `docs/field_inventory.md`.
+No Docker? `uv run python -m tools.dev_postgres` starts a throwaway Postgres (pgserver wheel) and prints a URL.
+
+- **Collect** (`jobs/collect.py`, `sources/`): bronze `exports/bronze/<src>/<st>/<fips>/<run_id>/<type>_pNNNN.json.gz`,
+  silver parts `exports/silver/<src>/<run_id>/parts/<st>_<fips>_<type>.jsonl`, checkpoints
+  `exports/checkpoints/<run_id>/<src>/<st>/<fips>_<type>.json` (`complete` = all pages fetched and >=95% of the
+  reported total) or `.error.json` (failed/blocked; rerun with the same run id retries). `http_stats.json` per run.
+  Silver records carry `extra` (MLS id, HOA, DOM, agents, AVM ... see `normalization/extras.py`).
+  `python -m tools.renormalize --run-id X` rebuilds silver from bronze.
+- **Match/merge** (`matching/`): `address.py` builds `property_key = zip5|<number> <street core>|<unit>`
+  (unit variants `#304`/`Unit 304`/`Apt 304`, directionals and suffixes dropped, FM/Hwy/TX/SH/IH route spellings
+  unified; geo fallback `geo|lat4|lng4|unit` when there is no street number). `merge.py` makes one canonical
+  listing per (property_key, listing_type) with per-field source precedence (Realtor default; Redfin for
+  lat/lng/sqft/status/sold_date and sold price), `sources`, `source_ids`, `urls`, `extra` per source, `row_hash`.
+- **Load** (`db/load.py`, `db/migrations/001_init.sql`): tables `properties`, `listings` (current state),
+  `listing_events` (new/changed/removed/relisted with before/after), `source_records`, `runs`, `run_county_stats`,
+  `errors`. Per county x type in one transaction: upsert source records; deactivate missing ones only when that
+  source's county fetch was complete (failed/partial fetches never remove); re-merge; diff; events; stats.
+- **Publish** (`publish/app.py`): POSTs changed listings (`row_hash != published_hash`) to listingarena-app
+  `/api/listings` in chunks of `PUBLISH_CHUNK` (max 999) using the app's COLS; canonical `external_id = la:<hash>`;
+  removed listings are sent once with `status = "removed"`.
 
 ## Suggested layout
 

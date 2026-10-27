@@ -89,7 +89,8 @@ class Collector:
         part.write_text("".join(json.dumps(r) + "\n" for r in rows))
         res = {"source": source.name, "state": c.state, "county": c.name, "fips": c.fips, "type": t,
                "pages": pages, "records": len(rows), "reported_total": total,
-               "complete": self.max_pages is None or pages < self.max_pages, "seconds": round(time.time() - started, 1)}
+               "complete": (self.max_pages is None or pages < self.max_pages)
+                           and (not total or len(rows) >= 0.95 * total), "seconds": round(time.time() - started, 1)}
         cp.parent.mkdir(parents=True, exist_ok=True)
         cp.write_text(json.dumps(res))
         cp.with_suffix(".error.json").unlink(missing_ok=True)

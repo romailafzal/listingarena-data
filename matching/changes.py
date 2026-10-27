@@ -5,7 +5,7 @@ from matching.merge import TRACKED
 
 
 def diff(before: dict, after: dict, fields=TRACKED) -> dict:
-    return {f: {"before": before.get(f), "after": after.get(f)} for f in fields
+    return {f: {"before": _norm(before.get(f)), "after": _norm(after.get(f))} for f in fields
             if _norm(before.get(f)) != _norm(after.get(f))}
 
 

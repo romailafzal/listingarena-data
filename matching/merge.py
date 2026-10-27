@@ -21,7 +21,7 @@ FIELD_ORDER = {
 # sold price: Redfin reports a value in non-disclosure states where Realtor is empty
 TYPE_FIELD_ORDER = {("sold", "price"): ["redfin", "realtor", "homes"]}
 TRACKED = ["price", "list_price", "status", "beds", "baths", "sqft", "lot_sqft", "year_built", "sold_date",
-           "listed_date", "available_from", "deposit", "property_type", "photo_url"]
+           "listed_date", "available_from", "deposit", "property_type"]  # photo_url: CDN urls rotate, not a change
 CANON_FIELDS = [c for c in APP_COLS if c not in ("external_id",)]
 
 
@@ -44,13 +44,14 @@ def _rank(order: list[str], src: str) -> int:
 def merge_group(pkey: str, listing_type: str, recs: list[dict]) -> dict:
     """recs: silver records (same property & type) from one or more sources."""
     out = {"property_key": pkey, "listing_type": listing_type, "external_id": canonical_id(pkey)}
-    by_src = sorted(recs, key=lambda r: _rank(DEFAULT_ORDER, r["source"]))
+    # deterministic: several records of one source can share a key (builder plans, duplicate feeds)
+    by_src = sorted(recs, key=lambda r: (_rank(DEFAULT_ORDER, r["source"]), str(r.get("source_id"))))
     for f in CANON_FIELDS:
         if f == "listing_type":
             continue
         order = TYPE_FIELD_ORDER.get((listing_type, f)) or FIELD_ORDER.get(f) or DEFAULT_ORDER
         val = None
-        for r in sorted(by_src, key=lambda r: _rank(order, r["source"])):
+        for r in sorted(by_src, key=lambda r: (_rank(order, r["source"]), str(r.get("source_id")))):
             if r.get(f) not in (None, ""):
                 val = r[f]
                 break
@@ -60,6 +61,9 @@ def merge_group(pkey: str, listing_type: str, recs: list[dict]) -> dict:
     out["county_fips"] = next((r.get("county_fips") for r in by_src if r.get("county_fips")), None)
     out["sources"] = sorted({r["source"] for r in recs}, key=lambda s: _rank(DEFAULT_ORDER, s))
     out["source_ids"] = {r["source"]: r["source_id"] for r in reversed(by_src)}
+    dup = {s: n for s in out["sources"] if (n := sum(1 for r in recs if r["source"] == s)) > 1}
+    if dup:
+        out["duplicates"] = dup
     out["urls"] = {r["source"]: r.get("url") for r in reversed(by_src) if r.get("url")}
     out["extra"] = {r["source"]: r.get("extra") or {} for r in reversed(by_src)}
     out["row_hash"] = row_hash(out)

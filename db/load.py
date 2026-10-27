@@ -169,6 +169,7 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
                                      lat=coalesce(EXCLUDED.lat, properties.lat), lng=coalesce(EXCLUDED.lng, properties.lng)""",
                                 props[i:i + batch])
         touched = {e["property_key"] for e in events if e["event"] != "removed"}
+        touched |= {k for k, m in incoming.items() if k in current and current[k]["row_hash"] != m["row_hash"]}
         upserts = [incoming[k] for k in touched]
         cols = ["property_key", "listing_type"] + LISTING_COLS
         sql = (f"INSERT INTO listings ({', '.join(cols)}, first_run_id, last_run_id) VALUES ({', '.join(['%s'] * (len(cols) + 2))}) "
