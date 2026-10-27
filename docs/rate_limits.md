@@ -31,3 +31,17 @@ Observations: Redfin returns sporadic 403s once it sees > ~5 req/s bursts, but t
 10 workers × 20 parallel pages = **200 in flight per source**, both sources at once, adaptive back-off
 200 -> 100 -> 50. Set in `listingarena-orchestrator/.env` (backup `.env.bak-<ts>`).
 See the full Texas run results below.
+
+## Full Texas run `tx_full_20261028T0228` (Dagster, both sources together)
+Benchmark-step data (bench_*_w20 runs + steps in this run id) was merged into this run's checkpoints, so
+nothing was re-fetched. Production phase at 10 × 20 = 200 in flight per source:
+
+| source | county-types | records | phase | requests | req/min | 403/429/5xx | cap changes |
+|---|---|---|---|---|---|---|---|
+| redfin  | 756/756 supported | 431,889 | 02:48–02:51 (last 26 tasks) | 357 | ~123 | 0 / 0 / 0 | none |
+| realtor | 762/762 | 477,288 | 02:58–03:10 (last ~180 tasks) | 917 | ~82 | 0 / 0 / 0 | none |
+
+The production tail was dominated by small counties (1–3 pages), so requests/min there are latency-bound
+(Realtor ~3.5 s p50); the 200 cap was never reached and no back-off triggered. Big counties (Harris, Dallas,
+Bexar: 130–200 pages each) completed in a few minutes each with parallel pages + parallel price-band probing.
+Total wall time for Texas collection across all steps ≈ 45 min of fetching; 0 errors, 0 blocks.
