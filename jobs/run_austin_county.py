@@ -14,7 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from pipeline import County, ProviderConfig, StateStore, fetch_json, normalize_record, read_path, utc_now, write_jsonl
+from pipeline import (
+    County, ProviderConfig, StateStore, fetch_json, normalize_record, read_path, utc_now,
+    write_csv, write_jsonl,
+)
 
 
 PROVIDERS = ("realtor", "redfin", "homes")
@@ -56,6 +59,7 @@ def run(full_sync: bool, publish_enabled: bool) -> dict[str, int]:
     bronze_dir = ROOT / "exports" / "bronze" / county.state.lower() / county.fips / run_id
     silver_dir = ROOT / "exports" / "silver" / county.state.lower() / county.fips / run_id
     gold_dir = ROOT / "exports" / "gold" / county.state.lower() / county.fips
+    csv_dir = ROOT / "exports" / "csv" / county.state.lower() / county.fips
     store = StateStore(ROOT / "exports" / "state.sqlite3")
     counts = {"providers": 0, "fetched": 0, "normalized": 0, "rejected": 0, "gold": 0}
     try:
@@ -92,6 +96,19 @@ def run(full_sync: bool, publish_enabled: bool) -> dict[str, int]:
 
         gold_records = store.records()
         write_jsonl(gold_dir / "listings.jsonl", gold_records)
+        for provider in PROVIDERS:
+            provider_records = store.records(provider)
+            for category in ("sale", "rent", "sold"):
+                write_csv(
+                    csv_dir / provider / f"{category}.csv",
+                    (record for record in provider_records if record.get("listing_type") == category),
+                )
+        for category in ("sale", "rent", "sold"):
+            write_csv(
+                csv_dir / "merged" / f"{category}.csv",
+                (record for record in gold_records if record.get("listing_type") == category),
+            )
+        write_csv(csv_dir / "merged" / "all_sources.csv", gold_records)
         counts["gold"] = len(gold_records)
         if publish_enabled:
             endpoint = os.getenv("LISTINGARENA_API_URL")
