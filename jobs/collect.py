@@ -115,7 +115,9 @@ class Collector:
         part.write_text("".join(json.dumps(r) + "\n" for r in rows))
         res = {"source": source.name, "state": c.state, "county": c.name, "fips": c.fips, "type": t,
                "pages": pages, "records": len(rows), "unique_listings": len(keys), "reported_total": total,
-               "complete": is_complete(pages, self.max_pages, total, len(keys)),
+               "complete": is_complete(pages, self.max_pages,
+                                       total if getattr(source, "total_is_exact", lambda _t: True)(t) else None,
+                                       len(keys)),
                "seconds": round(time.time() - started, 1)}
         cp.parent.mkdir(parents=True, exist_ok=True)
         cp.write_text(json.dumps(res))

@@ -75,6 +75,14 @@ class RedfinSource(Source):
     def __init__(self, client: SourceClient | None = None):
         self.client = client or SourceClient("redfin", min_interval=1.5)
 
+    @staticmethod
+    def total_is_exact(listing_type: str) -> bool:
+        """rentals `numMatchedHomes` counts 1-4% homes the API never returns (pages come back short, e.g. 348/350;
+        verified on Williamson: page sizes 100 and 350 and ord=price-asc all yield the identical 2,265 ids vs 2,352
+        reported). So rent completeness = paged to the natural end (empty page), not unique >= total.
+        gis (sale/sold) reports no total at all."""
+        return False
+
     def supports(self, county: County) -> bool:
         return bool(county.redfin_region_id) or bool(county.extra.get("redfin_rental_polygon"))
 

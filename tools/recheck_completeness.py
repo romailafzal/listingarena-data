@@ -49,7 +49,8 @@ def main() -> None:
                     else redfin.parse_response(d["response"], t)[0])
             for r in recs:
                 keys.add(lkey(r) if lkey else s.normalize(r, t)["source_id"])
-        ok = not broken and is_complete(res.get("pages", 0), None, total, len(keys))
+        exact = getattr(s, "total_is_exact", lambda _t: True)(t)
+        ok = not broken and is_complete(res.get("pages", 0), None, total if exact else None, len(keys))
         res.update(reported_total=total, unique_listings=len(keys), complete=ok)
         n += 1
         if not ok:
