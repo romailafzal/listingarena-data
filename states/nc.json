@@ -1,0 +1,906 @@
+{
+ "state": "NC",
+ "name": "North Carolina",
+ "counties": [
+  {
+   "name": "Alamance County",
+   "fips": "37001",
+   "type": "county",
+   "redfin_region_id": 2007,
+   "realtor_location": "Alamance County, NC",
+   "lat": 36.043954,
+   "lng": -79.400573
+  },
+  {
+   "name": "Alexander County",
+   "fips": "37003",
+   "type": "county",
+   "redfin_region_id": 2008,
+   "realtor_location": "Alexander County, NC",
+   "lat": 35.920951,
+   "lng": -81.177467
+  },
+  {
+   "name": "Alleghany County",
+   "fips": "37005",
+   "type": "county",
+   "redfin_region_id": 2009,
+   "realtor_location": "Alleghany County, NC",
+   "lat": 36.489356,
+   "lng": -81.132299
+  },
+  {
+   "name": "Anson County",
+   "fips": "37007",
+   "type": "county",
+   "redfin_region_id": 2010,
+   "realtor_location": "Anson County, NC",
+   "lat": 34.974972,
+   "lng": -80.109763
+  },
+  {
+   "name": "Ashe County",
+   "fips": "37009",
+   "type": "county",
+   "redfin_region_id": 2011,
+   "realtor_location": "Ashe County, NC",
+   "lat": 36.443469,
+   "lng": -81.499334
+  },
+  {
+   "name": "Avery County",
+   "fips": "37011",
+   "type": "county",
+   "redfin_region_id": 2012,
+   "realtor_location": "Avery County, NC",
+   "lat": 36.07209,
+   "lng": -81.920285
+  },
+  {
+   "name": "Beaufort County",
+   "fips": "37013",
+   "type": "county",
+   "redfin_region_id": 2013,
+   "realtor_location": "Beaufort County, NC",
+   "lat": 35.482313,
+   "lng": -76.842014
+  },
+  {
+   "name": "Bertie County",
+   "fips": "37015",
+   "type": "county",
+   "redfin_region_id": 2014,
+   "realtor_location": "Bertie County, NC",
+   "lat": 36.059043,
+   "lng": -76.962364
+  },
+  {
+   "name": "Bladen County",
+   "fips": "37017",
+   "type": "county",
+   "redfin_region_id": 2015,
+   "realtor_location": "Bladen County, NC",
+   "lat": 34.591938,
+   "lng": -78.539489
+  },
+  {
+   "name": "Brunswick County",
+   "fips": "37019",
+   "type": "county",
+   "redfin_region_id": 2016,
+   "realtor_location": "Brunswick County, NC",
+   "lat": 34.038754,
+   "lng": -78.227765
+  },
+  {
+   "name": "Buncombe County",
+   "fips": "37021",
+   "type": "county",
+   "redfin_region_id": 2017,
+   "realtor_location": "Buncombe County, NC",
+   "lat": 35.609371,
+   "lng": -82.530423
+  },
+  {
+   "name": "Burke County",
+   "fips": "37023",
+   "type": "county",
+   "redfin_region_id": 2018,
+   "realtor_location": "Burke County, NC",
+   "lat": 35.746182,
+   "lng": -81.70618
+  },
+  {
+   "name": "Cabarrus County",
+   "fips": "37025",
+   "type": "county",
+   "redfin_region_id": 2019,
+   "realtor_location": "Cabarrus County, NC",
+   "lat": 35.388346,
+   "lng": -80.552728
+  },
+  {
+   "name": "Caldwell County",
+   "fips": "37027",
+   "type": "county",
+   "redfin_region_id": 2020,
+   "realtor_location": "Caldwell County, NC",
+   "lat": 35.966396,
+   "lng": -81.51254
+  },
+  {
+   "name": "Camden County",
+   "fips": "37029",
+   "type": "county",
+   "redfin_region_id": 2021,
+   "realtor_location": "Camden County, NC",
+   "lat": 36.342344,
+   "lng": -76.162488
+  },
+  {
+   "name": "Carteret County",
+   "fips": "37031",
+   "type": "county",
+   "redfin_region_id": 2022,
+   "realtor_location": "Carteret County, NC",
+   "lat": 34.858343,
+   "lng": -76.53586
+  },
+  {
+   "name": "Caswell County",
+   "fips": "37033",
+   "type": "county",
+   "redfin_region_id": 2023,
+   "realtor_location": "Caswell County, NC",
+   "lat": 36.394298,
+   "lng": -79.339609
+  },
+  {
+   "name": "Catawba County",
+   "fips": "37035",
+   "type": "county",
+   "redfin_region_id": 2024,
+   "realtor_location": "Catawba County, NC",
+   "lat": 35.661883,
+   "lng": -81.214906
+  },
+  {
+   "name": "Chatham County",
+   "fips": "37037",
+   "type": "county",
+   "redfin_region_id": 2025,
+   "realtor_location": "Chatham County, NC",
+   "lat": 35.704994,
+   "lng": -79.251454
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "37039",
+   "type": "county",
+   "redfin_region_id": 2026,
+   "realtor_location": "Cherokee County, NC",
+   "lat": 35.13715,
+   "lng": -84.061449
+  },
+  {
+   "name": "Chowan County",
+   "fips": "37041",
+   "type": "county",
+   "redfin_region_id": 2027,
+   "realtor_location": "Chowan County, NC",
+   "lat": 36.128979,
+   "lng": -76.602752
+  },
+  {
+   "name": "Clay County",
+   "fips": "37043",
+   "type": "county",
+   "redfin_region_id": 2028,
+   "realtor_location": "Clay County, NC",
+   "lat": 35.052997,
+   "lng": -83.752264
+  },
+  {
+   "name": "Cleveland County",
+   "fips": "37045",
+   "type": "county",
+   "redfin_region_id": 2029,
+   "realtor_location": "Cleveland County, NC",
+   "lat": 35.33463,
+   "lng": -81.557114
+  },
+  {
+   "name": "Columbus County",
+   "fips": "37047",
+   "type": "county",
+   "redfin_region_id": 2030,
+   "realtor_location": "Columbus County, NC",
+   "lat": 34.261602,
+   "lng": -78.639308
+  },
+  {
+   "name": "Craven County",
+   "fips": "37049",
+   "type": "county",
+   "redfin_region_id": 2031,
+   "realtor_location": "Craven County, NC",
+   "lat": 35.116829,
+   "lng": -77.08132
+  },
+  {
+   "name": "Cumberland County",
+   "fips": "37051",
+   "type": "county",
+   "redfin_region_id": 2032,
+   "realtor_location": "Cumberland County, NC",
+   "lat": 35.050192,
+   "lng": -78.828719
+  },
+  {
+   "name": "Currituck County",
+   "fips": "37053",
+   "type": "county",
+   "redfin_region_id": 2033,
+   "realtor_location": "Currituck County, NC",
+   "lat": 36.372174,
+   "lng": -75.941224
+  },
+  {
+   "name": "Dare County",
+   "fips": "37055",
+   "type": "county",
+   "redfin_region_id": 2034,
+   "realtor_location": "Dare County, NC",
+   "lat": 35.606269,
+   "lng": -75.767536
+  },
+  {
+   "name": "Davidson County",
+   "fips": "37057",
+   "type": "county",
+   "redfin_region_id": 2035,
+   "realtor_location": "Davidson County, NC",
+   "lat": 35.795131,
+   "lng": -80.207107
+  },
+  {
+   "name": "Davie County",
+   "fips": "37059",
+   "type": "county",
+   "redfin_region_id": 2036,
+   "realtor_location": "Davie County, NC",
+   "lat": 35.929355,
+   "lng": -80.542552
+  },
+  {
+   "name": "Duplin County",
+   "fips": "37061",
+   "type": "county",
+   "redfin_region_id": 2037,
+   "realtor_location": "Duplin County, NC",
+   "lat": 34.934403,
+   "lng": -77.933543
+  },
+  {
+   "name": "Durham County",
+   "fips": "37063",
+   "type": "county",
+   "redfin_region_id": 2038,
+   "realtor_location": "Durham County, NC",
+   "lat": 36.033828,
+   "lng": -78.878125
+  },
+  {
+   "name": "Edgecombe County",
+   "fips": "37065",
+   "type": "county",
+   "redfin_region_id": 2039,
+   "realtor_location": "Edgecombe County, NC",
+   "lat": 35.917077,
+   "lng": -77.602742
+  },
+  {
+   "name": "Forsyth County",
+   "fips": "37067",
+   "type": "county",
+   "redfin_region_id": 2040,
+   "realtor_location": "Forsyth County, NC",
+   "lat": 36.132466,
+   "lng": -80.256961
+  },
+  {
+   "name": "Franklin County",
+   "fips": "37069",
+   "type": "county",
+   "redfin_region_id": 2041,
+   "realtor_location": "Franklin County, NC",
+   "lat": 36.088241,
+   "lng": -78.28309
+  },
+  {
+   "name": "Gaston County",
+   "fips": "37071",
+   "type": "county",
+   "redfin_region_id": 2042,
+   "realtor_location": "Gaston County, NC",
+   "lat": 35.293344,
+   "lng": -81.177256
+  },
+  {
+   "name": "Gates County",
+   "fips": "37073",
+   "type": "county",
+   "redfin_region_id": 2043,
+   "realtor_location": "Gates County, NC",
+   "lat": 36.442135,
+   "lng": -76.702355
+  },
+  {
+   "name": "Graham County",
+   "fips": "37075",
+   "type": "county",
+   "redfin_region_id": 2044,
+   "realtor_location": "Graham County, NC",
+   "lat": 35.348364,
+   "lng": -83.830915
+  },
+  {
+   "name": "Granville County",
+   "fips": "37077",
+   "type": "county",
+   "redfin_region_id": 2045,
+   "realtor_location": "Granville County, NC",
+   "lat": 36.299884,
+   "lng": -78.657634
+  },
+  {
+   "name": "Greene County",
+   "fips": "37079",
+   "type": "county",
+   "redfin_region_id": 2046,
+   "realtor_location": "Greene County, NC",
+   "lat": 35.481959,
+   "lng": -77.681688
+  },
+  {
+   "name": "Guilford County",
+   "fips": "37081",
+   "type": "county",
+   "redfin_region_id": 2047,
+   "realtor_location": "Guilford County, NC",
+   "lat": 36.079065,
+   "lng": -79.788665
+  },
+  {
+   "name": "Halifax County",
+   "fips": "37083",
+   "type": "county",
+   "redfin_region_id": 2048,
+   "realtor_location": "Halifax County, NC",
+   "lat": 36.251438,
+   "lng": -77.644842
+  },
+  {
+   "name": "Harnett County",
+   "fips": "37085",
+   "type": "county",
+   "redfin_region_id": 2049,
+   "realtor_location": "Harnett County, NC",
+   "lat": 35.368635,
+   "lng": -78.87161
+  },
+  {
+   "name": "Haywood County",
+   "fips": "37087",
+   "type": "county",
+   "redfin_region_id": 2050,
+   "realtor_location": "Haywood County, NC",
+   "lat": 35.558882,
+   "lng": -82.981307
+  },
+  {
+   "name": "Henderson County",
+   "fips": "37089",
+   "type": "county",
+   "redfin_region_id": 2051,
+   "realtor_location": "Henderson County, NC",
+   "lat": 35.336415,
+   "lng": -82.479741
+  },
+  {
+   "name": "Hertford County",
+   "fips": "37091",
+   "type": "county",
+   "redfin_region_id": 2052,
+   "realtor_location": "Hertford County, NC",
+   "lat": 36.363517,
+   "lng": -76.981616
+  },
+  {
+   "name": "Hoke County",
+   "fips": "37093",
+   "type": "county",
+   "redfin_region_id": 2053,
+   "realtor_location": "Hoke County, NC",
+   "lat": 35.017233,
+   "lng": -79.241964
+  },
+  {
+   "name": "Hyde County",
+   "fips": "37095",
+   "type": "county",
+   "redfin_region_id": 2054,
+   "realtor_location": "Hyde County, NC",
+   "lat": 35.408157,
+   "lng": -76.153687
+  },
+  {
+   "name": "Iredell County",
+   "fips": "37097",
+   "type": "county",
+   "redfin_region_id": 2055,
+   "realtor_location": "Iredell County, NC",
+   "lat": 35.806251,
+   "lng": -80.874524
+  },
+  {
+   "name": "Jackson County",
+   "fips": "37099",
+   "type": "county",
+   "redfin_region_id": 2056,
+   "realtor_location": "Jackson County, NC",
+   "lat": 35.285454,
+   "lng": -83.123966
+  },
+  {
+   "name": "Johnston County",
+   "fips": "37101",
+   "type": "county",
+   "redfin_region_id": 2057,
+   "realtor_location": "Johnston County, NC",
+   "lat": 35.513419,
+   "lng": -78.367348
+  },
+  {
+   "name": "Jones County",
+   "fips": "37103",
+   "type": "county",
+   "redfin_region_id": 2058,
+   "realtor_location": "Jones County, NC",
+   "lat": 35.032268,
+   "lng": -77.356195
+  },
+  {
+   "name": "Lee County",
+   "fips": "37105",
+   "type": "county",
+   "redfin_region_id": 2059,
+   "realtor_location": "Lee County, NC",
+   "lat": 35.476336,
+   "lng": -79.172117
+  },
+  {
+   "name": "Lenoir County",
+   "fips": "37107",
+   "type": "county",
+   "redfin_region_id": 2060,
+   "realtor_location": "Lenoir County, NC",
+   "lat": 35.240066,
+   "lng": -77.635514
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "37109",
+   "type": "county",
+   "redfin_region_id": 2061,
+   "realtor_location": "Lincoln County, NC",
+   "lat": 35.488491,
+   "lng": -81.226893
+  },
+  {
+   "name": "McDowell County",
+   "fips": "37111",
+   "type": "county",
+   "redfin_region_id": 2062,
+   "realtor_location": "McDowell County, NC",
+   "lat": 35.682271,
+   "lng": -82.048044
+  },
+  {
+   "name": "Macon County",
+   "fips": "37113",
+   "type": "county",
+   "redfin_region_id": 2063,
+   "realtor_location": "Macon County, NC",
+   "lat": 35.152959,
+   "lng": -83.421901
+  },
+  {
+   "name": "Madison County",
+   "fips": "37115",
+   "type": "county",
+   "redfin_region_id": 2064,
+   "realtor_location": "Madison County, NC",
+   "lat": 35.864206,
+   "lng": -82.712631
+  },
+  {
+   "name": "Martin County",
+   "fips": "37117",
+   "type": "county",
+   "redfin_region_id": 2065,
+   "realtor_location": "Martin County, NC",
+   "lat": 35.847301,
+   "lng": -77.119602
+  },
+  {
+   "name": "Mecklenburg County",
+   "fips": "37119",
+   "type": "county",
+   "redfin_region_id": 2066,
+   "realtor_location": "Mecklenburg County, NC",
+   "lat": 35.246862,
+   "lng": -80.833832
+  },
+  {
+   "name": "Mitchell County",
+   "fips": "37121",
+   "type": "county",
+   "redfin_region_id": 2067,
+   "realtor_location": "Mitchell County, NC",
+   "lat": 36.013102,
+   "lng": -82.163554
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "37123",
+   "type": "county",
+   "redfin_region_id": 2068,
+   "realtor_location": "Montgomery County, NC",
+   "lat": 35.327548,
+   "lng": -79.910752
+  },
+  {
+   "name": "Moore County",
+   "fips": "37125",
+   "type": "county",
+   "redfin_region_id": 2069,
+   "realtor_location": "Moore County, NC",
+   "lat": 35.308272,
+   "lng": -79.492725
+  },
+  {
+   "name": "Nash County",
+   "fips": "37127",
+   "type": "county",
+   "redfin_region_id": 2070,
+   "realtor_location": "Nash County, NC",
+   "lat": 35.965945,
+   "lng": -77.987555
+  },
+  {
+   "name": "New Hanover County",
+   "fips": "37129",
+   "type": "county",
+   "redfin_region_id": 2071,
+   "realtor_location": "New Hanover County, NC",
+   "lat": 34.183445,
+   "lng": -77.864204
+  },
+  {
+   "name": "Northampton County",
+   "fips": "37131",
+   "type": "county",
+   "redfin_region_id": 2072,
+   "realtor_location": "Northampton County, NC",
+   "lat": 36.421774,
+   "lng": -77.398352
+  },
+  {
+   "name": "Onslow County",
+   "fips": "37133",
+   "type": "county",
+   "redfin_region_id": 2073,
+   "realtor_location": "Onslow County, NC",
+   "lat": 34.763109,
+   "lng": -77.499469
+  },
+  {
+   "name": "Orange County",
+   "fips": "37135",
+   "type": "county",
+   "redfin_region_id": 2074,
+   "realtor_location": "Orange County, NC",
+   "lat": 36.062526,
+   "lng": -79.120034
+  },
+  {
+   "name": "Pamlico County",
+   "fips": "37137",
+   "type": "county",
+   "redfin_region_id": 2075,
+   "realtor_location": "Pamlico County, NC",
+   "lat": 35.147575,
+   "lng": -76.665268
+  },
+  {
+   "name": "Pasquotank County",
+   "fips": "37139",
+   "type": "county",
+   "redfin_region_id": 2076,
+   "realtor_location": "Pasquotank County, NC",
+   "lat": 36.265199,
+   "lng": -76.260691
+  },
+  {
+   "name": "Pender County",
+   "fips": "37141",
+   "type": "county",
+   "redfin_region_id": 2077,
+   "realtor_location": "Pender County, NC",
+   "lat": 34.512556,
+   "lng": -77.888106
+  },
+  {
+   "name": "Perquimans County",
+   "fips": "37143",
+   "type": "county",
+   "redfin_region_id": 2078,
+   "realtor_location": "Perquimans County, NC",
+   "lat": 36.180897,
+   "lng": -76.403244
+  },
+  {
+   "name": "Person County",
+   "fips": "37145",
+   "type": "county",
+   "redfin_region_id": 2079,
+   "realtor_location": "Person County, NC",
+   "lat": 36.38635,
+   "lng": -78.965623
+  },
+  {
+   "name": "Pitt County",
+   "fips": "37147",
+   "type": "county",
+   "redfin_region_id": 2080,
+   "realtor_location": "Pitt County, NC",
+   "lat": 35.59249,
+   "lng": -77.372739
+  },
+  {
+   "name": "Polk County",
+   "fips": "37149",
+   "type": "county",
+   "redfin_region_id": 2081,
+   "realtor_location": "Polk County, NC",
+   "lat": 35.277901,
+   "lng": -82.167621
+  },
+  {
+   "name": "Randolph County",
+   "fips": "37151",
+   "type": "county",
+   "redfin_region_id": 2082,
+   "realtor_location": "Randolph County, NC",
+   "lat": 35.709915,
+   "lng": -79.806215
+  },
+  {
+   "name": "Richmond County",
+   "fips": "37153",
+   "type": "county",
+   "redfin_region_id": 2083,
+   "realtor_location": "Richmond County, NC",
+   "lat": 35.004636,
+   "lng": -79.755695
+  },
+  {
+   "name": "Robeson County",
+   "fips": "37155",
+   "type": "county",
+   "redfin_region_id": 2084,
+   "realtor_location": "Robeson County, NC",
+   "lat": 34.63921,
+   "lng": -79.100881
+  },
+  {
+   "name": "Rockingham County",
+   "fips": "37157",
+   "type": "county",
+   "redfin_region_id": 2085,
+   "realtor_location": "Rockingham County, NC",
+   "lat": 36.381806,
+   "lng": -79.782754
+  },
+  {
+   "name": "Rowan County",
+   "fips": "37159",
+   "type": "county",
+   "redfin_region_id": 2086,
+   "realtor_location": "Rowan County, NC",
+   "lat": 35.641355,
+   "lng": -80.521721
+  },
+  {
+   "name": "Rutherford County",
+   "fips": "37161",
+   "type": "county",
+   "redfin_region_id": 2087,
+   "realtor_location": "Rutherford County, NC",
+   "lat": 35.402747,
+   "lng": -81.919582
+  },
+  {
+   "name": "Sampson County",
+   "fips": "37163",
+   "type": "county",
+   "redfin_region_id": 2088,
+   "realtor_location": "Sampson County, NC",
+   "lat": 34.989298,
+   "lng": -78.371261
+  },
+  {
+   "name": "Scotland County",
+   "fips": "37165",
+   "type": "county",
+   "redfin_region_id": 2089,
+   "realtor_location": "Scotland County, NC",
+   "lat": 34.840023,
+   "lng": -79.477337
+  },
+  {
+   "name": "Stanly County",
+   "fips": "37167",
+   "type": "county",
+   "redfin_region_id": 2090,
+   "realtor_location": "Stanly County, NC",
+   "lat": 35.310449,
+   "lng": -80.254374
+  },
+  {
+   "name": "Stokes County",
+   "fips": "37169",
+   "type": "county",
+   "redfin_region_id": 2091,
+   "realtor_location": "Stokes County, NC",
+   "lat": 36.393797,
+   "lng": -80.269921
+  },
+  {
+   "name": "Surry County",
+   "fips": "37171",
+   "type": "county",
+   "redfin_region_id": 2092,
+   "realtor_location": "Surry County, NC",
+   "lat": 36.415416,
+   "lng": -80.686463
+  },
+  {
+   "name": "Swain County",
+   "fips": "37173",
+   "type": "county",
+   "redfin_region_id": 2093,
+   "realtor_location": "Swain County, NC",
+   "lat": 35.568849,
+   "lng": -83.465614
+  },
+  {
+   "name": "Transylvania County",
+   "fips": "37175",
+   "type": "county",
+   "redfin_region_id": 2094,
+   "realtor_location": "Transylvania County, NC",
+   "lat": 35.210103,
+   "lng": -82.816666
+  },
+  {
+   "name": "Tyrrell County",
+   "fips": "37177",
+   "type": "county",
+   "redfin_region_id": 2095,
+   "realtor_location": "Tyrrell County, NC",
+   "lat": 35.87042,
+   "lng": -76.165345
+  },
+  {
+   "name": "Union County",
+   "fips": "37179",
+   "type": "county",
+   "redfin_region_id": 2096,
+   "realtor_location": "Union County, NC",
+   "lat": 34.99182,
+   "lng": -80.530426
+  },
+  {
+   "name": "Vance County",
+   "fips": "37181",
+   "type": "county",
+   "redfin_region_id": 2097,
+   "realtor_location": "Vance County, NC",
+   "lat": 36.365481,
+   "lng": -78.405434
+  },
+  {
+   "name": "Wake County",
+   "fips": "37183",
+   "type": "county",
+   "redfin_region_id": 2098,
+   "realtor_location": "Wake County, NC",
+   "lat": 35.789846,
+   "lng": -78.650624
+  },
+  {
+   "name": "Warren County",
+   "fips": "37185",
+   "type": "county",
+   "redfin_region_id": 2099,
+   "realtor_location": "Warren County, NC",
+   "lat": 36.398105,
+   "lng": -78.099899
+  },
+  {
+   "name": "Washington County",
+   "fips": "37187",
+   "type": "county",
+   "redfin_region_id": 2100,
+   "realtor_location": "Washington County, NC",
+   "lat": 35.844713,
+   "lng": -76.572291
+  },
+  {
+   "name": "Watauga County",
+   "fips": "37189",
+   "type": "county",
+   "redfin_region_id": 2101,
+   "realtor_location": "Watauga County, NC",
+   "lat": 36.235368,
+   "lng": -81.709888
+  },
+  {
+   "name": "Wayne County",
+   "fips": "37191",
+   "type": "county",
+   "redfin_region_id": 2102,
+   "realtor_location": "Wayne County, NC",
+   "lat": 35.35419,
+   "lng": -78.00867
+  },
+  {
+   "name": "Wilkes County",
+   "fips": "37193",
+   "type": "county",
+   "redfin_region_id": 2103,
+   "realtor_location": "Wilkes County, NC",
+   "lat": 36.208883,
+   "lng": -81.166095
+  },
+  {
+   "name": "Wilson County",
+   "fips": "37195",
+   "type": "county",
+   "redfin_region_id": 2104,
+   "realtor_location": "Wilson County, NC",
+   "lat": 35.700357,
+   "lng": -77.921598
+  },
+  {
+   "name": "Yadkin County",
+   "fips": "37197",
+   "type": "county",
+   "redfin_region_id": 2105,
+   "realtor_location": "Yadkin County, NC",
+   "lat": 36.158765,
+   "lng": -80.665164
+  },
+  {
+   "name": "Yancey County",
+   "fips": "37199",
+   "type": "county",
+   "redfin_region_id": 2106,
+   "realtor_location": "Yancey County, NC",
+   "lat": 35.889326,
+   "lng": -82.303954
+  }
+ ]
+}

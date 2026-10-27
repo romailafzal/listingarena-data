@@ -1,0 +1,276 @@
+{
+ "state": "AK",
+ "name": "Alaska",
+ "counties": [
+  {
+   "name": "Aleutians East Borough",
+   "fips": "02013",
+   "type": "county",
+   "redfin_region_id": 186,
+   "realtor_location": "Aleutians East Borough, AK",
+   "lat": 55.245044,
+   "lng": -161.997477
+  },
+  {
+   "name": "Aleutians West Census Area",
+   "fips": "02016",
+   "type": "county",
+   "redfin_region_id": 187,
+   "realtor_location": "Aleutians West, AK",
+   "lat": 51.959447,
+   "lng": 178.338813
+  },
+  {
+   "name": "Anchorage Municipality",
+   "fips": "02020",
+   "type": "county",
+   "redfin_region_id": 188,
+   "realtor_location": "Anchorage, AK",
+   "lat": 61.17425,
+   "lng": -149.284329
+  },
+  {
+   "name": "Bethel Census Area",
+   "fips": "02050",
+   "type": "county",
+   "redfin_region_id": 189,
+   "realtor_location": "Bethel, AK",
+   "lat": 60.929141,
+   "lng": -160.152625
+  },
+  {
+   "name": "Bristol Bay Borough",
+   "fips": "02060",
+   "type": "county",
+   "redfin_region_id": 190,
+   "realtor_location": "Bristol Bay Borough, AK",
+   "lat": 58.741661,
+   "lng": -156.966805
+  },
+  {
+   "name": "Chugach Census Area",
+   "fips": "02063",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Chugach, AK",
+   "lat": 60.488474,
+   "lng": -146.203092
+  },
+  {
+   "name": "Copper River Census Area",
+   "fips": "02066",
+   "type": "county",
+   "redfin_region_id": 208,
+   "realtor_location": "Copper River, AK",
+   "lat": 62.034479,
+   "lng": -143.922167
+  },
+  {
+   "name": "Denali Borough",
+   "fips": "02068",
+   "type": "county",
+   "redfin_region_id": 191,
+   "realtor_location": "Denali Borough, AK",
+   "lat": 63.682039,
+   "lng": -150.027016
+  },
+  {
+   "name": "Dillingham Census Area",
+   "fips": "02070",
+   "type": "county",
+   "redfin_region_id": 192,
+   "realtor_location": "Dillingham, AK",
+   "lat": 59.543326,
+   "lng": -158.267123
+  },
+  {
+   "name": "Fairbanks North Star Borough",
+   "fips": "02090",
+   "type": "county",
+   "redfin_region_id": 193,
+   "realtor_location": "Fairbanks North Star Borough, AK",
+   "lat": 64.676044,
+   "lng": -146.548159
+  },
+  {
+   "name": "Haines Borough",
+   "fips": "02100",
+   "type": "county",
+   "redfin_region_id": 194,
+   "realtor_location": "Haines Borough, AK",
+   "lat": 59.098404,
+   "lng": -135.575791
+  },
+  {
+   "name": "Hoonah-Angoon Census Area",
+   "fips": "02105",
+   "type": "county",
+   "redfin_region_id": 3351,
+   "realtor_location": "Hoonah-Angoon, AK",
+   "lat": 58.403336,
+   "lng": -135.884909
+  },
+  {
+   "name": "Juneau City and Borough",
+   "fips": "02110",
+   "type": "county",
+   "redfin_region_id": 195,
+   "realtor_location": "Juneau Borough, AK",
+   "lat": 58.37291,
+   "lng": -134.178445
+  },
+  {
+   "name": "Kenai Peninsula Borough",
+   "fips": "02122",
+   "type": "county",
+   "redfin_region_id": 196,
+   "realtor_location": "Kenai Peninsula Borough, AK",
+   "lat": 60.360766,
+   "lng": -152.05264
+  },
+  {
+   "name": "Ketchikan Gateway Borough",
+   "fips": "02130",
+   "type": "county",
+   "redfin_region_id": 197,
+   "realtor_location": "Ketchikan Gateway Borough, AK",
+   "lat": 55.449938,
+   "lng": -131.106685
+  },
+  {
+   "name": "Kodiak Island Borough",
+   "fips": "02150",
+   "type": "county",
+   "redfin_region_id": 198,
+   "realtor_location": "Kodiak Island Borough, AK",
+   "lat": 57.7044,
+   "lng": -153.918372
+  },
+  {
+   "name": "Kusilvak Census Area",
+   "fips": "02158",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Kusilvak, AK",
+   "lat": 62.283588,
+   "lng": -163.190171
+  },
+  {
+   "name": "Lake and Peninsula Borough",
+   "fips": "02164",
+   "type": "county",
+   "redfin_region_id": 199,
+   "realtor_location": "Lake and Peninsula Borough, AK",
+   "lat": 58.108507,
+   "lng": -156.413413
+  },
+  {
+   "name": "Matanuska-Susitna Borough",
+   "fips": "02170",
+   "type": "county",
+   "redfin_region_id": 200,
+   "realtor_location": "Matanuska-Susitna Borough, AK",
+   "lat": 62.265626,
+   "lng": -149.503993
+  },
+  {
+   "name": "Nome Census Area",
+   "fips": "02180",
+   "type": "county",
+   "redfin_region_id": 201,
+   "realtor_location": "Nome, AK",
+   "lat": 64.783686,
+   "lng": -164.188912
+  },
+  {
+   "name": "North Slope Borough",
+   "fips": "02185",
+   "type": "county",
+   "redfin_region_id": 202,
+   "realtor_location": "North Slope Borough, AK",
+   "lat": 69.449343,
+   "lng": -153.47283
+  },
+  {
+   "name": "Northwest Arctic Borough",
+   "fips": "02188",
+   "type": "county",
+   "redfin_region_id": 203,
+   "realtor_location": "Northwest Arctic Borough, AK",
+   "lat": 67.005066,
+   "lng": -160.021086
+  },
+  {
+   "name": "Petersburg Borough",
+   "fips": "02195",
+   "type": "county",
+   "redfin_region_id": 3352,
+   "realtor_location": "Petersburg, AK",
+   "lat": 57.112458,
+   "lng": -133.008598
+  },
+  {
+   "name": "Prince of Wales-Hyder Census Area",
+   "fips": "02198",
+   "type": "county",
+   "redfin_region_id": 204,
+   "realtor_location": "Prince of Wales-Hyder, AK",
+   "lat": 55.682773,
+   "lng": -133.162389
+  },
+  {
+   "name": "Sitka City and Borough",
+   "fips": "02220",
+   "type": "county",
+   "redfin_region_id": 205,
+   "realtor_location": "Sitka, AK",
+   "lat": 57.193204,
+   "lng": -135.367396
+  },
+  {
+   "name": "Skagway Municipality",
+   "fips": "02230",
+   "type": "county",
+   "redfin_region_id": 206,
+   "realtor_location": "Skagway, AK",
+   "lat": 59.560379,
+   "lng": -135.338279
+  },
+  {
+   "name": "Southeast Fairbanks Census Area",
+   "fips": "02240",
+   "type": "county",
+   "redfin_region_id": 207,
+   "realtor_location": "Southeast Fairbanks, AK",
+   "lat": 63.864997,
+   "lng": -143.218628
+  },
+  {
+   "name": "Wrangell City and Borough",
+   "fips": "02275",
+   "type": "county",
+   "redfin_region_id": 210,
+   "realtor_location": "Wrangell, AK",
+   "lat": 56.180779,
+   "lng": -132.026788
+  },
+  {
+   "name": "Yakutat City and Borough",
+   "fips": "02282",
+   "type": "county",
+   "redfin_region_id": 211,
+   "realtor_location": "Yakutat, AK",
+   "lat": 60.017453,
+   "lng": -140.416942
+  },
+  {
+   "name": "Yukon-Koyukuk Census Area",
+   "fips": "02290",
+   "type": "county",
+   "redfin_region_id": 212,
+   "realtor_location": "Yukon-Koyukuk, AK",
+   "lat": 65.375727,
+   "lng": -151.57785
+  }
+ ]
+}

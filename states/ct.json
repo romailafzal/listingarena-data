@@ -1,0 +1,78 @@
+{
+ "state": "CT",
+ "name": "Connecticut",
+ "counties": [
+  {
+   "name": "Fairfield County",
+   "fips": "09001",
+   "type": "county",
+   "redfin_region_id": 425,
+   "realtor_location": "Fairfield County, CT",
+   "lat": 41.227413,
+   "lng": -73.367061
+  },
+  {
+   "name": "Hartford County",
+   "fips": "09003",
+   "type": "county",
+   "redfin_region_id": 426,
+   "realtor_location": "Hartford County, CT",
+   "lat": 41.806053,
+   "lng": -72.732916
+  },
+  {
+   "name": "Litchfield County",
+   "fips": "09005",
+   "type": "county",
+   "redfin_region_id": 427,
+   "realtor_location": "Litchfield County, CT",
+   "lat": 41.791883,
+   "lng": -73.235404
+  },
+  {
+   "name": "Middlesex County",
+   "fips": "09007",
+   "type": "county",
+   "redfin_region_id": 428,
+   "realtor_location": "Middlesex County, CT",
+   "lat": 41.433003,
+   "lng": -72.52278
+  },
+  {
+   "name": "New Haven County",
+   "fips": "09009",
+   "type": "county",
+   "redfin_region_id": 429,
+   "realtor_location": "New Haven County, CT",
+   "lat": 41.349718,
+   "lng": -72.900203
+  },
+  {
+   "name": "New London County",
+   "fips": "09011",
+   "type": "county",
+   "redfin_region_id": 430,
+   "realtor_location": "New London County, CT",
+   "lat": 41.472652,
+   "lng": -72.108634
+  },
+  {
+   "name": "Tolland County",
+   "fips": "09013",
+   "type": "county",
+   "redfin_region_id": 431,
+   "realtor_location": "Tolland County, CT",
+   "lat": 41.858081,
+   "lng": -72.340978
+  },
+  {
+   "name": "Windham County",
+   "fips": "09015",
+   "type": "county",
+   "redfin_region_id": 432,
+   "realtor_location": "Windham County, CT",
+   "lat": 41.824999,
+   "lng": -71.990702
+  }
+ ]
+}

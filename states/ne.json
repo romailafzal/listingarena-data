@@ -1,0 +1,843 @@
+{
+ "state": "NE",
+ "name": "Nebraska",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "31001",
+   "type": "county",
+   "redfin_region_id": 1771,
+   "realtor_location": "Adams County, NE",
+   "lat": 40.520632,
+   "lng": -98.500044
+  },
+  {
+   "name": "Antelope County",
+   "fips": "31003",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Antelope County, NE",
+   "lat": 42.183225,
+   "lng": -98.058037
+  },
+  {
+   "name": "Arthur County",
+   "fips": "31005",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Arthur County, NE",
+   "lat": 41.57193,
+   "lng": -101.695917
+  },
+  {
+   "name": "Banner County",
+   "fips": "31007",
+   "type": "county",
+   "redfin_region_id": 1774,
+   "realtor_location": "Banner County, NE",
+   "lat": 41.53975,
+   "lng": -103.726263
+  },
+  {
+   "name": "Blaine County",
+   "fips": "31009",
+   "type": "county",
+   "redfin_region_id": 1775,
+   "realtor_location": "Blaine County, NE",
+   "lat": 41.931945,
+   "lng": -99.996407
+  },
+  {
+   "name": "Boone County",
+   "fips": "31011",
+   "type": "county",
+   "redfin_region_id": 1776,
+   "realtor_location": "Boone County, NE",
+   "lat": 41.703934,
+   "lng": -98.070476
+  },
+  {
+   "name": "Box Butte County",
+   "fips": "31013",
+   "type": "county",
+   "redfin_region_id": 1777,
+   "realtor_location": "Box Butte County, NE",
+   "lat": 42.21038,
+   "lng": -103.081779
+  },
+  {
+   "name": "Boyd County",
+   "fips": "31015",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Boyd County, NE",
+   "lat": 42.894448,
+   "lng": -98.773022
+  },
+  {
+   "name": "Brown County",
+   "fips": "31017",
+   "type": "county",
+   "redfin_region_id": 1779,
+   "realtor_location": "Brown County, NE",
+   "lat": 42.359562,
+   "lng": -99.92392
+  },
+  {
+   "name": "Buffalo County",
+   "fips": "31019",
+   "type": "county",
+   "redfin_region_id": 1780,
+   "realtor_location": "Buffalo County, NE",
+   "lat": 40.855265,
+   "lng": -99.074984
+  },
+  {
+   "name": "Burt County",
+   "fips": "31021",
+   "type": "county",
+   "redfin_region_id": 1781,
+   "realtor_location": "Burt County, NE",
+   "lat": 41.854179,
+   "lng": -96.337746
+  },
+  {
+   "name": "Butler County",
+   "fips": "31023",
+   "type": "county",
+   "redfin_region_id": 1782,
+   "realtor_location": "Butler County, NE",
+   "lat": 41.226072,
+   "lng": -97.132039
+  },
+  {
+   "name": "Cass County",
+   "fips": "31025",
+   "type": "county",
+   "redfin_region_id": 1783,
+   "realtor_location": "Cass County, NE",
+   "lat": 40.909878,
+   "lng": -96.140609
+  },
+  {
+   "name": "Cedar County",
+   "fips": "31027",
+   "type": "county",
+   "redfin_region_id": 1784,
+   "realtor_location": "Cedar County, NE",
+   "lat": 42.60456,
+   "lng": -97.25687
+  },
+  {
+   "name": "Chase County",
+   "fips": "31029",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Chase County, NE",
+   "lat": 40.53039,
+   "lng": -101.694192
+  },
+  {
+   "name": "Cherry County",
+   "fips": "31031",
+   "type": "county",
+   "redfin_region_id": 1786,
+   "realtor_location": "Cherry County, NE",
+   "lat": 42.571323,
+   "lng": -101.047653
+  },
+  {
+   "name": "Cheyenne County",
+   "fips": "31033",
+   "type": "county",
+   "redfin_region_id": 1787,
+   "realtor_location": "Cheyenne County, NE",
+   "lat": 41.214236,
+   "lng": -103.011929
+  },
+  {
+   "name": "Clay County",
+   "fips": "31035",
+   "type": "county",
+   "redfin_region_id": 1788,
+   "realtor_location": "Clay County, NE",
+   "lat": 40.523669,
+   "lng": -98.050858
+  },
+  {
+   "name": "Colfax County",
+   "fips": "31037",
+   "type": "county",
+   "redfin_region_id": 1789,
+   "realtor_location": "Colfax County, NE",
+   "lat": 41.57496,
+   "lng": -97.088945
+  },
+  {
+   "name": "Cuming County",
+   "fips": "31039",
+   "type": "county",
+   "redfin_region_id": 1790,
+   "realtor_location": "Cuming County, NE",
+   "lat": 41.915865,
+   "lng": -96.788517
+  },
+  {
+   "name": "Custer County",
+   "fips": "31041",
+   "type": "county",
+   "redfin_region_id": 1791,
+   "realtor_location": "Custer County, NE",
+   "lat": 41.393893,
+   "lng": -99.726866
+  },
+  {
+   "name": "Dakota County",
+   "fips": "31043",
+   "type": "county",
+   "redfin_region_id": 1792,
+   "realtor_location": "Dakota County, NE",
+   "lat": 42.391624,
+   "lng": -96.561327
+  },
+  {
+   "name": "Dawes County",
+   "fips": "31045",
+   "type": "county",
+   "redfin_region_id": 1793,
+   "realtor_location": "Dawes County, NE",
+   "lat": 42.713038,
+   "lng": -103.135436
+  },
+  {
+   "name": "Dawson County",
+   "fips": "31047",
+   "type": "county",
+   "redfin_region_id": 1794,
+   "realtor_location": "Dawson County, NE",
+   "lat": 40.86784,
+   "lng": -99.815583
+  },
+  {
+   "name": "Deuel County",
+   "fips": "31049",
+   "type": "county",
+   "redfin_region_id": 1795,
+   "realtor_location": "Deuel County, NE",
+   "lat": 41.111903,
+   "lng": -102.332609
+  },
+  {
+   "name": "Dixon County",
+   "fips": "31051",
+   "type": "county",
+   "redfin_region_id": 1796,
+   "realtor_location": "Dixon County, NE",
+   "lat": 42.485086,
+   "lng": -96.855784
+  },
+  {
+   "name": "Dodge County",
+   "fips": "31053",
+   "type": "county",
+   "redfin_region_id": 1797,
+   "realtor_location": "Dodge County, NE",
+   "lat": 41.577008,
+   "lng": -96.645852
+  },
+  {
+   "name": "Douglas County",
+   "fips": "31055",
+   "type": "county",
+   "redfin_region_id": 1798,
+   "realtor_location": "Douglas County, NE",
+   "lat": 41.297091,
+   "lng": -96.154066
+  },
+  {
+   "name": "Dundy County",
+   "fips": "31057",
+   "type": "county",
+   "redfin_region_id": 1799,
+   "realtor_location": "Dundy County, NE",
+   "lat": 40.180165,
+   "lng": -101.681133
+  },
+  {
+   "name": "Fillmore County",
+   "fips": "31059",
+   "type": "county",
+   "redfin_region_id": 1800,
+   "realtor_location": "Fillmore County, NE",
+   "lat": 40.52504,
+   "lng": -97.596705
+  },
+  {
+   "name": "Franklin County",
+   "fips": "31061",
+   "type": "county",
+   "redfin_region_id": 1801,
+   "realtor_location": "Franklin County, NE",
+   "lat": 40.183203,
+   "lng": -98.96208
+  },
+  {
+   "name": "Frontier County",
+   "fips": "31063",
+   "type": "county",
+   "redfin_region_id": 1802,
+   "realtor_location": "Frontier County, NE",
+   "lat": 40.530947,
+   "lng": -100.406683
+  },
+  {
+   "name": "Furnas County",
+   "fips": "31065",
+   "type": "county",
+   "redfin_region_id": 1803,
+   "realtor_location": "Furnas County, NE",
+   "lat": 40.191865,
+   "lng": -99.909663
+  },
+  {
+   "name": "Gage County",
+   "fips": "31067",
+   "type": "county",
+   "redfin_region_id": 1804,
+   "realtor_location": "Gage County, NE",
+   "lat": 40.255234,
+   "lng": -96.683453
+  },
+  {
+   "name": "Garden County",
+   "fips": "31069",
+   "type": "county",
+   "redfin_region_id": 1805,
+   "realtor_location": "Garden County, NE",
+   "lat": 41.633364,
+   "lng": -102.302985
+  },
+  {
+   "name": "Garfield County",
+   "fips": "31071",
+   "type": "county",
+   "redfin_region_id": 1806,
+   "realtor_location": "Garfield County, NE",
+   "lat": 41.906868,
+   "lng": -98.951231
+  },
+  {
+   "name": "Gosper County",
+   "fips": "31073",
+   "type": "county",
+   "redfin_region_id": 1807,
+   "realtor_location": "Gosper County, NE",
+   "lat": 40.509095,
+   "lng": -99.823206
+  },
+  {
+   "name": "Grant County",
+   "fips": "31075",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Grant County, NE",
+   "lat": 41.913957,
+   "lng": -101.755965
+  },
+  {
+   "name": "Greeley County",
+   "fips": "31077",
+   "type": "county",
+   "redfin_region_id": 1809,
+   "realtor_location": "Greeley County, NE",
+   "lat": 41.567571,
+   "lng": -98.530565
+  },
+  {
+   "name": "Hall County",
+   "fips": "31079",
+   "type": "county",
+   "redfin_region_id": 1810,
+   "realtor_location": "Hall County, NE",
+   "lat": 40.866027,
+   "lng": -98.502664
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "31081",
+   "type": "county",
+   "redfin_region_id": 1811,
+   "realtor_location": "Hamilton County, NE",
+   "lat": 40.872817,
+   "lng": -98.022329
+  },
+  {
+   "name": "Harlan County",
+   "fips": "31083",
+   "type": "county",
+   "redfin_region_id": 1812,
+   "realtor_location": "Harlan County, NE",
+   "lat": 40.178766,
+   "lng": -99.403418
+  },
+  {
+   "name": "Hayes County",
+   "fips": "31085",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Hayes County, NE",
+   "lat": 40.537234,
+   "lng": -101.047963
+  },
+  {
+   "name": "Hitchcock County",
+   "fips": "31087",
+   "type": "county",
+   "redfin_region_id": 1814,
+   "realtor_location": "Hitchcock County, NE",
+   "lat": 40.176896,
+   "lng": -101.044217
+  },
+  {
+   "name": "Holt County",
+   "fips": "31089",
+   "type": "county",
+   "redfin_region_id": 1815,
+   "realtor_location": "Holt County, NE",
+   "lat": 42.459287,
+   "lng": -98.784766
+  },
+  {
+   "name": "Hooker County",
+   "fips": "31091",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Hooker County, NE",
+   "lat": 41.920317,
+   "lng": -101.117324
+  },
+  {
+   "name": "Howard County",
+   "fips": "31093",
+   "type": "county",
+   "redfin_region_id": 1817,
+   "realtor_location": "Howard County, NE",
+   "lat": 41.216851,
+   "lng": -98.513342
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "31095",
+   "type": "county",
+   "redfin_region_id": 1818,
+   "realtor_location": "Jefferson County, NE",
+   "lat": 40.175736,
+   "lng": -97.143103
+  },
+  {
+   "name": "Johnson County",
+   "fips": "31097",
+   "type": "county",
+   "redfin_region_id": 1819,
+   "realtor_location": "Johnson County, NE",
+   "lat": 40.394955,
+   "lng": -96.265264
+  },
+  {
+   "name": "Kearney County",
+   "fips": "31099",
+   "type": "county",
+   "redfin_region_id": 1820,
+   "realtor_location": "Kearney County, NE",
+   "lat": 40.50912,
+   "lng": -98.947602
+  },
+  {
+   "name": "Keith County",
+   "fips": "31101",
+   "type": "county",
+   "redfin_region_id": 1821,
+   "realtor_location": "Keith County, NE",
+   "lat": 41.194245,
+   "lng": -101.644449
+  },
+  {
+   "name": "Keya Paha County",
+   "fips": "31103",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Keya Paha County, NE",
+   "lat": 42.87548,
+   "lng": -99.718351
+  },
+  {
+   "name": "Kimball County",
+   "fips": "31105",
+   "type": "county",
+   "redfin_region_id": 1823,
+   "realtor_location": "Kimball County, NE",
+   "lat": 41.199274,
+   "lng": -103.703153
+  },
+  {
+   "name": "Knox County",
+   "fips": "31107",
+   "type": "county",
+   "redfin_region_id": 1824,
+   "realtor_location": "Knox County, NE",
+   "lat": 42.634404,
+   "lng": -97.891349
+  },
+  {
+   "name": "Lancaster County",
+   "fips": "31109",
+   "type": "county",
+   "redfin_region_id": 1825,
+   "realtor_location": "Lancaster County, NE",
+   "lat": 40.783547,
+   "lng": -96.688658
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "31111",
+   "type": "county",
+   "redfin_region_id": 1826,
+   "realtor_location": "Lincoln County, NE",
+   "lat": 41.050322,
+   "lng": -100.744481
+  },
+  {
+   "name": "Logan County",
+   "fips": "31113",
+   "type": "county",
+   "redfin_region_id": 1827,
+   "realtor_location": "Logan County, NE",
+   "lat": 41.542155,
+   "lng": -100.443665
+  },
+  {
+   "name": "Loup County",
+   "fips": "31115",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Loup County, NE",
+   "lat": 41.903183,
+   "lng": -99.509852
+  },
+  {
+   "name": "McPherson County",
+   "fips": "31117",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "McPherson County, NE",
+   "lat": 41.648414,
+   "lng": -101.120851
+  },
+  {
+   "name": "Madison County",
+   "fips": "31119",
+   "type": "county",
+   "redfin_region_id": 1830,
+   "realtor_location": "Madison County, NE",
+   "lat": 41.909929,
+   "lng": -97.606856
+  },
+  {
+   "name": "Merrick County",
+   "fips": "31121",
+   "type": "county",
+   "redfin_region_id": 1831,
+   "realtor_location": "Merrick County, NE",
+   "lat": 41.16979,
+   "lng": -98.031057
+  },
+  {
+   "name": "Morrill County",
+   "fips": "31123",
+   "type": "county",
+   "redfin_region_id": 1832,
+   "realtor_location": "Morrill County, NE",
+   "lat": 41.732204,
+   "lng": -102.990594
+  },
+  {
+   "name": "Nance County",
+   "fips": "31125",
+   "type": "county",
+   "redfin_region_id": 1833,
+   "realtor_location": "Nance County, NE",
+   "lat": 41.402385,
+   "lng": -97.991408
+  },
+  {
+   "name": "Nemaha County",
+   "fips": "31127",
+   "type": "county",
+   "redfin_region_id": 1834,
+   "realtor_location": "Nemaha County, NE",
+   "lat": 40.387389,
+   "lng": -95.852721
+  },
+  {
+   "name": "Nuckolls County",
+   "fips": "31129",
+   "type": "county",
+   "redfin_region_id": 1835,
+   "realtor_location": "Nuckolls County, NE",
+   "lat": 40.176492,
+   "lng": -98.046842
+  },
+  {
+   "name": "Otoe County",
+   "fips": "31131",
+   "type": "county",
+   "redfin_region_id": 1836,
+   "realtor_location": "Otoe County, NE",
+   "lat": 40.637992,
+   "lng": -96.131027
+  },
+  {
+   "name": "Pawnee County",
+   "fips": "31133",
+   "type": "county",
+   "redfin_region_id": 1837,
+   "realtor_location": "Pawnee County, NE",
+   "lat": 40.137797,
+   "lng": -96.245214
+  },
+  {
+   "name": "Perkins County",
+   "fips": "31135",
+   "type": "county",
+   "redfin_region_id": 1838,
+   "realtor_location": "Perkins County, NE",
+   "lat": 40.857646,
+   "lng": -101.627468
+  },
+  {
+   "name": "Phelps County",
+   "fips": "31137",
+   "type": "county",
+   "redfin_region_id": 1839,
+   "realtor_location": "Phelps County, NE",
+   "lat": 40.516365,
+   "lng": -99.406557
+  },
+  {
+   "name": "Pierce County",
+   "fips": "31139",
+   "type": "county",
+   "redfin_region_id": 1840,
+   "realtor_location": "Pierce County, NE",
+   "lat": 42.271413,
+   "lng": -97.610992
+  },
+  {
+   "name": "Platte County",
+   "fips": "31141",
+   "type": "county",
+   "redfin_region_id": 1841,
+   "realtor_location": "Platte County, NE",
+   "lat": 41.576866,
+   "lng": -97.513467
+  },
+  {
+   "name": "Polk County",
+   "fips": "31143",
+   "type": "county",
+   "redfin_region_id": 1842,
+   "realtor_location": "Polk County, NE",
+   "lat": 41.187925,
+   "lng": -97.570663
+  },
+  {
+   "name": "Red Willow County",
+   "fips": "31145",
+   "type": "county",
+   "redfin_region_id": 1843,
+   "realtor_location": "Red Willow County, NE",
+   "lat": 40.16942,
+   "lng": -100.468576
+  },
+  {
+   "name": "Richardson County",
+   "fips": "31147",
+   "type": "county",
+   "redfin_region_id": 1844,
+   "realtor_location": "Richardson County, NE",
+   "lat": 40.123743,
+   "lng": -95.718603
+  },
+  {
+   "name": "Rock County",
+   "fips": "31149",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Rock County, NE",
+   "lat": 42.394749,
+   "lng": -99.420851
+  },
+  {
+   "name": "Saline County",
+   "fips": "31151",
+   "type": "county",
+   "redfin_region_id": 1846,
+   "realtor_location": "Saline County, NE",
+   "lat": 40.516802,
+   "lng": -97.131755
+  },
+  {
+   "name": "Sarpy County",
+   "fips": "31153",
+   "type": "county",
+   "redfin_region_id": 1847,
+   "realtor_location": "Sarpy County, NE",
+   "lat": 41.115064,
+   "lng": -96.109125
+  },
+  {
+   "name": "Saunders County",
+   "fips": "31155",
+   "type": "county",
+   "redfin_region_id": 1848,
+   "realtor_location": "Saunders County, NE",
+   "lat": 41.223388,
+   "lng": -96.642097
+  },
+  {
+   "name": "Scotts Bluff County",
+   "fips": "31157",
+   "type": "county",
+   "redfin_region_id": 1849,
+   "realtor_location": "Scotts Bluff County, NE",
+   "lat": 41.850331,
+   "lng": -103.701549
+  },
+  {
+   "name": "Seward County",
+   "fips": "31159",
+   "type": "county",
+   "redfin_region_id": 1850,
+   "realtor_location": "Seward County, NE",
+   "lat": 40.871944,
+   "lng": -97.140383
+  },
+  {
+   "name": "Sheridan County",
+   "fips": "31161",
+   "type": "county",
+   "redfin_region_id": 1851,
+   "realtor_location": "Sheridan County, NE",
+   "lat": 42.512289,
+   "lng": -102.36828
+  },
+  {
+   "name": "Sherman County",
+   "fips": "31163",
+   "type": "county",
+   "redfin_region_id": 1852,
+   "realtor_location": "Sherman County, NE",
+   "lat": 41.218743,
+   "lng": -98.972849
+  },
+  {
+   "name": "Sioux County",
+   "fips": "31165",
+   "type": "county",
+   "redfin_region_id": 1853,
+   "realtor_location": "Sioux County, NE",
+   "lat": 42.470668,
+   "lng": -103.73217
+  },
+  {
+   "name": "Stanton County",
+   "fips": "31167",
+   "type": "county",
+   "redfin_region_id": 1854,
+   "realtor_location": "Stanton County, NE",
+   "lat": 41.905045,
+   "lng": -97.177109
+  },
+  {
+   "name": "Thayer County",
+   "fips": "31169",
+   "type": "county",
+   "redfin_region_id": 1855,
+   "realtor_location": "Thayer County, NE",
+   "lat": 40.173845,
+   "lng": -97.596263
+  },
+  {
+   "name": "Thomas County",
+   "fips": "31171",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Thomas County, NE",
+   "lat": 41.85573,
+   "lng": -100.524703
+  },
+  {
+   "name": "Thurston County",
+   "fips": "31173",
+   "type": "county",
+   "redfin_region_id": 1857,
+   "realtor_location": "Thurston County, NE",
+   "lat": 42.154061,
+   "lng": -96.533943
+  },
+  {
+   "name": "Valley County",
+   "fips": "31175",
+   "type": "county",
+   "redfin_region_id": 1858,
+   "realtor_location": "Valley County, NE",
+   "lat": 41.564094,
+   "lng": -98.983484
+  },
+  {
+   "name": "Washington County",
+   "fips": "31177",
+   "type": "county",
+   "redfin_region_id": 1859,
+   "realtor_location": "Washington County, NE",
+   "lat": 41.533973,
+   "lng": -96.224577
+  },
+  {
+   "name": "Wayne County",
+   "fips": "31179",
+   "type": "county",
+   "redfin_region_id": 1860,
+   "realtor_location": "Wayne County, NE",
+   "lat": 42.210746,
+   "lng": -97.126243
+  },
+  {
+   "name": "Webster County",
+   "fips": "31181",
+   "type": "county",
+   "redfin_region_id": 1861,
+   "realtor_location": "Webster County, NE",
+   "lat": 40.180646,
+   "lng": -98.49859
+  },
+  {
+   "name": "Wheeler County",
+   "fips": "31183",
+   "type": "county",
+   "redfin_region_id": 1862,
+   "realtor_location": "Wheeler County, NE",
+   "lat": 41.922575,
+   "lng": -98.520853
+  },
+  {
+   "name": "York County",
+   "fips": "31185",
+   "type": "county",
+   "redfin_region_id": 1863,
+   "realtor_location": "York County, NE",
+   "lat": 40.873056,
+   "lng": -97.596742
+  }
+ ]
+}

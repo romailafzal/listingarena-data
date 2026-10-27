@@ -1,0 +1,420 @@
+{
+ "state": "SC",
+ "name": "South Carolina",
+ "counties": [
+  {
+   "name": "Abbeville County",
+   "fips": "45001",
+   "type": "county",
+   "redfin_region_id": 2433,
+   "realtor_location": "Abbeville County, SC",
+   "lat": 34.229041,
+   "lng": -82.454058
+  },
+  {
+   "name": "Aiken County",
+   "fips": "45003",
+   "type": "county",
+   "redfin_region_id": 2434,
+   "realtor_location": "Aiken County, SC",
+   "lat": 33.550013,
+   "lng": -81.632983
+  },
+  {
+   "name": "Allendale County",
+   "fips": "45005",
+   "type": "county",
+   "redfin_region_id": 2435,
+   "realtor_location": "Allendale County, SC",
+   "lat": 32.979757,
+   "lng": -81.363265
+  },
+  {
+   "name": "Anderson County",
+   "fips": "45007",
+   "type": "county",
+   "redfin_region_id": 2436,
+   "realtor_location": "Anderson County, SC",
+   "lat": 34.521235,
+   "lng": -82.638603
+  },
+  {
+   "name": "Bamberg County",
+   "fips": "45009",
+   "type": "county",
+   "redfin_region_id": 2437,
+   "realtor_location": "Bamberg County, SC",
+   "lat": 33.203021,
+   "lng": -81.053161
+  },
+  {
+   "name": "Barnwell County",
+   "fips": "45011",
+   "type": "county",
+   "redfin_region_id": 2438,
+   "realtor_location": "Barnwell County, SC",
+   "lat": 33.260552,
+   "lng": -81.434228
+  },
+  {
+   "name": "Beaufort County",
+   "fips": "45013",
+   "type": "county",
+   "redfin_region_id": 2439,
+   "realtor_location": "Beaufort County, SC",
+   "lat": 32.358112,
+   "lng": -80.689422
+  },
+  {
+   "name": "Berkeley County",
+   "fips": "45015",
+   "type": "county",
+   "redfin_region_id": 2440,
+   "realtor_location": "Berkeley County, SC",
+   "lat": 33.2077,
+   "lng": -79.953655
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "45017",
+   "type": "county",
+   "redfin_region_id": 2441,
+   "realtor_location": "Calhoun County, SC",
+   "lat": 33.67478,
+   "lng": -80.780347
+  },
+  {
+   "name": "Charleston County",
+   "fips": "45019",
+   "type": "county",
+   "redfin_region_id": 2442,
+   "realtor_location": "Charleston County, SC",
+   "lat": 32.800458,
+   "lng": -79.94248
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "45021",
+   "type": "county",
+   "redfin_region_id": 2443,
+   "realtor_location": "Cherokee County, SC",
+   "lat": 35.049796,
+   "lng": -81.607647
+  },
+  {
+   "name": "Chester County",
+   "fips": "45023",
+   "type": "county",
+   "redfin_region_id": 2444,
+   "realtor_location": "Chester County, SC",
+   "lat": 34.689342,
+   "lng": -81.161249
+  },
+  {
+   "name": "Chesterfield County",
+   "fips": "45025",
+   "type": "county",
+   "redfin_region_id": 2445,
+   "realtor_location": "Chesterfield County, SC",
+   "lat": 34.637018,
+   "lng": -80.159227
+  },
+  {
+   "name": "Clarendon County",
+   "fips": "45027",
+   "type": "county",
+   "redfin_region_id": 2446,
+   "realtor_location": "Clarendon County, SC",
+   "lat": 33.664682,
+   "lng": -80.217889
+  },
+  {
+   "name": "Colleton County",
+   "fips": "45029",
+   "type": "county",
+   "redfin_region_id": 2447,
+   "realtor_location": "Colleton County, SC",
+   "lat": 32.835018,
+   "lng": -80.655244
+  },
+  {
+   "name": "Darlington County",
+   "fips": "45031",
+   "type": "county",
+   "redfin_region_id": 2448,
+   "realtor_location": "Darlington County, SC",
+   "lat": 34.332185,
+   "lng": -79.962115
+  },
+  {
+   "name": "Dillon County",
+   "fips": "45033",
+   "type": "county",
+   "redfin_region_id": 2449,
+   "realtor_location": "Dillon County, SC",
+   "lat": 34.390172,
+   "lng": -79.374964
+  },
+  {
+   "name": "Dorchester County",
+   "fips": "45035",
+   "type": "county",
+   "redfin_region_id": 2450,
+   "realtor_location": "Dorchester County, SC",
+   "lat": 33.082186,
+   "lng": -80.404697
+  },
+  {
+   "name": "Edgefield County",
+   "fips": "45037",
+   "type": "county",
+   "redfin_region_id": 2451,
+   "realtor_location": "Edgefield County, SC",
+   "lat": 33.776498,
+   "lng": -81.968245
+  },
+  {
+   "name": "Fairfield County",
+   "fips": "45039",
+   "type": "county",
+   "redfin_region_id": 2452,
+   "realtor_location": "Fairfield County, SC",
+   "lat": 34.395669,
+   "lng": -81.127001
+  },
+  {
+   "name": "Florence County",
+   "fips": "45041",
+   "type": "county",
+   "redfin_region_id": 2453,
+   "realtor_location": "Florence County, SC",
+   "lat": 34.028535,
+   "lng": -79.710233
+  },
+  {
+   "name": "Georgetown County",
+   "fips": "45043",
+   "type": "county",
+   "redfin_region_id": 2454,
+   "realtor_location": "Georgetown County, SC",
+   "lat": 33.417531,
+   "lng": -79.296333
+  },
+  {
+   "name": "Greenville County",
+   "fips": "45045",
+   "type": "county",
+   "redfin_region_id": 2455,
+   "realtor_location": "Greenville County, SC",
+   "lat": 34.892645,
+   "lng": -82.372077
+  },
+  {
+   "name": "Greenwood County",
+   "fips": "45047",
+   "type": "county",
+   "redfin_region_id": 2456,
+   "realtor_location": "Greenwood County, SC",
+   "lat": 34.155796,
+   "lng": -82.127876
+  },
+  {
+   "name": "Hampton County",
+   "fips": "45049",
+   "type": "county",
+   "redfin_region_id": 2457,
+   "realtor_location": "Hampton County, SC",
+   "lat": 32.778334,
+   "lng": -81.143822
+  },
+  {
+   "name": "Horry County",
+   "fips": "45051",
+   "type": "county",
+   "redfin_region_id": 2458,
+   "realtor_location": "Horry County, SC",
+   "lat": 33.909269,
+   "lng": -78.976675
+  },
+  {
+   "name": "Jasper County",
+   "fips": "45053",
+   "type": "county",
+   "redfin_region_id": 2459,
+   "realtor_location": "Jasper County, SC",
+   "lat": 32.43059,
+   "lng": -81.021627
+  },
+  {
+   "name": "Kershaw County",
+   "fips": "45055",
+   "type": "county",
+   "redfin_region_id": 2460,
+   "realtor_location": "Kershaw County, SC",
+   "lat": 34.338356,
+   "lng": -80.590885
+  },
+  {
+   "name": "Lancaster County",
+   "fips": "45057",
+   "type": "county",
+   "redfin_region_id": 2461,
+   "realtor_location": "Lancaster County, SC",
+   "lat": 34.686818,
+   "lng": -80.703688
+  },
+  {
+   "name": "Laurens County",
+   "fips": "45059",
+   "type": "county",
+   "redfin_region_id": 2462,
+   "realtor_location": "Laurens County, SC",
+   "lat": 34.483676,
+   "lng": -82.005498
+  },
+  {
+   "name": "Lee County",
+   "fips": "45061",
+   "type": "county",
+   "redfin_region_id": 2463,
+   "realtor_location": "Lee County, SC",
+   "lat": 34.15864,
+   "lng": -80.251209
+  },
+  {
+   "name": "Lexington County",
+   "fips": "45063",
+   "type": "county",
+   "redfin_region_id": 2464,
+   "realtor_location": "Lexington County, SC",
+   "lat": 33.899246,
+   "lng": -81.266118
+  },
+  {
+   "name": "McCormick County",
+   "fips": "45065",
+   "type": "county",
+   "redfin_region_id": 2465,
+   "realtor_location": "McCormick County, SC",
+   "lat": 33.897599,
+   "lng": -82.316196
+  },
+  {
+   "name": "Marion County",
+   "fips": "45067",
+   "type": "county",
+   "redfin_region_id": 2466,
+   "realtor_location": "Marion County, SC",
+   "lat": 34.08362,
+   "lng": -79.354001
+  },
+  {
+   "name": "Marlboro County",
+   "fips": "45069",
+   "type": "county",
+   "redfin_region_id": 2467,
+   "realtor_location": "Marlboro County, SC",
+   "lat": 34.60167,
+   "lng": -79.679435
+  },
+  {
+   "name": "Newberry County",
+   "fips": "45071",
+   "type": "county",
+   "redfin_region_id": 2468,
+   "realtor_location": "Newberry County, SC",
+   "lat": 34.289881,
+   "lng": -81.599676
+  },
+  {
+   "name": "Oconee County",
+   "fips": "45073",
+   "type": "county",
+   "redfin_region_id": 2469,
+   "realtor_location": "Oconee County, SC",
+   "lat": 34.748766,
+   "lng": -83.06154
+  },
+  {
+   "name": "Orangeburg County",
+   "fips": "45075",
+   "type": "county",
+   "redfin_region_id": 2470,
+   "realtor_location": "Orangeburg County, SC",
+   "lat": 33.436135,
+   "lng": -80.802913
+  },
+  {
+   "name": "Pickens County",
+   "fips": "45077",
+   "type": "county",
+   "redfin_region_id": 2471,
+   "realtor_location": "Pickens County, SC",
+   "lat": 34.885368,
+   "lng": -82.723377
+  },
+  {
+   "name": "Richland County",
+   "fips": "45079",
+   "type": "county",
+   "redfin_region_id": 2472,
+   "realtor_location": "Richland County, SC",
+   "lat": 34.029095,
+   "lng": -80.898037
+  },
+  {
+   "name": "Saluda County",
+   "fips": "45081",
+   "type": "county",
+   "redfin_region_id": 2473,
+   "realtor_location": "Saluda County, SC",
+   "lat": 34.005278,
+   "lng": -81.727903
+  },
+  {
+   "name": "Spartanburg County",
+   "fips": "45083",
+   "type": "county",
+   "redfin_region_id": 2474,
+   "realtor_location": "Spartanburg County, SC",
+   "lat": 34.932014,
+   "lng": -81.991624
+  },
+  {
+   "name": "Sumter County",
+   "fips": "45085",
+   "type": "county",
+   "redfin_region_id": 2475,
+   "realtor_location": "Sumter County, SC",
+   "lat": 33.91614,
+   "lng": -80.382376
+  },
+  {
+   "name": "Union County",
+   "fips": "45087",
+   "type": "county",
+   "redfin_region_id": 2476,
+   "realtor_location": "Union County, SC",
+   "lat": 34.690397,
+   "lng": -81.615896
+  },
+  {
+   "name": "Williamsburg County",
+   "fips": "45089",
+   "type": "county",
+   "redfin_region_id": 2477,
+   "realtor_location": "Williamsburg County, SC",
+   "lat": 33.626462,
+   "lng": -79.716474
+  },
+  {
+   "name": "York County",
+   "fips": "45091",
+   "type": "county",
+   "redfin_region_id": 2478,
+   "realtor_location": "York County, SC",
+   "lat": 34.970188,
+   "lng": -81.183187
+  }
+ ]
+}

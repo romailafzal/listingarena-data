@@ -1,0 +1,33 @@
+{
+ "state": "DE",
+ "name": "Delaware",
+ "counties": [
+  {
+   "name": "Kent County",
+   "fips": "10001",
+   "type": "county",
+   "redfin_region_id": 433,
+   "realtor_location": "Kent County, DE",
+   "lat": 39.097088,
+   "lng": -75.502982
+  },
+  {
+   "name": "New Castle County",
+   "fips": "10003",
+   "type": "county",
+   "redfin_region_id": 434,
+   "realtor_location": "New Castle County, DE",
+   "lat": 39.575915,
+   "lng": -75.644132
+  },
+  {
+   "name": "Sussex County",
+   "fips": "10005",
+   "type": "county",
+   "redfin_region_id": 435,
+   "realtor_location": "Sussex County, DE",
+   "lat": 38.673227,
+   "lng": -75.337024
+  }
+ ]
+}

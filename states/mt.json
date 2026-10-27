@@ -1,0 +1,510 @@
+{
+ "state": "MT",
+ "name": "Montana",
+ "counties": [
+  {
+   "name": "Beaverhead County",
+   "fips": "30001",
+   "type": "county",
+   "redfin_region_id": 1715,
+   "realtor_location": "Beaverhead County, MT",
+   "lat": 45.133863,
+   "lng": -112.892869
+  },
+  {
+   "name": "Big Horn County",
+   "fips": "30003",
+   "type": "county",
+   "redfin_region_id": 1716,
+   "realtor_location": "Big Horn County, MT",
+   "lat": 45.407868,
+   "lng": -107.518162
+  },
+  {
+   "name": "Blaine County",
+   "fips": "30005",
+   "type": "county",
+   "redfin_region_id": 1717,
+   "realtor_location": "Blaine County, MT",
+   "lat": 48.428282,
+   "lng": -108.967648
+  },
+  {
+   "name": "Broadwater County",
+   "fips": "30007",
+   "type": "county",
+   "redfin_region_id": 1718,
+   "realtor_location": "Broadwater County, MT",
+   "lat": 46.329849,
+   "lng": -111.497873
+  },
+  {
+   "name": "Carbon County",
+   "fips": "30009",
+   "type": "county",
+   "redfin_region_id": 1719,
+   "realtor_location": "Carbon County, MT",
+   "lat": 45.224468,
+   "lng": -109.028554
+  },
+  {
+   "name": "Carter County",
+   "fips": "30011",
+   "type": "county",
+   "redfin_region_id": 1720,
+   "realtor_location": "Carter County, MT",
+   "lat": 45.516825,
+   "lng": -104.515324
+  },
+  {
+   "name": "Cascade County",
+   "fips": "30013",
+   "type": "county",
+   "redfin_region_id": 1721,
+   "realtor_location": "Cascade County, MT",
+   "lat": 47.316575,
+   "lng": -111.350262
+  },
+  {
+   "name": "Chouteau County",
+   "fips": "30015",
+   "type": "county",
+   "redfin_region_id": 1722,
+   "realtor_location": "Chouteau County, MT",
+   "lat": 47.886834,
+   "lng": -110.4362
+  },
+  {
+   "name": "Custer County",
+   "fips": "30017",
+   "type": "county",
+   "redfin_region_id": 1723,
+   "realtor_location": "Custer County, MT",
+   "lat": 46.261414,
+   "lng": -105.550352
+  },
+  {
+   "name": "Daniels County",
+   "fips": "30019",
+   "type": "county",
+   "redfin_region_id": 1724,
+   "realtor_location": "Daniels County, MT",
+   "lat": 48.794429,
+   "lng": -105.541739
+  },
+  {
+   "name": "Dawson County",
+   "fips": "30021",
+   "type": "county",
+   "redfin_region_id": 1725,
+   "realtor_location": "Dawson County, MT",
+   "lat": 47.26613,
+   "lng": -104.898271
+  },
+  {
+   "name": "Deer Lodge County",
+   "fips": "30023",
+   "type": "county",
+   "redfin_region_id": 1726,
+   "realtor_location": "Deer Lodge County, MT",
+   "lat": 46.094672,
+   "lng": -113.141624
+  },
+  {
+   "name": "Fallon County",
+   "fips": "30025",
+   "type": "county",
+   "redfin_region_id": 1727,
+   "realtor_location": "Fallon County, MT",
+   "lat": 46.318184,
+   "lng": -104.405718
+  },
+  {
+   "name": "Fergus County",
+   "fips": "30027",
+   "type": "county",
+   "redfin_region_id": 1728,
+   "realtor_location": "Fergus County, MT",
+   "lat": 47.221816,
+   "lng": -109.232956
+  },
+  {
+   "name": "Flathead County",
+   "fips": "30029",
+   "type": "county",
+   "redfin_region_id": 1729,
+   "realtor_location": "Flathead County, MT",
+   "lat": 48.295422,
+   "lng": -114.052059
+  },
+  {
+   "name": "Gallatin County",
+   "fips": "30031",
+   "type": "county",
+   "redfin_region_id": 1730,
+   "realtor_location": "Gallatin County, MT",
+   "lat": 45.518054,
+   "lng": -111.163921
+  },
+  {
+   "name": "Garfield County",
+   "fips": "30033",
+   "type": "county",
+   "redfin_region_id": 1731,
+   "realtor_location": "Garfield County, MT",
+   "lat": 47.267184,
+   "lng": -106.995991
+  },
+  {
+   "name": "Glacier County",
+   "fips": "30035",
+   "type": "county",
+   "redfin_region_id": 1732,
+   "realtor_location": "Glacier County, MT",
+   "lat": 48.705671,
+   "lng": -112.990502
+  },
+  {
+   "name": "Golden Valley County",
+   "fips": "30037",
+   "type": "county",
+   "redfin_region_id": 1733,
+   "realtor_location": "Golden Valley County, MT",
+   "lat": 46.380624,
+   "lng": -109.174586
+  },
+  {
+   "name": "Granite County",
+   "fips": "30039",
+   "type": "county",
+   "redfin_region_id": 1734,
+   "realtor_location": "Granite County, MT",
+   "lat": 46.395955,
+   "lng": -113.427356
+  },
+  {
+   "name": "Hill County",
+   "fips": "30041",
+   "type": "county",
+   "redfin_region_id": 1735,
+   "realtor_location": "Hill County, MT",
+   "lat": 48.631959,
+   "lng": -110.106321
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "30043",
+   "type": "county",
+   "redfin_region_id": 1736,
+   "realtor_location": "Jefferson County, MT",
+   "lat": 46.124232,
+   "lng": -112.059428
+  },
+  {
+   "name": "Judith Basin County",
+   "fips": "30045",
+   "type": "county",
+   "redfin_region_id": 1737,
+   "realtor_location": "Judith Basin County, MT",
+   "lat": 47.032558,
+   "lng": -110.30532
+  },
+  {
+   "name": "Lake County",
+   "fips": "30047",
+   "type": "county",
+   "redfin_region_id": 1738,
+   "realtor_location": "Lake County, MT",
+   "lat": 47.642901,
+   "lng": -114.083687
+  },
+  {
+   "name": "Lewis and Clark County",
+   "fips": "30049",
+   "type": "county",
+   "redfin_region_id": 1739,
+   "realtor_location": "Lewis and Clark County, MT",
+   "lat": 47.132013,
+   "lng": -112.373367
+  },
+  {
+   "name": "Liberty County",
+   "fips": "30051",
+   "type": "county",
+   "redfin_region_id": 1740,
+   "realtor_location": "Liberty County, MT",
+   "lat": 48.559654,
+   "lng": -111.036924
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "30053",
+   "type": "county",
+   "redfin_region_id": 1741,
+   "realtor_location": "Lincoln County, MT",
+   "lat": 48.552385,
+   "lng": -115.463185
+  },
+  {
+   "name": "McCone County",
+   "fips": "30055",
+   "type": "county",
+   "redfin_region_id": 1742,
+   "realtor_location": "McCone County, MT",
+   "lat": 47.629628,
+   "lng": -105.757222
+  },
+  {
+   "name": "Madison County",
+   "fips": "30057",
+   "type": "county",
+   "redfin_region_id": 1743,
+   "realtor_location": "Madison County, MT",
+   "lat": 45.32529,
+   "lng": -111.913791
+  },
+  {
+   "name": "Meagher County",
+   "fips": "30059",
+   "type": "county",
+   "redfin_region_id": 1744,
+   "realtor_location": "Meagher County, MT",
+   "lat": 46.5857,
+   "lng": -110.92174
+  },
+  {
+   "name": "Mineral County",
+   "fips": "30061",
+   "type": "county",
+   "redfin_region_id": 1745,
+   "realtor_location": "Mineral County, MT",
+   "lat": 47.129687,
+   "lng": -115.085385
+  },
+  {
+   "name": "Missoula County",
+   "fips": "30063",
+   "type": "county",
+   "redfin_region_id": 1746,
+   "realtor_location": "Missoula County, MT",
+   "lat": 47.027263,
+   "lng": -113.892691
+  },
+  {
+   "name": "Musselshell County",
+   "fips": "30065",
+   "type": "county",
+   "redfin_region_id": 1747,
+   "realtor_location": "Musselshell County, MT",
+   "lat": 46.505281,
+   "lng": -108.439763
+  },
+  {
+   "name": "Park County",
+   "fips": "30067",
+   "type": "county",
+   "redfin_region_id": 1748,
+   "realtor_location": "Park County, MT",
+   "lat": 45.463081,
+   "lng": -110.53493
+  },
+  {
+   "name": "Petroleum County",
+   "fips": "30069",
+   "type": "county",
+   "redfin_region_id": 1749,
+   "realtor_location": "Petroleum County, MT",
+   "lat": 47.141917,
+   "lng": -108.226575
+  },
+  {
+   "name": "Phillips County",
+   "fips": "30071",
+   "type": "county",
+   "redfin_region_id": 1750,
+   "realtor_location": "Phillips County, MT",
+   "lat": 48.250143,
+   "lng": -107.928897
+  },
+  {
+   "name": "Pondera County",
+   "fips": "30073",
+   "type": "county",
+   "redfin_region_id": 1751,
+   "realtor_location": "Pondera County, MT",
+   "lat": 48.228604,
+   "lng": -112.220761
+  },
+  {
+   "name": "Powder River County",
+   "fips": "30075",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Powder River County, MT",
+   "lat": 45.408926,
+   "lng": -105.555344
+  },
+  {
+   "name": "Powell County",
+   "fips": "30077",
+   "type": "county",
+   "redfin_region_id": 1753,
+   "realtor_location": "Powell County, MT",
+   "lat": 46.844225,
+   "lng": -112.9311
+  },
+  {
+   "name": "Prairie County",
+   "fips": "30079",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Prairie County, MT",
+   "lat": 46.812384,
+   "lng": -105.503994
+  },
+  {
+   "name": "Ravalli County",
+   "fips": "30081",
+   "type": "county",
+   "redfin_region_id": 1755,
+   "realtor_location": "Ravalli County, MT",
+   "lat": 46.077744,
+   "lng": -114.105795
+  },
+  {
+   "name": "Richland County",
+   "fips": "30083",
+   "type": "county",
+   "redfin_region_id": 1756,
+   "realtor_location": "Richland County, MT",
+   "lat": 47.785633,
+   "lng": -104.563408
+  },
+  {
+   "name": "Roosevelt County",
+   "fips": "30085",
+   "type": "county",
+   "redfin_region_id": 1757,
+   "realtor_location": "Roosevelt County, MT",
+   "lat": 48.282747,
+   "lng": -104.99517
+  },
+  {
+   "name": "Rosebud County",
+   "fips": "30087",
+   "type": "county",
+   "redfin_region_id": 1758,
+   "realtor_location": "Rosebud County, MT",
+   "lat": 46.173206,
+   "lng": -106.666792
+  },
+  {
+   "name": "Sanders County",
+   "fips": "30089",
+   "type": "county",
+   "redfin_region_id": 1759,
+   "realtor_location": "Sanders County, MT",
+   "lat": 47.756497,
+   "lng": -115.180306
+  },
+  {
+   "name": "Sheridan County",
+   "fips": "30091",
+   "type": "county",
+   "redfin_region_id": 1760,
+   "realtor_location": "Sheridan County, MT",
+   "lat": 48.705523,
+   "lng": -104.533913
+  },
+  {
+   "name": "Silver Bow County",
+   "fips": "30093",
+   "type": "county",
+   "redfin_region_id": 1761,
+   "realtor_location": "Silver Bow County, MT",
+   "lat": 45.896232,
+   "lng": -112.660071
+  },
+  {
+   "name": "Stillwater County",
+   "fips": "30095",
+   "type": "county",
+   "redfin_region_id": 1762,
+   "realtor_location": "Stillwater County, MT",
+   "lat": 45.658545,
+   "lng": -109.381576
+  },
+  {
+   "name": "Sweet Grass County",
+   "fips": "30097",
+   "type": "county",
+   "redfin_region_id": 1763,
+   "realtor_location": "Sweet Grass County, MT",
+   "lat": 45.811292,
+   "lng": -109.944796
+  },
+  {
+   "name": "Teton County",
+   "fips": "30099",
+   "type": "county",
+   "redfin_region_id": 1764,
+   "realtor_location": "Teton County, MT",
+   "lat": 47.819035,
+   "lng": -112.281725
+  },
+  {
+   "name": "Toole County",
+   "fips": "30101",
+   "type": "county",
+   "redfin_region_id": 1765,
+   "realtor_location": "Toole County, MT",
+   "lat": 48.645125,
+   "lng": -111.733472
+  },
+  {
+   "name": "Treasure County",
+   "fips": "30103",
+   "type": "county",
+   "redfin_region_id": 1766,
+   "realtor_location": "Treasure County, MT",
+   "lat": 46.229441,
+   "lng": -107.285772
+  },
+  {
+   "name": "Valley County",
+   "fips": "30105",
+   "type": "county",
+   "redfin_region_id": 1767,
+   "realtor_location": "Valley County, MT",
+   "lat": 48.34985,
+   "lng": -106.670424
+  },
+  {
+   "name": "Wheatland County",
+   "fips": "30107",
+   "type": "county",
+   "redfin_region_id": 1768,
+   "realtor_location": "Wheatland County, MT",
+   "lat": 46.496967,
+   "lng": -109.857684
+  },
+  {
+   "name": "Wibaux County",
+   "fips": "30109",
+   "type": "county",
+   "redfin_region_id": 1769,
+   "realtor_location": "Wibaux County, MT",
+   "lat": 46.962966,
+   "lng": -104.274518
+  },
+  {
+   "name": "Yellowstone County",
+   "fips": "30111",
+   "type": "county",
+   "redfin_region_id": 1770,
+   "realtor_location": "Yellowstone County, MT",
+   "lat": 45.936987,
+   "lng": -108.276656
+  }
+ ]
+}

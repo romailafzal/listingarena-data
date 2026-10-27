@@ -1,0 +1,582 @@
+{
+ "state": "CO",
+ "name": "Colorado",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "08001",
+   "type": "county",
+   "redfin_region_id": 361,
+   "realtor_location": "Adams County, CO",
+   "lat": 39.874325,
+   "lng": -104.331872
+  },
+  {
+   "name": "Alamosa County",
+   "fips": "08003",
+   "type": "county",
+   "redfin_region_id": 362,
+   "realtor_location": "Alamosa County, CO",
+   "lat": 37.568442,
+   "lng": -105.788041
+  },
+  {
+   "name": "Arapahoe County",
+   "fips": "08005",
+   "type": "county",
+   "redfin_region_id": 363,
+   "realtor_location": "Arapahoe County, CO",
+   "lat": 39.644554,
+   "lng": -104.331706
+  },
+  {
+   "name": "Archuleta County",
+   "fips": "08007",
+   "type": "county",
+   "redfin_region_id": 364,
+   "realtor_location": "Archuleta County, CO",
+   "lat": 37.202395,
+   "lng": -107.050863
+  },
+  {
+   "name": "Baca County",
+   "fips": "08009",
+   "type": "county",
+   "redfin_region_id": 365,
+   "realtor_location": "Baca County, CO",
+   "lat": 37.30978,
+   "lng": -102.543741
+  },
+  {
+   "name": "Bent County",
+   "fips": "08011",
+   "type": "county",
+   "redfin_region_id": 366,
+   "realtor_location": "Bent County, CO",
+   "lat": 37.931891,
+   "lng": -103.077584
+  },
+  {
+   "name": "Boulder County",
+   "fips": "08013",
+   "type": "county",
+   "redfin_region_id": 367,
+   "realtor_location": "Boulder County, CO",
+   "lat": 40.094962,
+   "lng": -105.397704
+  },
+  {
+   "name": "Broomfield County",
+   "fips": "08014",
+   "type": "county",
+   "redfin_region_id": 368,
+   "realtor_location": "Broomfield County, CO",
+   "lat": 39.953593,
+   "lng": -105.050787
+  },
+  {
+   "name": "Chaffee County",
+   "fips": "08015",
+   "type": "county",
+   "redfin_region_id": 369,
+   "realtor_location": "Chaffee County, CO",
+   "lat": 38.734599,
+   "lng": -106.300025
+  },
+  {
+   "name": "Cheyenne County",
+   "fips": "08017",
+   "type": "county",
+   "redfin_region_id": 370,
+   "realtor_location": "Cheyenne County, CO",
+   "lat": 38.835646,
+   "lng": -102.601791
+  },
+  {
+   "name": "Clear Creek County",
+   "fips": "08019",
+   "type": "county",
+   "redfin_region_id": 371,
+   "realtor_location": "Clear Creek County, CO",
+   "lat": 39.689403,
+   "lng": -105.670783
+  },
+  {
+   "name": "Conejos County",
+   "fips": "08021",
+   "type": "county",
+   "redfin_region_id": 372,
+   "realtor_location": "Conejos County, CO",
+   "lat": 37.213406,
+   "lng": -106.176447
+  },
+  {
+   "name": "Costilla County",
+   "fips": "08023",
+   "type": "county",
+   "redfin_region_id": 373,
+   "realtor_location": "Costilla County, CO",
+   "lat": 37.277547,
+   "lng": -105.42894
+  },
+  {
+   "name": "Crowley County",
+   "fips": "08025",
+   "type": "county",
+   "redfin_region_id": 374,
+   "realtor_location": "Crowley County, CO",
+   "lat": 38.30618,
+   "lng": -103.772736
+  },
+  {
+   "name": "Custer County",
+   "fips": "08027",
+   "type": "county",
+   "redfin_region_id": 375,
+   "realtor_location": "Custer County, CO",
+   "lat": 38.101996,
+   "lng": -105.373512
+  },
+  {
+   "name": "Delta County",
+   "fips": "08029",
+   "type": "county",
+   "redfin_region_id": 376,
+   "realtor_location": "Delta County, CO",
+   "lat": 38.861595,
+   "lng": -107.864892
+  },
+  {
+   "name": "Denver County",
+   "fips": "08031",
+   "type": "county",
+   "redfin_region_id": 377,
+   "realtor_location": "Denver County, CO",
+   "lat": 39.76185,
+   "lng": -104.881105
+  },
+  {
+   "name": "Dolores County",
+   "fips": "08033",
+   "type": "county",
+   "redfin_region_id": 378,
+   "realtor_location": "Dolores County, CO",
+   "lat": 37.733823,
+   "lng": -108.506219
+  },
+  {
+   "name": "Douglas County",
+   "fips": "08035",
+   "type": "county",
+   "redfin_region_id": 379,
+   "realtor_location": "Douglas County, CO",
+   "lat": 39.325414,
+   "lng": -104.925987
+  },
+  {
+   "name": "Eagle County",
+   "fips": "08037",
+   "type": "county",
+   "redfin_region_id": 380,
+   "realtor_location": "Eagle County, CO",
+   "lat": 39.626992,
+   "lng": -106.695169
+  },
+  {
+   "name": "Elbert County",
+   "fips": "08039",
+   "type": "county",
+   "redfin_region_id": 381,
+   "realtor_location": "Elbert County, CO",
+   "lat": 39.315157,
+   "lng": -104.114076
+  },
+  {
+   "name": "El Paso County",
+   "fips": "08041",
+   "type": "county",
+   "redfin_region_id": 382,
+   "realtor_location": "El Paso County, CO",
+   "lat": 38.827383,
+   "lng": -104.527472
+  },
+  {
+   "name": "Fremont County",
+   "fips": "08043",
+   "type": "county",
+   "redfin_region_id": 383,
+   "realtor_location": "Fremont County, CO",
+   "lat": 38.45517,
+   "lng": -105.424958
+  },
+  {
+   "name": "Garfield County",
+   "fips": "08045",
+   "type": "county",
+   "redfin_region_id": 384,
+   "realtor_location": "Garfield County, CO",
+   "lat": 39.599352,
+   "lng": -107.90978
+  },
+  {
+   "name": "Gilpin County",
+   "fips": "08047",
+   "type": "county",
+   "redfin_region_id": 385,
+   "realtor_location": "Gilpin County, CO",
+   "lat": 39.861156,
+   "lng": -105.528878
+  },
+  {
+   "name": "Grand County",
+   "fips": "08049",
+   "type": "county",
+   "redfin_region_id": 386,
+   "realtor_location": "Grand County, CO",
+   "lat": 40.113065,
+   "lng": -106.110837
+  },
+  {
+   "name": "Gunnison County",
+   "fips": "08051",
+   "type": "county",
+   "redfin_region_id": 387,
+   "realtor_location": "Gunnison County, CO",
+   "lat": 38.670499,
+   "lng": -107.05688
+  },
+  {
+   "name": "Hinsdale County",
+   "fips": "08053",
+   "type": "county",
+   "redfin_region_id": 388,
+   "realtor_location": "Hinsdale County, CO",
+   "lat": 37.811519,
+   "lng": -107.383974
+  },
+  {
+   "name": "Huerfano County",
+   "fips": "08055",
+   "type": "county",
+   "redfin_region_id": 389,
+   "realtor_location": "Huerfano County, CO",
+   "lat": 37.687815,
+   "lng": -104.959928
+  },
+  {
+   "name": "Jackson County",
+   "fips": "08057",
+   "type": "county",
+   "redfin_region_id": 390,
+   "realtor_location": "Jackson County, CO",
+   "lat": 40.663432,
+   "lng": -106.329248
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "08059",
+   "type": "county",
+   "redfin_region_id": 391,
+   "realtor_location": "Jefferson County, CO",
+   "lat": 39.579511,
+   "lng": -105.245462
+  },
+  {
+   "name": "Kiowa County",
+   "fips": "08061",
+   "type": "county",
+   "redfin_region_id": 392,
+   "realtor_location": "Kiowa County, CO",
+   "lat": 38.387663,
+   "lng": -102.756849
+  },
+  {
+   "name": "Kit Carson County",
+   "fips": "08063",
+   "type": "county",
+   "redfin_region_id": 393,
+   "realtor_location": "Kit Carson County, CO",
+   "lat": 39.30534,
+   "lng": -102.603023
+  },
+  {
+   "name": "Lake County",
+   "fips": "08065",
+   "type": "county",
+   "redfin_region_id": 394,
+   "realtor_location": "Lake County, CO",
+   "lat": 39.205341,
+   "lng": -106.350079
+  },
+  {
+   "name": "La Plata County",
+   "fips": "08067",
+   "type": "county",
+   "redfin_region_id": 395,
+   "realtor_location": "La Plata County, CO",
+   "lat": 37.287367,
+   "lng": -107.839718
+  },
+  {
+   "name": "Larimer County",
+   "fips": "08069",
+   "type": "county",
+   "redfin_region_id": 396,
+   "realtor_location": "Larimer County, CO",
+   "lat": 40.658093,
+   "lng": -105.486764
+  },
+  {
+   "name": "Las Animas County",
+   "fips": "08071",
+   "type": "county",
+   "redfin_region_id": 397,
+   "realtor_location": "Las Animas County, CO",
+   "lat": 37.318831,
+   "lng": -104.04411
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "08073",
+   "type": "county",
+   "redfin_region_id": 398,
+   "realtor_location": "Lincoln County, CO",
+   "lat": 38.99374,
+   "lng": -103.507555
+  },
+  {
+   "name": "Logan County",
+   "fips": "08075",
+   "type": "county",
+   "redfin_region_id": 399,
+   "realtor_location": "Logan County, CO",
+   "lat": 40.728091,
+   "lng": -103.090464
+  },
+  {
+   "name": "Mesa County",
+   "fips": "08077",
+   "type": "county",
+   "redfin_region_id": 400,
+   "realtor_location": "Mesa County, CO",
+   "lat": 39.019524,
+   "lng": -108.460571
+  },
+  {
+   "name": "Mineral County",
+   "fips": "08079",
+   "type": "county",
+   "redfin_region_id": 401,
+   "realtor_location": "Mineral County, CO",
+   "lat": 37.549067,
+   "lng": -107.003236
+  },
+  {
+   "name": "Moffat County",
+   "fips": "08081",
+   "type": "county",
+   "redfin_region_id": 402,
+   "realtor_location": "Moffat County, CO",
+   "lat": 40.610864,
+   "lng": -108.217154
+  },
+  {
+   "name": "Montezuma County",
+   "fips": "08083",
+   "type": "county",
+   "redfin_region_id": 403,
+   "realtor_location": "Montezuma County, CO",
+   "lat": 37.338025,
+   "lng": -108.595786
+  },
+  {
+   "name": "Montrose County",
+   "fips": "08085",
+   "type": "county",
+   "redfin_region_id": 404,
+   "realtor_location": "Montrose County, CO",
+   "lat": 38.407507,
+   "lng": -108.266282
+  },
+  {
+   "name": "Morgan County",
+   "fips": "08087",
+   "type": "county",
+   "redfin_region_id": 405,
+   "realtor_location": "Morgan County, CO",
+   "lat": 40.263159,
+   "lng": -103.81221
+  },
+  {
+   "name": "Otero County",
+   "fips": "08089",
+   "type": "county",
+   "redfin_region_id": 406,
+   "realtor_location": "Otero County, CO",
+   "lat": 37.88417,
+   "lng": -103.72126
+  },
+  {
+   "name": "Ouray County",
+   "fips": "08091",
+   "type": "county",
+   "redfin_region_id": 407,
+   "realtor_location": "Ouray County, CO",
+   "lat": 38.154731,
+   "lng": -107.78848
+  },
+  {
+   "name": "Park County",
+   "fips": "08093",
+   "type": "county",
+   "redfin_region_id": 408,
+   "realtor_location": "Park County, CO",
+   "lat": 39.118914,
+   "lng": -105.717648
+  },
+  {
+   "name": "Phillips County",
+   "fips": "08095",
+   "type": "county",
+   "redfin_region_id": 409,
+   "realtor_location": "Phillips County, CO",
+   "lat": 40.594712,
+   "lng": -102.345105
+  },
+  {
+   "name": "Pitkin County",
+   "fips": "08097",
+   "type": "county",
+   "redfin_region_id": 410,
+   "realtor_location": "Pitkin County, CO",
+   "lat": 39.217541,
+   "lng": -106.916162
+  },
+  {
+   "name": "Prowers County",
+   "fips": "08099",
+   "type": "county",
+   "redfin_region_id": 411,
+   "realtor_location": "Prowers County, CO",
+   "lat": 37.958181,
+   "lng": -102.392161
+  },
+  {
+   "name": "Pueblo County",
+   "fips": "08101",
+   "type": "county",
+   "redfin_region_id": 412,
+   "realtor_location": "Pueblo County, CO",
+   "lat": 38.162765,
+   "lng": -104.484668
+  },
+  {
+   "name": "Rio Blanco County",
+   "fips": "08103",
+   "type": "county",
+   "redfin_region_id": 413,
+   "realtor_location": "Rio Blanco County, CO",
+   "lat": 39.972622,
+   "lng": -108.200716
+  },
+  {
+   "name": "Rio Grande County",
+   "fips": "08105",
+   "type": "county",
+   "redfin_region_id": 414,
+   "realtor_location": "Rio Grande County, CO",
+   "lat": 37.485853,
+   "lng": -106.453128
+  },
+  {
+   "name": "Routt County",
+   "fips": "08107",
+   "type": "county",
+   "redfin_region_id": 415,
+   "realtor_location": "Routt County, CO",
+   "lat": 40.483664,
+   "lng": -106.987702
+  },
+  {
+   "name": "Saguache County",
+   "fips": "08109",
+   "type": "county",
+   "redfin_region_id": 416,
+   "realtor_location": "Saguache County, CO",
+   "lat": 38.031651,
+   "lng": -106.234666
+  },
+  {
+   "name": "San Juan County",
+   "fips": "08111",
+   "type": "county",
+   "redfin_region_id": 417,
+   "realtor_location": "San Juan County, CO",
+   "lat": 37.781049,
+   "lng": -107.670257
+  },
+  {
+   "name": "San Miguel County",
+   "fips": "08113",
+   "type": "county",
+   "redfin_region_id": 418,
+   "realtor_location": "San Miguel County, CO",
+   "lat": 38.009319,
+   "lng": -108.427263
+  },
+  {
+   "name": "Sedgwick County",
+   "fips": "08115",
+   "type": "county",
+   "redfin_region_id": 419,
+   "realtor_location": "Sedgwick County, CO",
+   "lat": 40.871568,
+   "lng": -102.355358
+  },
+  {
+   "name": "Summit County",
+   "fips": "08117",
+   "type": "county",
+   "redfin_region_id": 420,
+   "realtor_location": "Summit County, CO",
+   "lat": 39.621023,
+   "lng": -106.137555
+  },
+  {
+   "name": "Teller County",
+   "fips": "08119",
+   "type": "county",
+   "redfin_region_id": 421,
+   "realtor_location": "Teller County, CO",
+   "lat": 38.869976,
+   "lng": -105.187365
+  },
+  {
+   "name": "Washington County",
+   "fips": "08121",
+   "type": "county",
+   "redfin_region_id": 422,
+   "realtor_location": "Washington County, CO",
+   "lat": 39.96579,
+   "lng": -103.209744
+  },
+  {
+   "name": "Weld County",
+   "fips": "08123",
+   "type": "county",
+   "redfin_region_id": 423,
+   "realtor_location": "Weld County, CO",
+   "lat": 40.555961,
+   "lng": -104.383666
+  },
+  {
+   "name": "Yuma County",
+   "fips": "08125",
+   "type": "county",
+   "redfin_region_id": 424,
+   "realtor_location": "Yuma County, CO",
+   "lat": 40.00077,
+   "lng": -102.421649
+  }
+ ]
+}

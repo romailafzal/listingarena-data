@@ -1,0 +1,51 @@
+{
+ "state": "RI",
+ "name": "Rhode Island",
+ "counties": [
+  {
+   "name": "Bristol County",
+   "fips": "44001",
+   "type": "county",
+   "redfin_region_id": 2428,
+   "realtor_location": "Bristol County, RI",
+   "lat": 41.70684,
+   "lng": -71.286687
+  },
+  {
+   "name": "Kent County",
+   "fips": "44003",
+   "type": "county",
+   "redfin_region_id": 2429,
+   "realtor_location": "Kent County, RI",
+   "lat": 41.675118,
+   "lng": -71.580282
+  },
+  {
+   "name": "Newport County",
+   "fips": "44005",
+   "type": "county",
+   "redfin_region_id": 2430,
+   "realtor_location": "Newport County, RI",
+   "lat": 41.501045,
+   "lng": -71.283063
+  },
+  {
+   "name": "Providence County",
+   "fips": "44007",
+   "type": "county",
+   "redfin_region_id": 2431,
+   "realtor_location": "Providence County, RI",
+   "lat": 41.869768,
+   "lng": -71.578625
+  },
+  {
+   "name": "Washington County",
+   "fips": "44009",
+   "type": "county",
+   "redfin_region_id": 2432,
+   "realtor_location": "Washington County, RI",
+   "lat": 41.396792,
+   "lng": -71.620282
+  }
+ ]
+}
