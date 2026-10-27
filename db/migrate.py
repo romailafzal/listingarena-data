@@ -41,7 +41,23 @@ def migrate(conn: psycopg.Connection) -> list[str]:
             conn.execute(f.read_text())
             conn.execute("INSERT INTO schema_migrations (name) VALUES (%s)", (f.name,))
         applied.append(f.name)
+    seed_counties(conn)
     return applied
+
+
+def seed_counties(conn) -> int:
+    """Upsert the county reference table from states/*.json (idempotent)."""
+    import json
+    rows = []
+    for f in sorted((Path(__file__).resolve().parent.parent / "states").glob("*.json")):
+        cfg = json.loads(f.read_text())
+        for c in cfg.get("counties", []):
+            rows.append((c["fips"], cfg["state"], cfg.get("name"), c["name"], c.get("type"), c.get("lat"), c.get("lng")))
+    with conn.transaction(), conn.cursor() as cur:
+        cur.executemany("""INSERT INTO counties (fips, state, state_name, name, kind, lat, lng) VALUES (%s,%s,%s,%s,%s,%s,%s)
+                           ON CONFLICT (fips) DO UPDATE SET state=EXCLUDED.state, state_name=EXCLUDED.state_name,
+                             name=EXCLUDED.name, kind=EXCLUDED.kind, lat=EXCLUDED.lat, lng=EXCLUDED.lng""", rows)
+    return len(rows)
 
 
 def main(argv=None) -> int:
