@@ -1,0 +1,789 @@
+{
+ "state": "MN",
+ "name": "Minnesota",
+ "counties": [
+  {
+   "name": "Aitkin County",
+   "fips": "27001",
+   "type": "county",
+   "redfin_region_id": 1431,
+   "realtor_location": "Aitkin County, MN",
+   "lat": 46.602446,
+   "lng": -93.41976
+  },
+  {
+   "name": "Anoka County",
+   "fips": "27003",
+   "type": "county",
+   "redfin_region_id": 1432,
+   "realtor_location": "Anoka County, MN",
+   "lat": 45.27411,
+   "lng": -93.242723
+  },
+  {
+   "name": "Becker County",
+   "fips": "27005",
+   "type": "county",
+   "redfin_region_id": 1433,
+   "realtor_location": "Becker County, MN",
+   "lat": 46.937629,
+   "lng": -95.741757
+  },
+  {
+   "name": "Beltrami County",
+   "fips": "27007",
+   "type": "county",
+   "redfin_region_id": 1434,
+   "realtor_location": "Beltrami County, MN",
+   "lat": 47.879508,
+   "lng": -95.00505
+  },
+  {
+   "name": "Benton County",
+   "fips": "27009",
+   "type": "county",
+   "redfin_region_id": 1435,
+   "realtor_location": "Benton County, MN",
+   "lat": 45.701225,
+   "lng": -94.00144
+  },
+  {
+   "name": "Big Stone County",
+   "fips": "27011",
+   "type": "county",
+   "redfin_region_id": 1436,
+   "realtor_location": "Big Stone County, MN",
+   "lat": 45.419925,
+   "lng": -96.402226
+  },
+  {
+   "name": "Blue Earth County",
+   "fips": "27013",
+   "type": "county",
+   "redfin_region_id": 1437,
+   "realtor_location": "Blue Earth County, MN",
+   "lat": 44.03371,
+   "lng": -94.064012
+  },
+  {
+   "name": "Brown County",
+   "fips": "27015",
+   "type": "county",
+   "redfin_region_id": 1438,
+   "realtor_location": "Brown County, MN",
+   "lat": 44.246541,
+   "lng": -94.733647
+  },
+  {
+   "name": "Carlton County",
+   "fips": "27017",
+   "type": "county",
+   "redfin_region_id": 1439,
+   "realtor_location": "Carlton County, MN",
+   "lat": 46.603818,
+   "lng": -92.671044
+  },
+  {
+   "name": "Carver County",
+   "fips": "27019",
+   "type": "county",
+   "redfin_region_id": 1440,
+   "realtor_location": "Carver County, MN",
+   "lat": 44.82132,
+   "lng": -93.800091
+  },
+  {
+   "name": "Cass County",
+   "fips": "27021",
+   "type": "county",
+   "redfin_region_id": 1441,
+   "realtor_location": "Cass County, MN",
+   "lat": 46.951745,
+   "lng": -94.333705
+  },
+  {
+   "name": "Chippewa County",
+   "fips": "27023",
+   "type": "county",
+   "redfin_region_id": 1442,
+   "realtor_location": "Chippewa County, MN",
+   "lat": 45.028625,
+   "lng": -95.564108
+  },
+  {
+   "name": "Chisago County",
+   "fips": "27025",
+   "type": "county",
+   "redfin_region_id": 1443,
+   "realtor_location": "Chisago County, MN",
+   "lat": 45.505444,
+   "lng": -92.903849
+  },
+  {
+   "name": "Clay County",
+   "fips": "27027",
+   "type": "county",
+   "redfin_region_id": 1444,
+   "realtor_location": "Clay County, MN",
+   "lat": 46.898377,
+   "lng": -96.494901
+  },
+  {
+   "name": "Clearwater County",
+   "fips": "27029",
+   "type": "county",
+   "redfin_region_id": 1445,
+   "realtor_location": "Clearwater County, MN",
+   "lat": 47.575873,
+   "lng": -95.371117
+  },
+  {
+   "name": "Cook County",
+   "fips": "27031",
+   "type": "county",
+   "redfin_region_id": 1446,
+   "realtor_location": "Cook County, MN",
+   "lat": 47.758556,
+   "lng": -90.344319
+  },
+  {
+   "name": "Cottonwood County",
+   "fips": "27033",
+   "type": "county",
+   "redfin_region_id": 1447,
+   "realtor_location": "Cottonwood County, MN",
+   "lat": 44.010639,
+   "lng": -95.183152
+  },
+  {
+   "name": "Crow Wing County",
+   "fips": "27035",
+   "type": "county",
+   "redfin_region_id": 1448,
+   "realtor_location": "Crow Wing County, MN",
+   "lat": 46.491653,
+   "lng": -94.070718
+  },
+  {
+   "name": "Dakota County",
+   "fips": "27037",
+   "type": "county",
+   "redfin_region_id": 1449,
+   "realtor_location": "Dakota County, MN",
+   "lat": 44.670893,
+   "lng": -93.062481
+  },
+  {
+   "name": "Dodge County",
+   "fips": "27039",
+   "type": "county",
+   "redfin_region_id": 1450,
+   "realtor_location": "Dodge County, MN",
+   "lat": 44.020706,
+   "lng": -92.869353
+  },
+  {
+   "name": "Douglas County",
+   "fips": "27041",
+   "type": "county",
+   "redfin_region_id": 1451,
+   "realtor_location": "Douglas County, MN",
+   "lat": 45.936835,
+   "lng": -95.462155
+  },
+  {
+   "name": "Faribault County",
+   "fips": "27043",
+   "type": "county",
+   "redfin_region_id": 1452,
+   "realtor_location": "Faribault County, MN",
+   "lat": 43.676522,
+   "lng": -93.947234
+  },
+  {
+   "name": "Fillmore County",
+   "fips": "27045",
+   "type": "county",
+   "redfin_region_id": 1453,
+   "realtor_location": "Fillmore County, MN",
+   "lat": 43.679187,
+   "lng": -92.093937
+  },
+  {
+   "name": "Freeborn County",
+   "fips": "27047",
+   "type": "county",
+   "redfin_region_id": 1454,
+   "realtor_location": "Freeborn County, MN",
+   "lat": 43.674202,
+   "lng": -93.350289
+  },
+  {
+   "name": "Goodhue County",
+   "fips": "27049",
+   "type": "county",
+   "redfin_region_id": 1455,
+   "realtor_location": "Goodhue County, MN",
+   "lat": 44.406178,
+   "lng": -92.716
+  },
+  {
+   "name": "Grant County",
+   "fips": "27051",
+   "type": "county",
+   "redfin_region_id": 1456,
+   "realtor_location": "Grant County, MN",
+   "lat": 45.930743,
+   "lng": -96.010699
+  },
+  {
+   "name": "Hennepin County",
+   "fips": "27053",
+   "type": "county",
+   "redfin_region_id": 1457,
+   "realtor_location": "Hennepin County, MN",
+   "lat": 45.006121,
+   "lng": -93.475228
+  },
+  {
+   "name": "Houston County",
+   "fips": "27055",
+   "type": "county",
+   "redfin_region_id": 1458,
+   "realtor_location": "Houston County, MN",
+   "lat": 43.66699,
+   "lng": -91.501556
+  },
+  {
+   "name": "Hubbard County",
+   "fips": "27057",
+   "type": "county",
+   "redfin_region_id": 1459,
+   "realtor_location": "Hubbard County, MN",
+   "lat": 47.095551,
+   "lng": -94.91329
+  },
+  {
+   "name": "Isanti County",
+   "fips": "27059",
+   "type": "county",
+   "redfin_region_id": 1460,
+   "realtor_location": "Isanti County, MN",
+   "lat": 45.562431,
+   "lng": -93.296339
+  },
+  {
+   "name": "Itasca County",
+   "fips": "27061",
+   "type": "county",
+   "redfin_region_id": 1461,
+   "realtor_location": "Itasca County, MN",
+   "lat": 47.490817,
+   "lng": -93.611102
+  },
+  {
+   "name": "Jackson County",
+   "fips": "27063",
+   "type": "county",
+   "redfin_region_id": 1462,
+   "realtor_location": "Jackson County, MN",
+   "lat": 43.671111,
+   "lng": -95.149731
+  },
+  {
+   "name": "Kanabec County",
+   "fips": "27065",
+   "type": "county",
+   "redfin_region_id": 1463,
+   "realtor_location": "Kanabec County, MN",
+   "lat": 45.94776,
+   "lng": -93.297788
+  },
+  {
+   "name": "Kandiyohi County",
+   "fips": "27067",
+   "type": "county",
+   "redfin_region_id": 1464,
+   "realtor_location": "Kandiyohi County, MN",
+   "lat": 45.152714,
+   "lng": -95.004981
+  },
+  {
+   "name": "Kittson County",
+   "fips": "27069",
+   "type": "county",
+   "redfin_region_id": 1465,
+   "realtor_location": "Kittson County, MN",
+   "lat": 48.77604,
+   "lng": -96.780349
+  },
+  {
+   "name": "Koochiching County",
+   "fips": "27071",
+   "type": "county",
+   "redfin_region_id": 1466,
+   "realtor_location": "Koochiching County, MN",
+   "lat": 48.245374,
+   "lng": -93.782896
+  },
+  {
+   "name": "Lac qui Parle County",
+   "fips": "27073",
+   "type": "county",
+   "redfin_region_id": 1467,
+   "realtor_location": "Lac qui Parle County, MN",
+   "lat": 44.999856,
+   "lng": -96.176836
+  },
+  {
+   "name": "Lake County",
+   "fips": "27075",
+   "type": "county",
+   "redfin_region_id": 1468,
+   "realtor_location": "Lake County, MN",
+   "lat": 47.517111,
+   "lng": -91.411704
+  },
+  {
+   "name": "Lake of the Woods County",
+   "fips": "27077",
+   "type": "county",
+   "redfin_region_id": 1469,
+   "realtor_location": "Lake of the Woods County, MN",
+   "lat": 48.7681,
+   "lng": -94.904633
+  },
+  {
+   "name": "Le Sueur County",
+   "fips": "27079",
+   "type": "county",
+   "redfin_region_id": 1470,
+   "realtor_location": "Le Sueur County, MN",
+   "lat": 44.373424,
+   "lng": -93.730143
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "27081",
+   "type": "county",
+   "redfin_region_id": 1471,
+   "realtor_location": "Lincoln County, MN",
+   "lat": 44.408238,
+   "lng": -96.272032
+  },
+  {
+   "name": "Lyon County",
+   "fips": "27083",
+   "type": "county",
+   "redfin_region_id": 1472,
+   "realtor_location": "Lyon County, MN",
+   "lat": 44.409195,
+   "lng": -95.847268
+  },
+  {
+   "name": "McLeod County",
+   "fips": "27085",
+   "type": "county",
+   "redfin_region_id": 1473,
+   "realtor_location": "McLeod County, MN",
+   "lat": 44.821657,
+   "lng": -94.272323
+  },
+  {
+   "name": "Mahnomen County",
+   "fips": "27087",
+   "type": "county",
+   "redfin_region_id": 1474,
+   "realtor_location": "Mahnomen County, MN",
+   "lat": 47.328387,
+   "lng": -95.811089
+  },
+  {
+   "name": "Marshall County",
+   "fips": "27089",
+   "type": "county",
+   "redfin_region_id": 1475,
+   "realtor_location": "Marshall County, MN",
+   "lat": 48.362728,
+   "lng": -96.357761
+  },
+  {
+   "name": "Martin County",
+   "fips": "27091",
+   "type": "county",
+   "redfin_region_id": 1476,
+   "realtor_location": "Martin County, MN",
+   "lat": 43.677173,
+   "lng": -94.547096
+  },
+  {
+   "name": "Meeker County",
+   "fips": "27093",
+   "type": "county",
+   "redfin_region_id": 1477,
+   "realtor_location": "Meeker County, MN",
+   "lat": 45.123155,
+   "lng": -94.527346
+  },
+  {
+   "name": "Mille Lacs County",
+   "fips": "27095",
+   "type": "county",
+   "redfin_region_id": 1478,
+   "realtor_location": "Mille Lacs County, MN",
+   "lat": 45.929043,
+   "lng": -93.632996
+  },
+  {
+   "name": "Morrison County",
+   "fips": "27097",
+   "type": "county",
+   "redfin_region_id": 1479,
+   "realtor_location": "Morrison County, MN",
+   "lat": 46.020484,
+   "lng": -94.266619
+  },
+  {
+   "name": "Mower County",
+   "fips": "27099",
+   "type": "county",
+   "redfin_region_id": 1480,
+   "realtor_location": "Mower County, MN",
+   "lat": 43.666249,
+   "lng": -92.759514
+  },
+  {
+   "name": "Murray County",
+   "fips": "27101",
+   "type": "county",
+   "redfin_region_id": 1481,
+   "realtor_location": "Murray County, MN",
+   "lat": 44.015594,
+   "lng": -95.761581
+  },
+  {
+   "name": "Nicollet County",
+   "fips": "27103",
+   "type": "county",
+   "redfin_region_id": 1482,
+   "realtor_location": "Nicollet County, MN",
+   "lat": 44.35882,
+   "lng": -94.245684
+  },
+  {
+   "name": "Nobles County",
+   "fips": "27105",
+   "type": "county",
+   "redfin_region_id": 1483,
+   "realtor_location": "Nobles County, MN",
+   "lat": 43.677686,
+   "lng": -95.763132
+  },
+  {
+   "name": "Norman County",
+   "fips": "27107",
+   "type": "county",
+   "redfin_region_id": 1484,
+   "realtor_location": "Norman County, MN",
+   "lat": 47.329453,
+   "lng": -96.463776
+  },
+  {
+   "name": "Olmsted County",
+   "fips": "27109",
+   "type": "county",
+   "redfin_region_id": 1485,
+   "realtor_location": "Olmsted County, MN",
+   "lat": 43.999499,
+   "lng": -92.410098
+  },
+  {
+   "name": "Otter Tail County",
+   "fips": "27111",
+   "type": "county",
+   "redfin_region_id": 1486,
+   "realtor_location": "Otter Tail County, MN",
+   "lat": 46.405727,
+   "lng": -95.714581
+  },
+  {
+   "name": "Pennington County",
+   "fips": "27113",
+   "type": "county",
+   "redfin_region_id": 1487,
+   "realtor_location": "Pennington County, MN",
+   "lat": 48.069247,
+   "lng": -96.037725
+  },
+  {
+   "name": "Pine County",
+   "fips": "27115",
+   "type": "county",
+   "redfin_region_id": 1488,
+   "realtor_location": "Pine County, MN",
+   "lat": 46.10094,
+   "lng": -92.763094
+  },
+  {
+   "name": "Pipestone County",
+   "fips": "27117",
+   "type": "county",
+   "redfin_region_id": 1489,
+   "realtor_location": "Pipestone County, MN",
+   "lat": 44.015361,
+   "lng": -96.257015
+  },
+  {
+   "name": "Polk County",
+   "fips": "27119",
+   "type": "county",
+   "redfin_region_id": 1490,
+   "realtor_location": "Polk County, MN",
+   "lat": 47.774254,
+   "lng": -96.400027
+  },
+  {
+   "name": "Pope County",
+   "fips": "27121",
+   "type": "county",
+   "redfin_region_id": 1491,
+   "realtor_location": "Pope County, MN",
+   "lat": 45.589623,
+   "lng": -95.446705
+  },
+  {
+   "name": "Ramsey County",
+   "fips": "27123",
+   "type": "county",
+   "redfin_region_id": 1492,
+   "realtor_location": "Ramsey County, MN",
+   "lat": 45.015204,
+   "lng": -93.099965
+  },
+  {
+   "name": "Red Lake County",
+   "fips": "27125",
+   "type": "county",
+   "redfin_region_id": 1493,
+   "realtor_location": "Red Lake County, MN",
+   "lat": 47.865487,
+   "lng": -96.08718
+  },
+  {
+   "name": "Redwood County",
+   "fips": "27127",
+   "type": "county",
+   "redfin_region_id": 1494,
+   "realtor_location": "Redwood County, MN",
+   "lat": 44.403536,
+   "lng": -95.254241
+  },
+  {
+   "name": "Renville County",
+   "fips": "27129",
+   "type": "county",
+   "redfin_region_id": 1495,
+   "realtor_location": "Renville County, MN",
+   "lat": 44.723697,
+   "lng": -94.955617
+  },
+  {
+   "name": "Rice County",
+   "fips": "27131",
+   "type": "county",
+   "redfin_region_id": 1496,
+   "realtor_location": "Rice County, MN",
+   "lat": 44.350775,
+   "lng": -93.298513
+  },
+  {
+   "name": "Rock County",
+   "fips": "27133",
+   "type": "county",
+   "redfin_region_id": 1497,
+   "realtor_location": "Rock County, MN",
+   "lat": 43.669587,
+   "lng": -96.263238
+  },
+  {
+   "name": "Roseau County",
+   "fips": "27135",
+   "type": "county",
+   "redfin_region_id": 1498,
+   "realtor_location": "Roseau County, MN",
+   "lat": 48.761068,
+   "lng": -95.821504
+  },
+  {
+   "name": "St. Louis County",
+   "fips": "27137",
+   "type": "county",
+   "redfin_region_id": 1499,
+   "realtor_location": "St. Louis County, MN",
+   "lat": 47.578635,
+   "lng": -92.514593
+  },
+  {
+   "name": "Scott County",
+   "fips": "27139",
+   "type": "county",
+   "redfin_region_id": 1500,
+   "realtor_location": "Scott County, MN",
+   "lat": 44.651805,
+   "lng": -93.533731
+  },
+  {
+   "name": "Sherburne County",
+   "fips": "27141",
+   "type": "county",
+   "redfin_region_id": 1501,
+   "realtor_location": "Sherburne County, MN",
+   "lat": 45.453176,
+   "lng": -93.76913
+  },
+  {
+   "name": "Sibley County",
+   "fips": "27143",
+   "type": "county",
+   "redfin_region_id": 1502,
+   "realtor_location": "Sibley County, MN",
+   "lat": 44.575734,
+   "lng": -94.230123
+  },
+  {
+   "name": "Stearns County",
+   "fips": "27145",
+   "type": "county",
+   "redfin_region_id": 1503,
+   "realtor_location": "Stearns County, MN",
+   "lat": 45.555235,
+   "lng": -94.610482
+  },
+  {
+   "name": "Steele County",
+   "fips": "27147",
+   "type": "county",
+   "redfin_region_id": 1504,
+   "realtor_location": "Steele County, MN",
+   "lat": 44.015261,
+   "lng": -93.220453
+  },
+  {
+   "name": "Stevens County",
+   "fips": "27149",
+   "type": "county",
+   "redfin_region_id": 1505,
+   "realtor_location": "Stevens County, MN",
+   "lat": 45.593461,
+   "lng": -95.992315
+  },
+  {
+   "name": "Swift County",
+   "fips": "27151",
+   "type": "county",
+   "redfin_region_id": 1506,
+   "realtor_location": "Swift County, MN",
+   "lat": 45.27581,
+   "lng": -95.690124
+  },
+  {
+   "name": "Todd County",
+   "fips": "27153",
+   "type": "county",
+   "redfin_region_id": 1507,
+   "realtor_location": "Todd County, MN",
+   "lat": 46.066569,
+   "lng": -94.900576
+  },
+  {
+   "name": "Traverse County",
+   "fips": "27155",
+   "type": "county",
+   "redfin_region_id": 1508,
+   "realtor_location": "Traverse County, MN",
+   "lat": 45.769935,
+   "lng": -96.474832
+  },
+  {
+   "name": "Wabasha County",
+   "fips": "27157",
+   "type": "county",
+   "redfin_region_id": 1509,
+   "realtor_location": "Wabasha County, MN",
+   "lat": 44.289634,
+   "lng": -92.233454
+  },
+  {
+   "name": "Wadena County",
+   "fips": "27159",
+   "type": "county",
+   "redfin_region_id": 1510,
+   "realtor_location": "Wadena County, MN",
+   "lat": 46.586986,
+   "lng": -94.988608
+  },
+  {
+   "name": "Waseca County",
+   "fips": "27161",
+   "type": "county",
+   "redfin_region_id": 1511,
+   "realtor_location": "Waseca County, MN",
+   "lat": 44.01846,
+   "lng": -93.589844
+  },
+  {
+   "name": "Washington County",
+   "fips": "27163",
+   "type": "county",
+   "redfin_region_id": 1512,
+   "realtor_location": "Washington County, MN",
+   "lat": 45.037929,
+   "lng": -92.890117
+  },
+  {
+   "name": "Watonwan County",
+   "fips": "27165",
+   "type": "county",
+   "redfin_region_id": 1513,
+   "realtor_location": "Watonwan County, MN",
+   "lat": 43.978109,
+   "lng": -94.613798
+  },
+  {
+   "name": "Wilkin County",
+   "fips": "27167",
+   "type": "county",
+   "redfin_region_id": 1514,
+   "realtor_location": "Wilkin County, MN",
+   "lat": 46.362335,
+   "lng": -96.476657
+  },
+  {
+   "name": "Winona County",
+   "fips": "27169",
+   "type": "county",
+   "redfin_region_id": 1515,
+   "realtor_location": "Winona County, MN",
+   "lat": 43.981353,
+   "lng": -91.777044
+  },
+  {
+   "name": "Wright County",
+   "fips": "27171",
+   "type": "county",
+   "redfin_region_id": 1516,
+   "realtor_location": "Wright County, MN",
+   "lat": 45.175091,
+   "lng": -93.966396
+  },
+  {
+   "name": "Yellow Medicine County",
+   "fips": "27173",
+   "type": "county",
+   "redfin_region_id": 1517,
+   "realtor_location": "Yellow Medicine County, MN",
+   "lat": 44.715736,
+   "lng": -95.862756
+  }
+ ]
+}

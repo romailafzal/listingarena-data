@@ -1,0 +1,15 @@
+{
+ "state": "DC",
+ "name": "District of Columbia",
+ "counties": [
+  {
+   "name": "District of Columbia",
+   "fips": "11001",
+   "type": "county",
+   "redfin_region_id": 436,
+   "realtor_location": "Washington, DC",
+   "lat": 38.904247,
+   "lng": -77.016517
+  }
+ ]
+}

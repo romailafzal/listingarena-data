@@ -1,0 +1,213 @@
+{
+ "state": "WY",
+ "name": "Wyoming",
+ "counties": [
+  {
+   "name": "Albany County",
+   "fips": "56001",
+   "type": "county",
+   "redfin_region_id": 3235,
+   "realtor_location": "Albany County, WY",
+   "lat": 41.665514,
+   "lng": -105.721883
+  },
+  {
+   "name": "Big Horn County",
+   "fips": "56003",
+   "type": "county",
+   "redfin_region_id": 3236,
+   "realtor_location": "Big Horn County, WY",
+   "lat": 44.525117,
+   "lng": -107.994848
+  },
+  {
+   "name": "Campbell County",
+   "fips": "56005",
+   "type": "county",
+   "redfin_region_id": 3237,
+   "realtor_location": "Campbell County, WY",
+   "lat": 44.191999,
+   "lng": -105.517014
+  },
+  {
+   "name": "Carbon County",
+   "fips": "56007",
+   "type": "county",
+   "redfin_region_id": 3238,
+   "realtor_location": "Carbon County, WY",
+   "lat": 41.70359,
+   "lng": -106.933153
+  },
+  {
+   "name": "Converse County",
+   "fips": "56009",
+   "type": "county",
+   "redfin_region_id": 3239,
+   "realtor_location": "Converse County, WY",
+   "lat": 42.984623,
+   "lng": -105.524752
+  },
+  {
+   "name": "Crook County",
+   "fips": "56011",
+   "type": "county",
+   "redfin_region_id": 3240,
+   "realtor_location": "Crook County, WY",
+   "lat": 44.589266,
+   "lng": -104.567298
+  },
+  {
+   "name": "Fremont County",
+   "fips": "56013",
+   "type": "county",
+   "redfin_region_id": 3241,
+   "realtor_location": "Fremont County, WY",
+   "lat": 43.054831,
+   "lng": -108.608935
+  },
+  {
+   "name": "Goshen County",
+   "fips": "56015",
+   "type": "county",
+   "redfin_region_id": 3242,
+   "realtor_location": "Goshen County, WY",
+   "lat": 42.089455,
+   "lng": -104.35354
+  },
+  {
+   "name": "Hot Springs County",
+   "fips": "56017",
+   "type": "county",
+   "redfin_region_id": 3243,
+   "realtor_location": "Hot Springs County, WY",
+   "lat": 43.720209,
+   "lng": -108.435076
+  },
+  {
+   "name": "Johnson County",
+   "fips": "56019",
+   "type": "county",
+   "redfin_region_id": 3244,
+   "realtor_location": "Johnson County, WY",
+   "lat": 44.044048,
+   "lng": -106.588541
+  },
+  {
+   "name": "Laramie County",
+   "fips": "56021",
+   "type": "county",
+   "redfin_region_id": 3245,
+   "realtor_location": "Laramie County, WY",
+   "lat": 41.29283,
+   "lng": -104.660395
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "56023",
+   "type": "county",
+   "redfin_region_id": 3246,
+   "realtor_location": "Lincoln County, WY",
+   "lat": 42.229993,
+   "lng": -110.682961
+  },
+  {
+   "name": "Natrona County",
+   "fips": "56025",
+   "type": "county",
+   "redfin_region_id": 3247,
+   "realtor_location": "Natrona County, WY",
+   "lat": 42.977645,
+   "lng": -106.768219
+  },
+  {
+   "name": "Niobrara County",
+   "fips": "56027",
+   "type": "county",
+   "redfin_region_id": 3248,
+   "realtor_location": "Niobrara County, WY",
+   "lat": 43.062159,
+   "lng": -104.468373
+  },
+  {
+   "name": "Park County",
+   "fips": "56029",
+   "type": "county",
+   "redfin_region_id": 3249,
+   "realtor_location": "Park County, WY",
+   "lat": 44.492387,
+   "lng": -109.593597
+  },
+  {
+   "name": "Platte County",
+   "fips": "56031",
+   "type": "county",
+   "redfin_region_id": 3250,
+   "realtor_location": "Platte County, WY",
+   "lat": 42.131593,
+   "lng": -104.953963
+  },
+  {
+   "name": "Sheridan County",
+   "fips": "56033",
+   "type": "county",
+   "redfin_region_id": 3251,
+   "realtor_location": "Sheridan County, WY",
+   "lat": 44.781369,
+   "lng": -106.881211
+  },
+  {
+   "name": "Sublette County",
+   "fips": "56035",
+   "type": "county",
+   "redfin_region_id": 3252,
+   "realtor_location": "Sublette County, WY",
+   "lat": 42.767928,
+   "lng": -109.91617
+  },
+  {
+   "name": "Sweetwater County",
+   "fips": "56037",
+   "type": "county",
+   "redfin_region_id": 3253,
+   "realtor_location": "Sweetwater County, WY",
+   "lat": 41.660328,
+   "lng": -108.875677
+  },
+  {
+   "name": "Teton County",
+   "fips": "56039",
+   "type": "county",
+   "redfin_region_id": 3254,
+   "realtor_location": "Teton County, WY",
+   "lat": 44.048662,
+   "lng": -110.426087
+  },
+  {
+   "name": "Uinta County",
+   "fips": "56041",
+   "type": "county",
+   "redfin_region_id": 3255,
+   "realtor_location": "Uinta County, WY",
+   "lat": 41.284726,
+   "lng": -110.558947
+  },
+  {
+   "name": "Washakie County",
+   "fips": "56043",
+   "type": "county",
+   "redfin_region_id": 3256,
+   "realtor_location": "Washakie County, WY",
+   "lat": 43.878831,
+   "lng": -107.669052
+  },
+  {
+   "name": "Weston County",
+   "fips": "56045",
+   "type": "county",
+   "redfin_region_id": 3257,
+   "realtor_location": "Weston County, WY",
+   "lat": 43.846213,
+   "lng": -104.57002
+  }
+ ]
+}

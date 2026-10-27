@@ -1,0 +1,924 @@
+{
+ "state": "IL",
+ "name": "Illinois",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "17001",
+   "type": "county",
+   "redfin_region_id": 712,
+   "realtor_location": "Adams County, IL",
+   "lat": 39.986052,
+   "lng": -91.194961
+  },
+  {
+   "name": "Alexander County",
+   "fips": "17003",
+   "type": "county",
+   "redfin_region_id": 713,
+   "realtor_location": "Alexander County, IL",
+   "lat": 37.183658,
+   "lng": -89.349516
+  },
+  {
+   "name": "Bond County",
+   "fips": "17005",
+   "type": "county",
+   "redfin_region_id": 714,
+   "realtor_location": "Bond County, IL",
+   "lat": 38.885924,
+   "lng": -89.436592
+  },
+  {
+   "name": "Boone County",
+   "fips": "17007",
+   "type": "county",
+   "redfin_region_id": 715,
+   "realtor_location": "Boone County, IL",
+   "lat": 42.318983,
+   "lng": -88.824295
+  },
+  {
+   "name": "Brown County",
+   "fips": "17009",
+   "type": "county",
+   "redfin_region_id": 716,
+   "realtor_location": "Brown County, IL",
+   "lat": 39.962069,
+   "lng": -90.750309
+  },
+  {
+   "name": "Bureau County",
+   "fips": "17011",
+   "type": "county",
+   "redfin_region_id": 717,
+   "realtor_location": "Bureau County, IL",
+   "lat": 41.401304,
+   "lng": -89.528377
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "17013",
+   "type": "county",
+   "redfin_region_id": 718,
+   "realtor_location": "Calhoun County, IL",
+   "lat": 39.164262,
+   "lng": -90.666295
+  },
+  {
+   "name": "Carroll County",
+   "fips": "17015",
+   "type": "county",
+   "redfin_region_id": 719,
+   "realtor_location": "Carroll County, IL",
+   "lat": 42.0709,
+   "lng": -89.924189
+  },
+  {
+   "name": "Cass County",
+   "fips": "17017",
+   "type": "county",
+   "redfin_region_id": 720,
+   "realtor_location": "Cass County, IL",
+   "lat": 39.969202,
+   "lng": -90.245704
+  },
+  {
+   "name": "Champaign County",
+   "fips": "17019",
+   "type": "county",
+   "redfin_region_id": 721,
+   "realtor_location": "Champaign County, IL",
+   "lat": 40.138985,
+   "lng": -88.196975
+  },
+  {
+   "name": "Christian County",
+   "fips": "17021",
+   "type": "county",
+   "redfin_region_id": 722,
+   "realtor_location": "Christian County, IL",
+   "lat": 39.545524,
+   "lng": -89.279593
+  },
+  {
+   "name": "Clark County",
+   "fips": "17023",
+   "type": "county",
+   "redfin_region_id": 723,
+   "realtor_location": "Clark County, IL",
+   "lat": 39.332334,
+   "lng": -87.791683
+  },
+  {
+   "name": "Clay County",
+   "fips": "17025",
+   "type": "county",
+   "redfin_region_id": 724,
+   "realtor_location": "Clay County, IL",
+   "lat": 38.746819,
+   "lng": -88.482325
+  },
+  {
+   "name": "Clinton County",
+   "fips": "17027",
+   "type": "county",
+   "redfin_region_id": 725,
+   "realtor_location": "Clinton County, IL",
+   "lat": 38.606295,
+   "lng": -89.426228
+  },
+  {
+   "name": "Coles County",
+   "fips": "17029",
+   "type": "county",
+   "redfin_region_id": 726,
+   "realtor_location": "Coles County, IL",
+   "lat": 39.51368,
+   "lng": -88.220782
+  },
+  {
+   "name": "Cook County",
+   "fips": "17031",
+   "type": "county",
+   "redfin_region_id": 727,
+   "realtor_location": "Cook County, IL",
+   "lat": 41.894294,
+   "lng": -87.645455
+  },
+  {
+   "name": "Crawford County",
+   "fips": "17033",
+   "type": "county",
+   "redfin_region_id": 728,
+   "realtor_location": "Crawford County, IL",
+   "lat": 39.002787,
+   "lng": -87.760619
+  },
+  {
+   "name": "Cumberland County",
+   "fips": "17035",
+   "type": "county",
+   "redfin_region_id": 729,
+   "realtor_location": "Cumberland County, IL",
+   "lat": 39.273121,
+   "lng": -88.240619
+  },
+  {
+   "name": "DeKalb County",
+   "fips": "17037",
+   "type": "county",
+   "redfin_region_id": 730,
+   "realtor_location": "DeKalb County, IL",
+   "lat": 41.894612,
+   "lng": -88.768991
+  },
+  {
+   "name": "De Witt County",
+   "fips": "17039",
+   "type": "county",
+   "redfin_region_id": 731,
+   "realtor_location": "De Witt County, IL",
+   "lat": 40.181499,
+   "lng": -88.901853
+  },
+  {
+   "name": "Douglas County",
+   "fips": "17041",
+   "type": "county",
+   "redfin_region_id": 732,
+   "realtor_location": "Douglas County, IL",
+   "lat": 39.766078,
+   "lng": -88.222866
+  },
+  {
+   "name": "DuPage County",
+   "fips": "17043",
+   "type": "county",
+   "redfin_region_id": 733,
+   "realtor_location": "DuPage County, IL",
+   "lat": 41.852058,
+   "lng": -88.086039
+  },
+  {
+   "name": "Edgar County",
+   "fips": "17045",
+   "type": "county",
+   "redfin_region_id": 734,
+   "realtor_location": "Edgar County, IL",
+   "lat": 39.679037,
+   "lng": -87.74711
+  },
+  {
+   "name": "Edwards County",
+   "fips": "17047",
+   "type": "county",
+   "redfin_region_id": 735,
+   "realtor_location": "Edwards County, IL",
+   "lat": 38.417095,
+   "lng": -88.047941
+  },
+  {
+   "name": "Effingham County",
+   "fips": "17049",
+   "type": "county",
+   "redfin_region_id": 736,
+   "realtor_location": "Effingham County, IL",
+   "lat": 39.047945,
+   "lng": -88.592849
+  },
+  {
+   "name": "Fayette County",
+   "fips": "17051",
+   "type": "county",
+   "redfin_region_id": 737,
+   "realtor_location": "Fayette County, IL",
+   "lat": 39.001125,
+   "lng": -89.017923
+  },
+  {
+   "name": "Ford County",
+   "fips": "17053",
+   "type": "county",
+   "redfin_region_id": 738,
+   "realtor_location": "Ford County, IL",
+   "lat": 40.596539,
+   "lng": -88.224588
+  },
+  {
+   "name": "Franklin County",
+   "fips": "17055",
+   "type": "county",
+   "redfin_region_id": 739,
+   "realtor_location": "Franklin County, IL",
+   "lat": 37.991852,
+   "lng": -88.926321
+  },
+  {
+   "name": "Fulton County",
+   "fips": "17057",
+   "type": "county",
+   "redfin_region_id": 740,
+   "realtor_location": "Fulton County, IL",
+   "lat": 40.46524,
+   "lng": -90.202269
+  },
+  {
+   "name": "Gallatin County",
+   "fips": "17059",
+   "type": "county",
+   "redfin_region_id": 741,
+   "realtor_location": "Gallatin County, IL",
+   "lat": 37.768677,
+   "lng": -88.227964
+  },
+  {
+   "name": "Greene County",
+   "fips": "17061",
+   "type": "county",
+   "redfin_region_id": 742,
+   "realtor_location": "Greene County, IL",
+   "lat": 39.355439,
+   "lng": -90.387682
+  },
+  {
+   "name": "Grundy County",
+   "fips": "17063",
+   "type": "county",
+   "redfin_region_id": 743,
+   "realtor_location": "Grundy County, IL",
+   "lat": 41.29241,
+   "lng": -88.401054
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "17065",
+   "type": "county",
+   "redfin_region_id": 744,
+   "realtor_location": "Hamilton County, IL",
+   "lat": 38.085227,
+   "lng": -88.539009
+  },
+  {
+   "name": "Hancock County",
+   "fips": "17067",
+   "type": "county",
+   "redfin_region_id": 745,
+   "realtor_location": "Hancock County, IL",
+   "lat": 40.401318,
+   "lng": -91.168801
+  },
+  {
+   "name": "Hardin County",
+   "fips": "17069",
+   "type": "county",
+   "redfin_region_id": 746,
+   "realtor_location": "Hardin County, IL",
+   "lat": 37.517852,
+   "lng": -88.266148
+  },
+  {
+   "name": "Henderson County",
+   "fips": "17071",
+   "type": "county",
+   "redfin_region_id": 747,
+   "realtor_location": "Henderson County, IL",
+   "lat": 40.814471,
+   "lng": -90.941246
+  },
+  {
+   "name": "Henry County",
+   "fips": "17073",
+   "type": "county",
+   "redfin_region_id": 748,
+   "realtor_location": "Henry County, IL",
+   "lat": 41.350021,
+   "lng": -90.130838
+  },
+  {
+   "name": "Iroquois County",
+   "fips": "17075",
+   "type": "county",
+   "redfin_region_id": 749,
+   "realtor_location": "Iroquois County, IL",
+   "lat": 40.748867,
+   "lng": -87.833601
+  },
+  {
+   "name": "Jackson County",
+   "fips": "17077",
+   "type": "county",
+   "redfin_region_id": 750,
+   "realtor_location": "Jackson County, IL",
+   "lat": 37.786096,
+   "lng": -89.381212
+  },
+  {
+   "name": "Jasper County",
+   "fips": "17079",
+   "type": "county",
+   "redfin_region_id": 751,
+   "realtor_location": "Jasper County, IL",
+   "lat": 39.004886,
+   "lng": -88.150725
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "17081",
+   "type": "county",
+   "redfin_region_id": 752,
+   "realtor_location": "Jefferson County, IL",
+   "lat": 38.30078,
+   "lng": -88.92421
+  },
+  {
+   "name": "Jersey County",
+   "fips": "17083",
+   "type": "county",
+   "redfin_region_id": 753,
+   "realtor_location": "Jersey County, IL",
+   "lat": 39.080195,
+   "lng": -90.361385
+  },
+  {
+   "name": "Jo Daviess County",
+   "fips": "17085",
+   "type": "county",
+   "redfin_region_id": 754,
+   "realtor_location": "Jo Daviess County, IL",
+   "lat": 42.362391,
+   "lng": -90.21147
+  },
+  {
+   "name": "Johnson County",
+   "fips": "17087",
+   "type": "county",
+   "redfin_region_id": 755,
+   "realtor_location": "Johnson County, IL",
+   "lat": 37.460709,
+   "lng": -88.882131
+  },
+  {
+   "name": "Kane County",
+   "fips": "17089",
+   "type": "county",
+   "redfin_region_id": 756,
+   "realtor_location": "Kane County, IL",
+   "lat": 41.939594,
+   "lng": -88.42804
+  },
+  {
+   "name": "Kankakee County",
+   "fips": "17091",
+   "type": "county",
+   "redfin_region_id": 757,
+   "realtor_location": "Kankakee County, IL",
+   "lat": 41.13951,
+   "lng": -87.861117
+  },
+  {
+   "name": "Kendall County",
+   "fips": "17093",
+   "type": "county",
+   "redfin_region_id": 758,
+   "realtor_location": "Kendall County, IL",
+   "lat": 41.58814,
+   "lng": -88.430626
+  },
+  {
+   "name": "Knox County",
+   "fips": "17095",
+   "type": "county",
+   "redfin_region_id": 759,
+   "realtor_location": "Knox County, IL",
+   "lat": 40.930945,
+   "lng": -90.213792
+  },
+  {
+   "name": "Lake County",
+   "fips": "17097",
+   "type": "county",
+   "redfin_region_id": 760,
+   "realtor_location": "Lake County, IL",
+   "lat": 42.185968,
+   "lng": -87.805939
+  },
+  {
+   "name": "LaSalle County",
+   "fips": "17099",
+   "type": "county",
+   "redfin_region_id": 761,
+   "realtor_location": "LaSalle County, IL",
+   "lat": 41.343341,
+   "lng": -88.885931
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "17101",
+   "type": "county",
+   "redfin_region_id": 762,
+   "realtor_location": "Lawrence County, IL",
+   "lat": 38.718954,
+   "lng": -87.730221
+  },
+  {
+   "name": "Lee County",
+   "fips": "17103",
+   "type": "county",
+   "redfin_region_id": 763,
+   "realtor_location": "Lee County, IL",
+   "lat": 41.747447,
+   "lng": -89.299362
+  },
+  {
+   "name": "Livingston County",
+   "fips": "17105",
+   "type": "county",
+   "redfin_region_id": 764,
+   "realtor_location": "Livingston County, IL",
+   "lat": 40.894376,
+   "lng": -88.552852
+  },
+  {
+   "name": "Logan County",
+   "fips": "17107",
+   "type": "county",
+   "redfin_region_id": 765,
+   "realtor_location": "Logan County, IL",
+   "lat": 40.129277,
+   "lng": -89.365309
+  },
+  {
+   "name": "McDonough County",
+   "fips": "17109",
+   "type": "county",
+   "redfin_region_id": 766,
+   "realtor_location": "McDonough County, IL",
+   "lat": 40.455808,
+   "lng": -90.678954
+  },
+  {
+   "name": "McHenry County",
+   "fips": "17111",
+   "type": "county",
+   "redfin_region_id": 767,
+   "realtor_location": "McHenry County, IL",
+   "lat": 42.324298,
+   "lng": -88.452245
+  },
+  {
+   "name": "McLean County",
+   "fips": "17113",
+   "type": "county",
+   "redfin_region_id": 768,
+   "realtor_location": "McLean County, IL",
+   "lat": 40.494559,
+   "lng": -88.844539
+  },
+  {
+   "name": "Macon County",
+   "fips": "17115",
+   "type": "county",
+   "redfin_region_id": 769,
+   "realtor_location": "Macon County, IL",
+   "lat": 39.860237,
+   "lng": -88.961529
+  },
+  {
+   "name": "Macoupin County",
+   "fips": "17117",
+   "type": "county",
+   "redfin_region_id": 770,
+   "realtor_location": "Macoupin County, IL",
+   "lat": 39.265914,
+   "lng": -89.92633
+  },
+  {
+   "name": "Madison County",
+   "fips": "17119",
+   "type": "county",
+   "redfin_region_id": 771,
+   "realtor_location": "Madison County, IL",
+   "lat": 38.82712,
+   "lng": -89.900227
+  },
+  {
+   "name": "Marion County",
+   "fips": "17121",
+   "type": "county",
+   "redfin_region_id": 772,
+   "realtor_location": "Marion County, IL",
+   "lat": 38.648236,
+   "lng": -88.920362
+  },
+  {
+   "name": "Marshall County",
+   "fips": "17123",
+   "type": "county",
+   "redfin_region_id": 773,
+   "realtor_location": "Marshall County, IL",
+   "lat": 41.031119,
+   "lng": -89.342371
+  },
+  {
+   "name": "Mason County",
+   "fips": "17125",
+   "type": "county",
+   "redfin_region_id": 774,
+   "realtor_location": "Mason County, IL",
+   "lat": 40.236993,
+   "lng": -89.913575
+  },
+  {
+   "name": "Massac County",
+   "fips": "17127",
+   "type": "county",
+   "redfin_region_id": 775,
+   "realtor_location": "Massac County, IL",
+   "lat": 37.216119,
+   "lng": -88.705658
+  },
+  {
+   "name": "Menard County",
+   "fips": "17129",
+   "type": "county",
+   "redfin_region_id": 776,
+   "realtor_location": "Menard County, IL",
+   "lat": 40.022569,
+   "lng": -89.794133
+  },
+  {
+   "name": "Mercer County",
+   "fips": "17131",
+   "type": "county",
+   "redfin_region_id": 777,
+   "realtor_location": "Mercer County, IL",
+   "lat": 41.205605,
+   "lng": -90.74177
+  },
+  {
+   "name": "Monroe County",
+   "fips": "17133",
+   "type": "county",
+   "redfin_region_id": 778,
+   "realtor_location": "Monroe County, IL",
+   "lat": 38.277983,
+   "lng": -90.179078
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "17135",
+   "type": "county",
+   "redfin_region_id": 779,
+   "realtor_location": "Montgomery County, IL",
+   "lat": 39.228068,
+   "lng": -89.478141
+  },
+  {
+   "name": "Morgan County",
+   "fips": "17137",
+   "type": "county",
+   "redfin_region_id": 780,
+   "realtor_location": "Morgan County, IL",
+   "lat": 39.717668,
+   "lng": -90.205005
+  },
+  {
+   "name": "Moultrie County",
+   "fips": "17139",
+   "type": "county",
+   "redfin_region_id": 781,
+   "realtor_location": "Moultrie County, IL",
+   "lat": 39.636896,
+   "lng": -88.625726
+  },
+  {
+   "name": "Ogle County",
+   "fips": "17141",
+   "type": "county",
+   "redfin_region_id": 782,
+   "realtor_location": "Ogle County, IL",
+   "lat": 42.041884,
+   "lng": -89.320176
+  },
+  {
+   "name": "Peoria County",
+   "fips": "17143",
+   "type": "county",
+   "redfin_region_id": 783,
+   "realtor_location": "Peoria County, IL",
+   "lat": 40.785972,
+   "lng": -89.766993
+  },
+  {
+   "name": "Perry County",
+   "fips": "17145",
+   "type": "county",
+   "redfin_region_id": 784,
+   "realtor_location": "Perry County, IL",
+   "lat": 38.084381,
+   "lng": -89.368525
+  },
+  {
+   "name": "Piatt County",
+   "fips": "17147",
+   "type": "county",
+   "redfin_region_id": 785,
+   "realtor_location": "Piatt County, IL",
+   "lat": 40.009033,
+   "lng": -88.592355
+  },
+  {
+   "name": "Pike County",
+   "fips": "17149",
+   "type": "county",
+   "redfin_region_id": 786,
+   "realtor_location": "Pike County, IL",
+   "lat": 39.625106,
+   "lng": -90.889034
+  },
+  {
+   "name": "Pope County",
+   "fips": "17151",
+   "type": "county",
+   "redfin_region_id": 787,
+   "realtor_location": "Pope County, IL",
+   "lat": 37.417169,
+   "lng": -88.542374
+  },
+  {
+   "name": "Pulaski County",
+   "fips": "17153",
+   "type": "county",
+   "redfin_region_id": 788,
+   "realtor_location": "Pulaski County, IL",
+   "lat": 37.215615,
+   "lng": -89.127755
+  },
+  {
+   "name": "Putnam County",
+   "fips": "17155",
+   "type": "county",
+   "redfin_region_id": 789,
+   "realtor_location": "Putnam County, IL",
+   "lat": 41.198961,
+   "lng": -89.298347
+  },
+  {
+   "name": "Randolph County",
+   "fips": "17157",
+   "type": "county",
+   "redfin_region_id": 790,
+   "realtor_location": "Randolph County, IL",
+   "lat": 38.056515,
+   "lng": -89.82121
+  },
+  {
+   "name": "Richland County",
+   "fips": "17159",
+   "type": "county",
+   "redfin_region_id": 791,
+   "realtor_location": "Richland County, IL",
+   "lat": 38.712187,
+   "lng": -88.085452
+  },
+  {
+   "name": "Rock Island County",
+   "fips": "17161",
+   "type": "county",
+   "redfin_region_id": 792,
+   "realtor_location": "Rock Island County, IL",
+   "lat": 41.468421,
+   "lng": -90.572125
+  },
+  {
+   "name": "St. Clair County",
+   "fips": "17163",
+   "type": "county",
+   "redfin_region_id": 793,
+   "realtor_location": "St. Clair County, IL",
+   "lat": 38.470198,
+   "lng": -89.928546
+  },
+  {
+   "name": "Saline County",
+   "fips": "17165",
+   "type": "county",
+   "redfin_region_id": 794,
+   "realtor_location": "Saline County, IL",
+   "lat": 37.751508,
+   "lng": -88.545024
+  },
+  {
+   "name": "Sangamon County",
+   "fips": "17167",
+   "type": "county",
+   "redfin_region_id": 795,
+   "realtor_location": "Sangamon County, IL",
+   "lat": 39.756886,
+   "lng": -89.662435
+  },
+  {
+   "name": "Schuyler County",
+   "fips": "17169",
+   "type": "county",
+   "redfin_region_id": 796,
+   "realtor_location": "Schuyler County, IL",
+   "lat": 40.156905,
+   "lng": -90.613464
+  },
+  {
+   "name": "Scott County",
+   "fips": "17171",
+   "type": "county",
+   "redfin_region_id": 797,
+   "realtor_location": "Scott County, IL",
+   "lat": 39.637002,
+   "lng": -90.477771
+  },
+  {
+   "name": "Shelby County",
+   "fips": "17173",
+   "type": "county",
+   "redfin_region_id": 798,
+   "realtor_location": "Shelby County, IL",
+   "lat": 39.384926,
+   "lng": -88.798862
+  },
+  {
+   "name": "Stark County",
+   "fips": "17175",
+   "type": "county",
+   "redfin_region_id": 799,
+   "realtor_location": "Stark County, IL",
+   "lat": 41.096908,
+   "lng": -89.797411
+  },
+  {
+   "name": "Stephenson County",
+   "fips": "17177",
+   "type": "county",
+   "redfin_region_id": 800,
+   "realtor_location": "Stephenson County, IL",
+   "lat": 42.349726,
+   "lng": -89.665994
+  },
+  {
+   "name": "Tazewell County",
+   "fips": "17179",
+   "type": "county",
+   "redfin_region_id": 801,
+   "realtor_location": "Tazewell County, IL",
+   "lat": 40.508074,
+   "lng": -89.51626
+  },
+  {
+   "name": "Union County",
+   "fips": "17181",
+   "type": "county",
+   "redfin_region_id": 802,
+   "realtor_location": "Union County, IL",
+   "lat": 37.485652,
+   "lng": -89.244639
+  },
+  {
+   "name": "Vermilion County",
+   "fips": "17183",
+   "type": "county",
+   "redfin_region_id": 803,
+   "realtor_location": "Vermilion County, IL",
+   "lat": 40.186754,
+   "lng": -87.726778
+  },
+  {
+   "name": "Wabash County",
+   "fips": "17185",
+   "type": "county",
+   "redfin_region_id": 804,
+   "realtor_location": "Wabash County, IL",
+   "lat": 38.445821,
+   "lng": -87.839167
+  },
+  {
+   "name": "Warren County",
+   "fips": "17187",
+   "type": "county",
+   "redfin_region_id": 805,
+   "realtor_location": "Warren County, IL",
+   "lat": 40.850441,
+   "lng": -90.620223
+  },
+  {
+   "name": "Washington County",
+   "fips": "17189",
+   "type": "county",
+   "redfin_region_id": 806,
+   "realtor_location": "Washington County, IL",
+   "lat": 38.35314,
+   "lng": -89.417187
+  },
+  {
+   "name": "Wayne County",
+   "fips": "17191",
+   "type": "county",
+   "redfin_region_id": 807,
+   "realtor_location": "Wayne County, IL",
+   "lat": 38.431857,
+   "lng": -88.43243
+  },
+  {
+   "name": "White County",
+   "fips": "17193",
+   "type": "county",
+   "redfin_region_id": 808,
+   "realtor_location": "White County, IL",
+   "lat": 38.087326,
+   "lng": -88.178623
+  },
+  {
+   "name": "Whiteside County",
+   "fips": "17195",
+   "type": "county",
+   "redfin_region_id": 809,
+   "realtor_location": "Whiteside County, IL",
+   "lat": 41.750673,
+   "lng": -89.911005
+  },
+  {
+   "name": "Will County",
+   "fips": "17197",
+   "type": "county",
+   "redfin_region_id": 810,
+   "realtor_location": "Will County, IL",
+   "lat": 41.448474,
+   "lng": -87.978456
+  },
+  {
+   "name": "Williamson County",
+   "fips": "17199",
+   "type": "county",
+   "redfin_region_id": 811,
+   "realtor_location": "Williamson County, IL",
+   "lat": 37.730353,
+   "lng": -88.930018
+  },
+  {
+   "name": "Winnebago County",
+   "fips": "17201",
+   "type": "county",
+   "redfin_region_id": 812,
+   "realtor_location": "Winnebago County, IL",
+   "lat": 42.337396,
+   "lng": -89.161205
+  },
+  {
+   "name": "Woodford County",
+   "fips": "17203",
+   "type": "county",
+   "redfin_region_id": 813,
+   "realtor_location": "Woodford County, IL",
+   "lat": 40.789787,
+   "lng": -89.210587
+  }
+ ]
+}

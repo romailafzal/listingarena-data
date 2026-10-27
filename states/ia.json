@@ -1,0 +1,897 @@
+{
+ "state": "IA",
+ "name": "Iowa",
+ "counties": [
+  {
+   "name": "Adair County",
+   "fips": "19001",
+   "type": "county",
+   "redfin_region_id": 906,
+   "realtor_location": "Adair County, IA",
+   "lat": 41.328528,
+   "lng": -94.478164
+  },
+  {
+   "name": "Adams County",
+   "fips": "19003",
+   "type": "county",
+   "redfin_region_id": 907,
+   "realtor_location": "Adams County, IA",
+   "lat": 41.021656,
+   "lng": -94.696906
+  },
+  {
+   "name": "Allamakee County",
+   "fips": "19005",
+   "type": "county",
+   "redfin_region_id": 908,
+   "realtor_location": "Allamakee County, IA",
+   "lat": 43.274964,
+   "lng": -91.382751
+  },
+  {
+   "name": "Appanoose County",
+   "fips": "19007",
+   "type": "county",
+   "redfin_region_id": 909,
+   "realtor_location": "Appanoose County, IA",
+   "lat": 40.744249,
+   "lng": -92.873065
+  },
+  {
+   "name": "Audubon County",
+   "fips": "19009",
+   "type": "county",
+   "redfin_region_id": 910,
+   "realtor_location": "Audubon County, IA",
+   "lat": 41.679178,
+   "lng": -94.904312
+  },
+  {
+   "name": "Benton County",
+   "fips": "19011",
+   "type": "county",
+   "redfin_region_id": 911,
+   "realtor_location": "Benton County, IA",
+   "lat": 42.092547,
+   "lng": -92.05763
+  },
+  {
+   "name": "Black Hawk County",
+   "fips": "19013",
+   "type": "county",
+   "redfin_region_id": 912,
+   "realtor_location": "Black Hawk County, IA",
+   "lat": 42.471132,
+   "lng": -92.3076
+  },
+  {
+   "name": "Boone County",
+   "fips": "19015",
+   "type": "county",
+   "redfin_region_id": 913,
+   "realtor_location": "Boone County, IA",
+   "lat": 42.038642,
+   "lng": -93.938603
+  },
+  {
+   "name": "Bremer County",
+   "fips": "19017",
+   "type": "county",
+   "redfin_region_id": 914,
+   "realtor_location": "Bremer County, IA",
+   "lat": 42.780895,
+   "lng": -92.327356
+  },
+  {
+   "name": "Buchanan County",
+   "fips": "19019",
+   "type": "county",
+   "redfin_region_id": 915,
+   "realtor_location": "Buchanan County, IA",
+   "lat": 42.470328,
+   "lng": -91.838666
+  },
+  {
+   "name": "Buena Vista County",
+   "fips": "19021",
+   "type": "county",
+   "redfin_region_id": 916,
+   "realtor_location": "Buena Vista County, IA",
+   "lat": 42.741522,
+   "lng": -95.141432
+  },
+  {
+   "name": "Butler County",
+   "fips": "19023",
+   "type": "county",
+   "redfin_region_id": 917,
+   "realtor_location": "Butler County, IA",
+   "lat": 42.734757,
+   "lng": -92.780153
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "19025",
+   "type": "county",
+   "redfin_region_id": 918,
+   "realtor_location": "Calhoun County, IA",
+   "lat": 42.38617,
+   "lng": -94.643683
+  },
+  {
+   "name": "Carroll County",
+   "fips": "19027",
+   "type": "county",
+   "redfin_region_id": 919,
+   "realtor_location": "Carroll County, IA",
+   "lat": 42.039502,
+   "lng": -94.86765
+  },
+  {
+   "name": "Cass County",
+   "fips": "19029",
+   "type": "county",
+   "redfin_region_id": 920,
+   "realtor_location": "Cass County, IA",
+   "lat": 41.333824,
+   "lng": -94.933302
+  },
+  {
+   "name": "Cedar County",
+   "fips": "19031",
+   "type": "county",
+   "redfin_region_id": 921,
+   "realtor_location": "Cedar County, IA",
+   "lat": 41.77236,
+   "lng": -91.132611
+  },
+  {
+   "name": "Cerro Gordo County",
+   "fips": "19033",
+   "type": "county",
+   "redfin_region_id": 922,
+   "realtor_location": "Cerro Gordo County, IA",
+   "lat": 43.074975,
+   "lng": -93.250965
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "19035",
+   "type": "county",
+   "redfin_region_id": 923,
+   "realtor_location": "Cherokee County, IA",
+   "lat": 42.742737,
+   "lng": -95.633262
+  },
+  {
+   "name": "Chickasaw County",
+   "fips": "19037",
+   "type": "county",
+   "redfin_region_id": 924,
+   "realtor_location": "Chickasaw County, IA",
+   "lat": 43.059741,
+   "lng": -92.31721
+  },
+  {
+   "name": "Clarke County",
+   "fips": "19039",
+   "type": "county",
+   "redfin_region_id": 925,
+   "realtor_location": "Clarke County, IA",
+   "lat": 41.029726,
+   "lng": -93.785259
+  },
+  {
+   "name": "Clay County",
+   "fips": "19041",
+   "type": "county",
+   "redfin_region_id": 926,
+   "realtor_location": "Clay County, IA",
+   "lat": 43.081224,
+   "lng": -95.149875
+  },
+  {
+   "name": "Clayton County",
+   "fips": "19043",
+   "type": "county",
+   "redfin_region_id": 927,
+   "realtor_location": "Clayton County, IA",
+   "lat": 42.840985,
+   "lng": -91.323576
+  },
+  {
+   "name": "Clinton County",
+   "fips": "19045",
+   "type": "county",
+   "redfin_region_id": 928,
+   "realtor_location": "Clinton County, IA",
+   "lat": 41.898073,
+   "lng": -90.534243
+  },
+  {
+   "name": "Crawford County",
+   "fips": "19047",
+   "type": "county",
+   "redfin_region_id": 929,
+   "realtor_location": "Crawford County, IA",
+   "lat": 42.043119,
+   "lng": -95.38909
+  },
+  {
+   "name": "Dallas County",
+   "fips": "19049",
+   "type": "county",
+   "redfin_region_id": 930,
+   "realtor_location": "Dallas County, IA",
+   "lat": 41.68532,
+   "lng": -94.040706
+  },
+  {
+   "name": "Davis County",
+   "fips": "19051",
+   "type": "county",
+   "redfin_region_id": 931,
+   "realtor_location": "Davis County, IA",
+   "lat": 40.748089,
+   "lng": -92.410345
+  },
+  {
+   "name": "Decatur County",
+   "fips": "19053",
+   "type": "county",
+   "redfin_region_id": 932,
+   "realtor_location": "Decatur County, IA",
+   "lat": 40.736379,
+   "lng": -93.78458
+  },
+  {
+   "name": "Delaware County",
+   "fips": "19055",
+   "type": "county",
+   "redfin_region_id": 933,
+   "realtor_location": "Delaware County, IA",
+   "lat": 42.472937,
+   "lng": -91.366767
+  },
+  {
+   "name": "Des Moines County",
+   "fips": "19057",
+   "type": "county",
+   "redfin_region_id": 934,
+   "realtor_location": "Des Moines County, IA",
+   "lat": 40.915339,
+   "lng": -91.186925
+  },
+  {
+   "name": "Dickinson County",
+   "fips": "19059",
+   "type": "county",
+   "redfin_region_id": 935,
+   "realtor_location": "Dickinson County, IA",
+   "lat": 43.389611,
+   "lng": -95.196057
+  },
+  {
+   "name": "Dubuque County",
+   "fips": "19061",
+   "type": "county",
+   "redfin_region_id": 936,
+   "realtor_location": "Dubuque County, IA",
+   "lat": 42.463481,
+   "lng": -90.878771
+  },
+  {
+   "name": "Emmet County",
+   "fips": "19063",
+   "type": "county",
+   "redfin_region_id": 937,
+   "realtor_location": "Emmet County, IA",
+   "lat": 43.377984,
+   "lng": -94.66937
+  },
+  {
+   "name": "Fayette County",
+   "fips": "19065",
+   "type": "county",
+   "redfin_region_id": 938,
+   "realtor_location": "Fayette County, IA",
+   "lat": 42.864122,
+   "lng": -91.840376
+  },
+  {
+   "name": "Floyd County",
+   "fips": "19067",
+   "type": "county",
+   "redfin_region_id": 939,
+   "realtor_location": "Floyd County, IA",
+   "lat": 43.052741,
+   "lng": -92.787367
+  },
+  {
+   "name": "Franklin County",
+   "fips": "19069",
+   "type": "county",
+   "redfin_region_id": 940,
+   "realtor_location": "Franklin County, IA",
+   "lat": 42.736545,
+   "lng": -93.271415
+  },
+  {
+   "name": "Fremont County",
+   "fips": "19071",
+   "type": "county",
+   "redfin_region_id": 941,
+   "realtor_location": "Fremont County, IA",
+   "lat": 40.74259,
+   "lng": -95.599182
+  },
+  {
+   "name": "Greene County",
+   "fips": "19073",
+   "type": "county",
+   "redfin_region_id": 942,
+   "realtor_location": "Greene County, IA",
+   "lat": 42.042513,
+   "lng": -94.388727
+  },
+  {
+   "name": "Grundy County",
+   "fips": "19075",
+   "type": "county",
+   "redfin_region_id": 943,
+   "realtor_location": "Grundy County, IA",
+   "lat": 42.403339,
+   "lng": -92.790244
+  },
+  {
+   "name": "Guthrie County",
+   "fips": "19077",
+   "type": "county",
+   "redfin_region_id": 944,
+   "realtor_location": "Guthrie County, IA",
+   "lat": 41.683573,
+   "lng": -94.501272
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "19079",
+   "type": "county",
+   "redfin_region_id": 945,
+   "realtor_location": "Hamilton County, IA",
+   "lat": 42.390789,
+   "lng": -93.70913
+  },
+  {
+   "name": "Hancock County",
+   "fips": "19081",
+   "type": "county",
+   "redfin_region_id": 946,
+   "realtor_location": "Hancock County, IA",
+   "lat": 43.075411,
+   "lng": -93.743697
+  },
+  {
+   "name": "Hardin County",
+   "fips": "19083",
+   "type": "county",
+   "redfin_region_id": 947,
+   "realtor_location": "Hardin County, IA",
+   "lat": 42.390208,
+   "lng": -93.241669
+  },
+  {
+   "name": "Harrison County",
+   "fips": "19085",
+   "type": "county",
+   "redfin_region_id": 948,
+   "realtor_location": "Harrison County, IA",
+   "lat": 41.688584,
+   "lng": -95.827149
+  },
+  {
+   "name": "Henry County",
+   "fips": "19087",
+   "type": "county",
+   "redfin_region_id": 949,
+   "realtor_location": "Henry County, IA",
+   "lat": 40.984802,
+   "lng": -91.547259
+  },
+  {
+   "name": "Howard County",
+   "fips": "19089",
+   "type": "county",
+   "redfin_region_id": 950,
+   "realtor_location": "Howard County, IA",
+   "lat": 43.365312,
+   "lng": -92.321908
+  },
+  {
+   "name": "Humboldt County",
+   "fips": "19091",
+   "type": "county",
+   "redfin_region_id": 951,
+   "realtor_location": "Humboldt County, IA",
+   "lat": 42.782221,
+   "lng": -94.202775
+  },
+  {
+   "name": "Ida County",
+   "fips": "19093",
+   "type": "county",
+   "redfin_region_id": 952,
+   "realtor_location": "Ida County, IA",
+   "lat": 42.39186,
+   "lng": -95.507421
+  },
+  {
+   "name": "Iowa County",
+   "fips": "19095",
+   "type": "county",
+   "redfin_region_id": 953,
+   "realtor_location": "Iowa County, IA",
+   "lat": 41.683918,
+   "lng": -92.059123
+  },
+  {
+   "name": "Jackson County",
+   "fips": "19097",
+   "type": "county",
+   "redfin_region_id": 954,
+   "realtor_location": "Jackson County, IA",
+   "lat": 42.164226,
+   "lng": -90.574582
+  },
+  {
+   "name": "Jasper County",
+   "fips": "19099",
+   "type": "county",
+   "redfin_region_id": 955,
+   "realtor_location": "Jasper County, IA",
+   "lat": 41.685551,
+   "lng": -93.054147
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "19101",
+   "type": "county",
+   "redfin_region_id": 956,
+   "realtor_location": "Jefferson County, IA",
+   "lat": 41.006376,
+   "lng": -91.966628
+  },
+  {
+   "name": "Johnson County",
+   "fips": "19103",
+   "type": "county",
+   "redfin_region_id": 957,
+   "realtor_location": "Johnson County, IA",
+   "lat": 41.670668,
+   "lng": -91.590529
+  },
+  {
+   "name": "Jones County",
+   "fips": "19105",
+   "type": "county",
+   "redfin_region_id": 958,
+   "realtor_location": "Jones County, IA",
+   "lat": 42.125118,
+   "lng": -91.116914
+  },
+  {
+   "name": "Keokuk County",
+   "fips": "19107",
+   "type": "county",
+   "redfin_region_id": 959,
+   "realtor_location": "Keokuk County, IA",
+   "lat": 41.331182,
+   "lng": -92.167721
+  },
+  {
+   "name": "Kossuth County",
+   "fips": "19109",
+   "type": "county",
+   "redfin_region_id": 960,
+   "realtor_location": "Kossuth County, IA",
+   "lat": 43.212356,
+   "lng": -94.213965
+  },
+  {
+   "name": "Lee County",
+   "fips": "19111",
+   "type": "county",
+   "redfin_region_id": 961,
+   "realtor_location": "Lee County, IA",
+   "lat": 40.647588,
+   "lng": -91.477157
+  },
+  {
+   "name": "Linn County",
+   "fips": "19113",
+   "type": "county",
+   "redfin_region_id": 962,
+   "realtor_location": "Linn County, IA",
+   "lat": 42.077951,
+   "lng": -91.597674
+  },
+  {
+   "name": "Louisa County",
+   "fips": "19115",
+   "type": "county",
+   "redfin_region_id": 963,
+   "realtor_location": "Louisa County, IA",
+   "lat": 41.218211,
+   "lng": -91.256994
+  },
+  {
+   "name": "Lucas County",
+   "fips": "19117",
+   "type": "county",
+   "redfin_region_id": 964,
+   "realtor_location": "Lucas County, IA",
+   "lat": 41.033344,
+   "lng": -93.331467
+  },
+  {
+   "name": "Lyon County",
+   "fips": "19119",
+   "type": "county",
+   "redfin_region_id": 965,
+   "realtor_location": "Lyon County, IA",
+   "lat": 43.38358,
+   "lng": -96.207201
+  },
+  {
+   "name": "Madison County",
+   "fips": "19121",
+   "type": "county",
+   "redfin_region_id": 966,
+   "realtor_location": "Madison County, IA",
+   "lat": 41.330622,
+   "lng": -94.015184
+  },
+  {
+   "name": "Mahaska County",
+   "fips": "19123",
+   "type": "county",
+   "redfin_region_id": 967,
+   "realtor_location": "Mahaska County, IA",
+   "lat": 41.330797,
+   "lng": -92.636366
+  },
+  {
+   "name": "Marion County",
+   "fips": "19125",
+   "type": "county",
+   "redfin_region_id": 968,
+   "realtor_location": "Marion County, IA",
+   "lat": 41.331433,
+   "lng": -93.093868
+  },
+  {
+   "name": "Marshall County",
+   "fips": "19127",
+   "type": "county",
+   "redfin_region_id": 969,
+   "realtor_location": "Marshall County, IA",
+   "lat": 42.0417,
+   "lng": -92.981403
+  },
+  {
+   "name": "Mills County",
+   "fips": "19129",
+   "type": "county",
+   "redfin_region_id": 970,
+   "realtor_location": "Mills County, IA",
+   "lat": 41.033703,
+   "lng": -95.619101
+  },
+  {
+   "name": "Mitchell County",
+   "fips": "19131",
+   "type": "county",
+   "redfin_region_id": 971,
+   "realtor_location": "Mitchell County, IA",
+   "lat": 43.348564,
+   "lng": -92.784466
+  },
+  {
+   "name": "Monona County",
+   "fips": "19133",
+   "type": "county",
+   "redfin_region_id": 972,
+   "realtor_location": "Monona County, IA",
+   "lat": 42.049432,
+   "lng": -95.956566
+  },
+  {
+   "name": "Monroe County",
+   "fips": "19135",
+   "type": "county",
+   "redfin_region_id": 973,
+   "realtor_location": "Monroe County, IA",
+   "lat": 41.028847,
+   "lng": -92.869642
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "19137",
+   "type": "county",
+   "redfin_region_id": 974,
+   "realtor_location": "Montgomery County, IA",
+   "lat": 41.021735,
+   "lng": -95.15779
+  },
+  {
+   "name": "Muscatine County",
+   "fips": "19139",
+   "type": "county",
+   "redfin_region_id": 975,
+   "realtor_location": "Muscatine County, IA",
+   "lat": 41.483776,
+   "lng": -91.118699
+  },
+  {
+   "name": "O'Brien County",
+   "fips": "19141",
+   "type": "county",
+   "redfin_region_id": 976,
+   "realtor_location": "O'Brien County, IA",
+   "lat": 43.083746,
+   "lng": -95.625624
+  },
+  {
+   "name": "Osceola County",
+   "fips": "19143",
+   "type": "county",
+   "redfin_region_id": 977,
+   "realtor_location": "Osceola County, IA",
+   "lat": 43.378542,
+   "lng": -95.633788
+  },
+  {
+   "name": "Page County",
+   "fips": "19145",
+   "type": "county",
+   "redfin_region_id": 978,
+   "realtor_location": "Page County, IA",
+   "lat": 40.739097,
+   "lng": -95.144301
+  },
+  {
+   "name": "Palo Alto County",
+   "fips": "19147",
+   "type": "county",
+   "redfin_region_id": 979,
+   "realtor_location": "Palo Alto County, IA",
+   "lat": 43.075337,
+   "lng": -94.669055
+  },
+  {
+   "name": "Plymouth County",
+   "fips": "19149",
+   "type": "county",
+   "redfin_region_id": 980,
+   "realtor_location": "Plymouth County, IA",
+   "lat": 42.737585,
+   "lng": -96.215864
+  },
+  {
+   "name": "Pocahontas County",
+   "fips": "19151",
+   "type": "county",
+   "redfin_region_id": 981,
+   "realtor_location": "Pocahontas County, IA",
+   "lat": 42.734033,
+   "lng": -94.678279
+  },
+  {
+   "name": "Polk County",
+   "fips": "19153",
+   "type": "county",
+   "redfin_region_id": 982,
+   "realtor_location": "Polk County, IA",
+   "lat": 41.684816,
+   "lng": -93.568971
+  },
+  {
+   "name": "Pottawattamie County",
+   "fips": "19155",
+   "type": "county",
+   "redfin_region_id": 983,
+   "realtor_location": "Pottawattamie County, IA",
+   "lat": 41.340184,
+   "lng": -95.544905
+  },
+  {
+   "name": "Poweshiek County",
+   "fips": "19157",
+   "type": "county",
+   "redfin_region_id": 984,
+   "realtor_location": "Poweshiek County, IA",
+   "lat": 41.684642,
+   "lng": -92.522934
+  },
+  {
+   "name": "Ringgold County",
+   "fips": "19159",
+   "type": "county",
+   "redfin_region_id": 985,
+   "realtor_location": "Ringgold County, IA",
+   "lat": 40.735334,
+   "lng": -94.244251
+  },
+  {
+   "name": "Sac County",
+   "fips": "19161",
+   "type": "county",
+   "redfin_region_id": 986,
+   "realtor_location": "Sac County, IA",
+   "lat": 42.387526,
+   "lng": -95.105224
+  },
+  {
+   "name": "Scott County",
+   "fips": "19163",
+   "type": "county",
+   "redfin_region_id": 987,
+   "realtor_location": "Scott County, IA",
+   "lat": 41.642079,
+   "lng": -90.622289
+  },
+  {
+   "name": "Shelby County",
+   "fips": "19165",
+   "type": "county",
+   "redfin_region_id": 988,
+   "realtor_location": "Shelby County, IA",
+   "lat": 41.679014,
+   "lng": -95.308917
+  },
+  {
+   "name": "Sioux County",
+   "fips": "19167",
+   "type": "county",
+   "redfin_region_id": 989,
+   "realtor_location": "Sioux County, IA",
+   "lat": 43.082646,
+   "lng": -96.17801
+  },
+  {
+   "name": "Story County",
+   "fips": "19169",
+   "type": "county",
+   "redfin_region_id": 990,
+   "realtor_location": "Story County, IA",
+   "lat": 42.037538,
+   "lng": -93.466093
+  },
+  {
+   "name": "Tama County",
+   "fips": "19171",
+   "type": "county",
+   "redfin_region_id": 991,
+   "realtor_location": "Tama County, IA",
+   "lat": 42.074848,
+   "lng": -92.529411
+  },
+  {
+   "name": "Taylor County",
+   "fips": "19173",
+   "type": "county",
+   "redfin_region_id": 992,
+   "realtor_location": "Taylor County, IA",
+   "lat": 40.737949,
+   "lng": -94.697108
+  },
+  {
+   "name": "Union County",
+   "fips": "19175",
+   "type": "county",
+   "redfin_region_id": 993,
+   "realtor_location": "Union County, IA",
+   "lat": 41.02855,
+   "lng": -94.245091
+  },
+  {
+   "name": "Van Buren County",
+   "fips": "19177",
+   "type": "county",
+   "redfin_region_id": 994,
+   "realtor_location": "Van Buren County, IA",
+   "lat": 40.754117,
+   "lng": -91.952943
+  },
+  {
+   "name": "Wapello County",
+   "fips": "19179",
+   "type": "county",
+   "redfin_region_id": 995,
+   "realtor_location": "Wapello County, IA",
+   "lat": 41.031275,
+   "lng": -92.409466
+  },
+  {
+   "name": "Warren County",
+   "fips": "19181",
+   "type": "county",
+   "redfin_region_id": 996,
+   "realtor_location": "Warren County, IA",
+   "lat": 41.332446,
+   "lng": -93.568751
+  },
+  {
+   "name": "Washington County",
+   "fips": "19183",
+   "type": "county",
+   "redfin_region_id": 997,
+   "realtor_location": "Washington County, IA",
+   "lat": 41.329401,
+   "lng": -91.725052
+  },
+  {
+   "name": "Wayne County",
+   "fips": "19185",
+   "type": "county",
+   "redfin_region_id": 998,
+   "realtor_location": "Wayne County, IA",
+   "lat": 40.739983,
+   "lng": -93.332613
+  },
+  {
+   "name": "Webster County",
+   "fips": "19187",
+   "type": "county",
+   "redfin_region_id": 999,
+   "realtor_location": "Webster County, IA",
+   "lat": 42.433579,
+   "lng": -94.175831
+  },
+  {
+   "name": "Winnebago County",
+   "fips": "19189",
+   "type": "county",
+   "redfin_region_id": 1000,
+   "realtor_location": "Winnebago County, IA",
+   "lat": 43.378124,
+   "lng": -93.743488
+  },
+  {
+   "name": "Winneshiek County",
+   "fips": "19191",
+   "type": "county",
+   "redfin_region_id": 1001,
+   "realtor_location": "Winneshiek County, IA",
+   "lat": 43.292989,
+   "lng": -91.850788
+  },
+  {
+   "name": "Woodbury County",
+   "fips": "19193",
+   "type": "county",
+   "redfin_region_id": 1002,
+   "realtor_location": "Woodbury County, IA",
+   "lat": 42.39322,
+   "lng": -96.053296
+  },
+  {
+   "name": "Worth County",
+   "fips": "19195",
+   "type": "county",
+   "redfin_region_id": 1003,
+   "realtor_location": "Worth County, IA",
+   "lat": 43.373491,
+   "lng": -93.248533
+  },
+  {
+   "name": "Wright County",
+   "fips": "19197",
+   "type": "county",
+   "redfin_region_id": 1004,
+   "realtor_location": "Wright County, IA",
+   "lat": 42.733007,
+   "lng": -93.734735
+  }
+ ]
+}

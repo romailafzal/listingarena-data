@@ -1,0 +1,267 @@
+{
+ "state": "UT",
+ "name": "Utah",
+ "counties": [
+  {
+   "name": "Beaver County",
+   "fips": "49001",
+   "type": "county",
+   "redfin_region_id": 2894,
+   "realtor_location": "Beaver County, UT",
+   "lat": 38.357535,
+   "lng": -113.238948
+  },
+  {
+   "name": "Box Elder County",
+   "fips": "49003",
+   "type": "county",
+   "redfin_region_id": 2895,
+   "realtor_location": "Box Elder County, UT",
+   "lat": 41.622623,
+   "lng": -113.060252
+  },
+  {
+   "name": "Cache County",
+   "fips": "49005",
+   "type": "county",
+   "redfin_region_id": 2896,
+   "realtor_location": "Cache County, UT",
+   "lat": 41.734117,
+   "lng": -111.745399
+  },
+  {
+   "name": "Carbon County",
+   "fips": "49007",
+   "type": "county",
+   "redfin_region_id": 2897,
+   "realtor_location": "Carbon County, UT",
+   "lat": 39.673284,
+   "lng": -110.588484
+  },
+  {
+   "name": "Daggett County",
+   "fips": "49009",
+   "type": "county",
+   "redfin_region_id": 2898,
+   "realtor_location": "Daggett County, UT",
+   "lat": 40.890099,
+   "lng": -109.505785
+  },
+  {
+   "name": "Davis County",
+   "fips": "49011",
+   "type": "county",
+   "redfin_region_id": 2899,
+   "realtor_location": "Davis County, UT",
+   "lat": 41.037559,
+   "lng": -112.201943
+  },
+  {
+   "name": "Duchesne County",
+   "fips": "49013",
+   "type": "county",
+   "redfin_region_id": 2900,
+   "realtor_location": "Duchesne County, UT",
+   "lat": 40.289393,
+   "lng": -110.429584
+  },
+  {
+   "name": "Emery County",
+   "fips": "49015",
+   "type": "county",
+   "redfin_region_id": 2901,
+   "realtor_location": "Emery County, UT",
+   "lat": 39.009025,
+   "lng": -110.7211
+  },
+  {
+   "name": "Garfield County",
+   "fips": "49017",
+   "type": "county",
+   "redfin_region_id": 2902,
+   "realtor_location": "Garfield County, UT",
+   "lat": 37.831664,
+   "lng": -111.450908
+  },
+  {
+   "name": "Grand County",
+   "fips": "49019",
+   "type": "county",
+   "redfin_region_id": 2903,
+   "realtor_location": "Grand County, UT",
+   "lat": 38.974326,
+   "lng": -109.57345
+  },
+  {
+   "name": "Iron County",
+   "fips": "49021",
+   "type": "county",
+   "redfin_region_id": 2904,
+   "realtor_location": "Iron County, UT",
+   "lat": 37.909304,
+   "lng": -113.30674
+  },
+  {
+   "name": "Juab County",
+   "fips": "49023",
+   "type": "county",
+   "redfin_region_id": 2905,
+   "realtor_location": "Juab County, UT",
+   "lat": 39.71412,
+   "lng": -112.790471
+  },
+  {
+   "name": "Kane County",
+   "fips": "49025",
+   "type": "county",
+   "redfin_region_id": 2906,
+   "realtor_location": "Kane County, UT",
+   "lat": 37.275089,
+   "lng": -111.815329
+  },
+  {
+   "name": "Millard County",
+   "fips": "49027",
+   "type": "county",
+   "redfin_region_id": 2907,
+   "realtor_location": "Millard County, UT",
+   "lat": 38.956744,
+   "lng": -113.133092
+  },
+  {
+   "name": "Morgan County",
+   "fips": "49029",
+   "type": "county",
+   "redfin_region_id": 2908,
+   "realtor_location": "Morgan County, UT",
+   "lat": 41.091027,
+   "lng": -111.577885
+  },
+  {
+   "name": "Piute County",
+   "fips": "49031",
+   "type": "county",
+   "redfin_region_id": 2909,
+   "realtor_location": "Piute County, UT",
+   "lat": 38.335881,
+   "lng": -112.129375
+  },
+  {
+   "name": "Rich County",
+   "fips": "49033",
+   "type": "county",
+   "redfin_region_id": 2910,
+   "realtor_location": "Rich County, UT",
+   "lat": 41.627598,
+   "lng": -111.240227
+  },
+  {
+   "name": "Salt Lake County",
+   "fips": "49035",
+   "type": "county",
+   "redfin_region_id": 2911,
+   "realtor_location": "Salt Lake County, UT",
+   "lat": 40.667883,
+   "lng": -111.92424
+  },
+  {
+   "name": "San Juan County",
+   "fips": "49037",
+   "type": "county",
+   "redfin_region_id": 2912,
+   "realtor_location": "San Juan County, UT",
+   "lat": 37.602633,
+   "lng": -109.791574
+  },
+  {
+   "name": "Sanpete County",
+   "fips": "49039",
+   "type": "county",
+   "redfin_region_id": 2913,
+   "realtor_location": "Sanpete County, UT",
+   "lat": 39.373426,
+   "lng": -111.576933
+  },
+  {
+   "name": "Sevier County",
+   "fips": "49041",
+   "type": "county",
+   "redfin_region_id": 2914,
+   "realtor_location": "Sevier County, UT",
+   "lat": 38.746824,
+   "lng": -111.81193
+  },
+  {
+   "name": "Summit County",
+   "fips": "49043",
+   "type": "county",
+   "redfin_region_id": 2915,
+   "realtor_location": "Summit County, UT",
+   "lat": 40.87206,
+   "lng": -110.968486
+  },
+  {
+   "name": "Tooele County",
+   "fips": "49045",
+   "type": "county",
+   "redfin_region_id": 2916,
+   "realtor_location": "Tooele County, UT",
+   "lat": 40.467753,
+   "lng": -113.123979
+  },
+  {
+   "name": "Uintah County",
+   "fips": "49047",
+   "type": "county",
+   "redfin_region_id": 2917,
+   "realtor_location": "Uintah County, UT",
+   "lat": 40.125887,
+   "lng": -109.517748
+  },
+  {
+   "name": "Utah County",
+   "fips": "49049",
+   "type": "county",
+   "redfin_region_id": 2918,
+   "realtor_location": "Utah County, UT",
+   "lat": 40.120425,
+   "lng": -111.668508
+  },
+  {
+   "name": "Wasatch County",
+   "fips": "49051",
+   "type": "county",
+   "redfin_region_id": 2919,
+   "realtor_location": "Wasatch County, UT",
+   "lat": 40.334884,
+   "lng": -111.161568
+  },
+  {
+   "name": "Washington County",
+   "fips": "49053",
+   "type": "county",
+   "redfin_region_id": 2920,
+   "realtor_location": "Washington County, UT",
+   "lat": 37.262531,
+   "lng": -113.4878
+  },
+  {
+   "name": "Wayne County",
+   "fips": "49055",
+   "type": "county",
+   "redfin_region_id": 2921,
+   "realtor_location": "Wayne County, UT",
+   "lat": 38.25984,
+   "lng": -110.990877
+  },
+  {
+   "name": "Weber County",
+   "fips": "49057",
+   "type": "county",
+   "redfin_region_id": 2922,
+   "realtor_location": "Weber County, UT",
+   "lat": 41.270325,
+   "lng": -111.876883
+  }
+ ]
+}

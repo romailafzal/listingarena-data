@@ -1,0 +1,141 @@
+{
+ "state": "AZ",
+ "name": "Arizona",
+ "counties": [
+  {
+   "name": "Apache County",
+   "fips": "04001",
+   "type": "county",
+   "redfin_region_id": 213,
+   "realtor_location": "Apache County, AZ",
+   "lat": 35.385084,
+   "lng": -109.490172
+  },
+  {
+   "name": "Cochise County",
+   "fips": "04003",
+   "type": "county",
+   "redfin_region_id": 214,
+   "realtor_location": "Cochise County, AZ",
+   "lat": 31.840129,
+   "lng": -109.775163
+  },
+  {
+   "name": "Coconino County",
+   "fips": "04005",
+   "type": "county",
+   "redfin_region_id": 215,
+   "realtor_location": "Coconino County, AZ",
+   "lat": 35.829692,
+   "lng": -111.773728
+  },
+  {
+   "name": "Gila County",
+   "fips": "04007",
+   "type": "county",
+   "redfin_region_id": 216,
+   "realtor_location": "Gila County, AZ",
+   "lat": 33.789618,
+   "lng": -110.81187
+  },
+  {
+   "name": "Graham County",
+   "fips": "04009",
+   "type": "county",
+   "redfin_region_id": 217,
+   "realtor_location": "Graham County, AZ",
+   "lat": 32.931828,
+   "lng": -109.87831
+  },
+  {
+   "name": "Greenlee County",
+   "fips": "04011",
+   "type": "county",
+   "redfin_region_id": 218,
+   "realtor_location": "Greenlee County, AZ",
+   "lat": 33.238872,
+   "lng": -109.242323
+  },
+  {
+   "name": "La Paz County",
+   "fips": "04012",
+   "type": "county",
+   "redfin_region_id": 219,
+   "realtor_location": "La Paz County, AZ",
+   "lat": 33.72761,
+   "lng": -114.038806
+  },
+  {
+   "name": "Maricopa County",
+   "fips": "04013",
+   "type": "county",
+   "redfin_region_id": 220,
+   "realtor_location": "Maricopa County, AZ",
+   "lat": 33.345176,
+   "lng": -112.49893
+  },
+  {
+   "name": "Mohave County",
+   "fips": "04015",
+   "type": "county",
+   "redfin_region_id": 221,
+   "realtor_location": "Mohave County, AZ",
+   "lat": 35.717705,
+   "lng": -113.749689
+  },
+  {
+   "name": "Navajo County",
+   "fips": "04017",
+   "type": "county",
+   "redfin_region_id": 222,
+   "realtor_location": "Navajo County, AZ",
+   "lat": 35.390785,
+   "lng": -110.321025
+  },
+  {
+   "name": "Pima County",
+   "fips": "04019",
+   "type": "county",
+   "redfin_region_id": 223,
+   "realtor_location": "Pima County, AZ",
+   "lat": 32.128038,
+   "lng": -111.783657
+  },
+  {
+   "name": "Pinal County",
+   "fips": "04021",
+   "type": "county",
+   "redfin_region_id": 224,
+   "realtor_location": "Pinal County, AZ",
+   "lat": 32.918521,
+   "lng": -111.36634
+  },
+  {
+   "name": "Santa Cruz County",
+   "fips": "04023",
+   "type": "county",
+   "redfin_region_id": 225,
+   "realtor_location": "Santa Cruz County, AZ",
+   "lat": 31.525733,
+   "lng": -110.845228
+  },
+  {
+   "name": "Yavapai County",
+   "fips": "04025",
+   "type": "county",
+   "redfin_region_id": 226,
+   "realtor_location": "Yavapai County, AZ",
+   "lat": 34.631071,
+   "lng": -112.577225
+  },
+  {
+   "name": "Yuma County",
+   "fips": "04027",
+   "type": "county",
+   "redfin_region_id": 227,
+   "realtor_location": "Yuma County, AZ",
+   "lat": 32.773942,
+   "lng": -113.910905
+  }
+ ]
+}

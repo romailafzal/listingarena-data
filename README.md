@@ -22,7 +22,44 @@ Confirm the production hostname before creating scheduled jobs. Keep the URL in 
 
 Create one connector per provider under `sources/`. Candidate sources to evaluate include the providers mentioned in the project brief: Regrid, RentCast, Inspect, Realtor, and Redfin. Before implementation, record the exact provider, approved API/product, license, rate limits, supported geography, and allowed uses in `docs/providers.md`.
 
-Do not scrape websites or bypass access controls. Use an official API, licensed feed, or written permission. Realtor and Redfin access may be restricted or product-specific, so they must be verified before a connector is built.
+Redfin and Realtor.com are collected from their public website search endpoints by owner decision (terms-of-service risk accepted; see `docs/providers.md`). Never bypass logins, CAPTCHAs or other access controls. Other providers still need an official API, licensed feed, or written permission.
+
+## Pipeline (collect -> normalize -> merge -> load -> publish)
+
+Sibling repos: `../listingarena-orchestrator` (Dagster, :3070) and `../listingarena-monitor` (map dashboard, :8090).
+This repo is an installable package (`listingarena-data`, Python 3.12, uv).
+
+```bash
+~/.local/bin/uv sync                                   # .venv (Python 3.12) + uv.lock
+cp .env.example .env                                   # DATABASE_URL=postgresql://listingarena:listingarena@localhost:5434/listingarena
+docker compose up -d postgres                          # postgres:16 on 127.0.0.1:5434, volume pgdata
+uv run la-migrate                                      # apply db/migrations/*.sql
+uv run la-collect --states TX --counties 48015 --max-pages 8 --run-id my_run     # = python -m jobs.collect
+uv run la-load --run-id my_run                         # Postgres + change tracking
+uv run la-publish --dry-run /tmp/payload.json          # or with LISTINGARENA_API_URL + LISTINGARENA_ADMIN_TOKEN
+uv run pytest -q tests                                 # DB tests use a scratch DB listingarena_test, skip without Postgres
+```
+
+No Docker? `uv run python -m tools.dev_postgres` starts a throwaway Postgres (pgserver wheel) and prints a URL.
+
+- **Collect** (`jobs/collect.py`, `sources/`): bronze `exports/bronze/<src>/<st>/<fips>/<run_id>/<type>_pNNNN.json.gz`,
+  silver parts `exports/silver/<src>/<run_id>/parts/<st>_<fips>_<type>.jsonl`, checkpoints
+  `exports/checkpoints/<run_id>/<src>/<st>/<fips>_<type>.json` (`complete` = all pages fetched and >=95% of the
+  reported total) or `.error.json` (failed/blocked; rerun with the same run id retries). `http_stats.json` per run.
+  Silver records carry `extra` (MLS id, HOA, DOM, agents, AVM ... see `normalization/extras.py`).
+  `python -m tools.renormalize --run-id X` rebuilds silver from bronze.
+- **Match/merge** (`matching/`): `address.py` builds `property_key = zip5|<number> <street core>|<unit>`
+  (unit variants `#304`/`Unit 304`/`Apt 304`, directionals and suffixes dropped, FM/Hwy/TX/SH/IH route spellings
+  unified; geo fallback `geo|lat4|lng4|unit` when there is no street number). `merge.py` makes one canonical
+  listing per (property_key, listing_type) with per-field source precedence (Realtor default; Redfin for
+  lat/lng/sqft/status/sold_date and sold price), `sources`, `source_ids`, `urls`, `extra` per source, `row_hash`.
+- **Load** (`db/load.py`, `db/migrations/001_init.sql`): tables `properties`, `listings` (current state),
+  `listing_events` (new/changed/removed/relisted with before/after), `source_records`, `runs`, `run_county_stats`,
+  `errors`. Per county x type in one transaction: upsert source records; deactivate missing ones only when that
+  source's county fetch was complete (failed/partial fetches never remove); re-merge; diff; events; stats.
+- **Publish** (`publish/app.py`): POSTs changed listings (`row_hash != published_hash`) to listingarena-app
+  `/api/listings` in chunks of `PUBLISH_CHUNK` (max 999) using the app's COLS; canonical `external_id = la:<hash>`;
+  removed listings are sent once with `status = "removed"`.
 
 ## Suggested layout
 
@@ -73,6 +110,7 @@ The pipeline uses three layers:
 - **Bronze:** immutable provider response pages under `exports/bronze/`.
 - **Silver:** one normalized JSONL file per provider under `exports/silver/`.
 - **Gold:** the deduplicated current snapshot under `exports/gold/`, keyed by `provider:source_id`.
+- **CSV exports:** provider folders under `exports/csv/tx/48015/`, each with `sale.csv`, `rent.csv`, and `sold.csv`; `merged/` contains the three category files across all providers and `all_sources.csv` contains the complete combined export.
 
 SQLite state in `exports/state.sqlite3` stores cursors and the last successful update time. The first run uses `--full`; subsequent runs use the saved state for incremental requests.
 

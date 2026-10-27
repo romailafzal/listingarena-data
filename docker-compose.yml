@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: listingarena-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: listingarena
+      POSTGRES_USER: listingarena
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-listingarena}
+    ports:
+      - "127.0.0.1:5434:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U listingarena -d listingarena"]
+      interval: 10s
+      retries: 5
+volumes:
+  pgdata:

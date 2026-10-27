@@ -1,0 +1,699 @@
+{
+ "state": "OK",
+ "name": "Oklahoma",
+ "counties": [
+  {
+   "name": "Adair County",
+   "fips": "40001",
+   "type": "county",
+   "redfin_region_id": 2248,
+   "realtor_location": "Adair County, OK",
+   "lat": 35.898043,
+   "lng": -94.651026
+  },
+  {
+   "name": "Alfalfa County",
+   "fips": "40003",
+   "type": "county",
+   "redfin_region_id": 2249,
+   "realtor_location": "Alfalfa County, OK",
+   "lat": 36.729703,
+   "lng": -98.323445
+  },
+  {
+   "name": "Atoka County",
+   "fips": "40005",
+   "type": "county",
+   "redfin_region_id": 2250,
+   "realtor_location": "Atoka County, OK",
+   "lat": 34.392469,
+   "lng": -96.036558
+  },
+  {
+   "name": "Beaver County",
+   "fips": "40007",
+   "type": "county",
+   "redfin_region_id": 2251,
+   "realtor_location": "Beaver County, OK",
+   "lat": 36.748334,
+   "lng": -100.483056
+  },
+  {
+   "name": "Beckham County",
+   "fips": "40009",
+   "type": "county",
+   "redfin_region_id": 2252,
+   "realtor_location": "Beckham County, OK",
+   "lat": 35.270601,
+   "lng": -99.690057
+  },
+  {
+   "name": "Blaine County",
+   "fips": "40011",
+   "type": "county",
+   "redfin_region_id": 2253,
+   "realtor_location": "Blaine County, OK",
+   "lat": 35.877795,
+   "lng": -98.429031
+  },
+  {
+   "name": "Bryan County",
+   "fips": "40013",
+   "type": "county",
+   "redfin_region_id": 2254,
+   "realtor_location": "Bryan County, OK",
+   "lat": 33.964004,
+   "lng": -96.265135
+  },
+  {
+   "name": "Caddo County",
+   "fips": "40015",
+   "type": "county",
+   "redfin_region_id": 2255,
+   "realtor_location": "Caddo County, OK",
+   "lat": 35.16792,
+   "lng": -98.381045
+  },
+  {
+   "name": "Canadian County",
+   "fips": "40017",
+   "type": "county",
+   "redfin_region_id": 2256,
+   "realtor_location": "Canadian County, OK",
+   "lat": 35.543354,
+   "lng": -97.979889
+  },
+  {
+   "name": "Carter County",
+   "fips": "40019",
+   "type": "county",
+   "redfin_region_id": 2257,
+   "realtor_location": "Carter County, OK",
+   "lat": 34.251848,
+   "lng": -97.287927
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "40021",
+   "type": "county",
+   "redfin_region_id": 2258,
+   "realtor_location": "Cherokee County, OK",
+   "lat": 35.904367,
+   "lng": -94.996796
+  },
+  {
+   "name": "Choctaw County",
+   "fips": "40023",
+   "type": "county",
+   "redfin_region_id": 2259,
+   "realtor_location": "Choctaw County, OK",
+   "lat": 34.027699,
+   "lng": -95.554079
+  },
+  {
+   "name": "Cimarron County",
+   "fips": "40025",
+   "type": "county",
+   "redfin_region_id": 2260,
+   "realtor_location": "Cimarron County, OK",
+   "lat": 36.74839,
+   "lng": -102.517698
+  },
+  {
+   "name": "Cleveland County",
+   "fips": "40027",
+   "type": "county",
+   "redfin_region_id": 2261,
+   "realtor_location": "Cleveland County, OK",
+   "lat": 35.206376,
+   "lng": -97.323088
+  },
+  {
+   "name": "Coal County",
+   "fips": "40029",
+   "type": "county",
+   "redfin_region_id": 2262,
+   "realtor_location": "Coal County, OK",
+   "lat": 34.582861,
+   "lng": -96.288039
+  },
+  {
+   "name": "Comanche County",
+   "fips": "40031",
+   "type": "county",
+   "redfin_region_id": 2263,
+   "realtor_location": "Comanche County, OK",
+   "lat": 34.662625,
+   "lng": -98.476586
+  },
+  {
+   "name": "Cotton County",
+   "fips": "40033",
+   "type": "county",
+   "redfin_region_id": 2264,
+   "realtor_location": "Cotton County, OK",
+   "lat": 34.290676,
+   "lng": -98.373438
+  },
+  {
+   "name": "Craig County",
+   "fips": "40035",
+   "type": "county",
+   "redfin_region_id": 2265,
+   "realtor_location": "Craig County, OK",
+   "lat": 36.76389,
+   "lng": -95.201553
+  },
+  {
+   "name": "Creek County",
+   "fips": "40037",
+   "type": "county",
+   "redfin_region_id": 2266,
+   "realtor_location": "Creek County, OK",
+   "lat": 35.907398,
+   "lng": -96.380177
+  },
+  {
+   "name": "Custer County",
+   "fips": "40039",
+   "type": "county",
+   "redfin_region_id": 2267,
+   "realtor_location": "Custer County, OK",
+   "lat": 35.645601,
+   "lng": -98.997386
+  },
+  {
+   "name": "Delaware County",
+   "fips": "40041",
+   "type": "county",
+   "redfin_region_id": 2268,
+   "realtor_location": "Delaware County, OK",
+   "lat": 36.393437,
+   "lng": -94.808189
+  },
+  {
+   "name": "Dewey County",
+   "fips": "40043",
+   "type": "county",
+   "redfin_region_id": 2269,
+   "realtor_location": "Dewey County, OK",
+   "lat": 35.97796,
+   "lng": -99.014385
+  },
+  {
+   "name": "Ellis County",
+   "fips": "40045",
+   "type": "county",
+   "redfin_region_id": 2270,
+   "realtor_location": "Ellis County, OK",
+   "lat": 36.224258,
+   "lng": -99.750139
+  },
+  {
+   "name": "Garfield County",
+   "fips": "40047",
+   "type": "county",
+   "redfin_region_id": 2271,
+   "realtor_location": "Garfield County, OK",
+   "lat": 36.378132,
+   "lng": -97.788741
+  },
+  {
+   "name": "Garvin County",
+   "fips": "40049",
+   "type": "county",
+   "redfin_region_id": 2272,
+   "realtor_location": "Garvin County, OK",
+   "lat": 34.70935,
+   "lng": -97.312723
+  },
+  {
+   "name": "Grady County",
+   "fips": "40051",
+   "type": "county",
+   "redfin_region_id": 2273,
+   "realtor_location": "Grady County, OK",
+   "lat": 35.021058,
+   "lng": -97.88689
+  },
+  {
+   "name": "Grant County",
+   "fips": "40053",
+   "type": "county",
+   "redfin_region_id": 2274,
+   "realtor_location": "Grant County, OK",
+   "lat": 36.788254,
+   "lng": -97.788151
+  },
+  {
+   "name": "Greer County",
+   "fips": "40055",
+   "type": "county",
+   "redfin_region_id": 2275,
+   "realtor_location": "Greer County, OK",
+   "lat": 34.933853,
+   "lng": -99.552968
+  },
+  {
+   "name": "Harmon County",
+   "fips": "40057",
+   "type": "county",
+   "redfin_region_id": 2276,
+   "realtor_location": "Harmon County, OK",
+   "lat": 34.745971,
+   "lng": -99.844194
+  },
+  {
+   "name": "Harper County",
+   "fips": "40059",
+   "type": "county",
+   "redfin_region_id": 2277,
+   "realtor_location": "Harper County, OK",
+   "lat": 36.80035,
+   "lng": -99.662805
+  },
+  {
+   "name": "Haskell County",
+   "fips": "40061",
+   "type": "county",
+   "redfin_region_id": 2278,
+   "realtor_location": "Haskell County, OK",
+   "lat": 35.232431,
+   "lng": -95.109642
+  },
+  {
+   "name": "Hughes County",
+   "fips": "40063",
+   "type": "county",
+   "redfin_region_id": 2279,
+   "realtor_location": "Hughes County, OK",
+   "lat": 35.052934,
+   "lng": -96.251183
+  },
+  {
+   "name": "Jackson County",
+   "fips": "40065",
+   "type": "county",
+   "redfin_region_id": 2280,
+   "realtor_location": "Jackson County, OK",
+   "lat": 34.594006,
+   "lng": -99.412235
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "40067",
+   "type": "county",
+   "redfin_region_id": 2281,
+   "realtor_location": "Jefferson County, OK",
+   "lat": 34.105082,
+   "lng": -97.83889
+  },
+  {
+   "name": "Johnston County",
+   "fips": "40069",
+   "type": "county",
+   "redfin_region_id": 2282,
+   "realtor_location": "Johnston County, OK",
+   "lat": 34.313455,
+   "lng": -96.654254
+  },
+  {
+   "name": "Kay County",
+   "fips": "40071",
+   "type": "county",
+   "redfin_region_id": 2283,
+   "realtor_location": "Kay County, OK",
+   "lat": 36.814885,
+   "lng": -97.143862
+  },
+  {
+   "name": "Kingfisher County",
+   "fips": "40073",
+   "type": "county",
+   "redfin_region_id": 2284,
+   "realtor_location": "Kingfisher County, OK",
+   "lat": 35.949436,
+   "lng": -97.934557
+  },
+  {
+   "name": "Kiowa County",
+   "fips": "40075",
+   "type": "county",
+   "redfin_region_id": 2285,
+   "realtor_location": "Kiowa County, OK",
+   "lat": 34.921489,
+   "lng": -98.981617
+  },
+  {
+   "name": "Latimer County",
+   "fips": "40077",
+   "type": "county",
+   "redfin_region_id": 2286,
+   "realtor_location": "Latimer County, OK",
+   "lat": 34.875137,
+   "lng": -95.272262
+  },
+  {
+   "name": "Le Flore County",
+   "fips": "40079",
+   "type": "county",
+   "redfin_region_id": 2287,
+   "realtor_location": "Le Flore County, OK",
+   "lat": 34.897356,
+   "lng": -94.695074
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "40081",
+   "type": "county",
+   "redfin_region_id": 2288,
+   "realtor_location": "Lincoln County, OK",
+   "lat": 35.703117,
+   "lng": -96.881392
+  },
+  {
+   "name": "Logan County",
+   "fips": "40083",
+   "type": "county",
+   "redfin_region_id": 2289,
+   "realtor_location": "Logan County, OK",
+   "lat": 35.914277,
+   "lng": -97.450952
+  },
+  {
+   "name": "Love County",
+   "fips": "40085",
+   "type": "county",
+   "redfin_region_id": 2290,
+   "realtor_location": "Love County, OK",
+   "lat": 33.957804,
+   "lng": -97.245093
+  },
+  {
+   "name": "McClain County",
+   "fips": "40087",
+   "type": "county",
+   "redfin_region_id": 2291,
+   "realtor_location": "McClain County, OK",
+   "lat": 35.016436,
+   "lng": -97.449803
+  },
+  {
+   "name": "McCurtain County",
+   "fips": "40089",
+   "type": "county",
+   "redfin_region_id": 2292,
+   "realtor_location": "McCurtain County, OK",
+   "lat": 34.117073,
+   "lng": -94.766086
+  },
+  {
+   "name": "McIntosh County",
+   "fips": "40091",
+   "type": "county",
+   "redfin_region_id": 2293,
+   "realtor_location": "McIntosh County, OK",
+   "lat": 35.369108,
+   "lng": -95.671787
+  },
+  {
+   "name": "Major County",
+   "fips": "40093",
+   "type": "county",
+   "redfin_region_id": 2294,
+   "realtor_location": "Major County, OK",
+   "lat": 36.313119,
+   "lng": -98.542015
+  },
+  {
+   "name": "Marshall County",
+   "fips": "40095",
+   "type": "county",
+   "redfin_region_id": 2295,
+   "realtor_location": "Marshall County, OK",
+   "lat": 34.027007,
+   "lng": -96.770533
+  },
+  {
+   "name": "Mayes County",
+   "fips": "40097",
+   "type": "county",
+   "redfin_region_id": 2296,
+   "realtor_location": "Mayes County, OK",
+   "lat": 36.303804,
+   "lng": -95.235638
+  },
+  {
+   "name": "Murray County",
+   "fips": "40099",
+   "type": "county",
+   "redfin_region_id": 2297,
+   "realtor_location": "Murray County, OK",
+   "lat": 34.485766,
+   "lng": -97.071557
+  },
+  {
+   "name": "Muskogee County",
+   "fips": "40101",
+   "type": "county",
+   "redfin_region_id": 2298,
+   "realtor_location": "Muskogee County, OK",
+   "lat": 35.617551,
+   "lng": -95.383911
+  },
+  {
+   "name": "Noble County",
+   "fips": "40103",
+   "type": "county",
+   "redfin_region_id": 2299,
+   "realtor_location": "Noble County, OK",
+   "lat": 36.384901,
+   "lng": -97.236335
+  },
+  {
+   "name": "Nowata County",
+   "fips": "40105",
+   "type": "county",
+   "redfin_region_id": 2300,
+   "realtor_location": "Nowata County, OK",
+   "lat": 36.789615,
+   "lng": -95.613312
+  },
+  {
+   "name": "Okfuskee County",
+   "fips": "40107",
+   "type": "county",
+   "redfin_region_id": 2301,
+   "realtor_location": "Okfuskee County, OK",
+   "lat": 35.466804,
+   "lng": -96.327762
+  },
+  {
+   "name": "Oklahoma County",
+   "fips": "40109",
+   "type": "county",
+   "redfin_region_id": 2302,
+   "realtor_location": "Oklahoma County, OK",
+   "lat": 35.554611,
+   "lng": -97.409401
+  },
+  {
+   "name": "Okmulgee County",
+   "fips": "40111",
+   "type": "county",
+   "redfin_region_id": 2303,
+   "realtor_location": "Okmulgee County, OK",
+   "lat": 35.6435,
+   "lng": -95.965947
+  },
+  {
+   "name": "Osage County",
+   "fips": "40113",
+   "type": "county",
+   "redfin_region_id": 2304,
+   "realtor_location": "Osage County, OK",
+   "lat": 36.624299,
+   "lng": -96.408112
+  },
+  {
+   "name": "Ottawa County",
+   "fips": "40115",
+   "type": "county",
+   "redfin_region_id": 2305,
+   "realtor_location": "Ottawa County, OK",
+   "lat": 36.835764,
+   "lng": -94.802681
+  },
+  {
+   "name": "Pawnee County",
+   "fips": "40117",
+   "type": "county",
+   "redfin_region_id": 2306,
+   "realtor_location": "Pawnee County, OK",
+   "lat": 36.313704,
+   "lng": -96.696669
+  },
+  {
+   "name": "Payne County",
+   "fips": "40119",
+   "type": "county",
+   "redfin_region_id": 2307,
+   "realtor_location": "Payne County, OK",
+   "lat": 36.079225,
+   "lng": -96.975255
+  },
+  {
+   "name": "Pittsburg County",
+   "fips": "40121",
+   "type": "county",
+   "redfin_region_id": 2308,
+   "realtor_location": "Pittsburg County, OK",
+   "lat": 34.92554,
+   "lng": -95.74813
+  },
+  {
+   "name": "Pontotoc County",
+   "fips": "40123",
+   "type": "county",
+   "redfin_region_id": 2309,
+   "realtor_location": "Pontotoc County, OK",
+   "lat": 34.721415,
+   "lng": -96.69178
+  },
+  {
+   "name": "Pottawatomie County",
+   "fips": "40125",
+   "type": "county",
+   "redfin_region_id": 2310,
+   "realtor_location": "Pottawatomie County, OK",
+   "lat": 35.211391,
+   "lng": -96.957004
+  },
+  {
+   "name": "Pushmataha County",
+   "fips": "40127",
+   "type": "county",
+   "redfin_region_id": 2311,
+   "realtor_location": "Pushmataha County, OK",
+   "lat": 34.377899,
+   "lng": -95.408082
+  },
+  {
+   "name": "Roger Mills County",
+   "fips": "40129",
+   "type": "county",
+   "redfin_region_id": 2312,
+   "realtor_location": "Roger Mills County, OK",
+   "lat": 35.708554,
+   "lng": -99.741572
+  },
+  {
+   "name": "Rogers County",
+   "fips": "40131",
+   "type": "county",
+   "redfin_region_id": 2313,
+   "realtor_location": "Rogers County, OK",
+   "lat": 36.377794,
+   "lng": -95.601383
+  },
+  {
+   "name": "Seminole County",
+   "fips": "40133",
+   "type": "county",
+   "redfin_region_id": 2314,
+   "realtor_location": "Seminole County, OK",
+   "lat": 35.158366,
+   "lng": -96.602857
+  },
+  {
+   "name": "Sequoyah County",
+   "fips": "40135",
+   "type": "county",
+   "redfin_region_id": 2315,
+   "realtor_location": "Sequoyah County, OK",
+   "lat": 35.502435,
+   "lng": -94.750757
+  },
+  {
+   "name": "Stephens County",
+   "fips": "40137",
+   "type": "county",
+   "redfin_region_id": 2316,
+   "realtor_location": "Stephens County, OK",
+   "lat": 34.481361,
+   "lng": -97.855607
+  },
+  {
+   "name": "Texas County",
+   "fips": "40139",
+   "type": "county",
+   "redfin_region_id": 2317,
+   "realtor_location": "Texas County, OK",
+   "lat": 36.746317,
+   "lng": -101.483855
+  },
+  {
+   "name": "Tillman County",
+   "fips": "40141",
+   "type": "county",
+   "redfin_region_id": 2318,
+   "realtor_location": "Tillman County, OK",
+   "lat": 34.371085,
+   "lng": -98.931701
+  },
+  {
+   "name": "Tulsa County",
+   "fips": "40143",
+   "type": "county",
+   "redfin_region_id": 2319,
+   "realtor_location": "Tulsa County, OK",
+   "lat": 36.120318,
+   "lng": -95.941813
+  },
+  {
+   "name": "Wagoner County",
+   "fips": "40145",
+   "type": "county",
+   "redfin_region_id": 2320,
+   "realtor_location": "Wagoner County, OK",
+   "lat": 35.963388,
+   "lng": -95.514201
+  },
+  {
+   "name": "Washington County",
+   "fips": "40147",
+   "type": "county",
+   "redfin_region_id": 2321,
+   "realtor_location": "Washington County, OK",
+   "lat": 36.704403,
+   "lng": -95.906253
+  },
+  {
+   "name": "Washita County",
+   "fips": "40149",
+   "type": "county",
+   "redfin_region_id": 2322,
+   "realtor_location": "Washita County, OK",
+   "lat": 35.289497,
+   "lng": -98.991436
+  },
+  {
+   "name": "Woods County",
+   "fips": "40151",
+   "type": "county",
+   "redfin_region_id": 2323,
+   "realtor_location": "Woods County, OK",
+   "lat": 36.726984,
+   "lng": -98.863649
+  },
+  {
+   "name": "Woodward County",
+   "fips": "40153",
+   "type": "county",
+   "redfin_region_id": 2324,
+   "realtor_location": "Woodward County, OK",
+   "lat": 36.425619,
+   "lng": -99.273661
+  }
+ ]
+}

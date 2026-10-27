@@ -1,0 +1,132 @@
+{
+ "state": "VT",
+ "name": "Vermont",
+ "counties": [
+  {
+   "name": "Addison County",
+   "fips": "50001",
+   "type": "county",
+   "redfin_region_id": 2923,
+   "realtor_location": "Addison County, VT",
+   "lat": 44.031248,
+   "lng": -73.141581
+  },
+  {
+   "name": "Bennington County",
+   "fips": "50003",
+   "type": "county",
+   "redfin_region_id": 2924,
+   "realtor_location": "Bennington County, VT",
+   "lat": 43.035325,
+   "lng": -73.11146
+  },
+  {
+   "name": "Caledonia County",
+   "fips": "50005",
+   "type": "county",
+   "redfin_region_id": 2925,
+   "realtor_location": "Caledonia County, VT",
+   "lat": 44.468791,
+   "lng": -72.112168
+  },
+  {
+   "name": "Chittenden County",
+   "fips": "50007",
+   "type": "county",
+   "redfin_region_id": 2926,
+   "realtor_location": "Chittenden County, VT",
+   "lat": 44.463329,
+   "lng": -73.06941
+  },
+  {
+   "name": "Essex County",
+   "fips": "50009",
+   "type": "county",
+   "redfin_region_id": 2927,
+   "realtor_location": "Essex County, VT",
+   "lat": 44.724021,
+   "lng": -71.732736
+  },
+  {
+   "name": "Franklin County",
+   "fips": "50011",
+   "type": "county",
+   "redfin_region_id": 2928,
+   "realtor_location": "Franklin County, VT",
+   "lat": 44.858964,
+   "lng": -72.909402
+  },
+  {
+   "name": "Grand Isle County",
+   "fips": "50013",
+   "type": "county",
+   "redfin_region_id": 2929,
+   "realtor_location": "Grand Isle County, VT",
+   "lat": 44.795742,
+   "lng": -73.295082
+  },
+  {
+   "name": "Lamoille County",
+   "fips": "50015",
+   "type": "county",
+   "redfin_region_id": 2930,
+   "realtor_location": "Lamoille County, VT",
+   "lat": 44.611192,
+   "lng": -72.632659
+  },
+  {
+   "name": "Orange County",
+   "fips": "50017",
+   "type": "county",
+   "redfin_region_id": 2931,
+   "realtor_location": "Orange County, VT",
+   "lat": 44.003349,
+   "lng": -72.369464
+  },
+  {
+   "name": "Orleans County",
+   "fips": "50019",
+   "type": "county",
+   "redfin_region_id": 2932,
+   "realtor_location": "Orleans County, VT",
+   "lat": 44.828442,
+   "lng": -72.25163
+  },
+  {
+   "name": "Rutland County",
+   "fips": "50021",
+   "type": "county",
+   "redfin_region_id": 2933,
+   "realtor_location": "Rutland County, VT",
+   "lat": 43.580858,
+   "lng": -73.038202
+  },
+  {
+   "name": "Washington County",
+   "fips": "50023",
+   "type": "county",
+   "redfin_region_id": 2934,
+   "realtor_location": "Washington County, VT",
+   "lat": 44.274969,
+   "lng": -72.609444
+  },
+  {
+   "name": "Windham County",
+   "fips": "50025",
+   "type": "county",
+   "redfin_region_id": 2935,
+   "realtor_location": "Windham County, VT",
+   "lat": 42.995335,
+   "lng": -72.721955
+  },
+  {
+   "name": "Windsor County",
+   "fips": "50027",
+   "type": "county",
+   "redfin_region_id": 2936,
+   "realtor_location": "Windsor County, VT",
+   "lat": 43.572448,
+   "lng": -72.598813
+  }
+ ]
+}
