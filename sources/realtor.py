@@ -90,14 +90,18 @@ class RealtorSource(Source):
     def _total(self, location, listing_type, price) -> int:
         return parse_search(self._fetch(build_body(location, listing_type, 0, limit=1, price=price)))[1]
 
-    def _bands(self, location, listing_type, lo=0, hi=None):
+    def _bands(self, location, listing_type, lo=0, hi=None) -> list:
+        """Split (lo, hi) by price until each band has <= MAX_RESULTS; both halves are probed in parallel."""
         total = self._total(location, listing_type, (lo, hi))
         if total <= MAX_RESULTS or (hi is not None and hi - lo < 1):
-            yield (lo, hi)
-            return
+            return [(lo, hi)]
         mid = (lo + hi) / 2 if hi is not None else max(lo * 2, 1_000_000 if listing_type != "rent" else 5_000)
-        yield from self._bands(location, listing_type, lo, mid)
-        yield from self._bands(location, listing_type, mid, hi)
+        halves = [(lo, mid), (mid, hi)]
+        out = []
+        for part in fetch_ordered(lambda b: self._bands(location, listing_type, *b), halves,
+                                  2 if isinstance(self.client.page_parallel, int) and self.client.page_parallel > 1 else 1):
+            out += part
+        return out
 
     def search(self, county: County, listing_type: str, max_pages: int | None = None) -> Iterator[Page]:
         counter = [0]

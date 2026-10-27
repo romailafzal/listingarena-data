@@ -38,6 +38,9 @@ class Progress:
             return
         try:
             with self.lock, self.conn.cursor() as cur:
+                # rows left 'running' by an interrupted earlier invocation of this run/source go back to queued
+                cur.execute("UPDATE run_progress SET status='queued', updated_at=now() WHERE run_id=%s AND source=%s "
+                            "AND status='running'", (self.run_id, rows[0][0]))
                 cur.executemany("""INSERT INTO run_progress (run_id, source, state, county_fips, listing_type, status)
                                    VALUES (%s,%s,%s,%s,%s,'queued') ON CONFLICT DO NOTHING""",
                                 [(self.run_id, *r) for r in rows])
