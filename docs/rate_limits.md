@@ -45,3 +45,26 @@ The production tail was dominated by small counties (1–3 pages), so requests/m
 (Realtor ~3.5 s p50); the 200 cap was never reached and no back-off triggered. Big counties (Harris, Dallas,
 Bexar: 130–200 pages each) completed in a few minutes each with parallel pages + parallel price-band probing.
 Total wall time for Texas collection across all steps ≈ 45 min of fetching; 0 errors, 0 blocks.
+
+## Completeness rule (2026-10-28, `jobs.collect.is_complete`)
+`complete` = every page/band fetched with no error (a failed search writes no checkpoint), not cut by
+`--max-pages`, and **distinct listings ≥ reported_total − max(2, 0.2 %)**.
+- Listings are counted by the source's listing key, not by deduped property. Realtor `home_search.total`
+  counts MLS listings: one home listed on two feeds (e.g. AUTX + CTTX) comes back twice with the same
+  `property_id` and different `listing_id`. The key is `property_id:listing_id`. Silver records are still
+  deduped per property.
+- Proof (Williamson 48491 sale): paging returned 6,707 rows = 6,707 distinct listing keys = reported total, but
+  only 6,269 distinct property_ids. An exhaustive pass with 19 narrow price bands (each ≤ 1k, most 1–5 pages)
+  plus a zero band found 6,268 ids. That is 0 not already paged; the 1 paged-only id has a null list_price,
+  which price filters drop. Even single-page bands show the same duplicates (58 rows / 56 ids), so the
+  duplicates come from the data and do not push listings out of the paging.
+- Redfin rentals: `numMatchedHomes` includes 1–4 % of homes the API never returns. Pages come back
+  short (348/350). Page size 100 vs 350 and `ord=price-asc` give the identical id set (Williamson 2,265 of
+  2,352). Redfin has no exact total (`RedfinSource.total_is_exact`), so complete = paged to an empty page.
+  Redfin gis (sale/sold) is not truncated: Harris sale ended naturally at 77×350 + 310 = 27,260 with 0
+  cross-page repeats.
+- Realtor sold searches over 10k: the old `sold_price` band filter silently returns 0. Harris sold was stuck
+  at 10,000 / 11,941. Sold is now split by `sold_date` windows (each ≤ 10k); Harris sold now has 11,941 / 11,941.
+- `run_county_stats.reported_total / unique_listings / unique_records` (migration 004) store the evidence.
+  `python -m tools.recheck_completeness RUN_ID [--states ..] [--apply]` re-evaluates checkpoints from bronze.
+  `--apply` moves partial checkpoints aside, so re-running `jobs.collect` with the same run id refetches only those.
