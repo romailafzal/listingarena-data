@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 APP_COLS = ["listing_type", "external_id", "address", "city", "state", "zip", "property_type", "beds", "baths",
             "sqft", "lot_sqft", "year_built", "price", "list_price", "sold_date", "listed_date", "available_from",
             "deposit", "lat", "lng", "description", "photo_url", "status"]
-META_COLS = ["source", "source_id", "county_fips", "url", "fetched_at"]
+META_COLS = ["source", "source_id", "county_fips", "url", "fetched_at", "extra"]
 SILVER_FIELDS = APP_COLS + META_COLS
 
 

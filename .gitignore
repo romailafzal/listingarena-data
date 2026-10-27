@@ -20,3 +20,4 @@ exports/bronze/
 exports/silver/
 exports/checkpoints/
 exports/state.sqlite3*
+exports/pgdata/

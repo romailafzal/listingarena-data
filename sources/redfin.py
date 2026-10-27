@@ -5,6 +5,7 @@ import os
 from typing import Iterator
 from urllib.parse import quote, urlencode
 
+from normalization.extras import REDFIN_GIS, REDFIN_RENT, pick
 from normalization.schema import blank_record, iso_date, ms_to_date, num
 from sources.base import County, Page, Source
 from sources.http import SourceClient
@@ -109,6 +110,13 @@ class RedfinSource(Source):
         return normalize_rental(raw) if listing_type == "rent" else normalize_gis(raw, listing_type)
 
 
+def _join_unit(street, unit):
+    """Redfin sometimes already includes the unit in streetLine."""
+    if street and unit and street.lower().rstrip().endswith(str(unit).lower().strip()):
+        return street
+    return " ".join(x for x in (street, unit) if x) or None
+
+
 def normalize_gis(h: dict, listing_type: str) -> dict:
     ll = _v(h.get("latLong")) or {}
     rec = blank_record()
@@ -116,7 +124,7 @@ def normalize_gis(h: dict, listing_type: str) -> dict:
     rec.update({
         "listing_type": listing_type,
         "external_id": f"redfin:{h.get('propertyId')}",
-        "address": " ".join(x for x in (_v(h.get("streetLine")), _v(h.get("unitNumber"))) if x) or None,
+        "address": _join_unit(_v(h.get("streetLine")), _v(h.get("unitNumber"))),
         "city": h.get("city"), "state": h.get("state"), "zip": h.get("zip") or _v(h.get("postalCode")),
         "property_type": PROPERTY_TYPES.get(h.get("propertyType"), h.get("propertyType")),
         "beds": num(h.get("beds")), "baths": num(h.get("baths")), "sqft": num(h.get("sqFt")),
@@ -131,6 +139,7 @@ def normalize_gis(h: dict, listing_type: str) -> dict:
         "status": h.get("mlsStatus"),
         "source": "redfin", "source_id": str(h.get("propertyId")),
         "url": "https://www.redfin.com" + h["url"] if h.get("url") else None,
+        "extra": pick(h, REDFIN_GIS),
     })
     return rec
 
@@ -145,7 +154,7 @@ def normalize_rental(home: dict) -> dict:
     rec.update({
         "listing_type": "rent",
         "external_id": f"redfin:{d.get('propertyId')}",
-        "address": " ".join(x for x in (a.get("formattedStreetLine"), a.get("unitNumber")) if x) or None,
+        "address": _join_unit(a.get("formattedStreetLine"), a.get("unitNumber")),
         "city": a.get("city"), "state": a.get("state"), "zip": a.get("zip"),
         "property_type": PROPERTY_TYPES.get(d.get("propertyType"), d.get("propertyType")),
         "beds": num(rng("bedRange")), "baths": num(rng("bathRange")), "sqft": num(rng("sqftRange")),
@@ -159,5 +168,6 @@ def normalize_rental(home: dict) -> dict:
         "status": "for_rent",  # rentalExtension.status is a numeric code
         "source": "redfin", "source_id": str(d.get("propertyId")),
         "url": "https://www.redfin.com" + d["url"] if d.get("url") else None,
+        "extra": pick(home, REDFIN_RENT),
     })
     return rec

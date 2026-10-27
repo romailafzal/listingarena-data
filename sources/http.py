@@ -66,7 +66,7 @@ class SourceClient:
         self._local = threading.local()
         proxy = os.environ.get(f"{name.upper()}_PROXY") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
         self.proxies = {"http": proxy, "https": proxy} if proxy else None
-        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0}
+        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0}
 
     def _session(self) -> requests.Session:
         s = getattr(self._local, "session", None)
@@ -89,12 +89,14 @@ class SourceClient:
             h = browser_headers()
             h.update(headers or {})
             self.stats["requests"] += 1
+            t0 = time.monotonic()
             try:
                 r = self._session().request(method, url, headers=h, proxies=self.proxies, timeout=self.timeout, **kw)
             except requests.RequestException as e:
                 last, blocked = f"{type(e).__name__}: {e}", False
                 self.stats["errors"] += 1
             else:
+                self.stats["latency_s"] = round(self.stats["latency_s"] + time.monotonic() - t0, 3)
                 if r.status_code not in RETRY_STATUS:
                     return r
                 blocked = r.status_code in (403, 429)

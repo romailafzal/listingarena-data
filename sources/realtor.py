@@ -6,6 +6,7 @@ from datetime import date, timedelta
 from pathlib import Path
 from typing import Iterator
 
+from normalization.extras import realtor_extra
 from normalization.schema import blank_record, iso_date, num
 from sources.base import County, Page, Source
 from sources.http import SourceClient
@@ -158,5 +159,6 @@ class RealtorSource(Source):
             "status": r.get("status"),
             "source": self.name, "source_id": str(r.get("property_id")),
             "url": r.get("href") or (f"https://www.realtor.com/realestateandhomes-detail/{r['permalink']}" if r.get("permalink") else None),
+            "extra": realtor_extra(r),
         })
         return rec

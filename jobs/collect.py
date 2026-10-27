@@ -89,10 +89,19 @@ class Collector:
         part.write_text("".join(json.dumps(r) + "\n" for r in rows))
         res = {"source": source.name, "state": c.state, "county": c.name, "fips": c.fips, "type": t,
                "pages": pages, "records": len(rows), "reported_total": total,
-               "complete": self.max_pages is None, "seconds": round(time.time() - started, 1)}
+               "complete": self.max_pages is None or pages < self.max_pages, "seconds": round(time.time() - started, 1)}
         cp.parent.mkdir(parents=True, exist_ok=True)
         cp.write_text(json.dumps(res))
+        cp.with_suffix(".error.json").unlink(missing_ok=True)
         return res
+
+    def record_error(self, src: str, c: County, t: str, e: Exception, blocked: bool) -> None:
+        """Failed county fetch: no checkpoint (so a rerun retries) but an error marker the loader reads."""
+        p = self.checkpoint(src, c, t).with_suffix(".error.json")
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps({"source": src, "state": c.state, "fips": c.fips, "type": t, "blocked": blocked,
+                                 "error": f"{type(e).__name__}: {e}"[:2000],
+                                 "at": datetime.now(timezone.utc).isoformat()}))
 
     def assemble(self, src: str) -> Path:
         parts = sorted((self.out / "silver" / src / self.run_id / "parts").glob("*.jsonl"))
@@ -143,15 +152,24 @@ def main(argv=None) -> int:
                 r = f.result()
                 print(f"{'resumed ' if r.get('resumed') else ''}{s.name:8} {c.state} {c.fips} {c.name:22} {t:5} "
                       f"pages={r['pages']} records={r['records']} total={r['reported_total']}", flush=True)
-            except BlockedError as e:
-                failures += 1
-                print(f"BLOCKED {s.name} {c.fips} {t}: {e}", flush=True)
             except Exception as e:  # noqa: BLE001 - keep other counties going; checkpoint not written
                 failures += 1
-                print(f"FAILED {s.name} {c.fips} {t}: {e}", flush=True)
-                traceback.print_exc()
+                blocked = isinstance(e, BlockedError)
+                print(f"{'BLOCKED' if blocked else 'FAILED'} {s.name} {c.fips} {t}: {e}", flush=True)
+                if not blocked:
+                    traceback.print_exc()
+                col.record_error(s.name, c, t, e, blocked)
+    summary = {}
     for n, s in sources.items():
         print(f"{n}: silver -> {col.assemble(n)}; http {s.client.stats}", flush=True)
+        summary[n] = dict(s.client.stats)
+    sp = Path(a.out) / "checkpoints" / a.run_id / "http_stats.json"
+    sp.parent.mkdir(parents=True, exist_ok=True)
+    prev = json.loads(sp.read_text()) if sp.exists() else {}
+    for n, st in summary.items():  # accumulate across resumed invocations
+        for k, v in st.items():
+            prev.setdefault(n, {})[k] = round(prev.get(n, {}).get(k, 0) + v, 3)
+    sp.write_text(json.dumps(prev))
     return 1 if failures else 0
 
 
