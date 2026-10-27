@@ -81,6 +81,9 @@ class Collector:
 
     def run_one(self, source: Source, c: County, t: str) -> dict:
         cp = self.checkpoint(source.name, c, t)
+        if not cp.exists():
+            from jobs.memguard import wait_for_memory
+            wait_for_memory(lambda m: print(m, flush=True), f"{source.name} county task")
         if cp.exists():
             res = json.loads(cp.read_text()); res["resumed"] = True
             if self.progress:

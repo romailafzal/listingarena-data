@@ -39,7 +39,15 @@ class Unit:
     listing_type: str
     fetched: dict = field(default_factory=dict)    # source -> checkpoint result
     failed: dict = field(default_factory=dict)     # source -> error marker
-    rows: dict = field(default_factory=dict)       # source -> [silver records]
+    rows: dict = field(default_factory=dict)       # source -> [silver records]; filled only while loading
+    parts: dict = field(default_factory=dict)      # source -> silver part path (read lazily, one unit at a time)
+
+    def read_rows(self) -> None:
+        for src, part in self.parts.items():
+            self.rows[src] = ([json.loads(l) for l in part.open() if l.strip()] if part.exists() else [])
+
+    def release(self) -> None:
+        self.rows = {}
 
 
 def discover(exports: Path, run_id: str, states: set[str] | None = None, fips: set[str] | None = None) -> list[Unit]:
@@ -59,7 +67,7 @@ def discover(exports: Path, run_id: str, states: set[str] | None = None, fips: s
         else:
             u.fetched[src] = info
             part = exports / "silver" / src / run_id / "parts" / f"{st.lower()}_{cfips}_{t}.jsonl"
-            u.rows[src] = [json.loads(l) for l in part.read_text().splitlines() if l.strip()] if part.exists() else []
+            u.parts[src] = part
     for u in units.values():  # a later success supersedes an error marker
         for s in list(u.failed):
             if s in u.fetched:
@@ -229,8 +237,12 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
 def load_run(conn, exports: Path, run_id: str, states=None, fips=None, trigger="cli", log=print) -> dict:
     start_run(conn, run_id, trigger, states)
     totals = defaultdict(int)
-    for u in discover(exports, run_id, states, fips):
+    from jobs.memguard import rss_mb, wait_for_memory
+    units = discover(exports, run_id, states, fips)
+    for i, u in enumerate(units):
+        wait_for_memory(log, "load unit")
         try:
+            u.read_rows()
             r = load_unit(conn, run_id, u)
         except Exception as e:  # noqa: BLE001 - record and continue with the next county
             conn.rollback()
@@ -240,6 +252,10 @@ def load_run(conn, exports: Path, run_id: str, states=None, fips=None, trigger="
             log(f"LOAD FAILED {u.fips} {u.listing_type}: {e}")
             totals["load_errors"] += 1
             continue
+        finally:
+            u.release()
+        if i % 100 == 0:
+            log(f"load: unit {i + 1}/{len(units)} rss {rss_mb():.0f} MB")
         m = r["merged"]
         log(f"{u.state} {u.fips} {u.listing_type:5} " + " ".join(f"{s}={v.get('fetched', 0)}" for s, v in r["sources"].items())
             + f" -> listings={m['active']} multi={m['multi_source']} new={m['new']} changed={m['changed']} "
