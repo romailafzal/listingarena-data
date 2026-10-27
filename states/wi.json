@@ -1,0 +1,654 @@
+{
+ "state": "WI",
+ "name": "Wisconsin",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "55001",
+   "type": "county",
+   "redfin_region_id": 3163,
+   "realtor_location": "Adams County, WI",
+   "lat": 43.973757,
+   "lng": -89.767228
+  },
+  {
+   "name": "Ashland County",
+   "fips": "55003",
+   "type": "county",
+   "redfin_region_id": 3164,
+   "realtor_location": "Ashland County, WI",
+   "lat": 46.544424,
+   "lng": -90.679691
+  },
+  {
+   "name": "Barron County",
+   "fips": "55005",
+   "type": "county",
+   "redfin_region_id": 3165,
+   "realtor_location": "Barron County, WI",
+   "lat": 45.437192,
+   "lng": -91.852892
+  },
+  {
+   "name": "Bayfield County",
+   "fips": "55007",
+   "type": "county",
+   "redfin_region_id": 3166,
+   "realtor_location": "Bayfield County, WI",
+   "lat": 46.634199,
+   "lng": -91.177282
+  },
+  {
+   "name": "Brown County",
+   "fips": "55009",
+   "type": "county",
+   "redfin_region_id": 3167,
+   "realtor_location": "Brown County, WI",
+   "lat": 44.474024,
+   "lng": -87.99613
+  },
+  {
+   "name": "Buffalo County",
+   "fips": "55011",
+   "type": "county",
+   "redfin_region_id": 3168,
+   "realtor_location": "Buffalo County, WI",
+   "lat": 44.385633,
+   "lng": -91.761294
+  },
+  {
+   "name": "Burnett County",
+   "fips": "55013",
+   "type": "county",
+   "redfin_region_id": 3169,
+   "realtor_location": "Burnett County, WI",
+   "lat": 45.866897,
+   "lng": -92.37573
+  },
+  {
+   "name": "Calumet County",
+   "fips": "55015",
+   "type": "county",
+   "redfin_region_id": 3170,
+   "realtor_location": "Calumet County, WI",
+   "lat": 44.07841,
+   "lng": -88.212132
+  },
+  {
+   "name": "Chippewa County",
+   "fips": "55017",
+   "type": "county",
+   "redfin_region_id": 3171,
+   "realtor_location": "Chippewa County, WI",
+   "lat": 45.069092,
+   "lng": -91.283505
+  },
+  {
+   "name": "Clark County",
+   "fips": "55019",
+   "type": "county",
+   "redfin_region_id": 3172,
+   "realtor_location": "Clark County, WI",
+   "lat": 44.739346,
+   "lng": -90.609953
+  },
+  {
+   "name": "Columbia County",
+   "fips": "55021",
+   "type": "county",
+   "redfin_region_id": 3173,
+   "realtor_location": "Columbia County, WI",
+   "lat": 43.471882,
+   "lng": -89.330472
+  },
+  {
+   "name": "Crawford County",
+   "fips": "55023",
+   "type": "county",
+   "redfin_region_id": 3174,
+   "realtor_location": "Crawford County, WI",
+   "lat": 43.242768,
+   "lng": -90.935185
+  },
+  {
+   "name": "Dane County",
+   "fips": "55025",
+   "type": "county",
+   "redfin_region_id": 3175,
+   "realtor_location": "Dane County, WI",
+   "lat": 43.067468,
+   "lng": -89.417852
+  },
+  {
+   "name": "Dodge County",
+   "fips": "55027",
+   "type": "county",
+   "redfin_region_id": 3176,
+   "realtor_location": "Dodge County, WI",
+   "lat": 43.429628,
+   "lng": -88.701939
+  },
+  {
+   "name": "Door County",
+   "fips": "55029",
+   "type": "county",
+   "redfin_region_id": 3177,
+   "realtor_location": "Door County, WI",
+   "lat": 45.093417,
+   "lng": -87.048683
+  },
+  {
+   "name": "Douglas County",
+   "fips": "55031",
+   "type": "county",
+   "redfin_region_id": 3178,
+   "realtor_location": "Douglas County, WI",
+   "lat": 46.463218,
+   "lng": -91.892477
+  },
+  {
+   "name": "Dunn County",
+   "fips": "55033",
+   "type": "county",
+   "redfin_region_id": 3179,
+   "realtor_location": "Dunn County, WI",
+   "lat": 44.947751,
+   "lng": -91.897645
+  },
+  {
+   "name": "Eau Claire County",
+   "fips": "55035",
+   "type": "county",
+   "redfin_region_id": 3180,
+   "realtor_location": "Eau Claire County, WI",
+   "lat": 44.726355,
+   "lng": -91.286414
+  },
+  {
+   "name": "Florence County",
+   "fips": "55037",
+   "type": "county",
+   "redfin_region_id": 3181,
+   "realtor_location": "Florence County, WI",
+   "lat": 45.871828,
+   "lng": -88.406988
+  },
+  {
+   "name": "Fond du Lac County",
+   "fips": "55039",
+   "type": "county",
+   "redfin_region_id": 3182,
+   "realtor_location": "Fond du Lac County, WI",
+   "lat": 43.754722,
+   "lng": -88.493284
+  },
+  {
+   "name": "Forest County",
+   "fips": "55041",
+   "type": "county",
+   "redfin_region_id": 3183,
+   "realtor_location": "Forest County, WI",
+   "lat": 45.666881,
+   "lng": -88.773326
+  },
+  {
+   "name": "Grant County",
+   "fips": "55043",
+   "type": "county",
+   "redfin_region_id": 3184,
+   "realtor_location": "Grant County, WI",
+   "lat": 42.870028,
+   "lng": -90.694229
+  },
+  {
+   "name": "Green County",
+   "fips": "55045",
+   "type": "county",
+   "redfin_region_id": 3185,
+   "realtor_location": "Green County, WI",
+   "lat": 42.675522,
+   "lng": -89.605074
+  },
+  {
+   "name": "Green Lake County",
+   "fips": "55047",
+   "type": "county",
+   "redfin_region_id": 3186,
+   "realtor_location": "Green Lake County, WI",
+   "lat": 43.780247,
+   "lng": -88.97038
+  },
+  {
+   "name": "Iowa County",
+   "fips": "55049",
+   "type": "county",
+   "redfin_region_id": 3187,
+   "realtor_location": "Iowa County, WI",
+   "lat": 43.001021,
+   "lng": -90.133691
+  },
+  {
+   "name": "Iron County",
+   "fips": "55051",
+   "type": "county",
+   "redfin_region_id": 3188,
+   "realtor_location": "Iron County, WI",
+   "lat": 46.32655,
+   "lng": -90.261298
+  },
+  {
+   "name": "Jackson County",
+   "fips": "55053",
+   "type": "county",
+   "redfin_region_id": 3189,
+   "realtor_location": "Jackson County, WI",
+   "lat": 44.32459,
+   "lng": -90.79951
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "55055",
+   "type": "county",
+   "redfin_region_id": 3190,
+   "realtor_location": "Jefferson County, WI",
+   "lat": 43.013804,
+   "lng": -88.773985
+  },
+  {
+   "name": "Juneau County",
+   "fips": "55057",
+   "type": "county",
+   "redfin_region_id": 3191,
+   "realtor_location": "Juneau County, WI",
+   "lat": 43.932836,
+   "lng": -90.113984
+  },
+  {
+   "name": "Kenosha County",
+   "fips": "55059",
+   "type": "county",
+   "redfin_region_id": 3192,
+   "realtor_location": "Kenosha County, WI",
+   "lat": 42.585882,
+   "lng": -87.876398
+  },
+  {
+   "name": "Kewaunee County",
+   "fips": "55061",
+   "type": "county",
+   "redfin_region_id": 3193,
+   "realtor_location": "Kewaunee County, WI",
+   "lat": 44.605677,
+   "lng": -87.448008
+  },
+  {
+   "name": "La Crosse County",
+   "fips": "55063",
+   "type": "county",
+   "redfin_region_id": 3194,
+   "realtor_location": "La Crosse County, WI",
+   "lat": 43.908222,
+   "lng": -91.111758
+  },
+  {
+   "name": "Lafayette County",
+   "fips": "55065",
+   "type": "county",
+   "redfin_region_id": 3195,
+   "realtor_location": "Lafayette County, WI",
+   "lat": 42.655578,
+   "lng": -90.130292
+  },
+  {
+   "name": "Langlade County",
+   "fips": "55067",
+   "type": "county",
+   "redfin_region_id": 3196,
+   "realtor_location": "Langlade County, WI",
+   "lat": 45.254863,
+   "lng": -89.06707
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "55069",
+   "type": "county",
+   "redfin_region_id": 3197,
+   "realtor_location": "Lincoln County, WI",
+   "lat": 45.333148,
+   "lng": -89.73224
+  },
+  {
+   "name": "Manitowoc County",
+   "fips": "55071",
+   "type": "county",
+   "redfin_region_id": 3198,
+   "realtor_location": "Manitowoc County, WI",
+   "lat": 44.156137,
+   "lng": -87.577352
+  },
+  {
+   "name": "Marathon County",
+   "fips": "55073",
+   "type": "county",
+   "redfin_region_id": 3199,
+   "realtor_location": "Marathon County, WI",
+   "lat": 44.898036,
+   "lng": -89.757823
+  },
+  {
+   "name": "Marinette County",
+   "fips": "55075",
+   "type": "county",
+   "redfin_region_id": 3200,
+   "realtor_location": "Marinette County, WI",
+   "lat": 45.346899,
+   "lng": -87.991198
+  },
+  {
+   "name": "Marquette County",
+   "fips": "55077",
+   "type": "county",
+   "redfin_region_id": 3201,
+   "realtor_location": "Marquette County, WI",
+   "lat": 43.826053,
+   "lng": -89.409095
+  },
+  {
+   "name": "Menominee County",
+   "fips": "55078",
+   "type": "county",
+   "redfin_region_id": 3202,
+   "realtor_location": "Menominee County, WI",
+   "lat": 44.991304,
+   "lng": -88.669251
+  },
+  {
+   "name": "Milwaukee County",
+   "fips": "55079",
+   "type": "county",
+   "redfin_region_id": 3203,
+   "realtor_location": "Milwaukee County, WI",
+   "lat": 42.912643,
+   "lng": -87.862312
+  },
+  {
+   "name": "Monroe County",
+   "fips": "55081",
+   "type": "county",
+   "redfin_region_id": 3204,
+   "realtor_location": "Monroe County, WI",
+   "lat": 43.945175,
+   "lng": -90.619969
+  },
+  {
+   "name": "Oconto County",
+   "fips": "55083",
+   "type": "county",
+   "redfin_region_id": 3205,
+   "realtor_location": "Oconto County, WI",
+   "lat": 44.996575,
+   "lng": -88.206516
+  },
+  {
+   "name": "Oneida County",
+   "fips": "55085",
+   "type": "county",
+   "redfin_region_id": 3206,
+   "realtor_location": "Oneida County, WI",
+   "lat": 45.716176,
+   "lng": -89.534533
+  },
+  {
+   "name": "Outagamie County",
+   "fips": "55087",
+   "type": "county",
+   "redfin_region_id": 3207,
+   "realtor_location": "Outagamie County, WI",
+   "lat": 44.418226,
+   "lng": -88.464988
+  },
+  {
+   "name": "Ozaukee County",
+   "fips": "55089",
+   "type": "county",
+   "redfin_region_id": 3208,
+   "realtor_location": "Ozaukee County, WI",
+   "lat": 43.501845,
+   "lng": -87.847567
+  },
+  {
+   "name": "Pepin County",
+   "fips": "55091",
+   "type": "county",
+   "redfin_region_id": 3209,
+   "realtor_location": "Pepin County, WI",
+   "lat": 44.627436,
+   "lng": -91.83489
+  },
+  {
+   "name": "Pierce County",
+   "fips": "55093",
+   "type": "county",
+   "redfin_region_id": 3210,
+   "realtor_location": "Pierce County, WI",
+   "lat": 44.725336,
+   "lng": -92.426279
+  },
+  {
+   "name": "Polk County",
+   "fips": "55095",
+   "type": "county",
+   "redfin_region_id": 3211,
+   "realtor_location": "Polk County, WI",
+   "lat": 45.462041,
+   "lng": -92.447066
+  },
+  {
+   "name": "Portage County",
+   "fips": "55097",
+   "type": "county",
+   "redfin_region_id": 3212,
+   "realtor_location": "Portage County, WI",
+   "lat": 44.476246,
+   "lng": -89.49807
+  },
+  {
+   "name": "Price County",
+   "fips": "55099",
+   "type": "county",
+   "redfin_region_id": 3213,
+   "realtor_location": "Price County, WI",
+   "lat": 45.679072,
+   "lng": -90.35965
+  },
+  {
+   "name": "Racine County",
+   "fips": "55101",
+   "type": "county",
+   "redfin_region_id": 3214,
+   "realtor_location": "Racine County, WI",
+   "lat": 42.780392,
+   "lng": -87.771599
+  },
+  {
+   "name": "Richland County",
+   "fips": "55103",
+   "type": "county",
+   "redfin_region_id": 3215,
+   "realtor_location": "Richland County, WI",
+   "lat": 43.376199,
+   "lng": -90.435693
+  },
+  {
+   "name": "Rock County",
+   "fips": "55105",
+   "type": "county",
+   "redfin_region_id": 3216,
+   "realtor_location": "Rock County, WI",
+   "lat": 42.66988,
+   "lng": -89.075284
+  },
+  {
+   "name": "Rusk County",
+   "fips": "55107",
+   "type": "county",
+   "redfin_region_id": 3217,
+   "realtor_location": "Rusk County, WI",
+   "lat": 45.472734,
+   "lng": -91.136745
+  },
+  {
+   "name": "St. Croix County",
+   "fips": "55109",
+   "type": "county",
+   "redfin_region_id": 3218,
+   "realtor_location": "St. Croix County, WI",
+   "lat": 45.028959,
+   "lng": -92.447284
+  },
+  {
+   "name": "Sauk County",
+   "fips": "55111",
+   "type": "county",
+   "redfin_region_id": 3219,
+   "realtor_location": "Sauk County, WI",
+   "lat": 43.428001,
+   "lng": -89.943318
+  },
+  {
+   "name": "Sawyer County",
+   "fips": "55113",
+   "type": "county",
+   "redfin_region_id": 3220,
+   "realtor_location": "Sawyer County, WI",
+   "lat": 45.864911,
+   "lng": -91.147133
+  },
+  {
+   "name": "Shawano County",
+   "fips": "55115",
+   "type": "county",
+   "redfin_region_id": 3221,
+   "realtor_location": "Shawano County, WI",
+   "lat": 44.789641,
+   "lng": -88.755813
+  },
+  {
+   "name": "Sheboygan County",
+   "fips": "55117",
+   "type": "county",
+   "redfin_region_id": 3222,
+   "realtor_location": "Sheboygan County, WI",
+   "lat": 43.741232,
+   "lng": -87.731516
+  },
+  {
+   "name": "Taylor County",
+   "fips": "55119",
+   "type": "county",
+   "redfin_region_id": 3223,
+   "realtor_location": "Taylor County, WI",
+   "lat": 45.211656,
+   "lng": -90.504853
+  },
+  {
+   "name": "Trempealeau County",
+   "fips": "55121",
+   "type": "county",
+   "redfin_region_id": 3224,
+   "realtor_location": "Trempealeau County, WI",
+   "lat": 44.30305,
+   "lng": -91.358867
+  },
+  {
+   "name": "Vernon County",
+   "fips": "55123",
+   "type": "county",
+   "redfin_region_id": 3225,
+   "realtor_location": "Vernon County, WI",
+   "lat": 43.599366,
+   "lng": -90.821983
+  },
+  {
+   "name": "Vilas County",
+   "fips": "55125",
+   "type": "county",
+   "redfin_region_id": 3226,
+   "realtor_location": "Vilas County, WI",
+   "lat": 46.049848,
+   "lng": -89.501254
+  },
+  {
+   "name": "Walworth County",
+   "fips": "55127",
+   "type": "county",
+   "redfin_region_id": 3227,
+   "realtor_location": "Walworth County, WI",
+   "lat": 42.66811,
+   "lng": -88.541731
+  },
+  {
+   "name": "Washburn County",
+   "fips": "55129",
+   "type": "county",
+   "redfin_region_id": 3228,
+   "realtor_location": "Washburn County, WI",
+   "lat": 45.892489,
+   "lng": -91.796422
+  },
+  {
+   "name": "Washington County",
+   "fips": "55131",
+   "type": "county",
+   "redfin_region_id": 3229,
+   "realtor_location": "Washington County, WI",
+   "lat": 43.391156,
+   "lng": -88.232917
+  },
+  {
+   "name": "Waukesha County",
+   "fips": "55133",
+   "type": "county",
+   "redfin_region_id": 3230,
+   "realtor_location": "Waukesha County, WI",
+   "lat": 43.018368,
+   "lng": -88.30424
+  },
+  {
+   "name": "Waupaca County",
+   "fips": "55135",
+   "type": "county",
+   "redfin_region_id": 3231,
+   "realtor_location": "Waupaca County, WI",
+   "lat": 44.478004,
+   "lng": -88.967005
+  },
+  {
+   "name": "Waushara County",
+   "fips": "55137",
+   "type": "county",
+   "redfin_region_id": 3232,
+   "realtor_location": "Waushara County, WI",
+   "lat": 44.112823,
+   "lng": -89.239786
+  },
+  {
+   "name": "Winnebago County",
+   "fips": "55139",
+   "type": "county",
+   "redfin_region_id": 3233,
+   "realtor_location": "Winnebago County, WI",
+   "lat": 44.085707,
+   "lng": -88.668149
+  },
+  {
+   "name": "Wood County",
+   "fips": "55141",
+   "type": "county",
+   "redfin_region_id": 3234,
+   "realtor_location": "Wood County, WI",
+   "lat": 44.461413,
+   "lng": -90.038825
+  }
+ ]
+}

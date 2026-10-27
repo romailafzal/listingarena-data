@@ -1,0 +1,2798 @@
+{
+ "data": {
+  "home_search": {
+   "count": 151,
+   "total": 151,
+   "results": [
+    {
+     "property_id": "9382113865",
+     "listing_id": "2998995832",
+     "plan_id": null,
+     "status": "sold",
+     "list_price": 1999900,
+     "list_price_min": null,
+     "list_price_max": null,
+     "price_reduced_amount": null,
+     "list_date": "2026-07-29T13:12:23.000000Z",
+     "last_update_date": "2026-10-27T20:08:26Z",
+     "last_status_change_date": "2026-10-27T20:09:50Z",
+     "last_sold_date": "2026-10-26",
+     "last_sold_price": null,
+     "last_price_change_date": null,
+     "last_price_change_amount": null,
+     "href": "https://www.realtor.com/realestateandhomes-detail/11182-FM-1094-Rd_Cat-Spring_TX_78933_M93821-13865",
+     "permalink": "11182-FM-1094-Rd_Cat-Spring_TX_78933_M93821-13865",
+     "photo_count": 50,
+     "matterport": false,
+     "tags": [
+      "carport",
+      "central_air",
+      "central_heat",
+      "community_security_features",
+      "dishwasher",
+      "energy_efficient",
+      "fireplace",
+      "hardwood_floors",
+      "rv_or_boat_parking",
+      "view",
+      "water_view",
+      "two_or_more_stories",
+      "garage_1_or_more",
+      "garage_2_or_more",
+      "waterfront",
+      "fruit_trees",
+      "big_lot",
+      "pond",
+      "den"
+     ],
+     "days_on_market": null,
+     "price_per_sqft": null,
+     "primary_photo": {
+      "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2239246900s.jpg"
+     },
+     "photos": [
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2239246900s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9759400486946106
+        },
+        {
+         "label": "yard",
+         "probability": 0.970828652381897
+        },
+        {
+         "label": "far",
+         "probability": 0.5453025698661804
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m893589157s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9985194802284241
+        },
+        {
+         "label": "yard",
+         "probability": 0.997395396232605
+        },
+        {
+         "label": "complete",
+         "probability": 0.9937847852706909
+        },
+        {
+         "label": "front",
+         "probability": 0.6976838111877441
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2041895449s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.9998047947883606
+        },
+        {
+         "label": "farm",
+         "probability": 0.9870461225509644
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3929922260s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "farm",
+         "probability": 0.9836650490760803
+        },
+        {
+         "label": "road",
+         "probability": 0.5989013910293579
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3808119614s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9989988207817078
+        },
+        {
+         "label": "porch",
+         "probability": 0.8910836577415466
+        },
+        {
+         "label": "yard",
+         "probability": 0.999593198299408
+        },
+        {
+         "label": "complete",
+         "probability": 0.6347030401229858
+        },
+        {
+         "label": "far",
+         "probability": 0.2870009243488312
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m792921055s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9999868869781494
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1654121312s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9999997615814209
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m219144721s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.999935507774353
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3458910364s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9999918937683105
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m146913858s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "dining_room",
+         "probability": 0.9999767541885376
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3310778038s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9998340606689453
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m917529195s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9801651239395142
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2365894871s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9999947547912598
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m305290501s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "dining_room",
+         "probability": 0.8525103330612183
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2054305172s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "dining_room",
+         "probability": 0.97416752576828
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2494496491s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "dining_room",
+         "probability": 0.9999992847442627
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2127285696s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9891030788421631
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1232718456s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9999995231628418
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1920395106s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9997383952140808
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3647592208s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9026435017585754
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1792028707s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999984502792358
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3857461486s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9999701976776123
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m313513336s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "home_office",
+         "probability": 0.999992847442627
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m467754950s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bedroom",
+         "probability": 0.9999984502792358
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1374543767s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999614953994751
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3555654200s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bedroom",
+         "probability": 0.9993383288383484
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m633489835s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999997615814209
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1438185335s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "balcony",
+         "probability": 0.9994387030601501
+        },
+        {
+         "label": "patio",
+         "probability": 0.9994091987609863
+        },
+        {
+         "label": "porch",
+         "probability": 0.9999567270278931
+        },
+        {
+         "label": "yard",
+         "probability": 0.9302514791488647
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1460018982s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "forest",
+         "probability": 0.9537517428398132
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m3252322134s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9970254302024841
+        },
+        {
+         "label": "yard",
+         "probability": 0.9979400038719177
+        },
+        {
+         "label": "far",
+         "probability": 0.7493553757667542
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m887034411s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.9992101192474365
+        },
+        {
+         "label": "porch",
+         "probability": 0.9999450445175171
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2251057582s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.997637152671814
+        },
+        {
+         "label": "pavilion",
+         "probability": 0.3917989730834961
+        },
+        {
+         "label": "porch",
+         "probability": 0.9998334646224976
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m390620306s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.9826921224594116
+        },
+        {
+         "label": "yard",
+         "probability": 0.5406320691108704
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m4052994621s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "yard",
+         "probability": 0.982977032661438
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1018365713s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.9862974882125854
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2657042000s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.922713577747345
+        },
+        {
+         "label": "porch",
+         "probability": 0.9999337196350098
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1307292219s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9908193945884705
+        },
+        {
+         "label": "yard",
+         "probability": 0.9997652173042297
+        },
+        {
+         "label": "back_side",
+         "probability": 0.7787488698959351
+        },
+        {
+         "label": "far",
+         "probability": 0.5200067758560181
+        },
+        {
+         "label": "incomplete",
+         "probability": 0.6904014348983765
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1438600871s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9978336691856384
+        },
+        {
+         "label": "patio",
+         "probability": 0.6578287482261658
+        },
+        {
+         "label": "porch",
+         "probability": 0.9944825172424316
+        },
+        {
+         "label": "yard",
+         "probability": 0.9997984766960144
+        },
+        {
+         "label": "back_side",
+         "probability": 0.9690492749214172
+        },
+        {
+         "label": "complete",
+         "probability": 0.6498528718948364
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1783334232s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999923706054688
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2202574572s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9999886751174927
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m144274036s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "dining_room",
+         "probability": 0.9461349248886108
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1164618042s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9999998807907104
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1281491257s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9242861866950989
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m1339458409s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.9998124241828918
+        },
+        {
+         "label": "porch",
+         "probability": 0.9998834133148193
+        },
+        {
+         "label": "yard",
+         "probability": 0.9800002574920654
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2795531684s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "shed",
+         "probability": 0.5900453925132751
+        },
+        {
+         "label": "yard",
+         "probability": 0.9713478088378906
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2630879112s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "garage_indoor",
+         "probability": 0.7928316593170166
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m4203442131s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "farm",
+         "probability": 0.9557663202285767
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m4268344965s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.999687671661377
+        },
+        {
+         "label": "farm",
+         "probability": 0.9484481811523438
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m2211219899s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.9999066591262817
+        },
+        {
+         "label": "house_view",
+         "probability": 0.9737544059753418
+        },
+        {
+         "label": "yard",
+         "probability": 0.9706822633743286
+        },
+        {
+         "label": "far",
+         "probability": 0.986167848110199
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/e59eb2a687eb687cb6ef5057ffa4c15dl-m78154016s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.9998350143432617
+        },
+        {
+         "label": "farm",
+         "probability": 0.8348079919815063
+        },
+        {
+         "label": "water_view",
+         "probability": 0.9644284248352051
+        }
+       ]
+      }
+     ],
+     "virtual_tours": [
+      {
+       "href": "https://vimeo.com/1213388383",
+       "type": null
+      }
+     ],
+     "videos": null,
+     "open_houses": null,
+     "pet_policy": null,
+     "hoa": {
+      "fee": null
+     },
+     "estimate": null,
+     "current_estimates": [],
+     "tax_record": null,
+     "details": [
+      {
+       "category": "Other Rooms",
+       "text": [
+        "Total Rooms: 9"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Appliances",
+       "text": [
+        "ConvectionOven",
+        "DoubleOven",
+        "Dishwasher",
+        "GasCooktop",
+        "Disposal",
+        "Microwave",
+        "TanklessWaterHeater",
+        "Laundry Features: WasherHookup, ElectricDryerHookup"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Bedrooms",
+       "text": [
+        "Bedrooms: 3"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Bathrooms",
+       "text": [
+        "Total Bathrooms: 4",
+        "Full Bathrooms: 3",
+        "1/2 Bathrooms: 1"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Interior Features",
+       "text": [
+        "CrownMolding",
+        "DoubleVanity",
+        "EnSuiteBathroom",
+        "HighCeilings",
+        "BathInPrimaryBedroom",
+        "MainLevelPrimary",
+        "PotsAndPanDrawers",
+        "Pantry",
+        "SelfClosingCabinetDoors",
+        "SittingAreaInPrimary",
+        "SelfClosingDrawers",
+        "ShowerOnly",
+        "TwoBedroomsUp",
+        "WalkInClosets",
+        "WindowTreatments",
+        "CeilingFans",
+        "ProgrammableThermostat",
+        "Flooring: Brick, Carpet, Tile, Wood",
+        "Window Features: LowEmissivityWindows, WindowCoverings"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Heating and Cooling",
+       "text": [
+        "Cooling Features: CentralAir, Electric",
+        "Fireplace Features: Gas, GasLog, WoodBurning",
+        "Heating Features: Central, Electric",
+        "Heating: Yes",
+        "Number of Fireplaces: 3"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Waterfront and Water Access",
+       "text": [
+        "Pond",
+        "Waterfront"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Garage and Parking",
+       "text": [
+        "Attached Garage: Yes",
+        "Carport Spaces: 4",
+        "Garage Spaces: 2",
+        "Parking Features: AttachedCarport, AdditionalParking, Attached, Boat, DetachedCarport, Garage, GarageDoorOpener, RvAccessParking, WorkshopInGarage"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Exterior and Lot Features",
+       "text": [
+        "Fencing: CrossFenced, Fenced",
+        "Other Structures: Barns, GuestHouse, Sheds",
+        "Road Frontage Type: FarmToMarketRoad",
+        "Road Surface Type: Asphalt"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Land Info",
+       "text": [
+        "Lot Description: Cleared, Wooded, Waterfront, HardwoodTrees, Level, Pasture, RollingSlope, Trees",
+        "Lot Size Acres: 30.27",
+        "Lot Size Source: Appraiser",
+        "Topography: Level, Rolling",
+        "Vegetation: PartiallyWooded",
+        "Lot Size Square Feet: 1318561"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "School Information",
+       "text": [
+        "Elementary School: O'BRYANT PRIMARY SCHOOL",
+        "Elementary School District: 136 - Bellville",
+        "High School: BELLVILLE HIGH SCHOOL",
+        "High School District: 136 - Bellville",
+        "Middle School: BELLVILLE JUNIOR HIGH",
+        "Middle or Junior School District: 136 - Bellville"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Amenities and Community Features",
+       "text": [
+        "Horse Amenities: HorsesAllowed, TackRoom"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Rental Info",
+       "text": [
+        "Lease Considered: No"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Other Property Info",
+       "text": [
+        "Annual Tax Amount: 8925",
+        "Source Listing Status: Closed",
+        "County: Austin",
+        "Directions: From Bellville, take Hwy 36 towards Sealy and turn right onto FM 2429. Then turn right onto FM 949 and left onto FM 1094. The property will be on your left about a mile and a half down.",
+        "Tax Year: 2025",
+        "Source Property Type: Farm",
+        "Exclusions: Dining room light fixture",
+        "Possible Use: Agricultural, Cattle, Horses, Ranch",
+        "Area: 57",
+        "Source Neighborhood: Vw Swearingen Surv Abs #298",
+        "Parcel Number: R000012620",
+        "Postal City: Cat Spring",
+        "Subdivision: Vw Swearingen Surv Abs #298",
+        "Property Subtype: Detached"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Agent Only Data",
+       "text": [
+        "Tax Legal Description: A298 V W SWEARINGEN Acres: 30.27",
+        "Sale Date: 2026-10-26 00:00:00.000",
+        "Sale Price: 1999900",
+        "Days on Market: 50",
+        "Expired Date: 2027-07-31",
+        "OffMarketDate: 2026-09-17",
+        "Purchase Contract Date: 2026-09-17",
+        "Status Date: 2026-10-27"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Private Data",
+       "text": [
+        "Listing Agreement: ExclusiveRightToLease",
+        "Listing Terms: Cash, Conventional",
+        "Cumulative Days On Market: 50",
+        "Occupant Type: Owner",
+        "On Market Date: 2026-07-29",
+        "Original List Price: 1999900",
+        "Listing Date: 2026-07-29",
+        "Showing Instructions: Accompany,Appointment Required",
+        "Major Change Timestamp: 2026-10-27 15:07:52",
+        "Major Change Type: Closed"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Building and Construction",
+       "text": [
+        "Total Square Feet Living: 3118",
+        "Year Built: 1969",
+        "Building Area Total: 3118",
+        "Construction Materials: Brick, WoodSiding",
+        "Direction Faces: South",
+        "Foundation Details: Slab",
+        "Levels: Two",
+        "Living Area Source: Owner",
+        "Property Age: 57",
+        "Levels or Stories: 2",
+        "Structure Type: House",
+        "Year Built Source: PublicRecords",
+        "Architectural Style: Colonial"
+       ],
+       "parent_category": "Features"
+      },
+      {
+       "category": "Utilities",
+       "text": [
+        "Electric: Generator",
+        "Sewer: AerobicSeptic, SepticTank",
+        "Water Source: Private, Well"
+       ],
+       "parent_category": "Features"
+      },
+      {
+       "category": "Home Features",
+       "text": [
+        "Green Energy Efficient: ExposureShade, Hvac, Insulation, Thermostat, WaterHeater, Windows",
+        "Security Features: SecurityGate, SmokeDetectors"
+       ],
+       "parent_category": "Features"
+      }
+     ],
+     "description": {
+      "type": "farm",
+      "sub_type": null,
+      "name": null,
+      "beds": 3,
+      "beds_min": null,
+      "beds_max": null,
+      "baths": 4,
+      "baths_min": null,
+      "baths_max": null,
+      "baths_full": 3,
+      "baths_half": 1,
+      "baths_3qtr": null,
+      "baths_1qtr": null,
+      "baths_consolidated": "3.5",
+      "baths_full_calc": 3,
+      "baths_partial_calc": 1,
+      "sqft": 3118,
+      "sqft_min": null,
+      "sqft_max": null,
+      "lot_sqft": 1318561,
+      "year_built": 1969,
+      "garage": 2,
+      "garage_min": null,
+      "garage_max": null,
+      "stories": 2,
+      "text": "A true Texas masterpiece, this extraordinary +/-30-acre estate offers an unmatched blend of timeless elegance and breathtaking natural beauty just a short drive from the city. Completely taken down to the studs and meticulously renovated, the colonial-style residence is filled with abundant natural light, rich brick flooring, and warm architectural accents that create an inviting yet sophisticated ambiance. Majestic live oaks, stately pecans, and fruit trees grace the landscape, while lush open pastures provide the perfect setting for horses or cattle. A healthy pond with a fishing pier invites peaceful afternoons, and enchanting lighted pathways transform the property into a magical retreat after sunset. Complete with a charming guest cottage, spacious shop, multiple barns, and abundant wildlife drawn to thoughtfully placed feeders, every detail has been designed to embrace the finest in country living. Rarely does a property of this caliber, beauty, and convenience become available.",
+      "sold_price": null,
+      "sold_date": "2026-10-26",
+      "styles": null
+     },
+     "location": {
+      "address": {
+       "line": "11182 FM 1094 Rd",
+       "street_number": "11182",
+       "street_name": "FM 1094",
+       "street_suffix": "Rd",
+       "street_direction": null,
+       "street_post_direction": null,
+       "unit": null,
+       "city": "Cat Spring",
+       "state_code": "TX",
+       "state": "Texas",
+       "postal_code": "78933",
+       "country": "USA",
+       "coordinate": {
+        "lat": 29.854388,
+        "lon": -96.294807,
+        "accuracy": null
+       }
+      },
+      "county": {
+       "name": "Austin",
+       "fips_code": "48015",
+       "state_code": "TX"
+      },
+      "neighborhoods": null,
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=11182%20FM%201094%20Rd%2C%20Cat%20Spring%2C%20TX%2078933&size=640x480&source=outdoor&signature=ecXE7oAQ_7pgMrH-9sbjyTE9_C4=",
+      "street_view_metadata_url": "https://maps.googleapis.com/maps/api/streetview/metadata?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=11182%20FM%201094%20Rd%2C%20Cat%20Spring%2C%20TX%2078933&size=640x480&source=outdoor&signature=1rJUlt-2GeQqdFFgxlz1fZ21Q3M=",
+      "search_areas": [
+       {
+        "city": "cat spring",
+        "state_code": "tx"
+       },
+       {
+        "city": "cat spring",
+        "state_code": "tx"
+       }
+      ]
+     },
+     "flags": {
+      "is_new_listing": false,
+      "is_pending": null,
+      "is_contingent": null,
+      "is_foreclosure": null,
+      "is_price_reduced": null,
+      "is_new_construction": null,
+      "is_coming_soon": null,
+      "is_plan": null,
+      "is_subdivision": null,
+      "is_short_sale": null,
+      "is_senior_community": null,
+      "is_for_rent": null,
+      "is_garage_present": true,
+      "is_deal_available": null,
+      "is_usda_eligible": null,
+      "is_sales_builder": null
+     },
+     "units": null,
+     "community": null,
+     "advertisers": [
+      {
+       "fulfillment_id": "1658668",
+       "name": "Cari Goeke",
+       "type": "seller",
+       "email": "Soldbycarig@gmail.com",
+       "href": "https://www.TeamSouthernDistrict.com",
+       "slogan": "Let US Lead You HOME!",
+       "state_license": null,
+       "nrds_id": null,
+       "builder": null,
+       "photo": {
+        "href": "https://ap.rdcpix.com/b09527b80011393f4285ae337469ba66a-e3581466409l.jpg"
+       },
+       "phones": [
+        {
+         "number": "9795302714",
+         "type": "Other",
+         "ext": null,
+         "primary": true,
+         "trackable": null
+        },
+        {
+         "number": "9794510593",
+         "type": "Mobile",
+         "ext": null,
+         "primary": true,
+         "trackable": null
+        },
+        {
+         "number": "9792707377",
+         "type": "Office",
+         "ext": null,
+         "primary": true,
+         "trackable": null
+        }
+       ],
+       "office": {
+        "fulfillment_id": "0",
+        "name": "Martha Turner Sotheby's International Realty - Brenham",
+        "email": null,
+        "href": null,
+        "slogan": null,
+        "photo": null,
+        "phones": [
+         {
+          "number": "9792160503",
+          "type": "Office",
+          "ext": null,
+          "primary": true,
+          "trackable": null
+         }
+        ],
+        "address": {
+         "line": "1108 S Blue Bell Road",
+         "city": null,
+         "state_code": null,
+         "state": null,
+         "postal_code": null,
+         "country": null,
+         "coordinate": {
+          "lat": null,
+          "lon": null
+         }
+        },
+        "mls_set": "O-HOTX-TRNR10",
+        "hours": null
+       },
+       "broker": {
+        "fulfillment_id": "0",
+        "name": null
+       }
+      }
+     ],
+     "source": {
+      "id": "HOTX",
+      "type": "mls",
+      "name": "Houston",
+      "listing_id": "22505415",
+      "plan_id": null,
+      "spec_id": null,
+      "community_id": null,
+      "disclaimer": {
+       "text": "\u00a9 2026, HOUSTON REALTORS\u00ae INFORMATION SERVICE, INC. All Rights Reserved.",
+       "href": null,
+       "logo": null
+      },
+      "raw": {
+       "status": "Closed",
+       "style": null,
+       "tax_amount": null
+      },
+      "agents": [
+       {
+        "agent_id": "karasek",
+        "agent_name": "Cari Goeke",
+        "office_id": "TRNR10",
+        "office_name": "Martha Turner Sotheby's International Realty - Brenham",
+        "office_phone": null,
+        "type": "seller",
+        "id": "HOTX"
+       },
+       {
+        "agent_id": "robginn",
+        "agent_name": "Robert Ginn",
+        "office_id": "TRNR06",
+        "office_name": null,
+        "office_phone": null,
+        "type": "buyer",
+        "id": "HOTX"
+       }
+      ]
+     },
+     "branding": [
+      {
+       "name": "Martha Turner Sotheby's International Realty - Brenham",
+       "phone": null,
+       "type": "Office",
+       "photo": null,
+       "link": null,
+       "accent_color": null
+      }
+     ],
+     "products": {
+      "brand_name": "basic_opt_in",
+      "products": [
+       "core.agent",
+       "co_broke"
+      ]
+     },
+     "other_listings": {
+      "rdc": [
+       {
+        "listing_id": "2998995832",
+        "listing_key": null,
+        "status": "sold",
+        "primary": null
+       }
+      ]
+     },
+     "consumer_advertisers": null
+    },
+    {
+     "property_id": "9885354528",
+     "listing_id": "3001327456",
+     "plan_id": null,
+     "status": "sold",
+     "list_price": 139000,
+     "list_price_min": null,
+     "list_price_max": null,
+     "price_reduced_amount": null,
+     "list_date": "2026-09-29T12:31:09.000000Z",
+     "last_update_date": "2026-10-26T20:09:23Z",
+     "last_status_change_date": "2026-10-26T20:10:35Z",
+     "last_sold_date": "2026-10-26",
+     "last_sold_price": null,
+     "last_price_change_date": null,
+     "last_price_change_amount": null,
+     "href": "https://www.realtor.com/realestateandhomes-detail/Fm-1456_Bellville_TX_77418_M98853-54528",
+     "permalink": "Fm-1456_Bellville_TX_77418_M98853-54528",
+     "photo_count": 5,
+     "matterport": false,
+     "tags": [
+      "big_lot"
+     ],
+     "days_on_market": null,
+     "price_per_sqft": null,
+     "primary_photo": {
+      "href": "http://ap.rdcpix.com/ae1d6b843e56dd746244bee008dff24dl-m3073558591s.jpg"
+     },
+     "photos": [
+      {
+       "href": "http://ap.rdcpix.com/ae1d6b843e56dd746244bee008dff24dl-m3073558591s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.9999986886978149
+        },
+        {
+         "label": "farm",
+         "probability": 0.9643531441688538
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/ae1d6b843e56dd746244bee008dff24dl-m2898525888s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.9999686479568481
+        },
+        {
+         "label": "farm",
+         "probability": 0.9801554083824158
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/ae1d6b843e56dd746244bee008dff24dl-m3265785372s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.999998927116394
+        },
+        {
+         "label": "farm",
+         "probability": 0.7078354358673096
+        },
+        {
+         "label": "road",
+         "probability": 0.4392504394054413
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/ae1d6b843e56dd746244bee008dff24dl-m3384556023s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.9996602535247803
+        },
+        {
+         "label": "farm",
+         "probability": 0.9742444157600403
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/ae1d6b843e56dd746244bee008dff24dl-m4024417860s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.999984860420227
+        },
+        {
+         "label": "farm",
+         "probability": 0.8689684867858887
+        }
+       ]
+      }
+     ],
+     "virtual_tours": null,
+     "videos": null,
+     "open_houses": null,
+     "pet_policy": null,
+     "hoa": {
+      "fee": null
+     },
+     "estimate": null,
+     "current_estimates": [],
+     "tax_record": null,
+     "details": [
+      {
+       "category": "Land Info",
+       "text": [
+        "Lot Description: HardwoodTrees, MobileHomeAllowed",
+        "Lot Size Acres: 2.0",
+        "Lot Size Square Feet: 87120"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Exterior and Lot Features",
+       "text": [
+        "Road Frontage Type: FarmToMarketRoad",
+        "Road Surface Type: Asphalt"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "School Information",
+       "text": [
+        "Elementary School: O'BRYANT PRIMARY SCHOOL",
+        "Elementary School District: 136 - Bellville",
+        "High School: BELLVILLE HIGH SCHOOL",
+        "High School District: 136 - Bellville",
+        "Middle School: BELLVILLE JUNIOR HIGH",
+        "Middle or Junior School District: 136 - Bellville"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Amenities and Community Features",
+       "text": [
+        "Horse Amenities: HorsesAllowed"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Rental Info",
+       "text": [
+        "Lease Considered: No"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Other Property Info",
+       "text": [
+        "Source Listing Status: Closed",
+        "County: Austin",
+        "Directions: From Bellville travel north on FM 1456 property will be on the right.",
+        "Source Property Type: Land",
+        "Possible Use: Agricultural, Cattle, Horses, Hunting, Ranch",
+        "Area: 57",
+        "Source Neighborhood: 57",
+        "Parcel Number: 03242",
+        "Postal City: Bellville"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Agent Only Data",
+       "text": [
+        "Tax Legal Description: 2 acres, more or less, to be surveyed out of 6 acres in the",
+        "Sale Date: 2026-10-26 00:00:00.000",
+        "Sale Price: 130000",
+        "Days on Market: 0",
+        "Expired Date: 2027-05-31",
+        "OffMarketDate: 2026-09-29",
+        "Purchase Contract Date: 2026-09-29",
+        "Status Date: 2026-10-26"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Private Data",
+       "text": [
+        "Listing Agreement: ExclusiveRightToLease",
+        "Cumulative Days On Market: 0",
+        "On Market Date: 2026-09-29",
+        "Original List Price: 139000",
+        "Listing Date: 2026-09-29",
+        "Showing Instructions: Appointment Required",
+        "Major Change Timestamp: 2026-10-26 15:09:15",
+        "Major Change Type: Closed"
+       ],
+       "parent_category": "Listing"
+      }
+     ],
+     "description": {
+      "type": "land",
+      "sub_type": null,
+      "name": null,
+      "beds": null,
+      "beds_min": null,
+      "beds_max": null,
+      "baths": null,
+      "baths_min": null,
+      "baths_max": null,
+      "baths_full": null,
+      "baths_half": null,
+      "baths_3qtr": null,
+      "baths_1qtr": null,
+      "baths_consolidated": null,
+      "baths_full_calc": null,
+      "baths_partial_calc": null,
+      "sqft": null,
+      "sqft_min": null,
+      "sqft_max": null,
+      "lot_sqft": 87120,
+      "year_built": null,
+      "garage": null,
+      "garage_min": null,
+      "garage_max": null,
+      "stories": null,
+      "text": "We all know how hard it is to find unrestricted small acreage - and new to the market is just that! These approximate 2 acres offer paved road frontage on FM 1456 and located in desirable Bellville ISD. Unrestricted acreage gives you the freedom to enjoy country living your way, while still being conveniently located near Bellville. Need more room? An additional 4 adjoining acres with 3/2 house are also available for purchase (HAR#59951173), offering the opportunity to expand your country property. A great potential combination of home, land, and versatility in a sought-after area.",
+      "sold_price": null,
+      "sold_date": "2026-10-26",
+      "styles": null
+     },
+     "location": {
+      "address": {
+       "line": "Fm 1456",
+       "street_number": null,
+       "street_name": null,
+       "street_suffix": null,
+       "street_direction": null,
+       "street_post_direction": null,
+       "unit": null,
+       "city": "Bellville",
+       "state_code": "TX",
+       "state": "Texas",
+       "postal_code": "77418",
+       "country": "USA",
+       "coordinate": null
+      },
+      "county": {
+       "name": "Austin",
+       "fips_code": "48015",
+       "state_code": "TX"
+      },
+      "neighborhoods": null,
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=Fm%201456%2C%20Bellville%2C%20TX%2077418&size=640x480&source=outdoor&signature=3LjiQoT_gZaBFTkZBxyIj-zSDCU=",
+      "street_view_metadata_url": "https://maps.googleapis.com/maps/api/streetview/metadata?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=Fm%201456%2C%20Bellville%2C%20TX%2077418&size=640x480&source=outdoor&signature=UB5PXFIdhfO9e-8FThiaa57ejAs=",
+      "search_areas": [
+       {
+        "city": "bellville",
+        "state_code": "tx"
+       }
+      ]
+     },
+     "flags": {
+      "is_new_listing": false,
+      "is_pending": null,
+      "is_contingent": null,
+      "is_foreclosure": null,
+      "is_price_reduced": null,
+      "is_new_construction": null,
+      "is_coming_soon": null,
+      "is_plan": null,
+      "is_subdivision": null,
+      "is_short_sale": null,
+      "is_senior_community": null,
+      "is_for_rent": null,
+      "is_garage_present": null,
+      "is_deal_available": null,
+      "is_usda_eligible": null,
+      "is_sales_builder": null
+     },
+     "units": null,
+     "community": null,
+     "advertisers": [
+      {
+       "fulfillment_id": "4559839",
+       "name": "Tiffany Richardson",
+       "type": "seller",
+       "email": "tiffany@bjre.com",
+       "href": null,
+       "slogan": null,
+       "state_license": null,
+       "nrds_id": null,
+       "builder": null,
+       "photo": null,
+       "phones": [
+        {
+         "number": "9792700578",
+         "type": "Mobile",
+         "ext": null,
+         "primary": true,
+         "trackable": null
+        }
+       ],
+       "office": {
+        "fulfillment_id": "4457099",
+        "name": "Bill Johnson & Assoc. Real Est",
+        "email": "billjohnson@bjre.com",
+        "href": null,
+        "slogan": null,
+        "photo": null,
+        "phones": [
+         {
+          "number": "9798655466",
+          "type": "Office",
+          "ext": null,
+          "primary": true,
+          "trackable": null
+         }
+        ],
+        "address": {
+         "line": "420 E MAIN ST",
+         "city": null,
+         "state_code": null,
+         "state": null,
+         "postal_code": null,
+         "country": null,
+         "coordinate": {
+          "lat": null,
+          "lon": null
+         }
+        },
+        "mls_set": "O-HOTX-BILJ01",
+        "hours": null
+       },
+       "broker": {
+        "fulfillment_id": "4458687",
+        "name": "Bill Johnson & Assoc. Real Est -  Broker"
+       }
+      }
+     ],
+     "source": {
+      "id": "HOTX",
+      "type": "mls",
+      "name": "Houston",
+      "listing_id": "11486012",
+      "plan_id": null,
+      "spec_id": null,
+      "community_id": null,
+      "disclaimer": {
+       "text": "\u00a9 2026, HOUSTON REALTORS\u00ae INFORMATION SERVICE, INC. All Rights Reserved.",
+       "href": null,
+       "logo": null
+      },
+      "raw": {
+       "status": "Closed",
+       "style": null,
+       "tax_amount": null
+      },
+      "agents": [
+       {
+        "agent_id": "tiffanyric",
+        "agent_name": "Tiffany Richardson",
+        "office_id": "BILJ01",
+        "office_name": "Bill Johnson & Assoc. Real Estate",
+        "office_phone": null,
+        "type": "seller",
+        "id": "HOTX"
+       },
+       {
+        "agent_id": "CRCornell",
+        "agent_name": "Candace Cornell",
+        "office_id": "BILJ01",
+        "office_name": "Bill Johnson & Assoc. Real Estate",
+        "office_phone": null,
+        "type": "buyer",
+        "id": "HOTX"
+       }
+      ]
+     },
+     "branding": [
+      {
+       "name": "Bill Johnson & Assoc. Real Est",
+       "phone": null,
+       "type": "Office",
+       "photo": null,
+       "link": null,
+       "accent_color": null
+      }
+     ],
+     "products": {
+      "brand_name": "essentials",
+      "products": [
+       "core.agent",
+       "core.broker"
+      ]
+     },
+     "other_listings": {
+      "rdc": [
+       {
+        "listing_id": "3001327456",
+        "listing_key": null,
+        "status": "sold",
+        "primary": null
+       }
+      ]
+     },
+     "consumer_advertisers": null
+    },
+    {
+     "property_id": "8492622185",
+     "listing_id": "2998950110",
+     "plan_id": null,
+     "status": "sold",
+     "list_price": 385000,
+     "list_price_min": null,
+     "list_price_max": null,
+     "price_reduced_amount": 90000,
+     "list_date": "2026-07-28T01:42:43.000000Z",
+     "last_update_date": "2026-10-23T19:12:09Z",
+     "last_status_change_date": "2026-10-23T19:05:28Z",
+     "last_sold_date": "2026-10-23",
+     "last_sold_price": null,
+     "last_price_change_date": "2026-08-11T14:07:42.794Z",
+     "last_price_change_amount": -90000,
+     "href": "https://www.realtor.com/realestateandhomes-detail/8696-Moravian-Dr_Sealy_TX_77474_M84926-22185",
+     "permalink": "8696-Moravian-Dr_Sealy_TX_77474_M84926-22185",
+     "photo_count": 42,
+     "matterport": false,
+     "tags": [
+      "central_air",
+      "central_heat",
+      "community_outdoor_space",
+      "dishwasher",
+      "fireplace",
+      "horse_facilities",
+      "single_story",
+      "garage_1_or_more",
+      "garage_2_or_more",
+      "big_lot",
+      "porch",
+      "fixer_upper"
+     ],
+     "days_on_market": null,
+     "price_per_sqft": null,
+     "primary_photo": {
+      "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1592256095s.jpg"
+     },
+     "photos": [
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1592256095s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9991577863693237
+        },
+        {
+         "label": "yard",
+         "probability": 0.9996351003646851
+        },
+        {
+         "label": "back_side",
+         "probability": 0.875566303730011
+        },
+        {
+         "label": "complete",
+         "probability": 0.8249660730361938
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2971100343s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9888494610786438
+        },
+        {
+         "label": "yard",
+         "probability": 0.9461610317230225
+        },
+        {
+         "label": "far",
+         "probability": 0.9584838151931763
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2913270589s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "farm",
+         "probability": 0.5701965689659119
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m843129484s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9984428286552429
+        },
+        {
+         "label": "yard",
+         "probability": 0.9994125366210938
+        },
+        {
+         "label": "back_side",
+         "probability": 0.9612702131271362
+        },
+        {
+         "label": "incomplete",
+         "probability": 0.7344679832458496
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2462153821s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "yard",
+         "probability": 0.9824579358100891
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2881408033s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "door",
+         "probability": 0.953542172908783
+        },
+        {
+         "label": "patio",
+         "probability": 0.9908939599990845
+        },
+        {
+         "label": "porch",
+         "probability": 0.9999645948410034
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2463914251s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.9420021176338196
+        },
+        {
+         "label": "pavilion",
+         "probability": 0.5678243041038513
+        },
+        {
+         "label": "porch",
+         "probability": 0.9981101751327515
+        },
+        {
+         "label": "yard",
+         "probability": 0.9208284616470337
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3168185313s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "garage",
+         "probability": 0.8964182734489441
+        },
+        {
+         "label": "yard",
+         "probability": 0.6442533731460571
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m4016113732s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "barn",
+         "probability": 0.5986365675926208
+        },
+        {
+         "label": "farm",
+         "probability": 0.7754563093185425
+        },
+        {
+         "label": "shed",
+         "probability": 0.3218645453453064
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2131632331s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "farm",
+         "probability": 0.8673603534698486
+        },
+        {
+         "label": "house_view",
+         "probability": 0.6871480941772461
+        },
+        {
+         "label": "back_side",
+         "probability": 0.8466788530349731
+        },
+        {
+         "label": "complete",
+         "probability": 0.8630292415618896
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m4235080594s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "farm",
+         "probability": 0.897599995136261
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m164043102s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "door",
+         "probability": 0.7677539587020874
+        },
+        {
+         "label": "porch",
+         "probability": 0.9893379211425781
+        },
+        {
+         "label": "yard",
+         "probability": 0.7768721580505371
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3258245337s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "utility_room",
+         "probability": 0.9994792342185974
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2340097411s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9990829229354858
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m145658045s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9999914169311523
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3798441095s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.988535463809967
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1153805837s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9999785423278809
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m364654846s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9999973773956299
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m562847919s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.6166977882385254
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1512237488s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "corridor",
+         "probability": 0.9807605743408203
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1986462889s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.896556556224823
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2326873816s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.98770672082901
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m4149056783s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9999833106994629
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1034871465s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "corridor",
+         "probability": 0.9997515082359314
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3363815599s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999517202377319
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m403654620s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.998856782913208
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m4287864602s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "closet",
+         "probability": 0.9997958540916443
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m664899499s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.8082317113876343
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3679993692s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.7355710864067078
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3972553862s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.5899330377578735
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2674341256s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9983270764350891
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m462614959s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.771940290927887
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3380314786s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9624183773994446
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1456357849s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "corridor",
+         "probability": 0.8452286124229431
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m706970466s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 1
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m4262492551s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9994294047355652
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m349294493s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999994039535522
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1097840168s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "closet",
+         "probability": 0.8049883246421814
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m497089591s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999997615814209
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m1950038256s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9999507665634155
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m2158059340s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9989665746688843
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/967733db9e5a77910738b6791a52fbafl-m3582359148s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9999949932098389
+        }
+       ]
+      }
+     ],
+     "virtual_tours": null,
+     "videos": null,
+     "open_houses": null,
+     "pet_policy": null,
+     "hoa": {
+      "fee": null
+     },
+     "estimate": {
+      "estimate": 373200,
+      "estimate_high": 400100,
+      "estimate_low": 346300,
+      "date": "2026-10-05"
+     },
+     "current_estimates": [
+      {
+       "estimate": 378897,
+       "estimate_high": 409208,
+       "estimate_low": 348585,
+       "date": "2026-10-21",
+       "isbest_homevalue": true,
+       "source": {
+        "name": "Quantarium",
+        "type": "quantarium"
+       }
+      },
+      {
+       "estimate": 373200,
+       "estimate_high": 400100,
+       "estimate_low": 346300,
+       "date": "2026-10-05",
+       "isbest_homevalue": false,
+       "source": {
+        "name": "Cotality\u2122",
+        "type": "corelogic"
+       }
+      },
+      {
+       "estimate": 381000,
+       "estimate_high": 438200,
+       "estimate_low": 323900,
+       "date": "2026-10-14",
+       "isbest_homevalue": false,
+       "source": {
+        "name": "Collateral Analytics",
+        "type": "collateral"
+       }
+      }
+     ],
+     "tax_record": {
+      "public_record_id": "3E6098EF42AC8A3405953991DAE154E4",
+      "cl_id": "3E6098EF42AC8A3405953991DAE154E4",
+      "apn": null
+     },
+     "details": [
+      {
+       "category": "Bedrooms",
+       "text": [
+        "Bedrooms: 4"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Other Rooms",
+       "text": [
+        "Total Rooms: 6"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Bathrooms",
+       "text": [
+        "Total Bathrooms: 2",
+        "Full Bathrooms: 2"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Appliances",
+       "text": [
+        "DoubleOven",
+        "Dishwasher",
+        "ElectricCooktop",
+        "ElectricRange",
+        "Disposal",
+        "Microwave",
+        "Laundry Features: WasherHookup, ElectricDryerHookup"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Heating and Cooling",
+       "text": [
+        "Cooling Features: CentralAir, Electric",
+        "Fireplace Features: WoodBurning",
+        "Heating Features: Central, Electric",
+        "Heating: Yes",
+        "Number of Fireplaces: 1"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Interior Features",
+       "text": [
+        "Flooring: Laminate"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Exterior and Lot Features",
+       "text": [
+        "CoveredPatio",
+        "Fence",
+        "PavedDriveway",
+        "Patio",
+        "Storage",
+        "Fencing: BackYard",
+        "Other Structures: Barns, Stables, Sheds",
+        "Patio And Porch Features: Covered, Deck, Patio",
+        "Patio: Yes",
+        "Deck: Yes"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Land Info",
+       "text": [
+        "Lot Size Acres: 2.279",
+        "Lot Size Source: Survey",
+        "Lot Size Square Feet: 99273"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Garage and Parking",
+       "text": [
+        "Garage Spaces: 2",
+        "Parking Features: Detached, Garage"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "School Information",
+       "text": [
+        "Elementary School: SELMAN ELEMENTARY SCHOOL",
+        "Elementary School District: 109 - Sealy",
+        "High School: SEALY HIGH SCHOOL",
+        "High School District: 109 - Sealy",
+        "Middle School: SEALY JUNIOR HIGH SCHOOL",
+        "Middle or Junior School District: 109 - Sealy"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Rental Info",
+       "text": [
+        "Lease Considered: No"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Other Property Info",
+       "text": [
+        "Annual Tax Amount: 7014",
+        "Source Listing Status: Closed",
+        "County: Austin",
+        "Directions: I-10 West From Katy To Exit Fm 1458, Go Left Over I-10 Toward Frydek. Follow 1458 (Left At Fork), Turn Left On Moravian Dr. House Is On The Right.",
+        "Tax Year: 2025",
+        "Source Property Type: Residential",
+        "Area: 57",
+        "Source Neighborhood: Moravian Ridge Sub",
+        "Parcel Number: R000016454",
+        "Postal City: Sealy",
+        "Postal Code Plus 4: 9037",
+        "Subdivision: Moravian Ridge Sub",
+        "Property Subtype: Detached"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Agent Only Data",
+       "text": [
+        "Tax Legal Description: MORAVIAN RIDGE SUBLOT 11 & 12 (PART OF BOTH)",
+        "Sale Date: 2026-10-23 00:00:00.000",
+        "Sale Price: 385000",
+        "Days on Market: 41",
+        "Expired Date: 2027-07-26",
+        "OffMarketDate: 2026-09-11",
+        "Previous List Price: 475000",
+        "Purchase Contract Date: 2026-09-11",
+        "Status Date: 2026-10-23"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Private Data",
+       "text": [
+        "Listing Agreement: ExclusiveRightToLease",
+        "Cumulative Days On Market: 41",
+        "On Market Date: 2026-07-27",
+        "Original List Price: 525000",
+        "Listing Date: 2026-07-27",
+        "Showing Instructions: Appointment Required,Lockbox Front",
+        "Major Change Timestamp: 2026-10-23 14:10:19",
+        "Major Change Type: Closed",
+        "Price Change Timestamp: 2026-08-11 09:03:44"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Building and Construction",
+       "text": [
+        "Total Square Feet Living: 2185",
+        "Year Built: 1980",
+        "Building Area Total: 2185",
+        "Construction Materials: Brick",
+        "Foundation Details: Slab",
+        "Levels: One",
+        "Living Area Source: Appraiser",
+        "Property Age: 46",
+        "Roof: Composition",
+        "Levels or Stories: 1",
+        "Year Built Source: PublicRecords",
+        "Architectural Style: Traditional"
+       ],
+       "parent_category": "Features"
+      },
+      {
+       "category": "Utilities",
+       "text": [
+        "Sewer: AerobicSeptic"
+       ],
+       "parent_category": "Features"
+      }
+     ],
+     "description": {
+      "type": "single_family",
+      "sub_type": null,
+      "name": null,
+      "beds": 4,
+      "beds_min": null,
+      "beds_max": null,
+      "baths": 2,
+      "baths_min": null,
+      "baths_max": null,
+      "baths_full": 2,
+      "baths_half": null,
+      "baths_3qtr": null,
+      "baths_1qtr": null,
+      "baths_consolidated": "2",
+      "baths_full_calc": 2,
+      "baths_partial_calc": null,
+      "sqft": 2185,
+      "sqft_min": null,
+      "sqft_max": null,
+      "lot_sqft": 99273,
+      "year_built": 1980,
+      "garage": 2,
+      "garage_min": null,
+      "garage_max": null,
+      "stories": 1,
+      "text": "Huge Price reduction, listed at new price as a fixer upper. Welcome to this spacious four-bedroom, two-bath home on a 2.2790-acre lot. The master boasts his and her closet space, while the kitchen features double ovens and granite countertops. Relax on the covered back porch while your horses graze in the fenced 4-stall stable area. Ample storage is available with plenty of closet space and cabinetry throughout the home, along with a detached two-car garage and additional storage building. Perfect for entertaining guests or simply enjoying a peaceful evening in the beautiful surroundings.",
+      "sold_price": null,
+      "sold_date": "2026-10-23",
+      "styles": null
+     },
+     "location": {
+      "address": {
+       "line": "8696 Moravian Dr",
+       "street_number": "8696",
+       "street_name": "Moravian",
+       "street_suffix": "Dr",
+       "street_direction": null,
+       "street_post_direction": null,
+       "unit": null,
+       "city": "Sealy",
+       "state_code": "TX",
+       "state": "Texas",
+       "postal_code": "77474",
+       "country": "USA",
+       "coordinate": {
+        "lat": 29.735213,
+        "lon": -96.074652,
+        "accuracy": null
+       }
+      },
+      "county": {
+       "name": "Austin",
+       "fips_code": "48015",
+       "state_code": "TX"
+      },
+      "neighborhoods": null,
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=8696%20Moravian%20Dr%2C%20Sealy%2C%20TX%2077474&size=640x480&source=outdoor&signature=o62sfYaMrPYPEM9FXssZ-4tf3iw=",
+      "street_view_metadata_url": "https://maps.googleapis.com/maps/api/streetview/metadata?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=8696%20Moravian%20Dr%2C%20Sealy%2C%20TX%2077474&size=640x480&source=outdoor&signature=eW1xP_brUGFkz7AQm0I2txKVsBw=",
+      "search_areas": [
+       {
+        "city": "sealy",
+        "state_code": "tx"
+       },
+       {
+        "city": "south frydek",
+        "state_code": "tx"
+       }
+      ]
+     },
+     "flags": {
+      "is_new_listing": false,
+      "is_pending": null,
+      "is_contingent": null,
+      "is_foreclosure": null,
+      "is_price_reduced": false,
+      "is_new_construction": null,
+      "is_coming_soon": null,
+      "is_plan": null,
+      "is_subdivision": null,
+      "is_short_sale": null,
+      "is_senior_community": null,
+      "is_for_rent": null,
+      "is_garage_present": true,
+      "is_deal_available": null,
+      "is_usda_eligible": null,
+      "is_sales_builder": null
+     },
+     "units": null,
+     "community": null,
+     "advertisers": [
+      {
+       "fulfillment_id": "3643542",
+       "name": "Shannon Black",
+       "type": "seller",
+       "email": null,
+       "href": null,
+       "slogan": null,
+       "state_license": null,
+       "nrds_id": null,
+       "builder": null,
+       "photo": null,
+       "phones": null,
+       "office": {
+        "fulfillment_id": "0",
+        "name": "S&P Interests",
+        "email": "jsebesta@spinterests.com",
+        "href": null,
+        "slogan": null,
+        "photo": null,
+        "phones": [
+         {
+          "number": "7137664500",
+          "type": null,
+          "ext": null,
+          "primary": true,
+          "trackable": null
+         }
+        ],
+        "address": null,
+        "mls_set": "O-HOTX-JSEB01",
+        "hours": null
+       },
+       "broker": {
+        "fulfillment_id": "0",
+        "name": null
+       }
+      }
+     ],
+     "source": {
+      "id": "HOTX",
+      "type": "mls",
+      "name": "Houston",
+      "listing_id": "38062656",
+      "plan_id": null,
+      "spec_id": null,
+      "community_id": null,
+      "disclaimer": {
+       "text": "\u00a9 2026, HOUSTON REALTORS\u00ae INFORMATION SERVICE, INC. All Rights Reserved.",
+       "href": null,
+       "logo": null
+      },
+      "raw": {
+       "status": "Closed",
+       "style": null,
+       "tax_amount": null
+      },
+      "agents": [
+       {
+        "agent_id": "Shblack",
+        "agent_name": "Shannon Carreon",
+        "office_id": "JSEB01",
+        "office_name": "S&P Interests",
+        "office_phone": null,
+        "type": "seller",
+        "id": "HOTX"
+       },
+       {
+        "agent_id": "ELSITA",
+        "agent_name": "Elsa Cordovi Llanuza",
+        "office_id": "LUGY01",
+        "office_name": null,
+        "office_phone": null,
+        "type": "buyer",
+        "id": "HOTX"
+       }
+      ]
+     },
+     "branding": [
+      {
+       "name": "S&P Interests",
+       "phone": null,
+       "type": "Office",
+       "photo": null,
+       "link": null,
+       "accent_color": null
+      }
+     ],
+     "products": {
+      "brand_name": "basic_opt_in",
+      "products": [
+       "core.agent",
+       "co_broke"
+      ]
+     },
+     "other_listings": {
+      "rdc": [
+       {
+        "listing_id": "2998950110",
+        "listing_key": null,
+        "status": "sold",
+        "primary": null
+       },
+       {
+        "listing_id": "522113703",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "522096723",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "516408447",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "516671807",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "503006135",
+        "listing_key": null,
+        "status": "sold",
+        "primary": null
+       }
+      ]
+     },
+     "consumer_advertisers": null
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,1041 @@
+{
+ "state": "MO",
+ "name": "Missouri",
+ "counties": [
+  {
+   "name": "Adair County",
+   "fips": "29001",
+   "type": "county",
+   "redfin_region_id": 1600,
+   "realtor_location": "Adair County, MO",
+   "lat": 40.190666,
+   "lng": -92.603592
+  },
+  {
+   "name": "Andrew County",
+   "fips": "29003",
+   "type": "county",
+   "redfin_region_id": 1601,
+   "realtor_location": "Andrew County, MO",
+   "lat": 39.988863,
+   "lng": -94.803551
+  },
+  {
+   "name": "Atchison County",
+   "fips": "29005",
+   "type": "county",
+   "redfin_region_id": 1602,
+   "realtor_location": "Atchison County, MO",
+   "lat": 40.431846,
+   "lng": -95.437555
+  },
+  {
+   "name": "Audrain County",
+   "fips": "29007",
+   "type": "county",
+   "redfin_region_id": 1603,
+   "realtor_location": "Audrain County, MO",
+   "lat": 39.214481,
+   "lng": -91.843418
+  },
+  {
+   "name": "Barry County",
+   "fips": "29009",
+   "type": "county",
+   "redfin_region_id": 1604,
+   "realtor_location": "Barry County, MO",
+   "lat": 36.699376,
+   "lng": -93.834334
+  },
+  {
+   "name": "Barton County",
+   "fips": "29011",
+   "type": "county",
+   "redfin_region_id": 1605,
+   "realtor_location": "Barton County, MO",
+   "lat": 37.500799,
+   "lng": -94.344089
+  },
+  {
+   "name": "Bates County",
+   "fips": "29013",
+   "type": "county",
+   "redfin_region_id": 1606,
+   "realtor_location": "Bates County, MO",
+   "lat": 38.257217,
+   "lng": -94.339246
+  },
+  {
+   "name": "Benton County",
+   "fips": "29015",
+   "type": "county",
+   "redfin_region_id": 1607,
+   "realtor_location": "Benton County, MO",
+   "lat": 38.301036,
+   "lng": -93.287942
+  },
+  {
+   "name": "Bollinger County",
+   "fips": "29017",
+   "type": "county",
+   "redfin_region_id": 1608,
+   "realtor_location": "Bollinger County, MO",
+   "lat": 37.318427,
+   "lng": -90.024645
+  },
+  {
+   "name": "Boone County",
+   "fips": "29019",
+   "type": "county",
+   "redfin_region_id": 1609,
+   "realtor_location": "Boone County, MO",
+   "lat": 38.989861,
+   "lng": -92.310202
+  },
+  {
+   "name": "Buchanan County",
+   "fips": "29021",
+   "type": "county",
+   "redfin_region_id": 1610,
+   "realtor_location": "Buchanan County, MO",
+   "lat": 39.660369,
+   "lng": -94.808173
+  },
+  {
+   "name": "Butler County",
+   "fips": "29023",
+   "type": "county",
+   "redfin_region_id": 1611,
+   "realtor_location": "Butler County, MO",
+   "lat": 36.71518,
+   "lng": -90.40313
+  },
+  {
+   "name": "Caldwell County",
+   "fips": "29025",
+   "type": "county",
+   "redfin_region_id": 1612,
+   "realtor_location": "Caldwell County, MO",
+   "lat": 39.658998,
+   "lng": -93.979179
+  },
+  {
+   "name": "Callaway County",
+   "fips": "29027",
+   "type": "county",
+   "redfin_region_id": 1613,
+   "realtor_location": "Callaway County, MO",
+   "lat": 38.835547,
+   "lng": -91.923446
+  },
+  {
+   "name": "Camden County",
+   "fips": "29029",
+   "type": "county",
+   "redfin_region_id": 1614,
+   "realtor_location": "Camden County, MO",
+   "lat": 38.026527,
+   "lng": -92.765327
+  },
+  {
+   "name": "Cape Girardeau County",
+   "fips": "29031",
+   "type": "county",
+   "redfin_region_id": 1615,
+   "realtor_location": "Cape Girardeau County, MO",
+   "lat": 37.384141,
+   "lng": -89.685658
+  },
+  {
+   "name": "Carroll County",
+   "fips": "29033",
+   "type": "county",
+   "redfin_region_id": 1616,
+   "realtor_location": "Carroll County, MO",
+   "lat": 39.427375,
+   "lng": -93.500227
+  },
+  {
+   "name": "Carter County",
+   "fips": "29035",
+   "type": "county",
+   "redfin_region_id": 1617,
+   "realtor_location": "Carter County, MO",
+   "lat": 36.944858,
+   "lng": -90.945705
+  },
+  {
+   "name": "Cass County",
+   "fips": "29037",
+   "type": "county",
+   "redfin_region_id": 1618,
+   "realtor_location": "Cass County, MO",
+   "lat": 38.646474,
+   "lng": -94.354547
+  },
+  {
+   "name": "Cedar County",
+   "fips": "29039",
+   "type": "county",
+   "redfin_region_id": 1619,
+   "realtor_location": "Cedar County, MO",
+   "lat": 37.733655,
+   "lng": -93.850014
+  },
+  {
+   "name": "Chariton County",
+   "fips": "29041",
+   "type": "county",
+   "redfin_region_id": 1620,
+   "realtor_location": "Chariton County, MO",
+   "lat": 39.517968,
+   "lng": -92.96162
+  },
+  {
+   "name": "Christian County",
+   "fips": "29043",
+   "type": "county",
+   "redfin_region_id": 1621,
+   "realtor_location": "Christian County, MO",
+   "lat": 36.969739,
+   "lng": -93.187614
+  },
+  {
+   "name": "Clark County",
+   "fips": "29045",
+   "type": "county",
+   "redfin_region_id": 1622,
+   "realtor_location": "Clark County, MO",
+   "lat": 40.407275,
+   "lng": -91.729472
+  },
+  {
+   "name": "Clay County",
+   "fips": "29047",
+   "type": "county",
+   "redfin_region_id": 1623,
+   "realtor_location": "Clay County, MO",
+   "lat": 39.315551,
+   "lng": -94.421502
+  },
+  {
+   "name": "Clinton County",
+   "fips": "29049",
+   "type": "county",
+   "redfin_region_id": 1624,
+   "realtor_location": "Clinton County, MO",
+   "lat": 39.608723,
+   "lng": -94.395803
+  },
+  {
+   "name": "Cole County",
+   "fips": "29051",
+   "type": "county",
+   "redfin_region_id": 1625,
+   "realtor_location": "Cole County, MO",
+   "lat": 38.503233,
+   "lng": -92.280027
+  },
+  {
+   "name": "Cooper County",
+   "fips": "29053",
+   "type": "county",
+   "redfin_region_id": 1626,
+   "realtor_location": "Cooper County, MO",
+   "lat": 38.847093,
+   "lng": -92.810069
+  },
+  {
+   "name": "Crawford County",
+   "fips": "29055",
+   "type": "county",
+   "redfin_region_id": 1627,
+   "realtor_location": "Crawford County, MO",
+   "lat": 37.966559,
+   "lng": -91.313936
+  },
+  {
+   "name": "Dade County",
+   "fips": "29057",
+   "type": "county",
+   "redfin_region_id": 1628,
+   "realtor_location": "Dade County, MO",
+   "lat": 37.43235,
+   "lng": -93.854878
+  },
+  {
+   "name": "Dallas County",
+   "fips": "29059",
+   "type": "county",
+   "redfin_region_id": 1629,
+   "realtor_location": "Dallas County, MO",
+   "lat": 37.683583,
+   "lng": -93.033815
+  },
+  {
+   "name": "Daviess County",
+   "fips": "29061",
+   "type": "county",
+   "redfin_region_id": 1630,
+   "realtor_location": "Daviess County, MO",
+   "lat": 39.962839,
+   "lng": -93.970053
+  },
+  {
+   "name": "DeKalb County",
+   "fips": "29063",
+   "type": "county",
+   "redfin_region_id": 1631,
+   "realtor_location": "DeKalb County, MO",
+   "lat": 39.894665,
+   "lng": -94.40719
+  },
+  {
+   "name": "Dent County",
+   "fips": "29065",
+   "type": "county",
+   "redfin_region_id": 1632,
+   "realtor_location": "Dent County, MO",
+   "lat": 37.603072,
+   "lng": -91.489717
+  },
+  {
+   "name": "Douglas County",
+   "fips": "29067",
+   "type": "county",
+   "redfin_region_id": 1633,
+   "realtor_location": "Douglas County, MO",
+   "lat": 36.946517,
+   "lng": -92.515892
+  },
+  {
+   "name": "Dunklin County",
+   "fips": "29069",
+   "type": "county",
+   "redfin_region_id": 1634,
+   "realtor_location": "Dunklin County, MO",
+   "lat": 36.153025,
+   "lng": -90.062254
+  },
+  {
+   "name": "Franklin County",
+   "fips": "29071",
+   "type": "county",
+   "redfin_region_id": 1635,
+   "realtor_location": "Franklin County, MO",
+   "lat": 38.413003,
+   "lng": -91.072832
+  },
+  {
+   "name": "Gasconade County",
+   "fips": "29073",
+   "type": "county",
+   "redfin_region_id": 1636,
+   "realtor_location": "Gasconade County, MO",
+   "lat": 38.441183,
+   "lng": -91.50578
+  },
+  {
+   "name": "Gentry County",
+   "fips": "29075",
+   "type": "county",
+   "redfin_region_id": 1637,
+   "realtor_location": "Gentry County, MO",
+   "lat": 40.208127,
+   "lng": -94.405321
+  },
+  {
+   "name": "Greene County",
+   "fips": "29077",
+   "type": "county",
+   "redfin_region_id": 1638,
+   "realtor_location": "Greene County, MO",
+   "lat": 37.258196,
+   "lng": -93.340641
+  },
+  {
+   "name": "Grundy County",
+   "fips": "29079",
+   "type": "county",
+   "redfin_region_id": 1639,
+   "realtor_location": "Grundy County, MO",
+   "lat": 40.112541,
+   "lng": -93.565054
+  },
+  {
+   "name": "Harrison County",
+   "fips": "29081",
+   "type": "county",
+   "redfin_region_id": 1640,
+   "realtor_location": "Harrison County, MO",
+   "lat": 40.34562,
+   "lng": -93.992582
+  },
+  {
+   "name": "Henry County",
+   "fips": "29083",
+   "type": "county",
+   "redfin_region_id": 1641,
+   "realtor_location": "Henry County, MO",
+   "lat": 38.386491,
+   "lng": -93.792628
+  },
+  {
+   "name": "Hickory County",
+   "fips": "29085",
+   "type": "county",
+   "redfin_region_id": 1642,
+   "realtor_location": "Hickory County, MO",
+   "lat": 37.93691,
+   "lng": -93.322988
+  },
+  {
+   "name": "Holt County",
+   "fips": "29087",
+   "type": "county",
+   "redfin_region_id": 1643,
+   "realtor_location": "Holt County, MO",
+   "lat": 40.095724,
+   "lng": -95.219072
+  },
+  {
+   "name": "Howard County",
+   "fips": "29089",
+   "type": "county",
+   "redfin_region_id": 1644,
+   "realtor_location": "Howard County, MO",
+   "lat": 39.143365,
+   "lng": -92.695926
+  },
+  {
+   "name": "Howell County",
+   "fips": "29091",
+   "type": "county",
+   "redfin_region_id": 1645,
+   "realtor_location": "Howell County, MO",
+   "lat": 36.774369,
+   "lng": -91.887368
+  },
+  {
+   "name": "Iron County",
+   "fips": "29093",
+   "type": "county",
+   "redfin_region_id": 1646,
+   "realtor_location": "Iron County, MO",
+   "lat": 37.625971,
+   "lng": -90.699587
+  },
+  {
+   "name": "Jackson County",
+   "fips": "29095",
+   "type": "county",
+   "redfin_region_id": 1647,
+   "realtor_location": "Jackson County, MO",
+   "lat": 39.005364,
+   "lng": -94.343211
+  },
+  {
+   "name": "Jasper County",
+   "fips": "29097",
+   "type": "county",
+   "redfin_region_id": 1648,
+   "realtor_location": "Jasper County, MO",
+   "lat": 37.205197,
+   "lng": -94.337259
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "29099",
+   "type": "county",
+   "redfin_region_id": 1649,
+   "realtor_location": "Jefferson County, MO",
+   "lat": 38.25763,
+   "lng": -90.543681
+  },
+  {
+   "name": "Johnson County",
+   "fips": "29101",
+   "type": "county",
+   "redfin_region_id": 1650,
+   "realtor_location": "Johnson County, MO",
+   "lat": 38.741528,
+   "lng": -93.811863
+  },
+  {
+   "name": "Knox County",
+   "fips": "29103",
+   "type": "county",
+   "redfin_region_id": 1651,
+   "realtor_location": "Knox County, MO",
+   "lat": 40.136856,
+   "lng": -92.146835
+  },
+  {
+   "name": "Laclede County",
+   "fips": "29105",
+   "type": "county",
+   "redfin_region_id": 1652,
+   "realtor_location": "Laclede County, MO",
+   "lat": 37.659698,
+   "lng": -92.594843
+  },
+  {
+   "name": "Lafayette County",
+   "fips": "29107",
+   "type": "county",
+   "redfin_region_id": 1653,
+   "realtor_location": "Lafayette County, MO",
+   "lat": 39.068705,
+   "lng": -93.802639
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "29109",
+   "type": "county",
+   "redfin_region_id": 1654,
+   "realtor_location": "Lawrence County, MO",
+   "lat": 37.10659,
+   "lng": -93.830551
+  },
+  {
+   "name": "Lewis County",
+   "fips": "29111",
+   "type": "county",
+   "redfin_region_id": 1655,
+   "realtor_location": "Lewis County, MO",
+   "lat": 40.084559,
+   "lng": -91.728803
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "29113",
+   "type": "county",
+   "redfin_region_id": 1656,
+   "realtor_location": "Lincoln County, MO",
+   "lat": 39.062255,
+   "lng": -90.962916
+  },
+  {
+   "name": "Linn County",
+   "fips": "29115",
+   "type": "county",
+   "redfin_region_id": 1657,
+   "realtor_location": "Linn County, MO",
+   "lat": 39.86444,
+   "lng": -93.108019
+  },
+  {
+   "name": "Livingston County",
+   "fips": "29117",
+   "type": "county",
+   "redfin_region_id": 1658,
+   "realtor_location": "Livingston County, MO",
+   "lat": 39.778587,
+   "lng": -93.548201
+  },
+  {
+   "name": "McDonald County",
+   "fips": "29119",
+   "type": "county",
+   "redfin_region_id": 1659,
+   "realtor_location": "McDonald County, MO",
+   "lat": 36.627955,
+   "lng": -94.343716
+  },
+  {
+   "name": "Macon County",
+   "fips": "29121",
+   "type": "county",
+   "redfin_region_id": 1660,
+   "realtor_location": "Macon County, MO",
+   "lat": 39.829795,
+   "lng": -92.56434
+  },
+  {
+   "name": "Madison County",
+   "fips": "29123",
+   "type": "county",
+   "redfin_region_id": 1661,
+   "realtor_location": "Madison County, MO",
+   "lat": 37.474481,
+   "lng": -90.343413
+  },
+  {
+   "name": "Maries County",
+   "fips": "29125",
+   "type": "county",
+   "redfin_region_id": 1662,
+   "realtor_location": "Maries County, MO",
+   "lat": 38.162615,
+   "lng": -91.923601
+  },
+  {
+   "name": "Marion County",
+   "fips": "29127",
+   "type": "county",
+   "redfin_region_id": 1663,
+   "realtor_location": "Marion County, MO",
+   "lat": 39.807538,
+   "lng": -91.635379
+  },
+  {
+   "name": "Mercer County",
+   "fips": "29129",
+   "type": "county",
+   "redfin_region_id": 1664,
+   "realtor_location": "Mercer County, MO",
+   "lat": 40.421413,
+   "lng": -93.567631
+  },
+  {
+   "name": "Miller County",
+   "fips": "29131",
+   "type": "county",
+   "redfin_region_id": 1665,
+   "realtor_location": "Miller County, MO",
+   "lat": 38.21668,
+   "lng": -92.429876
+  },
+  {
+   "name": "Mississippi County",
+   "fips": "29133",
+   "type": "county",
+   "redfin_region_id": 1666,
+   "realtor_location": "Mississippi County, MO",
+   "lat": 36.826264,
+   "lng": -89.295929
+  },
+  {
+   "name": "Moniteau County",
+   "fips": "29135",
+   "type": "county",
+   "redfin_region_id": 1667,
+   "realtor_location": "Moniteau County, MO",
+   "lat": 38.633037,
+   "lng": -92.583642
+  },
+  {
+   "name": "Monroe County",
+   "fips": "29137",
+   "type": "county",
+   "redfin_region_id": 1668,
+   "realtor_location": "Monroe County, MO",
+   "lat": 39.49827,
+   "lng": -92.006458
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "29139",
+   "type": "county",
+   "redfin_region_id": 1669,
+   "realtor_location": "Montgomery County, MO",
+   "lat": 38.935184,
+   "lng": -91.465427
+  },
+  {
+   "name": "Morgan County",
+   "fips": "29141",
+   "type": "county",
+   "redfin_region_id": 1670,
+   "realtor_location": "Morgan County, MO",
+   "lat": 38.420806,
+   "lng": -92.874835
+  },
+  {
+   "name": "New Madrid County",
+   "fips": "29143",
+   "type": "county",
+   "redfin_region_id": 1671,
+   "realtor_location": "New Madrid County, MO",
+   "lat": 36.594261,
+   "lng": -89.655948
+  },
+  {
+   "name": "Newton County",
+   "fips": "29145",
+   "type": "county",
+   "redfin_region_id": 1672,
+   "realtor_location": "Newton County, MO",
+   "lat": 36.908371,
+   "lng": -94.335034
+  },
+  {
+   "name": "Nodaway County",
+   "fips": "29147",
+   "type": "county",
+   "redfin_region_id": 1673,
+   "realtor_location": "Nodaway County, MO",
+   "lat": 40.361136,
+   "lng": -94.883146
+  },
+  {
+   "name": "Oregon County",
+   "fips": "29149",
+   "type": "county",
+   "redfin_region_id": 1674,
+   "realtor_location": "Oregon County, MO",
+   "lat": 36.68531,
+   "lng": -91.401827
+  },
+  {
+   "name": "Osage County",
+   "fips": "29151",
+   "type": "county",
+   "redfin_region_id": 1675,
+   "realtor_location": "Osage County, MO",
+   "lat": 38.464253,
+   "lng": -91.859504
+  },
+  {
+   "name": "Ozark County",
+   "fips": "29153",
+   "type": "county",
+   "redfin_region_id": 1676,
+   "realtor_location": "Ozark County, MO",
+   "lat": 36.64959,
+   "lng": -92.458549
+  },
+  {
+   "name": "Pemiscot County",
+   "fips": "29155",
+   "type": "county",
+   "redfin_region_id": 1677,
+   "realtor_location": "Pemiscot County, MO",
+   "lat": 36.209916,
+   "lng": -89.785942
+  },
+  {
+   "name": "Perry County",
+   "fips": "29157",
+   "type": "county",
+   "redfin_region_id": 1678,
+   "realtor_location": "Perry County, MO",
+   "lat": 37.71113,
+   "lng": -89.802125
+  },
+  {
+   "name": "Pettis County",
+   "fips": "29159",
+   "type": "county",
+   "redfin_region_id": 1679,
+   "realtor_location": "Pettis County, MO",
+   "lat": 38.727367,
+   "lng": -93.285207
+  },
+  {
+   "name": "Phelps County",
+   "fips": "29161",
+   "type": "county",
+   "redfin_region_id": 1680,
+   "realtor_location": "Phelps County, MO",
+   "lat": 37.866326,
+   "lng": -91.790349
+  },
+  {
+   "name": "Pike County",
+   "fips": "29163",
+   "type": "county",
+   "redfin_region_id": 1681,
+   "realtor_location": "Pike County, MO",
+   "lat": 39.339959,
+   "lng": -91.171607
+  },
+  {
+   "name": "Platte County",
+   "fips": "29165",
+   "type": "county",
+   "redfin_region_id": 1682,
+   "realtor_location": "Platte County, MO",
+   "lat": 39.37869,
+   "lng": -94.761477
+  },
+  {
+   "name": "Polk County",
+   "fips": "29167",
+   "type": "county",
+   "redfin_region_id": 1683,
+   "realtor_location": "Polk County, MO",
+   "lat": 37.616761,
+   "lng": -93.400817
+  },
+  {
+   "name": "Pulaski County",
+   "fips": "29169",
+   "type": "county",
+   "redfin_region_id": 1684,
+   "realtor_location": "Pulaski County, MO",
+   "lat": 37.824835,
+   "lng": -92.207022
+  },
+  {
+   "name": "Putnam County",
+   "fips": "29171",
+   "type": "county",
+   "redfin_region_id": 1685,
+   "realtor_location": "Putnam County, MO",
+   "lat": 40.478606,
+   "lng": -93.014531
+  },
+  {
+   "name": "Ralls County",
+   "fips": "29173",
+   "type": "county",
+   "redfin_region_id": 1686,
+   "realtor_location": "Ralls County, MO",
+   "lat": 39.553455,
+   "lng": -91.524787
+  },
+  {
+   "name": "Randolph County",
+   "fips": "29175",
+   "type": "county",
+   "redfin_region_id": 1687,
+   "realtor_location": "Randolph County, MO",
+   "lat": 39.439249,
+   "lng": -92.492959
+  },
+  {
+   "name": "Ray County",
+   "fips": "29177",
+   "type": "county",
+   "redfin_region_id": 1688,
+   "realtor_location": "Ray County, MO",
+   "lat": 39.308401,
+   "lng": -93.995746
+  },
+  {
+   "name": "Reynolds County",
+   "fips": "29179",
+   "type": "county",
+   "redfin_region_id": 1689,
+   "realtor_location": "Reynolds County, MO",
+   "lat": 37.366464,
+   "lng": -90.972282
+  },
+  {
+   "name": "Ripley County",
+   "fips": "29181",
+   "type": "county",
+   "redfin_region_id": 1690,
+   "realtor_location": "Ripley County, MO",
+   "lat": 36.65017,
+   "lng": -90.874834
+  },
+  {
+   "name": "St. Charles County",
+   "fips": "29183",
+   "type": "county",
+   "redfin_region_id": 1691,
+   "realtor_location": "St. Charles County, MO",
+   "lat": 38.781102,
+   "lng": -90.674915
+  },
+  {
+   "name": "St. Clair County",
+   "fips": "29185",
+   "type": "county",
+   "redfin_region_id": 1692,
+   "realtor_location": "St. Clair County, MO",
+   "lat": 38.04223,
+   "lng": -93.77656
+  },
+  {
+   "name": "Ste. Genevieve County",
+   "fips": "29186",
+   "type": "county",
+   "redfin_region_id": 1693,
+   "realtor_location": "Ste. Genevieve County, MO",
+   "lat": 37.885845,
+   "lng": -90.161531
+  },
+  {
+   "name": "St. Francois County",
+   "fips": "29187",
+   "type": "county",
+   "redfin_region_id": 1694,
+   "realtor_location": "St. Francois County, MO",
+   "lat": 37.810707,
+   "lng": -90.473868
+  },
+  {
+   "name": "St. Louis County",
+   "fips": "29189",
+   "type": "county",
+   "redfin_region_id": 1695,
+   "realtor_location": "St. Louis County, MO",
+   "lat": 38.640688,
+   "lng": -90.446073
+  },
+  {
+   "name": "Saline County",
+   "fips": "29195",
+   "type": "county",
+   "redfin_region_id": 1696,
+   "realtor_location": "Saline County, MO",
+   "lat": 39.13584,
+   "lng": -93.204164
+  },
+  {
+   "name": "Schuyler County",
+   "fips": "29197",
+   "type": "county",
+   "redfin_region_id": 1697,
+   "realtor_location": "Schuyler County, MO",
+   "lat": 40.469361,
+   "lng": -92.519016
+  },
+  {
+   "name": "Scotland County",
+   "fips": "29199",
+   "type": "county",
+   "redfin_region_id": 1698,
+   "realtor_location": "Scotland County, MO",
+   "lat": 40.447686,
+   "lng": -92.142824
+  },
+  {
+   "name": "Scott County",
+   "fips": "29201",
+   "type": "county",
+   "redfin_region_id": 1699,
+   "realtor_location": "Scott County, MO",
+   "lat": 37.047793,
+   "lng": -89.568098
+  },
+  {
+   "name": "Shannon County",
+   "fips": "29203",
+   "type": "county",
+   "redfin_region_id": 1700,
+   "realtor_location": "Shannon County, MO",
+   "lat": 37.152498,
+   "lng": -91.391328
+  },
+  {
+   "name": "Shelby County",
+   "fips": "29205",
+   "type": "county",
+   "redfin_region_id": 1701,
+   "realtor_location": "Shelby County, MO",
+   "lat": 39.797531,
+   "lng": -92.088719
+  },
+  {
+   "name": "Stoddard County",
+   "fips": "29207",
+   "type": "county",
+   "redfin_region_id": 1702,
+   "realtor_location": "Stoddard County, MO",
+   "lat": 36.851557,
+   "lng": -89.947481
+  },
+  {
+   "name": "Stone County",
+   "fips": "29209",
+   "type": "county",
+   "redfin_region_id": 1703,
+   "realtor_location": "Stone County, MO",
+   "lat": 36.745822,
+   "lng": -93.457842
+  },
+  {
+   "name": "Sullivan County",
+   "fips": "29211",
+   "type": "county",
+   "redfin_region_id": 1704,
+   "realtor_location": "Sullivan County, MO",
+   "lat": 40.209587,
+   "lng": -93.109783
+  },
+  {
+   "name": "Taney County",
+   "fips": "29213",
+   "type": "county",
+   "redfin_region_id": 1705,
+   "realtor_location": "Taney County, MO",
+   "lat": 36.649827,
+   "lng": -93.042819
+  },
+  {
+   "name": "Texas County",
+   "fips": "29215",
+   "type": "county",
+   "redfin_region_id": 1706,
+   "realtor_location": "Texas County, MO",
+   "lat": 37.314257,
+   "lng": -91.964478
+  },
+  {
+   "name": "Vernon County",
+   "fips": "29217",
+   "type": "county",
+   "redfin_region_id": 1707,
+   "realtor_location": "Vernon County, MO",
+   "lat": 37.850196,
+   "lng": -94.341597
+  },
+  {
+   "name": "Warren County",
+   "fips": "29219",
+   "type": "county",
+   "redfin_region_id": 1708,
+   "realtor_location": "Warren County, MO",
+   "lat": 38.761902,
+   "lng": -91.159306
+  },
+  {
+   "name": "Washington County",
+   "fips": "29221",
+   "type": "county",
+   "redfin_region_id": 1709,
+   "realtor_location": "Washington County, MO",
+   "lat": 37.942611,
+   "lng": -90.897018
+  },
+  {
+   "name": "Wayne County",
+   "fips": "29223",
+   "type": "county",
+   "redfin_region_id": 1710,
+   "realtor_location": "Wayne County, MO",
+   "lat": 37.111074,
+   "lng": -90.453931
+  },
+  {
+   "name": "Webster County",
+   "fips": "29225",
+   "type": "county",
+   "redfin_region_id": 1711,
+   "realtor_location": "Webster County, MO",
+   "lat": 37.280804,
+   "lng": -92.87608
+  },
+  {
+   "name": "Worth County",
+   "fips": "29227",
+   "type": "county",
+   "redfin_region_id": 1712,
+   "realtor_location": "Worth County, MO",
+   "lat": 40.480499,
+   "lng": -94.419198
+  },
+  {
+   "name": "Wright County",
+   "fips": "29229",
+   "type": "county",
+   "redfin_region_id": 1713,
+   "realtor_location": "Wright County, MO",
+   "lat": 37.267633,
+   "lng": -92.479989
+  },
+  {
+   "name": "St. Louis city",
+   "fips": "29510",
+   "type": "independent_city",
+   "redfin_region_id": 1714,
+   "realtor_location": "St. Louis, MO",
+   "lat": 38.635699,
+   "lng": -90.244582
+  }
+ ]
+}

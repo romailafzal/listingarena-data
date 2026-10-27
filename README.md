@@ -22,7 +22,22 @@ Confirm the production hostname before creating scheduled jobs. Keep the URL in 
 
 Create one connector per provider under `sources/`. Candidate sources to evaluate include the providers mentioned in the project brief: Regrid, RentCast, Inspect, Realtor, and Redfin. Before implementation, record the exact provider, approved API/product, license, rate limits, supported geography, and allowed uses in `docs/providers.md`.
 
-Do not scrape websites or bypass access controls. Use an official API, licensed feed, or written permission. Realtor and Redfin access may be restricted or product-specific, so they must be verified before a connector is built.
+Redfin and Realtor.com are collected from their public website search endpoints by owner decision (terms-of-service risk accepted; see `docs/providers.md`). Never bypass logins, CAPTCHAs or other access controls. Other providers still need an official API, licensed feed, or written permission.
+
+## Phase 1 collector (Redfin + Realtor search results)
+
+```bash
+python3 -m venv --system-site-packages .venv   # or: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/bin/python -m jobs.collect --states TX,FL --sources redfin,realtor --types sale,rent,sold --workers 4
+.venv/bin/python -m jobs.collect --states TX --counties 48015,48453 --max-pages 2 --run-id live_test   # small test
+.venv/bin/python -m unittest discover tests
+```
+
+- `states/<st>.json`: counties (Census FIPS) with `redfin_region_id` and `realtor_location`; rebuild with `python -m tools.build_state_configs --seed <dir>`.
+- `sources/base.py`: `Source.search(county, type)` yields raw pages, `normalize(raw, type)` maps to the silver schema (`normalization/schema.py`). New sources (Homes.com, detail pages) subclass it and register in `jobs/collect.py:make_source`.
+- `sources/http.py`: per-source pacing, retries/backoff on 403/429/5xx, rotating browser headers, `<SOURCE>_PROXY`.
+- Output: bronze `exports/bronze/<source>/<st>/<fips>/<run_id>/<type>_pNNNN.json.gz`, silver `exports/silver/<source>/<run_id>.jsonl`, checkpoints `exports/checkpoints/<run_id>/...` (rerun with the same `--run-id` to resume; default run id is today's date).
+- `SOLD_WITHIN_DAYS` (default 90) sets the sold window. `python -m tools.realtor_fields` re-discovers Realtor's widest field set; `python -m tools.field_inventory --run-id <id>` regenerates `docs/field_inventory.md`.
 
 ## Suggested layout
 
@@ -73,6 +88,7 @@ The pipeline uses three layers:
 - **Bronze:** immutable provider response pages under `exports/bronze/`.
 - **Silver:** one normalized JSONL file per provider under `exports/silver/`.
 - **Gold:** the deduplicated current snapshot under `exports/gold/`, keyed by `provider:source_id`.
+- **CSV exports:** provider folders under `exports/csv/tx/48015/`, each with `sale.csv`, `rent.csv`, and `sold.csv`; `merged/` contains the three category files across all providers and `all_sources.csv` contains the complete combined export.
 
 SQLite state in `exports/state.sqlite3` stores cursors and the last successful update time. The first run uses `--full`; subsequent runs use the saved state for incremental requests.
 

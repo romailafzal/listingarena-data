@@ -1,0 +1,303 @@
+{
+ "state": "NM",
+ "name": "New Mexico",
+ "counties": [
+  {
+   "name": "Bernalillo County",
+   "fips": "35001",
+   "type": "county",
+   "redfin_region_id": 1912,
+   "realtor_location": "Bernalillo County, NM",
+   "lat": 35.053628,
+   "lng": -106.66908
+  },
+  {
+   "name": "Catron County",
+   "fips": "35003",
+   "type": "county",
+   "redfin_region_id": 1913,
+   "realtor_location": "Catron County, NM",
+   "lat": 33.901621,
+   "lng": -108.391928
+  },
+  {
+   "name": "Chaves County",
+   "fips": "35005",
+   "type": "county",
+   "redfin_region_id": 1914,
+   "realtor_location": "Chaves County, NM",
+   "lat": 33.361604,
+   "lng": -104.469837
+  },
+  {
+   "name": "Cibola County",
+   "fips": "35006",
+   "type": "county",
+   "redfin_region_id": 1915,
+   "realtor_location": "Cibola County, NM",
+   "lat": 34.928272,
+   "lng": -107.99268
+  },
+  {
+   "name": "Colfax County",
+   "fips": "35007",
+   "type": "county",
+   "redfin_region_id": 1916,
+   "realtor_location": "Colfax County, NM",
+   "lat": 36.612964,
+   "lng": -104.64011
+  },
+  {
+   "name": "Curry County",
+   "fips": "35009",
+   "type": "county",
+   "redfin_region_id": 1917,
+   "realtor_location": "Curry County, NM",
+   "lat": 34.572984,
+   "lng": -103.346055
+  },
+  {
+   "name": "De Baca County",
+   "fips": "35011",
+   "type": "county",
+   "redfin_region_id": 1918,
+   "realtor_location": "De Baca County, NM",
+   "lat": 34.359273,
+   "lng": -104.368696
+  },
+  {
+   "name": "Do\u00f1a Ana County",
+   "fips": "35013",
+   "type": "county",
+   "redfin_region_id": 1919,
+   "realtor_location": "Do\u00f1a Ana County, NM",
+   "lat": 32.349919,
+   "lng": -106.834968
+  },
+  {
+   "name": "Eddy County",
+   "fips": "35015",
+   "type": "county",
+   "redfin_region_id": 1920,
+   "realtor_location": "Eddy County, NM",
+   "lat": 32.457835,
+   "lng": -104.306434
+  },
+  {
+   "name": "Grant County",
+   "fips": "35017",
+   "type": "county",
+   "redfin_region_id": 1921,
+   "realtor_location": "Grant County, NM",
+   "lat": 32.732087,
+   "lng": -108.381504
+  },
+  {
+   "name": "Guadalupe County",
+   "fips": "35019",
+   "type": "county",
+   "redfin_region_id": 1922,
+   "realtor_location": "Guadalupe County, NM",
+   "lat": 34.869782,
+   "lng": -104.784968
+  },
+  {
+   "name": "Harding County",
+   "fips": "35021",
+   "type": "county",
+   "redfin_region_id": 1923,
+   "realtor_location": "Harding County, NM",
+   "lat": 35.859352,
+   "lng": -103.853424
+  },
+  {
+   "name": "Hidalgo County",
+   "fips": "35023",
+   "type": "county",
+   "redfin_region_id": 1924,
+   "realtor_location": "Hidalgo County, NM",
+   "lat": 31.898052,
+   "lng": -108.751929
+  },
+  {
+   "name": "Lea County",
+   "fips": "35025",
+   "type": "county",
+   "redfin_region_id": 1925,
+   "realtor_location": "Lea County, NM",
+   "lat": 32.795687,
+   "lng": -103.413271
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "35027",
+   "type": "county",
+   "redfin_region_id": 1926,
+   "realtor_location": "Lincoln County, NM",
+   "lat": 33.740841,
+   "lng": -105.449805
+  },
+  {
+   "name": "Los Alamos County",
+   "fips": "35028",
+   "type": "county",
+   "redfin_region_id": 1927,
+   "realtor_location": "Los Alamos County, NM",
+   "lat": 35.870047,
+   "lng": -106.307968
+  },
+  {
+   "name": "Luna County",
+   "fips": "35029",
+   "type": "county",
+   "redfin_region_id": 1928,
+   "realtor_location": "Luna County, NM",
+   "lat": 32.184523,
+   "lng": -107.747191
+  },
+  {
+   "name": "McKinley County",
+   "fips": "35031",
+   "type": "county",
+   "redfin_region_id": 1929,
+   "realtor_location": "McKinley County, NM",
+   "lat": 35.584062,
+   "lng": -108.253294
+  },
+  {
+   "name": "Mora County",
+   "fips": "35033",
+   "type": "county",
+   "redfin_region_id": 1930,
+   "realtor_location": "Mora County, NM",
+   "lat": 35.982841,
+   "lng": -104.921898
+  },
+  {
+   "name": "Otero County",
+   "fips": "35035",
+   "type": "county",
+   "redfin_region_id": 1931,
+   "realtor_location": "Otero County, NM",
+   "lat": 32.615599,
+   "lng": -105.751308
+  },
+  {
+   "name": "Quay County",
+   "fips": "35037",
+   "type": "county",
+   "redfin_region_id": 1932,
+   "realtor_location": "Quay County, NM",
+   "lat": 35.107018,
+   "lng": -103.548071
+  },
+  {
+   "name": "Rio Arriba County",
+   "fips": "35039",
+   "type": "county",
+   "redfin_region_id": 1933,
+   "realtor_location": "Rio Arriba County, NM",
+   "lat": 36.509669,
+   "lng": -106.693983
+  },
+  {
+   "name": "Roosevelt County",
+   "fips": "35041",
+   "type": "county",
+   "redfin_region_id": 1934,
+   "realtor_location": "Roosevelt County, NM",
+   "lat": 34.021207,
+   "lng": -103.483004
+  },
+  {
+   "name": "Sandoval County",
+   "fips": "35043",
+   "type": "county",
+   "redfin_region_id": 1935,
+   "realtor_location": "Sandoval County, NM",
+   "lat": 35.685091,
+   "lng": -106.883119
+  },
+  {
+   "name": "San Juan County",
+   "fips": "35045",
+   "type": "county",
+   "redfin_region_id": 1936,
+   "realtor_location": "San Juan County, NM",
+   "lat": 36.511624,
+   "lng": -108.324578
+  },
+  {
+   "name": "San Miguel County",
+   "fips": "35047",
+   "type": "county",
+   "redfin_region_id": 1937,
+   "realtor_location": "San Miguel County, NM",
+   "lat": 35.476859,
+   "lng": -104.803519
+  },
+  {
+   "name": "Santa Fe County",
+   "fips": "35049",
+   "type": "county",
+   "redfin_region_id": 1938,
+   "realtor_location": "Santa Fe County, NM",
+   "lat": 35.514531,
+   "lng": -105.963972
+  },
+  {
+   "name": "Sierra County",
+   "fips": "35051",
+   "type": "county",
+   "redfin_region_id": 1939,
+   "realtor_location": "Sierra County, NM",
+   "lat": 33.119468,
+   "lng": -107.188161
+  },
+  {
+   "name": "Socorro County",
+   "fips": "35053",
+   "type": "county",
+   "redfin_region_id": 1940,
+   "realtor_location": "Socorro County, NM",
+   "lat": 33.991658,
+   "lng": -106.939136
+  },
+  {
+   "name": "Taos County",
+   "fips": "35055",
+   "type": "county",
+   "redfin_region_id": 1941,
+   "realtor_location": "Taos County, NM",
+   "lat": 36.577183,
+   "lng": -105.638878
+  },
+  {
+   "name": "Torrance County",
+   "fips": "35057",
+   "type": "county",
+   "redfin_region_id": 1942,
+   "realtor_location": "Torrance County, NM",
+   "lat": 34.554978,
+   "lng": -105.890557
+  },
+  {
+   "name": "Union County",
+   "fips": "35059",
+   "type": "county",
+   "redfin_region_id": 1943,
+   "realtor_location": "Union County, NM",
+   "lat": 36.488085,
+   "lng": -103.475723
+  },
+  {
+   "name": "Valencia County",
+   "fips": "35061",
+   "type": "county",
+   "redfin_region_id": 1944,
+   "realtor_location": "Valencia County, NM",
+   "lat": 34.71684,
+   "lng": -106.806582
+  }
+ ]
+}

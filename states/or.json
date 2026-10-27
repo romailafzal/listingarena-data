@@ -1,0 +1,330 @@
+{
+ "state": "OR",
+ "name": "Oregon",
+ "counties": [
+  {
+   "name": "Baker County",
+   "fips": "41001",
+   "type": "county",
+   "redfin_region_id": 2325,
+   "realtor_location": "Baker County, OR",
+   "lat": 44.703427,
+   "lng": -117.691933
+  },
+  {
+   "name": "Benton County",
+   "fips": "41003",
+   "type": "county",
+   "redfin_region_id": 2326,
+   "realtor_location": "Benton County, OR",
+   "lat": 44.493882,
+   "lng": -123.424664
+  },
+  {
+   "name": "Clackamas County",
+   "fips": "41005",
+   "type": "county",
+   "redfin_region_id": 2327,
+   "realtor_location": "Clackamas County, OR",
+   "lat": 45.160493,
+   "lng": -122.195127
+  },
+  {
+   "name": "Clatsop County",
+   "fips": "41007",
+   "type": "county",
+   "redfin_region_id": 2328,
+   "realtor_location": "Clatsop County, OR",
+   "lat": 46.024509,
+   "lng": -123.705037
+  },
+  {
+   "name": "Columbia County",
+   "fips": "41009",
+   "type": "county",
+   "redfin_region_id": 2329,
+   "realtor_location": "Columbia County, OR",
+   "lat": 45.941932,
+   "lng": -123.081079
+  },
+  {
+   "name": "Coos County",
+   "fips": "41011",
+   "type": "county",
+   "redfin_region_id": 2330,
+   "realtor_location": "Coos County, OR",
+   "lat": 43.18591,
+   "lng": -124.094133
+  },
+  {
+   "name": "Crook County",
+   "fips": "41013",
+   "type": "county",
+   "redfin_region_id": 2331,
+   "realtor_location": "Crook County, OR",
+   "lat": 44.163054,
+   "lng": -120.371585
+  },
+  {
+   "name": "Curry County",
+   "fips": "41015",
+   "type": "county",
+   "redfin_region_id": 2332,
+   "realtor_location": "Curry County, OR",
+   "lat": 42.466439,
+   "lng": -124.210929
+  },
+  {
+   "name": "Deschutes County",
+   "fips": "41017",
+   "type": "county",
+   "redfin_region_id": 2333,
+   "realtor_location": "Deschutes County, OR",
+   "lat": 43.915118,
+   "lng": -121.225575
+  },
+  {
+   "name": "Douglas County",
+   "fips": "41019",
+   "type": "county",
+   "redfin_region_id": 2334,
+   "realtor_location": "Douglas County, OR",
+   "lat": 43.286328,
+   "lng": -123.154476
+  },
+  {
+   "name": "Gilliam County",
+   "fips": "41021",
+   "type": "county",
+   "redfin_region_id": 2335,
+   "realtor_location": "Gilliam County, OR",
+   "lat": 45.382955,
+   "lng": -120.276246
+  },
+  {
+   "name": "Grant County",
+   "fips": "41023",
+   "type": "county",
+   "redfin_region_id": 2336,
+   "realtor_location": "Grant County, OR",
+   "lat": 44.496326,
+   "lng": -119.014057
+  },
+  {
+   "name": "Harney County",
+   "fips": "41025",
+   "type": "county",
+   "redfin_region_id": 2337,
+   "realtor_location": "Harney County, OR",
+   "lat": 43.064449,
+   "lng": -118.987169
+  },
+  {
+   "name": "Hood River County",
+   "fips": "41027",
+   "type": "county",
+   "redfin_region_id": 2338,
+   "realtor_location": "Hood River County, OR",
+   "lat": 45.511775,
+   "lng": -121.655976
+  },
+  {
+   "name": "Jackson County",
+   "fips": "41029",
+   "type": "county",
+   "redfin_region_id": 2339,
+   "realtor_location": "Jackson County, OR",
+   "lat": 42.411621,
+   "lng": -122.675611
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "41031",
+   "type": "county",
+   "redfin_region_id": 2340,
+   "realtor_location": "Jefferson County, OR",
+   "lat": 44.645151,
+   "lng": -121.178632
+  },
+  {
+   "name": "Josephine County",
+   "fips": "41033",
+   "type": "county",
+   "redfin_region_id": 2341,
+   "realtor_location": "Josephine County, OR",
+   "lat": 42.386983,
+   "lng": -123.57162
+  },
+  {
+   "name": "Klamath County",
+   "fips": "41035",
+   "type": "county",
+   "redfin_region_id": 2342,
+   "realtor_location": "Klamath County, OR",
+   "lat": 42.683761,
+   "lng": -121.646168
+  },
+  {
+   "name": "Lake County",
+   "fips": "41037",
+   "type": "county",
+   "redfin_region_id": 2343,
+   "realtor_location": "Lake County, OR",
+   "lat": 42.788401,
+   "lng": -120.38979
+  },
+  {
+   "name": "Lane County",
+   "fips": "41039",
+   "type": "county",
+   "redfin_region_id": 2344,
+   "realtor_location": "Lane County, OR",
+   "lat": 43.928334,
+   "lng": -122.897581
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "41041",
+   "type": "county",
+   "redfin_region_id": 2345,
+   "realtor_location": "Lincoln County, OR",
+   "lat": 44.641061,
+   "lng": -123.911212
+  },
+  {
+   "name": "Linn County",
+   "fips": "41043",
+   "type": "county",
+   "redfin_region_id": 2346,
+   "realtor_location": "Linn County, OR",
+   "lat": 44.488898,
+   "lng": -122.537208
+  },
+  {
+   "name": "Malheur County",
+   "fips": "41045",
+   "type": "county",
+   "redfin_region_id": 2347,
+   "realtor_location": "Malheur County, OR",
+   "lat": 43.188625,
+   "lng": -117.603191
+  },
+  {
+   "name": "Marion County",
+   "fips": "41047",
+   "type": "county",
+   "redfin_region_id": 2348,
+   "realtor_location": "Marion County, OR",
+   "lat": 44.900898,
+   "lng": -122.57626
+  },
+  {
+   "name": "Morrow County",
+   "fips": "41049",
+   "type": "county",
+   "redfin_region_id": 2349,
+   "realtor_location": "Morrow County, OR",
+   "lat": 45.425496,
+   "lng": -119.602311
+  },
+  {
+   "name": "Multnomah County",
+   "fips": "41051",
+   "type": "county",
+   "redfin_region_id": 2350,
+   "realtor_location": "Multnomah County, OR",
+   "lat": 45.547711,
+   "lng": -122.417363
+  },
+  {
+   "name": "Polk County",
+   "fips": "41053",
+   "type": "county",
+   "redfin_region_id": 2351,
+   "realtor_location": "Polk County, OR",
+   "lat": 44.900372,
+   "lng": -123.39864
+  },
+  {
+   "name": "Sherman County",
+   "fips": "41055",
+   "type": "county",
+   "redfin_region_id": 2352,
+   "realtor_location": "Sherman County, OR",
+   "lat": 45.399216,
+   "lng": -120.678512
+  },
+  {
+   "name": "Tillamook County",
+   "fips": "41057",
+   "type": "county",
+   "redfin_region_id": 2353,
+   "realtor_location": "Tillamook County, OR",
+   "lat": 45.45589,
+   "lng": -123.759299
+  },
+  {
+   "name": "Umatilla County",
+   "fips": "41059",
+   "type": "county",
+   "redfin_region_id": 2354,
+   "realtor_location": "Umatilla County, OR",
+   "lat": 45.5912,
+   "lng": -118.73388
+  },
+  {
+   "name": "Union County",
+   "fips": "41061",
+   "type": "county",
+   "redfin_region_id": 2355,
+   "realtor_location": "Union County, OR",
+   "lat": 45.304081,
+   "lng": -117.999149
+  },
+  {
+   "name": "Wallowa County",
+   "fips": "41063",
+   "type": "county",
+   "redfin_region_id": 2356,
+   "realtor_location": "Wallowa County, OR",
+   "lat": 45.593753,
+   "lng": -117.18558
+  },
+  {
+   "name": "Wasco County",
+   "fips": "41065",
+   "type": "county",
+   "redfin_region_id": 2357,
+   "realtor_location": "Wasco County, OR",
+   "lat": 45.164536,
+   "lng": -121.165069
+  },
+  {
+   "name": "Washington County",
+   "fips": "41067",
+   "type": "county",
+   "redfin_region_id": 2358,
+   "realtor_location": "Washington County, OR",
+   "lat": 45.553542,
+   "lng": -123.097615
+  },
+  {
+   "name": "Wheeler County",
+   "fips": "41069",
+   "type": "county",
+   "redfin_region_id": 2359,
+   "realtor_location": "Wheeler County, OR",
+   "lat": 44.736415,
+   "lng": -120.026861
+  },
+  {
+   "name": "Yamhill County",
+   "fips": "41071",
+   "type": "county",
+   "redfin_region_id": 2360,
+   "realtor_location": "Yamhill County, OR",
+   "lat": 45.247827,
+   "lng": -123.316399
+  }
+ ]
+}

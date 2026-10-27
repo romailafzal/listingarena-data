@@ -1,0 +1,51 @@
+{
+ "state": "HI",
+ "name": "Hawaii",
+ "counties": [
+  {
+   "name": "Hawaii County",
+   "fips": "15001",
+   "type": "county",
+   "redfin_region_id": 663,
+   "realtor_location": "Hawaii County, HI",
+   "lat": 19.597764,
+   "lng": -155.502443
+  },
+  {
+   "name": "Honolulu County",
+   "fips": "15003",
+   "type": "county",
+   "redfin_region_id": 664,
+   "realtor_location": "Honolulu County, HI",
+   "lat": 21.461365,
+   "lng": -158.201974
+  },
+  {
+   "name": "Kalawao County",
+   "fips": "15005",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Kalawao County, HI",
+   "lat": 21.218764,
+   "lng": -156.97401
+  },
+  {
+   "name": "Kauai County",
+   "fips": "15007",
+   "type": "county",
+   "redfin_region_id": 666,
+   "realtor_location": "Kauai County, HI",
+   "lat": 22.012038,
+   "lng": -159.705965
+  },
+  {
+   "name": "Maui County",
+   "fips": "15009",
+   "type": "county",
+   "redfin_region_id": 667,
+   "realtor_location": "Maui County, HI",
+   "lat": 20.855931,
+   "lng": -156.60155
+  }
+ ]
+}
