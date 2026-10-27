@@ -1,4 +1,14 @@
-"""Shared HTTP client: per-source rate limit, retry with backoff, proxies, rotating headers."""
+"""Shared HTTP client: per-source pacing + in-flight cap, retry with backoff, block detection, proxies, rotating headers.
+
+Concurrency knobs (env, per source; NAME = REDFIN / REALTOR / ...):
+  NAME_MIN_INTERVAL  global spacing between request *starts* (s). 0 = no pacing. Slots are reserved under a
+                     lock but the wait happens outside it, so with 0 nothing is serialized.
+  NAME_MAX_INFLIGHT  cap on simultaneous HTTP calls for this client (adaptive, see AdaptiveLimiter). Unset = no cap.
+  NAME_PAGE_PARALLEL parallel page fetches inside one county/type search (read by the sources via
+                     SourceClient.page_parallel). Default 1 = sequential pagination.
+Detail/per-home fetchers should create their OWN SourceClient (e.g. SourceClient("redfin_detail", ...)) so they
+get independent, lower limits; the search-level concurrency above must not be applied to detail calls.
+"""
 from __future__ import annotations
 
 import json
@@ -48,6 +58,66 @@ def parse_json(text: str) -> Any:
     return json.loads(text)
 
 
+class AdaptiveLimiter:
+    """Bounded in-flight cap that steps down on sustained blocks and back up after a quiet period.
+
+    levels: caps from highest to lowest (e.g. [200, 100, 50]). A "sustained block" is >= `trip` block
+    responses (403/429/captcha) within `window` seconds; it drops one level. After `recover` seconds with no
+    block it climbs one level (never above levels[0]). Thread-safe; acquire()/release() wrap one HTTP call.
+    """
+
+    def __init__(self, name: str, levels: list[int], trip: int = 8, window: float = 60.0, recover: float = 900.0,
+                 clock=time.monotonic):
+        self.name, self.levels, self.trip, self.window, self.recover = name, levels, trip, window, recover
+        self.level, self.inflight, self.clock = 0, 0, clock
+        self.cond = threading.Condition()
+        self.blocks: list[float] = []
+        self.last_block = self.last_change = clock()
+
+    @property
+    def cap(self) -> int:
+        return self.levels[self.level]
+
+    def acquire(self) -> None:
+        with self.cond:
+            self._maybe_recover()
+            while self.inflight >= self.cap:
+                self.cond.wait(5)
+                self._maybe_recover()
+            self.inflight += 1
+
+    def release(self) -> None:
+        with self.cond:
+            self.inflight -= 1
+            self.cond.notify()
+
+    def note_block(self) -> None:
+        with self.cond:
+            now = self.clock()
+            self.last_block = now
+            self.blocks = [t for t in self.blocks if now - t < self.window] + [now]
+            if len(self.blocks) >= self.trip and self.level < len(self.levels) - 1 and now - self.last_change > self.window:
+                self.level += 1
+                self.last_change, self.blocks = now, []
+                print(f"[{self.name}] sustained blocks: in-flight cap -> {self.cap}", flush=True)
+
+    def _maybe_recover(self) -> None:
+        now = self.clock()
+        if self.level and now - max(self.last_block, self.last_change) >= self.recover:
+            self.level -= 1
+            self.last_change = now
+            print(f"[{self.name}] {self.recover / 60:.0f} min without blocks: in-flight cap -> {self.cap}", flush=True)
+            self.cond.notify_all()
+
+
+def looks_blocked(r: requests.Response) -> bool:
+    """Soft block: 200 with an HTML/captcha page where JSON was expected."""
+    if r.status_code != 200:
+        return False
+    head = r.text[:400].lstrip().lower()
+    return head.startswith("<") and ("captcha" in head or "access denied" in head or "<html" in head or "<!doctype" in head)
+
+
 class SourceClient:
     """One per source. Thread-safe; spaces requests at least `min_interval` seconds apart (+ jitter).
 
@@ -67,6 +137,15 @@ class SourceClient:
         proxy = os.environ.get(f"{name.upper()}_PROXY") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
         self.proxies = {"http": proxy, "https": proxy} if proxy else None
         self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0}
+        self._stats_lock = threading.Lock()
+        self.page_parallel = max(1, int(os.environ.get(f"{name.upper()}_PAGE_PARALLEL", 1)))
+        cap = int(os.environ.get(f"{name.upper()}_MAX_INFLIGHT", 0) or 0)
+        # 20 -> 10 -> 5 per worker style ladder: cap, cap/2, cap/4
+        self.limiter = AdaptiveLimiter(name, [cap, max(1, cap // 2), max(1, cap // 4)]) if cap > 0 else None
+
+    def _count(self, key: str, v: float = 1) -> None:
+        with self._stats_lock:
+            self.stats[key] = round(self.stats[key] + v, 3)
 
     def _session(self) -> requests.Session:
         s = getattr(self._local, "session", None)
@@ -88,23 +167,31 @@ class SourceClient:
             self._wait_turn()
             h = browser_headers()
             h.update(headers or {})
-            self.stats["requests"] += 1
+            self._count("requests")
             t0 = time.monotonic()
+            if self.limiter:
+                self.limiter.acquire()
             try:
                 r = self._session().request(method, url, headers=h, proxies=self.proxies, timeout=self.timeout, **kw)
             except requests.RequestException as e:
                 last, blocked = f"{type(e).__name__}: {e}", False
-                self.stats["errors"] += 1
+                self._count("errors")
             else:
-                self.stats["latency_s"] = round(self.stats["latency_s"] + time.monotonic() - t0, 3)
-                if r.status_code not in RETRY_STATUS:
+                self._count("latency_s", time.monotonic() - t0)
+                soft = looks_blocked(r)
+                if r.status_code not in RETRY_STATUS and not soft:
                     return r
-                blocked = r.status_code in (403, 429)
-                last = f"HTTP {r.status_code}"
-                self.stats["blocked" if blocked else "errors"] += 1
+                blocked = soft or r.status_code in (403, 429)
+                last = "HTTP 403 (captcha/HTML)" if soft else f"HTTP {r.status_code}"
+                self._count("blocked" if blocked else "errors")
+                if blocked and self.limiter:
+                    self.limiter.note_block()
+            finally:
+                if self.limiter:
+                    self.limiter.release()
             if attempt == self.retries - 1:
                 break
-            self.stats["retries"] += 1
+            self._count("retries")
             wait = (self.block_backoff * (attempt + 1) if blocked else self.backoff_base ** (attempt + 1)) * random.uniform(1, 1.3)
             print(f"[{self.name}] {last} on {method} {url[:120]}; retry {attempt + 1} in {wait:.0f}s", flush=True)
             self.sleep(wait)

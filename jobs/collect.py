@@ -11,6 +11,7 @@ Layout (run_id defaults to today's date, so re-running the same day resumes):
 from __future__ import annotations
 
 import argparse
+import os
 import gzip
 import json
 import sys
@@ -123,6 +124,46 @@ class Collector:
         return dest
 
 
+class LiveLoader(threading.Thread):
+    """Loads newly finished counties into Postgres every `every` seconds while collecting (LA_LIVE_LOAD=1),
+    so the DB / map fill in as data arrives. Best effort: failures are logged; the final load reconciles."""
+
+    def __init__(self, out: Path, run_id: str, states: list[str], every: float):
+        super().__init__(daemon=True, name="live-load")
+        self.out, self.run_id, self.states, self.every = out, run_id, states, every
+        self.pending: set[str] = set()
+        self.lock, self.stop = threading.Lock(), threading.Event()
+
+    def add(self, fips: str) -> None:
+        with self.lock:
+            self.pending.add(fips)
+
+    def flush(self) -> None:
+        with self.lock:
+            fips, self.pending = self.pending, set()
+        if not fips:
+            return
+        try:
+            from db.load import load_run
+            from db.migrate import connect
+            with connect() as conn:
+                t0 = time.time()
+                # one live loader at a time per run (each source's collect process has its own loader)
+                conn.execute("SELECT pg_advisory_lock(hashtext(%s))", ("live:" + self.run_id,))
+                conn.commit()
+                r = load_run(conn, self.out, self.run_id, set(self.states), fips, trigger="live", log=lambda *_: None)
+            print(f"live-load: {len(fips)} counties, {r.get('units', 0)} units, active={r.get('active', 0)} "
+                  f"new={r.get('new', 0)} in {time.time() - t0:.0f}s", flush=True)
+        except Exception as e:  # noqa: BLE001
+            print(f"live-load failed: {type(e).__name__}: {e}", flush=True)
+            with self.lock:
+                self.pending |= fips
+
+    def run(self) -> None:
+        while not self.stop.wait(self.every):
+            self.flush()
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--states", required=True)
@@ -156,13 +197,22 @@ def main(argv=None) -> int:
         with sems[s.name]:
             return col.run_one(s, c, t)
 
+    live = None
+    if os.environ.get("LA_LIVE_LOAD", "0") == "1":
+        live = LiveLoader(Path(a.out), a.run_id, [x.strip().upper() for x in a.states.split(",")],
+                          float(os.environ.get("LA_LIVE_LOAD_SECONDS", 60)))
+        live.start()
+
     failures = 0
-    with ThreadPoolExecutor(max_workers=a.workers) as pool:
+    pool = ThreadPoolExecutor(max_workers=a.workers)
+    try:
         futs = {pool.submit(job, *task): task for task in tasks}
         for f in as_completed(futs):
             s, c, t = futs[f]
             try:
                 r = f.result()
+                if live and not r.get("resumed"):
+                    live.add(c.fips)
                 print(f"{'resumed ' if r.get('resumed') else ''}{s.name:8} {c.state} {c.fips} {c.name:22} {t:5} "
                       f"pages={r['pages']} records={r['records']} total={r['reported_total']}", flush=True)
             except Exception as e:  # noqa: BLE001 - keep other counties going; checkpoint not written
@@ -172,6 +222,16 @@ def main(argv=None) -> int:
                 if not blocked:
                     traceback.print_exc()
                 col.record_error(s.name, c, t, e, blocked)
+    except BaseException:
+        # Ctrl-C / Dagster termination: drop queued counties, let in-flight ones finish or die with the process.
+        # Finished counties are checkpointed, so rerunning the same run_id resumes where this stopped.
+        print("collect: interrupted; cancelling queued counties (resume with the same --run-id)", flush=True)
+        pool.shutdown(wait=False, cancel_futures=True)
+        raise
+    pool.shutdown(wait=True)
+    if live:
+        live.stop.set()
+        live.flush()
     summary = {}
     for n, s in sources.items():
         print(f"{n}: silver -> {col.assemble(n)}; http {s.client.stats}", flush=True)

@@ -7,7 +7,7 @@ from urllib.parse import quote, urlencode
 
 from normalization.extras import REDFIN_GIS, REDFIN_RENT, pick
 from normalization.schema import blank_record, iso_date, ms_to_date, num
-from sources.base import County, Page, Source
+from sources.base import County, Page, Source, fetch_ordered
 from sources.http import SourceClient
 
 GIS = "https://www.redfin.com/stingray/api/gis"
@@ -90,21 +90,38 @@ class RedfinSource(Source):
         raise RuntimeError(f"redfin: {last}")
 
     def search(self, county: County, listing_type: str, max_pages: int | None = None) -> Iterator[Page]:
+        """Page 1 gives the total; the remaining expected pages are fetched `client.page_parallel` at a time
+        (in order), then pagination continues sequentially if Redfin returns more than the total suggested."""
         n = 0
         for area in area_params(county, listing_type):
             seen: set[str] = set()
-            page = 1
-            while max_pages is None or n < max_pages:
-                url = build_url(area, listing_type, page)
-                data, (homes, total) = self._fetch(url, listing_type)
-                new = [h for h in homes if property_id(h, listing_type) not in seen]
-                seen.update(property_id(h, listing_type) for h in new)
-                n += 1
-                yield Page(n, {"url": url}, data, new, {"total": total, "returned": len(homes)})
-                # pages are not always full; stop on empty page, page of repeats, or reported total
-                if not homes or not new or (total is not None and len(seen) >= total):
-                    break
-                page += 1
+            page, done, total = 1, False, None
+            while not done and (max_pages is None or n < max_pages):
+                par = self.client.page_parallel if isinstance(self.client.page_parallel, int) else 1
+                if page == 1 or par <= 1:
+                    batch = [page]
+                elif total is None:  # no total reported: speculative window that doubles (bounded waste)
+                    want = min(par, page - 1)
+                    if max_pages is not None:
+                        want = min(want, max_pages - n)
+                    batch = list(range(page, page + want))
+                else:
+                    want = max(1, -(-(total - len(seen)) // PER_PAGE))
+                    if max_pages is not None:
+                        want = min(want, max_pages - n)
+                    batch = list(range(page, page + want))
+                urls = [build_url(area, listing_type, p) for p in batch]
+                for url, (data, (homes, total)) in zip(urls, fetch_ordered(
+                        lambda u: self._fetch(u, listing_type), urls, self.client.page_parallel)):
+                    new = [h for h in homes if property_id(h, listing_type) not in seen]
+                    seen.update(property_id(h, listing_type) for h in new)
+                    n += 1
+                    yield Page(n, {"url": url}, data, new, {"total": total, "returned": len(homes)})
+                    page += 1
+                    # pages are not always full; stop on empty page, page of repeats, or reported total
+                    if not homes or not new or (total is not None and len(seen) >= total):
+                        done = True
+                        break
 
     def normalize(self, raw: dict, listing_type: str) -> dict:
         return normalize_rental(raw) if listing_type == "rent" else normalize_gis(raw, listing_type)

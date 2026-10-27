@@ -45,3 +45,33 @@ class Source:
 
     def supports(self, county: County) -> bool:
         return True
+
+
+def fetch_ordered(fn, args: list, parallel: int):
+    """Yield fn(arg) for each arg in order, running up to `parallel` calls at once (lazy window).
+
+    Used for parallel page fetches inside one county/type search; the HTTP client's limiter still caps the
+    source-wide in-flight total. Exceptions propagate when their result is reached.
+    """
+    parallel = parallel if isinstance(parallel, int) else 1
+    if parallel <= 1 or len(args) <= 1:
+        for a in args:
+            yield fn(a)
+        return
+    from collections import deque
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=min(parallel, len(args))) as ex:
+        it, q = iter(args), deque()
+        for a in it:
+            q.append(ex.submit(fn, a))
+            if len(q) >= parallel:
+                break
+        try:
+            while q:
+                yield q.popleft().result()
+                nxt = next(it, None)
+                if nxt is not None:
+                    q.append(ex.submit(fn, nxt))
+        finally:
+            for f in q:
+                f.cancel()

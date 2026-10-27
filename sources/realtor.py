@@ -8,7 +8,7 @@ from typing import Iterator
 
 from normalization.extras import realtor_extra
 from normalization.schema import blank_record, iso_date, num
-from sources.base import County, Page, Source
+from sources.base import County, Page, Source, fetch_ordered
 from sources.http import SourceClient
 
 ENDPOINT = "https://www.realtor.com/frontdoor/graphql"
@@ -114,17 +114,30 @@ class RealtorSource(Source):
             yield from self._continue(county.realtor_location, listing_type, band, counter, max_pages, 0)
 
     def _continue(self, location, listing_type, price, counter, max_pages, offset) -> Iterator[Page]:
-        while max_pages is None or counter[0] < max_pages:
-            body = build_body(location, listing_type, offset, price=price)
-            data = self._fetch(body)
-            results, total = parse_search(data)
-            if offset >= total and not results:
-                return
+        """First page sequentially (gives total); remaining offsets up to the 10k cap fetched
+        `client.page_parallel` at a time, yielded in order."""
+        if max_pages is not None and counter[0] >= max_pages:
+            return
+        body = build_body(location, listing_type, offset, price=price)
+        data = self._fetch(body)
+        results, total = parse_search(data)
+        if offset >= total and not results:
+            return
+        counter[0] += 1
+        yield Page(counter[0], {"url": ENDPOINT, "body": body["variables"]}, data, results,
+                   {"total": total, "offset": offset, "price_band": price})
+        if not results:
+            return
+        offsets = list(range(offset + PAGE_SIZE, min(total, MAX_RESULTS - PAGE_SIZE + 1), PAGE_SIZE))
+        if max_pages is not None:
+            offsets = offsets[:max(0, max_pages - counter[0])]
+        bodies = [build_body(location, listing_type, o, price=price) for o in offsets]
+        for o, b, data in zip(offsets, bodies, fetch_ordered(self._fetch, bodies, self.client.page_parallel)):
+            results, total2 = parse_search(data)
             counter[0] += 1
-            yield Page(counter[0], {"url": ENDPOINT, "body": body["variables"]}, data, results,
-                       {"total": total, "offset": offset, "price_band": price})
-            offset += PAGE_SIZE
-            if not results or offset >= total or offset + PAGE_SIZE > MAX_RESULTS:
+            yield Page(counter[0], {"url": ENDPOINT, "body": b["variables"]}, data, results,
+                       {"total": total2, "offset": o, "price_band": price})
+            if not results:
                 return
 
     def normalize(self, raw: dict, listing_type: str) -> dict:
