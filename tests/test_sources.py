@@ -203,3 +203,20 @@ class StateConfigTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+def test_completeness_rule_counts_listings_with_tolerance():
+    from jobs.collect import completeness_tolerance, is_complete
+    assert completeness_tolerance(100) == 2 and completeness_tolerance(6707) == 14
+    assert is_complete(34, None, 6707, 6707)
+    assert is_complete(34, None, 6707, 6693)          # within 0.2%
+    assert not is_complete(34, None, 6707, 6269)      # property-deduped count would fail; listing keys must be used
+    assert not is_complete(2, 2, 100, 100)            # cut by --max-pages
+    assert is_complete(1, None, 0, 0) and is_complete(1, None, None, 5)
+
+
+def test_realtor_listing_key_separates_mls_duplicates():
+    from sources.realtor import RealtorSource
+    a = {"property_id": "7278673101", "listing_id": "3001536382"}
+    b = {"property_id": "7278673101", "listing_id": "3000045589"}
+    assert RealtorSource.listing_key(a) != RealtorSource.listing_key(b)

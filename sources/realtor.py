@@ -75,6 +75,12 @@ class RealtorSource(Source):
     def supports(self, county: County) -> bool:
         return bool(county.realtor_location)
 
+    @staticmethod
+    def listing_key(raw: dict) -> str:
+        """home_search `total` counts listings: one home listed by two MLS feeds (e.g. AUTX + CTTX) is two
+        results with the same property_id. Count completeness on property_id+listing_id."""
+        return f"{raw.get('property_id')}:{raw.get('listing_id')}"
+
     def _fetch(self, body: dict) -> dict:
         last = None
         for _ in range(3):  # empty/errored home_search is transient
