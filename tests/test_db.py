@@ -101,3 +101,35 @@ class LoadTest(unittest.TestCase):
         load_run(self.conn, self.tmp, "r3", log=lambda *_: None)
         self.assertEqual(self.events("r3"), [("relisted", "77474|20 elm|")])
         self.assertEqual(self.conn.execute("SELECT count(*) FROM listings WHERE active").fetchone()[0], 3)
+
+
+@unittest.skipUnless(URL, "no Postgres reachable")
+class PublishTest(LoadTest):
+    def test_lifecycle(self):  # not re-run here
+        pass
+
+    def test_publish_chunks_and_idempotence(self):
+        from db.load import load_run
+        from publish.app import publish
+        from normalization.schema import APP_COLS
+        write_run(self.tmp, "r1", "redfin", [r("redfin", str(i), f"{i} Oak St", i, lat=30.0, lng=-96.0) for i in range(1, 8)])
+        load_run(self.conn, self.tmp, "r1", log=lambda *_: None)
+
+        class S:
+            calls = []
+
+            def post(self, url, json, headers, timeout):
+                self.calls.append(json)
+
+                class R:
+                    def raise_for_status(self): pass
+                return R()
+        s = S()
+        res = publish(self.conn, "http://x/api/listings", "t", chunk=3, session=s)
+        self.assertEqual(res["sent"], 7)
+        self.assertEqual([len(c) for c in s.calls], [3, 3, 1])
+        row = s.calls[0][0]
+        self.assertEqual(set(row), set(APP_COLS))
+        self.assertTrue(row["external_id"].startswith("la:"))
+        self.assertEqual((row["lat"], row["lng"]), (30.0, -96.0))
+        self.assertEqual(publish(self.conn, "u", "t", session=s)["pending"], 0)
