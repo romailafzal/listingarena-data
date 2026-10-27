@@ -40,15 +40,20 @@ def fields() -> str:
 
 
 def build_body(location: str, listing_type: str, offset: int, limit: int = PAGE_SIZE,
-               price: tuple | None = None, today: date | None = None) -> dict:
+               price: tuple | None = None, today: date | None = None, dates: tuple | None = None) -> dict:
+    """price=(lo, hi|None) filters list_price (sale/rent). dates=(min_iso, max_iso|None) narrows the sold_date
+    window (sold): sold_price filters return 0 results and list_price misses sold homes without a list price,
+    so sold searches > 10k are split by sold date instead."""
     q: dict = {"status": [STATUS[listing_type]], "search_location": {"location": location}}
     sort_field = "list_date"
     if listing_type == "sold":
         q["sold_date"] = {"min": ((today or date.today()) - timedelta(days=SOLD_DAYS)).isoformat()}
         sort_field = "sold_date"
+        if dates:
+            q["sold_date"] = {"min": dates[0]} if dates[1] is None else {"min": dates[0], "max": dates[1]}
     if price:
         lo, hi = price
-        q["list_price" if listing_type != "sold" else "sold_price"] = {"min": lo} if hi is None else {"min": lo, "max": hi}
+        q["list_price"] = {"min": lo} if hi is None else {"min": lo, "max": hi}
     query = ("query ConsumerSearchQuery($query:HomeSearchCriteria!,$limit:Int,$offset:Int,$sort:[SearchAPISort]){"
              "home_search(query:$query,limit:$limit,offset:$offset,sort:$sort){count total results{" + fields() + "}}}")
     return {"operationName": "ConsumerSearchQuery", "query": query,
@@ -93,8 +98,22 @@ class RealtorSource(Source):
                 self.client.sleep(5)
         raise RuntimeError(f"realtor: {last}")
 
-    def _total(self, location, listing_type, price) -> int:
-        return parse_search(self._fetch(build_body(location, listing_type, 0, limit=1, price=price)))[1]
+    @staticmethod
+    def _body(location, listing_type, offset, band, limit=PAGE_SIZE) -> dict:
+        if band and listing_type == "sold":
+            return build_body(location, listing_type, offset, limit=limit, dates=band)
+        return build_body(location, listing_type, offset, limit=limit, price=band)
+
+    def _total(self, location, listing_type, band) -> int:
+        return parse_search(self._fetch(self._body(location, listing_type, 0, band, limit=1)))[1]
+
+    def _date_bands(self, location, lo: date, hi: date) -> list:
+        """Split the sold window [lo, hi] (inclusive days) until each band has <= MAX_RESULTS."""
+        total = self._total(location, "sold", (lo.isoformat(), hi.isoformat()))
+        if total <= MAX_RESULTS or hi <= lo:
+            return [(lo.isoformat(), hi.isoformat())]
+        mid = lo + (hi - lo) // 2
+        return self._date_bands(location, lo, mid) + self._date_bands(location, mid + timedelta(days=1), hi)
 
     def _bands(self, location, listing_type, lo=0, hi=None) -> list:
         """Split (lo, hi) by price until each band has <= MAX_RESULTS; both halves are probed in parallel."""
@@ -118,7 +137,12 @@ class RealtorSource(Source):
         if total <= MAX_RESULTS:
             return
         # > 10k: the newest 10k are in; price bands bring the rest (bands overlap at edges; dedupe by property_id)
-        for band in self._bands(county.realtor_location, listing_type):
+        if listing_type == "sold":
+            today = date.today()
+            bands = self._date_bands(county.realtor_location, today - timedelta(days=SOLD_DAYS), today + timedelta(days=1))
+        else:
+            bands = self._bands(county.realtor_location, listing_type)
+        for band in bands:
             if max_pages is not None and counter[0] >= max_pages:
                 return
             yield from self._continue(county.realtor_location, listing_type, band, counter, max_pages, 0)
@@ -128,7 +152,7 @@ class RealtorSource(Source):
         `client.page_parallel` at a time, yielded in order."""
         if max_pages is not None and counter[0] >= max_pages:
             return
-        body = build_body(location, listing_type, offset, price=price)
+        body = self._body(location, listing_type, offset, price)
         data = self._fetch(body)
         results, total = parse_search(data)
         if offset >= total and not results:
@@ -141,7 +165,7 @@ class RealtorSource(Source):
         offsets = list(range(offset + PAGE_SIZE, min(total, MAX_RESULTS - PAGE_SIZE + 1), PAGE_SIZE))
         if max_pages is not None:
             offsets = offsets[:max(0, max_pages - counter[0])]
-        bodies = [build_body(location, listing_type, o, price=price) for o in offsets]
+        bodies = [self._body(location, listing_type, o, price) for o in offsets]
         for o, b, data in zip(offsets, bodies, fetch_ordered(self._fetch, bodies, self.client.page_parallel)):
             results, total2 = parse_search(data)
             counter[0] += 1

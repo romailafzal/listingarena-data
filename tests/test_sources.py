@@ -220,3 +220,11 @@ def test_realtor_listing_key_separates_mls_duplicates():
     a = {"property_id": "7278673101", "listing_id": "3001536382"}
     b = {"property_id": "7278673101", "listing_id": "3000045589"}
     assert RealtorSource.listing_key(a) != RealtorSource.listing_key(b)
+
+
+def test_realtor_sold_bands_split_by_sold_date():
+    from sources.realtor import build_body
+    b = build_body("X", "sold", 0, dates=("2026-08-01", "2026-08-31"))
+    q = b["variables"]["query"]
+    assert q["sold_date"] == {"min": "2026-08-01", "max": "2026-08-31"} and "sold_price" not in q
+    assert build_body("X", "sale", 0, price=(1, 2))["variables"]["query"]["list_price"] == {"min": 1, "max": 2}
