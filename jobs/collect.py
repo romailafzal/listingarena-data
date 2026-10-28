@@ -252,6 +252,7 @@ def main(argv=None) -> int:
         pool.shutdown(wait=False, cancel_futures=True)
         raise
     pool.shutdown(wait=True)
+    col.progress.flush()
     if live:
         live.stop.set()
         live.flush()

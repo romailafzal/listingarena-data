@@ -234,11 +234,38 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
     return out
 
 
-def load_run(conn, exports: Path, run_id: str, states=None, fips=None, trigger="cli", log=print) -> dict:
+def already_loaded(conn, exports: Path, run_id: str, units: list) -> list:
+    """Drop units whose every checkpoint is older than its run_county_stats row (loaded since it was written),
+    so repeated loads of a run (drain loader, Dagster per-state load) only do new/changed counties."""
+    loaded = {(f, s, t): ts.timestamp() for f, s, t, ts in conn.execute(
+        "SELECT county_fips, source, listing_type, loaded_at FROM run_county_stats WHERE run_id=%s AND source<>'merged'",
+        (run_id,))}
+    out = []
+    for u in units:
+        fresh = False
+        for src in set(u.fetched) | set(u.failed):
+            cp = exports / "checkpoints" / run_id / src / u.state.lower() / f"{u.fips}_{u.listing_type}.json"
+            if src in u.failed:
+                cp = cp.with_suffix(".error.json")
+            ts = loaded.get((u.fips, src, u.listing_type))
+            if ts is None or not cp.exists() or cp.stat().st_mtime > ts:
+                fresh = True
+        if fresh:
+            out.append(u)
+    return out
+
+
+def load_run(conn, exports: Path, run_id: str, states=None, fips=None, trigger="cli", log=print,
+             skip_loaded: bool = True) -> dict:
     start_run(conn, run_id, trigger, states)
+    conn.execute("SET synchronous_commit = off")  # bulk load: don't wait on WAL flush per county (crash = reload)
     totals = defaultdict(int)
     from jobs.memguard import rss_mb, wait_for_memory
     units = discover(exports, run_id, states, fips)
+    if skip_loaded:
+        n0 = len(units)
+        units = already_loaded(conn, exports, run_id, units)
+        totals["skipped_loaded"] = n0 - len(units)
     for i, u in enumerate(units):
         wait_for_memory(log, "load unit")
         try:
