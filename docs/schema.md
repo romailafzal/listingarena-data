@@ -21,6 +21,12 @@ erDiagram
     properties ||--o{ listings : "property_key"
     properties ||..o{ source_records : "property_key (soft)"
     listings ||--o{ listing_events : "listing_id"
+    listings ||..o{ listing_details : "listing_id (soft)"
+    source_records ||..o| listing_details : "source, source_id (soft)"
+    listing_details ||--o{ listing_detail_history : "source, source_id"
+    listing_details ||--o{ listing_detail_taxes : "source, source_id"
+    listing_details ||--o{ listing_detail_schools : "source, source_id"
+    listing_details ||--o{ listing_detail_comps : "source, source_id"
 
     runs { text run_id PK  timestamptz started_at  timestamptz finished_at  text status  text trigger  text_arr states  jsonb stats }
     counties { text fips PK  text state  text state_name  text name  text kind  float lat  float lng }
@@ -136,6 +142,46 @@ Index: `run_county_stats_county (county_fips, loaded_at DESC)`.
 | `message` | text | exception text (≤2,000 chars) |
 | `created_at` | timestamptz | |
 Index: `errors_created (created_at DESC)`.
+
+### `listing_details` — Phase 2 per-home detail, one row per source home (migration 006, `jobs.fetch_details`)
+Fetched for listings with a `new` / `changed` / `relisted` event since `--since-run` (and, with `--include-missing`,
+active listings with no detail yet). Raw responses: `exports/bronze/<source>_detail/<st>/<fips>/<run_id>/<source_id>.json.gz`.
+| column | type | meaning |
+|---|---|---|
+| `source`, `source_id` | text **PK** | same ids as `source_records` (Realtor `property_id`, Redfin `propertyId`) |
+| `listing_type`, `listing_id`, `property_key`, `county_fips`, `state` | | listing that triggered the fetch (`listing_id` = `listings.id`, soft) |
+| `source_listing_id`, `url`, `status`, `list_price`, `list_date`, `last_sold_price`, `last_sold_date` | | listing state per the detail page |
+| `description` | text | full remarks |
+| `property_type`, `beds`, `baths`, `baths_full`, `baths_half`, `sqft`, `lot_sqft`, `year_built`, `stories`, `garage` | | structure |
+| `parking`, `heating`, `cooling`, `construction`, `style` | text | parsed from the source's feature groups |
+| `hoa_fee` (monthly), `tax_annual`, `tax_year`, `assessed_value`, `property_tax_rate` | | latest tax year with a tax amount |
+| `lat`, `lng`, `apn`, `neighborhood`, `school_district` | | location |
+| `mls_name`, `mls_id`, `mls_listing_id` | text | listing provenance (e.g. `Houston`, `HOTX`, `52066119`) |
+| `list_office`, `list_office_phone`, `list_office_email`, `list_broker`, `list_agent_name`, `list_agent_phone`, `list_agent_email`, `list_agent_license`, `buyer_agent_name`, `buyer_office` | text | agents / brokerage where exposed (internal only) |
+| `photo_count`, `photos` | int, jsonb | all photos in order `[{href, tags}]` |
+| `virtual_tours` | jsonb | `[{type, href}]` tours, videos, matterport |
+| `features` | jsonb | `{category: ["Key: value", ...]}` as the source groups them |
+| `interior_features`, `exterior_features`, `appliances` | jsonb | lists picked from `features` |
+| `agents`, `mortgage`, `estimates`, `open_houses`, `flags`, `extra` | jsonb | raw sections: all agent blocks; mortgage estimate + monthly breakdown; AVMs by provider; ... |
+| `payload` | jsonb | the full normalized detail (incl. child lists) |
+| `row_hash` | text | sha1 of `payload`; child rows are rewritten only when it changes |
+| `bronze_path`, `run_id` | text | raw file (relative to `exports/`) and detail run id (`det_<UTC>`) |
+| `first_fetched_at`, `fetched_at`, `changed_at` | timestamptz | `fetched_at` is the restart checkpoint (newer than the event = skipped) |
+Indexes: `listing_details_listing (listing_id)`, `listing_details_county (county_fips)`.
+
+### `listing_detail_history` / `listing_detail_taxes` / `listing_detail_schools` / `listing_detail_comps`
+Child rows keyed by `(source, source_id, ...)`, replaced on each changed fetch.
+- **history** `seq` PK: `event_date`, `event` (Listed, Price Changed, Sold, Listed for rent, Listing removed ...), `price`, `price_sqft`, `source_name` (MLS), `mls_listing_id`, `status`.
+- **taxes** `year` PK: `tax`, `assessed_total`, `assessed_building`, `assessed_land`, `market_total`.
+- **schools** `seq` PK: `name`, `rating`, `distance_mi`, `levels`, `grades`, `funding`, `district`.
+- **comps** `(kind, comp_source_id)` PK: similar homes returned with the subject: `rank`, `comp_listing_id`, `status`, `price`, `sold_date`, `beds`, `baths`, `sqft`, `address`, `zip`, `lat`, `lng`, `distance_mi` (haversine to the subject), `url`. Link to our data with `source_records (source, source_id = comp_source_id)`; index `listing_detail_comps_comp (source, comp_source_id)`.
+
+```sql
+-- Comps of a listing, linked to our canonical listings
+SELECT k.rank, k.distance_mi, k.price, k.status, sr.property_key
+FROM listing_detail_comps k LEFT JOIN source_records sr ON sr.source = k.source AND sr.source_id = k.comp_source_id
+WHERE k.source = 'realtor' AND k.source_id = '8439071025' ORDER BY k.rank;
+```
 
 ### `schema_migrations`
 `name` text PK (migration file), `applied_at`.

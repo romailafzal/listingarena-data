@@ -1,0 +1,572 @@
+{
+ "data": {
+  "home": {
+   "property_id": "8439071025",
+   "listing_id": "3001931817",
+   "href": "https://www.realtor.com/realestateandhomes-detail/1031-Meyer-St_Sealy_TX_77474_M84390-71025",
+   "status": "for_sale",
+   "list_price": 399000,
+   "list_date": "2026-10-16T22:46:23Z",
+   "last_update_date": "2026-10-29T22:08:41Z",
+   "last_sold_price": null,
+   "last_sold_date": "2023-05-26",
+   "photo_count": 34,
+   "price_per_sqft": null,
+   "description": {
+    "text": "Fixture description text.",
+    "beds": 5,
+    "baths": 3,
+    "baths_full": 3,
+    "baths_half": null,
+    "sqft": null,
+    "lot_sqft": 15002,
+    "year_built": 1936,
+    "type": "single_family",
+    "sub_type": null,
+    "stories": 2,
+    "garage": null
+   },
+   "hoa": null,
+   "photos": [
+    {
+     "href": "http://ap.rdcpix.com/6c39ee1687da77952eeff597b5051bd4l-m809221110s.jpg",
+     "tags": [
+      {
+       "label": "exterior"
+      },
+      {
+       "label": "exterior"
+      },
+      {
+       "label": "exterior"
+      },
+      {
+       "label": "exterior"
+      },
+      {
+       "label": "exterior"
+      }
+     ]
+    },
+    {
+     "href": "http://ap.rdcpix.com/6c39ee1687da77952eeff597b5051bd4l-m2621347269s.jpg",
+     "tags": [
+      {
+       "label": "unknown"
+      }
+     ]
+    },
+    {
+     "href": "http://ap.rdcpix.com/6c39ee1687da77952eeff597b5051bd4l-m3596738849s.jpg",
+     "tags": [
+      {
+       "label": "unknown"
+      }
+     ]
+    }
+   ],
+   "virtual_tours": null,
+   "videos": null,
+   "matterport": null,
+   "open_houses": null,
+   "flags": {
+    "is_foreclosure": null,
+    "is_new_construction": null,
+    "is_pending": null,
+    "is_contingent": null,
+    "is_coming_soon": null,
+    "is_price_reduced": null
+   },
+   "pet_policy": null,
+   "property_history": [
+    {
+     "date": "2026-10-23",
+     "event_name": "Listed for rent",
+     "price": 3000,
+     "price_sqft": null,
+     "source_name": "Houston",
+     "source_listing_id": "81419907",
+     "listing": {
+      "list_price": 3000,
+      "status": "for_rent"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "event_name": "Listed",
+     "price": 399000,
+     "price_sqft": null,
+     "source_name": "Houston",
+     "source_listing_id": "52066119",
+     "listing": {
+      "list_price": 399000,
+      "status": "for_sale"
+     }
+    },
+    {
+     "date": "2026-07-19",
+     "event_name": "Listing removed",
+     "price": 2800,
+     "price_sqft": 1.1173184357541899,
+     "source_name": "Houston",
+     "source_listing_id": "71257319",
+     "listing": {
+      "list_price": 2800,
+      "status": "off_market"
+     }
+    },
+    {
+     "date": "2026-07-19",
+     "event_name": "Listing removed",
+     "price": 415000,
+     "price_sqft": 130.05327483547478,
+     "source_name": "Houston",
+     "source_listing_id": "58329770",
+     "listing": {
+      "list_price": 415000,
+      "status": "off_market"
+     }
+    },
+    {
+     "date": "2026-04-25",
+     "event_name": "Listing removed",
+     "price": 469000,
+     "price_sqft": 146.9758696333438,
+     "source_name": "Houston",
+     "source_listing_id": "65433437",
+     "listing": {
+      "list_price": 469000,
+      "status": "off_market"
+     }
+    }
+   ],
+   "tax_history": [
+    {
+     "year": 2025,
+     "tax": 11276,
+     "assessment": {
+      "total": 573945,
+      "building": 508700,
+      "land": 65245
+     },
+     "market": {
+      "total": 573945,
+      "building": 508700,
+      "land": 65245
+     }
+    },
+    {
+     "year": 2023,
+     "tax": 11199,
+     "assessment": {
+      "total": 569088,
+      "building": 505331,
+      "land": 63757
+     },
+     "market": {
+      "total": 569088,
+      "building": 505331,
+      "land": 63757
+     }
+    },
+    {
+     "year": 2022,
+     "tax": 8787,
+     "assessment": {
+      "total": 407616,
+      "building": 343859,
+      "land": 63757
+     },
+     "market": {
+      "total": 407616,
+      "building": 343859,
+      "land": 63757
+     }
+    }
+   ],
+   "tax_record": {
+    "apn": null,
+    "public_record_id": "3240CDB4A87882E9513CC1777428A9D3",
+    "tax_parcel_id": "70555778-1674-4a14-9829-d249ff0ceaf6"
+   },
+   "mortgage": {
+    "property_tax_rate": 0.02826065,
+    "insurance_rate": 0.0098,
+    "rates_url": "https://www.realtor.com/mortgage/rates/?from=mobile#zip=77474&property_price=399000&mlid=8439071025",
+    "estimate": {
+     "loan_amount": 319200,
+     "monthly_payment": 3408,
+     "total_payment": 771161,
+     "down_payment": 79800,
+     "average_rate": {
+      "rate": 0.07086,
+      "loan_type": {
+       "term": 30
+      }
+     },
+     "monthly_payment_details": [
+      {
+       "type": "principal_and_interest",
+       "amount": 2142,
+       "display_name": "Principal & interest"
+      },
+      {
+       "type": "home_insurance",
+       "amount": 326,
+       "display_name": "Home insurance"
+      },
+      {
+       "type": "hoa_fees",
+       "amount": 0,
+       "display_name": "HOA fees"
+      },
+      {
+       "type": "mortgage_insurance",
+       "amount": 0,
+       "display_name": "Mortgage insurance"
+      },
+      {
+       "type": "property_tax",
+       "amount": 940,
+       "display_name": "Property tax"
+      }
+     ]
+    }
+   },
+   "estimates": {
+    "current_values": [
+     {
+      "estimate": 411000,
+      "estimate_high": 441400,
+      "estimate_low": 380600,
+      "date": "2026-10-05",
+      "source": {
+       "name": "Cotality\u2122",
+       "type": "corelogic"
+      }
+     },
+     {
+      "estimate": 498267,
+      "estimate_high": 647747,
+      "estimate_low": 348786,
+      "date": "2026-10-28",
+      "source": {
+       "name": "Quantarium",
+       "type": "quantarium"
+      }
+     },
+     {
+      "estimate": 329000,
+      "estimate_high": 391500,
+      "estimate_low": 266500,
+      "date": "2026-10-14",
+      "source": {
+       "name": "Collateral Analytics",
+       "type": "collateral"
+      }
+     }
+    ]
+   },
+   "schools": {
+    "schools": [
+     {
+      "name": "Sealy Junior High School",
+      "rating": 4,
+      "distance_in_miles": 0.3,
+      "education_levels": [
+       "middle"
+      ],
+      "funding_type": "public",
+      "grades": [
+       "6",
+       "7",
+       "8"
+      ],
+      "district": {
+       "name": "Sealy Independent School District",
+       "id": "06211441621"
+      }
+     },
+     {
+      "name": "Selman Elementary School",
+      "rating": 4,
+      "distance_in_miles": 1,
+      "education_levels": [
+       "elementary"
+      ],
+      "funding_type": "public",
+      "grades": [
+       "K",
+       "1",
+       "2",
+       "3",
+       "4",
+       "5"
+      ],
+      "district": {
+       "name": "Sealy Independent School District",
+       "id": "06211441621"
+      }
+     },
+     {
+      "name": "Sealy High School",
+      "rating": 6,
+      "distance_in_miles": 1.4,
+      "education_levels": [
+       "high"
+      ],
+      "funding_type": "public",
+      "grades": [
+       "9",
+       "10",
+       "11",
+       "12"
+      ],
+      "district": {
+       "name": "Sealy Independent School District",
+       "id": "06211441621"
+      }
+     }
+    ]
+   },
+   "details": [
+    {
+     "category": "Bedrooms",
+     "text": [
+      "Bedrooms: 5",
+      "Bedroom 1 Dimensions: 10' x 10'",
+      "Bedroom 2 Dimensions: 19' x 19'",
+      "Bedroom 3 Dimensions: 13' x 10'",
+      "Bedroom 4 Dimensions: 17' x 14'",
+      "Bedroom 5 Dimensions: 16' x 16'",
+      "Bedroom 1 Level: First",
+      "Bedroom 2 Level: First",
+      "Bedroom 3 Level: Second",
+      "Bedroom 4 Level: Second",
+      "Bedroom 5 Level: Second"
+     ]
+    },
+    {
+     "category": "Other Rooms",
+     "text": [
+      "Total Rooms: 8",
+      "Living Room Dimensions: 25' x 16'",
+      "Living Room Level: First"
+     ]
+    },
+    {
+     "category": "Bathrooms",
+     "text": [
+      "Total Bathrooms: 3",
+      "Full Bathrooms: 3"
+     ]
+    },
+    {
+     "category": "Interior Features",
+     "text": [
+      "BedroomOnMainLevel",
+      "EnSuiteBathroom",
+      "ShowerOnly",
+      "TwoBedroomsDown",
+      "TubShower",
+      "UpperLevelPrimary",
+      "Flooring: EngineeredHardwood, Vinyl"
+     ]
+    },
+    {
+     "category": "Appliances",
+     "text": [
+      "Dishwasher",
+      "ElectricOven",
+      "Microwave",
+      "Laundry Features: WasherHookup, ElectricDryerHookup"
+     ]
+    },
+    {
+     "category": "Heating and Cooling",
+     "text": [
+      "Cooling Features: CentralAir, Electric, WindowUnits",
+      "Heating Features: Central, Electric, WindowUnit",
+      "Heating: Yes",
+      "Number of Fireplaces: 1"
+     ]
+    },
+    {
+     "category": "Building and Construction",
+     "text": [
+      "Year Built: 1936",
+      "Construction Materials: CementSiding, WoodSiding",
+      "Direction Faces: East",
+      "Foundation Details: PillarPostPier, Slab",
+      "Levels: Two",
+      "Property Age: 90",
+      "Roof: Composition",
+      "Levels or Stories: 2",
+      "Year Built Source: PublicRecords",
+      "Architectural Style: Victorian"
+     ]
+    }
+   ],
+   "location": {
+    "address": {
+     "line": "1031 Meyer St",
+     "city": "Sealy",
+     "state_code": "TX",
+     "postal_code": "77474",
+     "coordinate": {
+      "lat": 29.77253,
+      "lon": -96.155726
+     }
+    },
+    "county": {
+     "name": "Austin",
+     "fips_code": "48015"
+    },
+    "neighborhoods": null,
+    "street_view_url": null
+   },
+   "source": {
+    "id": "HOTX",
+    "name": "Houston",
+    "type": "mls",
+    "listing_id": "52066119",
+    "agents": [
+     {
+      "agent_id": "x",
+      "agent_name": "Test Agent",
+      "office_name": "Texas Signature Realty",
+      "type": "seller"
+     }
+    ]
+   },
+   "advertisers": [
+    {
+     "type": "seller",
+     "name": "Test Agent",
+     "email": "agent@example.com",
+     "phones": [
+      {
+       "number": "5550000001",
+       "type": "Office"
+      }
+     ],
+     "office": {
+      "name": "Texas Signature Realty",
+      "email": "office@example.com",
+      "phones": [
+       {
+        "number": "5550000002"
+       }
+      ]
+     },
+     "broker": {
+      "name": "Texas Signature Realty - Broker"
+     },
+     "builder": null,
+     "state_license": "0000000"
+    }
+   ],
+   "buyers": null,
+   "consumer_advertisers": [
+    {
+     "name": "Test Agent",
+     "phone": null,
+     "type": "Agent",
+     "agent_id": "1"
+    }
+   ],
+   "related_homes": {
+    "count": 19,
+    "results": [
+     {
+      "property_id": "8450325340",
+      "listing_id": "2998066619",
+      "status": "for_sale",
+      "list_price": 377900,
+      "href": "https://www.realtor.com/realestateandhomes-detail/723-N-Meyer-St_Sealy_TX_77474_M84503-25340",
+      "last_sold_price": null,
+      "last_sold_date": null,
+      "description": {
+       "beds": 4,
+       "baths": 3,
+       "sqft": 2238,
+       "lot_sqft": 19014,
+       "year_built": 1947,
+       "type": "single_family"
+      },
+      "location": {
+       "address": {
+        "line": "723 N Meyer St",
+        "city": "Sealy",
+        "state_code": "TX",
+        "postal_code": "77474",
+        "coordinate": {
+         "lat": 29.788966,
+         "lon": -96.159104
+        }
+       }
+      }
+     },
+     {
+      "property_id": "7843886568",
+      "listing_id": "3001988844",
+      "status": "for_sale",
+      "list_price": 329000,
+      "href": "https://www.realtor.com/realestateandhomes-detail/916-Meyer-St_Sealy_TX_77474_M78438-86568",
+      "last_sold_price": null,
+      "last_sold_date": null,
+      "description": {
+       "beds": 5,
+       "baths": 3,
+       "sqft": 3318,
+       "lot_sqft": 15002,
+       "year_built": 1960,
+       "type": "single_family"
+      },
+      "location": {
+       "address": {
+        "line": "916 Meyer St",
+        "city": "Sealy",
+        "state_code": "TX",
+        "postal_code": "77474",
+        "coordinate": {
+         "lat": 29.774248,
+         "lon": -96.155392
+        }
+       }
+      }
+     },
+     {
+      "property_id": "8250163971",
+      "listing_id": "3001713666",
+      "status": "for_sale",
+      "list_price": 389250,
+      "href": "https://www.realtor.com/realestateandhomes-detail/227-Village-Dr_Sealy_TX_77474_M82501-63971",
+      "last_sold_price": null,
+      "last_sold_date": null,
+      "description": {
+       "beds": 4,
+       "baths": 3,
+       "sqft": 1838,
+       "lot_sqft": 11034,
+       "year_built": 2009,
+       "type": "single_family"
+      },
+      "location": {
+       "address": {
+        "line": "227 Village Dr",
+        "city": "Sealy",
+        "state_code": "TX",
+        "postal_code": "77474",
+        "coordinate": {
+         "lat": 29.773502,
+         "lon": -96.163222
+        }
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

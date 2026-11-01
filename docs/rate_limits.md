@@ -68,3 +68,9 @@ Total wall time for Texas collection across all steps ≈ 45 min of fetching; 0 
 - `run_county_stats.reported_total / unique_listings / unique_records` (migration 004) store the evidence.
   `python -m tools.recheck_completeness RUN_ID [--states ..] [--apply]` re-evaluates checkpoints from bronze.
   `--apply` moves partial checkpoints aside, so re-running `jobs.collect` with the same run id refetches only those.
+
+## Per-home detail (Phase 2, 2026-11-02)
+- Redfin `/stingray/api/home/details/*`: still 403 (CloudFront) from this PC days after the 10x20 attempt; search
+  endpoints unaffected. Treat the detail path as blocked until a single request succeeds; then start at 1 in flight.
+- Realtor GraphQL `home`: 6 sequential requests, ~0.9 s each, no errors. Start at 2-3 in flight
+  (`--inflight 3`, the default) and raise one step at a time only after a full day without blocks.

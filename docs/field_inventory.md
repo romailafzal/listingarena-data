@@ -1074,3 +1074,39 @@ App COLS: `listing_type`, `external_id`, `address`, `city`, `state`, `zip`, `pro
 | `yearBuilt.level` | 100 | app | 1 |
 | `yearBuilt.value` | 95 | app | 1888 |
 | `zip` | 100 | app | 77418 |
+
+## Phase 2 detail fields (`listing_details`), smoke test 2026-11-02
+
+Realtor `home(property_id)`: 6 live homes (1 for-sale Austin County TX probe + 5 recently-sold WY homes from
+`det_smoke_20261102`). Fill = homes with a non-empty value. Sold homes have less listing data (no list price,
+often no agent block), so for-sale fill rates will be higher. Redfin: 0 live (detail paths 403 from this IP), so no
+fill rates; fields below are what the parser maps when the endpoint answers.
+
+| column / section | Realtor path | Realtor fill (6) | Redfin path (unverified) |
+|---|---|---|---|
+| source_listing_id | `listing_id` | 4/6 | `aboveTheFold.listingId` |
+| url, status | `href`, `status` | 6/6 | `addressSectionInfo.url`, `.status` |
+| list_price / list_date | `list_price`, `list_date` | 2/6 / 4/6 | `addressSectionInfo.priceInfo.amount` |
+| last_sold_price / date | `last_sold_price`, `last_sold_date` | 0/6 (WY non-disclosure) / 3/6 | from history |
+| description | `description.text` | 3/6 | `mainHouseInfo.marketingRemarks[].marketingRemark` |
+| beds, baths, baths_full | `description.*` | 4/6 | `addressSectionInfo`, `publicRecordsInfo.basicInfo` |
+| sqft / lot_sqft / year_built / stories | `description.*` | 2/6 / 3/6 / 4/6 / 3/6 | same + basicInfo |
+| heating / cooling / construction / style / parking | `details[]` "Key: value" lines | 4 / 1 / 1 / 1 / 1 of 6 | `amenitiesInfo.superGroups[].amenityGroups[]` |
+| interior / exterior features, appliances | `details[]` categories | 4 / 3 / 1 of 6 | amenity groups |
+| features (all groups) | `details{category text}` | 5/6 | amenity groups |
+| hoa_fee | `hoa.fee` | 0/6 | `hoaDues` |
+| tax_annual, tax_year, assessed_value + taxes child | `tax_history[]` (tax, assessment, market) | 4/6 (60 rows) | `publicRecordsInfo.taxInfo` (latest year only) |
+| property_tax_rate, mortgage | `mortgage{property_tax_rate, insurance_rate, estimate{..., monthly_payment_details}}` | 4/6 | - |
+| estimates (AVMs) | `estimates.current_values[]` | 4/6 | - |
+| lat, lng | `location.address.coordinate` | 6/6 | `addressSectionInfo.latLong` |
+| apn | `tax_record.apn` | 0/6 (parcel id present) | `basicInfo.apn` |
+| neighborhood | `location.neighborhoods[]` | 0/6 | - |
+| school_district + schools child | `schools.schools[]` (rating, distance, levels, district) | 6/6 (21 rows) | `schoolsAndDistrictsInfo` |
+| mls_name / mls_id / mls_listing_id | `source{name id listing_id}` | 4/6 | `mainHouseInfo.dataSourceName`, `mlsId` |
+| list office / phone / email | `advertisers[].office` | 3 / 4 / 3 of 6 | `listingAgents[].agentInfo.brokerName` |
+| list agent name / phone / email / license | `advertisers[]` | 3 / 1 / 1 / 1 of 6 | `listingAgents[].agentInfo` |
+| buyer agent / office | `source.agents[type=buyer]`, `buyers` | 0/6 | `buyingAgents[]` |
+| photos (ordered, tagged), photo_count | `photos{href tags}` | 6/6 | `mediaBrowserInfo.photos[].photoUrls` |
+| virtual_tours | `virtual_tours`, `videos`, `matterport` | 0/6 | `mediaBrowserInfo.virtualTours` |
+| price history child | `property_history[]` | 4/6 (49 rows) | `propertyHistoryInfo.events[]` |
+| comps child | `related_homes(similar_homes).results[]` | 6/6 (31 rows; all 12 WY comps matched our listings) | - |
