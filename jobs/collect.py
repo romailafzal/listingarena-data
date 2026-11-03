@@ -81,6 +81,9 @@ class Collector:
 
     def run_one(self, source: Source, c: County, t: str) -> dict:
         cp = self.checkpoint(source.name, c, t)
+        if not cp.exists():
+            from jobs.memguard import wait_for_memory
+            wait_for_memory(lambda m: print(m, flush=True), f"{source.name} county task")
         if cp.exists():
             res = json.loads(cp.read_text()); res["resumed"] = True
             if self.progress:
@@ -115,7 +118,9 @@ class Collector:
         part.write_text("".join(json.dumps(r) + "\n" for r in rows))
         res = {"source": source.name, "state": c.state, "county": c.name, "fips": c.fips, "type": t,
                "pages": pages, "records": len(rows), "unique_listings": len(keys), "reported_total": total,
-               "complete": is_complete(pages, self.max_pages, total, len(keys)),
+               "complete": is_complete(pages, self.max_pages,
+                                       total if getattr(source, "total_is_exact", lambda _t: True)(t) else None,
+                                       len(keys)),
                "seconds": round(time.time() - started, 1)}
         cp.parent.mkdir(parents=True, exist_ok=True)
         cp.write_text(json.dumps(res))
@@ -247,6 +252,7 @@ def main(argv=None) -> int:
         pool.shutdown(wait=False, cancel_futures=True)
         raise
     pool.shutdown(wait=True)
+    col.progress.flush()
     if live:
         live.stop.set()
         live.flush()

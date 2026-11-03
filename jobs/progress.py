@@ -20,17 +20,37 @@ class Progress:
             from db.migrate import connect, database_url
             self.conn = connect(database_url())
             self.conn.autocommit = True
+            self.conn.execute("SET synchronous_commit = off")  # progress rows are disposable; never wait on WAL
+            self.buf: dict = {}
+            self.buf_lock = threading.Lock()
+            threading.Thread(target=self._flusher, daemon=True, name="progress-flush").start()
         except Exception as e:  # noqa: BLE001
             print(f"progress: disabled ({type(e).__name__}: {e})", flush=True)
 
     def set(self, source: str, state: str, fips: str, t: str, status: str, pages: int = 0, records: int = 0) -> None:
+        """Non-blocking: keeps the latest state per county/type; a background thread writes them in batches.
+        (Synchronous writes stalled every collect worker when Postgres was IO-bound by loading.)"""
         if self.conn is None:
             return
+        with self.buf_lock:
+            self.buf[(source, fips, t)] = (self.run_id, source, state, fips, t, status, pages, records, status)
+
+    def flush(self) -> None:
+        with self.buf_lock:
+            rows, self.buf = list(self.buf.values()), {}
+        if not rows:
+            return
         try:
-            with self.lock:
-                self.conn.execute(_SQL, (self.run_id, source, state, fips, t, status, pages, records, status))
+            with self.lock, self.conn.cursor() as cur:
+                cur.executemany(_SQL, rows)
         except Exception as e:  # noqa: BLE001
             print(f"progress: write failed ({type(e).__name__}: {e})", flush=True)
+
+    def _flusher(self) -> None:
+        import time
+        while True:
+            time.sleep(2)
+            self.flush()
 
     def queue_many(self, rows: list[tuple[str, str, str, str]]) -> None:
         """rows: (source, state, fips, type); only inserts missing rows as queued."""

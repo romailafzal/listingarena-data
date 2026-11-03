@@ -37,6 +37,7 @@ uv run la-migrate                                      # apply db/migrations/*.s
 uv run la-collect --states TX --counties 48015 --max-pages 8 --run-id my_run     # = python -m jobs.collect
 uv run la-load --run-id my_run                         # Postgres + change tracking
 uv run la-publish --dry-run /tmp/payload.json          # or with LISTINGARENA_API_URL + LISTINGARENA_ADMIN_TOKEN
+uv run python -m jobs.fetch_details --since-run my_run --state TX --limit 50 --source realtor   # Phase 2 per-home detail
 uv run pytest -q tests                                 # DB tests use a scratch DB listingarena_test, skip without Postgres
 ```
 
