@@ -1,0 +1,1086 @@
+{
+ "state": "KY",
+ "name": "Kentucky",
+ "counties": [
+  {
+   "name": "Adair County",
+   "fips": "21001",
+   "type": "county",
+   "redfin_region_id": 1110,
+   "realtor_location": "Adair County, KY",
+   "lat": 37.105559,
+   "lng": -85.28138
+  },
+  {
+   "name": "Allen County",
+   "fips": "21003",
+   "type": "county",
+   "redfin_region_id": 1111,
+   "realtor_location": "Allen County, KY",
+   "lat": 36.75077,
+   "lng": -86.192458
+  },
+  {
+   "name": "Anderson County",
+   "fips": "21005",
+   "type": "county",
+   "redfin_region_id": 1112,
+   "realtor_location": "Anderson County, KY",
+   "lat": 38.005396,
+   "lng": -84.986417
+  },
+  {
+   "name": "Ballard County",
+   "fips": "21007",
+   "type": "county",
+   "redfin_region_id": 1113,
+   "realtor_location": "Ballard County, KY",
+   "lat": 37.051323,
+   "lng": -89.010367
+  },
+  {
+   "name": "Barren County",
+   "fips": "21009",
+   "type": "county",
+   "redfin_region_id": 1114,
+   "realtor_location": "Barren County, KY",
+   "lat": 36.962805,
+   "lng": -85.932108
+  },
+  {
+   "name": "Bath County",
+   "fips": "21011",
+   "type": "county",
+   "redfin_region_id": 1115,
+   "realtor_location": "Bath County, KY",
+   "lat": 38.152249,
+   "lng": -83.737641
+  },
+  {
+   "name": "Bell County",
+   "fips": "21013",
+   "type": "county",
+   "redfin_region_id": 1116,
+   "realtor_location": "Bell County, KY",
+   "lat": 36.728928,
+   "lng": -83.680718
+  },
+  {
+   "name": "Boone County",
+   "fips": "21015",
+   "type": "county",
+   "redfin_region_id": 1117,
+   "realtor_location": "Boone County, KY",
+   "lat": 38.9589,
+   "lng": -84.736371
+  },
+  {
+   "name": "Bourbon County",
+   "fips": "21017",
+   "type": "county",
+   "redfin_region_id": 1118,
+   "realtor_location": "Bourbon County, KY",
+   "lat": 38.202562,
+   "lng": -84.20986
+  },
+  {
+   "name": "Boyd County",
+   "fips": "21019",
+   "type": "county",
+   "redfin_region_id": 1119,
+   "realtor_location": "Boyd County, KY",
+   "lat": 38.360003,
+   "lng": -82.681406
+  },
+  {
+   "name": "Boyle County",
+   "fips": "21021",
+   "type": "county",
+   "redfin_region_id": 1120,
+   "realtor_location": "Boyle County, KY",
+   "lat": 37.618104,
+   "lng": -84.868352
+  },
+  {
+   "name": "Bracken County",
+   "fips": "21023",
+   "type": "county",
+   "redfin_region_id": 1121,
+   "realtor_location": "Bracken County, KY",
+   "lat": 38.680365,
+   "lng": -84.115235
+  },
+  {
+   "name": "Breathitt County",
+   "fips": "21025",
+   "type": "county",
+   "redfin_region_id": 1122,
+   "realtor_location": "Breathitt County, KY",
+   "lat": 37.517807,
+   "lng": -83.317158
+  },
+  {
+   "name": "Breckinridge County",
+   "fips": "21027",
+   "type": "county",
+   "redfin_region_id": 1123,
+   "realtor_location": "Breckinridge County, KY",
+   "lat": 37.777988,
+   "lng": -86.432919
+  },
+  {
+   "name": "Bullitt County",
+   "fips": "21029",
+   "type": "county",
+   "redfin_region_id": 1124,
+   "realtor_location": "Bullitt County, KY",
+   "lat": 37.969945,
+   "lng": -85.702635
+  },
+  {
+   "name": "Butler County",
+   "fips": "21031",
+   "type": "county",
+   "redfin_region_id": 1125,
+   "realtor_location": "Butler County, KY",
+   "lat": 37.207013,
+   "lng": -86.682471
+  },
+  {
+   "name": "Caldwell County",
+   "fips": "21033",
+   "type": "county",
+   "redfin_region_id": 1126,
+   "realtor_location": "Caldwell County, KY",
+   "lat": 37.148642,
+   "lng": -87.870509
+  },
+  {
+   "name": "Calloway County",
+   "fips": "21035",
+   "type": "county",
+   "redfin_region_id": 1127,
+   "realtor_location": "Calloway County, KY",
+   "lat": 36.620978,
+   "lng": -88.274086
+  },
+  {
+   "name": "Campbell County",
+   "fips": "21037",
+   "type": "county",
+   "redfin_region_id": 1128,
+   "realtor_location": "Campbell County, KY",
+   "lat": 38.946981,
+   "lng": -84.379583
+  },
+  {
+   "name": "Carlisle County",
+   "fips": "21039",
+   "type": "county",
+   "redfin_region_id": 1129,
+   "realtor_location": "Carlisle County, KY",
+   "lat": 36.85718,
+   "lng": -88.976614
+  },
+  {
+   "name": "Carroll County",
+   "fips": "21041",
+   "type": "county",
+   "redfin_region_id": 1130,
+   "realtor_location": "Carroll County, KY",
+   "lat": 38.668394,
+   "lng": -85.124024
+  },
+  {
+   "name": "Carter County",
+   "fips": "21043",
+   "type": "county",
+   "redfin_region_id": 1131,
+   "realtor_location": "Carter County, KY",
+   "lat": 38.314094,
+   "lng": -83.038988
+  },
+  {
+   "name": "Casey County",
+   "fips": "21045",
+   "type": "county",
+   "redfin_region_id": 1132,
+   "realtor_location": "Casey County, KY",
+   "lat": 37.321962,
+   "lng": -84.92822
+  },
+  {
+   "name": "Christian County",
+   "fips": "21047",
+   "type": "county",
+   "redfin_region_id": 1133,
+   "realtor_location": "Christian County, KY",
+   "lat": 36.892059,
+   "lng": -87.492986
+  },
+  {
+   "name": "Clark County",
+   "fips": "21049",
+   "type": "county",
+   "redfin_region_id": 1134,
+   "realtor_location": "Clark County, KY",
+   "lat": 37.970314,
+   "lng": -84.145115
+  },
+  {
+   "name": "Clay County",
+   "fips": "21051",
+   "type": "county",
+   "redfin_region_id": 1135,
+   "realtor_location": "Clay County, KY",
+   "lat": 37.164273,
+   "lng": -83.715473
+  },
+  {
+   "name": "Clinton County",
+   "fips": "21053",
+   "type": "county",
+   "redfin_region_id": 1136,
+   "realtor_location": "Clinton County, KY",
+   "lat": 36.727258,
+   "lng": -85.136098
+  },
+  {
+   "name": "Crittenden County",
+   "fips": "21055",
+   "type": "county",
+   "redfin_region_id": 1137,
+   "realtor_location": "Crittenden County, KY",
+   "lat": 37.358149,
+   "lng": -88.10501
+  },
+  {
+   "name": "Cumberland County",
+   "fips": "21057",
+   "type": "county",
+   "redfin_region_id": 1138,
+   "realtor_location": "Cumberland County, KY",
+   "lat": 36.782372,
+   "lng": -85.388484
+  },
+  {
+   "name": "Daviess County",
+   "fips": "21059",
+   "type": "county",
+   "redfin_region_id": 1139,
+   "realtor_location": "Daviess County, KY",
+   "lat": 37.731671,
+   "lng": -87.087139
+  },
+  {
+   "name": "Edmonson County",
+   "fips": "21061",
+   "type": "county",
+   "redfin_region_id": 1140,
+   "realtor_location": "Edmonson County, KY",
+   "lat": 37.227514,
+   "lng": -86.218015
+  },
+  {
+   "name": "Elliott County",
+   "fips": "21063",
+   "type": "county",
+   "redfin_region_id": 1141,
+   "realtor_location": "Elliott County, KY",
+   "lat": 38.116883,
+   "lng": -83.096116
+  },
+  {
+   "name": "Estill County",
+   "fips": "21065",
+   "type": "county",
+   "redfin_region_id": 1142,
+   "realtor_location": "Estill County, KY",
+   "lat": 37.692449,
+   "lng": -83.963983
+  },
+  {
+   "name": "Fayette County",
+   "fips": "21067",
+   "type": "county",
+   "redfin_region_id": 1143,
+   "realtor_location": "Fayette County, KY",
+   "lat": 38.040678,
+   "lng": -84.458272
+  },
+  {
+   "name": "Fleming County",
+   "fips": "21069",
+   "type": "county",
+   "redfin_region_id": 1144,
+   "realtor_location": "Fleming County, KY",
+   "lat": 38.367848,
+   "lng": -83.699205
+  },
+  {
+   "name": "Floyd County",
+   "fips": "21071",
+   "type": "county",
+   "redfin_region_id": 1145,
+   "realtor_location": "Floyd County, KY",
+   "lat": 37.552456,
+   "lng": -82.739724
+  },
+  {
+   "name": "Franklin County",
+   "fips": "21073",
+   "type": "county",
+   "redfin_region_id": 1146,
+   "realtor_location": "Franklin County, KY",
+   "lat": 38.234919,
+   "lng": -84.868786
+  },
+  {
+   "name": "Fulton County",
+   "fips": "21075",
+   "type": "county",
+   "redfin_region_id": 1147,
+   "realtor_location": "Fulton County, KY",
+   "lat": 36.552511,
+   "lng": -89.187659
+  },
+  {
+   "name": "Gallatin County",
+   "fips": "21077",
+   "type": "county",
+   "redfin_region_id": 1148,
+   "realtor_location": "Gallatin County, KY",
+   "lat": 38.755663,
+   "lng": -84.865143
+  },
+  {
+   "name": "Garrard County",
+   "fips": "21079",
+   "type": "county",
+   "redfin_region_id": 1149,
+   "realtor_location": "Garrard County, KY",
+   "lat": 37.630162,
+   "lng": -84.545856
+  },
+  {
+   "name": "Grant County",
+   "fips": "21081",
+   "type": "county",
+   "redfin_region_id": 1150,
+   "realtor_location": "Grant County, KY",
+   "lat": 38.649167,
+   "lng": -84.625924
+  },
+  {
+   "name": "Graves County",
+   "fips": "21083",
+   "type": "county",
+   "redfin_region_id": 1151,
+   "realtor_location": "Graves County, KY",
+   "lat": 36.723344,
+   "lng": -88.649897
+  },
+  {
+   "name": "Grayson County",
+   "fips": "21085",
+   "type": "county",
+   "redfin_region_id": 1152,
+   "realtor_location": "Grayson County, KY",
+   "lat": 37.458577,
+   "lng": -86.344011
+  },
+  {
+   "name": "Green County",
+   "fips": "21087",
+   "type": "county",
+   "redfin_region_id": 1153,
+   "realtor_location": "Green County, KY",
+   "lat": 37.278065,
+   "lng": -85.537925
+  },
+  {
+   "name": "Greenup County",
+   "fips": "21089",
+   "type": "county",
+   "redfin_region_id": 1154,
+   "realtor_location": "Greenup County, KY",
+   "lat": 38.563562,
+   "lng": -82.93382
+  },
+  {
+   "name": "Hancock County",
+   "fips": "21091",
+   "type": "county",
+   "redfin_region_id": 1155,
+   "realtor_location": "Hancock County, KY",
+   "lat": 37.843325,
+   "lng": -86.792761
+  },
+  {
+   "name": "Hardin County",
+   "fips": "21093",
+   "type": "county",
+   "redfin_region_id": 1156,
+   "realtor_location": "Hardin County, KY",
+   "lat": 37.695836,
+   "lng": -85.963183
+  },
+  {
+   "name": "Harlan County",
+   "fips": "21095",
+   "type": "county",
+   "redfin_region_id": 1157,
+   "realtor_location": "Harlan County, KY",
+   "lat": 36.859223,
+   "lng": -83.221497
+  },
+  {
+   "name": "Harrison County",
+   "fips": "21097",
+   "type": "county",
+   "redfin_region_id": 1158,
+   "realtor_location": "Harrison County, KY",
+   "lat": 38.444578,
+   "lng": -84.334131
+  },
+  {
+   "name": "Hart County",
+   "fips": "21099",
+   "type": "county",
+   "redfin_region_id": 1159,
+   "realtor_location": "Hart County, KY",
+   "lat": 37.305827,
+   "lng": -85.878443
+  },
+  {
+   "name": "Henderson County",
+   "fips": "21101",
+   "type": "county",
+   "redfin_region_id": 1160,
+   "realtor_location": "Henderson County, KY",
+   "lat": 37.792542,
+   "lng": -87.572577
+  },
+  {
+   "name": "Henry County",
+   "fips": "21103",
+   "type": "county",
+   "redfin_region_id": 1161,
+   "realtor_location": "Henry County, KY",
+   "lat": 38.451383,
+   "lng": -85.119647
+  },
+  {
+   "name": "Hickman County",
+   "fips": "21105",
+   "type": "county",
+   "redfin_region_id": 1162,
+   "realtor_location": "Hickman County, KY",
+   "lat": 36.675896,
+   "lng": -88.972084
+  },
+  {
+   "name": "Hopkins County",
+   "fips": "21107",
+   "type": "county",
+   "redfin_region_id": 1163,
+   "realtor_location": "Hopkins County, KY",
+   "lat": 37.31107,
+   "lng": -87.542196
+  },
+  {
+   "name": "Jackson County",
+   "fips": "21109",
+   "type": "county",
+   "redfin_region_id": 1164,
+   "realtor_location": "Jackson County, KY",
+   "lat": 37.403458,
+   "lng": -84.020576
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "21111",
+   "type": "county",
+   "redfin_region_id": 1165,
+   "realtor_location": "Jefferson County, KY",
+   "lat": 38.189532,
+   "lng": -85.657624
+  },
+  {
+   "name": "Jessamine County",
+   "fips": "21113",
+   "type": "county",
+   "redfin_region_id": 1166,
+   "realtor_location": "Jessamine County, KY",
+   "lat": 37.873291,
+   "lng": -84.58396
+  },
+  {
+   "name": "Johnson County",
+   "fips": "21115",
+   "type": "county",
+   "redfin_region_id": 1167,
+   "realtor_location": "Johnson County, KY",
+   "lat": 37.847756,
+   "lng": -82.830121
+  },
+  {
+   "name": "Kenton County",
+   "fips": "21117",
+   "type": "county",
+   "redfin_region_id": 1168,
+   "realtor_location": "Kenton County, KY",
+   "lat": 38.930503,
+   "lng": -84.533438
+  },
+  {
+   "name": "Knott County",
+   "fips": "21119",
+   "type": "county",
+   "redfin_region_id": 1169,
+   "realtor_location": "Knott County, KY",
+   "lat": 37.354368,
+   "lng": -82.952546
+  },
+  {
+   "name": "Knox County",
+   "fips": "21121",
+   "type": "county",
+   "redfin_region_id": 1170,
+   "realtor_location": "Knox County, KY",
+   "lat": 36.8885,
+   "lng": -83.855551
+  },
+  {
+   "name": "Larue County",
+   "fips": "21123",
+   "type": "county",
+   "redfin_region_id": 1171,
+   "realtor_location": "Larue County, KY",
+   "lat": 37.544462,
+   "lng": -85.696841
+  },
+  {
+   "name": "Laurel County",
+   "fips": "21125",
+   "type": "county",
+   "redfin_region_id": 1172,
+   "realtor_location": "Laurel County, KY",
+   "lat": 37.113268,
+   "lng": -84.119395
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "21127",
+   "type": "county",
+   "redfin_region_id": 1173,
+   "realtor_location": "Lawrence County, KY",
+   "lat": 38.074453,
+   "lng": -82.73829
+  },
+  {
+   "name": "Lee County",
+   "fips": "21129",
+   "type": "county",
+   "redfin_region_id": 1174,
+   "realtor_location": "Lee County, KY",
+   "lat": 37.608116,
+   "lng": -83.719248
+  },
+  {
+   "name": "Leslie County",
+   "fips": "21131",
+   "type": "county",
+   "redfin_region_id": 1175,
+   "realtor_location": "Leslie County, KY",
+   "lat": 37.087846,
+   "lng": -83.388617
+  },
+  {
+   "name": "Letcher County",
+   "fips": "21133",
+   "type": "county",
+   "redfin_region_id": 1176,
+   "realtor_location": "Letcher County, KY",
+   "lat": 37.118536,
+   "lng": -82.861251
+  },
+  {
+   "name": "Lewis County",
+   "fips": "21135",
+   "type": "county",
+   "redfin_region_id": 1177,
+   "realtor_location": "Lewis County, KY",
+   "lat": 38.535047,
+   "lng": -83.370143
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "21137",
+   "type": "county",
+   "redfin_region_id": 1178,
+   "realtor_location": "Lincoln County, KY",
+   "lat": 37.457174,
+   "lng": -84.658335
+  },
+  {
+   "name": "Livingston County",
+   "fips": "21139",
+   "type": "county",
+   "redfin_region_id": 1179,
+   "realtor_location": "Livingston County, KY",
+   "lat": 37.209517,
+   "lng": -88.363426
+  },
+  {
+   "name": "Logan County",
+   "fips": "21141",
+   "type": "county",
+   "redfin_region_id": 1180,
+   "realtor_location": "Logan County, KY",
+   "lat": 36.859607,
+   "lng": -86.881288
+  },
+  {
+   "name": "Lyon County",
+   "fips": "21143",
+   "type": "county",
+   "redfin_region_id": 1181,
+   "realtor_location": "Lyon County, KY",
+   "lat": 37.023976,
+   "lng": -88.083391
+  },
+  {
+   "name": "McCracken County",
+   "fips": "21145",
+   "type": "county",
+   "redfin_region_id": 1182,
+   "realtor_location": "McCracken County, KY",
+   "lat": 37.054111,
+   "lng": -88.712454
+  },
+  {
+   "name": "McCreary County",
+   "fips": "21147",
+   "type": "county",
+   "redfin_region_id": 1183,
+   "realtor_location": "McCreary County, KY",
+   "lat": 36.731136,
+   "lng": -84.491052
+  },
+  {
+   "name": "McLean County",
+   "fips": "21149",
+   "type": "county",
+   "redfin_region_id": 1184,
+   "realtor_location": "McLean County, KY",
+   "lat": 37.526707,
+   "lng": -87.265597
+  },
+  {
+   "name": "Madison County",
+   "fips": "21151",
+   "type": "county",
+   "redfin_region_id": 1185,
+   "realtor_location": "Madison County, KY",
+   "lat": 37.725511,
+   "lng": -84.278362
+  },
+  {
+   "name": "Magoffin County",
+   "fips": "21153",
+   "type": "county",
+   "redfin_region_id": 1186,
+   "realtor_location": "Magoffin County, KY",
+   "lat": 37.698983,
+   "lng": -83.069721
+  },
+  {
+   "name": "Marion County",
+   "fips": "21155",
+   "type": "county",
+   "redfin_region_id": 1187,
+   "realtor_location": "Marion County, KY",
+   "lat": 37.552604,
+   "lng": -85.268959
+  },
+  {
+   "name": "Marshall County",
+   "fips": "21157",
+   "type": "county",
+   "redfin_region_id": 1188,
+   "realtor_location": "Marshall County, KY",
+   "lat": 36.882017,
+   "lng": -88.332752
+  },
+  {
+   "name": "Martin County",
+   "fips": "21159",
+   "type": "county",
+   "redfin_region_id": 1189,
+   "realtor_location": "Martin County, KY",
+   "lat": 37.796774,
+   "lng": -82.506623
+  },
+  {
+   "name": "Mason County",
+   "fips": "21161",
+   "type": "county",
+   "redfin_region_id": 1190,
+   "realtor_location": "Mason County, KY",
+   "lat": 38.594137,
+   "lng": -83.828125
+  },
+  {
+   "name": "Meade County",
+   "fips": "21163",
+   "type": "county",
+   "redfin_region_id": 1191,
+   "realtor_location": "Meade County, KY",
+   "lat": 37.967476,
+   "lng": -86.200863
+  },
+  {
+   "name": "Menifee County",
+   "fips": "21165",
+   "type": "county",
+   "redfin_region_id": 1192,
+   "realtor_location": "Menifee County, KY",
+   "lat": 37.935485,
+   "lng": -83.589355
+  },
+  {
+   "name": "Mercer County",
+   "fips": "21167",
+   "type": "county",
+   "redfin_region_id": 1193,
+   "realtor_location": "Mercer County, KY",
+   "lat": 37.812085,
+   "lng": -84.879695
+  },
+  {
+   "name": "Metcalfe County",
+   "fips": "21169",
+   "type": "county",
+   "redfin_region_id": 1194,
+   "realtor_location": "Metcalfe County, KY",
+   "lat": 36.99243,
+   "lng": -85.633456
+  },
+  {
+   "name": "Monroe County",
+   "fips": "21171",
+   "type": "county",
+   "redfin_region_id": 1195,
+   "realtor_location": "Monroe County, KY",
+   "lat": 36.714077,
+   "lng": -85.713508
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "21173",
+   "type": "county",
+   "redfin_region_id": 1196,
+   "realtor_location": "Montgomery County, KY",
+   "lat": 38.038109,
+   "lng": -83.912416
+  },
+  {
+   "name": "Morgan County",
+   "fips": "21175",
+   "type": "county",
+   "redfin_region_id": 1197,
+   "realtor_location": "Morgan County, KY",
+   "lat": 37.92294,
+   "lng": -83.258944
+  },
+  {
+   "name": "Muhlenberg County",
+   "fips": "21177",
+   "type": "county",
+   "redfin_region_id": 1198,
+   "realtor_location": "Muhlenberg County, KY",
+   "lat": 37.213816,
+   "lng": -87.134092
+  },
+  {
+   "name": "Nelson County",
+   "fips": "21179",
+   "type": "county",
+   "redfin_region_id": 1199,
+   "realtor_location": "Nelson County, KY",
+   "lat": 37.80312,
+   "lng": -85.465931
+  },
+  {
+   "name": "Nicholas County",
+   "fips": "21181",
+   "type": "county",
+   "redfin_region_id": 1200,
+   "realtor_location": "Nicholas County, KY",
+   "lat": 38.338031,
+   "lng": -84.026223
+  },
+  {
+   "name": "Ohio County",
+   "fips": "21183",
+   "type": "county",
+   "redfin_region_id": 1201,
+   "realtor_location": "Ohio County, KY",
+   "lat": 37.477859,
+   "lng": -86.844871
+  },
+  {
+   "name": "Oldham County",
+   "fips": "21185",
+   "type": "county",
+   "redfin_region_id": 1202,
+   "realtor_location": "Oldham County, KY",
+   "lat": 38.400127,
+   "lng": -85.45615
+  },
+  {
+   "name": "Owen County",
+   "fips": "21187",
+   "type": "county",
+   "redfin_region_id": 1203,
+   "realtor_location": "Owen County, KY",
+   "lat": 38.499395,
+   "lng": -84.84159
+  },
+  {
+   "name": "Owsley County",
+   "fips": "21189",
+   "type": "county",
+   "redfin_region_id": 1204,
+   "realtor_location": "Owsley County, KY",
+   "lat": 37.423622,
+   "lng": -83.691637
+  },
+  {
+   "name": "Pendleton County",
+   "fips": "21191",
+   "type": "county",
+   "redfin_region_id": 1205,
+   "realtor_location": "Pendleton County, KY",
+   "lat": 38.696284,
+   "lng": -84.351943
+  },
+  {
+   "name": "Perry County",
+   "fips": "21193",
+   "type": "county",
+   "redfin_region_id": 1206,
+   "realtor_location": "Perry County, KY",
+   "lat": 37.241282,
+   "lng": -83.217772
+  },
+  {
+   "name": "Pike County",
+   "fips": "21195",
+   "type": "county",
+   "redfin_region_id": 1207,
+   "realtor_location": "Pike County, KY",
+   "lat": 37.486031,
+   "lng": -82.410912
+  },
+  {
+   "name": "Powell County",
+   "fips": "21197",
+   "type": "county",
+   "redfin_region_id": 1208,
+   "realtor_location": "Powell County, KY",
+   "lat": 37.809907,
+   "lng": -83.831354
+  },
+  {
+   "name": "Pulaski County",
+   "fips": "21199",
+   "type": "county",
+   "redfin_region_id": 1209,
+   "realtor_location": "Pulaski County, KY",
+   "lat": 37.107452,
+   "lng": -84.576969
+  },
+  {
+   "name": "Robertson County",
+   "fips": "21201",
+   "type": "county",
+   "redfin_region_id": 1210,
+   "realtor_location": "Robertson County, KY",
+   "lat": 38.513473,
+   "lng": -84.06423
+  },
+  {
+   "name": "Rockcastle County",
+   "fips": "21203",
+   "type": "county",
+   "redfin_region_id": 1211,
+   "realtor_location": "Rockcastle County, KY",
+   "lat": 37.36105,
+   "lng": -84.314368
+  },
+  {
+   "name": "Rowan County",
+   "fips": "21205",
+   "type": "county",
+   "redfin_region_id": 1212,
+   "realtor_location": "Rowan County, KY",
+   "lat": 38.204266,
+   "lng": -83.428079
+  },
+  {
+   "name": "Russell County",
+   "fips": "21207",
+   "type": "county",
+   "redfin_region_id": 1213,
+   "realtor_location": "Russell County, KY",
+   "lat": 36.990587,
+   "lng": -85.05495
+  },
+  {
+   "name": "Scott County",
+   "fips": "21209",
+   "type": "county",
+   "redfin_region_id": 1214,
+   "realtor_location": "Scott County, KY",
+   "lat": 38.28571,
+   "lng": -84.57834
+  },
+  {
+   "name": "Shelby County",
+   "fips": "21211",
+   "type": "county",
+   "redfin_region_id": 1215,
+   "realtor_location": "Shelby County, KY",
+   "lat": 38.239011,
+   "lng": -85.228247
+  },
+  {
+   "name": "Simpson County",
+   "fips": "21213",
+   "type": "county",
+   "redfin_region_id": 1216,
+   "realtor_location": "Simpson County, KY",
+   "lat": 36.740937,
+   "lng": -86.581793
+  },
+  {
+   "name": "Spencer County",
+   "fips": "21215",
+   "type": "county",
+   "redfin_region_id": 1217,
+   "realtor_location": "Spencer County, KY",
+   "lat": 38.025411,
+   "lng": -85.317174
+  },
+  {
+   "name": "Taylor County",
+   "fips": "21217",
+   "type": "county",
+   "redfin_region_id": 1218,
+   "realtor_location": "Taylor County, KY",
+   "lat": 37.36621,
+   "lng": -85.328059
+  },
+  {
+   "name": "Todd County",
+   "fips": "21219",
+   "type": "county",
+   "redfin_region_id": 1219,
+   "realtor_location": "Todd County, KY",
+   "lat": 36.840338,
+   "lng": -87.183642
+  },
+  {
+   "name": "Trigg County",
+   "fips": "21221",
+   "type": "county",
+   "redfin_region_id": 1220,
+   "realtor_location": "Trigg County, KY",
+   "lat": 36.807681,
+   "lng": -87.858652
+  },
+  {
+   "name": "Trimble County",
+   "fips": "21223",
+   "type": "county",
+   "redfin_region_id": 1221,
+   "realtor_location": "Trimble County, KY",
+   "lat": 38.62004,
+   "lng": -85.351208
+  },
+  {
+   "name": "Union County",
+   "fips": "21225",
+   "type": "county",
+   "redfin_region_id": 1222,
+   "realtor_location": "Union County, KY",
+   "lat": 37.658029,
+   "lng": -87.95165
+  },
+  {
+   "name": "Warren County",
+   "fips": "21227",
+   "type": "county",
+   "redfin_region_id": 1223,
+   "realtor_location": "Warren County, KY",
+   "lat": 36.995634,
+   "lng": -86.423579
+  },
+  {
+   "name": "Washington County",
+   "fips": "21229",
+   "type": "county",
+   "redfin_region_id": 1224,
+   "realtor_location": "Washington County, KY",
+   "lat": 37.754209,
+   "lng": -85.175416
+  },
+  {
+   "name": "Wayne County",
+   "fips": "21231",
+   "type": "county",
+   "redfin_region_id": 1225,
+   "realtor_location": "Wayne County, KY",
+   "lat": 36.800772,
+   "lng": -84.82659
+  },
+  {
+   "name": "Webster County",
+   "fips": "21233",
+   "type": "county",
+   "redfin_region_id": 1226,
+   "realtor_location": "Webster County, KY",
+   "lat": 37.51946,
+   "lng": -87.68479
+  },
+  {
+   "name": "Whitley County",
+   "fips": "21235",
+   "type": "county",
+   "redfin_region_id": 1227,
+   "realtor_location": "Whitley County, KY",
+   "lat": 36.758024,
+   "lng": -84.144648
+  },
+  {
+   "name": "Wolfe County",
+   "fips": "21237",
+   "type": "county",
+   "redfin_region_id": 1228,
+   "realtor_location": "Wolfe County, KY",
+   "lat": 37.743893,
+   "lng": -83.49511
+  },
+  {
+   "name": "Woodford County",
+   "fips": "21239",
+   "type": "county",
+   "redfin_region_id": 1229,
+   "realtor_location": "Woodford County, KY",
+   "lat": 38.043103,
+   "lng": -84.748855
+  }
+ ]
+}

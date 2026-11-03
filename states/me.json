@@ -1,0 +1,150 @@
+{
+ "state": "ME",
+ "name": "Maine",
+ "counties": [
+  {
+   "name": "Androscoggin County",
+   "fips": "23001",
+   "type": "county",
+   "redfin_region_id": 1294,
+   "realtor_location": "Androscoggin County, ME",
+   "lat": 44.167681,
+   "lng": -70.207435
+  },
+  {
+   "name": "Aroostook County",
+   "fips": "23003",
+   "type": "county",
+   "redfin_region_id": 1295,
+   "realtor_location": "Aroostook County, ME",
+   "lat": 46.709193,
+   "lng": -68.612409
+  },
+  {
+   "name": "Cumberland County",
+   "fips": "23005",
+   "type": "county",
+   "redfin_region_id": 1296,
+   "realtor_location": "Cumberland County, ME",
+   "lat": 43.808348,
+   "lng": -70.330375
+  },
+  {
+   "name": "Franklin County",
+   "fips": "23007",
+   "type": "county",
+   "redfin_region_id": 1297,
+   "realtor_location": "Franklin County, ME",
+   "lat": 44.976724,
+   "lng": -70.414935
+  },
+  {
+   "name": "Hancock County",
+   "fips": "23009",
+   "type": "county",
+   "redfin_region_id": 1298,
+   "realtor_location": "Hancock County, ME",
+   "lat": 44.564906,
+   "lng": -68.370703
+  },
+  {
+   "name": "Kennebec County",
+   "fips": "23011",
+   "type": "county",
+   "redfin_region_id": 1299,
+   "realtor_location": "Kennebec County, ME",
+   "lat": 44.417012,
+   "lng": -69.765764
+  },
+  {
+   "name": "Knox County",
+   "fips": "23013",
+   "type": "county",
+   "redfin_region_id": 1300,
+   "realtor_location": "Knox County, ME",
+   "lat": 44.042045,
+   "lng": -69.038514
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "23015",
+   "type": "county",
+   "redfin_region_id": 1301,
+   "realtor_location": "Lincoln County, ME",
+   "lat": 43.994781,
+   "lng": -69.513624
+  },
+  {
+   "name": "Oxford County",
+   "fips": "23017",
+   "type": "county",
+   "redfin_region_id": 1302,
+   "realtor_location": "Oxford County, ME",
+   "lat": 44.4945,
+   "lng": -70.734421
+  },
+  {
+   "name": "Penobscot County",
+   "fips": "23019",
+   "type": "county",
+   "redfin_region_id": 1303,
+   "realtor_location": "Penobscot County, ME",
+   "lat": 45.409284,
+   "lng": -68.666616
+  },
+  {
+   "name": "Piscataquis County",
+   "fips": "23021",
+   "type": "county",
+   "redfin_region_id": 1304,
+   "realtor_location": "Piscataquis County, ME",
+   "lat": 45.915639,
+   "lng": -69.102231
+  },
+  {
+   "name": "Sagadahoc County",
+   "fips": "23023",
+   "type": "county",
+   "redfin_region_id": 1305,
+   "realtor_location": "Sagadahoc County, ME",
+   "lat": 43.916845,
+   "lng": -69.844227
+  },
+  {
+   "name": "Somerset County",
+   "fips": "23025",
+   "type": "county",
+   "redfin_region_id": 1306,
+   "realtor_location": "Somerset County, ME",
+   "lat": 45.503646,
+   "lng": -69.95611
+  },
+  {
+   "name": "Waldo County",
+   "fips": "23027",
+   "type": "county",
+   "redfin_region_id": 1307,
+   "realtor_location": "Waldo County, ME",
+   "lat": 44.505822,
+   "lng": -69.138961
+  },
+  {
+   "name": "Washington County",
+   "fips": "23029",
+   "type": "county",
+   "redfin_region_id": 1308,
+   "realtor_location": "Washington County, ME",
+   "lat": 44.967009,
+   "lng": -67.609354
+  },
+  {
+   "name": "York County",
+   "fips": "23031",
+   "type": "county",
+   "redfin_region_id": 1309,
+   "realtor_location": "York County, ME",
+   "lat": 43.426019,
+   "lng": -70.668425
+  }
+ ]
+}

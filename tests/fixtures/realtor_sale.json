@@ -1,0 +1,1922 @@
+{
+ "data": {
+  "home_search": {
+   "count": 200,
+   "total": 10205,
+   "results": [
+    {
+     "property_id": "9023165088",
+     "listing_id": "3002542875",
+     "plan_id": null,
+     "status": "for_sale",
+     "list_price": 476842,
+     "list_price_min": null,
+     "list_price_max": null,
+     "price_reduced_amount": null,
+     "list_date": "2026-10-27T19:31:45.000000Z",
+     "last_update_date": "2026-10-27T19:31:45Z",
+     "last_status_change_date": null,
+     "last_sold_date": null,
+     "last_sold_price": null,
+     "last_price_change_date": null,
+     "last_price_change_amount": null,
+     "href": "https://www.realtor.com/realestateandhomes-detail/11001-Mystic-Timber-Dr_Austin_TX_78754_M90231-65088",
+     "permalink": "11001-Mystic-Timber-Dr_Austin_TX_78754_M90231-65088",
+     "photo_count": 21,
+     "matterport": false,
+     "tags": [
+      "pond",
+      "playground",
+      "trails",
+      "new_construction",
+      "two_or_more_stories",
+      "garage_1_or_more",
+      "garage_2_or_more",
+      "walk_in_pantry",
+      "open_concept_floor_plan",
+      "open_concept",
+      "walk_in_closet",
+      "den",
+      "great_room",
+      "covered_patio",
+      "patio"
+     ],
+     "days_on_market": null,
+     "price_per_sqft": 204,
+     "primary_photo": {
+      "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10l-f4225405501s.jpg"
+     },
+     "photos": [
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10l-f4225405501s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "garage",
+         "probability": 0.993969202041626
+        },
+        {
+         "label": "house_view",
+         "probability": 0.996737539768219
+        },
+        {
+         "label": "porch",
+         "probability": 0.761064350605011
+        },
+        {
+         "label": "yard",
+         "probability": 0.96705561876297
+        },
+        {
+         "label": "complete",
+         "probability": 0.9972538352012634
+        },
+        {
+         "label": "front",
+         "probability": 0.9993247985839844
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3581902657s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9999978542327881
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1814470562s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.999935507774353
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1048567164s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9948554039001465
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f2622842778s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9999997615814209
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3014226767s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.7334260940551758
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1591902986s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.9999998807907104
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f2238643250s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "home_office",
+         "probability": 0.9863708019256592
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3389214785s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "utility_room",
+         "probability": 0.9999815225601196
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1378571818s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bedroom",
+         "probability": 1
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3240082002s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999963045120239
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3869971897s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.5232353210449219
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3883937496s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "closet",
+         "probability": 0.565987229347229
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1081944657s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.999584972858429
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f38775101s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bedroom",
+         "probability": 0.9999960660934448
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1899617204s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bedroom",
+         "probability": 1
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3861106303s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "road",
+         "probability": 0.9998719692230225
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1432144437s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9891769289970398
+        },
+        {
+         "label": "road",
+         "probability": 0.9998660087585449
+        },
+        {
+         "label": "far",
+         "probability": 0.9122961759567261
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1332292592s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "yard",
+         "probability": 0.6734874844551086
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f1848876519s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "patio",
+         "probability": 0.9512099027633667
+        },
+        {
+         "label": "pavilion",
+         "probability": 0.8052557110786438
+        },
+        {
+         "label": "porch",
+         "probability": 0.996738851070404
+        },
+        {
+         "label": "yard",
+         "probability": 0.9892528653144836
+        }
+       ]
+      },
+      {
+       "href": "http://nh.rdcpix.com/f6c7ec58d92506bb79d5f011d7143d10t-f3751200991s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "aerial_view",
+         "probability": 0.9999229907989502
+        },
+        {
+         "label": "house_view",
+         "probability": 0.9235934019088745
+        },
+        {
+         "label": "patio",
+         "probability": 0.9808534383773804
+        },
+        {
+         "label": "swimming_pool",
+         "probability": 0.7354813814163208
+        },
+        {
+         "label": "yard",
+         "probability": 0.9622328877449036
+        },
+        {
+         "label": "far",
+         "probability": 0.9862538576126099
+        }
+       ]
+      }
+     ],
+     "virtual_tours": null,
+     "videos": null,
+     "open_houses": null,
+     "pet_policy": null,
+     "hoa": {
+      "fee": null
+     },
+     "estimate": null,
+     "current_estimates": [],
+     "tax_record": null,
+     "details": [
+      {
+       "category": "Bedrooms",
+       "text": [
+        "Bedrooms: 3"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Bathrooms",
+       "text": [
+        "Full Bathrooms: 2",
+        "1/2 Bathrooms: 1"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Garage and Parking",
+       "text": [
+        "Number of Garage Spaces: 2"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Listing Information",
+       "text": [
+        "Source Plan ID: TX13422335",
+        "Website: https://www.centurycommunities.com/find-your-new-home/texas/austin-metro/austin/evelyn/braker-valley-45s/lots/23rb1-11001-mystic-timber-drive"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Other Property Info",
+       "text": [
+        "SourceSubdivisionID: 510109",
+        "Property Location: Interior"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Building and Construction",
+       "text": [
+        "Type: single_family"
+       ],
+       "parent_category": "Features"
+      }
+     ],
+     "description": {
+      "type": "single_family",
+      "sub_type": null,
+      "name": null,
+      "beds": 3,
+      "beds_min": null,
+      "beds_max": null,
+      "baths": 3,
+      "baths_min": null,
+      "baths_max": null,
+      "baths_full": 2,
+      "baths_half": 1,
+      "baths_3qtr": null,
+      "baths_1qtr": null,
+      "baths_consolidated": "2.5",
+      "baths_full_calc": 2,
+      "baths_partial_calc": 1,
+      "sqft": 2335,
+      "sqft_min": null,
+      "sqft_max": null,
+      "lot_sqft": null,
+      "year_built": null,
+      "garage": 2,
+      "garage_min": null,
+      "garage_max": null,
+      "stories": 2,
+      "text": "As you walk through the front door of the elegant Paige plan at the Vue at Evelyn, you'll be dazzled by an open-concept layout, designed to meet your daily living and entertaining needs. The long foyer leads to a wide-open great room, a casual dining area and a well-appointed kitchen-boasting a generous center island and a walk-in pantry. You'll also appreciate the versatile main-floor study, a covered patio and a convenient laundry room. Nestled in the back of the main level, you'll find a luxurious owner's suite-featuring a roomy walk-in closet and a private bath with dual vanities, a relaxing tub and a walk-in shower. On the second level, there are two ample secondary bedrooms-each with a walk-in closet-plus a hall bathroom and a spacious loft. Options may include: Bedroom in lieu of loft Upgraded shower in owner's suite *Photos may not be of exact home. Prices, plans, and terms are effective on the date of publication and subject to change without notice. Square footage/dimensions shown is only an estimate and actual square footage/dimensions will differ. Buyer should rely on his or her own evaluation of usable area. Depictions of homes or other features are artist conceptions. Hardscape, landscape, and other items shown may be decorator suggestions that are not included in the purchase price and availability may vary. (C)2026 Century Communities, Inc.",
+      "sold_price": null,
+      "sold_date": null,
+      "styles": null
+     },
+     "location": {
+      "address": {
+       "line": "11001 Mystic Timber Dr",
+       "street_number": "11001",
+       "street_name": "Mystic Timber",
+       "street_suffix": "Dr",
+       "street_direction": null,
+       "street_post_direction": null,
+       "unit": null,
+       "city": "Austin",
+       "state_code": "TX",
+       "state": "Texas",
+       "postal_code": "78754",
+       "country": "USA",
+       "coordinate": {
+        "lat": 30.3533094,
+        "lon": -97.6360576,
+        "accuracy": null
+       }
+      },
+      "county": {
+       "name": "Travis",
+       "fips_code": "48453",
+       "state_code": "TX"
+      },
+      "neighborhoods": null,
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=11001%20Mystic%20Timber%20Dr%2C%20Austin%2C%20TX%2078754&size=640x480&source=outdoor&signature=gtD-3u-gR3eGxVCv3-73YKxUh-E=",
+      "street_view_metadata_url": "https://maps.googleapis.com/maps/api/streetview/metadata?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=11001%20Mystic%20Timber%20Dr%2C%20Austin%2C%20TX%2078754&size=640x480&source=outdoor&signature=S-bmU8YtgAACPrFs2J4x8ZDMx8w=",
+      "search_areas": [
+       {
+        "city": "austin",
+        "state_code": "tx"
+       }
+      ]
+     },
+     "flags": {
+      "is_new_listing": true,
+      "is_pending": null,
+      "is_contingent": null,
+      "is_foreclosure": null,
+      "is_price_reduced": null,
+      "is_new_construction": true,
+      "is_coming_soon": null,
+      "is_plan": null,
+      "is_subdivision": null,
+      "is_short_sale": null,
+      "is_senior_community": null,
+      "is_for_rent": null,
+      "is_garage_present": true,
+      "is_deal_available": null,
+      "is_usda_eligible": null,
+      "is_sales_builder": true
+     },
+     "units": null,
+     "community": {
+      "property_id": "717000108877",
+      "description": {
+       "name": "Evelyn"
+      },
+      "permalink": "Evelyn_4912-Bridwell-Ln_Austin_TX_78754_Q717000108877"
+     },
+     "advertisers": [
+      {
+       "fulfillment_id": "100791179",
+       "name": "Evelyn",
+       "type": "community",
+       "email": null,
+       "href": null,
+       "slogan": null,
+       "state_license": null,
+       "nrds_id": null,
+       "builder": {
+        "fulfillment_id": "4947942",
+        "name": "Century Communities",
+        "href": "https://www.centurycommunities.com"
+       },
+       "photo": null,
+       "phones": null,
+       "office": null,
+       "broker": null
+      }
+     ],
+     "source": {
+      "id": "CNTB",
+      "type": "new_home",
+      "name": "CenturyCommunities",
+      "listing_id": "23RB1",
+      "plan_id": "417001020608",
+      "spec_id": "23RB1",
+      "community_id": null,
+      "disclaimer": null,
+      "raw": null,
+      "agents": null
+     },
+     "branding": [
+      {
+       "name": "Century Communities",
+       "phone": "(855) 880-7140",
+       "type": "Builder",
+       "photo": "https://nh.rdcpix.com/062b50b6f414dac0229eaf7ee9cb29c6n-f3569744427s.png",
+       "link": null,
+       "accent_color": null
+      }
+     ],
+     "products": {
+      "brand_name": "basic_opt_in",
+      "products": [
+       "new_homes_cost_per_lead_hybrid.builder_community",
+       "co_broke"
+      ]
+     },
+     "other_listings": {
+      "rdc": [
+       {
+        "listing_id": "3002542875",
+        "listing_key": null,
+        "status": "for_sale",
+        "primary": true
+       }
+      ]
+     },
+     "consumer_advertisers": null
+    },
+    {
+     "property_id": "9546772670",
+     "listing_id": "3002541822",
+     "plan_id": null,
+     "status": "for_sale",
+     "list_price": 679995,
+     "list_price_min": null,
+     "list_price_max": null,
+     "price_reduced_amount": null,
+     "list_date": "2026-10-27T19:09:21.000000Z",
+     "last_update_date": "2026-10-27T20:08:10Z",
+     "last_status_change_date": "2026-10-27T19:09:21Z",
+     "last_sold_date": null,
+     "last_sold_price": null,
+     "last_price_change_date": null,
+     "last_price_change_amount": null,
+     "href": "https://www.realtor.com/realestateandhomes-detail/21603-Thomas-Cv_Lago-Vista_TX_78645_M95467-72670",
+     "permalink": "21603-Thomas-Cv_Lago-Vista_TX_78645_M95467-72670",
+     "photo_count": null,
+     "matterport": false,
+     "tags": [
+      "central_air",
+      "central_heat",
+      "community_clubhouse",
+      "community_golf",
+      "community_outdoor_space",
+      "community_park",
+      "community_tennis_court",
+      "cul_de_sac",
+      "dishwasher",
+      "energy_efficient",
+      "laundry_room",
+      "recreation_facilities",
+      "view",
+      "community_swimming_pool",
+      "single_story",
+      "garage_1_or_more",
+      "garage_2_or_more",
+      "modern_kitchen",
+      "outdoor_kitchen",
+      "rental_property",
+      "big_lot",
+      "lake_view",
+      "views",
+      "lake",
+      "large_kitchen_island",
+      "oversized_island",
+      "huge_island",
+      "hardwood_floors",
+      "home_office",
+      "office",
+      "great_room",
+      "soaking_tub",
+      "covered_patio",
+      "patio"
+     ],
+     "days_on_market": null,
+     "price_per_sqft": 268,
+     "primary_photo": null,
+     "photos": null,
+     "virtual_tours": null,
+     "videos": null,
+     "open_houses": null,
+     "pet_policy": null,
+     "hoa": {
+      "fee": 20
+     },
+     "estimate": {
+      "estimate": 921600,
+      "estimate_high": 982300,
+      "estimate_low": 860800,
+      "date": "2026-10-05"
+     },
+     "current_estimates": [
+      {
+       "estimate": 930666,
+       "estimate_high": 967892,
+       "estimate_low": 893439,
+       "date": "2026-10-21",
+       "isbest_homevalue": true,
+       "source": {
+        "name": "Quantarium",
+        "type": "quantarium"
+       }
+      },
+      {
+       "estimate": 921600,
+       "estimate_high": 982300,
+       "estimate_low": 860800,
+       "date": "2026-10-05",
+       "isbest_homevalue": false,
+       "source": {
+        "name": "Cotality\u2122",
+        "type": "corelogic"
+       }
+      }
+     ],
+     "tax_record": {
+      "public_record_id": "4B83E94AC0677FCF19071E6580D90164",
+      "cl_id": "4B83E94AC0677FCF19071E6580D90164",
+      "apn": null
+     },
+     "details": [
+      {
+       "category": "Bedrooms",
+       "text": [
+        "Bedrooms: 4",
+        "Bedrooms On Main Level: 4"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Bathrooms",
+       "text": [
+        "Total Bathrooms: 3",
+        "Full Bathrooms: 2",
+        "1/2 Bathrooms: 1"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Interior Features",
+       "text": [
+        "Bookcases",
+        "Built-in Features",
+        "Ceiling Fan(s)",
+        "Kitchen Island",
+        "Open Floorplan",
+        "Pantry",
+        "Primary Bedroom on Main",
+        "Flooring: Vinyl"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Appliances",
+       "text": [
+        "Built-In Electric Range",
+        "Dishwasher",
+        "Electric Range",
+        "Exhaust Fan",
+        "Microwave",
+        "Oven",
+        "RNGHD",
+        "Stainless Steel Appliance(s)",
+        "Vented Exhaust Fan",
+        "Water Purifier",
+        "Water Softener",
+        "Laundry Features: Laundry Room"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Heating and Cooling",
+       "text": [
+        "Cooling Features: Central Air",
+        "Heating Features: Central",
+        "Heating: Yes",
+        "Number of Fireplaces: 0"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Exterior and Lot Features",
+       "text": [
+        "Barbecue",
+        "Gas Grill",
+        "Outdoor Grill",
+        "Other Structures: Outdoor Kitchen, Shed(s)",
+        "Patio And Porch Features: Covered, Patio",
+        "Patio: Yes"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Land Info",
+       "text": [
+        "Additional Parcels: Yes",
+        "Lot Description: Back Yard, Cul-De-Sac, Few Trees, Trees-Small (Under 20 Ft), Views",
+        "Lot Size Acres: 6.0",
+        "Lot Size Square Feet: 261360"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Garage and Parking",
+       "text": [
+        "Covered Spaces: 2",
+        "Garage Spaces: 2",
+        "Parking Features: Attached, Garage",
+        "Parking Total: 2"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Home Features",
+       "text": [
+        "View: Hill Country, Panoramic, Trees/Woods",
+        "Green Energy Efficient: Insulation, Materials"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Homeowners Association",
+       "text": [
+        "Association: Yes",
+        "Association Fee: 240",
+        "Association Fee Frequency: Annually",
+        "Association Fee Includes: Common Area Maintenance",
+        "Calculated Total Monthly Association Fees: 20",
+        "Association Name: Lago Vista POA"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "School Information",
+       "text": [
+        "Elementary School: Lago Vista",
+        "High School: Lago Vista",
+        "High School District: Lago Vista ISD",
+        "Middle School: Lago Vista",
+        "School District: Lago Vista ISD"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Amenities and Community Features",
+       "text": [
+        "Community Features: Airport/Runway, Clubhouse, Common Grounds, Fishing, Fitness Center, Golf, Lake, Library, Park, Picnic Area, Playground, Pool, Sport Court(s)/Facility, Tennis Court(s), Trail(s)"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Agent Only Data",
+       "text": [
+        "Tax Assessment: 598595",
+        "Tax Map Number: 25021",
+        "Days on Market: 0",
+        "Owner Name: WITHELD",
+        "Status Date: 2026-10-27"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Other Property Info",
+       "text": [
+        "Annual Tax Amount: 12471",
+        "Source Listing Status: Active",
+        "County: Travis",
+        "Directions: Start by heading to TX-183 N. Take US-183 N and exit toward FM 1431 W. Follow FM 1431 W to North Ridge Dr. Turn onto North Ridge Dr and then onto Thomas Cv. Arrive at 21603 Thomas Cv.",
+        "Tax Year: 2025",
+        "Restrictions: Zoning",
+        "Source Property Type: Residential",
+        "Area: LN",
+        "Source Neighborhood: HIGHLAND LAKE ESTATES SEC 25",
+        "Ownership Type: Fee-Simple",
+        "Parcel Number: 01649024060000",
+        "Subdivision: HIGHLAND LAKE ESTATES SEC 25",
+        "Property Subtype: Single Family Residence"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Private Data",
+       "text": [
+        "Disclosures: Owner/Agent, Seller Disclosure",
+        "Listing Agreement: TXR",
+        "Listing Service: Full Service",
+        "Listing Terms: Cash, Conventional, FHA, FMHA, Owner May Carry, Texas Vet, USDA Loan",
+        "Lock Box Serial Number: 62028018",
+        "Lock Box Type: Electronic",
+        "Cumulative Days On Market: 0",
+        "Occupant Type: Vacant",
+        "Original List Price: 679995",
+        "Possession: Close Of Escrow, Funding",
+        "Listing Date: 2026-10-27",
+        "Showing Contact Phone: 5127750762",
+        "Major Change Timestamp: 2026-10-27 19:06:55",
+        "Major Change Type: New Listing"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Building and Construction",
+       "text": [
+        "Total Square Feet Living: 2535",
+        "Year Built: 2019",
+        "Construction Materials: Stucco",
+        "Direction Faces: Northeast",
+        "Foundation Details: Slab",
+        "Levels: One",
+        "Living Area Source: Owner",
+        "Property Age: 7",
+        "Property Condition: Resale",
+        "Roof: Composition, Shingle",
+        "Levels or Stories: One",
+        "Total Area Sqft: 2535",
+        "Year Built Source: Public Records"
+       ],
+       "parent_category": "Features"
+      },
+      {
+       "category": "Accessibility Features",
+       "text": [
+        "Accessibility  Features: Accessible Bedroom, Accessible Kitchen"
+       ],
+       "parent_category": "Features"
+      },
+      {
+       "category": "Utilities",
+       "text": [
+        "Sewer: Public Sewer",
+        "Cable Connected",
+        "Electricity Connected",
+        "High Speed Internet",
+        "Phone Available",
+        "Sewer Connected",
+        "Water Connected",
+        "Water Source: Public"
+       ],
+       "parent_category": "Features"
+      }
+     ],
+     "description": {
+      "type": "single_family",
+      "sub_type": null,
+      "name": null,
+      "beds": 4,
+      "beds_min": null,
+      "beds_max": null,
+      "baths": 3,
+      "baths_min": null,
+      "baths_max": null,
+      "baths_full": 2,
+      "baths_half": 1,
+      "baths_3qtr": null,
+      "baths_1qtr": null,
+      "baths_consolidated": "2.5",
+      "baths_full_calc": 2,
+      "baths_partial_calc": 1,
+      "sqft": 2535,
+      "sqft_min": null,
+      "sqft_max": null,
+      "lot_sqft": 261360,
+      "year_built": 2019,
+      "garage": 2,
+      "garage_min": null,
+      "garage_max": null,
+      "stories": 1,
+      "text": "Custom-built 2,535 SF home on .60 cleared acre with Lake Travis views from the covered patio. Utilities in place. Exposed wood beam ceilings with shiplap, barn door, wide-plank hardwood floors throughout. Open great room with full-width sliding glass to a covered outdoor kitchen: commercial-grade gas grill, stainless range hood, sink, mini fridge. Kitchen features a large island, dark quartz counters, and tile backsplash. Dedicated home office off the foyer with barn door, separated from the main living area. Primary suite with soaking tub, walk-in tile shower, dual closets. 2x6 walls, spray foam insulation, whole-home water softener + RO system. Lago Vista STR-permitted. Live here fully while building your compound vision on the remaining land. Current zoning allows for additional accessory buildings such as garages or living areas.",
+      "sold_price": null,
+      "sold_date": null,
+      "styles": null
+     },
+     "location": {
+      "address": {
+       "line": "21603 Thomas Cv",
+       "street_number": "21603",
+       "street_name": "Thomas",
+       "street_suffix": "Cv",
+       "street_direction": null,
+       "street_post_direction": null,
+       "unit": null,
+       "city": "Lago Vista",
+       "state_code": "TX",
+       "state": "Texas",
+       "postal_code": "78645",
+       "country": "USA",
+       "coordinate": {
+        "lat": 30.426142,
+        "lon": -98.025067,
+        "accuracy": null
+       }
+      },
+      "county": {
+       "name": "Travis",
+       "fips_code": "48453",
+       "state_code": "TX"
+      },
+      "neighborhoods": null,
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=21603%20Thomas%20Cv%2C%20Lago%20Vista%2C%20TX%2078645&size=640x480&source=outdoor&signature=la-vpV0IXPRoAugpeuE72J-PoAo=",
+      "street_view_metadata_url": "https://maps.googleapis.com/maps/api/streetview/metadata?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=21603%20Thomas%20Cv%2C%20Lago%20Vista%2C%20TX%2078645&size=640x480&source=outdoor&signature=m2mPQFqEEa12FDkSBC0BaRXRLHM=",
+      "search_areas": [
+       {
+        "city": "lago vista",
+        "state_code": "tx"
+       }
+      ]
+     },
+     "flags": {
+      "is_new_listing": true,
+      "is_pending": null,
+      "is_contingent": null,
+      "is_foreclosure": null,
+      "is_price_reduced": null,
+      "is_new_construction": null,
+      "is_coming_soon": null,
+      "is_plan": null,
+      "is_subdivision": null,
+      "is_short_sale": null,
+      "is_senior_community": null,
+      "is_for_rent": null,
+      "is_garage_present": true,
+      "is_deal_available": null,
+      "is_usda_eligible": null,
+      "is_sales_builder": null
+     },
+     "units": null,
+     "community": null,
+     "advertisers": [
+      {
+       "fulfillment_id": "1537670",
+       "name": "Enrique  lopez",
+       "type": "seller",
+       "email": "ENRIQUELOPEZ@AUSTIN.RR.COM",
+       "href": "http://www.SuburbiaTexas.com",
+       "slogan": null,
+       "state_license": null,
+       "nrds_id": "785009058",
+       "builder": null,
+       "photo": {
+        "href": "http://ap.rdcpix.com/682cbe3a7c7072d4068ab44c27f099eca-b888274806l.jpg"
+       },
+       "phones": [
+        {
+         "number": "5122678877",
+         "type": "Mobile",
+         "ext": null,
+         "primary": true,
+         "trackable": null
+        }
+       ],
+       "office": {
+        "fulfillment_id": "2922229",
+        "name": "Remax Suburbia",
+        "email": "suburbiatexas@gmail.com",
+        "href": "suburbia-lago-vista-tx.remax.com",
+        "slogan": null,
+        "photo": {
+         "href": "http://ap.rdcpix.com/cbcab3671a6e4df42e1578e432c58438o-b414630477l.jpg"
+        },
+        "phones": [
+         {
+          "number": "(512) 267-8877",
+          "type": "Office",
+          "ext": null,
+          "primary": true,
+          "trackable": null
+         }
+        ],
+        "address": {
+         "line": "6304 Lohmans Ford Rd",
+         "city": null,
+         "state_code": null,
+         "state": null,
+         "postal_code": null,
+         "country": null,
+         "coordinate": {
+          "lat": null,
+          "lon": null
+         }
+        },
+        "mls_set": "O-AUTX-4831",
+        "hours": null
+       },
+       "broker": {
+        "fulfillment_id": "4459979",
+        "name": "Re/Max Suburbia -  Broker"
+       }
+      },
+      {
+       "fulfillment_id": "4707000",
+       "name": "Luisa Lopez",
+       "type": "co_seller",
+       "email": "luifern6002@gmail.com",
+       "href": null,
+       "slogan": null,
+       "state_license": null,
+       "nrds_id": null,
+       "builder": null,
+       "photo": {
+        "href": "http://ap.rdcpix.com/17e27715d608746997faa3201cdffa86a-b2378547616l.jpg"
+       },
+       "phones": null,
+       "office": {
+        "fulfillment_id": "2922229",
+        "name": "Remax Suburbia",
+        "email": "suburbiatexas@gmail.com",
+        "href": "suburbia-lago-vista-tx.remax.com",
+        "slogan": null,
+        "photo": {
+         "href": "http://ap.rdcpix.com/cbcab3671a6e4df42e1578e432c58438o-b414630477s.jpg"
+        },
+        "phones": [
+         {
+          "number": "(512) 267-8877",
+          "type": "Office",
+          "ext": null,
+          "primary": false,
+          "trackable": null
+         }
+        ],
+        "address": {
+         "line": "6304 Lohmans Ford Rd",
+         "city": null,
+         "state_code": null,
+         "state": null,
+         "postal_code": null,
+         "country": null,
+         "coordinate": {
+          "lat": null,
+          "lon": null
+         }
+        },
+        "mls_set": "O-AUTX-4831",
+        "hours": null
+       },
+       "broker": {
+        "fulfillment_id": "4459979",
+        "name": "Re/Max Suburbia -  Broker"
+       }
+      }
+     ],
+     "source": {
+      "id": "AUTX",
+      "type": "mls",
+      "name": "UnlockMLS",
+      "listing_id": "7446049",
+      "plan_id": null,
+      "spec_id": null,
+      "community_id": null,
+      "disclaimer": {
+       "text": "\u00a9 2026, Unlock MLS, All Rights Reserved.",
+       "href": null,
+       "logo": null
+      },
+      "raw": {
+       "status": "Active",
+       "style": null,
+       "tax_amount": null
+      },
+      "agents": [
+       {
+        "agent_id": "568685",
+        "agent_name": null,
+        "office_id": "4831",
+        "office_name": "RE/MAX Suburbia",
+        "office_phone": null,
+        "type": "seller",
+        "id": "AUTX"
+       },
+       {
+        "agent_id": "752363",
+        "agent_name": null,
+        "office_id": "ACT1517895",
+        "office_name": "RE/MAX Suburbia",
+        "office_phone": null,
+        "type": "co_seller",
+        "id": "AUTX"
+       }
+      ]
+     },
+     "branding": [
+      {
+       "name": "Remax Suburbia",
+       "phone": null,
+       "type": "Office",
+       "photo": "https://ap.rdcpix.com/cbcab3671a6e4df42e1578e432c58438o-b414630477s.jpg",
+       "link": null,
+       "accent_color": null
+      }
+     ],
+     "products": {
+      "brand_name": "advantage_brand",
+      "products": [
+       "core.agent",
+       "core.broker",
+       "listing_owner_brand.broker",
+       "co_broke"
+      ]
+     },
+     "other_listings": {
+      "rdc": [
+       {
+        "listing_id": "3002541822",
+        "listing_key": null,
+        "status": "for_sale",
+        "primary": true
+       },
+       {
+        "listing_id": "2996357993",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "2990114628",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "2988668618",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "2983905039",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "2979526266",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       },
+       {
+        "listing_id": "2977294538",
+        "listing_key": null,
+        "status": "off_market",
+        "primary": null
+       }
+      ]
+     },
+     "consumer_advertisers": [
+      {
+       "advertiser_id": null,
+       "office_id": null,
+       "agent_id": null,
+       "name": null,
+       "phone": null,
+       "type": null,
+       "href": null,
+       "photo": null,
+       "show_realtor_logo": null
+      },
+      {
+       "advertiser_id": null,
+       "office_id": null,
+       "agent_id": null,
+       "name": null,
+       "phone": null,
+       "type": null,
+       "href": null,
+       "photo": null,
+       "show_realtor_logo": null
+      }
+     ]
+    },
+    {
+     "property_id": "7946295673",
+     "listing_id": "3002541469",
+     "plan_id": null,
+     "status": "for_sale",
+     "list_price": 1014000,
+     "list_price_min": null,
+     "list_price_max": null,
+     "price_reduced_amount": null,
+     "list_date": "2026-10-27T19:00:52.000000Z",
+     "last_update_date": "2026-10-27T19:12:11Z",
+     "last_status_change_date": "2026-10-27T19:00:52Z",
+     "last_sold_date": "1998-06-15",
+     "last_sold_price": null,
+     "last_price_change_date": null,
+     "last_price_change_amount": null,
+     "href": "https://www.realtor.com/realestateandhomes-detail/4904-Backtrail-Dr_Austin_TX_78731_M79462-95673",
+     "permalink": "4904-Backtrail-Dr_Austin_TX_78731_M79462-95673",
+     "photo_count": 10,
+     "matterport": false,
+     "tags": [
+      "central_air",
+      "central_heat",
+      "fireplace",
+      "swimming_pool",
+      "two_or_more_stories",
+      "garage_1_or_more",
+      "garage_2_or_more",
+      "fixer_upper"
+     ],
+     "days_on_market": null,
+     "price_per_sqft": 347,
+     "primary_photo": {
+      "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m3456286144s.jpg"
+     },
+     "photos": [
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m3456286144s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9809596538543701
+        },
+        {
+         "label": "yard",
+         "probability": 0.6388733983039856
+        },
+        {
+         "label": "back_side",
+         "probability": 0.9314290285110474
+        },
+        {
+         "label": "incomplete",
+         "probability": 0.9891904592514038
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m3287602550s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9963318705558777
+        },
+        {
+         "label": "back_side",
+         "probability": 0.906227171421051
+        },
+        {
+         "label": "incomplete",
+         "probability": 0.9947234392166138
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m2126772816s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "garage",
+         "probability": 0.9999151229858398
+        },
+        {
+         "label": "house_view",
+         "probability": 0.9936702251434326
+        },
+        {
+         "label": "road",
+         "probability": 0.664315402507782
+        },
+        {
+         "label": "yard",
+         "probability": 0.8056102991104126
+        },
+        {
+         "label": "front",
+         "probability": 0.5356418490409851
+        },
+        {
+         "label": "incomplete",
+         "probability": 0.9400001168251038
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m1551468035s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.6998867392539978
+        },
+        {
+         "label": "yard",
+         "probability": 0.9652138352394104
+        },
+        {
+         "label": "back_side",
+         "probability": 0.9885059595108032
+        },
+        {
+         "label": "incomplete",
+         "probability": 0.997931957244873
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m2727709662s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "house_view",
+         "probability": 0.9925321936607361
+        },
+        {
+         "label": "porch",
+         "probability": 0.9184609651565552
+        },
+        {
+         "label": "yard",
+         "probability": 0.9552238583564758
+        },
+        {
+         "label": "front",
+         "probability": 0.8159321546554565
+        },
+        {
+         "label": "incomplete",
+         "probability": 0.9979210495948792
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m2593498709s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "living_room",
+         "probability": 0.9499059319496155
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m2458332553s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "kitchen",
+         "probability": 0.99998939037323
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m3895615395s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9996583461761475
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m1255947974s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "other_interiors",
+         "probability": 0.9999790191650391
+        }
+       ]
+      },
+      {
+       "href": "http://ap.rdcpix.com/20020b8cd40fcfcc6a8515771669375al-m3615986774s.jpg",
+       "type": null,
+       "title": null,
+       "description": null,
+       "tags": [
+        {
+         "label": "bathroom",
+         "probability": 0.9999997615814209
+        }
+       ]
+      }
+     ],
+     "virtual_tours": null,
+     "videos": null,
+     "open_houses": null,
+     "pet_policy": null,
+     "hoa": {
+      "fee": 0
+     },
+     "estimate": {
+      "estimate": 1167600,
+      "estimate_high": 1266800,
+      "estimate_low": 1068300,
+      "date": "2026-10-05"
+     },
+     "current_estimates": [
+      {
+       "estimate": 1167600,
+       "estimate_high": 1266800,
+       "estimate_low": 1068300,
+       "date": "2026-10-05",
+       "isbest_homevalue": true,
+       "source": {
+        "name": "Cotality\u2122",
+        "type": "corelogic"
+       }
+      },
+      {
+       "estimate": 1110225,
+       "estimate_high": 1443292,
+       "estimate_low": 777157,
+       "date": "2026-10-21",
+       "isbest_homevalue": false,
+       "source": {
+        "name": "Quantarium",
+        "type": "quantarium"
+       }
+      },
+      {
+       "estimate": 1180000,
+       "estimate_high": 1333400,
+       "estimate_low": 1026600,
+       "date": "2026-10-14",
+       "isbest_homevalue": false,
+       "source": {
+        "name": "Collateral Analytics",
+        "type": "collateral"
+       }
+      }
+     ],
+     "tax_record": {
+      "public_record_id": "E6FF9258A97770DC8A0E79DA9764838D",
+      "cl_id": "E6FF9258A97770DC8A0E79DA9764838D",
+      "apn": null
+     },
+     "details": [
+      {
+       "category": "Bedrooms",
+       "text": [
+        "Bedrooms: 5",
+        "Bedrooms On Main Level: 2",
+        "Primary Bedroom Level: First",
+        "Bedroom 1 Level: Main",
+        "Bedroom 2 Level: First",
+        "Bedroom 3 Level: First",
+        "Bedroom 4 Level: Main"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Bathrooms",
+       "text": [
+        "Total Bathrooms: 4",
+        "Full Bathrooms: 4"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Heating and Cooling",
+       "text": [
+        "Cooling Features: Central Air",
+        "Heating Features: Central",
+        "Heating: Yes",
+        "Number of Fireplaces: 1"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Interior Features",
+       "text": [
+        "Flooring: No Carpet"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Kitchen and Dining",
+       "text": [
+        "Kitchen Level: Main"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Other Rooms",
+       "text": [
+        "Living Room Level: Main"
+       ],
+       "parent_category": "Interior"
+      },
+      {
+       "category": "Land Info",
+       "text": [
+        "Additional Parcels: No",
+        "Lot Size Acres: 0.3516",
+        "Lot Size Square Feet: 15316"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Pool and Spa",
+       "text": [
+        "Pool Features: In Ground",
+        "Pool Private: Yes"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Exterior and Lot Features",
+       "text": [
+        "Other Structures: Garage(s)"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Garage and Parking",
+       "text": [
+        "Covered Spaces: 2",
+        "Garage Spaces: 2",
+        "Parking Features: Attached",
+        "Parking Total: 2"
+       ],
+       "parent_category": "Exterior"
+      },
+      {
+       "category": "Homeowners Association",
+       "text": [
+        "Association: No",
+        "Calculated Total Monthly Association Fees: 0"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "School Information",
+       "text": [
+        "Elementary School: Doss (Austin ISD)",
+        "High School: Anderson",
+        "High School District: Austin ISD",
+        "Middle School: Travis",
+        "School District: Austin ISD"
+       ],
+       "parent_category": "Community"
+      },
+      {
+       "category": "Other Property Info",
+       "text": [
+        "Auction: Yes",
+        "Annual Tax Amount: 21986",
+        "Tax Block: D",
+        "Source Listing Status: Active",
+        "County: Travis",
+        "Directions: Head toward Ladera Norte,Turn left onto Ladera Norte,Turn right onto Backtrail Dr ? Destination will be on the right",
+        "Tax Year: 2026",
+        "Source Property Type: Residential",
+        "Area: 1A",
+        "Source Neighborhood: Cat Mountain North Sec 1-A",
+        "Ownership Type: Fee-Simple",
+        "Parcel Number: 01401001070000",
+        "Subdivision: Cat Mountain North Sec 1-A",
+        "Property Subtype: Single Family Residence"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Agent Only Data",
+       "text": [
+        "Tax Assessment: 1074336",
+        "Tax Legal Description: LOT 4 BLK D CAT MOUNTAIN NORTH SEC I-A",
+        "Tax Map Number: 4",
+        "Days on Market: 0",
+        "Owner Name: Select Portfolio Servicing, Inc.",
+        "Status Date: 2026-10-27"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Private Data",
+       "text": [
+        "Short Sale: Auction,Real Estate Owned",
+        "Listing Service: Limited Service",
+        "Listing Terms: Cash, Conventional",
+        "Lock Box Serial Number: 7264",
+        "Lock Box Type: Combo",
+        "Cumulative Days On Market: 0",
+        "Occupant Type: Vacant",
+        "Original List Price: 1014000",
+        "Possession: Close Of Escrow",
+        "Listing Date: 2026-10-27",
+        "Special Listing Conditions: Auction, Real Estate Owned",
+        "Major Change Timestamp: 2026-10-27 18:59:27",
+        "Major Change Type: New Listing"
+       ],
+       "parent_category": "Listing"
+      },
+      {
+       "category": "Building and Construction",
+       "text": [
+        "Total Square Feet Living: 2924",
+        "Year Built: 1984",
+        "Construction Materials: Brick Veneer",
+        "Direction Faces: West",
+        "Foundation Details: Slab",
+        "Levels: Two",
+        "Living Area Source: Public Records",
+        "Property Age: 42",
+        "Property Condition: Resale",
+        "Roof: Composition, Shingle",
+        "Levels or Stories: Two",
+        "Total Area Sqft: 2924",
+        "Year Built Source: Public Records"
+       ],
+       "parent_category": "Features"
+      },
+      {
+       "category": "Utilities",
+       "text": [
+        "Sewer: Public Sewer",
+        "Sewer Available",
+        "Water Available",
+        "Water Source: Public"
+       ],
+       "parent_category": "Features"
+      }
+     ],
+     "description": {
+      "type": "single_family",
+      "sub_type": null,
+      "name": null,
+      "beds": 5,
+      "beds_min": null,
+      "beds_max": null,
+      "baths": 4,
+      "baths_min": null,
+      "baths_max": null,
+      "baths_full": 4,
+      "baths_half": null,
+      "baths_3qtr": null,
+      "baths_1qtr": null,
+      "baths_consolidated": "4",
+      "baths_full_calc": 4,
+      "baths_partial_calc": null,
+      "sqft": 2924,
+      "sqft_min": null,
+      "sqft_max": null,
+      "lot_sqft": 15316,
+      "year_built": 1984,
+      "garage": 2,
+      "garage_min": null,
+      "garage_max": null,
+      "stories": 2,
+      "text": "This jewel is just waiting to be snatched up! 5 bedroom, 4 bathroom home that needs upgrades in beautiful North Cat Mountain! Inground pool. Hurry before it's gone! RESERVE AUCTION PROPERTY- Property sold \"AS-IS\" without contingencies, repairs, warranties, guarantees or representation as to listing accuracy, property information, photo or other depiction included or described herein. Inspect before bidding.",
+      "sold_price": null,
+      "sold_date": "1998-06-15",
+      "styles": null
+     },
+     "location": {
+      "address": {
+       "line": "4904 Backtrail Dr",
+       "street_number": "4904",
+       "street_name": "Backtrail",
+       "street_suffix": "Dr",
+       "street_direction": null,
+       "street_post_direction": null,
+       "unit": null,
+       "city": "Austin",
+       "state_code": "TX",
+       "state": "Texas",
+       "postal_code": "78731",
+       "country": "USA",
+       "coordinate": {
+        "lat": 30.359969,
+        "lon": -97.781767,
+        "accuracy": null
+       }
+      },
+      "county": {
+       "name": "Travis",
+       "fips_code": "48453",
+       "state_code": "TX"
+      },
+      "neighborhoods": null,
+      "street_view_url": "https://maps.googleapis.com/maps/api/streetview?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=4904%20Backtrail%20Dr%2C%20Austin%2C%20TX%2078731&size=640x480&source=outdoor&signature=HJj62cQ9v8yWmOQ_NOtx_sxgYPY=",
+      "street_view_metadata_url": "https://maps.googleapis.com/maps/api/streetview/metadata?channel=rdc-streetview&key=AIzaSyAP_xs30yS0J4xp8O1ZKUrUttIXKklrwaM&location=4904%20Backtrail%20Dr%2C%20Austin%2C%20TX%2078731&size=640x480&source=outdoor&signature=8xhQVEAtRuY8PnEUl85E9tmCvWA=",
+      "search_areas": [
+       {
+        "city": "austin",
+        "state_code": "tx"
+       }
+      ]
+     },
+     "flags": {
+      "is_new_listing": true,
+      "is_pending": null,
+      "is_contingent": null,
+      "is_foreclosure": true,
+      "is_price_reduced": null,
+      "is_new_construction": null,
+      "is_coming_soon": null,
+      "is_plan": null,
+      "is_subdivision": null,
+      "is_short_sale": null,
+      "is_senior_community": null,
+      "is_for_rent": null,
+      "is_garage_present": true,
+      "is_deal_available": null,
+      "is_usda_eligible": null,
+      "is_sales_builder": null
+     },
+     "units": null,
+     "community": null,
+     "advertisers": [
+      {
+       "fulfillment_id": "4032831",
+       "name": "Lori Brown",
+       "type": "seller",
+       "email": "lori.brown@rhss.com",
+       "href": null,
+       "slogan": null,
+       "state_license": null,
+       "nrds_id": null,
+       "builder": null,
+       "photo": null,
+       "phones": [
+        {
+         "number": "9792550702",
+         "type": "BUSINESS_MOBILE",
+         "ext": null,
+         "primary": true,
+         "trackable": null
+        }
+       ],
+       "office": {
+        "fulfillment_id": "1485513",
+        "name": "REALHome Services and Solutions, Inc.",
+        "email": "michael.sweat@rhss.com",
+        "href": "http://www.hubzu.com/searchResult?city=chicago&state=IL&utm_source=Realtor&utm_medium=PaidReferral",
+        "slogan": null,
+        "photo": {
+         "href": "https://ap.rdcpix.com/2032306540/2e812c9c8ad92e681e8894d8d3f9dad5o-c0o.jpg"
+        },
+        "phones": [
+         {
+          "number": "8775573501",
+          "type": "Office",
+          "ext": null,
+          "primary": false,
+          "trackable": null
+         }
+        ],
+        "address": {
+         "line": "9595 Six Pines Drive",
+         "city": null,
+         "state_code": null,
+         "state": null,
+         "postal_code": null,
+         "country": null,
+         "coordinate": {
+          "lat": null,
+          "lon": null
+         }
+        },
+        "mls_set": "O-BRLA-REALHOME",
+        "hours": null
+       },
+       "broker": {
+        "fulfillment_id": "1485491",
+        "name": "Altisource Solutions, Inc. BROKER"
+       }
+      }
+     ],
+     "source": {
+      "id": "AUTX",
+      "type": "mls",
+      "name": "UnlockMLS",
+      "listing_id": "3452377",
+      "plan_id": null,
+      "spec_id": null,
+      "community_id": null,
+      "disclaimer": {
+       "text": "\u00a9 2026, Unlock MLS, All Rights Reserved.",
+       "href": null,
+       "logo": null
+      },
+      "raw": {
+       "status": "Active",
+       "style": null,
+       "tax_amount": null
+      },
+      "agents": [
+       {
+        "agent_id": "468005",
+        "agent_name": null,
+        "office_id": "5729",
+        "office_name": "REALHome Services & Solutions",
+        "office_phone": null,
+        "type": "seller",
+        "id": "AUTX"
+       }
+      ]
+     },
+     "branding": [
+      {
+       "name": "REALHome Services and Solutions, Inc.",
+       "phone": null,
+       "type": "Office",
+       "photo": null,
+       "link": null,
+       "accent_color": null
+      }
+     ],
+     "products": {
+      "brand_name": "basic_opt_in",
+      "products": [
+       "core.agent",
+       "co_broke"
+      ]
+     },
+     "other_listings": {
+      "rdc": [
+       {
+        "listing_id": "3002541469",
+        "listing_key": null,
+        "status": "for_sale",
+        "primary": true
+       }
+      ]
+     },
+     "consumer_advertisers": [
+      {
+       "advertiser_id": null,
+       "office_id": null,
+       "agent_id": null,
+       "name": null,
+       "phone": null,
+       "type": null,
+       "href": null,
+       "photo": null,
+       "show_realtor_logo": null
+      },
+      {
+       "advertiser_id": null,
+       "office_id": null,
+       "agent_id": null,
+       "name": null,
+       "phone": null,
+       "type": null,
+       "href": null,
+       "photo": null,
+       "show_realtor_logo": null
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

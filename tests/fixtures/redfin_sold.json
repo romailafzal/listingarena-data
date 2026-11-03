@@ -1,0 +1,408 @@
+{
+ "version": 664,
+ "errorMessage": "Success",
+ "resultCode": 0,
+ "payload": {
+  "homes": [
+   {
+    "mlsId": {
+     "label": "MLS#",
+     "value": "17901433"
+    },
+    "showMlsId": false,
+    "mlsStatus": "Closed",
+    "showDatasourceLogo": false,
+    "price": {
+     "value": 595000,
+     "level": 1
+    },
+    "hideSalePrice": true,
+    "hoa": {
+     "level": 1
+    },
+    "isHoaFrequencyKnown": true,
+    "sqFt": {
+     "value": 2576,
+     "level": 1
+    },
+    "pricePerSqFt": {
+     "value": 231,
+     "level": 1
+    },
+    "lotSize": {
+     "value": 22659,
+     "level": 1
+    },
+    "beds": 4,
+    "baths": 3.5,
+    "fullBaths": 2,
+    "partialBaths": 3,
+    "location": {
+     "value": "Bellville Townsite",
+     "level": 1
+    },
+    "stories": 2.0,
+    "latLong": {
+     "value": {
+      "latitude": 29.9493929,
+      "longitude": -96.259049
+     },
+     "level": 1
+    },
+    "streetLine": {
+     "value": "111 S Masonic St",
+     "level": 1
+    },
+    "unitNumber": {
+     "level": 1
+    },
+    "city": "Bellville",
+    "state": "TX",
+    "zip": "77418",
+    "postalCode": {
+     "value": "77418",
+     "level": 1
+    },
+    "countryCode": "US",
+    "showAddressOnMap": true,
+    "soldDate": 1791874800000,
+    "searchStatus": 4,
+    "propertyType": 6,
+    "uiPropertyType": 1,
+    "listingType": 1,
+    "propertyId": 44840598,
+    "listingId": 209223801,
+    "dataSourceId": 104,
+    "isEarlyAccess": false,
+    "marketId": 18,
+    "yearBuilt": {
+     "value": 1888,
+     "level": 1
+    },
+    "dom": {
+     "level": 1
+    },
+    "timeOnRedfin": {
+     "level": 1
+    },
+    "timeZone": "US/Central",
+    "primaryPhotoDisplayLevel": 1,
+    "photos": {
+     "value": "0-26:4",
+     "level": 1
+    },
+    "numPictures": 27,
+    "additionalPhotosInfo": [],
+    "photoFormat": "webp",
+    "url": "/TX/Bellville/111-S-Masonic-St-77418/home/44840598",
+    "hasInsight": false,
+    "sashes": [
+     {
+      "sashType": 1,
+      "sashTypeId": 1,
+      "sashTypeName": "Sold",
+      "sashTypeColor": "#5D8ACB",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "",
+      "lastSaleDate": "OCT 13, 2026",
+      "lastSalePrice": ""
+     }
+    ],
+    "listingTags": [
+     "ORIGINAL BRICK FIREPLACE",
+     "FLOOR TO CEILING WINDOWS",
+     "BUTCHER BLOCK ISLAND",
+     "FARMHOUSE SINK",
+     "TILE BACKSPLASH",
+     "CUSTOM CABINETRY"
+    ],
+    "isHot": false,
+    "hasVirtualTour": false,
+    "hasVideoTour": false,
+    "has3DTour": false,
+    "hasInteractiveFloorplan": false,
+    "newConstructionCommunityInfo": {},
+    "isRedfin": false,
+    "remarksAccessLevel": 1,
+    "isShortlisted": false,
+    "isViewedListing": false,
+    "skGarageSpaces": 2,
+    "skParkingSpaces": 2,
+    "skPoolType": 0
+   },
+   {
+    "mlsId": {
+     "label": "MLS#",
+     "value": "70007556"
+    },
+    "showMlsId": false,
+    "mlsStatus": "Closed",
+    "showDatasourceLogo": false,
+    "price": {
+     "value": 749000,
+     "level": 1
+    },
+    "hideSalePrice": true,
+    "hoa": {
+     "level": 1
+    },
+    "isHoaFrequencyKnown": true,
+    "sqFt": {
+     "value": 2272,
+     "level": 1
+    },
+    "pricePerSqFt": {
+     "value": 330,
+     "level": 1
+    },
+    "lotSize": {
+     "value": 299257,
+     "level": 1
+    },
+    "beds": 4,
+    "baths": 2.0,
+    "fullBaths": 2,
+    "location": {
+     "value": "New Ulm",
+     "level": 1
+    },
+    "stories": 2.0,
+    "latLong": {
+     "value": {
+      "latitude": 29.885623,
+      "longitude": -96.443869
+     },
+     "level": 1
+    },
+    "streetLine": {
+     "value": "20984 Fm 1094",
+     "level": 1
+    },
+    "unitNumber": {
+     "level": 1
+    },
+    "city": "New Ulm",
+    "state": "TX",
+    "zip": "78950",
+    "postalCode": {
+     "value": "78950",
+     "level": 1
+    },
+    "countryCode": "US",
+    "showAddressOnMap": true,
+    "soldDate": 1789023600000,
+    "searchStatus": 4,
+    "propertyType": 7,
+    "uiPropertyType": 6,
+    "listingType": 1,
+    "propertyId": 44840990,
+    "listingId": 209662158,
+    "dataSourceId": 104,
+    "isEarlyAccess": false,
+    "marketId": 18,
+    "yearBuilt": {
+     "value": 1881,
+     "level": 1
+    },
+    "dom": {
+     "level": 1
+    },
+    "timeOnRedfin": {
+     "level": 1
+    },
+    "timeZone": "US/Central",
+    "primaryPhotoDisplayLevel": 1,
+    "photos": {
+     "value": "0-49:4",
+     "level": 1
+    },
+    "numPictures": 50,
+    "additionalPhotosInfo": [],
+    "photoFormat": "webp",
+    "url": "/TX/New-Ulm/20984-FM-1094-78950/home/44840990",
+    "hasInsight": false,
+    "sashes": [
+     {
+      "sashType": 1,
+      "sashTypeId": 1,
+      "sashTypeName": "Sold",
+      "sashTypeColor": "#5D8ACB",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "",
+      "lastSaleDate": "SEP 10, 2026",
+      "lastSalePrice": ""
+     }
+    ],
+    "listingTags": [
+     "6.8 ACRES",
+     "1881-BUILT VICTORIAN",
+     "MATURE TREES",
+     "INGROUND SWIMMING POOL",
+     "DETACHED GARAGE",
+     "PRIME LOCATION"
+    ],
+    "isHot": false,
+    "hasVirtualTour": false,
+    "hasVideoTour": false,
+    "has3DTour": false,
+    "hasInteractiveFloorplan": false,
+    "newConstructionCommunityInfo": {},
+    "isRedfin": false,
+    "listingRemarks": "Nestled on 6.8 acres just outside the quaint town of New Ulm is a stunning 1881-built Victorian. The home boasts four bedrooms and two full bathrooms, providing ample space for full-time family living, a weekend retreat or an Airbnb. Architectural details, including high ceilings, intricate woodwork, and large windows, preserve the character, while modern updates provide comfort and convenience. The property is highlighted by mature trees that create a serene, private setting to enjoy the tranquility of country living. The inground swimming pool is perfect for gathering and entertaining. A versatile detached garage/flex building offers endless possibilities\u2014whether you need extra stor",
+    "remarksAccessLevel": 1,
+    "isShortlisted": false,
+    "isViewedListing": false,
+    "skGarageSpaces": 2,
+    "skParkingSpaces": 2,
+    "skPoolType": 0
+   },
+   {
+    "mlsId": {
+     "label": "MLS#",
+     "value": "69590707"
+    },
+    "showMlsId": false,
+    "mlsStatus": "Closed",
+    "showDatasourceLogo": false,
+    "price": {
+     "value": 1999900,
+     "level": 1
+    },
+    "hideSalePrice": true,
+    "hoa": {
+     "level": 1
+    },
+    "isHoaFrequencyKnown": true,
+    "sqFt": {
+     "value": 2463,
+     "level": 1
+    },
+    "pricePerSqFt": {
+     "value": 812,
+     "level": 1
+    },
+    "lotSize": {
+     "value": 2778779,
+     "level": 1
+    },
+    "beds": 4,
+    "baths": 3.0,
+    "fullBaths": 3,
+    "location": {
+     "value": "N/A",
+     "level": 1
+    },
+    "latLong": {
+     "value": {
+      "latitude": 29.9875807,
+      "longitude": -96.4545366
+     },
+     "level": 1
+    },
+    "streetLine": {
+     "value": "2734 Blue Hole Rd",
+     "level": 1
+    },
+    "unitNumber": {
+     "level": 1
+    },
+    "city": "Bleiblerville",
+    "state": "TX",
+    "zip": "78931",
+    "postalCode": {
+     "value": "78931",
+     "level": 1
+    },
+    "countryCode": "US",
+    "showAddressOnMap": true,
+    "soldDate": 1787122800000,
+    "searchStatus": 4,
+    "propertyType": 7,
+    "uiPropertyType": 6,
+    "listingType": 1,
+    "propertyId": 44841538,
+    "listingId": 217306869,
+    "dataSourceId": 104,
+    "isEarlyAccess": false,
+    "marketId": 18,
+    "yearBuilt": {
+     "value": 1925,
+     "level": 1
+    },
+    "dom": {
+     "level": 1
+    },
+    "timeOnRedfin": {
+     "level": 1
+    },
+    "timeZone": "US/Central",
+    "primaryPhotoDisplayLevel": 1,
+    "photos": {
+     "value": "0-5:I,6:G,7-13:F,14-16:E,17:D,18-20:C,21-24:A,25:7,26-27:6,28:7,29:8,30-44:5",
+     "level": 1
+    },
+    "numPictures": 45,
+    "additionalPhotosInfo": [],
+    "photoFormat": "webp",
+    "url": "/TX/Bleiblerville/2734-Blue-Hole-Rd-78931/home/44841538",
+    "hasInsight": false,
+    "sashes": [
+     {
+      "sashType": 1,
+      "sashTypeId": 1,
+      "sashTypeName": "Sold",
+      "sashTypeColor": "#5D8ACB",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "",
+      "lastSaleDate": "AUG 19, 2026",
+      "lastSalePrice": ""
+     },
+     {
+      "sashType": 32,
+      "sashTypeId": 32,
+      "sashTypeName": "Video Tour",
+      "sashTypeColor": "#7556F2",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "",
+      "lastSaleDate": "",
+      "lastSalePrice": ""
+     }
+    ],
+    "listingTags": [
+     "63.79 ACRE RETREAT",
+     "SWEEPING HILLTOP VIEWS",
+     "TWO PONDS",
+     "SEASONAL CREEK",
+     "EQUIPMENT BARN",
+     "HAY BARN"
+    ],
+    "isHot": false,
+    "hasVirtualTour": true,
+    "hasVideoTour": false,
+    "has3DTour": false,
+    "hasInteractiveFloorplan": false,
+    "newConstructionCommunityInfo": {},
+    "isRedfin": false,
+    "listingRemarks": "Beautiful +/-63.79 acre retreat offering sweeping hilltop views over rolling pastures, two ponds, and a seasonal creek. The inviting 4 bedroom, 3 bath farmhouse blends original 1925 charm with a thoughtful 1984 addition, creating a warm, livable space. Outbuildings include a large equipment barn, hay barn, and cattle pens with storage, ideal for livestock or hay operations. A custom two story playhouse near the creek doubles as a hunting blind, adding fun and function alike. With its mix of open pasture, water, and elevated views, this property is perfect for a working ranch, weekend getaway, or forever homestead. Don't miss this rare opportunity to own a true Austin County gem with charm a",
+    "remarksAccessLevel": 1,
+    "isShortlisted": false,
+    "isViewedListing": false,
+    "skGarageSpaces": 0,
+    "skParkingSpaces": 0,
+    "skPoolType": 5
+   }
+  ],
+  "searchMedian": {
+   "price": 385000,
+   "sqFt": 2128,
+   "pricePerSqFt": 185,
+   "beds": 3,
+   "baths": 2.0
+  },
+  "csvDownloadLinkDisplayLevel": 3
+ }
+}

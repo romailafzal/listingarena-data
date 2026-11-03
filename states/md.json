@@ -1,0 +1,222 @@
+{
+ "state": "MD",
+ "name": "Maryland",
+ "counties": [
+  {
+   "name": "Allegany County",
+   "fips": "24001",
+   "type": "county",
+   "redfin_region_id": 1310,
+   "realtor_location": "Allegany County, MD",
+   "lat": 39.612313,
+   "lng": -78.703104
+  },
+  {
+   "name": "Anne Arundel County",
+   "fips": "24003",
+   "type": "county",
+   "redfin_region_id": 1311,
+   "realtor_location": "Anne Arundel County, MD",
+   "lat": 38.991617,
+   "lng": -76.560894
+  },
+  {
+   "name": "Baltimore County",
+   "fips": "24005",
+   "type": "county",
+   "redfin_region_id": 1312,
+   "realtor_location": "Baltimore County, MD",
+   "lat": 39.443167,
+   "lng": -76.616569
+  },
+  {
+   "name": "Calvert County",
+   "fips": "24009",
+   "type": "county",
+   "redfin_region_id": 1313,
+   "realtor_location": "Calvert County, MD",
+   "lat": 38.522719,
+   "lng": -76.529762
+  },
+  {
+   "name": "Caroline County",
+   "fips": "24011",
+   "type": "county",
+   "redfin_region_id": 1314,
+   "realtor_location": "Caroline County, MD",
+   "lat": 38.871531,
+   "lng": -75.831662
+  },
+  {
+   "name": "Carroll County",
+   "fips": "24013",
+   "type": "county",
+   "redfin_region_id": 1315,
+   "realtor_location": "Carroll County, MD",
+   "lat": 39.563328,
+   "lng": -77.01533
+  },
+  {
+   "name": "Cecil County",
+   "fips": "24015",
+   "type": "county",
+   "redfin_region_id": 1316,
+   "realtor_location": "Cecil County, MD",
+   "lat": 39.562354,
+   "lng": -75.941585
+  },
+  {
+   "name": "Charles County",
+   "fips": "24017",
+   "type": "county",
+   "redfin_region_id": 1317,
+   "realtor_location": "Charles County, MD",
+   "lat": 38.472853,
+   "lng": -77.015427
+  },
+  {
+   "name": "Dorchester County",
+   "fips": "24019",
+   "type": "county",
+   "redfin_region_id": 1318,
+   "realtor_location": "Dorchester County, MD",
+   "lat": 38.429196,
+   "lng": -76.047433
+  },
+  {
+   "name": "Frederick County",
+   "fips": "24021",
+   "type": "county",
+   "redfin_region_id": 1319,
+   "realtor_location": "Frederick County, MD",
+   "lat": 39.470177,
+   "lng": -77.397636
+  },
+  {
+   "name": "Garrett County",
+   "fips": "24023",
+   "type": "county",
+   "redfin_region_id": 1320,
+   "realtor_location": "Garrett County, MD",
+   "lat": 39.547299,
+   "lng": -79.274619
+  },
+  {
+   "name": "Harford County",
+   "fips": "24025",
+   "type": "county",
+   "redfin_region_id": 1321,
+   "realtor_location": "Harford County, MD",
+   "lat": 39.537429,
+   "lng": -76.299789
+  },
+  {
+   "name": "Howard County",
+   "fips": "24027",
+   "type": "county",
+   "redfin_region_id": 1322,
+   "realtor_location": "Howard County, MD",
+   "lat": 39.252264,
+   "lng": -76.924406
+  },
+  {
+   "name": "Kent County",
+   "fips": "24029",
+   "type": "county",
+   "redfin_region_id": 1323,
+   "realtor_location": "Kent County, MD",
+   "lat": 39.241279,
+   "lng": -76.125987
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "24031",
+   "type": "county",
+   "redfin_region_id": 1324,
+   "realtor_location": "Montgomery County, MD",
+   "lat": 39.137381,
+   "lng": -77.203063
+  },
+  {
+   "name": "Prince George's County",
+   "fips": "24033",
+   "type": "county",
+   "redfin_region_id": 1325,
+   "realtor_location": "Prince George's County, MD",
+   "lat": 38.829278,
+   "lng": -76.848188
+  },
+  {
+   "name": "Queen Anne's County",
+   "fips": "24035",
+   "type": "county",
+   "redfin_region_id": 1326,
+   "realtor_location": "Queen Anne's County, MD",
+   "lat": 39.040693,
+   "lng": -76.082405
+  },
+  {
+   "name": "St. Mary's County",
+   "fips": "24037",
+   "type": "county",
+   "redfin_region_id": 1327,
+   "realtor_location": "St. Mary's County, MD",
+   "lat": 38.223077,
+   "lng": -76.534487
+  },
+  {
+   "name": "Somerset County",
+   "fips": "24039",
+   "type": "county",
+   "redfin_region_id": 1328,
+   "realtor_location": "Somerset County, MD",
+   "lat": 38.07445,
+   "lng": -75.853323
+  },
+  {
+   "name": "Talbot County",
+   "fips": "24041",
+   "type": "county",
+   "redfin_region_id": 1329,
+   "realtor_location": "Talbot County, MD",
+   "lat": 38.748349,
+   "lng": -76.178476
+  },
+  {
+   "name": "Washington County",
+   "fips": "24043",
+   "type": "county",
+   "redfin_region_id": 1330,
+   "realtor_location": "Washington County, MD",
+   "lat": 39.603621,
+   "lng": -77.814671
+  },
+  {
+   "name": "Wicomico County",
+   "fips": "24045",
+   "type": "county",
+   "redfin_region_id": 1331,
+   "realtor_location": "Wicomico County, MD",
+   "lat": 38.36737,
+   "lng": -75.632083
+  },
+  {
+   "name": "Worcester County",
+   "fips": "24047",
+   "type": "county",
+   "redfin_region_id": 1332,
+   "realtor_location": "Worcester County, MD",
+   "lat": 38.222133,
+   "lng": -75.309931
+  },
+  {
+   "name": "Baltimore city",
+   "fips": "24510",
+   "type": "independent_city",
+   "redfin_region_id": 1333,
+   "realtor_location": "Baltimore, MD",
+   "lat": 39.300032,
+   "lng": -76.610476
+  }
+ ]
+}

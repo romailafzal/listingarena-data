@@ -1,0 +1,600 @@
+{
+ "state": "SD",
+ "name": "South Dakota",
+ "counties": [
+  {
+   "name": "Aurora County",
+   "fips": "46003",
+   "type": "county",
+   "redfin_region_id": 2479,
+   "realtor_location": "Aurora County, SD",
+   "lat": 43.724719,
+   "lng": -98.577587
+  },
+  {
+   "name": "Beadle County",
+   "fips": "46005",
+   "type": "county",
+   "redfin_region_id": 2480,
+   "realtor_location": "Beadle County, SD",
+   "lat": 44.418265,
+   "lng": -98.279422
+  },
+  {
+   "name": "Bennett County",
+   "fips": "46007",
+   "type": "county",
+   "redfin_region_id": 2481,
+   "realtor_location": "Bennett County, SD",
+   "lat": 43.186912,
+   "lng": -101.677181
+  },
+  {
+   "name": "Bon Homme County",
+   "fips": "46009",
+   "type": "county",
+   "redfin_region_id": 2482,
+   "realtor_location": "Bon Homme County, SD",
+   "lat": 42.985799,
+   "lng": -97.884199
+  },
+  {
+   "name": "Brookings County",
+   "fips": "46011",
+   "type": "county",
+   "redfin_region_id": 2483,
+   "realtor_location": "Brookings County, SD",
+   "lat": 44.376675,
+   "lng": -96.797797
+  },
+  {
+   "name": "Brown County",
+   "fips": "46013",
+   "type": "county",
+   "redfin_region_id": 2484,
+   "realtor_location": "Brown County, SD",
+   "lat": 45.589254,
+   "lng": -98.352175
+  },
+  {
+   "name": "Brule County",
+   "fips": "46015",
+   "type": "county",
+   "redfin_region_id": 2485,
+   "realtor_location": "Brule County, SD",
+   "lat": 43.729873,
+   "lng": -99.092909
+  },
+  {
+   "name": "Buffalo County",
+   "fips": "46017",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Buffalo County, SD",
+   "lat": 44.044306,
+   "lng": -99.203998
+  },
+  {
+   "name": "Butte County",
+   "fips": "46019",
+   "type": "county",
+   "redfin_region_id": 2487,
+   "realtor_location": "Butte County, SD",
+   "lat": 44.896226,
+   "lng": -103.501436
+  },
+  {
+   "name": "Campbell County",
+   "fips": "46021",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Campbell County, SD",
+   "lat": 45.785575,
+   "lng": -100.002107
+  },
+  {
+   "name": "Charles Mix County",
+   "fips": "46023",
+   "type": "county",
+   "redfin_region_id": 2489,
+   "realtor_location": "Charles Mix County, SD",
+   "lat": 43.206185,
+   "lng": -98.595143
+  },
+  {
+   "name": "Clark County",
+   "fips": "46025",
+   "type": "county",
+   "redfin_region_id": 2490,
+   "realtor_location": "Clark County, SD",
+   "lat": 44.855211,
+   "lng": -97.724912
+  },
+  {
+   "name": "Clay County",
+   "fips": "46027",
+   "type": "county",
+   "redfin_region_id": 2491,
+   "realtor_location": "Clay County, SD",
+   "lat": 42.91615,
+   "lng": -96.980468
+  },
+  {
+   "name": "Codington County",
+   "fips": "46029",
+   "type": "county",
+   "redfin_region_id": 2492,
+   "realtor_location": "Codington County, SD",
+   "lat": 44.966285,
+   "lng": -97.198837
+  },
+  {
+   "name": "Corson County",
+   "fips": "46031",
+   "type": "county",
+   "redfin_region_id": 2493,
+   "realtor_location": "Corson County, SD",
+   "lat": 45.685671,
+   "lng": -101.179665
+  },
+  {
+   "name": "Custer County",
+   "fips": "46033",
+   "type": "county",
+   "redfin_region_id": 2494,
+   "realtor_location": "Custer County, SD",
+   "lat": 43.684943,
+   "lng": -103.46225
+  },
+  {
+   "name": "Davison County",
+   "fips": "46035",
+   "type": "county",
+   "redfin_region_id": 2495,
+   "realtor_location": "Davison County, SD",
+   "lat": 43.680439,
+   "lng": -98.155868
+  },
+  {
+   "name": "Day County",
+   "fips": "46037",
+   "type": "county",
+   "redfin_region_id": 2496,
+   "realtor_location": "Day County, SD",
+   "lat": 45.355161,
+   "lng": -97.58143
+  },
+  {
+   "name": "Deuel County",
+   "fips": "46039",
+   "type": "county",
+   "redfin_region_id": 2497,
+   "realtor_location": "Deuel County, SD",
+   "lat": 44.75629,
+   "lng": -96.690239
+  },
+  {
+   "name": "Dewey County",
+   "fips": "46041",
+   "type": "county",
+   "redfin_region_id": 2498,
+   "realtor_location": "Dewey County, SD",
+   "lat": 45.148049,
+   "lng": -100.837953
+  },
+  {
+   "name": "Douglas County",
+   "fips": "46043",
+   "type": "county",
+   "redfin_region_id": 2499,
+   "realtor_location": "Douglas County, SD",
+   "lat": 43.391506,
+   "lng": -98.358433
+  },
+  {
+   "name": "Edmunds County",
+   "fips": "46045",
+   "type": "county",
+   "redfin_region_id": 2500,
+   "realtor_location": "Edmunds County, SD",
+   "lat": 45.41168,
+   "lng": -99.205362
+  },
+  {
+   "name": "Fall River County",
+   "fips": "46047",
+   "type": "county",
+   "redfin_region_id": 2501,
+   "realtor_location": "Fall River County, SD",
+   "lat": 43.221619,
+   "lng": -103.512609
+  },
+  {
+   "name": "Faulk County",
+   "fips": "46049",
+   "type": "county",
+   "redfin_region_id": 2502,
+   "realtor_location": "Faulk County, SD",
+   "lat": 45.065476,
+   "lng": -99.153564
+  },
+  {
+   "name": "Grant County",
+   "fips": "46051",
+   "type": "county",
+   "redfin_region_id": 2503,
+   "realtor_location": "Grant County, SD",
+   "lat": 45.172637,
+   "lng": -96.772261
+  },
+  {
+   "name": "Gregory County",
+   "fips": "46053",
+   "type": "county",
+   "redfin_region_id": 2504,
+   "realtor_location": "Gregory County, SD",
+   "lat": 43.175142,
+   "lng": -99.206591
+  },
+  {
+   "name": "Haakon County",
+   "fips": "46055",
+   "type": "county",
+   "redfin_region_id": 2505,
+   "realtor_location": "Haakon County, SD",
+   "lat": 44.288097,
+   "lng": -101.540856
+  },
+  {
+   "name": "Hamlin County",
+   "fips": "46057",
+   "type": "county",
+   "redfin_region_id": 2506,
+   "realtor_location": "Hamlin County, SD",
+   "lat": 44.680619,
+   "lng": -97.178598
+  },
+  {
+   "name": "Hand County",
+   "fips": "46059",
+   "type": "county",
+   "redfin_region_id": 2507,
+   "realtor_location": "Hand County, SD",
+   "lat": 44.546713,
+   "lng": -99.004575
+  },
+  {
+   "name": "Hanson County",
+   "fips": "46061",
+   "type": "county",
+   "redfin_region_id": 2508,
+   "realtor_location": "Hanson County, SD",
+   "lat": 43.680612,
+   "lng": -97.796845
+  },
+  {
+   "name": "Harding County",
+   "fips": "46063",
+   "type": "county",
+   "redfin_region_id": 2509,
+   "realtor_location": "Harding County, SD",
+   "lat": 45.596611,
+   "lng": -103.473871
+  },
+  {
+   "name": "Hughes County",
+   "fips": "46065",
+   "type": "county",
+   "redfin_region_id": 2510,
+   "realtor_location": "Hughes County, SD",
+   "lat": 44.384452,
+   "lng": -99.975684
+  },
+  {
+   "name": "Hutchinson County",
+   "fips": "46067",
+   "type": "county",
+   "redfin_region_id": 2511,
+   "realtor_location": "Hutchinson County, SD",
+   "lat": 43.33671,
+   "lng": -97.749383
+  },
+  {
+   "name": "Hyde County",
+   "fips": "46069",
+   "type": "county",
+   "redfin_region_id": 2512,
+   "realtor_location": "Hyde County, SD",
+   "lat": 44.537174,
+   "lng": -99.472736
+  },
+  {
+   "name": "Jackson County",
+   "fips": "46071",
+   "type": "county",
+   "redfin_region_id": 2513,
+   "realtor_location": "Jackson County, SD",
+   "lat": 43.677506,
+   "lng": -101.626323
+  },
+  {
+   "name": "Jerauld County",
+   "fips": "46073",
+   "type": "county",
+   "redfin_region_id": 2514,
+   "realtor_location": "Jerauld County, SD",
+   "lat": 44.06341,
+   "lng": -98.62317
+  },
+  {
+   "name": "Jones County",
+   "fips": "46075",
+   "type": "county",
+   "redfin_region_id": 2515,
+   "realtor_location": "Jones County, SD",
+   "lat": 43.951991,
+   "lng": -100.686138
+  },
+  {
+   "name": "Kingsbury County",
+   "fips": "46077",
+   "type": "county",
+   "redfin_region_id": 2516,
+   "realtor_location": "Kingsbury County, SD",
+   "lat": 44.362969,
+   "lng": -97.499313
+  },
+  {
+   "name": "Lake County",
+   "fips": "46079",
+   "type": "county",
+   "redfin_region_id": 2517,
+   "realtor_location": "Lake County, SD",
+   "lat": 44.02845,
+   "lng": -97.123223
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "46081",
+   "type": "county",
+   "redfin_region_id": 2518,
+   "realtor_location": "Lawrence County, SD",
+   "lat": 44.348514,
+   "lng": -103.806362
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "46083",
+   "type": "county",
+   "redfin_region_id": 2519,
+   "realtor_location": "Lincoln County, SD",
+   "lat": 43.27942,
+   "lng": -96.722286
+  },
+  {
+   "name": "Lyman County",
+   "fips": "46085",
+   "type": "county",
+   "redfin_region_id": 2520,
+   "realtor_location": "Lyman County, SD",
+   "lat": 43.894812,
+   "lng": -99.841925
+  },
+  {
+   "name": "McCook County",
+   "fips": "46087",
+   "type": "county",
+   "redfin_region_id": 2521,
+   "realtor_location": "McCook County, SD",
+   "lat": 43.680416,
+   "lng": -97.358048
+  },
+  {
+   "name": "McPherson County",
+   "fips": "46089",
+   "type": "county",
+   "redfin_region_id": 2522,
+   "realtor_location": "McPherson County, SD",
+   "lat": 45.784249,
+   "lng": -99.211421
+  },
+  {
+   "name": "Marshall County",
+   "fips": "46091",
+   "type": "county",
+   "redfin_region_id": 2523,
+   "realtor_location": "Marshall County, SD",
+   "lat": 45.737044,
+   "lng": -97.58087
+  },
+  {
+   "name": "Meade County",
+   "fips": "46093",
+   "type": "county",
+   "redfin_region_id": 2524,
+   "realtor_location": "Meade County, SD",
+   "lat": 44.605282,
+   "lng": -102.714169
+  },
+  {
+   "name": "Mellette County",
+   "fips": "46095",
+   "type": "county",
+   "redfin_region_id": 2525,
+   "realtor_location": "Mellette County, SD",
+   "lat": 43.58469,
+   "lng": -100.760955
+  },
+  {
+   "name": "Miner County",
+   "fips": "46097",
+   "type": "county",
+   "redfin_region_id": 2526,
+   "realtor_location": "Miner County, SD",
+   "lat": 44.021541,
+   "lng": -97.608122
+  },
+  {
+   "name": "Minnehaha County",
+   "fips": "46099",
+   "type": "county",
+   "redfin_region_id": 2527,
+   "realtor_location": "Minnehaha County, SD",
+   "lat": 43.667472,
+   "lng": -96.795726
+  },
+  {
+   "name": "Moody County",
+   "fips": "46101",
+   "type": "county",
+   "redfin_region_id": 2528,
+   "realtor_location": "Moody County, SD",
+   "lat": 44.012429,
+   "lng": -96.676054
+  },
+  {
+   "name": "Oglala Lakota County",
+   "fips": "46102",
+   "type": "county",
+   "redfin_region_id": 2534,
+   "realtor_location": "Oglala Lakota County, SD",
+   "lat": 43.333393,
+   "lng": -102.561486
+  },
+  {
+   "name": "Pennington County",
+   "fips": "46103",
+   "type": "county",
+   "redfin_region_id": 2529,
+   "realtor_location": "Pennington County, SD",
+   "lat": 44.002349,
+   "lng": -102.823801
+  },
+  {
+   "name": "Perkins County",
+   "fips": "46105",
+   "type": "county",
+   "redfin_region_id": 2530,
+   "realtor_location": "Perkins County, SD",
+   "lat": 45.483387,
+   "lng": -102.467995
+  },
+  {
+   "name": "Potter County",
+   "fips": "46107",
+   "type": "county",
+   "redfin_region_id": 2531,
+   "realtor_location": "Potter County, SD",
+   "lat": 45.052713,
+   "lng": -99.962003
+  },
+  {
+   "name": "Roberts County",
+   "fips": "46109",
+   "type": "county",
+   "redfin_region_id": 2532,
+   "realtor_location": "Roberts County, SD",
+   "lat": 45.623397,
+   "lng": -96.947551
+  },
+  {
+   "name": "Sanborn County",
+   "fips": "46111",
+   "type": "county",
+   "redfin_region_id": 2533,
+   "realtor_location": "Sanborn County, SD",
+   "lat": 44.018942,
+   "lng": -98.091709
+  },
+  {
+   "name": "Spink County",
+   "fips": "46115",
+   "type": "county",
+   "redfin_region_id": 2535,
+   "realtor_location": "Spink County, SD",
+   "lat": 44.923772,
+   "lng": -98.339615
+  },
+  {
+   "name": "Stanley County",
+   "fips": "46117",
+   "type": "county",
+   "redfin_region_id": 2536,
+   "realtor_location": "Stanley County, SD",
+   "lat": 44.413984,
+   "lng": -100.747822
+  },
+  {
+   "name": "Sully County",
+   "fips": "46119",
+   "type": "county",
+   "redfin_region_id": 2537,
+   "realtor_location": "Sully County, SD",
+   "lat": 44.722325,
+   "lng": -100.131399
+  },
+  {
+   "name": "Todd County",
+   "fips": "46121",
+   "type": "county",
+   "redfin_region_id": 2538,
+   "realtor_location": "Todd County, SD",
+   "lat": 43.208794,
+   "lng": -100.707664
+  },
+  {
+   "name": "Tripp County",
+   "fips": "46123",
+   "type": "county",
+   "redfin_region_id": 2539,
+   "realtor_location": "Tripp County, SD",
+   "lat": 43.349729,
+   "lng": -99.876219
+  },
+  {
+   "name": "Turner County",
+   "fips": "46125",
+   "type": "county",
+   "redfin_region_id": 2540,
+   "realtor_location": "Turner County, SD",
+   "lat": 43.30867,
+   "lng": -97.150185
+  },
+  {
+   "name": "Union County",
+   "fips": "46127",
+   "type": "county",
+   "redfin_region_id": 2541,
+   "realtor_location": "Union County, SD",
+   "lat": 42.831106,
+   "lng": -96.650829
+  },
+  {
+   "name": "Walworth County",
+   "fips": "46129",
+   "type": "county",
+   "redfin_region_id": 2542,
+   "realtor_location": "Walworth County, SD",
+   "lat": 45.427605,
+   "lng": -100.027856
+  },
+  {
+   "name": "Yankton County",
+   "fips": "46135",
+   "type": "county",
+   "redfin_region_id": 2543,
+   "realtor_location": "Yankton County, SD",
+   "lat": 43.006603,
+   "lng": -97.388361
+  },
+  {
+   "name": "Ziebach County",
+   "fips": "46137",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Ziebach County, SD",
+   "lat": 44.989764,
+   "lng": -101.660827
+  }
+ ]
+}

@@ -1,0 +1,501 @@
+{
+ "state": "WV",
+ "name": "West Virginia",
+ "counties": [
+  {
+   "name": "Barbour County",
+   "fips": "54001",
+   "type": "county",
+   "redfin_region_id": 3108,
+   "realtor_location": "Barbour County, WV",
+   "lat": 39.139725,
+   "lng": -79.996947
+  },
+  {
+   "name": "Berkeley County",
+   "fips": "54003",
+   "type": "county",
+   "redfin_region_id": 3109,
+   "realtor_location": "Berkeley County, WV",
+   "lat": 39.447938,
+   "lng": -78.037754
+  },
+  {
+   "name": "Boone County",
+   "fips": "54005",
+   "type": "county",
+   "redfin_region_id": 3110,
+   "realtor_location": "Boone County, WV",
+   "lat": 38.022814,
+   "lng": -81.713538
+  },
+  {
+   "name": "Braxton County",
+   "fips": "54007",
+   "type": "county",
+   "redfin_region_id": 3111,
+   "realtor_location": "Braxton County, WV",
+   "lat": 38.69933,
+   "lng": -80.73166
+  },
+  {
+   "name": "Brooke County",
+   "fips": "54009",
+   "type": "county",
+   "redfin_region_id": 3112,
+   "realtor_location": "Brooke County, WV",
+   "lat": 40.272645,
+   "lng": -80.578691
+  },
+  {
+   "name": "Cabell County",
+   "fips": "54011",
+   "type": "county",
+   "redfin_region_id": 3113,
+   "realtor_location": "Cabell County, WV",
+   "lat": 38.419578,
+   "lng": -82.243397
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "54013",
+   "type": "county",
+   "redfin_region_id": 3114,
+   "realtor_location": "Calhoun County, WV",
+   "lat": 38.844159,
+   "lng": -81.115478
+  },
+  {
+   "name": "Clay County",
+   "fips": "54015",
+   "type": "county",
+   "redfin_region_id": 3115,
+   "realtor_location": "Clay County, WV",
+   "lat": 38.459826,
+   "lng": -81.081866
+  },
+  {
+   "name": "Doddridge County",
+   "fips": "54017",
+   "type": "county",
+   "redfin_region_id": 3116,
+   "realtor_location": "Doddridge County, WV",
+   "lat": 39.264307,
+   "lng": -80.711498
+  },
+  {
+   "name": "Fayette County",
+   "fips": "54019",
+   "type": "county",
+   "redfin_region_id": 3117,
+   "realtor_location": "Fayette County, WV",
+   "lat": 38.030933,
+   "lng": -81.086051
+  },
+  {
+   "name": "Gilmer County",
+   "fips": "54021",
+   "type": "county",
+   "redfin_region_id": 3118,
+   "realtor_location": "Gilmer County, WV",
+   "lat": 38.915867,
+   "lng": -80.849413
+  },
+  {
+   "name": "Grant County",
+   "fips": "54023",
+   "type": "county",
+   "redfin_region_id": 3119,
+   "realtor_location": "Grant County, WV",
+   "lat": 39.105988,
+   "lng": -79.195064
+  },
+  {
+   "name": "Greenbrier County",
+   "fips": "54025",
+   "type": "county",
+   "redfin_region_id": 3120,
+   "realtor_location": "Greenbrier County, WV",
+   "lat": 37.924418,
+   "lng": -80.45059
+  },
+  {
+   "name": "Hampshire County",
+   "fips": "54027",
+   "type": "county",
+   "redfin_region_id": 3121,
+   "realtor_location": "Hampshire County, WV",
+   "lat": 39.312139,
+   "lng": -78.611989
+  },
+  {
+   "name": "Hancock County",
+   "fips": "54029",
+   "type": "county",
+   "redfin_region_id": 3122,
+   "realtor_location": "Hancock County, WV",
+   "lat": 40.516958,
+   "lng": -80.570164
+  },
+  {
+   "name": "Hardy County",
+   "fips": "54031",
+   "type": "county",
+   "redfin_region_id": 3123,
+   "realtor_location": "Hardy County, WV",
+   "lat": 39.011361,
+   "lng": -78.841729
+  },
+  {
+   "name": "Harrison County",
+   "fips": "54033",
+   "type": "county",
+   "redfin_region_id": 3124,
+   "realtor_location": "Harrison County, WV",
+   "lat": 39.279182,
+   "lng": -80.386498
+  },
+  {
+   "name": "Jackson County",
+   "fips": "54035",
+   "type": "county",
+   "redfin_region_id": 3125,
+   "realtor_location": "Jackson County, WV",
+   "lat": 38.834234,
+   "lng": -81.677717
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "54037",
+   "type": "county",
+   "redfin_region_id": 3126,
+   "realtor_location": "Jefferson County, WV",
+   "lat": 39.307398,
+   "lng": -77.86322
+  },
+  {
+   "name": "Kanawha County",
+   "fips": "54039",
+   "type": "county",
+   "redfin_region_id": 3127,
+   "realtor_location": "Kanawha County, WV",
+   "lat": 38.328068,
+   "lng": -81.523516
+  },
+  {
+   "name": "Lewis County",
+   "fips": "54041",
+   "type": "county",
+   "redfin_region_id": 3128,
+   "realtor_location": "Lewis County, WV",
+   "lat": 38.988877,
+   "lng": -80.495477
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "54043",
+   "type": "county",
+   "redfin_region_id": 3129,
+   "realtor_location": "Lincoln County, WV",
+   "lat": 38.17177,
+   "lng": -82.077623
+  },
+  {
+   "name": "Logan County",
+   "fips": "54045",
+   "type": "county",
+   "redfin_region_id": 3130,
+   "realtor_location": "Logan County, WV",
+   "lat": 37.830591,
+   "lng": -81.940853
+  },
+  {
+   "name": "McDowell County",
+   "fips": "54047",
+   "type": "county",
+   "redfin_region_id": 3131,
+   "realtor_location": "McDowell County, WV",
+   "lat": 37.38276,
+   "lng": -81.658204
+  },
+  {
+   "name": "Marion County",
+   "fips": "54049",
+   "type": "county",
+   "redfin_region_id": 3132,
+   "realtor_location": "Marion County, WV",
+   "lat": 39.505839,
+   "lng": -80.243402
+  },
+  {
+   "name": "Marshall County",
+   "fips": "54051",
+   "type": "county",
+   "redfin_region_id": 3133,
+   "realtor_location": "Marshall County, WV",
+   "lat": 39.854426,
+   "lng": -80.671794
+  },
+  {
+   "name": "Mason County",
+   "fips": "54053",
+   "type": "county",
+   "redfin_region_id": 3134,
+   "realtor_location": "Mason County, WV",
+   "lat": 38.770914,
+   "lng": -82.029007
+  },
+  {
+   "name": "Mercer County",
+   "fips": "54055",
+   "type": "county",
+   "redfin_region_id": 3135,
+   "realtor_location": "Mercer County, WV",
+   "lat": 37.403448,
+   "lng": -81.106456
+  },
+  {
+   "name": "Mineral County",
+   "fips": "54057",
+   "type": "county",
+   "redfin_region_id": 3136,
+   "realtor_location": "Mineral County, WV",
+   "lat": 39.404781,
+   "lng": -78.95669
+  },
+  {
+   "name": "Mingo County",
+   "fips": "54059",
+   "type": "county",
+   "redfin_region_id": 3137,
+   "realtor_location": "Mingo County, WV",
+   "lat": 37.721161,
+   "lng": -82.158989
+  },
+  {
+   "name": "Monongalia County",
+   "fips": "54061",
+   "type": "county",
+   "redfin_region_id": 3138,
+   "realtor_location": "Monongalia County, WV",
+   "lat": 39.633645,
+   "lng": -80.059074
+  },
+  {
+   "name": "Monroe County",
+   "fips": "54063",
+   "type": "county",
+   "redfin_region_id": 3139,
+   "realtor_location": "Monroe County, WV",
+   "lat": 37.554062,
+   "lng": -80.550329
+  },
+  {
+   "name": "Morgan County",
+   "fips": "54065",
+   "type": "county",
+   "redfin_region_id": 3140,
+   "realtor_location": "Morgan County, WV",
+   "lat": 39.557345,
+   "lng": -78.256517
+  },
+  {
+   "name": "Nicholas County",
+   "fips": "54067",
+   "type": "county",
+   "redfin_region_id": 3141,
+   "realtor_location": "Nicholas County, WV",
+   "lat": 38.291432,
+   "lng": -80.797515
+  },
+  {
+   "name": "Ohio County",
+   "fips": "54069",
+   "type": "county",
+   "redfin_region_id": 3142,
+   "realtor_location": "Ohio County, WV",
+   "lat": 40.100323,
+   "lng": -80.6199
+  },
+  {
+   "name": "Pendleton County",
+   "fips": "54071",
+   "type": "county",
+   "redfin_region_id": 3143,
+   "realtor_location": "Pendleton County, WV",
+   "lat": 38.67445,
+   "lng": -79.340617
+  },
+  {
+   "name": "Pleasants County",
+   "fips": "54073",
+   "type": "county",
+   "redfin_region_id": 3144,
+   "realtor_location": "Pleasants County, WV",
+   "lat": 39.368133,
+   "lng": -81.161172
+  },
+  {
+   "name": "Pocahontas County",
+   "fips": "54075",
+   "type": "county",
+   "redfin_region_id": 3145,
+   "realtor_location": "Pocahontas County, WV",
+   "lat": 38.332606,
+   "lng": -80.010121
+  },
+  {
+   "name": "Preston County",
+   "fips": "54077",
+   "type": "county",
+   "redfin_region_id": 3146,
+   "realtor_location": "Preston County, WV",
+   "lat": 39.46903,
+   "lng": -79.668865
+  },
+  {
+   "name": "Putnam County",
+   "fips": "54079",
+   "type": "county",
+   "redfin_region_id": 3147,
+   "realtor_location": "Putnam County, WV",
+   "lat": 38.510518,
+   "lng": -81.906109
+  },
+  {
+   "name": "Raleigh County",
+   "fips": "54081",
+   "type": "county",
+   "redfin_region_id": 3148,
+   "realtor_location": "Raleigh County, WV",
+   "lat": 37.762469,
+   "lng": -81.264672
+  },
+  {
+   "name": "Randolph County",
+   "fips": "54083",
+   "type": "county",
+   "redfin_region_id": 3149,
+   "realtor_location": "Randolph County, WV",
+   "lat": 38.781095,
+   "lng": -79.867788
+  },
+  {
+   "name": "Ritchie County",
+   "fips": "54085",
+   "type": "county",
+   "redfin_region_id": 3150,
+   "realtor_location": "Ritchie County, WV",
+   "lat": 39.177112,
+   "lng": -81.066317
+  },
+  {
+   "name": "Roane County",
+   "fips": "54087",
+   "type": "county",
+   "redfin_region_id": 3151,
+   "realtor_location": "Roane County, WV",
+   "lat": 38.74295,
+   "lng": -81.354494
+  },
+  {
+   "name": "Summers County",
+   "fips": "54089",
+   "type": "county",
+   "redfin_region_id": 3152,
+   "realtor_location": "Summers County, WV",
+   "lat": 37.655999,
+   "lng": -80.856325
+  },
+  {
+   "name": "Taylor County",
+   "fips": "54091",
+   "type": "county",
+   "redfin_region_id": 3153,
+   "realtor_location": "Taylor County, WV",
+   "lat": 39.332478,
+   "lng": -80.046554
+  },
+  {
+   "name": "Tucker County",
+   "fips": "54093",
+   "type": "county",
+   "redfin_region_id": 3154,
+   "realtor_location": "Tucker County, WV",
+   "lat": 39.111175,
+   "lng": -79.559968
+  },
+  {
+   "name": "Tyler County",
+   "fips": "54095",
+   "type": "county",
+   "redfin_region_id": 3155,
+   "realtor_location": "Tyler County, WV",
+   "lat": 39.465634,
+   "lng": -80.877219
+  },
+  {
+   "name": "Upshur County",
+   "fips": "54097",
+   "type": "county",
+   "redfin_region_id": 3156,
+   "realtor_location": "Upshur County, WV",
+   "lat": 38.90253,
+   "lng": -80.231606
+  },
+  {
+   "name": "Wayne County",
+   "fips": "54099",
+   "type": "county",
+   "redfin_region_id": 3157,
+   "realtor_location": "Wayne County, WV",
+   "lat": 38.143642,
+   "lng": -82.422666
+  },
+  {
+   "name": "Webster County",
+   "fips": "54101",
+   "type": "county",
+   "redfin_region_id": 3158,
+   "realtor_location": "Webster County, WV",
+   "lat": 38.483459,
+   "lng": -80.449052
+  },
+  {
+   "name": "Wetzel County",
+   "fips": "54103",
+   "type": "county",
+   "redfin_region_id": 3159,
+   "realtor_location": "Wetzel County, WV",
+   "lat": 39.59818,
+   "lng": -80.635399
+  },
+  {
+   "name": "Wirt County",
+   "fips": "54105",
+   "type": "county",
+   "redfin_region_id": 3160,
+   "realtor_location": "Wirt County, WV",
+   "lat": 39.020034,
+   "lng": -81.382975
+  },
+  {
+   "name": "Wood County",
+   "fips": "54107",
+   "type": "county",
+   "redfin_region_id": 3161,
+   "realtor_location": "Wood County, WV",
+   "lat": 39.211602,
+   "lng": -81.516234
+  },
+  {
+   "name": "Wyoming County",
+   "fips": "54109",
+   "type": "county",
+   "redfin_region_id": 3162,
+   "realtor_location": "Wyoming County, WV",
+   "lat": 37.60366,
+   "lng": -81.549032
+  }
+ ]
+}

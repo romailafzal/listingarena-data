@@ -1,0 +1,483 @@
+{
+ "state": "ND",
+ "name": "North Dakota",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "38001",
+   "type": "county",
+   "redfin_region_id": 2107,
+   "realtor_location": "Adams County, ND",
+   "lat": 46.096815,
+   "lng": -102.533198
+  },
+  {
+   "name": "Barnes County",
+   "fips": "38003",
+   "type": "county",
+   "redfin_region_id": 2108,
+   "realtor_location": "Barnes County, ND",
+   "lat": 46.94255,
+   "lng": -98.070195
+  },
+  {
+   "name": "Benson County",
+   "fips": "38005",
+   "type": "county",
+   "redfin_region_id": 2109,
+   "realtor_location": "Benson County, ND",
+   "lat": 48.071743,
+   "lng": -99.351152
+  },
+  {
+   "name": "Billings County",
+   "fips": "38007",
+   "type": "county",
+   "redfin_region_id": 2110,
+   "realtor_location": "Billings County, ND",
+   "lat": 47.007044,
+   "lng": -103.364016
+  },
+  {
+   "name": "Bottineau County",
+   "fips": "38009",
+   "type": "county",
+   "redfin_region_id": 2111,
+   "realtor_location": "Bottineau County, ND",
+   "lat": 48.794412,
+   "lng": -100.831257
+  },
+  {
+   "name": "Bowman County",
+   "fips": "38011",
+   "type": "county",
+   "redfin_region_id": 2112,
+   "realtor_location": "Bowman County, ND",
+   "lat": 46.110144,
+   "lng": -103.505943
+  },
+  {
+   "name": "Burke County",
+   "fips": "38013",
+   "type": "county",
+   "redfin_region_id": 2113,
+   "realtor_location": "Burke County, ND",
+   "lat": 48.786453,
+   "lng": -102.520087
+  },
+  {
+   "name": "Burleigh County",
+   "fips": "38015",
+   "type": "county",
+   "redfin_region_id": 2114,
+   "realtor_location": "Burleigh County, ND",
+   "lat": 46.978829,
+   "lng": -100.469533
+  },
+  {
+   "name": "Cass County",
+   "fips": "38017",
+   "type": "county",
+   "redfin_region_id": 2115,
+   "realtor_location": "Cass County, ND",
+   "lat": 46.927003,
+   "lng": -97.252375
+  },
+  {
+   "name": "Cavalier County",
+   "fips": "38019",
+   "type": "county",
+   "redfin_region_id": 2116,
+   "realtor_location": "Cavalier County, ND",
+   "lat": 48.768439,
+   "lng": -98.46379
+  },
+  {
+   "name": "Dickey County",
+   "fips": "38021",
+   "type": "county",
+   "redfin_region_id": 2117,
+   "realtor_location": "Dickey County, ND",
+   "lat": 46.107756,
+   "lng": -98.496518
+  },
+  {
+   "name": "Divide County",
+   "fips": "38023",
+   "type": "county",
+   "redfin_region_id": 2118,
+   "realtor_location": "Divide County, ND",
+   "lat": 48.814754,
+   "lng": -103.509326
+  },
+  {
+   "name": "Dunn County",
+   "fips": "38025",
+   "type": "county",
+   "redfin_region_id": 2119,
+   "realtor_location": "Dunn County, ND",
+   "lat": 47.354557,
+   "lng": -102.612322
+  },
+  {
+   "name": "Eddy County",
+   "fips": "38027",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Eddy County, ND",
+   "lat": 47.723436,
+   "lng": -98.900474
+  },
+  {
+   "name": "Emmons County",
+   "fips": "38029",
+   "type": "county",
+   "redfin_region_id": 2121,
+   "realtor_location": "Emmons County, ND",
+   "lat": 46.284255,
+   "lng": -100.237842
+  },
+  {
+   "name": "Foster County",
+   "fips": "38031",
+   "type": "county",
+   "redfin_region_id": 2122,
+   "realtor_location": "Foster County, ND",
+   "lat": 47.471431,
+   "lng": -98.872876
+  },
+  {
+   "name": "Golden Valley County",
+   "fips": "38033",
+   "type": "county",
+   "redfin_region_id": 2123,
+   "realtor_location": "Golden Valley County, ND",
+   "lat": 46.938924,
+   "lng": -103.844612
+  },
+  {
+   "name": "Grand Forks County",
+   "fips": "38035",
+   "type": "county",
+   "redfin_region_id": 2124,
+   "realtor_location": "Grand Forks County, ND",
+   "lat": 47.926003,
+   "lng": -97.450851
+  },
+  {
+   "name": "Grant County",
+   "fips": "38037",
+   "type": "county",
+   "redfin_region_id": 2125,
+   "realtor_location": "Grant County, ND",
+   "lat": 46.357827,
+   "lng": -101.639049
+  },
+  {
+   "name": "Griggs County",
+   "fips": "38039",
+   "type": "county",
+   "redfin_region_id": 2126,
+   "realtor_location": "Griggs County, ND",
+   "lat": 47.456334,
+   "lng": -98.232286
+  },
+  {
+   "name": "Hettinger County",
+   "fips": "38041",
+   "type": "county",
+   "redfin_region_id": 2127,
+   "realtor_location": "Hettinger County, ND",
+   "lat": 46.435704,
+   "lng": -102.454238
+  },
+  {
+   "name": "Kidder County",
+   "fips": "38043",
+   "type": "county",
+   "redfin_region_id": 2128,
+   "realtor_location": "Kidder County, ND",
+   "lat": 46.938273,
+   "lng": -99.731198
+  },
+  {
+   "name": "LaMoure County",
+   "fips": "38045",
+   "type": "county",
+   "redfin_region_id": 2129,
+   "realtor_location": "LaMoure County, ND",
+   "lat": 46.464195,
+   "lng": -98.526057
+  },
+  {
+   "name": "Logan County",
+   "fips": "38047",
+   "type": "county",
+   "redfin_region_id": 2130,
+   "realtor_location": "Logan County, ND",
+   "lat": 46.469278,
+   "lng": -99.504585
+  },
+  {
+   "name": "McHenry County",
+   "fips": "38049",
+   "type": "county",
+   "redfin_region_id": 2131,
+   "realtor_location": "McHenry County, ND",
+   "lat": 48.233842,
+   "lng": -100.633267
+  },
+  {
+   "name": "McIntosh County",
+   "fips": "38051",
+   "type": "county",
+   "redfin_region_id": 2132,
+   "realtor_location": "McIntosh County, ND",
+   "lat": 46.108682,
+   "lng": -99.416487
+  },
+  {
+   "name": "McKenzie County",
+   "fips": "38053",
+   "type": "county",
+   "redfin_region_id": 2133,
+   "realtor_location": "McKenzie County, ND",
+   "lat": 47.742475,
+   "lng": -103.403215
+  },
+  {
+   "name": "McLean County",
+   "fips": "38055",
+   "type": "county",
+   "redfin_region_id": 2134,
+   "realtor_location": "McLean County, ND",
+   "lat": 47.653206,
+   "lng": -101.421914
+  },
+  {
+   "name": "Mercer County",
+   "fips": "38057",
+   "type": "county",
+   "redfin_region_id": 2135,
+   "realtor_location": "Mercer County, ND",
+   "lat": 47.307147,
+   "lng": -101.833328
+  },
+  {
+   "name": "Morton County",
+   "fips": "38059",
+   "type": "county",
+   "redfin_region_id": 2136,
+   "realtor_location": "Morton County, ND",
+   "lat": 46.710819,
+   "lng": -101.298265
+  },
+  {
+   "name": "Mountrail County",
+   "fips": "38061",
+   "type": "county",
+   "redfin_region_id": 2137,
+   "realtor_location": "Mountrail County, ND",
+   "lat": 48.210073,
+   "lng": -102.364895
+  },
+  {
+   "name": "Nelson County",
+   "fips": "38063",
+   "type": "county",
+   "redfin_region_id": 2138,
+   "realtor_location": "Nelson County, ND",
+   "lat": 47.918667,
+   "lng": -98.204428
+  },
+  {
+   "name": "Oliver County",
+   "fips": "38065",
+   "type": "county",
+   "redfin_region_id": 2139,
+   "realtor_location": "Oliver County, ND",
+   "lat": 47.118079,
+   "lng": -101.33142
+  },
+  {
+   "name": "Pembina County",
+   "fips": "38067",
+   "type": "county",
+   "redfin_region_id": 2140,
+   "realtor_location": "Pembina County, ND",
+   "lat": 48.766896,
+   "lng": -97.545405
+  },
+  {
+   "name": "Pierce County",
+   "fips": "38069",
+   "type": "county",
+   "redfin_region_id": 2141,
+   "realtor_location": "Pierce County, ND",
+   "lat": 48.238883,
+   "lng": -99.966497
+  },
+  {
+   "name": "Ramsey County",
+   "fips": "38071",
+   "type": "county",
+   "redfin_region_id": 2142,
+   "realtor_location": "Ramsey County, ND",
+   "lat": 48.266163,
+   "lng": -98.739031
+  },
+  {
+   "name": "Ransom County",
+   "fips": "38073",
+   "type": "county",
+   "redfin_region_id": 2143,
+   "realtor_location": "Ransom County, ND",
+   "lat": 46.449276,
+   "lng": -97.647554
+  },
+  {
+   "name": "Renville County",
+   "fips": "38075",
+   "type": "county",
+   "redfin_region_id": 2144,
+   "realtor_location": "Renville County, ND",
+   "lat": 48.712781,
+   "lng": -101.658152
+  },
+  {
+   "name": "Richland County",
+   "fips": "38077",
+   "type": "county",
+   "redfin_region_id": 2145,
+   "realtor_location": "Richland County, ND",
+   "lat": 46.265219,
+   "lng": -96.93796
+  },
+  {
+   "name": "Rolette County",
+   "fips": "38079",
+   "type": "county",
+   "redfin_region_id": 2146,
+   "realtor_location": "Rolette County, ND",
+   "lat": 48.768271,
+   "lng": -99.840463
+  },
+  {
+   "name": "Sargent County",
+   "fips": "38081",
+   "type": "county",
+   "redfin_region_id": 2147,
+   "realtor_location": "Sargent County, ND",
+   "lat": 46.108204,
+   "lng": -97.630051
+  },
+  {
+   "name": "Sheridan County",
+   "fips": "38083",
+   "type": "county",
+   "redfin_region_id": 2148,
+   "realtor_location": "Sheridan County, ND",
+   "lat": 47.581359,
+   "lng": -100.330986
+  },
+  {
+   "name": "Sioux County",
+   "fips": "38085",
+   "type": "county",
+   "redfin_region_id": 2149,
+   "realtor_location": "Sioux County, ND",
+   "lat": 46.110618,
+   "lng": -101.061284
+  },
+  {
+   "name": "Slope County",
+   "fips": "38087",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Slope County, ND",
+   "lat": 46.445834,
+   "lng": -103.462462
+  },
+  {
+   "name": "Stark County",
+   "fips": "38089",
+   "type": "county",
+   "redfin_region_id": 2151,
+   "realtor_location": "Stark County, ND",
+   "lat": 46.817031,
+   "lng": -102.662026
+  },
+  {
+   "name": "Steele County",
+   "fips": "38091",
+   "type": "county",
+   "redfin_region_id": 2152,
+   "realtor_location": "Steele County, ND",
+   "lat": 47.451062,
+   "lng": -97.71892
+  },
+  {
+   "name": "Stutsman County",
+   "fips": "38093",
+   "type": "county",
+   "redfin_region_id": 2153,
+   "realtor_location": "Stutsman County, ND",
+   "lat": 46.972223,
+   "lng": -98.956123
+  },
+  {
+   "name": "Towner County",
+   "fips": "38095",
+   "type": "county",
+   "redfin_region_id": 2154,
+   "realtor_location": "Towner County, ND",
+   "lat": 48.682183,
+   "lng": -99.248158
+  },
+  {
+   "name": "Traill County",
+   "fips": "38097",
+   "type": "county",
+   "redfin_region_id": 2155,
+   "realtor_location": "Traill County, ND",
+   "lat": 47.446215,
+   "lng": -97.164754
+  },
+  {
+   "name": "Walsh County",
+   "fips": "38099",
+   "type": "county",
+   "redfin_region_id": 2156,
+   "realtor_location": "Walsh County, ND",
+   "lat": 48.376979,
+   "lng": -97.72223
+  },
+  {
+   "name": "Ward County",
+   "fips": "38101",
+   "type": "county",
+   "redfin_region_id": 2157,
+   "realtor_location": "Ward County, ND",
+   "lat": 48.216686,
+   "lng": -101.540537
+  },
+  {
+   "name": "Wells County",
+   "fips": "38103",
+   "type": "county",
+   "redfin_region_id": 2158,
+   "realtor_location": "Wells County, ND",
+   "lat": 47.580851,
+   "lng": -99.682213
+  },
+  {
+   "name": "Williams County",
+   "fips": "38105",
+   "type": "county",
+   "redfin_region_id": 2159,
+   "realtor_location": "Williams County, ND",
+   "lat": 48.355765,
+   "lng": -103.501333
+  }
+ ]
+}

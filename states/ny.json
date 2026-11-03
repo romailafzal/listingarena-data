@@ -1,0 +1,564 @@
+{
+ "state": "NY",
+ "name": "New York",
+ "counties": [
+  {
+   "name": "Albany County",
+   "fips": "36001",
+   "type": "county",
+   "redfin_region_id": 1945,
+   "realtor_location": "Albany County, NY",
+   "lat": 42.58824,
+   "lng": -73.97401
+  },
+  {
+   "name": "Allegany County",
+   "fips": "36003",
+   "type": "county",
+   "redfin_region_id": 1946,
+   "realtor_location": "Allegany County, NY",
+   "lat": 42.247853,
+   "lng": -78.026153
+  },
+  {
+   "name": "Bronx County",
+   "fips": "36005",
+   "type": "county",
+   "redfin_region_id": 1947,
+   "realtor_location": "Bronx County, NY",
+   "lat": 40.848711,
+   "lng": -73.852939
+  },
+  {
+   "name": "Broome County",
+   "fips": "36007",
+   "type": "county",
+   "redfin_region_id": 1948,
+   "realtor_location": "Broome County, NY",
+   "lat": 42.161977,
+   "lng": -75.830283
+  },
+  {
+   "name": "Cattaraugus County",
+   "fips": "36009",
+   "type": "county",
+   "redfin_region_id": 1949,
+   "realtor_location": "Cattaraugus County, NY",
+   "lat": 42.239099,
+   "lng": -78.662332
+  },
+  {
+   "name": "Cayuga County",
+   "fips": "36011",
+   "type": "county",
+   "redfin_region_id": 1950,
+   "realtor_location": "Cayuga County, NY",
+   "lat": 43.008546,
+   "lng": -76.574587
+  },
+  {
+   "name": "Chautauqua County",
+   "fips": "36013",
+   "type": "county",
+   "redfin_region_id": 1951,
+   "realtor_location": "Chautauqua County, NY",
+   "lat": 42.304216,
+   "lng": -79.407595
+  },
+  {
+   "name": "Chemung County",
+   "fips": "36015",
+   "type": "county",
+   "redfin_region_id": 1952,
+   "realtor_location": "Chemung County, NY",
+   "lat": 42.148697,
+   "lng": -76.752471
+  },
+  {
+   "name": "Chenango County",
+   "fips": "36017",
+   "type": "county",
+   "redfin_region_id": 1953,
+   "realtor_location": "Chenango County, NY",
+   "lat": 42.478024,
+   "lng": -75.602241
+  },
+  {
+   "name": "Clinton County",
+   "fips": "36019",
+   "type": "county",
+   "redfin_region_id": 1954,
+   "realtor_location": "Clinton County, NY",
+   "lat": 44.752712,
+   "lng": -73.705643
+  },
+  {
+   "name": "Columbia County",
+   "fips": "36021",
+   "type": "county",
+   "redfin_region_id": 1955,
+   "realtor_location": "Columbia County, NY",
+   "lat": 42.247696,
+   "lng": -73.626718
+  },
+  {
+   "name": "Cortland County",
+   "fips": "36023",
+   "type": "county",
+   "redfin_region_id": 1956,
+   "realtor_location": "Cortland County, NY",
+   "lat": 42.594039,
+   "lng": -76.07624
+  },
+  {
+   "name": "Delaware County",
+   "fips": "36025",
+   "type": "county",
+   "redfin_region_id": 1957,
+   "realtor_location": "Delaware County, NY",
+   "lat": 42.193986,
+   "lng": -74.966728
+  },
+  {
+   "name": "Dutchess County",
+   "fips": "36027",
+   "type": "county",
+   "redfin_region_id": 1958,
+   "realtor_location": "Dutchess County, NY",
+   "lat": 41.75477,
+   "lng": -73.740041
+  },
+  {
+   "name": "Erie County",
+   "fips": "36029",
+   "type": "county",
+   "redfin_region_id": 1959,
+   "realtor_location": "Erie County, NY",
+   "lat": 42.752759,
+   "lng": -78.778192
+  },
+  {
+   "name": "Essex County",
+   "fips": "36031",
+   "type": "county",
+   "redfin_region_id": 1960,
+   "realtor_location": "Essex County, NY",
+   "lat": 44.109601,
+   "lng": -73.778431
+  },
+  {
+   "name": "Franklin County",
+   "fips": "36033",
+   "type": "county",
+   "redfin_region_id": 1961,
+   "realtor_location": "Franklin County, NY",
+   "lat": 44.594376,
+   "lng": -74.31067
+  },
+  {
+   "name": "Fulton County",
+   "fips": "36035",
+   "type": "county",
+   "redfin_region_id": 1962,
+   "realtor_location": "Fulton County, NY",
+   "lat": 43.115609,
+   "lng": -74.423678
+  },
+  {
+   "name": "Genesee County",
+   "fips": "36037",
+   "type": "county",
+   "redfin_region_id": 1963,
+   "realtor_location": "Genesee County, NY",
+   "lat": 43.00091,
+   "lng": -78.192778
+  },
+  {
+   "name": "Greene County",
+   "fips": "36039",
+   "type": "county",
+   "redfin_region_id": 1964,
+   "realtor_location": "Greene County, NY",
+   "lat": 42.279821,
+   "lng": -74.142025
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "36041",
+   "type": "county",
+   "redfin_region_id": 1965,
+   "realtor_location": "Hamilton County, NY",
+   "lat": 43.657879,
+   "lng": -74.502456
+  },
+  {
+   "name": "Herkimer County",
+   "fips": "36043",
+   "type": "county",
+   "redfin_region_id": 1966,
+   "realtor_location": "Herkimer County, NY",
+   "lat": 43.571009,
+   "lng": -74.841097
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "36045",
+   "type": "county",
+   "redfin_region_id": 1967,
+   "realtor_location": "Jefferson County, NY",
+   "lat": 43.996389,
+   "lng": -76.052968
+  },
+  {
+   "name": "Kings County",
+   "fips": "36047",
+   "type": "county",
+   "redfin_region_id": 1968,
+   "realtor_location": "Kings County, NY",
+   "lat": 40.635045,
+   "lng": -73.95064
+  },
+  {
+   "name": "Lewis County",
+   "fips": "36049",
+   "type": "county",
+   "redfin_region_id": 1969,
+   "realtor_location": "Lewis County, NY",
+   "lat": 43.782681,
+   "lng": -75.44414
+  },
+  {
+   "name": "Livingston County",
+   "fips": "36051",
+   "type": "county",
+   "redfin_region_id": 1970,
+   "realtor_location": "Livingston County, NY",
+   "lat": 42.729042,
+   "lng": -77.778463
+  },
+  {
+   "name": "Madison County",
+   "fips": "36053",
+   "type": "county",
+   "redfin_region_id": 1971,
+   "realtor_location": "Madison County, NY",
+   "lat": 42.910026,
+   "lng": -75.663575
+  },
+  {
+   "name": "Monroe County",
+   "fips": "36055",
+   "type": "county",
+   "redfin_region_id": 1972,
+   "realtor_location": "Monroe County, NY",
+   "lat": 43.250347,
+   "lng": -77.700518
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "36057",
+   "type": "county",
+   "redfin_region_id": 1973,
+   "realtor_location": "Montgomery County, NY",
+   "lat": 42.900891,
+   "lng": -74.435357
+  },
+  {
+   "name": "Nassau County",
+   "fips": "36059",
+   "type": "county",
+   "redfin_region_id": 1974,
+   "realtor_location": "Nassau County, NY",
+   "lat": 40.729612,
+   "lng": -73.589414
+  },
+  {
+   "name": "New York County",
+   "fips": "36061",
+   "type": "county",
+   "redfin_region_id": 1975,
+   "realtor_location": "New York County, NY",
+   "lat": 40.776642,
+   "lng": -73.970187
+  },
+  {
+   "name": "Niagara County",
+   "fips": "36063",
+   "type": "county",
+   "redfin_region_id": 1976,
+   "realtor_location": "Niagara County, NY",
+   "lat": 43.272672,
+   "lng": -78.812943
+  },
+  {
+   "name": "Oneida County",
+   "fips": "36065",
+   "type": "county",
+   "redfin_region_id": 1977,
+   "realtor_location": "Oneida County, NY",
+   "lat": 43.242727,
+   "lng": -75.434282
+  },
+  {
+   "name": "Onondaga County",
+   "fips": "36067",
+   "type": "county",
+   "redfin_region_id": 1978,
+   "realtor_location": "Onondaga County, NY",
+   "lat": 43.006516,
+   "lng": -76.196134
+  },
+  {
+   "name": "Ontario County",
+   "fips": "36069",
+   "type": "county",
+   "redfin_region_id": 1979,
+   "realtor_location": "Ontario County, NY",
+   "lat": 42.856357,
+   "lng": -77.303497
+  },
+  {
+   "name": "Orange County",
+   "fips": "36071",
+   "type": "county",
+   "redfin_region_id": 1980,
+   "realtor_location": "Orange County, NY",
+   "lat": 41.40241,
+   "lng": -74.306252
+  },
+  {
+   "name": "Orleans County",
+   "fips": "36073",
+   "type": "county",
+   "redfin_region_id": 1981,
+   "realtor_location": "Orleans County, NY",
+   "lat": 43.339906,
+   "lng": -78.207028
+  },
+  {
+   "name": "Oswego County",
+   "fips": "36075",
+   "type": "county",
+   "redfin_region_id": 1982,
+   "realtor_location": "Oswego County, NY",
+   "lat": 43.461443,
+   "lng": -76.209262
+  },
+  {
+   "name": "Otsego County",
+   "fips": "36077",
+   "type": "county",
+   "redfin_region_id": 1983,
+   "realtor_location": "Otsego County, NY",
+   "lat": 42.629776,
+   "lng": -75.028841
+  },
+  {
+   "name": "Putnam County",
+   "fips": "36079",
+   "type": "county",
+   "redfin_region_id": 1984,
+   "realtor_location": "Putnam County, NY",
+   "lat": 41.427907,
+   "lng": -73.743861
+  },
+  {
+   "name": "Queens County",
+   "fips": "36081",
+   "type": "county",
+   "redfin_region_id": 1985,
+   "realtor_location": "Queens County, NY",
+   "lat": 40.654658,
+   "lng": -73.841209
+  },
+  {
+   "name": "Rensselaer County",
+   "fips": "36083",
+   "type": "county",
+   "redfin_region_id": 1986,
+   "realtor_location": "Rensselaer County, NY",
+   "lat": 42.710421,
+   "lng": -73.513845
+  },
+  {
+   "name": "Richmond County",
+   "fips": "36085",
+   "type": "county",
+   "redfin_region_id": 1987,
+   "realtor_location": "Richmond County, NY",
+   "lat": 40.561263,
+   "lng": -74.1399
+  },
+  {
+   "name": "Rockland County",
+   "fips": "36087",
+   "type": "county",
+   "redfin_region_id": 1988,
+   "realtor_location": "Rockland County, NY",
+   "lat": 41.154628,
+   "lng": -74.024662
+  },
+  {
+   "name": "St. Lawrence County",
+   "fips": "36089",
+   "type": "county",
+   "redfin_region_id": 1989,
+   "realtor_location": "St. Lawrence County, NY",
+   "lat": 44.488112,
+   "lng": -75.074311
+  },
+  {
+   "name": "Saratoga County",
+   "fips": "36091",
+   "type": "county",
+   "redfin_region_id": 1990,
+   "realtor_location": "Saratoga County, NY",
+   "lat": 43.106135,
+   "lng": -73.855387
+  },
+  {
+   "name": "Schenectady County",
+   "fips": "36093",
+   "type": "county",
+   "redfin_region_id": 1991,
+   "realtor_location": "Schenectady County, NY",
+   "lat": 42.817552,
+   "lng": -74.043559
+  },
+  {
+   "name": "Schoharie County",
+   "fips": "36095",
+   "type": "county",
+   "redfin_region_id": 1992,
+   "realtor_location": "Schoharie County, NY",
+   "lat": 42.591294,
+   "lng": -74.438172
+  },
+  {
+   "name": "Schuyler County",
+   "fips": "36097",
+   "type": "county",
+   "redfin_region_id": 1993,
+   "realtor_location": "Schuyler County, NY",
+   "lat": 42.419776,
+   "lng": -76.938603
+  },
+  {
+   "name": "Seneca County",
+   "fips": "36099",
+   "type": "county",
+   "redfin_region_id": 1994,
+   "realtor_location": "Seneca County, NY",
+   "lat": 42.782294,
+   "lng": -76.827088
+  },
+  {
+   "name": "Steuben County",
+   "fips": "36101",
+   "type": "county",
+   "redfin_region_id": 1995,
+   "realtor_location": "Steuben County, NY",
+   "lat": 42.266725,
+   "lng": -77.385525
+  },
+  {
+   "name": "Suffolk County",
+   "fips": "36103",
+   "type": "county",
+   "redfin_region_id": 1996,
+   "realtor_location": "Suffolk County, NY",
+   "lat": 40.943554,
+   "lng": -72.692218
+  },
+  {
+   "name": "Sullivan County",
+   "fips": "36105",
+   "type": "county",
+   "redfin_region_id": 1997,
+   "realtor_location": "Sullivan County, NY",
+   "lat": 41.719993,
+   "lng": -74.771577
+  },
+  {
+   "name": "Tioga County",
+   "fips": "36107",
+   "type": "county",
+   "redfin_region_id": 1998,
+   "realtor_location": "Tioga County, NY",
+   "lat": 42.178057,
+   "lng": -76.297456
+  },
+  {
+   "name": "Tompkins County",
+   "fips": "36109",
+   "type": "county",
+   "redfin_region_id": 1999,
+   "realtor_location": "Tompkins County, NY",
+   "lat": 42.453006,
+   "lng": -76.473483
+  },
+  {
+   "name": "Ulster County",
+   "fips": "36111",
+   "type": "county",
+   "redfin_region_id": 2000,
+   "realtor_location": "Ulster County, NY",
+   "lat": 41.947212,
+   "lng": -74.265458
+  },
+  {
+   "name": "Warren County",
+   "fips": "36113",
+   "type": "county",
+   "redfin_region_id": 2001,
+   "realtor_location": "Warren County, NY",
+   "lat": 43.555105,
+   "lng": -73.838139
+  },
+  {
+   "name": "Washington County",
+   "fips": "36115",
+   "type": "county",
+   "redfin_region_id": 2002,
+   "realtor_location": "Washington County, NY",
+   "lat": 43.312377,
+   "lng": -73.439428
+  },
+  {
+   "name": "Wayne County",
+   "fips": "36117",
+   "type": "county",
+   "redfin_region_id": 2003,
+   "realtor_location": "Wayne County, NY",
+   "lat": 43.218114,
+   "lng": -77.049402
+  },
+  {
+   "name": "Westchester County",
+   "fips": "36119",
+   "type": "county",
+   "redfin_region_id": 2004,
+   "realtor_location": "Westchester County, NY",
+   "lat": 41.152686,
+   "lng": -73.745753
+  },
+  {
+   "name": "Wyoming County",
+   "fips": "36121",
+   "type": "county",
+   "redfin_region_id": 2005,
+   "realtor_location": "Wyoming County, NY",
+   "lat": 42.701363,
+   "lng": -78.228567
+  },
+  {
+   "name": "Yates County",
+   "fips": "36123",
+   "type": "county",
+   "redfin_region_id": 2006,
+   "realtor_location": "Yates County, NY",
+   "lat": 42.638237,
+   "lng": -77.104324
+  }
+ ]
+}

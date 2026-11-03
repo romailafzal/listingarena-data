@@ -1,0 +1,195 @@
+{
+ "state": "NJ",
+ "name": "New Jersey",
+ "counties": [
+  {
+   "name": "Atlantic County",
+   "fips": "34001",
+   "type": "county",
+   "redfin_region_id": 1891,
+   "realtor_location": "Atlantic County, NJ",
+   "lat": 39.469355,
+   "lng": -74.633759
+  },
+  {
+   "name": "Bergen County",
+   "fips": "34003",
+   "type": "county",
+   "redfin_region_id": 1892,
+   "realtor_location": "Bergen County, NJ",
+   "lat": 40.959698,
+   "lng": -74.074727
+  },
+  {
+   "name": "Burlington County",
+   "fips": "34005",
+   "type": "county",
+   "redfin_region_id": 1893,
+   "realtor_location": "Burlington County, NJ",
+   "lat": 39.875786,
+   "lng": -74.663006
+  },
+  {
+   "name": "Camden County",
+   "fips": "34007",
+   "type": "county",
+   "redfin_region_id": 1894,
+   "realtor_location": "Camden County, NJ",
+   "lat": 39.802407,
+   "lng": -74.961249
+  },
+  {
+   "name": "Cape May County",
+   "fips": "34009",
+   "type": "county",
+   "redfin_region_id": 1895,
+   "realtor_location": "Cape May County, NJ",
+   "lat": 39.085841,
+   "lng": -74.846354
+  },
+  {
+   "name": "Cumberland County",
+   "fips": "34011",
+   "type": "county",
+   "redfin_region_id": 1896,
+   "realtor_location": "Cumberland County, NJ",
+   "lat": 39.328434,
+   "lng": -75.121628
+  },
+  {
+   "name": "Essex County",
+   "fips": "34013",
+   "type": "county",
+   "redfin_region_id": 1897,
+   "realtor_location": "Essex County, NJ",
+   "lat": 40.7874,
+   "lng": -74.246292
+  },
+  {
+   "name": "Gloucester County",
+   "fips": "34015",
+   "type": "county",
+   "redfin_region_id": 1898,
+   "realtor_location": "Gloucester County, NJ",
+   "lat": 39.722875,
+   "lng": -75.145679
+  },
+  {
+   "name": "Hudson County",
+   "fips": "34017",
+   "type": "county",
+   "redfin_region_id": 1899,
+   "realtor_location": "Hudson County, NJ",
+   "lat": 40.731375,
+   "lng": -74.078601
+  },
+  {
+   "name": "Hunterdon County",
+   "fips": "34019",
+   "type": "county",
+   "redfin_region_id": 1900,
+   "realtor_location": "Hunterdon County, NJ",
+   "lat": 40.565283,
+   "lng": -74.911969
+  },
+  {
+   "name": "Mercer County",
+   "fips": "34021",
+   "type": "county",
+   "redfin_region_id": 1901,
+   "realtor_location": "Mercer County, NJ",
+   "lat": 40.282503,
+   "lng": -74.703724
+  },
+  {
+   "name": "Middlesex County",
+   "fips": "34023",
+   "type": "county",
+   "redfin_region_id": 1902,
+   "realtor_location": "Middlesex County, NJ",
+   "lat": 40.439621,
+   "lng": -74.40743
+  },
+  {
+   "name": "Monmouth County",
+   "fips": "34025",
+   "type": "county",
+   "redfin_region_id": 1903,
+   "realtor_location": "Monmouth County, NJ",
+   "lat": 40.287048,
+   "lng": -74.152446
+  },
+  {
+   "name": "Morris County",
+   "fips": "34027",
+   "type": "county",
+   "redfin_region_id": 1904,
+   "realtor_location": "Morris County, NJ",
+   "lat": 40.858896,
+   "lng": -74.547292
+  },
+  {
+   "name": "Ocean County",
+   "fips": "34029",
+   "type": "county",
+   "redfin_region_id": 1905,
+   "realtor_location": "Ocean County, NJ",
+   "lat": 39.865669,
+   "lng": -74.258864
+  },
+  {
+   "name": "Passaic County",
+   "fips": "34031",
+   "type": "county",
+   "redfin_region_id": 1906,
+   "realtor_location": "Passaic County, NJ",
+   "lat": 41.036655,
+   "lng": -74.299408
+  },
+  {
+   "name": "Salem County",
+   "fips": "34033",
+   "type": "county",
+   "redfin_region_id": 1907,
+   "realtor_location": "Salem County, NJ",
+   "lat": 39.573828,
+   "lng": -75.357356
+  },
+  {
+   "name": "Somerset County",
+   "fips": "34035",
+   "type": "county",
+   "redfin_region_id": 1908,
+   "realtor_location": "Somerset County, NJ",
+   "lat": 40.565527,
+   "lng": -74.619938
+  },
+  {
+   "name": "Sussex County",
+   "fips": "34037",
+   "type": "county",
+   "redfin_region_id": 1909,
+   "realtor_location": "Sussex County, NJ",
+   "lat": 41.137461,
+   "lng": -74.691914
+  },
+  {
+   "name": "Union County",
+   "fips": "34039",
+   "type": "county",
+   "redfin_region_id": 1910,
+   "realtor_location": "Union County, NJ",
+   "lat": 40.659871,
+   "lng": -74.308696
+  },
+  {
+   "name": "Warren County",
+   "fips": "34041",
+   "type": "county",
+   "redfin_region_id": 1911,
+   "realtor_location": "Warren County, NJ",
+   "lat": 40.853491,
+   "lng": -75.009498
+  }
+ ]
+}

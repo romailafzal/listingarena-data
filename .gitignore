@@ -7,3 +7,17 @@ node_modules/
 *.log
 __pycache__/
 *.py[cod]
+
+# Generated pipeline outputs and local state
+exports/bronze/
+exports/silver/
+exports/gold/
+exports/csv/
+exports/state.sqlite3*
+exports/*.log
+.venv/
+exports/bronze/
+exports/silver/
+exports/checkpoints/
+exports/state.sqlite3*
+exports/pgdata/

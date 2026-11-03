@@ -1,0 +1,609 @@
+{
+ "state": "AL",
+ "name": "Alabama",
+ "counties": [
+  {
+   "name": "Autauga County",
+   "fips": "01001",
+   "type": "county",
+   "redfin_region_id": 119,
+   "realtor_location": "Autauga County, AL",
+   "lat": 32.532237,
+   "lng": -86.64644
+  },
+  {
+   "name": "Baldwin County",
+   "fips": "01003",
+   "type": "county",
+   "redfin_region_id": 120,
+   "realtor_location": "Baldwin County, AL",
+   "lat": 30.659218,
+   "lng": -87.746067
+  },
+  {
+   "name": "Barbour County",
+   "fips": "01005",
+   "type": "county",
+   "redfin_region_id": 121,
+   "realtor_location": "Barbour County, AL",
+   "lat": 31.870253,
+   "lng": -85.405104
+  },
+  {
+   "name": "Bibb County",
+   "fips": "01007",
+   "type": "county",
+   "redfin_region_id": 122,
+   "realtor_location": "Bibb County, AL",
+   "lat": 33.015893,
+   "lng": -87.127148
+  },
+  {
+   "name": "Blount County",
+   "fips": "01009",
+   "type": "county",
+   "redfin_region_id": 123,
+   "realtor_location": "Blount County, AL",
+   "lat": 33.977358,
+   "lng": -86.56644
+  },
+  {
+   "name": "Bullock County",
+   "fips": "01011",
+   "type": "county",
+   "redfin_region_id": 124,
+   "realtor_location": "Bullock County, AL",
+   "lat": 32.101759,
+   "lng": -85.717261
+  },
+  {
+   "name": "Butler County",
+   "fips": "01013",
+   "type": "county",
+   "redfin_region_id": 125,
+   "realtor_location": "Butler County, AL",
+   "lat": 31.751667,
+   "lng": -86.681969
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "01015",
+   "type": "county",
+   "redfin_region_id": 126,
+   "realtor_location": "Calhoun County, AL",
+   "lat": 33.770516,
+   "lng": -85.827909
+  },
+  {
+   "name": "Chambers County",
+   "fips": "01017",
+   "type": "county",
+   "redfin_region_id": 127,
+   "realtor_location": "Chambers County, AL",
+   "lat": 32.915504,
+   "lng": -85.394032
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "01019",
+   "type": "county",
+   "redfin_region_id": 128,
+   "realtor_location": "Cherokee County, AL",
+   "lat": 34.069515,
+   "lng": -85.654242
+  },
+  {
+   "name": "Chilton County",
+   "fips": "01021",
+   "type": "county",
+   "redfin_region_id": 129,
+   "realtor_location": "Chilton County, AL",
+   "lat": 32.854051,
+   "lng": -86.726607
+  },
+  {
+   "name": "Choctaw County",
+   "fips": "01023",
+   "type": "county",
+   "redfin_region_id": 130,
+   "realtor_location": "Choctaw County, AL",
+   "lat": 31.990954,
+   "lng": -88.248889
+  },
+  {
+   "name": "Clarke County",
+   "fips": "01025",
+   "type": "county",
+   "redfin_region_id": 131,
+   "realtor_location": "Clarke County, AL",
+   "lat": 31.685521,
+   "lng": -87.818624
+  },
+  {
+   "name": "Clay County",
+   "fips": "01027",
+   "type": "county",
+   "redfin_region_id": 132,
+   "realtor_location": "Clay County, AL",
+   "lat": 33.2704,
+   "lng": -85.863525
+  },
+  {
+   "name": "Cleburne County",
+   "fips": "01029",
+   "type": "county",
+   "redfin_region_id": 133,
+   "realtor_location": "Cleburne County, AL",
+   "lat": 33.671964,
+   "lng": -85.516126
+  },
+  {
+   "name": "Coffee County",
+   "fips": "01031",
+   "type": "county",
+   "redfin_region_id": 134,
+   "realtor_location": "Coffee County, AL",
+   "lat": 31.402258,
+   "lng": -85.989602
+  },
+  {
+   "name": "Colbert County",
+   "fips": "01033",
+   "type": "county",
+   "redfin_region_id": 135,
+   "realtor_location": "Colbert County, AL",
+   "lat": 34.703112,
+   "lng": -87.801457
+  },
+  {
+   "name": "Conecuh County",
+   "fips": "01035",
+   "type": "county",
+   "redfin_region_id": 136,
+   "realtor_location": "Conecuh County, AL",
+   "lat": 31.430926,
+   "lng": -86.988722
+  },
+  {
+   "name": "Coosa County",
+   "fips": "01037",
+   "type": "county",
+   "redfin_region_id": 137,
+   "realtor_location": "Coosa County, AL",
+   "lat": 32.931445,
+   "lng": -86.243482
+  },
+  {
+   "name": "Covington County",
+   "fips": "01039",
+   "type": "county",
+   "redfin_region_id": 138,
+   "realtor_location": "Covington County, AL",
+   "lat": 31.243987,
+   "lng": -86.448721
+  },
+  {
+   "name": "Crenshaw County",
+   "fips": "01041",
+   "type": "county",
+   "redfin_region_id": 139,
+   "realtor_location": "Crenshaw County, AL",
+   "lat": 31.730311,
+   "lng": -86.320038
+  },
+  {
+   "name": "Cullman County",
+   "fips": "01043",
+   "type": "county",
+   "redfin_region_id": 140,
+   "realtor_location": "Cullman County, AL",
+   "lat": 34.131923,
+   "lng": -86.869267
+  },
+  {
+   "name": "Dale County",
+   "fips": "01045",
+   "type": "county",
+   "redfin_region_id": 141,
+   "realtor_location": "Dale County, AL",
+   "lat": 31.430654,
+   "lng": -85.609476
+  },
+  {
+   "name": "Dallas County",
+   "fips": "01047",
+   "type": "county",
+   "redfin_region_id": 142,
+   "realtor_location": "Dallas County, AL",
+   "lat": 32.333526,
+   "lng": -87.11436
+  },
+  {
+   "name": "DeKalb County",
+   "fips": "01049",
+   "type": "county",
+   "redfin_region_id": 143,
+   "realtor_location": "DeKalb County, AL",
+   "lat": 34.460915,
+   "lng": -85.804021
+  },
+  {
+   "name": "Elmore County",
+   "fips": "01051",
+   "type": "county",
+   "redfin_region_id": 144,
+   "realtor_location": "Elmore County, AL",
+   "lat": 32.597229,
+   "lng": -86.142735
+  },
+  {
+   "name": "Escambia County",
+   "fips": "01053",
+   "type": "county",
+   "redfin_region_id": 145,
+   "realtor_location": "Escambia County, AL",
+   "lat": 31.122287,
+   "lng": -87.16841
+  },
+  {
+   "name": "Etowah County",
+   "fips": "01055",
+   "type": "county",
+   "redfin_region_id": 146,
+   "realtor_location": "Etowah County, AL",
+   "lat": 34.047641,
+   "lng": -86.034263
+  },
+  {
+   "name": "Fayette County",
+   "fips": "01057",
+   "type": "county",
+   "redfin_region_id": 147,
+   "realtor_location": "Fayette County, AL",
+   "lat": 33.716157,
+   "lng": -87.764292
+  },
+  {
+   "name": "Franklin County",
+   "fips": "01059",
+   "type": "county",
+   "redfin_region_id": 148,
+   "realtor_location": "Franklin County, AL",
+   "lat": 34.441989,
+   "lng": -87.842814
+  },
+  {
+   "name": "Geneva County",
+   "fips": "01061",
+   "type": "county",
+   "redfin_region_id": 149,
+   "realtor_location": "Geneva County, AL",
+   "lat": 31.092382,
+   "lng": -85.821022
+  },
+  {
+   "name": "Greene County",
+   "fips": "01063",
+   "type": "county",
+   "redfin_region_id": 150,
+   "realtor_location": "Greene County, AL",
+   "lat": 32.844497,
+   "lng": -87.9642
+  },
+  {
+   "name": "Hale County",
+   "fips": "01065",
+   "type": "county",
+   "redfin_region_id": 151,
+   "realtor_location": "Hale County, AL",
+   "lat": 32.752796,
+   "lng": -87.623061
+  },
+  {
+   "name": "Henry County",
+   "fips": "01067",
+   "type": "county",
+   "redfin_region_id": 152,
+   "realtor_location": "Henry County, AL",
+   "lat": 31.516978,
+   "lng": -85.239971
+  },
+  {
+   "name": "Houston County",
+   "fips": "01069",
+   "type": "county",
+   "redfin_region_id": 153,
+   "realtor_location": "Houston County, AL",
+   "lat": 31.158183,
+   "lng": -85.296411
+  },
+  {
+   "name": "Jackson County",
+   "fips": "01071",
+   "type": "county",
+   "redfin_region_id": 154,
+   "realtor_location": "Jackson County, AL",
+   "lat": 34.764114,
+   "lng": -85.980056
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "01073",
+   "type": "county",
+   "redfin_region_id": 155,
+   "realtor_location": "Jefferson County, AL",
+   "lat": 33.553444,
+   "lng": -86.896536
+  },
+  {
+   "name": "Lamar County",
+   "fips": "01075",
+   "type": "county",
+   "redfin_region_id": 156,
+   "realtor_location": "Lamar County, AL",
+   "lat": 33.787085,
+   "lng": -88.087431
+  },
+  {
+   "name": "Lauderdale County",
+   "fips": "01077",
+   "type": "county",
+   "redfin_region_id": 157,
+   "realtor_location": "Lauderdale County, AL",
+   "lat": 34.904122,
+   "lng": -87.650997
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "01079",
+   "type": "county",
+   "redfin_region_id": 158,
+   "realtor_location": "Lawrence County, AL",
+   "lat": 34.529776,
+   "lng": -87.321865
+  },
+  {
+   "name": "Lee County",
+   "fips": "01081",
+   "type": "county",
+   "redfin_region_id": 159,
+   "realtor_location": "Lee County, AL",
+   "lat": 32.604064,
+   "lng": -85.353048
+  },
+  {
+   "name": "Limestone County",
+   "fips": "01083",
+   "type": "county",
+   "redfin_region_id": 160,
+   "realtor_location": "Limestone County, AL",
+   "lat": 34.810239,
+   "lng": -86.981399
+  },
+  {
+   "name": "Lowndes County",
+   "fips": "01085",
+   "type": "county",
+   "redfin_region_id": 161,
+   "realtor_location": "Lowndes County, AL",
+   "lat": 32.147888,
+   "lng": -86.650586
+  },
+  {
+   "name": "Macon County",
+   "fips": "01087",
+   "type": "county",
+   "redfin_region_id": 162,
+   "realtor_location": "Macon County, AL",
+   "lat": 32.387027,
+   "lng": -85.692887
+  },
+  {
+   "name": "Madison County",
+   "fips": "01089",
+   "type": "county",
+   "redfin_region_id": 163,
+   "realtor_location": "Madison County, AL",
+   "lat": 34.764238,
+   "lng": -86.55108
+  },
+  {
+   "name": "Marengo County",
+   "fips": "01091",
+   "type": "county",
+   "redfin_region_id": 164,
+   "realtor_location": "Marengo County, AL",
+   "lat": 32.247591,
+   "lng": -87.791091
+  },
+  {
+   "name": "Marion County",
+   "fips": "01093",
+   "type": "county",
+   "redfin_region_id": 165,
+   "realtor_location": "Marion County, AL",
+   "lat": 34.138219,
+   "lng": -87.881551
+  },
+  {
+   "name": "Marshall County",
+   "fips": "01095",
+   "type": "county",
+   "redfin_region_id": 166,
+   "realtor_location": "Marshall County, AL",
+   "lat": 34.309564,
+   "lng": -86.321668
+  },
+  {
+   "name": "Mobile County",
+   "fips": "01097",
+   "type": "county",
+   "redfin_region_id": 167,
+   "realtor_location": "Mobile County, AL",
+   "lat": 30.684572,
+   "lng": -88.196568
+  },
+  {
+   "name": "Monroe County",
+   "fips": "01099",
+   "type": "county",
+   "redfin_region_id": 168,
+   "realtor_location": "Monroe County, AL",
+   "lat": 31.580332,
+   "lng": -87.383266
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "01101",
+   "type": "county",
+   "redfin_region_id": 169,
+   "realtor_location": "Montgomery County, AL",
+   "lat": 32.202881,
+   "lng": -86.204461
+  },
+  {
+   "name": "Morgan County",
+   "fips": "01103",
+   "type": "county",
+   "redfin_region_id": 170,
+   "realtor_location": "Morgan County, AL",
+   "lat": 34.454484,
+   "lng": -86.846402
+  },
+  {
+   "name": "Perry County",
+   "fips": "01105",
+   "type": "county",
+   "redfin_region_id": 171,
+   "realtor_location": "Perry County, AL",
+   "lat": 32.639005,
+   "lng": -87.293827
+  },
+  {
+   "name": "Pickens County",
+   "fips": "01107",
+   "type": "county",
+   "redfin_region_id": 172,
+   "realtor_location": "Pickens County, AL",
+   "lat": 33.2968,
+   "lng": -88.096864
+  },
+  {
+   "name": "Pike County",
+   "fips": "01109",
+   "type": "county",
+   "redfin_region_id": 173,
+   "realtor_location": "Pike County, AL",
+   "lat": 31.798653,
+   "lng": -85.941608
+  },
+  {
+   "name": "Randolph County",
+   "fips": "01111",
+   "type": "county",
+   "redfin_region_id": 174,
+   "realtor_location": "Randolph County, AL",
+   "lat": 33.296461,
+   "lng": -85.464064
+  },
+  {
+   "name": "Russell County",
+   "fips": "01113",
+   "type": "county",
+   "redfin_region_id": 175,
+   "realtor_location": "Russell County, AL",
+   "lat": 32.289811,
+   "lng": -85.18698
+  },
+  {
+   "name": "St. Clair County",
+   "fips": "01115",
+   "type": "county",
+   "redfin_region_id": 176,
+   "realtor_location": "St. Clair County, AL",
+   "lat": 33.719491,
+   "lng": -86.311327
+  },
+  {
+   "name": "Shelby County",
+   "fips": "01117",
+   "type": "county",
+   "redfin_region_id": 177,
+   "realtor_location": "Shelby County, AL",
+   "lat": 33.263043,
+   "lng": -86.678089
+  },
+  {
+   "name": "Sumter County",
+   "fips": "01119",
+   "type": "county",
+   "redfin_region_id": 178,
+   "realtor_location": "Sumter County, AL",
+   "lat": 32.597481,
+   "lng": -88.200057
+  },
+  {
+   "name": "Talladega County",
+   "fips": "01121",
+   "type": "county",
+   "redfin_region_id": 179,
+   "realtor_location": "Talladega County, AL",
+   "lat": 33.369314,
+   "lng": -86.17593
+  },
+  {
+   "name": "Tallapoosa County",
+   "fips": "01123",
+   "type": "county",
+   "redfin_region_id": 180,
+   "realtor_location": "Tallapoosa County, AL",
+   "lat": 32.863308,
+   "lng": -85.799618
+  },
+  {
+   "name": "Tuscaloosa County",
+   "fips": "01125",
+   "type": "county",
+   "redfin_region_id": 181,
+   "realtor_location": "Tuscaloosa County, AL",
+   "lat": 33.29022,
+   "lng": -87.522783
+  },
+  {
+   "name": "Walker County",
+   "fips": "01127",
+   "type": "county",
+   "redfin_region_id": 182,
+   "realtor_location": "Walker County, AL",
+   "lat": 33.791558,
+   "lng": -87.301094
+  },
+  {
+   "name": "Washington County",
+   "fips": "01129",
+   "type": "county",
+   "redfin_region_id": 183,
+   "realtor_location": "Washington County, AL",
+   "lat": 31.408503,
+   "lng": -88.212404
+  },
+  {
+   "name": "Wilcox County",
+   "fips": "01131",
+   "type": "county",
+   "redfin_region_id": 184,
+   "realtor_location": "Wilcox County, AL",
+   "lat": 31.990082,
+   "lng": -87.304935
+  },
+  {
+   "name": "Winston County",
+   "fips": "01133",
+   "type": "county",
+   "redfin_region_id": 185,
+   "realtor_location": "Winston County, AL",
+   "lat": 34.154566,
+   "lng": -87.365346
+  }
+ ]
+}

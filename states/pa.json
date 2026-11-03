@@ -1,0 +1,609 @@
+{
+ "state": "PA",
+ "name": "Pennsylvania",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "42001",
+   "type": "county",
+   "redfin_region_id": 2361,
+   "realtor_location": "Adams County, PA",
+   "lat": 39.869471,
+   "lng": -77.21773
+  },
+  {
+   "name": "Allegheny County",
+   "fips": "42003",
+   "type": "county",
+   "redfin_region_id": 2362,
+   "realtor_location": "Allegheny County, PA",
+   "lat": 40.469757,
+   "lng": -79.980451
+  },
+  {
+   "name": "Armstrong County",
+   "fips": "42005",
+   "type": "county",
+   "redfin_region_id": 2363,
+   "realtor_location": "Armstrong County, PA",
+   "lat": 40.81238,
+   "lng": -79.464129
+  },
+  {
+   "name": "Beaver County",
+   "fips": "42007",
+   "type": "county",
+   "redfin_region_id": 2364,
+   "realtor_location": "Beaver County, PA",
+   "lat": 40.68414,
+   "lng": -80.350721
+  },
+  {
+   "name": "Bedford County",
+   "fips": "42009",
+   "type": "county",
+   "redfin_region_id": 2365,
+   "realtor_location": "Bedford County, PA",
+   "lat": 39.998634,
+   "lng": -78.494747
+  },
+  {
+   "name": "Berks County",
+   "fips": "42011",
+   "type": "county",
+   "redfin_region_id": 2366,
+   "realtor_location": "Berks County, PA",
+   "lat": 40.413957,
+   "lng": -75.92686
+  },
+  {
+   "name": "Blair County",
+   "fips": "42013",
+   "type": "county",
+   "redfin_region_id": 2367,
+   "realtor_location": "Blair County, PA",
+   "lat": 40.498683,
+   "lng": -78.309597
+  },
+  {
+   "name": "Bradford County",
+   "fips": "42015",
+   "type": "county",
+   "redfin_region_id": 2368,
+   "realtor_location": "Bradford County, PA",
+   "lat": 41.791504,
+   "lng": -76.502123
+  },
+  {
+   "name": "Bucks County",
+   "fips": "42017",
+   "type": "county",
+   "redfin_region_id": 2369,
+   "realtor_location": "Bucks County, PA",
+   "lat": 40.336887,
+   "lng": -75.10706
+  },
+  {
+   "name": "Butler County",
+   "fips": "42019",
+   "type": "county",
+   "redfin_region_id": 2370,
+   "realtor_location": "Butler County, PA",
+   "lat": 40.913847,
+   "lng": -79.918978
+  },
+  {
+   "name": "Cambria County",
+   "fips": "42021",
+   "type": "county",
+   "redfin_region_id": 2371,
+   "realtor_location": "Cambria County, PA",
+   "lat": 40.510227,
+   "lng": -78.710477
+  },
+  {
+   "name": "Cameron County",
+   "fips": "42023",
+   "type": "county",
+   "redfin_region_id": 2372,
+   "realtor_location": "Cameron County, PA",
+   "lat": 41.438291,
+   "lng": -78.198323
+  },
+  {
+   "name": "Carbon County",
+   "fips": "42025",
+   "type": "county",
+   "redfin_region_id": 2373,
+   "realtor_location": "Carbon County, PA",
+   "lat": 40.918367,
+   "lng": -75.705039
+  },
+  {
+   "name": "Centre County",
+   "fips": "42027",
+   "type": "county",
+   "redfin_region_id": 2374,
+   "realtor_location": "Centre County, PA",
+   "lat": 40.909128,
+   "lng": -77.847877
+  },
+  {
+   "name": "Chester County",
+   "fips": "42029",
+   "type": "county",
+   "redfin_region_id": 2375,
+   "realtor_location": "Chester County, PA",
+   "lat": 39.974029,
+   "lng": -75.749751
+  },
+  {
+   "name": "Clarion County",
+   "fips": "42031",
+   "type": "county",
+   "redfin_region_id": 2376,
+   "realtor_location": "Clarion County, PA",
+   "lat": 41.198159,
+   "lng": -79.420369
+  },
+  {
+   "name": "Clearfield County",
+   "fips": "42033",
+   "type": "county",
+   "redfin_region_id": 2377,
+   "realtor_location": "Clearfield County, PA",
+   "lat": 41.006862,
+   "lng": -78.477724
+  },
+  {
+   "name": "Clinton County",
+   "fips": "42035",
+   "type": "county",
+   "redfin_region_id": 2378,
+   "realtor_location": "Clinton County, PA",
+   "lat": 41.239508,
+   "lng": -77.629009
+  },
+  {
+   "name": "Columbia County",
+   "fips": "42037",
+   "type": "county",
+   "redfin_region_id": 2379,
+   "realtor_location": "Columbia County, PA",
+   "lat": 41.045517,
+   "lng": -76.40426
+  },
+  {
+   "name": "Crawford County",
+   "fips": "42039",
+   "type": "county",
+   "redfin_region_id": 2380,
+   "realtor_location": "Crawford County, PA",
+   "lat": 41.687876,
+   "lng": -80.107795
+  },
+  {
+   "name": "Cumberland County",
+   "fips": "42041",
+   "type": "county",
+   "redfin_region_id": 2381,
+   "realtor_location": "Cumberland County, PA",
+   "lat": 40.164805,
+   "lng": -77.263442
+  },
+  {
+   "name": "Dauphin County",
+   "fips": "42043",
+   "type": "county",
+   "redfin_region_id": 2382,
+   "realtor_location": "Dauphin County, PA",
+   "lat": 40.412565,
+   "lng": -76.792634
+  },
+  {
+   "name": "Delaware County",
+   "fips": "42045",
+   "type": "county",
+   "redfin_region_id": 2383,
+   "realtor_location": "Delaware County, PA",
+   "lat": 39.916685,
+   "lng": -75.398818
+  },
+  {
+   "name": "Elk County",
+   "fips": "42047",
+   "type": "county",
+   "redfin_region_id": 2384,
+   "realtor_location": "Elk County, PA",
+   "lat": 41.427332,
+   "lng": -78.653937
+  },
+  {
+   "name": "Erie County",
+   "fips": "42049",
+   "type": "county",
+   "redfin_region_id": 2385,
+   "realtor_location": "Erie County, PA",
+   "lat": 42.117952,
+   "lng": -80.096386
+  },
+  {
+   "name": "Fayette County",
+   "fips": "42051",
+   "type": "county",
+   "redfin_region_id": 2386,
+   "realtor_location": "Fayette County, PA",
+   "lat": 39.918907,
+   "lng": -79.640119
+  },
+  {
+   "name": "Forest County",
+   "fips": "42053",
+   "type": "county",
+   "redfin_region_id": 2387,
+   "realtor_location": "Forest County, PA",
+   "lat": 41.513304,
+   "lng": -79.249705
+  },
+  {
+   "name": "Franklin County",
+   "fips": "42055",
+   "type": "county",
+   "redfin_region_id": 2388,
+   "realtor_location": "Franklin County, PA",
+   "lat": 39.926772,
+   "lng": -77.724521
+  },
+  {
+   "name": "Fulton County",
+   "fips": "42057",
+   "type": "county",
+   "redfin_region_id": 2389,
+   "realtor_location": "Fulton County, PA",
+   "lat": 39.91075,
+   "lng": -78.122617
+  },
+  {
+   "name": "Greene County",
+   "fips": "42059",
+   "type": "county",
+   "redfin_region_id": 2390,
+   "realtor_location": "Greene County, PA",
+   "lat": 39.847707,
+   "lng": -80.225655
+  },
+  {
+   "name": "Huntingdon County",
+   "fips": "42061",
+   "type": "county",
+   "redfin_region_id": 2391,
+   "realtor_location": "Huntingdon County, PA",
+   "lat": 40.422311,
+   "lng": -77.968595
+  },
+  {
+   "name": "Indiana County",
+   "fips": "42063",
+   "type": "county",
+   "redfin_region_id": 2392,
+   "realtor_location": "Indiana County, PA",
+   "lat": 40.651432,
+   "lng": -79.087545
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "42065",
+   "type": "county",
+   "redfin_region_id": 2393,
+   "realtor_location": "Jefferson County, PA",
+   "lat": 41.138028,
+   "lng": -79.012419
+  },
+  {
+   "name": "Juniata County",
+   "fips": "42067",
+   "type": "county",
+   "redfin_region_id": 2394,
+   "realtor_location": "Juniata County, PA",
+   "lat": 40.530673,
+   "lng": -77.400438
+  },
+  {
+   "name": "Lackawanna County",
+   "fips": "42069",
+   "type": "county",
+   "redfin_region_id": 2395,
+   "realtor_location": "Lackawanna County, PA",
+   "lat": 41.440284,
+   "lng": -75.609666
+  },
+  {
+   "name": "Lancaster County",
+   "fips": "42071",
+   "type": "county",
+   "redfin_region_id": 2396,
+   "realtor_location": "Lancaster County, PA",
+   "lat": 40.041992,
+   "lng": -76.250198
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "42073",
+   "type": "county",
+   "redfin_region_id": 2397,
+   "realtor_location": "Lawrence County, PA",
+   "lat": 40.992735,
+   "lng": -80.334446
+  },
+  {
+   "name": "Lebanon County",
+   "fips": "42075",
+   "type": "county",
+   "redfin_region_id": 2398,
+   "realtor_location": "Lebanon County, PA",
+   "lat": 40.371448,
+   "lng": -76.464819
+  },
+  {
+   "name": "Lehigh County",
+   "fips": "42077",
+   "type": "county",
+   "redfin_region_id": 2399,
+   "realtor_location": "Lehigh County, PA",
+   "lat": 40.614241,
+   "lng": -75.590627
+  },
+  {
+   "name": "Luzerne County",
+   "fips": "42079",
+   "type": "county",
+   "redfin_region_id": 2400,
+   "realtor_location": "Luzerne County, PA",
+   "lat": 41.173078,
+   "lng": -75.976053
+  },
+  {
+   "name": "Lycoming County",
+   "fips": "42081",
+   "type": "county",
+   "redfin_region_id": 2401,
+   "realtor_location": "Lycoming County, PA",
+   "lat": 41.343882,
+   "lng": -77.055262
+  },
+  {
+   "name": "McKean County",
+   "fips": "42083",
+   "type": "county",
+   "redfin_region_id": 2402,
+   "realtor_location": "McKean County, PA",
+   "lat": 41.81459,
+   "lng": -78.572463
+  },
+  {
+   "name": "Mercer County",
+   "fips": "42085",
+   "type": "county",
+   "redfin_region_id": 2403,
+   "realtor_location": "Mercer County, PA",
+   "lat": 41.300014,
+   "lng": -80.252786
+  },
+  {
+   "name": "Mifflin County",
+   "fips": "42087",
+   "type": "county",
+   "redfin_region_id": 2404,
+   "realtor_location": "Mifflin County, PA",
+   "lat": 40.601615,
+   "lng": -77.651832
+  },
+  {
+   "name": "Monroe County",
+   "fips": "42089",
+   "type": "county",
+   "redfin_region_id": 2405,
+   "realtor_location": "Monroe County, PA",
+   "lat": 41.05624,
+   "lng": -75.329065
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "42091",
+   "type": "county",
+   "redfin_region_id": 2406,
+   "realtor_location": "Montgomery County, PA",
+   "lat": 40.209999,
+   "lng": -75.370201
+  },
+  {
+   "name": "Montour County",
+   "fips": "42093",
+   "type": "county",
+   "redfin_region_id": 2407,
+   "realtor_location": "Montour County, PA",
+   "lat": 41.029284,
+   "lng": -76.665225
+  },
+  {
+   "name": "Northampton County",
+   "fips": "42095",
+   "type": "county",
+   "redfin_region_id": 2408,
+   "realtor_location": "Northampton County, PA",
+   "lat": 40.752791,
+   "lng": -75.307447
+  },
+  {
+   "name": "Northumberland County",
+   "fips": "42097",
+   "type": "county",
+   "redfin_region_id": 2409,
+   "realtor_location": "Northumberland County, PA",
+   "lat": 40.851524,
+   "lng": -76.709877
+  },
+  {
+   "name": "Perry County",
+   "fips": "42099",
+   "type": "county",
+   "redfin_region_id": 2410,
+   "realtor_location": "Perry County, PA",
+   "lat": 40.39778,
+   "lng": -77.266328
+  },
+  {
+   "name": "Philadelphia County",
+   "fips": "42101",
+   "type": "county",
+   "redfin_region_id": 2411,
+   "realtor_location": "Philadelphia County, PA",
+   "lat": 40.009376,
+   "lng": -75.133346
+  },
+  {
+   "name": "Pike County",
+   "fips": "42103",
+   "type": "county",
+   "redfin_region_id": 2412,
+   "realtor_location": "Pike County, PA",
+   "lat": 41.325949,
+   "lng": -75.031514
+  },
+  {
+   "name": "Potter County",
+   "fips": "42105",
+   "type": "county",
+   "redfin_region_id": 2413,
+   "realtor_location": "Potter County, PA",
+   "lat": 41.748587,
+   "lng": -77.894436
+  },
+  {
+   "name": "Schuylkill County",
+   "fips": "42107",
+   "type": "county",
+   "redfin_region_id": 2414,
+   "realtor_location": "Schuylkill County, PA",
+   "lat": 40.703682,
+   "lng": -76.217788
+  },
+  {
+   "name": "Snyder County",
+   "fips": "42109",
+   "type": "county",
+   "redfin_region_id": 2415,
+   "realtor_location": "Snyder County, PA",
+   "lat": 40.755407,
+   "lng": -77.072929
+  },
+  {
+   "name": "Somerset County",
+   "fips": "42111",
+   "type": "county",
+   "redfin_region_id": 2416,
+   "realtor_location": "Somerset County, PA",
+   "lat": 39.981297,
+   "lng": -79.028486
+  },
+  {
+   "name": "Sullivan County",
+   "fips": "42113",
+   "type": "county",
+   "redfin_region_id": 2417,
+   "realtor_location": "Sullivan County, PA",
+   "lat": 41.439285,
+   "lng": -76.511717
+  },
+  {
+   "name": "Susquehanna County",
+   "fips": "42115",
+   "type": "county",
+   "redfin_region_id": 2418,
+   "realtor_location": "Susquehanna County, PA",
+   "lat": 41.819665,
+   "lng": -75.800969
+  },
+  {
+   "name": "Tioga County",
+   "fips": "42117",
+   "type": "county",
+   "redfin_region_id": 2419,
+   "realtor_location": "Tioga County, PA",
+   "lat": 41.766859,
+   "lng": -77.257288
+  },
+  {
+   "name": "Union County",
+   "fips": "42119",
+   "type": "county",
+   "redfin_region_id": 2420,
+   "realtor_location": "Union County, PA",
+   "lat": 40.962179,
+   "lng": -77.055475
+  },
+  {
+   "name": "Venango County",
+   "fips": "42121",
+   "type": "county",
+   "redfin_region_id": 2421,
+   "realtor_location": "Venango County, PA",
+   "lat": 41.400714,
+   "lng": -79.765813
+  },
+  {
+   "name": "Warren County",
+   "fips": "42123",
+   "type": "county",
+   "redfin_region_id": 2422,
+   "realtor_location": "Warren County, PA",
+   "lat": 41.834298,
+   "lng": -79.298182
+  },
+  {
+   "name": "Washington County",
+   "fips": "42125",
+   "type": "county",
+   "redfin_region_id": 2423,
+   "realtor_location": "Washington County, PA",
+   "lat": 40.200005,
+   "lng": -80.252132
+  },
+  {
+   "name": "Wayne County",
+   "fips": "42127",
+   "type": "county",
+   "redfin_region_id": 2424,
+   "realtor_location": "Wayne County, PA",
+   "lat": 41.646602,
+   "lng": -75.292493
+  },
+  {
+   "name": "Westmoreland County",
+   "fips": "42129",
+   "type": "county",
+   "redfin_region_id": 2425,
+   "realtor_location": "Westmoreland County, PA",
+   "lat": 40.311068,
+   "lng": -79.466688
+  },
+  {
+   "name": "Wyoming County",
+   "fips": "42131",
+   "type": "county",
+   "redfin_region_id": 2426,
+   "realtor_location": "Wyoming County, PA",
+   "lat": 41.525173,
+   "lng": -76.008731
+  },
+  {
+   "name": "York County",
+   "fips": "42133",
+   "type": "county",
+   "redfin_region_id": 2427,
+   "realtor_location": "York County, PA",
+   "lat": 39.921751,
+   "lng": -76.728889
+  }
+ ]
+}

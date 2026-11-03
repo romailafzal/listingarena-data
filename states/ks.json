@@ -1,0 +1,951 @@
+{
+ "state": "KS",
+ "name": "Kansas",
+ "counties": [
+  {
+   "name": "Allen County",
+   "fips": "20001",
+   "type": "county",
+   "redfin_region_id": 1005,
+   "realtor_location": "Allen County, KS",
+   "lat": 37.884228,
+   "lng": -95.300945
+  },
+  {
+   "name": "Anderson County",
+   "fips": "20003",
+   "type": "county",
+   "redfin_region_id": 1006,
+   "realtor_location": "Anderson County, KS",
+   "lat": 38.215114,
+   "lng": -95.292046
+  },
+  {
+   "name": "Atchison County",
+   "fips": "20005",
+   "type": "county",
+   "redfin_region_id": 1007,
+   "realtor_location": "Atchison County, KS",
+   "lat": 39.532544,
+   "lng": -95.313397
+  },
+  {
+   "name": "Barber County",
+   "fips": "20007",
+   "type": "county",
+   "redfin_region_id": 1008,
+   "realtor_location": "Barber County, KS",
+   "lat": 37.222906,
+   "lng": -98.685052
+  },
+  {
+   "name": "Barton County",
+   "fips": "20009",
+   "type": "county",
+   "redfin_region_id": 1009,
+   "realtor_location": "Barton County, KS",
+   "lat": 38.481239,
+   "lng": -98.767837
+  },
+  {
+   "name": "Bourbon County",
+   "fips": "20011",
+   "type": "county",
+   "redfin_region_id": 1010,
+   "realtor_location": "Bourbon County, KS",
+   "lat": 37.8561,
+   "lng": -94.850928
+  },
+  {
+   "name": "Brown County",
+   "fips": "20013",
+   "type": "county",
+   "redfin_region_id": 1011,
+   "realtor_location": "Brown County, KS",
+   "lat": 39.825931,
+   "lng": -95.569905
+  },
+  {
+   "name": "Butler County",
+   "fips": "20015",
+   "type": "county",
+   "redfin_region_id": 1012,
+   "realtor_location": "Butler County, KS",
+   "lat": 37.773649,
+   "lng": -96.83884
+  },
+  {
+   "name": "Chase County",
+   "fips": "20017",
+   "type": "county",
+   "redfin_region_id": 1013,
+   "realtor_location": "Chase County, KS",
+   "lat": 38.299475,
+   "lng": -96.594029
+  },
+  {
+   "name": "Chautauqua County",
+   "fips": "20019",
+   "type": "county",
+   "redfin_region_id": 1014,
+   "realtor_location": "Chautauqua County, KS",
+   "lat": 37.154259,
+   "lng": -96.245396
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "20021",
+   "type": "county",
+   "redfin_region_id": 1015,
+   "realtor_location": "Cherokee County, KS",
+   "lat": 37.169392,
+   "lng": -94.845698
+  },
+  {
+   "name": "Cheyenne County",
+   "fips": "20023",
+   "type": "county",
+   "redfin_region_id": 1016,
+   "realtor_location": "Cheyenne County, KS",
+   "lat": 39.789917,
+   "lng": -101.727325
+  },
+  {
+   "name": "Clark County",
+   "fips": "20025",
+   "type": "county",
+   "redfin_region_id": 1017,
+   "realtor_location": "Clark County, KS",
+   "lat": 37.233831,
+   "lng": -99.813869
+  },
+  {
+   "name": "Clay County",
+   "fips": "20027",
+   "type": "county",
+   "redfin_region_id": 1018,
+   "realtor_location": "Clay County, KS",
+   "lat": 39.344964,
+   "lng": -97.168853
+  },
+  {
+   "name": "Cloud County",
+   "fips": "20029",
+   "type": "county",
+   "redfin_region_id": 1019,
+   "realtor_location": "Cloud County, KS",
+   "lat": 39.487329,
+   "lng": -97.64139
+  },
+  {
+   "name": "Coffey County",
+   "fips": "20031",
+   "type": "county",
+   "redfin_region_id": 1020,
+   "realtor_location": "Coffey County, KS",
+   "lat": 38.23645,
+   "lng": -95.729137
+  },
+  {
+   "name": "Comanche County",
+   "fips": "20033",
+   "type": "county",
+   "redfin_region_id": 1021,
+   "realtor_location": "Comanche County, KS",
+   "lat": 37.181442,
+   "lng": -99.251293
+  },
+  {
+   "name": "Cowley County",
+   "fips": "20035",
+   "type": "county",
+   "redfin_region_id": 1022,
+   "realtor_location": "Cowley County, KS",
+   "lat": 37.234507,
+   "lng": -96.837247
+  },
+  {
+   "name": "Crawford County",
+   "fips": "20037",
+   "type": "county",
+   "redfin_region_id": 1023,
+   "realtor_location": "Crawford County, KS",
+   "lat": 37.505821,
+   "lng": -94.853897
+  },
+  {
+   "name": "Decatur County",
+   "fips": "20039",
+   "type": "county",
+   "redfin_region_id": 1024,
+   "realtor_location": "Decatur County, KS",
+   "lat": 39.783542,
+   "lng": -100.459708
+  },
+  {
+   "name": "Dickinson County",
+   "fips": "20041",
+   "type": "county",
+   "redfin_region_id": 1025,
+   "realtor_location": "Dickinson County, KS",
+   "lat": 38.867735,
+   "lng": -97.157943
+  },
+  {
+   "name": "Doniphan County",
+   "fips": "20043",
+   "type": "county",
+   "redfin_region_id": 1026,
+   "realtor_location": "Doniphan County, KS",
+   "lat": 39.788502,
+   "lng": -95.147225
+  },
+  {
+   "name": "Douglas County",
+   "fips": "20045",
+   "type": "county",
+   "redfin_region_id": 1027,
+   "realtor_location": "Douglas County, KS",
+   "lat": 38.896417,
+   "lng": -95.290947
+  },
+  {
+   "name": "Edwards County",
+   "fips": "20047",
+   "type": "county",
+   "redfin_region_id": 1028,
+   "realtor_location": "Edwards County, KS",
+   "lat": 37.883595,
+   "lng": -99.304746
+  },
+  {
+   "name": "Elk County",
+   "fips": "20049",
+   "type": "county",
+   "redfin_region_id": 1029,
+   "realtor_location": "Elk County, KS",
+   "lat": 37.456026,
+   "lng": -96.244642
+  },
+  {
+   "name": "Ellis County",
+   "fips": "20051",
+   "type": "county",
+   "redfin_region_id": 1030,
+   "realtor_location": "Ellis County, KS",
+   "lat": 38.914597,
+   "lng": -99.317313
+  },
+  {
+   "name": "Ellsworth County",
+   "fips": "20053",
+   "type": "county",
+   "redfin_region_id": 1031,
+   "realtor_location": "Ellsworth County, KS",
+   "lat": 38.700845,
+   "lng": -98.205355
+  },
+  {
+   "name": "Finney County",
+   "fips": "20055",
+   "type": "county",
+   "redfin_region_id": 1032,
+   "realtor_location": "Finney County, KS",
+   "lat": 38.049808,
+   "lng": -100.739967
+  },
+  {
+   "name": "Ford County",
+   "fips": "20057",
+   "type": "county",
+   "redfin_region_id": 1033,
+   "realtor_location": "Ford County, KS",
+   "lat": 37.688416,
+   "lng": -99.884748
+  },
+  {
+   "name": "Franklin County",
+   "fips": "20059",
+   "type": "county",
+   "redfin_region_id": 1034,
+   "realtor_location": "Franklin County, KS",
+   "lat": 38.558019,
+   "lng": -95.278962
+  },
+  {
+   "name": "Geary County",
+   "fips": "20061",
+   "type": "county",
+   "redfin_region_id": 1035,
+   "realtor_location": "Geary County, KS",
+   "lat": 39.002139,
+   "lng": -96.7681
+  },
+  {
+   "name": "Gove County",
+   "fips": "20063",
+   "type": "county",
+   "redfin_region_id": 1036,
+   "realtor_location": "Gove County, KS",
+   "lat": 38.917239,
+   "lng": -100.48736
+  },
+  {
+   "name": "Graham County",
+   "fips": "20065",
+   "type": "county",
+   "redfin_region_id": 1037,
+   "realtor_location": "Graham County, KS",
+   "lat": 39.354972,
+   "lng": -99.879894
+  },
+  {
+   "name": "Grant County",
+   "fips": "20067",
+   "type": "county",
+   "redfin_region_id": 1038,
+   "realtor_location": "Grant County, KS",
+   "lat": 37.547537,
+   "lng": -101.299362
+  },
+  {
+   "name": "Gray County",
+   "fips": "20069",
+   "type": "county",
+   "redfin_region_id": 1039,
+   "realtor_location": "Gray County, KS",
+   "lat": 37.744513,
+   "lng": -100.451716
+  },
+  {
+   "name": "Greeley County",
+   "fips": "20071",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Greeley County, KS",
+   "lat": 38.480404,
+   "lng": -101.80597
+  },
+  {
+   "name": "Greenwood County",
+   "fips": "20073",
+   "type": "county",
+   "redfin_region_id": 1041,
+   "realtor_location": "Greenwood County, KS",
+   "lat": 37.879347,
+   "lng": -96.241732
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "20075",
+   "type": "county",
+   "redfin_region_id": 1042,
+   "realtor_location": "Hamilton County, KS",
+   "lat": 37.995244,
+   "lng": -101.793689
+  },
+  {
+   "name": "Harper County",
+   "fips": "20077",
+   "type": "county",
+   "redfin_region_id": 1043,
+   "realtor_location": "Harper County, KS",
+   "lat": 37.188184,
+   "lng": -98.06659
+  },
+  {
+   "name": "Harvey County",
+   "fips": "20079",
+   "type": "county",
+   "redfin_region_id": 1044,
+   "realtor_location": "Harvey County, KS",
+   "lat": 38.050144,
+   "lng": -97.436706
+  },
+  {
+   "name": "Haskell County",
+   "fips": "20081",
+   "type": "county",
+   "redfin_region_id": 1045,
+   "realtor_location": "Haskell County, KS",
+   "lat": 37.554979,
+   "lng": -100.879952
+  },
+  {
+   "name": "Hodgeman County",
+   "fips": "20083",
+   "type": "county",
+   "redfin_region_id": 1046,
+   "realtor_location": "Hodgeman County, KS",
+   "lat": 38.087493,
+   "lng": -99.898407
+  },
+  {
+   "name": "Jackson County",
+   "fips": "20085",
+   "type": "county",
+   "redfin_region_id": 1047,
+   "realtor_location": "Jackson County, KS",
+   "lat": 39.411145,
+   "lng": -95.794485
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "20087",
+   "type": "county",
+   "redfin_region_id": 1048,
+   "realtor_location": "Jefferson County, KS",
+   "lat": 39.239644,
+   "lng": -95.375314
+  },
+  {
+   "name": "Jewell County",
+   "fips": "20089",
+   "type": "county",
+   "redfin_region_id": 1049,
+   "realtor_location": "Jewell County, KS",
+   "lat": 39.777005,
+   "lng": -98.222619
+  },
+  {
+   "name": "Johnson County",
+   "fips": "20091",
+   "type": "county",
+   "redfin_region_id": 1050,
+   "realtor_location": "Johnson County, KS",
+   "lat": 38.883907,
+   "lng": -94.82233
+  },
+  {
+   "name": "Kearny County",
+   "fips": "20093",
+   "type": "county",
+   "redfin_region_id": 1051,
+   "realtor_location": "Kearny County, KS",
+   "lat": 37.994461,
+   "lng": -101.308136
+  },
+  {
+   "name": "Kingman County",
+   "fips": "20095",
+   "type": "county",
+   "redfin_region_id": 1052,
+   "realtor_location": "Kingman County, KS",
+   "lat": 37.552951,
+   "lng": -98.144529
+  },
+  {
+   "name": "Kiowa County",
+   "fips": "20097",
+   "type": "county",
+   "redfin_region_id": 1053,
+   "realtor_location": "Kiowa County, KS",
+   "lat": 37.561231,
+   "lng": -99.286539
+  },
+  {
+   "name": "Labette County",
+   "fips": "20099",
+   "type": "county",
+   "redfin_region_id": 1054,
+   "realtor_location": "Labette County, KS",
+   "lat": 37.191468,
+   "lng": -95.297473
+  },
+  {
+   "name": "Lane County",
+   "fips": "20101",
+   "type": "county",
+   "redfin_region_id": 1055,
+   "realtor_location": "Lane County, KS",
+   "lat": 38.481286,
+   "lng": -100.466185
+  },
+  {
+   "name": "Leavenworth County",
+   "fips": "20103",
+   "type": "county",
+   "redfin_region_id": 1056,
+   "realtor_location": "Leavenworth County, KS",
+   "lat": 39.189511,
+   "lng": -95.038977
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "20105",
+   "type": "county",
+   "redfin_region_id": 1057,
+   "realtor_location": "Lincoln County, KS",
+   "lat": 39.04728,
+   "lng": -98.214284
+  },
+  {
+   "name": "Linn County",
+   "fips": "20107",
+   "type": "county",
+   "redfin_region_id": 1058,
+   "realtor_location": "Linn County, KS",
+   "lat": 38.216549,
+   "lng": -94.844932
+  },
+  {
+   "name": "Logan County",
+   "fips": "20109",
+   "type": "county",
+   "redfin_region_id": 1059,
+   "realtor_location": "Logan County, KS",
+   "lat": 38.91327,
+   "lng": -101.157402
+  },
+  {
+   "name": "Lyon County",
+   "fips": "20111",
+   "type": "county",
+   "redfin_region_id": 1060,
+   "realtor_location": "Lyon County, KS",
+   "lat": 38.455403,
+   "lng": -96.161641
+  },
+  {
+   "name": "McPherson County",
+   "fips": "20113",
+   "type": "county",
+   "redfin_region_id": 1061,
+   "realtor_location": "McPherson County, KS",
+   "lat": 38.395812,
+   "lng": -97.647489
+  },
+  {
+   "name": "Marion County",
+   "fips": "20115",
+   "type": "county",
+   "redfin_region_id": 1062,
+   "realtor_location": "Marion County, KS",
+   "lat": 38.359647,
+   "lng": -97.102771
+  },
+  {
+   "name": "Marshall County",
+   "fips": "20117",
+   "type": "county",
+   "redfin_region_id": 1063,
+   "realtor_location": "Marshall County, KS",
+   "lat": 39.782709,
+   "lng": -96.521243
+  },
+  {
+   "name": "Meade County",
+   "fips": "20119",
+   "type": "county",
+   "redfin_region_id": 1064,
+   "realtor_location": "Meade County, KS",
+   "lat": 37.243886,
+   "lng": -100.360094
+  },
+  {
+   "name": "Miami County",
+   "fips": "20121",
+   "type": "county",
+   "redfin_region_id": 1065,
+   "realtor_location": "Miami County, KS",
+   "lat": 38.566772,
+   "lng": -94.832963
+  },
+  {
+   "name": "Mitchell County",
+   "fips": "20123",
+   "type": "county",
+   "redfin_region_id": 1066,
+   "realtor_location": "Mitchell County, KS",
+   "lat": 39.393026,
+   "lng": -98.207362
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "20125",
+   "type": "county",
+   "redfin_region_id": 1067,
+   "realtor_location": "Montgomery County, KS",
+   "lat": 37.189537,
+   "lng": -95.742403
+  },
+  {
+   "name": "Morris County",
+   "fips": "20127",
+   "type": "county",
+   "redfin_region_id": 1068,
+   "realtor_location": "Morris County, KS",
+   "lat": 38.688204,
+   "lng": -96.651448
+  },
+  {
+   "name": "Morton County",
+   "fips": "20129",
+   "type": "county",
+   "redfin_region_id": 1069,
+   "realtor_location": "Morton County, KS",
+   "lat": 37.185249,
+   "lng": -101.809516
+  },
+  {
+   "name": "Nemaha County",
+   "fips": "20131",
+   "type": "county",
+   "redfin_region_id": 1070,
+   "realtor_location": "Nemaha County, KS",
+   "lat": 39.791043,
+   "lng": -96.005381
+  },
+  {
+   "name": "Neosho County",
+   "fips": "20133",
+   "type": "county",
+   "redfin_region_id": 1071,
+   "realtor_location": "Neosho County, KS",
+   "lat": 37.564283,
+   "lng": -95.315682
+  },
+  {
+   "name": "Ness County",
+   "fips": "20135",
+   "type": "county",
+   "redfin_region_id": 1072,
+   "realtor_location": "Ness County, KS",
+   "lat": 38.480437,
+   "lng": -99.908745
+  },
+  {
+   "name": "Norton County",
+   "fips": "20137",
+   "type": "county",
+   "redfin_region_id": 1073,
+   "realtor_location": "Norton County, KS",
+   "lat": 39.783867,
+   "lng": -99.899235
+  },
+  {
+   "name": "Osage County",
+   "fips": "20139",
+   "type": "county",
+   "redfin_region_id": 1074,
+   "realtor_location": "Osage County, KS",
+   "lat": 38.650215,
+   "lng": -95.708255
+  },
+  {
+   "name": "Osborne County",
+   "fips": "20141",
+   "type": "county",
+   "redfin_region_id": 1075,
+   "realtor_location": "Osborne County, KS",
+   "lat": 39.348261,
+   "lng": -98.767942
+  },
+  {
+   "name": "Ottawa County",
+   "fips": "20143",
+   "type": "county",
+   "redfin_region_id": 1076,
+   "realtor_location": "Ottawa County, KS",
+   "lat": 39.137963,
+   "lng": -97.654802
+  },
+  {
+   "name": "Pawnee County",
+   "fips": "20145",
+   "type": "county",
+   "redfin_region_id": 1077,
+   "realtor_location": "Pawnee County, KS",
+   "lat": 38.181477,
+   "lng": -99.234772
+  },
+  {
+   "name": "Phillips County",
+   "fips": "20147",
+   "type": "county",
+   "redfin_region_id": 1078,
+   "realtor_location": "Phillips County, KS",
+   "lat": 39.784506,
+   "lng": -99.34215
+  },
+  {
+   "name": "Pottawatomie County",
+   "fips": "20149",
+   "type": "county",
+   "redfin_region_id": 1079,
+   "realtor_location": "Pottawatomie County, KS",
+   "lat": 39.382187,
+   "lng": -96.337113
+  },
+  {
+   "name": "Pratt County",
+   "fips": "20151",
+   "type": "county",
+   "redfin_region_id": 1080,
+   "realtor_location": "Pratt County, KS",
+   "lat": 37.647594,
+   "lng": -98.74012
+  },
+  {
+   "name": "Rawlins County",
+   "fips": "20153",
+   "type": "county",
+   "redfin_region_id": 1081,
+   "realtor_location": "Rawlins County, KS",
+   "lat": 39.786198,
+   "lng": -101.076738
+  },
+  {
+   "name": "Reno County",
+   "fips": "20155",
+   "type": "county",
+   "redfin_region_id": 1082,
+   "realtor_location": "Reno County, KS",
+   "lat": 37.948185,
+   "lng": -98.078346
+  },
+  {
+   "name": "Republic County",
+   "fips": "20157",
+   "type": "county",
+   "redfin_region_id": 1083,
+   "realtor_location": "Republic County, KS",
+   "lat": 39.828906,
+   "lng": -97.650883
+  },
+  {
+   "name": "Rice County",
+   "fips": "20159",
+   "type": "county",
+   "redfin_region_id": 1084,
+   "realtor_location": "Rice County, KS",
+   "lat": 38.347178,
+   "lng": -98.201415
+  },
+  {
+   "name": "Riley County",
+   "fips": "20161",
+   "type": "county",
+   "redfin_region_id": 1085,
+   "realtor_location": "Riley County, KS",
+   "lat": 39.291211,
+   "lng": -96.727489
+  },
+  {
+   "name": "Rooks County",
+   "fips": "20163",
+   "type": "county",
+   "redfin_region_id": 1086,
+   "realtor_location": "Rooks County, KS",
+   "lat": 39.346006,
+   "lng": -99.324492
+  },
+  {
+   "name": "Rush County",
+   "fips": "20165",
+   "type": "county",
+   "redfin_region_id": 1087,
+   "realtor_location": "Rush County, KS",
+   "lat": 38.523596,
+   "lng": -99.309184
+  },
+  {
+   "name": "Russell County",
+   "fips": "20167",
+   "type": "county",
+   "redfin_region_id": 1088,
+   "realtor_location": "Russell County, KS",
+   "lat": 38.91604,
+   "lng": -98.770949
+  },
+  {
+   "name": "Saline County",
+   "fips": "20169",
+   "type": "county",
+   "redfin_region_id": 1089,
+   "realtor_location": "Saline County, KS",
+   "lat": 38.791804,
+   "lng": -97.651478
+  },
+  {
+   "name": "Scott County",
+   "fips": "20171",
+   "type": "county",
+   "redfin_region_id": 1090,
+   "realtor_location": "Scott County, KS",
+   "lat": 38.481877,
+   "lng": -100.90636
+  },
+  {
+   "name": "Sedgwick County",
+   "fips": "20173",
+   "type": "county",
+   "redfin_region_id": 1091,
+   "realtor_location": "Sedgwick County, KS",
+   "lat": 37.681045,
+   "lng": -97.461054
+  },
+  {
+   "name": "Seward County",
+   "fips": "20175",
+   "type": "county",
+   "redfin_region_id": 1092,
+   "realtor_location": "Seward County, KS",
+   "lat": 37.18096,
+   "lng": -100.855257
+  },
+  {
+   "name": "Shawnee County",
+   "fips": "20177",
+   "type": "county",
+   "redfin_region_id": 1093,
+   "realtor_location": "Shawnee County, KS",
+   "lat": 39.041805,
+   "lng": -95.755664
+  },
+  {
+   "name": "Sheridan County",
+   "fips": "20179",
+   "type": "county",
+   "redfin_region_id": 1094,
+   "realtor_location": "Sheridan County, KS",
+   "lat": 39.350547,
+   "lng": -100.441228
+  },
+  {
+   "name": "Sherman County",
+   "fips": "20181",
+   "type": "county",
+   "redfin_region_id": 1095,
+   "realtor_location": "Sherman County, KS",
+   "lat": 39.351352,
+   "lng": -101.719859
+  },
+  {
+   "name": "Smith County",
+   "fips": "20183",
+   "type": "county",
+   "redfin_region_id": 1096,
+   "realtor_location": "Smith County, KS",
+   "lat": 39.78466,
+   "lng": -98.785429
+  },
+  {
+   "name": "Stafford County",
+   "fips": "20185",
+   "type": "county",
+   "redfin_region_id": 1097,
+   "realtor_location": "Stafford County, KS",
+   "lat": 38.03563,
+   "lng": -98.719889
+  },
+  {
+   "name": "Stanton County",
+   "fips": "20187",
+   "type": "county",
+   "redfin_region_id": 1098,
+   "realtor_location": "Stanton County, KS",
+   "lat": 37.565932,
+   "lng": -101.789383
+  },
+  {
+   "name": "Stevens County",
+   "fips": "20189",
+   "type": "county",
+   "redfin_region_id": 1099,
+   "realtor_location": "Stevens County, KS",
+   "lat": 37.2017,
+   "lng": -101.317268
+  },
+  {
+   "name": "Sumner County",
+   "fips": "20191",
+   "type": "county",
+   "redfin_region_id": 1100,
+   "realtor_location": "Sumner County, KS",
+   "lat": 37.236662,
+   "lng": -97.493352
+  },
+  {
+   "name": "Thomas County",
+   "fips": "20193",
+   "type": "county",
+   "redfin_region_id": 1101,
+   "realtor_location": "Thomas County, KS",
+   "lat": 39.357713,
+   "lng": -101.083386
+  },
+  {
+   "name": "Trego County",
+   "fips": "20195",
+   "type": "county",
+   "redfin_region_id": 1102,
+   "realtor_location": "Trego County, KS",
+   "lat": 38.921302,
+   "lng": -99.865423
+  },
+  {
+   "name": "Wabaunsee County",
+   "fips": "20197",
+   "type": "county",
+   "redfin_region_id": 1103,
+   "realtor_location": "Wabaunsee County, KS",
+   "lat": 38.955154,
+   "lng": -96.201262
+  },
+  {
+   "name": "Wallace County",
+   "fips": "20199",
+   "type": "county",
+   "redfin_region_id": 1104,
+   "realtor_location": "Wallace County, KS",
+   "lat": 38.926626,
+   "lng": -101.771103
+  },
+  {
+   "name": "Washington County",
+   "fips": "20201",
+   "type": "county",
+   "redfin_region_id": 1105,
+   "realtor_location": "Washington County, KS",
+   "lat": 39.776714,
+   "lng": -97.095611
+  },
+  {
+   "name": "Wichita County",
+   "fips": "20203",
+   "type": "county",
+   "redfin_region_id": 1106,
+   "realtor_location": "Wichita County, KS",
+   "lat": 38.481922,
+   "lng": -101.347434
+  },
+  {
+   "name": "Wilson County",
+   "fips": "20205",
+   "type": "county",
+   "redfin_region_id": 1107,
+   "realtor_location": "Wilson County, KS",
+   "lat": 37.558515,
+   "lng": -95.745175
+  },
+  {
+   "name": "Woodson County",
+   "fips": "20207",
+   "type": "county",
+   "redfin_region_id": 1108,
+   "realtor_location": "Woodson County, KS",
+   "lat": 37.888193,
+   "lng": -95.758469
+  },
+  {
+   "name": "Wyandotte County",
+   "fips": "20209",
+   "type": "county",
+   "redfin_region_id": 1109,
+   "realtor_location": "Wyandotte County, KS",
+   "lat": 39.115384,
+   "lng": -94.763087
+  }
+ ]
+}

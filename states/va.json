@@ -1,0 +1,1203 @@
+{
+ "state": "VA",
+ "name": "Virginia",
+ "counties": [
+  {
+   "name": "Accomack County",
+   "fips": "51001",
+   "type": "county",
+   "redfin_region_id": 2937,
+   "realtor_location": "Accomack County, VA",
+   "lat": 37.765944,
+   "lng": -75.757807
+  },
+  {
+   "name": "Albemarle County",
+   "fips": "51003",
+   "type": "county",
+   "redfin_region_id": 2938,
+   "realtor_location": "Albemarle County, VA",
+   "lat": 38.024184,
+   "lng": -78.553506
+  },
+  {
+   "name": "Alleghany County",
+   "fips": "51005",
+   "type": "county",
+   "redfin_region_id": 2939,
+   "realtor_location": "Alleghany County, VA",
+   "lat": 37.787905,
+   "lng": -80.008669
+  },
+  {
+   "name": "Amelia County",
+   "fips": "51007",
+   "type": "county",
+   "redfin_region_id": 2940,
+   "realtor_location": "Amelia County, VA",
+   "lat": 37.331927,
+   "lng": -77.977462
+  },
+  {
+   "name": "Amherst County",
+   "fips": "51009",
+   "type": "county",
+   "redfin_region_id": 2941,
+   "realtor_location": "Amherst County, VA",
+   "lat": 37.629304,
+   "lng": -79.154667
+  },
+  {
+   "name": "Appomattox County",
+   "fips": "51011",
+   "type": "county",
+   "redfin_region_id": 2942,
+   "realtor_location": "Appomattox County, VA",
+   "lat": 37.370725,
+   "lng": -78.81094
+  },
+  {
+   "name": "Arlington County",
+   "fips": "51013",
+   "type": "county",
+   "redfin_region_id": 2943,
+   "realtor_location": "Arlington County, VA",
+   "lat": 38.878337,
+   "lng": -77.100703
+  },
+  {
+   "name": "Augusta County",
+   "fips": "51015",
+   "type": "county",
+   "redfin_region_id": 2944,
+   "realtor_location": "Augusta County, VA",
+   "lat": 38.17259,
+   "lng": -79.140975
+  },
+  {
+   "name": "Bath County",
+   "fips": "51017",
+   "type": "county",
+   "redfin_region_id": 2945,
+   "realtor_location": "Bath County, VA",
+   "lat": 38.068368,
+   "lng": -79.731203
+  },
+  {
+   "name": "Bedford County",
+   "fips": "51019",
+   "type": "county",
+   "redfin_region_id": 2946,
+   "realtor_location": "Bedford County, VA",
+   "lat": 37.312257,
+   "lng": -79.527223
+  },
+  {
+   "name": "Bland County",
+   "fips": "51021",
+   "type": "county",
+   "redfin_region_id": 2947,
+   "realtor_location": "Bland County, VA",
+   "lat": 37.130612,
+   "lng": -81.125853
+  },
+  {
+   "name": "Botetourt County",
+   "fips": "51023",
+   "type": "county",
+   "redfin_region_id": 2948,
+   "realtor_location": "Botetourt County, VA",
+   "lat": 37.565482,
+   "lng": -79.797546
+  },
+  {
+   "name": "Brunswick County",
+   "fips": "51025",
+   "type": "county",
+   "redfin_region_id": 2949,
+   "realtor_location": "Brunswick County, VA",
+   "lat": 36.764204,
+   "lng": -77.861483
+  },
+  {
+   "name": "Buchanan County",
+   "fips": "51027",
+   "type": "county",
+   "redfin_region_id": 2950,
+   "realtor_location": "Buchanan County, VA",
+   "lat": 37.26812,
+   "lng": -82.038151
+  },
+  {
+   "name": "Buckingham County",
+   "fips": "51029",
+   "type": "county",
+   "redfin_region_id": 2951,
+   "realtor_location": "Buckingham County, VA",
+   "lat": 37.573928,
+   "lng": -78.529169
+  },
+  {
+   "name": "Campbell County",
+   "fips": "51031",
+   "type": "county",
+   "redfin_region_id": 2952,
+   "realtor_location": "Campbell County, VA",
+   "lat": 37.210152,
+   "lng": -79.095428
+  },
+  {
+   "name": "Caroline County",
+   "fips": "51033",
+   "type": "county",
+   "redfin_region_id": 2953,
+   "realtor_location": "Caroline County, VA",
+   "lat": 38.028033,
+   "lng": -77.353736
+  },
+  {
+   "name": "Carroll County",
+   "fips": "51035",
+   "type": "county",
+   "redfin_region_id": 2954,
+   "realtor_location": "Carroll County, VA",
+   "lat": 36.731963,
+   "lng": -80.727831
+  },
+  {
+   "name": "Charles City County",
+   "fips": "51036",
+   "type": "county",
+   "redfin_region_id": 2955,
+   "realtor_location": "Charles City County, VA",
+   "lat": 37.361054,
+   "lng": -77.05417
+  },
+  {
+   "name": "Charlotte County",
+   "fips": "51037",
+   "type": "county",
+   "redfin_region_id": 2956,
+   "realtor_location": "Charlotte County, VA",
+   "lat": 37.009042,
+   "lng": -78.658568
+  },
+  {
+   "name": "Chesterfield County",
+   "fips": "51041",
+   "type": "county",
+   "redfin_region_id": 2957,
+   "realtor_location": "Chesterfield County, VA",
+   "lat": 37.378434,
+   "lng": -77.585847
+  },
+  {
+   "name": "Clarke County",
+   "fips": "51043",
+   "type": "county",
+   "redfin_region_id": 2958,
+   "realtor_location": "Clarke County, VA",
+   "lat": 39.115307,
+   "lng": -77.990748
+  },
+  {
+   "name": "Craig County",
+   "fips": "51045",
+   "type": "county",
+   "redfin_region_id": 2959,
+   "realtor_location": "Craig County, VA",
+   "lat": 37.473603,
+   "lng": -80.231051
+  },
+  {
+   "name": "Culpeper County",
+   "fips": "51047",
+   "type": "county",
+   "redfin_region_id": 2960,
+   "realtor_location": "Culpeper County, VA",
+   "lat": 38.48593,
+   "lng": -77.956476
+  },
+  {
+   "name": "Cumberland County",
+   "fips": "51049",
+   "type": "county",
+   "redfin_region_id": 2961,
+   "realtor_location": "Cumberland County, VA",
+   "lat": 37.520189,
+   "lng": -78.252836
+  },
+  {
+   "name": "Dickenson County",
+   "fips": "51051",
+   "type": "county",
+   "redfin_region_id": 2962,
+   "realtor_location": "Dickenson County, VA",
+   "lat": 37.136701,
+   "lng": -82.34922
+  },
+  {
+   "name": "Dinwiddie County",
+   "fips": "51053",
+   "type": "county",
+   "redfin_region_id": 2963,
+   "realtor_location": "Dinwiddie County, VA",
+   "lat": 37.073498,
+   "lng": -77.635492
+  },
+  {
+   "name": "Essex County",
+   "fips": "51057",
+   "type": "county",
+   "redfin_region_id": 2964,
+   "realtor_location": "Essex County, VA",
+   "lat": 37.936389,
+   "lng": -76.933747
+  },
+  {
+   "name": "Fairfax County",
+   "fips": "51059",
+   "type": "county",
+   "redfin_region_id": 2965,
+   "realtor_location": "Fairfax County, VA",
+   "lat": 38.82952,
+   "lng": -77.273252
+  },
+  {
+   "name": "Fauquier County",
+   "fips": "51061",
+   "type": "county",
+   "redfin_region_id": 2966,
+   "realtor_location": "Fauquier County, VA",
+   "lat": 38.744096,
+   "lng": -77.8215
+  },
+  {
+   "name": "Floyd County",
+   "fips": "51063",
+   "type": "county",
+   "redfin_region_id": 2967,
+   "realtor_location": "Floyd County, VA",
+   "lat": 36.931433,
+   "lng": -80.350266
+  },
+  {
+   "name": "Fluvanna County",
+   "fips": "51065",
+   "type": "county",
+   "redfin_region_id": 2968,
+   "realtor_location": "Fluvanna County, VA",
+   "lat": 37.830584,
+   "lng": -78.283494
+  },
+  {
+   "name": "Franklin County",
+   "fips": "51067",
+   "type": "county",
+   "redfin_region_id": 2969,
+   "realtor_location": "Franklin County, VA",
+   "lat": 36.991186,
+   "lng": -79.882715
+  },
+  {
+   "name": "Frederick County",
+   "fips": "51069",
+   "type": "county",
+   "redfin_region_id": 2970,
+   "realtor_location": "Frederick County, VA",
+   "lat": 39.20366,
+   "lng": -78.263829
+  },
+  {
+   "name": "Giles County",
+   "fips": "51071",
+   "type": "county",
+   "redfin_region_id": 2971,
+   "realtor_location": "Giles County, VA",
+   "lat": 37.318072,
+   "lng": -80.698321
+  },
+  {
+   "name": "Gloucester County",
+   "fips": "51073",
+   "type": "county",
+   "redfin_region_id": 2972,
+   "realtor_location": "Gloucester County, VA",
+   "lat": 37.403541,
+   "lng": -76.523505
+  },
+  {
+   "name": "Goochland County",
+   "fips": "51075",
+   "type": "county",
+   "redfin_region_id": 2973,
+   "realtor_location": "Goochland County, VA",
+   "lat": 37.718814,
+   "lng": -77.917626
+  },
+  {
+   "name": "Grayson County",
+   "fips": "51077",
+   "type": "county",
+   "redfin_region_id": 2974,
+   "realtor_location": "Grayson County, VA",
+   "lat": 36.652229,
+   "lng": -81.215324
+  },
+  {
+   "name": "Greene County",
+   "fips": "51079",
+   "type": "county",
+   "redfin_region_id": 2975,
+   "realtor_location": "Greene County, VA",
+   "lat": 38.297981,
+   "lng": -78.470163
+  },
+  {
+   "name": "Greensville County",
+   "fips": "51081",
+   "type": "county",
+   "redfin_region_id": 2976,
+   "realtor_location": "Greensville County, VA",
+   "lat": 36.680336,
+   "lng": -77.560277
+  },
+  {
+   "name": "Halifax County",
+   "fips": "51083",
+   "type": "county",
+   "redfin_region_id": 2977,
+   "realtor_location": "Halifax County, VA",
+   "lat": 36.766461,
+   "lng": -78.939614
+  },
+  {
+   "name": "Hanover County",
+   "fips": "51085",
+   "type": "county",
+   "redfin_region_id": 2978,
+   "realtor_location": "Hanover County, VA",
+   "lat": 37.760215,
+   "lng": -77.491317
+  },
+  {
+   "name": "Henrico County",
+   "fips": "51087",
+   "type": "county",
+   "redfin_region_id": 2979,
+   "realtor_location": "Henrico County, VA",
+   "lat": 37.43752,
+   "lng": -77.300333
+  },
+  {
+   "name": "Henry County",
+   "fips": "51089",
+   "type": "county",
+   "redfin_region_id": 2980,
+   "realtor_location": "Henry County, VA",
+   "lat": 36.620612,
+   "lng": -79.980662
+  },
+  {
+   "name": "Highland County",
+   "fips": "51091",
+   "type": "county",
+   "redfin_region_id": 2981,
+   "realtor_location": "Highland County, VA",
+   "lat": 38.366243,
+   "lng": -79.564472
+  },
+  {
+   "name": "Isle of Wight County",
+   "fips": "51093",
+   "type": "county",
+   "redfin_region_id": 2982,
+   "realtor_location": "Isle of Wight County, VA",
+   "lat": 36.901418,
+   "lng": -76.707569
+  },
+  {
+   "name": "James City County",
+   "fips": "51095",
+   "type": "county",
+   "redfin_region_id": 2983,
+   "realtor_location": "James City County, VA",
+   "lat": 37.324837,
+   "lng": -76.777888
+  },
+  {
+   "name": "King and Queen County",
+   "fips": "51097",
+   "type": "county",
+   "redfin_region_id": 2984,
+   "realtor_location": "King and Queen County, VA",
+   "lat": 37.717772,
+   "lng": -76.905581
+  },
+  {
+   "name": "King George County",
+   "fips": "51099",
+   "type": "county",
+   "redfin_region_id": 2985,
+   "realtor_location": "King George County, VA",
+   "lat": 38.27718,
+   "lng": -77.162636
+  },
+  {
+   "name": "King William County",
+   "fips": "51101",
+   "type": "county",
+   "redfin_region_id": 2986,
+   "realtor_location": "King William County, VA",
+   "lat": 37.70826,
+   "lng": -77.091054
+  },
+  {
+   "name": "Lancaster County",
+   "fips": "51103",
+   "type": "county",
+   "redfin_region_id": 2987,
+   "realtor_location": "Lancaster County, VA",
+   "lat": 37.704843,
+   "lng": -76.412663
+  },
+  {
+   "name": "Lee County",
+   "fips": "51105",
+   "type": "county",
+   "redfin_region_id": 2988,
+   "realtor_location": "Lee County, VA",
+   "lat": 36.701721,
+   "lng": -83.130112
+  },
+  {
+   "name": "Loudoun County",
+   "fips": "51107",
+   "type": "county",
+   "redfin_region_id": 2989,
+   "realtor_location": "Loudoun County, VA",
+   "lat": 39.0812,
+   "lng": -77.638898
+  },
+  {
+   "name": "Louisa County",
+   "fips": "51109",
+   "type": "county",
+   "redfin_region_id": 2990,
+   "realtor_location": "Louisa County, VA",
+   "lat": 37.972704,
+   "lng": -77.959795
+  },
+  {
+   "name": "Lunenburg County",
+   "fips": "51111",
+   "type": "county",
+   "redfin_region_id": 2991,
+   "realtor_location": "Lunenburg County, VA",
+   "lat": 36.945555,
+   "lng": -78.240528
+  },
+  {
+   "name": "Madison County",
+   "fips": "51113",
+   "type": "county",
+   "redfin_region_id": 2992,
+   "realtor_location": "Madison County, VA",
+   "lat": 38.412059,
+   "lng": -78.276961
+  },
+  {
+   "name": "Mathews County",
+   "fips": "51115",
+   "type": "county",
+   "redfin_region_id": 2993,
+   "realtor_location": "Mathews County, VA",
+   "lat": 37.425348,
+   "lng": -76.268808
+  },
+  {
+   "name": "Mecklenburg County",
+   "fips": "51117",
+   "type": "county",
+   "redfin_region_id": 2994,
+   "realtor_location": "Mecklenburg County, VA",
+   "lat": 36.687256,
+   "lng": -78.368959
+  },
+  {
+   "name": "Middlesex County",
+   "fips": "51119",
+   "type": "county",
+   "redfin_region_id": 2995,
+   "realtor_location": "Middlesex County, VA",
+   "lat": 37.606975,
+   "lng": -76.528082
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "51121",
+   "type": "county",
+   "redfin_region_id": 2996,
+   "realtor_location": "Montgomery County, VA",
+   "lat": 37.175538,
+   "lng": -80.387794
+  },
+  {
+   "name": "Nelson County",
+   "fips": "51125",
+   "type": "county",
+   "redfin_region_id": 2997,
+   "realtor_location": "Nelson County, VA",
+   "lat": 37.789079,
+   "lng": -78.88344
+  },
+  {
+   "name": "New Kent County",
+   "fips": "51127",
+   "type": "county",
+   "redfin_region_id": 2998,
+   "realtor_location": "New Kent County, VA",
+   "lat": 37.51016,
+   "lng": -76.999331
+  },
+  {
+   "name": "Northampton County",
+   "fips": "51131",
+   "type": "county",
+   "redfin_region_id": 2999,
+   "realtor_location": "Northampton County, VA",
+   "lat": 37.302775,
+   "lng": -75.924018
+  },
+  {
+   "name": "Northumberland County",
+   "fips": "51133",
+   "type": "county",
+   "redfin_region_id": 3000,
+   "realtor_location": "Northumberland County, VA",
+   "lat": 37.856974,
+   "lng": -76.379687
+  },
+  {
+   "name": "Nottoway County",
+   "fips": "51135",
+   "type": "county",
+   "redfin_region_id": 3001,
+   "realtor_location": "Nottoway County, VA",
+   "lat": 37.141167,
+   "lng": -78.053866
+  },
+  {
+   "name": "Orange County",
+   "fips": "51137",
+   "type": "county",
+   "redfin_region_id": 3002,
+   "realtor_location": "Orange County, VA",
+   "lat": 38.249326,
+   "lng": -78.011092
+  },
+  {
+   "name": "Page County",
+   "fips": "51139",
+   "type": "county",
+   "redfin_region_id": 3003,
+   "realtor_location": "Page County, VA",
+   "lat": 38.623209,
+   "lng": -78.491872
+  },
+  {
+   "name": "Patrick County",
+   "fips": "51141",
+   "type": "county",
+   "redfin_region_id": 3004,
+   "realtor_location": "Patrick County, VA",
+   "lat": 36.667138,
+   "lng": -80.286413
+  },
+  {
+   "name": "Pittsylvania County",
+   "fips": "51143",
+   "type": "county",
+   "redfin_region_id": 3005,
+   "realtor_location": "Pittsylvania County, VA",
+   "lat": 36.821721,
+   "lng": -79.398502
+  },
+  {
+   "name": "Powhatan County",
+   "fips": "51145",
+   "type": "county",
+   "redfin_region_id": 3006,
+   "realtor_location": "Powhatan County, VA",
+   "lat": 37.549404,
+   "lng": -77.912855
+  },
+  {
+   "name": "Prince Edward County",
+   "fips": "51147",
+   "type": "county",
+   "redfin_region_id": 3007,
+   "realtor_location": "Prince Edward County, VA",
+   "lat": 37.224881,
+   "lng": -78.432957
+  },
+  {
+   "name": "Prince George County",
+   "fips": "51149",
+   "type": "county",
+   "redfin_region_id": 3008,
+   "realtor_location": "Prince George County, VA",
+   "lat": 37.187325,
+   "lng": -77.220993
+  },
+  {
+   "name": "Prince William County",
+   "fips": "51153",
+   "type": "county",
+   "redfin_region_id": 3009,
+   "realtor_location": "Prince William County, VA",
+   "lat": 38.701119,
+   "lng": -77.479579
+  },
+  {
+   "name": "Pulaski County",
+   "fips": "51155",
+   "type": "county",
+   "redfin_region_id": 3010,
+   "realtor_location": "Pulaski County, VA",
+   "lat": 37.063385,
+   "lng": -80.713444
+  },
+  {
+   "name": "Rappahannock County",
+   "fips": "51157",
+   "type": "county",
+   "redfin_region_id": 3011,
+   "realtor_location": "Rappahannock County, VA",
+   "lat": 38.684522,
+   "lng": -78.168824
+  },
+  {
+   "name": "Richmond County",
+   "fips": "51159",
+   "type": "county",
+   "redfin_region_id": 3012,
+   "realtor_location": "Richmond County, VA",
+   "lat": 37.942894,
+   "lng": -76.730561
+  },
+  {
+   "name": "Roanoke County",
+   "fips": "51161",
+   "type": "county",
+   "redfin_region_id": 3013,
+   "realtor_location": "Roanoke County, VA",
+   "lat": 37.330792,
+   "lng": -80.191237
+  },
+  {
+   "name": "Rockbridge County",
+   "fips": "51163",
+   "type": "county",
+   "redfin_region_id": 3014,
+   "realtor_location": "Rockbridge County, VA",
+   "lat": 37.814517,
+   "lng": -79.447754
+  },
+  {
+   "name": "Rockingham County",
+   "fips": "51165",
+   "type": "county",
+   "redfin_region_id": 3015,
+   "realtor_location": "Rockingham County, VA",
+   "lat": 38.507585,
+   "lng": -78.885321
+  },
+  {
+   "name": "Russell County",
+   "fips": "51167",
+   "type": "county",
+   "redfin_region_id": 3016,
+   "realtor_location": "Russell County, VA",
+   "lat": 36.93342,
+   "lng": -82.095934
+  },
+  {
+   "name": "Scott County",
+   "fips": "51169",
+   "type": "county",
+   "redfin_region_id": 3017,
+   "realtor_location": "Scott County, VA",
+   "lat": 36.712776,
+   "lng": -82.613624
+  },
+  {
+   "name": "Shenandoah County",
+   "fips": "51171",
+   "type": "county",
+   "redfin_region_id": 3018,
+   "realtor_location": "Shenandoah County, VA",
+   "lat": 38.856204,
+   "lng": -78.573987
+  },
+  {
+   "name": "Smyth County",
+   "fips": "51173",
+   "type": "county",
+   "redfin_region_id": 3019,
+   "realtor_location": "Smyth County, VA",
+   "lat": 36.842318,
+   "lng": -81.539786
+  },
+  {
+   "name": "Southampton County",
+   "fips": "51175",
+   "type": "county",
+   "redfin_region_id": 3020,
+   "realtor_location": "Southampton County, VA",
+   "lat": 36.720068,
+   "lng": -77.103813
+  },
+  {
+   "name": "Spotsylvania County",
+   "fips": "51177",
+   "type": "county",
+   "redfin_region_id": 3021,
+   "realtor_location": "Spotsylvania County, VA",
+   "lat": 38.182431,
+   "lng": -77.657226
+  },
+  {
+   "name": "Stafford County",
+   "fips": "51179",
+   "type": "county",
+   "redfin_region_id": 3022,
+   "realtor_location": "Stafford County, VA",
+   "lat": 38.423084,
+   "lng": -77.458048
+  },
+  {
+   "name": "Surry County",
+   "fips": "51181",
+   "type": "county",
+   "redfin_region_id": 3023,
+   "realtor_location": "Surry County, VA",
+   "lat": 37.119761,
+   "lng": -76.880172
+  },
+  {
+   "name": "Sussex County",
+   "fips": "51183",
+   "type": "county",
+   "redfin_region_id": 3024,
+   "realtor_location": "Sussex County, VA",
+   "lat": 36.926645,
+   "lng": -77.259732
+  },
+  {
+   "name": "Tazewell County",
+   "fips": "51185",
+   "type": "county",
+   "redfin_region_id": 3025,
+   "realtor_location": "Tazewell County, VA",
+   "lat": 37.125395,
+   "lng": -81.562924
+  },
+  {
+   "name": "Warren County",
+   "fips": "51187",
+   "type": "county",
+   "redfin_region_id": 3026,
+   "realtor_location": "Warren County, VA",
+   "lat": 38.908221,
+   "lng": -78.207594
+  },
+  {
+   "name": "Washington County",
+   "fips": "51191",
+   "type": "county",
+   "redfin_region_id": 3027,
+   "realtor_location": "Washington County, VA",
+   "lat": 36.747814,
+   "lng": -81.950322
+  },
+  {
+   "name": "Westmoreland County",
+   "fips": "51193",
+   "type": "county",
+   "redfin_region_id": 3028,
+   "realtor_location": "Westmoreland County, VA",
+   "lat": 38.109311,
+   "lng": -76.803933
+  },
+  {
+   "name": "Wise County",
+   "fips": "51195",
+   "type": "county",
+   "redfin_region_id": 3029,
+   "realtor_location": "Wise County, VA",
+   "lat": 36.974561,
+   "lng": -82.62156
+  },
+  {
+   "name": "Wythe County",
+   "fips": "51197",
+   "type": "county",
+   "redfin_region_id": 3030,
+   "realtor_location": "Wythe County, VA",
+   "lat": 36.899867,
+   "lng": -81.083001
+  },
+  {
+   "name": "York County",
+   "fips": "51199",
+   "type": "county",
+   "redfin_region_id": 3031,
+   "realtor_location": "York County, VA",
+   "lat": 37.220914,
+   "lng": -76.395533
+  },
+  {
+   "name": "Alexandria city",
+   "fips": "51510",
+   "type": "independent_city",
+   "redfin_region_id": 3032,
+   "realtor_location": "Alexandria, VA",
+   "lat": 38.819251,
+   "lng": -77.08367
+  },
+  {
+   "name": "Bristol city",
+   "fips": "51520",
+   "type": "independent_city",
+   "redfin_region_id": 3034,
+   "realtor_location": "Bristol, VA",
+   "lat": 36.616954,
+   "lng": -82.157564
+  },
+  {
+   "name": "Buena Vista city",
+   "fips": "51530",
+   "type": "independent_city",
+   "redfin_region_id": 3035,
+   "realtor_location": "Buena Vista, VA",
+   "lat": 37.729345,
+   "lng": -79.358134
+  },
+  {
+   "name": "Charlottesville city",
+   "fips": "51540",
+   "type": "independent_city",
+   "redfin_region_id": 3036,
+   "realtor_location": "Charlottesville, VA",
+   "lat": 38.037658,
+   "lng": -78.485381
+  },
+  {
+   "name": "Chesapeake city",
+   "fips": "51550",
+   "type": "independent_city",
+   "redfin_region_id": 3037,
+   "realtor_location": "Chesapeake, VA",
+   "lat": 36.679376,
+   "lng": -76.301788
+  },
+  {
+   "name": "Colonial Heights city",
+   "fips": "51570",
+   "type": "independent_city",
+   "redfin_region_id": 3038,
+   "realtor_location": "Colonial Heights, VA",
+   "lat": 37.261685,
+   "lng": -77.396804
+  },
+  {
+   "name": "Covington city",
+   "fips": "51580",
+   "type": "independent_city",
+   "redfin_region_id": 3039,
+   "realtor_location": "Covington, VA",
+   "lat": 37.78106,
+   "lng": -79.985434
+  },
+  {
+   "name": "Danville city",
+   "fips": "51590",
+   "type": "independent_city",
+   "redfin_region_id": 3040,
+   "realtor_location": "Danville, VA",
+   "lat": 36.583334,
+   "lng": -79.408071
+  },
+  {
+   "name": "Emporia city",
+   "fips": "51595",
+   "type": "independent_city",
+   "redfin_region_id": 3041,
+   "realtor_location": "Emporia, VA",
+   "lat": 36.696182,
+   "lng": -77.535975
+  },
+  {
+   "name": "Fairfax city",
+   "fips": "51600",
+   "type": "independent_city",
+   "redfin_region_id": 3042,
+   "realtor_location": "Fairfax, VA",
+   "lat": 38.853183,
+   "lng": -77.299025
+  },
+  {
+   "name": "Falls Church city",
+   "fips": "51610",
+   "type": "independent_city",
+   "redfin_region_id": 3043,
+   "realtor_location": "Falls Church, VA",
+   "lat": 38.884722,
+   "lng": -77.175603
+  },
+  {
+   "name": "Franklin city",
+   "fips": "51620",
+   "type": "independent_city",
+   "redfin_region_id": 3044,
+   "realtor_location": "Franklin, VA",
+   "lat": 36.684014,
+   "lng": -76.941396
+  },
+  {
+   "name": "Fredericksburg city",
+   "fips": "51630",
+   "type": "independent_city",
+   "redfin_region_id": 3045,
+   "realtor_location": "Fredericksburg, VA",
+   "lat": 38.299272,
+   "lng": -77.486658
+  },
+  {
+   "name": "Galax city",
+   "fips": "51640",
+   "type": "independent_city",
+   "redfin_region_id": 3046,
+   "realtor_location": "Galax, VA",
+   "lat": 36.66564,
+   "lng": -80.914308
+  },
+  {
+   "name": "Hampton city",
+   "fips": "51650",
+   "type": "independent_city",
+   "redfin_region_id": 3047,
+   "realtor_location": "Hampton, VA",
+   "lat": 37.047961,
+   "lng": -76.297293
+  },
+  {
+   "name": "Harrisonburg city",
+   "fips": "51660",
+   "type": "independent_city",
+   "redfin_region_id": 3048,
+   "realtor_location": "Harrisonburg, VA",
+   "lat": 38.436255,
+   "lng": -78.873303
+  },
+  {
+   "name": "Hopewell city",
+   "fips": "51670",
+   "type": "independent_city",
+   "redfin_region_id": 3049,
+   "realtor_location": "Hopewell, VA",
+   "lat": 37.29101,
+   "lng": -77.298944
+  },
+  {
+   "name": "Lexington city",
+   "fips": "51678",
+   "type": "independent_city",
+   "redfin_region_id": 3050,
+   "realtor_location": "Lexington, VA",
+   "lat": 37.782332,
+   "lng": -79.44432
+  },
+  {
+   "name": "Lynchburg city",
+   "fips": "51680",
+   "type": "independent_city",
+   "redfin_region_id": 3051,
+   "realtor_location": "Lynchburg, VA",
+   "lat": 37.399016,
+   "lng": -79.195458
+  },
+  {
+   "name": "Manassas city",
+   "fips": "51683",
+   "type": "independent_city",
+   "redfin_region_id": 3052,
+   "realtor_location": "Manassas, VA",
+   "lat": 38.746808,
+   "lng": -77.482633
+  },
+  {
+   "name": "Manassas Park city",
+   "fips": "51685",
+   "type": "independent_city",
+   "redfin_region_id": 3053,
+   "realtor_location": "Manassas Park, VA",
+   "lat": 38.769398,
+   "lng": -77.442323
+  },
+  {
+   "name": "Martinsville city",
+   "fips": "51690",
+   "type": "independent_city",
+   "redfin_region_id": 3054,
+   "realtor_location": "Martinsville, VA",
+   "lat": 36.683527,
+   "lng": -79.863647
+  },
+  {
+   "name": "Newport News city",
+   "fips": "51700",
+   "type": "independent_city",
+   "redfin_region_id": 3055,
+   "realtor_location": "Newport News, VA",
+   "lat": 37.076136,
+   "lng": -76.52198
+  },
+  {
+   "name": "Norfolk city",
+   "fips": "51710",
+   "type": "independent_city",
+   "redfin_region_id": 3056,
+   "realtor_location": "Norfolk, VA",
+   "lat": 36.923015,
+   "lng": -76.244641
+  },
+  {
+   "name": "Norton city",
+   "fips": "51720",
+   "type": "independent_city",
+   "redfin_region_id": 3057,
+   "realtor_location": "Norton, VA",
+   "lat": 36.931549,
+   "lng": -82.625996
+  },
+  {
+   "name": "Petersburg city",
+   "fips": "51730",
+   "type": "independent_city",
+   "redfin_region_id": 3058,
+   "realtor_location": "Petersburg, VA",
+   "lat": 37.20473,
+   "lng": -77.392368
+  },
+  {
+   "name": "Poquoson city",
+   "fips": "51735",
+   "type": "independent_city",
+   "redfin_region_id": 3059,
+   "realtor_location": "Poquoson, VA",
+   "lat": 37.12836,
+   "lng": -76.303534
+  },
+  {
+   "name": "Portsmouth city",
+   "fips": "51740",
+   "type": "independent_city",
+   "redfin_region_id": 3060,
+   "realtor_location": "Portsmouth, VA",
+   "lat": 36.859339,
+   "lng": -76.356973
+  },
+  {
+   "name": "Radford city",
+   "fips": "51750",
+   "type": "independent_city",
+   "redfin_region_id": 3061,
+   "realtor_location": "Radford, VA",
+   "lat": 37.120119,
+   "lng": -80.559147
+  },
+  {
+   "name": "Richmond city",
+   "fips": "51760",
+   "type": "independent_city",
+   "redfin_region_id": 3062,
+   "realtor_location": "Richmond, VA",
+   "lat": 37.531399,
+   "lng": -77.476009
+  },
+  {
+   "name": "Roanoke city",
+   "fips": "51770",
+   "type": "independent_city",
+   "redfin_region_id": 3063,
+   "realtor_location": "Roanoke, VA",
+   "lat": 37.278458,
+   "lng": -79.958174
+  },
+  {
+   "name": "Salem city",
+   "fips": "51775",
+   "type": "independent_city",
+   "redfin_region_id": 3064,
+   "realtor_location": "Salem, VA",
+   "lat": 37.285333,
+   "lng": -80.055241
+  },
+  {
+   "name": "Staunton city",
+   "fips": "51790",
+   "type": "independent_city",
+   "redfin_region_id": 3065,
+   "realtor_location": "Staunton, VA",
+   "lat": 38.157978,
+   "lng": -79.061876
+  },
+  {
+   "name": "Suffolk city",
+   "fips": "51800",
+   "type": "independent_city",
+   "redfin_region_id": 3066,
+   "realtor_location": "Suffolk, VA",
+   "lat": 36.697157,
+   "lng": -76.634781
+  },
+  {
+   "name": "Virginia Beach city",
+   "fips": "51810",
+   "type": "independent_city",
+   "redfin_region_id": 3067,
+   "realtor_location": "Virginia Beach, VA",
+   "lat": 36.779525,
+   "lng": -76.029142
+  },
+  {
+   "name": "Waynesboro city",
+   "fips": "51820",
+   "type": "independent_city",
+   "redfin_region_id": 3068,
+   "realtor_location": "Waynesboro, VA",
+   "lat": 38.067157,
+   "lng": -78.90142
+  },
+  {
+   "name": "Williamsburg city",
+   "fips": "51830",
+   "type": "independent_city",
+   "redfin_region_id": 3069,
+   "realtor_location": "Williamsburg, VA",
+   "lat": 37.269481,
+   "lng": -76.708193
+  },
+  {
+   "name": "Winchester city",
+   "fips": "51840",
+   "type": "independent_city",
+   "redfin_region_id": 3070,
+   "realtor_location": "Winchester, VA",
+   "lat": 39.173869,
+   "lng": -78.176356
+  }
+ ]
+}

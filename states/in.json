@@ -1,0 +1,834 @@
+{
+ "state": "IN",
+ "name": "Indiana",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "18001",
+   "type": "county",
+   "redfin_region_id": 814,
+   "realtor_location": "Adams County, IN",
+   "lat": 40.745733,
+   "lng": -84.93613
+  },
+  {
+   "name": "Allen County",
+   "fips": "18003",
+   "type": "county",
+   "redfin_region_id": 815,
+   "realtor_location": "Allen County, IN",
+   "lat": 41.091909,
+   "lng": -85.071791
+  },
+  {
+   "name": "Bartholomew County",
+   "fips": "18005",
+   "type": "county",
+   "redfin_region_id": 816,
+   "realtor_location": "Bartholomew County, IN",
+   "lat": 39.205843,
+   "lng": -85.897999
+  },
+  {
+   "name": "Benton County",
+   "fips": "18007",
+   "type": "county",
+   "redfin_region_id": 817,
+   "realtor_location": "Benton County, IN",
+   "lat": 40.600939,
+   "lng": -87.314786
+  },
+  {
+   "name": "Blackford County",
+   "fips": "18009",
+   "type": "county",
+   "redfin_region_id": 818,
+   "realtor_location": "Blackford County, IN",
+   "lat": 40.472672,
+   "lng": -85.32373
+  },
+  {
+   "name": "Boone County",
+   "fips": "18011",
+   "type": "county",
+   "redfin_region_id": 819,
+   "realtor_location": "Boone County, IN",
+   "lat": 40.050892,
+   "lng": -86.469014
+  },
+  {
+   "name": "Brown County",
+   "fips": "18013",
+   "type": "county",
+   "redfin_region_id": 820,
+   "realtor_location": "Brown County, IN",
+   "lat": 39.195113,
+   "lng": -86.230121
+  },
+  {
+   "name": "Carroll County",
+   "fips": "18015",
+   "type": "county",
+   "redfin_region_id": 821,
+   "realtor_location": "Carroll County, IN",
+   "lat": 40.58498,
+   "lng": -86.565141
+  },
+  {
+   "name": "Cass County",
+   "fips": "18017",
+   "type": "county",
+   "redfin_region_id": 822,
+   "realtor_location": "Cass County, IN",
+   "lat": 40.753799,
+   "lng": -86.355168
+  },
+  {
+   "name": "Clark County",
+   "fips": "18019",
+   "type": "county",
+   "redfin_region_id": 823,
+   "realtor_location": "Clark County, IN",
+   "lat": 38.476217,
+   "lng": -85.711122
+  },
+  {
+   "name": "Clay County",
+   "fips": "18021",
+   "type": "county",
+   "redfin_region_id": 824,
+   "realtor_location": "Clay County, IN",
+   "lat": 39.393928,
+   "lng": -87.115858
+  },
+  {
+   "name": "Clinton County",
+   "fips": "18023",
+   "type": "county",
+   "redfin_region_id": 825,
+   "realtor_location": "Clinton County, IN",
+   "lat": 40.305944,
+   "lng": -86.477567
+  },
+  {
+   "name": "Crawford County",
+   "fips": "18025",
+   "type": "county",
+   "redfin_region_id": 826,
+   "realtor_location": "Crawford County, IN",
+   "lat": 38.289433,
+   "lng": -86.440871
+  },
+  {
+   "name": "Daviess County",
+   "fips": "18027",
+   "type": "county",
+   "redfin_region_id": 827,
+   "realtor_location": "Daviess County, IN",
+   "lat": 38.69609,
+   "lng": -87.076943
+  },
+  {
+   "name": "Dearborn County",
+   "fips": "18029",
+   "type": "county",
+   "redfin_region_id": 828,
+   "realtor_location": "Dearborn County, IN",
+   "lat": 39.140897,
+   "lng": -84.975868
+  },
+  {
+   "name": "Decatur County",
+   "fips": "18031",
+   "type": "county",
+   "redfin_region_id": 829,
+   "realtor_location": "Decatur County, IN",
+   "lat": 39.30598,
+   "lng": -85.499831
+  },
+  {
+   "name": "DeKalb County",
+   "fips": "18033",
+   "type": "county",
+   "redfin_region_id": 830,
+   "realtor_location": "DeKalb County, IN",
+   "lat": 41.39676,
+   "lng": -85.002697
+  },
+  {
+   "name": "Delaware County",
+   "fips": "18035",
+   "type": "county",
+   "redfin_region_id": 831,
+   "realtor_location": "Delaware County, IN",
+   "lat": 40.227543,
+   "lng": -85.399262
+  },
+  {
+   "name": "Dubois County",
+   "fips": "18037",
+   "type": "county",
+   "redfin_region_id": 832,
+   "realtor_location": "Dubois County, IN",
+   "lat": 38.373344,
+   "lng": -86.873385
+  },
+  {
+   "name": "Elkhart County",
+   "fips": "18039",
+   "type": "county",
+   "redfin_region_id": 833,
+   "realtor_location": "Elkhart County, IN",
+   "lat": 41.600693,
+   "lng": -85.863986
+  },
+  {
+   "name": "Fayette County",
+   "fips": "18041",
+   "type": "county",
+   "redfin_region_id": 834,
+   "realtor_location": "Fayette County, IN",
+   "lat": 39.639655,
+   "lng": -85.185032
+  },
+  {
+   "name": "Floyd County",
+   "fips": "18043",
+   "type": "county",
+   "redfin_region_id": 835,
+   "realtor_location": "Floyd County, IN",
+   "lat": 38.318081,
+   "lng": -85.911847
+  },
+  {
+   "name": "Fountain County",
+   "fips": "18045",
+   "type": "county",
+   "redfin_region_id": 836,
+   "realtor_location": "Fountain County, IN",
+   "lat": 40.121237,
+   "lng": -87.234872
+  },
+  {
+   "name": "Franklin County",
+   "fips": "18047",
+   "type": "county",
+   "redfin_region_id": 837,
+   "realtor_location": "Franklin County, IN",
+   "lat": 39.409762,
+   "lng": -85.066964
+  },
+  {
+   "name": "Fulton County",
+   "fips": "18049",
+   "type": "county",
+   "redfin_region_id": 838,
+   "realtor_location": "Fulton County, IN",
+   "lat": 41.050384,
+   "lng": -86.265006
+  },
+  {
+   "name": "Gibson County",
+   "fips": "18051",
+   "type": "county",
+   "redfin_region_id": 839,
+   "realtor_location": "Gibson County, IN",
+   "lat": 38.317398,
+   "lng": -87.580523
+  },
+  {
+   "name": "Grant County",
+   "fips": "18053",
+   "type": "county",
+   "redfin_region_id": 840,
+   "realtor_location": "Grant County, IN",
+   "lat": 40.515758,
+   "lng": -85.654946
+  },
+  {
+   "name": "Greene County",
+   "fips": "18055",
+   "type": "county",
+   "redfin_region_id": 841,
+   "realtor_location": "Greene County, IN",
+   "lat": 39.047147,
+   "lng": -87.004771
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "18057",
+   "type": "county",
+   "redfin_region_id": 842,
+   "realtor_location": "Hamilton County, IN",
+   "lat": 40.053513,
+   "lng": -86.021709
+  },
+  {
+   "name": "Hancock County",
+   "fips": "18059",
+   "type": "county",
+   "redfin_region_id": 843,
+   "realtor_location": "Hancock County, IN",
+   "lat": 39.822529,
+   "lng": -85.77315
+  },
+  {
+   "name": "Harrison County",
+   "fips": "18061",
+   "type": "county",
+   "redfin_region_id": 844,
+   "realtor_location": "Harrison County, IN",
+   "lat": 38.186454,
+   "lng": -86.103766
+  },
+  {
+   "name": "Hendricks County",
+   "fips": "18063",
+   "type": "county",
+   "redfin_region_id": 845,
+   "realtor_location": "Hendricks County, IN",
+   "lat": 39.768963,
+   "lng": -86.509908
+  },
+  {
+   "name": "Henry County",
+   "fips": "18065",
+   "type": "county",
+   "redfin_region_id": 846,
+   "realtor_location": "Henry County, IN",
+   "lat": 39.929591,
+   "lng": -85.397363
+  },
+  {
+   "name": "Howard County",
+   "fips": "18067",
+   "type": "county",
+   "redfin_region_id": 847,
+   "realtor_location": "Howard County, IN",
+   "lat": 40.483537,
+   "lng": -86.114118
+  },
+  {
+   "name": "Huntington County",
+   "fips": "18069",
+   "type": "county",
+   "redfin_region_id": 848,
+   "realtor_location": "Huntington County, IN",
+   "lat": 40.826394,
+   "lng": -85.478597
+  },
+  {
+   "name": "Jackson County",
+   "fips": "18071",
+   "type": "county",
+   "redfin_region_id": 849,
+   "realtor_location": "Jackson County, IN",
+   "lat": 38.911957,
+   "lng": -86.042516
+  },
+  {
+   "name": "Jasper County",
+   "fips": "18073",
+   "type": "county",
+   "redfin_region_id": 850,
+   "realtor_location": "Jasper County, IN",
+   "lat": 41.017688,
+   "lng": -87.118814
+  },
+  {
+   "name": "Jay County",
+   "fips": "18075",
+   "type": "county",
+   "redfin_region_id": 851,
+   "realtor_location": "Jay County, IN",
+   "lat": 40.434956,
+   "lng": -85.002331
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "18077",
+   "type": "county",
+   "redfin_region_id": 852,
+   "realtor_location": "Jefferson County, IN",
+   "lat": 38.783604,
+   "lng": -85.44009
+  },
+  {
+   "name": "Jennings County",
+   "fips": "18079",
+   "type": "county",
+   "redfin_region_id": 853,
+   "realtor_location": "Jennings County, IN",
+   "lat": 38.996229,
+   "lng": -85.628103
+  },
+  {
+   "name": "Johnson County",
+   "fips": "18081",
+   "type": "county",
+   "redfin_region_id": 854,
+   "realtor_location": "Johnson County, IN",
+   "lat": 39.496092,
+   "lng": -86.094264
+  },
+  {
+   "name": "Knox County",
+   "fips": "18083",
+   "type": "county",
+   "redfin_region_id": 855,
+   "realtor_location": "Knox County, IN",
+   "lat": 38.688391,
+   "lng": -87.420354
+  },
+  {
+   "name": "Kosciusko County",
+   "fips": "18085",
+   "type": "county",
+   "redfin_region_id": 856,
+   "realtor_location": "Kosciusko County, IN",
+   "lat": 41.244293,
+   "lng": -85.861575
+  },
+  {
+   "name": "LaGrange County",
+   "fips": "18087",
+   "type": "county",
+   "redfin_region_id": 857,
+   "realtor_location": "LaGrange County, IN",
+   "lat": 41.642462,
+   "lng": -85.427845
+  },
+  {
+   "name": "Lake County",
+   "fips": "18089",
+   "type": "county",
+   "redfin_region_id": 858,
+   "realtor_location": "Lake County, IN",
+   "lat": 41.472247,
+   "lng": -87.374337
+  },
+  {
+   "name": "LaPorte County",
+   "fips": "18091",
+   "type": "county",
+   "redfin_region_id": 859,
+   "realtor_location": "LaPorte County, IN",
+   "lat": 41.549013,
+   "lng": -86.744739
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "18093",
+   "type": "county",
+   "redfin_region_id": 860,
+   "realtor_location": "Lawrence County, IN",
+   "lat": 38.839815,
+   "lng": -86.48782
+  },
+  {
+   "name": "Madison County",
+   "fips": "18095",
+   "type": "county",
+   "redfin_region_id": 861,
+   "realtor_location": "Madison County, IN",
+   "lat": 40.166203,
+   "lng": -85.722454
+  },
+  {
+   "name": "Marion County",
+   "fips": "18097",
+   "type": "county",
+   "redfin_region_id": 862,
+   "realtor_location": "Marion County, IN",
+   "lat": 39.782976,
+   "lng": -86.135794
+  },
+  {
+   "name": "Marshall County",
+   "fips": "18099",
+   "type": "county",
+   "redfin_region_id": 863,
+   "realtor_location": "Marshall County, IN",
+   "lat": 41.325003,
+   "lng": -86.269036
+  },
+  {
+   "name": "Martin County",
+   "fips": "18101",
+   "type": "county",
+   "redfin_region_id": 864,
+   "realtor_location": "Martin County, IN",
+   "lat": 38.705322,
+   "lng": -86.801847
+  },
+  {
+   "name": "Miami County",
+   "fips": "18103",
+   "type": "county",
+   "redfin_region_id": 865,
+   "realtor_location": "Miami County, IN",
+   "lat": 40.772883,
+   "lng": -86.044258
+  },
+  {
+   "name": "Monroe County",
+   "fips": "18105",
+   "type": "county",
+   "redfin_region_id": 866,
+   "realtor_location": "Monroe County, IN",
+   "lat": 39.160729,
+   "lng": -86.52331
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "18107",
+   "type": "county",
+   "redfin_region_id": 867,
+   "realtor_location": "Montgomery County, IN",
+   "lat": 40.040296,
+   "lng": -86.892715
+  },
+  {
+   "name": "Morgan County",
+   "fips": "18109",
+   "type": "county",
+   "redfin_region_id": 868,
+   "realtor_location": "Morgan County, IN",
+   "lat": 39.482646,
+   "lng": -86.447457
+  },
+  {
+   "name": "Newton County",
+   "fips": "18111",
+   "type": "county",
+   "redfin_region_id": 869,
+   "realtor_location": "Newton County, IN",
+   "lat": 40.962399,
+   "lng": -87.402172
+  },
+  {
+   "name": "Noble County",
+   "fips": "18113",
+   "type": "county",
+   "redfin_region_id": 870,
+   "realtor_location": "Noble County, IN",
+   "lat": 41.404679,
+   "lng": -85.417271
+  },
+  {
+   "name": "Ohio County",
+   "fips": "18115",
+   "type": "county",
+   "redfin_region_id": 871,
+   "realtor_location": "Ohio County, IN",
+   "lat": 38.940527,
+   "lng": -84.964299
+  },
+  {
+   "name": "Orange County",
+   "fips": "18117",
+   "type": "county",
+   "redfin_region_id": 872,
+   "realtor_location": "Orange County, IN",
+   "lat": 38.547381,
+   "lng": -86.489257
+  },
+  {
+   "name": "Owen County",
+   "fips": "18119",
+   "type": "county",
+   "redfin_region_id": 873,
+   "realtor_location": "Owen County, IN",
+   "lat": 39.317339,
+   "lng": -86.838845
+  },
+  {
+   "name": "Parke County",
+   "fips": "18121",
+   "type": "county",
+   "redfin_region_id": 874,
+   "realtor_location": "Parke County, IN",
+   "lat": 39.77425,
+   "lng": -87.19695
+  },
+  {
+   "name": "Perry County",
+   "fips": "18123",
+   "type": "county",
+   "redfin_region_id": 875,
+   "realtor_location": "Perry County, IN",
+   "lat": 38.081436,
+   "lng": -86.62654
+  },
+  {
+   "name": "Pike County",
+   "fips": "18125",
+   "type": "county",
+   "redfin_region_id": 876,
+   "realtor_location": "Pike County, IN",
+   "lat": 38.397961,
+   "lng": -87.232547
+  },
+  {
+   "name": "Porter County",
+   "fips": "18127",
+   "type": "county",
+   "redfin_region_id": 877,
+   "realtor_location": "Porter County, IN",
+   "lat": 41.509914,
+   "lng": -87.071313
+  },
+  {
+   "name": "Posey County",
+   "fips": "18129",
+   "type": "county",
+   "redfin_region_id": 878,
+   "realtor_location": "Posey County, IN",
+   "lat": 38.027614,
+   "lng": -87.868653
+  },
+  {
+   "name": "Pulaski County",
+   "fips": "18131",
+   "type": "county",
+   "redfin_region_id": 879,
+   "realtor_location": "Pulaski County, IN",
+   "lat": 41.045272,
+   "lng": -86.692538
+  },
+  {
+   "name": "Putnam County",
+   "fips": "18133",
+   "type": "county",
+   "redfin_region_id": 880,
+   "realtor_location": "Putnam County, IN",
+   "lat": 39.665548,
+   "lng": -86.853373
+  },
+  {
+   "name": "Randolph County",
+   "fips": "18135",
+   "type": "county",
+   "redfin_region_id": 881,
+   "realtor_location": "Randolph County, IN",
+   "lat": 40.164079,
+   "lng": -85.00579
+  },
+  {
+   "name": "Ripley County",
+   "fips": "18137",
+   "type": "county",
+   "redfin_region_id": 882,
+   "realtor_location": "Ripley County, IN",
+   "lat": 39.100226,
+   "lng": -85.260494
+  },
+  {
+   "name": "Rush County",
+   "fips": "18139",
+   "type": "county",
+   "redfin_region_id": 883,
+   "realtor_location": "Rush County, IN",
+   "lat": 39.622362,
+   "lng": -85.466529
+  },
+  {
+   "name": "St. Joseph County",
+   "fips": "18141",
+   "type": "county",
+   "redfin_region_id": 884,
+   "realtor_location": "St. Joseph County, IN",
+   "lat": 41.617723,
+   "lng": -86.288048
+  },
+  {
+   "name": "Scott County",
+   "fips": "18143",
+   "type": "county",
+   "redfin_region_id": 885,
+   "realtor_location": "Scott County, IN",
+   "lat": 38.679431,
+   "lng": -85.751898
+  },
+  {
+   "name": "Shelby County",
+   "fips": "18145",
+   "type": "county",
+   "redfin_region_id": 886,
+   "realtor_location": "Shelby County, IN",
+   "lat": 39.524135,
+   "lng": -85.792174
+  },
+  {
+   "name": "Spencer County",
+   "fips": "18147",
+   "type": "county",
+   "redfin_region_id": 887,
+   "realtor_location": "Spencer County, IN",
+   "lat": 38.009697,
+   "lng": -87.010375
+  },
+  {
+   "name": "Starke County",
+   "fips": "18149",
+   "type": "county",
+   "redfin_region_id": 888,
+   "realtor_location": "Starke County, IN",
+   "lat": 41.284478,
+   "lng": -86.644636
+  },
+  {
+   "name": "Steuben County",
+   "fips": "18151",
+   "type": "county",
+   "redfin_region_id": 889,
+   "realtor_location": "Steuben County, IN",
+   "lat": 41.643467,
+   "lng": -85.002405
+  },
+  {
+   "name": "Sullivan County",
+   "fips": "18153",
+   "type": "county",
+   "redfin_region_id": 890,
+   "realtor_location": "Sullivan County, IN",
+   "lat": 39.089225,
+   "lng": -87.415843
+  },
+  {
+   "name": "Switzerland County",
+   "fips": "18155",
+   "type": "county",
+   "redfin_region_id": 891,
+   "realtor_location": "Switzerland County, IN",
+   "lat": 38.825854,
+   "lng": -85.029681
+  },
+  {
+   "name": "Tippecanoe County",
+   "fips": "18157",
+   "type": "county",
+   "redfin_region_id": 892,
+   "realtor_location": "Tippecanoe County, IN",
+   "lat": 40.389133,
+   "lng": -86.893554
+  },
+  {
+   "name": "Tipton County",
+   "fips": "18159",
+   "type": "county",
+   "redfin_region_id": 893,
+   "realtor_location": "Tipton County, IN",
+   "lat": 40.310229,
+   "lng": -86.056207
+  },
+  {
+   "name": "Union County",
+   "fips": "18161",
+   "type": "county",
+   "redfin_region_id": 894,
+   "realtor_location": "Union County, IN",
+   "lat": 39.623111,
+   "lng": -84.925152
+  },
+  {
+   "name": "Vanderburgh County",
+   "fips": "18163",
+   "type": "county",
+   "redfin_region_id": 895,
+   "realtor_location": "Vanderburgh County, IN",
+   "lat": 38.02007,
+   "lng": -87.586166
+  },
+  {
+   "name": "Vermillion County",
+   "fips": "18165",
+   "type": "county",
+   "redfin_region_id": 896,
+   "realtor_location": "Vermillion County, IN",
+   "lat": 39.854045,
+   "lng": -87.462071
+  },
+  {
+   "name": "Vigo County",
+   "fips": "18167",
+   "type": "county",
+   "redfin_region_id": 897,
+   "realtor_location": "Vigo County, IN",
+   "lat": 39.429143,
+   "lng": -87.390375
+  },
+  {
+   "name": "Wabash County",
+   "fips": "18169",
+   "type": "county",
+   "redfin_region_id": 898,
+   "realtor_location": "Wabash County, IN",
+   "lat": 40.843747,
+   "lng": -85.795192
+  },
+  {
+   "name": "Warren County",
+   "fips": "18171",
+   "type": "county",
+   "redfin_region_id": 899,
+   "realtor_location": "Warren County, IN",
+   "lat": 40.352498,
+   "lng": -87.375163
+  },
+  {
+   "name": "Warrick County",
+   "fips": "18173",
+   "type": "county",
+   "redfin_region_id": 900,
+   "realtor_location": "Warrick County, IN",
+   "lat": 38.097728,
+   "lng": -87.272049
+  },
+  {
+   "name": "Washington County",
+   "fips": "18175",
+   "type": "county",
+   "redfin_region_id": 901,
+   "realtor_location": "Washington County, IN",
+   "lat": 38.600613,
+   "lng": -86.104751
+  },
+  {
+   "name": "Wayne County",
+   "fips": "18177",
+   "type": "county",
+   "redfin_region_id": 902,
+   "realtor_location": "Wayne County, IN",
+   "lat": 39.863091,
+   "lng": -85.006735
+  },
+  {
+   "name": "Wells County",
+   "fips": "18179",
+   "type": "county",
+   "redfin_region_id": 903,
+   "realtor_location": "Wells County, IN",
+   "lat": 40.735273,
+   "lng": -85.212974
+  },
+  {
+   "name": "White County",
+   "fips": "18181",
+   "type": "county",
+   "redfin_region_id": 904,
+   "realtor_location": "White County, IN",
+   "lat": 40.75095,
+   "lng": -86.864293
+  },
+  {
+   "name": "Whitley County",
+   "fips": "18183",
+   "type": "county",
+   "redfin_region_id": 905,
+   "realtor_location": "Whitley County, IN",
+   "lat": 41.136426,
+   "lng": -85.501892
+  }
+ ]
+}

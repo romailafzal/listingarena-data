@@ -1,0 +1,132 @@
+{
+ "state": "MA",
+ "name": "Massachusetts",
+ "counties": [
+  {
+   "name": "Barnstable County",
+   "fips": "25001",
+   "type": "county",
+   "redfin_region_id": 1334,
+   "realtor_location": "Barnstable County, MA",
+   "lat": 41.706123,
+   "lng": -70.164823
+  },
+  {
+   "name": "Berkshire County",
+   "fips": "25003",
+   "type": "county",
+   "redfin_region_id": 1335,
+   "realtor_location": "Berkshire County, MA",
+   "lat": 42.371493,
+   "lng": -73.217928
+  },
+  {
+   "name": "Bristol County",
+   "fips": "25005",
+   "type": "county",
+   "redfin_region_id": 1336,
+   "realtor_location": "Bristol County, MA",
+   "lat": 41.748588,
+   "lng": -71.088894
+  },
+  {
+   "name": "Dukes County",
+   "fips": "25007",
+   "type": "county",
+   "redfin_region_id": 1337,
+   "realtor_location": "Dukes County, MA",
+   "lat": 41.38097,
+   "lng": -70.701499
+  },
+  {
+   "name": "Essex County",
+   "fips": "25009",
+   "type": "county",
+   "redfin_region_id": 1338,
+   "realtor_location": "Essex County, MA",
+   "lat": 42.642708,
+   "lng": -70.864909
+  },
+  {
+   "name": "Franklin County",
+   "fips": "25011",
+   "type": "county",
+   "redfin_region_id": 1339,
+   "realtor_location": "Franklin County, MA",
+   "lat": 42.584504,
+   "lng": -72.591792
+  },
+  {
+   "name": "Hampden County",
+   "fips": "25013",
+   "type": "county",
+   "redfin_region_id": 1340,
+   "realtor_location": "Hampden County, MA",
+   "lat": 42.136198,
+   "lng": -72.635648
+  },
+  {
+   "name": "Hampshire County",
+   "fips": "25015",
+   "type": "county",
+   "redfin_region_id": 1341,
+   "realtor_location": "Hampshire County, MA",
+   "lat": 42.339459,
+   "lng": -72.663694
+  },
+  {
+   "name": "Middlesex County",
+   "fips": "25017",
+   "type": "county",
+   "redfin_region_id": 1342,
+   "realtor_location": "Middlesex County, MA",
+   "lat": 42.481718,
+   "lng": -71.394916
+  },
+  {
+   "name": "Nantucket County",
+   "fips": "25019",
+   "type": "county",
+   "redfin_region_id": 1343,
+   "realtor_location": "Nantucket County, MA",
+   "lat": 41.293392,
+   "lng": -70.102164
+  },
+  {
+   "name": "Norfolk County",
+   "fips": "25021",
+   "type": "county",
+   "redfin_region_id": 1344,
+   "realtor_location": "Norfolk County, MA",
+   "lat": 42.171738,
+   "lng": -71.18111
+  },
+  {
+   "name": "Plymouth County",
+   "fips": "25023",
+   "type": "county",
+   "redfin_region_id": 1345,
+   "realtor_location": "Plymouth County, MA",
+   "lat": 41.987196,
+   "lng": -70.741942
+  },
+  {
+   "name": "Suffolk County",
+   "fips": "25025",
+   "type": "county",
+   "redfin_region_id": 1346,
+   "realtor_location": "Suffolk County, MA",
+   "lat": 42.338551,
+   "lng": -71.018253
+  },
+  {
+   "name": "Worcester County",
+   "fips": "25027",
+   "type": "county",
+   "redfin_region_id": 1347,
+   "realtor_location": "Worcester County, MA",
+   "lat": 42.311693,
+   "lng": -71.940282
+  }
+ ]
+}

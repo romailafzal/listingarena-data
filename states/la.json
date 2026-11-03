@@ -1,0 +1,582 @@
+{
+ "state": "LA",
+ "name": "Louisiana",
+ "counties": [
+  {
+   "name": "Acadia Parish",
+   "fips": "22001",
+   "type": "county",
+   "redfin_region_id": 1230,
+   "realtor_location": "Acadia Parish, LA",
+   "lat": 30.291497,
+   "lng": -92.411037
+  },
+  {
+   "name": "Allen Parish",
+   "fips": "22003",
+   "type": "county",
+   "redfin_region_id": 1231,
+   "realtor_location": "Allen Parish, LA",
+   "lat": 30.652744,
+   "lng": -92.819605
+  },
+  {
+   "name": "Ascension Parish",
+   "fips": "22005",
+   "type": "county",
+   "redfin_region_id": 1232,
+   "realtor_location": "Ascension Parish, LA",
+   "lat": 30.206444,
+   "lng": -90.912502
+  },
+  {
+   "name": "Assumption Parish",
+   "fips": "22007",
+   "type": "county",
+   "redfin_region_id": 1233,
+   "realtor_location": "Assumption Parish, LA",
+   "lat": 29.9033,
+   "lng": -91.065219
+  },
+  {
+   "name": "Avoyelles Parish",
+   "fips": "22009",
+   "type": "county",
+   "redfin_region_id": 1234,
+   "realtor_location": "Avoyelles Parish, LA",
+   "lat": 31.088503,
+   "lng": -91.983275
+  },
+  {
+   "name": "Beauregard Parish",
+   "fips": "22011",
+   "type": "county",
+   "redfin_region_id": 1235,
+   "realtor_location": "Beauregard Parish, LA",
+   "lat": 30.645018,
+   "lng": -93.340253
+  },
+  {
+   "name": "Bienville Parish",
+   "fips": "22013",
+   "type": "county",
+   "redfin_region_id": 1236,
+   "realtor_location": "Bienville Parish, LA",
+   "lat": 32.340952,
+   "lng": -93.041151
+  },
+  {
+   "name": "Bossier Parish",
+   "fips": "22015",
+   "type": "county",
+   "redfin_region_id": 1237,
+   "realtor_location": "Bossier Parish, LA",
+   "lat": 32.698481,
+   "lng": -93.626561
+  },
+  {
+   "name": "Caddo Parish",
+   "fips": "22017",
+   "type": "county",
+   "redfin_region_id": 1238,
+   "realtor_location": "Caddo Parish, LA",
+   "lat": 32.580106,
+   "lng": -93.88497
+  },
+  {
+   "name": "Calcasieu Parish",
+   "fips": "22019",
+   "type": "county",
+   "redfin_region_id": 1239,
+   "realtor_location": "Calcasieu Parish, LA",
+   "lat": 30.229559,
+   "lng": -93.358015
+  },
+  {
+   "name": "Caldwell Parish",
+   "fips": "22021",
+   "type": "county",
+   "redfin_region_id": 1240,
+   "realtor_location": "Caldwell Parish, LA",
+   "lat": 32.101219,
+   "lng": -92.114231
+  },
+  {
+   "name": "Cameron Parish",
+   "fips": "22023",
+   "type": "county",
+   "redfin_region_id": 1241,
+   "realtor_location": "Cameron Parish, LA",
+   "lat": 29.871812,
+   "lng": -93.164948
+  },
+  {
+   "name": "Catahoula Parish",
+   "fips": "22025",
+   "type": "county",
+   "redfin_region_id": 1242,
+   "realtor_location": "Catahoula Parish, LA",
+   "lat": 31.666517,
+   "lng": -91.846703
+  },
+  {
+   "name": "Claiborne Parish",
+   "fips": "22027",
+   "type": "county",
+   "redfin_region_id": 1243,
+   "realtor_location": "Claiborne Parish, LA",
+   "lat": 32.82716,
+   "lng": -92.989728
+  },
+  {
+   "name": "Concordia Parish",
+   "fips": "22029",
+   "type": "county",
+   "redfin_region_id": 1244,
+   "realtor_location": "Concordia Parish, LA",
+   "lat": 31.469805,
+   "lng": -91.626315
+  },
+  {
+   "name": "De Soto Parish",
+   "fips": "22031",
+   "type": "county",
+   "redfin_region_id": 1245,
+   "realtor_location": "De Soto County, LA",
+   "lat": 32.059248,
+   "lng": -93.740797
+  },
+  {
+   "name": "East Baton Rouge Parish",
+   "fips": "22033",
+   "type": "county",
+   "redfin_region_id": 1246,
+   "realtor_location": "East Baton Rouge Parish, LA",
+   "lat": 30.54393,
+   "lng": -91.093131
+  },
+  {
+   "name": "East Carroll Parish",
+   "fips": "22035",
+   "type": "county",
+   "redfin_region_id": 1247,
+   "realtor_location": "East Carroll Parish, LA",
+   "lat": 32.73017,
+   "lng": -91.234141
+  },
+  {
+   "name": "East Feliciana Parish",
+   "fips": "22037",
+   "type": "county",
+   "redfin_region_id": 1248,
+   "realtor_location": "East Feliciana Parish, LA",
+   "lat": 30.839784,
+   "lng": -91.043434
+  },
+  {
+   "name": "Evangeline Parish",
+   "fips": "22039",
+   "type": "county",
+   "redfin_region_id": 1249,
+   "realtor_location": "Evangeline Parish, LA",
+   "lat": 30.720693,
+   "lng": -92.404086
+  },
+  {
+   "name": "Franklin Parish",
+   "fips": "22041",
+   "type": "county",
+   "redfin_region_id": 1250,
+   "realtor_location": "Franklin Parish, LA",
+   "lat": 32.139076,
+   "lng": -91.672371
+  },
+  {
+   "name": "Grant Parish",
+   "fips": "22043",
+   "type": "county",
+   "redfin_region_id": 1251,
+   "realtor_location": "Grant Parish, LA",
+   "lat": 31.597787,
+   "lng": -92.561716
+  },
+  {
+   "name": "Iberia Parish",
+   "fips": "22045",
+   "type": "county",
+   "redfin_region_id": 1252,
+   "realtor_location": "Iberia Parish, LA",
+   "lat": 29.606013,
+   "lng": -91.842706
+  },
+  {
+   "name": "Iberville Parish",
+   "fips": "22047",
+   "type": "county",
+   "redfin_region_id": 1253,
+   "realtor_location": "Iberville Parish, LA",
+   "lat": 30.270653,
+   "lng": -91.365872
+  },
+  {
+   "name": "Jackson Parish",
+   "fips": "22049",
+   "type": "county",
+   "redfin_region_id": 1254,
+   "realtor_location": "Jackson Parish, LA",
+   "lat": 32.30429,
+   "lng": -92.5617
+  },
+  {
+   "name": "Jefferson Parish",
+   "fips": "22051",
+   "type": "county",
+   "redfin_region_id": 1255,
+   "realtor_location": "Jefferson Parish, LA",
+   "lat": 29.5033,
+   "lng": -90.036231
+  },
+  {
+   "name": "Jefferson Davis Parish",
+   "fips": "22053",
+   "type": "county",
+   "redfin_region_id": 1256,
+   "realtor_location": "Jefferson Davis Parish, LA",
+   "lat": 30.269529,
+   "lng": -92.816221
+  },
+  {
+   "name": "Lafayette Parish",
+   "fips": "22055",
+   "type": "county",
+   "redfin_region_id": 1257,
+   "realtor_location": "Lafayette Parish, LA",
+   "lat": 30.206507,
+   "lng": -92.06417
+  },
+  {
+   "name": "Lafourche Parish",
+   "fips": "22057",
+   "type": "county",
+   "redfin_region_id": 1258,
+   "realtor_location": "Lafourche Parish, LA",
+   "lat": 29.491992,
+   "lng": -90.394849
+  },
+  {
+   "name": "LaSalle Parish",
+   "fips": "22059",
+   "type": "county",
+   "redfin_region_id": 1259,
+   "realtor_location": "LaSalle Parish, LA",
+   "lat": 31.680083,
+   "lng": -92.161596
+  },
+  {
+   "name": "Lincoln Parish",
+   "fips": "22061",
+   "type": "county",
+   "redfin_region_id": 1260,
+   "realtor_location": "Lincoln Parish, LA",
+   "lat": 32.601823,
+   "lng": -92.662303
+  },
+  {
+   "name": "Livingston Parish",
+   "fips": "22063",
+   "type": "county",
+   "redfin_region_id": 1261,
+   "realtor_location": "Livingston Parish, LA",
+   "lat": 30.440419,
+   "lng": -90.727474
+  },
+  {
+   "name": "Madison Parish",
+   "fips": "22065",
+   "type": "county",
+   "redfin_region_id": 1262,
+   "realtor_location": "Madison Parish, LA",
+   "lat": 32.346878,
+   "lng": -91.231932
+  },
+  {
+   "name": "Morehouse Parish",
+   "fips": "22067",
+   "type": "county",
+   "redfin_region_id": 1263,
+   "realtor_location": "Morehouse Parish, LA",
+   "lat": 32.820008,
+   "lng": -91.800399
+  },
+  {
+   "name": "Natchitoches Parish",
+   "fips": "22069",
+   "type": "county",
+   "redfin_region_id": 1264,
+   "realtor_location": "Natchitoches Parish, LA",
+   "lat": 31.732509,
+   "lng": -93.082546
+  },
+  {
+   "name": "Orleans Parish",
+   "fips": "22071",
+   "type": "county",
+   "redfin_region_id": 1265,
+   "realtor_location": "Orleans Parish, LA",
+   "lat": 30.05342,
+   "lng": -89.934502
+  },
+  {
+   "name": "Ouachita Parish",
+   "fips": "22073",
+   "type": "county",
+   "redfin_region_id": 1266,
+   "realtor_location": "Ouachita Parish, LA",
+   "lat": 32.480932,
+   "lng": -92.151581
+  },
+  {
+   "name": "Plaquemines Parish",
+   "fips": "22075",
+   "type": "county",
+   "redfin_region_id": 1267,
+   "realtor_location": "Plaquemines Parish, LA",
+   "lat": 29.282447,
+   "lng": -89.576068
+  },
+  {
+   "name": "Pointe Coupee Parish",
+   "fips": "22077",
+   "type": "county",
+   "redfin_region_id": 1268,
+   "realtor_location": "Pointe Coupee Parish, LA",
+   "lat": 30.708319,
+   "lng": -91.604621
+  },
+  {
+   "name": "Rapides Parish",
+   "fips": "22079",
+   "type": "county",
+   "redfin_region_id": 1269,
+   "realtor_location": "Rapides Parish, LA",
+   "lat": 31.193204,
+   "lng": -92.535953
+  },
+  {
+   "name": "Red River Parish",
+   "fips": "22081",
+   "type": "county",
+   "redfin_region_id": 1270,
+   "realtor_location": "Red River Parish, LA",
+   "lat": 32.101213,
+   "lng": -93.34905
+  },
+  {
+   "name": "Richland Parish",
+   "fips": "22083",
+   "type": "county",
+   "redfin_region_id": 1271,
+   "realtor_location": "Richland Parish, LA",
+   "lat": 32.413158,
+   "lng": -91.748353
+  },
+  {
+   "name": "Sabine Parish",
+   "fips": "22085",
+   "type": "county",
+   "redfin_region_id": 1272,
+   "realtor_location": "Sabine Parish, LA",
+   "lat": 31.560402,
+   "lng": -93.559579
+  },
+  {
+   "name": "St. Bernard Parish",
+   "fips": "22087",
+   "type": "county",
+   "redfin_region_id": 1273,
+   "realtor_location": "St. Bernard Parish, LA",
+   "lat": 29.91811,
+   "lng": -89.263494
+  },
+  {
+   "name": "St. Charles Parish",
+   "fips": "22089",
+   "type": "county",
+   "redfin_region_id": 1274,
+   "realtor_location": "St. Charles Parish, LA",
+   "lat": 29.905722,
+   "lng": -90.357855
+  },
+  {
+   "name": "St. Helena Parish",
+   "fips": "22091",
+   "type": "county",
+   "redfin_region_id": 1275,
+   "realtor_location": "St. Helena Parish, LA",
+   "lat": 30.822539,
+   "lng": -90.708307
+  },
+  {
+   "name": "St. James Parish",
+   "fips": "22093",
+   "type": "county",
+   "redfin_region_id": 1276,
+   "realtor_location": "St. James Parish, LA",
+   "lat": 30.024777,
+   "lng": -90.793956
+  },
+  {
+   "name": "St. John the Baptist Parish",
+   "fips": "22095",
+   "type": "county",
+   "redfin_region_id": 1277,
+   "realtor_location": "St. John the Baptist Parish, LA",
+   "lat": 30.144068,
+   "lng": -90.49096
+  },
+  {
+   "name": "St. Landry Parish",
+   "fips": "22097",
+   "type": "county",
+   "redfin_region_id": 1278,
+   "realtor_location": "St. Landry Parish, LA",
+   "lat": 30.583441,
+   "lng": -91.989274
+  },
+  {
+   "name": "St. Martin Parish",
+   "fips": "22099",
+   "type": "county",
+   "redfin_region_id": 1279,
+   "realtor_location": "St. Martin Parish, LA",
+   "lat": 30.121433,
+   "lng": -91.611481
+  },
+  {
+   "name": "St. Mary Parish",
+   "fips": "22101",
+   "type": "county",
+   "redfin_region_id": 1280,
+   "realtor_location": "St. Mary Parish, LA",
+   "lat": 29.629349,
+   "lng": -91.463804
+  },
+  {
+   "name": "St. Tammany Parish",
+   "fips": "22103",
+   "type": "county",
+   "redfin_region_id": 1281,
+   "realtor_location": "St. Tammany Parish, LA",
+   "lat": 30.410022,
+   "lng": -89.951962
+  },
+  {
+   "name": "Tangipahoa Parish",
+   "fips": "22105",
+   "type": "county",
+   "redfin_region_id": 1282,
+   "realtor_location": "Tangipahoa Parish, LA",
+   "lat": 30.621348,
+   "lng": -90.40649
+  },
+  {
+   "name": "Tensas Parish",
+   "fips": "22107",
+   "type": "county",
+   "redfin_region_id": 1283,
+   "realtor_location": "Tensas Parish, LA",
+   "lat": 32.001489,
+   "lng": -91.342576
+  },
+  {
+   "name": "Terrebonne Parish",
+   "fips": "22109",
+   "type": "county",
+   "redfin_region_id": 1284,
+   "realtor_location": "Terrebonne Parish, LA",
+   "lat": 29.33413,
+   "lng": -90.843674
+  },
+  {
+   "name": "Union Parish",
+   "fips": "22111",
+   "type": "county",
+   "redfin_region_id": 1285,
+   "realtor_location": "Union Parish, LA",
+   "lat": 32.829349,
+   "lng": -92.37565
+  },
+  {
+   "name": "Vermilion Parish",
+   "fips": "22113",
+   "type": "county",
+   "redfin_region_id": 1286,
+   "realtor_location": "Vermilion Parish, LA",
+   "lat": 29.789722,
+   "lng": -92.291568
+  },
+  {
+   "name": "Vernon Parish",
+   "fips": "22115",
+   "type": "county",
+   "redfin_region_id": 1287,
+   "realtor_location": "Vernon Parish, LA",
+   "lat": 31.102841,
+   "lng": -93.18833
+  },
+  {
+   "name": "Washington Parish",
+   "fips": "22117",
+   "type": "county",
+   "redfin_region_id": 1288,
+   "realtor_location": "Washington Parish, LA",
+   "lat": 30.852144,
+   "lng": -90.046253
+  },
+  {
+   "name": "Webster Parish",
+   "fips": "22119",
+   "type": "county",
+   "redfin_region_id": 1289,
+   "realtor_location": "Webster Parish, LA",
+   "lat": 32.732152,
+   "lng": -93.339825
+  },
+  {
+   "name": "West Baton Rouge Parish",
+   "fips": "22121",
+   "type": "county",
+   "redfin_region_id": 1290,
+   "realtor_location": "West Baton Rouge Parish, LA",
+   "lat": 30.464052,
+   "lng": -91.309808
+  },
+  {
+   "name": "West Carroll Parish",
+   "fips": "22123",
+   "type": "county",
+   "redfin_region_id": 1291,
+   "realtor_location": "West Carroll Parish, LA",
+   "lat": 32.79248,
+   "lng": -91.451998
+  },
+  {
+   "name": "West Feliciana Parish",
+   "fips": "22125",
+   "type": "county",
+   "redfin_region_id": 1292,
+   "realtor_location": "West Feliciana Parish, LA",
+   "lat": 30.873364,
+   "lng": -91.421776
+  },
+  {
+   "name": "Winn Parish",
+   "fips": "22127",
+   "type": "county",
+   "redfin_region_id": 1293,
+   "realtor_location": "Winn Parish, LA",
+   "lat": 31.941187,
+   "lng": -92.641269
+  }
+ ]
+}

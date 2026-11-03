@@ -1,0 +1,96 @@
+{
+ "state": "NH",
+ "name": "New Hampshire",
+ "counties": [
+  {
+   "name": "Belknap County",
+   "fips": "33001",
+   "type": "county",
+   "redfin_region_id": 1881,
+   "realtor_location": "Belknap County, NH",
+   "lat": 43.519109,
+   "lng": -71.425366
+  },
+  {
+   "name": "Carroll County",
+   "fips": "33003",
+   "type": "county",
+   "redfin_region_id": 1882,
+   "realtor_location": "Carroll County, NH",
+   "lat": 43.867774,
+   "lng": -71.20156
+  },
+  {
+   "name": "Cheshire County",
+   "fips": "33005",
+   "type": "county",
+   "redfin_region_id": 1883,
+   "realtor_location": "Cheshire County, NH",
+   "lat": 42.92546,
+   "lng": -72.248183
+  },
+  {
+   "name": "Coos County",
+   "fips": "33007",
+   "type": "county",
+   "redfin_region_id": 1884,
+   "realtor_location": "Coos County, NH",
+   "lat": 44.652548,
+   "lng": -71.289431
+  },
+  {
+   "name": "Grafton County",
+   "fips": "33009",
+   "type": "county",
+   "redfin_region_id": 1885,
+   "realtor_location": "Grafton County, NH",
+   "lat": 43.926439,
+   "lng": -71.842424
+  },
+  {
+   "name": "Hillsborough County",
+   "fips": "33011",
+   "type": "county",
+   "redfin_region_id": 1886,
+   "realtor_location": "Hillsborough County, NH",
+   "lat": 42.911532,
+   "lng": -71.723055
+  },
+  {
+   "name": "Merrimack County",
+   "fips": "33013",
+   "type": "county",
+   "redfin_region_id": 1887,
+   "realtor_location": "Merrimack County, NH",
+   "lat": 43.299579,
+   "lng": -71.680041
+  },
+  {
+   "name": "Rockingham County",
+   "fips": "33015",
+   "type": "county",
+   "redfin_region_id": 1888,
+   "realtor_location": "Rockingham County, NH",
+   "lat": 42.988664,
+   "lng": -71.09908
+  },
+  {
+   "name": "Strafford County",
+   "fips": "33017",
+   "type": "county",
+   "redfin_region_id": 1889,
+   "realtor_location": "Strafford County, NH",
+   "lat": 43.293272,
+   "lng": -71.035589
+  },
+  {
+   "name": "Sullivan County",
+   "fips": "33019",
+   "type": "county",
+   "redfin_region_id": 1890,
+   "realtor_location": "Sullivan County, NH",
+   "lat": 43.361188,
+   "lng": -72.222084
+  }
+ ]
+}

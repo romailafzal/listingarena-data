@@ -1,0 +1,465 @@
+{
+ "version": 664,
+ "errorMessage": "Success",
+ "resultCode": 0,
+ "payload": {
+  "homes": [
+   {
+    "mlsId": {
+     "label": "MLS#",
+     "value": "9964778"
+    },
+    "showMlsId": false,
+    "mlsStatus": "Active",
+    "showDatasourceLogo": false,
+    "price": {
+     "value": 1799000,
+     "level": 1
+    },
+    "hideSalePrice": false,
+    "hoa": {
+     "level": 1
+    },
+    "isHoaFrequencyKnown": true,
+    "sqFt": {
+     "value": 2618,
+     "level": 1
+    },
+    "pricePerSqFt": {
+     "value": 687,
+     "level": 1
+    },
+    "lotSize": {
+     "value": 7797,
+     "level": 1
+    },
+    "beds": 4,
+    "baths": 2.5,
+    "fullBaths": 2,
+    "partialBaths": 1,
+    "location": {
+     "value": "Oak Hill Add",
+     "level": 1
+    },
+    "stories": 1.0,
+    "latLong": {
+     "value": {
+      "latitude": 30.2493888,
+      "longitude": -97.770853
+     },
+     "level": 1
+    },
+    "streetLine": {
+     "value": "2103 Oxford Ave",
+     "level": 1
+    },
+    "unitNumber": {
+     "level": 1
+    },
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78704",
+    "postalCode": {
+     "value": "78704",
+     "level": 1
+    },
+    "countryCode": "US",
+    "showAddressOnMap": true,
+    "searchStatus": 1,
+    "propertyType": 6,
+    "uiPropertyType": 1,
+    "listingType": 1,
+    "propertyId": 31200005,
+    "listingId": 224825135,
+    "dataSourceId": 92,
+    "isEarlyAccess": false,
+    "marketId": 12,
+    "yearBuilt": {
+     "value": 2010,
+     "level": 1
+    },
+    "dom": {
+     "value": 1,
+     "level": 1
+    },
+    "timeOnRedfin": {
+     "value": 20794725,
+     "level": 1
+    },
+    "originalTimeOnRedfin": {
+     "value": 20794734,
+     "level": 1
+    },
+    "timeZone": "US/Central",
+    "primaryPhotoDisplayLevel": 1,
+    "photos": {
+     "value": "0-30:0",
+     "level": 1
+    },
+    "numPictures": 31,
+    "additionalPhotosInfo": [],
+    "photoFormat": "webp",
+    "openHouseStart": 1793473200000,
+    "openHouseEnd": 1793480400000,
+    "openHouseStartFormatted": "Oct 31, 2:00PM",
+    "openHouseEventName": "Open House - 2:00 - 4:00 PM",
+    "url": "/TX/Austin/2103-Oxford-Ave-78704/home/31200005",
+    "hasInsight": false,
+    "sashes": [
+     {
+      "sashType": 10,
+      "sashTypeId": 10,
+      "sashTypeName": "Open House",
+      "sashTypeColor": "#73BB3C",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "OPEN SAT, 2PM TO 4PM",
+      "lastSaleDate": "",
+      "lastSalePrice": ""
+     }
+    ],
+    "keyFacts": [
+     {
+      "description": "Remodeled",
+      "rank": 0
+     },
+     {
+      "description": "Updated",
+      "rank": 1
+     },
+     {
+      "description": "Single-story",
+      "rank": 2
+     }
+    ],
+    "listingTags": [
+     "SINGLE-STORY",
+     "UPDATED",
+     "REMODELED",
+     "PRIMARY SUITE",
+     "PATIOS",
+     "NICE-SIZED YARD"
+    ],
+    "isHot": false,
+    "hasVirtualTour": false,
+    "hasVideoTour": false,
+    "has3DTour": false,
+    "hasInteractiveFloorplan": false,
+    "newConstructionCommunityInfo": {},
+    "isRedfin": false,
+    "isNewConstruction": false,
+    "listingRemarks": "Tucked into Zilker, this single-story storybook charmer has been beautifully updated and remodeled without losing an ounce of its 1930s character. 4 BR/2.5 BA with carport, a large primary suite, patios off the living room and primary suite, and a nice-sized yard with storage shed. Hardwood floors and great natural light throughout. Enjoy a walkable lifestyle \u2014 eight minutes to Zilker Elementary and Little Zilker Park, five minutes to Loro and Proud Mary Coffee.",
+    "remarksAccessLevel": 1,
+    "businessMarketId": 13,
+    "isShortlisted": false,
+    "isViewedListing": false,
+    "skGarageSpaces": 0,
+    "skParkingSpaces": 1,
+    "skPoolType": 5
+   },
+   {
+    "mlsId": {
+     "label": "MLS#",
+     "value": "2216863260503930945"
+    },
+    "showMlsId": false,
+    "mlsStatus": "Coming Soon",
+    "showDatasourceLogo": false,
+    "price": {
+     "value": 758000,
+     "level": 1
+    },
+    "hideSalePrice": false,
+    "hoa": {
+     "level": 1
+    },
+    "isHoaFrequencyKnown": true,
+    "sqFt": {
+     "value": 3600,
+     "level": 1
+    },
+    "pricePerSqFt": {
+     "value": 211,
+     "level": 1
+    },
+    "lotSize": {
+     "value": 9670,
+     "level": 1
+    },
+    "beds": 5,
+    "baths": 4.0,
+    "location": {
+     "value": "Cedar Park",
+     "level": 1
+    },
+    "latLong": {
+     "value": {
+      "latitude": 30.4772102,
+      "longitude": -97.8525966
+     },
+     "level": 1
+    },
+    "streetLine": {
+     "value": "1602 Purple Sage Dr",
+     "level": 1
+    },
+    "unitNumber": {
+     "level": 1
+    },
+    "city": "Cedar Park",
+    "state": "TX",
+    "zip": "78613",
+    "postalCode": {
+     "value": "78613",
+     "level": 1
+    },
+    "countryCode": "US",
+    "showAddressOnMap": true,
+    "soldDate": 1284966000000,
+    "searchStatus": 8,
+    "propertyType": 6,
+    "uiPropertyType": 1,
+    "listingType": 1,
+    "propertyId": 30967539,
+    "listingId": 224418904,
+    "dataSourceId": 641,
+    "isEarlyAccess": true,
+    "earlyAccessType": "COMPASS_EARLY_ACCESS",
+    "marketId": 12,
+    "yearBuilt": {
+     "value": 2005,
+     "level": 1
+    },
+    "dom": {
+     "level": 5
+    },
+    "timeOnRedfin": {
+     "level": 5
+    },
+    "timeZone": "US/Central",
+    "primaryPhotoDisplayLevel": 1,
+    "photos": {
+     "value": "0-1:0",
+     "level": 1
+    },
+    "numPictures": 2,
+    "additionalPhotosInfo": [],
+    "photoFormat": "webp",
+    "url": "/TX/Cedar-Park/1602-Purple-Sage-Dr-78613/home/30967539",
+    "hasInsight": false,
+    "sashes": [
+     {
+      "sashType": 46,
+      "sashTypeId": 46,
+      "sashTypeName": "EARLY ACCESS",
+      "sashTypeColor": "#131313",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "",
+      "lastSaleDate": "",
+      "lastSalePrice": ""
+     }
+    ],
+    "keyFacts": [
+     {
+      "description": "Three-car garage",
+      "rank": 0
+     },
+     {
+      "description": "Open-concept kitchen",
+      "rank": 1
+     },
+     {
+      "description": "Private guest suite",
+      "rank": 2
+     }
+    ],
+    "listingTags": [
+     "HALF-CUL-DE-SAC CORNER LOT",
+     "DEDICATED HOME OFFICE",
+     "PRIVATE GUEST SUITE",
+     "OPEN-CONCEPT KITCHEN",
+     "GENEROUS CENTER ISLAND",
+     "THREE-CAR GARAGE"
+    ],
+    "isHot": false,
+    "hasVirtualTour": false,
+    "hasVideoTour": false,
+    "has3DTour": false,
+    "hasInteractiveFloorplan": true,
+    "newConstructionCommunityInfo": {},
+    "isRedfin": false,
+    "isNewConstruction": false,
+    "listingRemarks": "Set on a coveted half-cul-de-sac corner lot within the established and highly sought-after Deer Creek Ranch community of Cedar Park, this 3,640-square-foot residence delivers an exceptional balance of scale, privacy, and refined everyday living. Five bedrooms and four full baths are thoughtfully distributed across two levels, creating natural separation between primary living and guest or secondary spaces. The primary suite and a second bedroom occupy the main level, accompanied by a dedicated home office that offers a quiet, elevated workspace removed from the rhythm of the household. Upstairs, three additional bedrooms include a private guest suite with its own en-suite bath, paired with ",
+    "remarksAccessLevel": 1,
+    "businessMarketId": 13,
+    "isShortlisted": false,
+    "isViewedListing": false,
+    "skPoolType": 5
+   },
+   {
+    "mlsId": {
+     "label": "MLS#",
+     "value": "2171344415615389849"
+    },
+    "showMlsId": false,
+    "mlsStatus": "Coming Soon",
+    "showDatasourceLogo": false,
+    "price": {
+     "value": 249900,
+     "level": 1
+    },
+    "hideSalePrice": false,
+    "hoa": {
+     "level": 1
+    },
+    "isHoaFrequencyKnown": true,
+    "sqFt": {
+     "value": 900,
+     "level": 1
+    },
+    "pricePerSqFt": {
+     "value": 278,
+     "level": 1
+    },
+    "lotSize": {
+     "level": 1
+    },
+    "beds": 2,
+    "baths": 1.0,
+    "location": {
+     "value": "Pleasant Valley",
+     "level": 1
+    },
+    "latLong": {
+     "value": {
+      "latitude": 30.233482,
+      "longitude": -97.711697
+     },
+     "level": 1
+    },
+    "streetLine": {
+     "value": "1601 Faro Dr #1303",
+     "level": 1
+    },
+    "unitNumber": {
+     "value": "#1303",
+     "level": 1
+    },
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78741",
+    "postalCode": {
+     "value": "78741",
+     "level": 1
+    },
+    "countryCode": "US",
+    "showAddressOnMap": true,
+    "soldDate": 1550217600000,
+    "searchStatus": 8,
+    "propertyType": 3,
+    "uiPropertyType": 2,
+    "listingType": 1,
+    "propertyId": 30979888,
+    "listingId": 222355781,
+    "dataSourceId": 641,
+    "isEarlyAccess": true,
+    "earlyAccessType": "COMPASS_EARLY_ACCESS",
+    "marketId": 12,
+    "yearBuilt": {
+     "value": 1983,
+     "level": 1
+    },
+    "dom": {
+     "level": 5
+    },
+    "timeOnRedfin": {
+     "level": 5
+    },
+    "timeZone": "US/Central",
+    "primaryPhotoDisplayLevel": 1,
+    "photos": {
+     "value": "0-24:0",
+     "level": 1
+    },
+    "numPictures": 25,
+    "additionalPhotosInfo": [],
+    "photoFormat": "webp",
+    "url": "/TX/Austin/1601-Faro-Dr-78741/unit-1303/home/30979888",
+    "hasInsight": false,
+    "sashes": [
+     {
+      "sashType": 46,
+      "sashTypeId": 46,
+      "sashTypeName": "EARLY ACCESS",
+      "sashTypeColor": "#131313",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "",
+      "lastSaleDate": "",
+      "lastSalePrice": ""
+     },
+     {
+      "sashType": 47,
+      "sashTypeId": 47,
+      "sashTypeName": "COMPASS COMING SOON",
+      "sashTypeColor": "#FEFEFE",
+      "isRedfin": false,
+      "isActiveKeyListing": false,
+      "openHouseText": "",
+      "lastSaleDate": "",
+      "lastSalePrice": ""
+     }
+    ],
+    "keyFacts": [
+     {
+      "description": "Open concept",
+      "rank": 0
+     },
+     {
+      "description": "Sculptured tile",
+      "rank": 1
+     },
+     {
+      "description": "Stainless appliances",
+      "rank": 2
+     }
+    ],
+    "listingTags": [
+     "OPEN CONCEPT",
+     "HIGH CEILINGS",
+     "SCULPTURED TILE",
+     "STAINLESS APPLIANCES",
+     "GRANITE COUNTERS",
+     "TILED SHOWER"
+    ],
+    "isHot": false,
+    "hasVirtualTour": false,
+    "hasVideoTour": false,
+    "has3DTour": false,
+    "hasInteractiveFloorplan": false,
+    "newConstructionCommunityInfo": {},
+    "isRedfin": false,
+    "isNewConstruction": false,
+    "listingRemarks": "Pre-inspected, Charming two bedroom open concept condo w/ high ceilings in living and master BR and updates including sculptured tile throughout, stainless appliances, granite counters, tiled shower. Located in quiet, well maintained complex w/ mature trees  &  tiered pool/spa. Unit sits in peaceful corner on edge of complex. Great location less than 5 mi to downtown Austin, 2 mi to Lady Bird Lake/Boardwalk  &  6 mi to airport. Access to UT Shuttle & Metro, ACC Riverside, Riverside Golf Course  &  nearby parks  &  running trail.",
+    "remarksAccessLevel": 1,
+    "businessMarketId": 13,
+    "buildingId": 71990,
+    "isShortlisted": false,
+    "isViewedListing": false,
+    "skPoolType": 0
+   }
+  ],
+  "searchMedian": {
+   "price": 486130,
+   "sqFt": 1843,
+   "pricePerSqFt": 273,
+   "dom": 4,
+   "beds": 3,
+   "baths": 2.5
+  },
+  "serviceRegionName": "onion-creek-e-wm-cannon-southpark-meadows",
+  "csvDownloadLinkDisplayLevel": 3,
+  "hasBrokerInformation": true
+ }
+}

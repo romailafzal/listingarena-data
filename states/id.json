@@ -1,0 +1,402 @@
+{
+ "state": "ID",
+ "name": "Idaho",
+ "counties": [
+  {
+   "name": "Ada County",
+   "fips": "16001",
+   "type": "county",
+   "redfin_region_id": 668,
+   "realtor_location": "Ada County, ID",
+   "lat": 43.451477,
+   "lng": -116.244376
+  },
+  {
+   "name": "Adams County",
+   "fips": "16003",
+   "type": "county",
+   "redfin_region_id": 669,
+   "realtor_location": "Adams County, ID",
+   "lat": 44.877004,
+   "lng": -116.461624
+  },
+  {
+   "name": "Bannock County",
+   "fips": "16005",
+   "type": "county",
+   "redfin_region_id": 670,
+   "realtor_location": "Bannock County, ID",
+   "lat": 42.692921,
+   "lng": -112.228982
+  },
+  {
+   "name": "Bear Lake County",
+   "fips": "16007",
+   "type": "county",
+   "redfin_region_id": 671,
+   "realtor_location": "Bear Lake County, ID",
+   "lat": 42.285892,
+   "lng": -111.327517
+  },
+  {
+   "name": "Benewah County",
+   "fips": "16009",
+   "type": "county",
+   "redfin_region_id": 672,
+   "realtor_location": "Benewah County, ID",
+   "lat": 47.218451,
+   "lng": -116.633541
+  },
+  {
+   "name": "Bingham County",
+   "fips": "16011",
+   "type": "county",
+   "redfin_region_id": 673,
+   "realtor_location": "Bingham County, ID",
+   "lat": 43.216357,
+   "lng": -112.399206
+  },
+  {
+   "name": "Blaine County",
+   "fips": "16013",
+   "type": "county",
+   "redfin_region_id": 674,
+   "realtor_location": "Blaine County, ID",
+   "lat": 43.394192,
+   "lng": -113.955371
+  },
+  {
+   "name": "Boise County",
+   "fips": "16015",
+   "type": "county",
+   "redfin_region_id": 675,
+   "realtor_location": "Boise County, ID",
+   "lat": 43.987275,
+   "lng": -115.71511
+  },
+  {
+   "name": "Bonner County",
+   "fips": "16017",
+   "type": "county",
+   "redfin_region_id": 676,
+   "realtor_location": "Bonner County, ID",
+   "lat": 48.316796,
+   "lng": -116.612362
+  },
+  {
+   "name": "Bonneville County",
+   "fips": "16019",
+   "type": "county",
+   "redfin_region_id": 677,
+   "realtor_location": "Bonneville County, ID",
+   "lat": 43.395171,
+   "lng": -111.621878
+  },
+  {
+   "name": "Boundary County",
+   "fips": "16021",
+   "type": "county",
+   "redfin_region_id": 678,
+   "realtor_location": "Boundary County, ID",
+   "lat": 48.773131,
+   "lng": -116.524668
+  },
+  {
+   "name": "Butte County",
+   "fips": "16023",
+   "type": "county",
+   "redfin_region_id": 679,
+   "realtor_location": "Butte County, ID",
+   "lat": 43.685101,
+   "lng": -113.177631
+  },
+  {
+   "name": "Camas County",
+   "fips": "16025",
+   "type": "county",
+   "redfin_region_id": 680,
+   "realtor_location": "Camas County, ID",
+   "lat": 43.502552,
+   "lng": -114.772135
+  },
+  {
+   "name": "Canyon County",
+   "fips": "16027",
+   "type": "county",
+   "redfin_region_id": 681,
+   "realtor_location": "Canyon County, ID",
+   "lat": 43.625796,
+   "lng": -116.709058
+  },
+  {
+   "name": "Caribou County",
+   "fips": "16029",
+   "type": "county",
+   "redfin_region_id": 682,
+   "realtor_location": "Caribou County, ID",
+   "lat": 42.786072,
+   "lng": -111.544273
+  },
+  {
+   "name": "Cassia County",
+   "fips": "16031",
+   "type": "county",
+   "redfin_region_id": 683,
+   "realtor_location": "Cassia County, ID",
+   "lat": 42.282313,
+   "lng": -113.626328
+  },
+  {
+   "name": "Clark County",
+   "fips": "16033",
+   "type": "county",
+   "redfin_region_id": 684,
+   "realtor_location": "Clark County, ID",
+   "lat": 44.290218,
+   "lng": -112.354613
+  },
+  {
+   "name": "Clearwater County",
+   "fips": "16035",
+   "type": "county",
+   "redfin_region_id": 685,
+   "realtor_location": "Clearwater County, ID",
+   "lat": 46.67257,
+   "lng": -115.6535
+  },
+  {
+   "name": "Custer County",
+   "fips": "16037",
+   "type": "county",
+   "redfin_region_id": 686,
+   "realtor_location": "Custer County, ID",
+   "lat": 44.273351,
+   "lng": -114.252267
+  },
+  {
+   "name": "Elmore County",
+   "fips": "16039",
+   "type": "county",
+   "redfin_region_id": 687,
+   "realtor_location": "Elmore County, ID",
+   "lat": 43.394698,
+   "lng": -115.471205
+  },
+  {
+   "name": "Franklin County",
+   "fips": "16041",
+   "type": "county",
+   "redfin_region_id": 688,
+   "realtor_location": "Franklin County, ID",
+   "lat": 42.173609,
+   "lng": -111.822965
+  },
+  {
+   "name": "Fremont County",
+   "fips": "16043",
+   "type": "county",
+   "redfin_region_id": 689,
+   "realtor_location": "Fremont County, ID",
+   "lat": 44.218091,
+   "lng": -111.484429
+  },
+  {
+   "name": "Gem County",
+   "fips": "16045",
+   "type": "county",
+   "redfin_region_id": 690,
+   "realtor_location": "Gem County, ID",
+   "lat": 44.061473,
+   "lng": -116.398784
+  },
+  {
+   "name": "Gooding County",
+   "fips": "16047",
+   "type": "county",
+   "redfin_region_id": 691,
+   "realtor_location": "Gooding County, ID",
+   "lat": 42.973185,
+   "lng": -114.82142
+  },
+  {
+   "name": "Idaho County",
+   "fips": "16049",
+   "type": "county",
+   "redfin_region_id": 692,
+   "realtor_location": "Idaho County, ID",
+   "lat": 45.849644,
+   "lng": -115.467337
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "16051",
+   "type": "county",
+   "redfin_region_id": 693,
+   "realtor_location": "Jefferson County, ID",
+   "lat": 43.796965,
+   "lng": -112.318588
+  },
+  {
+   "name": "Jerome County",
+   "fips": "16053",
+   "type": "county",
+   "redfin_region_id": 694,
+   "realtor_location": "Jerome County, ID",
+   "lat": 42.691395,
+   "lng": -114.262086
+  },
+  {
+   "name": "Kootenai County",
+   "fips": "16055",
+   "type": "county",
+   "redfin_region_id": 695,
+   "realtor_location": "Kootenai County, ID",
+   "lat": 47.675957,
+   "lng": -116.695919
+  },
+  {
+   "name": "Latah County",
+   "fips": "16057",
+   "type": "county",
+   "redfin_region_id": 696,
+   "realtor_location": "Latah County, ID",
+   "lat": 46.81892,
+   "lng": -116.730974
+  },
+  {
+   "name": "Lemhi County",
+   "fips": "16059",
+   "type": "county",
+   "redfin_region_id": 697,
+   "realtor_location": "Lemhi County, ID",
+   "lat": 44.928506,
+   "lng": -113.887042
+  },
+  {
+   "name": "Lewis County",
+   "fips": "16061",
+   "type": "county",
+   "redfin_region_id": 698,
+   "realtor_location": "Lewis County, ID",
+   "lat": 46.236328,
+   "lng": -116.42376
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "16063",
+   "type": "county",
+   "redfin_region_id": 699,
+   "realtor_location": "Lincoln County, ID",
+   "lat": 42.990782,
+   "lng": -114.153089
+  },
+  {
+   "name": "Madison County",
+   "fips": "16065",
+   "type": "county",
+   "redfin_region_id": 700,
+   "realtor_location": "Madison County, ID",
+   "lat": 43.788614,
+   "lng": -111.656993
+  },
+  {
+   "name": "Minidoka County",
+   "fips": "16067",
+   "type": "county",
+   "redfin_region_id": 701,
+   "realtor_location": "Minidoka County, ID",
+   "lat": 42.857211,
+   "lng": -113.63984
+  },
+  {
+   "name": "Nez Perce County",
+   "fips": "16069",
+   "type": "county",
+   "redfin_region_id": 702,
+   "realtor_location": "Nez Perce County, ID",
+   "lat": 46.333791,
+   "lng": -116.760909
+  },
+  {
+   "name": "Oneida County",
+   "fips": "16071",
+   "type": "county",
+   "redfin_region_id": 703,
+   "realtor_location": "Oneida County, ID",
+   "lat": 42.183895,
+   "lng": -112.520449
+  },
+  {
+   "name": "Owyhee County",
+   "fips": "16073",
+   "type": "county",
+   "redfin_region_id": 704,
+   "realtor_location": "Owyhee County, ID",
+   "lat": 42.572851,
+   "lng": -116.18969
+  },
+  {
+   "name": "Payette County",
+   "fips": "16075",
+   "type": "county",
+   "redfin_region_id": 705,
+   "realtor_location": "Payette County, ID",
+   "lat": 44.00243,
+   "lng": -116.750238
+  },
+  {
+   "name": "Power County",
+   "fips": "16077",
+   "type": "county",
+   "redfin_region_id": 706,
+   "realtor_location": "Power County, ID",
+   "lat": 42.694126,
+   "lng": -112.844407
+  },
+  {
+   "name": "Shoshone County",
+   "fips": "16079",
+   "type": "county",
+   "redfin_region_id": 707,
+   "realtor_location": "Shoshone County, ID",
+   "lat": 47.347694,
+   "lng": -115.885092
+  },
+  {
+   "name": "Teton County",
+   "fips": "16081",
+   "type": "county",
+   "redfin_region_id": 708,
+   "realtor_location": "Teton County, ID",
+   "lat": 43.760994,
+   "lng": -111.211765
+  },
+  {
+   "name": "Twin Falls County",
+   "fips": "16083",
+   "type": "county",
+   "redfin_region_id": 709,
+   "realtor_location": "Twin Falls County, ID",
+   "lat": 42.352309,
+   "lng": -114.665639
+  },
+  {
+   "name": "Valley County",
+   "fips": "16085",
+   "type": "county",
+   "redfin_region_id": 710,
+   "realtor_location": "Valley County, ID",
+   "lat": 44.85596,
+   "lng": -115.618061
+  },
+  {
+   "name": "Washington County",
+   "fips": "16087",
+   "type": "county",
+   "redfin_region_id": 711,
+   "realtor_location": "Washington County, ID",
+   "lat": 44.448223,
+   "lng": -116.797792
+  }
+ ]
+}

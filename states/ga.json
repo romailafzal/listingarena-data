@@ -1,0 +1,1437 @@
+{
+ "state": "GA",
+ "name": "Georgia",
+ "counties": [
+  {
+   "name": "Appling County",
+   "fips": "13001",
+   "type": "county",
+   "redfin_region_id": 504,
+   "realtor_location": "Appling County, GA",
+   "lat": 31.739712,
+   "lng": -82.290103
+  },
+  {
+   "name": "Atkinson County",
+   "fips": "13003",
+   "type": "county",
+   "redfin_region_id": 505,
+   "realtor_location": "Atkinson County, GA",
+   "lat": 31.296806,
+   "lng": -82.878151
+  },
+  {
+   "name": "Bacon County",
+   "fips": "13005",
+   "type": "county",
+   "redfin_region_id": 506,
+   "realtor_location": "Bacon County, GA",
+   "lat": 31.55021,
+   "lng": -82.451433
+  },
+  {
+   "name": "Baker County",
+   "fips": "13007",
+   "type": "county",
+   "redfin_region_id": 507,
+   "realtor_location": "Baker County, GA",
+   "lat": 31.31958,
+   "lng": -84.454881
+  },
+  {
+   "name": "Baldwin County",
+   "fips": "13009",
+   "type": "county",
+   "redfin_region_id": 508,
+   "realtor_location": "Baldwin County, GA",
+   "lat": 33.05949,
+   "lng": -83.255457
+  },
+  {
+   "name": "Banks County",
+   "fips": "13011",
+   "type": "county",
+   "redfin_region_id": 509,
+   "realtor_location": "Banks County, GA",
+   "lat": 34.351922,
+   "lng": -83.498441
+  },
+  {
+   "name": "Barrow County",
+   "fips": "13013",
+   "type": "county",
+   "redfin_region_id": 510,
+   "realtor_location": "Barrow County, GA",
+   "lat": 33.992009,
+   "lng": -83.712303
+  },
+  {
+   "name": "Bartow County",
+   "fips": "13015",
+   "type": "county",
+   "redfin_region_id": 511,
+   "realtor_location": "Bartow County, GA",
+   "lat": 34.240917,
+   "lng": -84.838188
+  },
+  {
+   "name": "Ben Hill County",
+   "fips": "13017",
+   "type": "county",
+   "redfin_region_id": 512,
+   "realtor_location": "Ben Hill County, GA",
+   "lat": 31.740772,
+   "lng": -83.147197
+  },
+  {
+   "name": "Berrien County",
+   "fips": "13019",
+   "type": "county",
+   "redfin_region_id": 513,
+   "realtor_location": "Berrien County, GA",
+   "lat": 31.288652,
+   "lng": -83.22787
+  },
+  {
+   "name": "Bibb County",
+   "fips": "13021",
+   "type": "county",
+   "redfin_region_id": 514,
+   "realtor_location": "Bibb County, GA",
+   "lat": 32.808845,
+   "lng": -83.694194
+  },
+  {
+   "name": "Bleckley County",
+   "fips": "13023",
+   "type": "county",
+   "redfin_region_id": 515,
+   "realtor_location": "Bleckley County, GA",
+   "lat": 32.435403,
+   "lng": -83.331717
+  },
+  {
+   "name": "Brantley County",
+   "fips": "13025",
+   "type": "county",
+   "redfin_region_id": 516,
+   "realtor_location": "Brantley County, GA",
+   "lat": 31.197334,
+   "lng": -81.982978
+  },
+  {
+   "name": "Brooks County",
+   "fips": "13027",
+   "type": "county",
+   "redfin_region_id": 517,
+   "realtor_location": "Brooks County, GA",
+   "lat": 30.822934,
+   "lng": -83.581905
+  },
+  {
+   "name": "Bryan County",
+   "fips": "13029",
+   "type": "county",
+   "redfin_region_id": 518,
+   "realtor_location": "Bryan County, GA",
+   "lat": 32.017969,
+   "lng": -81.438543
+  },
+  {
+   "name": "Bulloch County",
+   "fips": "13031",
+   "type": "county",
+   "redfin_region_id": 519,
+   "realtor_location": "Bulloch County, GA",
+   "lat": 32.394481,
+   "lng": -81.741618
+  },
+  {
+   "name": "Burke County",
+   "fips": "13033",
+   "type": "county",
+   "redfin_region_id": 520,
+   "realtor_location": "Burke County, GA",
+   "lat": 33.060181,
+   "lng": -82.000164
+  },
+  {
+   "name": "Butts County",
+   "fips": "13035",
+   "type": "county",
+   "redfin_region_id": 521,
+   "realtor_location": "Butts County, GA",
+   "lat": 33.290355,
+   "lng": -83.958221
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "13037",
+   "type": "county",
+   "redfin_region_id": 522,
+   "realtor_location": "Calhoun County, GA",
+   "lat": 31.521279,
+   "lng": -84.62629
+  },
+  {
+   "name": "Camden County",
+   "fips": "13039",
+   "type": "county",
+   "redfin_region_id": 523,
+   "realtor_location": "Camden County, GA",
+   "lat": 30.913358,
+   "lng": -81.642019
+  },
+  {
+   "name": "Candler County",
+   "fips": "13043",
+   "type": "county",
+   "redfin_region_id": 524,
+   "realtor_location": "Candler County, GA",
+   "lat": 32.40395,
+   "lng": -82.071266
+  },
+  {
+   "name": "Carroll County",
+   "fips": "13045",
+   "type": "county",
+   "redfin_region_id": 525,
+   "realtor_location": "Carroll County, GA",
+   "lat": 33.582237,
+   "lng": -85.080527
+  },
+  {
+   "name": "Catoosa County",
+   "fips": "13047",
+   "type": "county",
+   "redfin_region_id": 526,
+   "realtor_location": "Catoosa County, GA",
+   "lat": 34.900212,
+   "lng": -85.139385
+  },
+  {
+   "name": "Charlton County",
+   "fips": "13049",
+   "type": "county",
+   "redfin_region_id": 527,
+   "realtor_location": "Charlton County, GA",
+   "lat": 30.779904,
+   "lng": -82.139644
+  },
+  {
+   "name": "Chatham County",
+   "fips": "13051",
+   "type": "county",
+   "redfin_region_id": 528,
+   "realtor_location": "Chatham County, GA",
+   "lat": 31.980404,
+   "lng": -81.085184
+  },
+  {
+   "name": "Chattahoochee County",
+   "fips": "13053",
+   "type": "county",
+   "redfin_region_id": 529,
+   "realtor_location": "Chattahoochee County, GA",
+   "lat": 32.347445,
+   "lng": -84.788021
+  },
+  {
+   "name": "Chattooga County",
+   "fips": "13055",
+   "type": "county",
+   "redfin_region_id": 530,
+   "realtor_location": "Chattooga County, GA",
+   "lat": 34.474178,
+   "lng": -85.345289
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "13057",
+   "type": "county",
+   "redfin_region_id": 531,
+   "realtor_location": "Cherokee County, GA",
+   "lat": 34.244317,
+   "lng": -84.475057
+  },
+  {
+   "name": "Clarke County",
+   "fips": "13059",
+   "type": "county",
+   "redfin_region_id": 532,
+   "realtor_location": "Clarke County, GA",
+   "lat": 33.952185,
+   "lng": -83.367152
+  },
+  {
+   "name": "Clay County",
+   "fips": "13061",
+   "type": "county",
+   "redfin_region_id": 533,
+   "realtor_location": "Clay County, GA",
+   "lat": 31.619831,
+   "lng": -84.992583
+  },
+  {
+   "name": "Clayton County",
+   "fips": "13063",
+   "type": "county",
+   "redfin_region_id": 534,
+   "realtor_location": "Clayton County, GA",
+   "lat": 33.542686,
+   "lng": -84.355573
+  },
+  {
+   "name": "Clinch County",
+   "fips": "13065",
+   "type": "county",
+   "redfin_region_id": 535,
+   "realtor_location": "Clinch County, GA",
+   "lat": 30.917653,
+   "lng": -82.702614
+  },
+  {
+   "name": "Cobb County",
+   "fips": "13067",
+   "type": "county",
+   "redfin_region_id": 536,
+   "realtor_location": "Cobb County, GA",
+   "lat": 33.939929,
+   "lng": -84.574121
+  },
+  {
+   "name": "Coffee County",
+   "fips": "13069",
+   "type": "county",
+   "redfin_region_id": 537,
+   "realtor_location": "Coffee County, GA",
+   "lat": 31.549245,
+   "lng": -82.84494
+  },
+  {
+   "name": "Colquitt County",
+   "fips": "13071",
+   "type": "county",
+   "redfin_region_id": 538,
+   "realtor_location": "Colquitt County, GA",
+   "lat": 31.189707,
+   "lng": -83.769773
+  },
+  {
+   "name": "Columbia County",
+   "fips": "13073",
+   "type": "county",
+   "redfin_region_id": 539,
+   "realtor_location": "Columbia County, GA",
+   "lat": 33.552075,
+   "lng": -82.249608
+  },
+  {
+   "name": "Cook County",
+   "fips": "13075",
+   "type": "county",
+   "redfin_region_id": 540,
+   "realtor_location": "Cook County, GA",
+   "lat": 31.152516,
+   "lng": -83.429445
+  },
+  {
+   "name": "Coweta County",
+   "fips": "13077",
+   "type": "county",
+   "redfin_region_id": 541,
+   "realtor_location": "Coweta County, GA",
+   "lat": 33.352897,
+   "lng": -84.762138
+  },
+  {
+   "name": "Crawford County",
+   "fips": "13079",
+   "type": "county",
+   "redfin_region_id": 542,
+   "realtor_location": "Crawford County, GA",
+   "lat": 32.709428,
+   "lng": -83.979187
+  },
+  {
+   "name": "Crisp County",
+   "fips": "13081",
+   "type": "county",
+   "redfin_region_id": 543,
+   "realtor_location": "Crisp County, GA",
+   "lat": 31.920268,
+   "lng": -83.75653
+  },
+  {
+   "name": "Dade County",
+   "fips": "13083",
+   "type": "county",
+   "redfin_region_id": 544,
+   "realtor_location": "Dade County, GA",
+   "lat": 34.852424,
+   "lng": -85.506201
+  },
+  {
+   "name": "Dawson County",
+   "fips": "13085",
+   "type": "county",
+   "redfin_region_id": 545,
+   "realtor_location": "Dawson County, GA",
+   "lat": 34.442608,
+   "lng": -84.173261
+  },
+  {
+   "name": "Decatur County",
+   "fips": "13087",
+   "type": "county",
+   "redfin_region_id": 546,
+   "realtor_location": "Decatur County, GA",
+   "lat": 30.880643,
+   "lng": -84.58389
+  },
+  {
+   "name": "DeKalb County",
+   "fips": "13089",
+   "type": "county",
+   "redfin_region_id": 547,
+   "realtor_location": "DeKalb County, GA",
+   "lat": 33.770661,
+   "lng": -84.226343
+  },
+  {
+   "name": "Dodge County",
+   "fips": "13091",
+   "type": "county",
+   "redfin_region_id": 548,
+   "realtor_location": "Dodge County, GA",
+   "lat": 32.164369,
+   "lng": -83.167866
+  },
+  {
+   "name": "Dooly County",
+   "fips": "13093",
+   "type": "county",
+   "redfin_region_id": 549,
+   "realtor_location": "Dooly County, GA",
+   "lat": 32.151995,
+   "lng": -83.807167
+  },
+  {
+   "name": "Dougherty County",
+   "fips": "13095",
+   "type": "county",
+   "redfin_region_id": 550,
+   "realtor_location": "Dougherty County, GA",
+   "lat": 31.532588,
+   "lng": -84.20904
+  },
+  {
+   "name": "Douglas County",
+   "fips": "13097",
+   "type": "county",
+   "redfin_region_id": 551,
+   "realtor_location": "Douglas County, GA",
+   "lat": 33.701242,
+   "lng": -84.767314
+  },
+  {
+   "name": "Early County",
+   "fips": "13099",
+   "type": "county",
+   "redfin_region_id": 552,
+   "realtor_location": "Early County, GA",
+   "lat": 31.324191,
+   "lng": -84.906723
+  },
+  {
+   "name": "Echols County",
+   "fips": "13101",
+   "type": "county",
+   "redfin_region_id": 553,
+   "realtor_location": "Echols County, GA",
+   "lat": 30.714008,
+   "lng": -82.897376
+  },
+  {
+   "name": "Effingham County",
+   "fips": "13103",
+   "type": "county",
+   "redfin_region_id": 554,
+   "realtor_location": "Effingham County, GA",
+   "lat": 32.361688,
+   "lng": -81.343355
+  },
+  {
+   "name": "Elbert County",
+   "fips": "13105",
+   "type": "county",
+   "redfin_region_id": 555,
+   "realtor_location": "Elbert County, GA",
+   "lat": 34.116413,
+   "lng": -82.841909
+  },
+  {
+   "name": "Emanuel County",
+   "fips": "13107",
+   "type": "county",
+   "redfin_region_id": 556,
+   "realtor_location": "Emanuel County, GA",
+   "lat": 32.5911,
+   "lng": -82.299763
+  },
+  {
+   "name": "Evans County",
+   "fips": "13109",
+   "type": "county",
+   "redfin_region_id": 557,
+   "realtor_location": "Evans County, GA",
+   "lat": 32.153083,
+   "lng": -81.890153
+  },
+  {
+   "name": "Fannin County",
+   "fips": "13111",
+   "type": "county",
+   "redfin_region_id": 558,
+   "realtor_location": "Fannin County, GA",
+   "lat": 34.866543,
+   "lng": -84.317331
+  },
+  {
+   "name": "Fayette County",
+   "fips": "13113",
+   "type": "county",
+   "redfin_region_id": 559,
+   "realtor_location": "Fayette County, GA",
+   "lat": 33.412717,
+   "lng": -84.493941
+  },
+  {
+   "name": "Floyd County",
+   "fips": "13115",
+   "type": "county",
+   "redfin_region_id": 560,
+   "realtor_location": "Floyd County, GA",
+   "lat": 34.263692,
+   "lng": -85.213685
+  },
+  {
+   "name": "Forsyth County",
+   "fips": "13117",
+   "type": "county",
+   "redfin_region_id": 561,
+   "realtor_location": "Forsyth County, GA",
+   "lat": 34.225143,
+   "lng": -84.127408
+  },
+  {
+   "name": "Franklin County",
+   "fips": "13119",
+   "type": "county",
+   "redfin_region_id": 562,
+   "realtor_location": "Franklin County, GA",
+   "lat": 34.375266,
+   "lng": -83.227532
+  },
+  {
+   "name": "Fulton County",
+   "fips": "13121",
+   "type": "county",
+   "redfin_region_id": 563,
+   "realtor_location": "Fulton County, GA",
+   "lat": 33.790034,
+   "lng": -84.468182
+  },
+  {
+   "name": "Gilmer County",
+   "fips": "13123",
+   "type": "county",
+   "redfin_region_id": 564,
+   "realtor_location": "Gilmer County, GA",
+   "lat": 34.690506,
+   "lng": -84.454624
+  },
+  {
+   "name": "Glascock County",
+   "fips": "13125",
+   "type": "county",
+   "redfin_region_id": 565,
+   "realtor_location": "Glascock County, GA",
+   "lat": 33.227491,
+   "lng": -82.606913
+  },
+  {
+   "name": "Glynn County",
+   "fips": "13127",
+   "type": "county",
+   "redfin_region_id": 566,
+   "realtor_location": "Glynn County, GA",
+   "lat": 31.21271,
+   "lng": -81.49645
+  },
+  {
+   "name": "Gordon County",
+   "fips": "13129",
+   "type": "county",
+   "redfin_region_id": 567,
+   "realtor_location": "Gordon County, GA",
+   "lat": 34.509667,
+   "lng": -84.873862
+  },
+  {
+   "name": "Grady County",
+   "fips": "13131",
+   "type": "county",
+   "redfin_region_id": 568,
+   "realtor_location": "Grady County, GA",
+   "lat": 30.875908,
+   "lng": -84.24508
+  },
+  {
+   "name": "Greene County",
+   "fips": "13133",
+   "type": "county",
+   "redfin_region_id": 569,
+   "realtor_location": "Greene County, GA",
+   "lat": 33.576704,
+   "lng": -83.166625
+  },
+  {
+   "name": "Gwinnett County",
+   "fips": "13135",
+   "type": "county",
+   "redfin_region_id": 570,
+   "realtor_location": "Gwinnett County, GA",
+   "lat": 33.958756,
+   "lng": -84.025735
+  },
+  {
+   "name": "Habersham County",
+   "fips": "13137",
+   "type": "county",
+   "redfin_region_id": 571,
+   "realtor_location": "Habersham County, GA",
+   "lat": 34.634392,
+   "lng": -83.525875
+  },
+  {
+   "name": "Hall County",
+   "fips": "13139",
+   "type": "county",
+   "redfin_region_id": 572,
+   "realtor_location": "Hall County, GA",
+   "lat": 34.317569,
+   "lng": -83.8185
+  },
+  {
+   "name": "Hancock County",
+   "fips": "13141",
+   "type": "county",
+   "redfin_region_id": 573,
+   "realtor_location": "Hancock County, GA",
+   "lat": 33.26922,
+   "lng": -83.000465
+  },
+  {
+   "name": "Haralson County",
+   "fips": "13143",
+   "type": "county",
+   "redfin_region_id": 574,
+   "realtor_location": "Haralson County, GA",
+   "lat": 33.795165,
+   "lng": -85.220063
+  },
+  {
+   "name": "Harris County",
+   "fips": "13145",
+   "type": "county",
+   "redfin_region_id": 575,
+   "realtor_location": "Harris County, GA",
+   "lat": 32.731549,
+   "lng": -84.912432
+  },
+  {
+   "name": "Hart County",
+   "fips": "13147",
+   "type": "county",
+   "redfin_region_id": 576,
+   "realtor_location": "Hart County, GA",
+   "lat": 34.348733,
+   "lng": -82.96329
+  },
+  {
+   "name": "Heard County",
+   "fips": "13149",
+   "type": "county",
+   "redfin_region_id": 577,
+   "realtor_location": "Heard County, GA",
+   "lat": 33.291347,
+   "lng": -85.137886
+  },
+  {
+   "name": "Henry County",
+   "fips": "13151",
+   "type": "county",
+   "redfin_region_id": 578,
+   "realtor_location": "Henry County, GA",
+   "lat": 33.452947,
+   "lng": -84.154021
+  },
+  {
+   "name": "Houston County",
+   "fips": "13153",
+   "type": "county",
+   "redfin_region_id": 579,
+   "realtor_location": "Houston County, GA",
+   "lat": 32.458287,
+   "lng": -83.662522
+  },
+  {
+   "name": "Irwin County",
+   "fips": "13155",
+   "type": "county",
+   "redfin_region_id": 580,
+   "realtor_location": "Irwin County, GA",
+   "lat": 31.604306,
+   "lng": -83.277037
+  },
+  {
+   "name": "Jackson County",
+   "fips": "13157",
+   "type": "county",
+   "redfin_region_id": 581,
+   "realtor_location": "Jackson County, GA",
+   "lat": 34.130905,
+   "lng": -83.562557
+  },
+  {
+   "name": "Jasper County",
+   "fips": "13159",
+   "type": "county",
+   "redfin_region_id": 582,
+   "realtor_location": "Jasper County, GA",
+   "lat": 33.316981,
+   "lng": -83.689151
+  },
+  {
+   "name": "Jeff Davis County",
+   "fips": "13161",
+   "type": "county",
+   "redfin_region_id": 583,
+   "realtor_location": "Jeff Davis County, GA",
+   "lat": 31.811615,
+   "lng": -82.636825
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "13163",
+   "type": "county",
+   "redfin_region_id": 584,
+   "realtor_location": "Jefferson County, GA",
+   "lat": 33.058176,
+   "lng": -82.420004
+  },
+  {
+   "name": "Jenkins County",
+   "fips": "13165",
+   "type": "county",
+   "redfin_region_id": 585,
+   "realtor_location": "Jenkins County, GA",
+   "lat": 32.794563,
+   "lng": -81.971524
+  },
+  {
+   "name": "Johnson County",
+   "fips": "13167",
+   "type": "county",
+   "redfin_region_id": 586,
+   "realtor_location": "Johnson County, GA",
+   "lat": 32.694584,
+   "lng": -82.66397
+  },
+  {
+   "name": "Jones County",
+   "fips": "13169",
+   "type": "county",
+   "redfin_region_id": 587,
+   "realtor_location": "Jones County, GA",
+   "lat": 33.021664,
+   "lng": -83.562196
+  },
+  {
+   "name": "Lamar County",
+   "fips": "13171",
+   "type": "county",
+   "redfin_region_id": 588,
+   "realtor_location": "Lamar County, GA",
+   "lat": 33.07444,
+   "lng": -84.146689
+  },
+  {
+   "name": "Lanier County",
+   "fips": "13173",
+   "type": "county",
+   "redfin_region_id": 589,
+   "realtor_location": "Lanier County, GA",
+   "lat": 31.038197,
+   "lng": -83.063164
+  },
+  {
+   "name": "Laurens County",
+   "fips": "13175",
+   "type": "county",
+   "redfin_region_id": 590,
+   "realtor_location": "Laurens County, GA",
+   "lat": 32.39322,
+   "lng": -82.926317
+  },
+  {
+   "name": "Lee County",
+   "fips": "13177",
+   "type": "county",
+   "redfin_region_id": 591,
+   "realtor_location": "Lee County, GA",
+   "lat": 31.818419,
+   "lng": -84.146681
+  },
+  {
+   "name": "Liberty County",
+   "fips": "13179",
+   "type": "county",
+   "redfin_region_id": 592,
+   "realtor_location": "Liberty County, GA",
+   "lat": 31.807458,
+   "lng": -81.457871
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "13181",
+   "type": "county",
+   "redfin_region_id": 593,
+   "realtor_location": "Lincoln County, GA",
+   "lat": 33.792151,
+   "lng": -82.448299
+  },
+  {
+   "name": "Long County",
+   "fips": "13183",
+   "type": "county",
+   "redfin_region_id": 594,
+   "realtor_location": "Long County, GA",
+   "lat": 31.749563,
+   "lng": -81.74287
+  },
+  {
+   "name": "Lowndes County",
+   "fips": "13185",
+   "type": "county",
+   "redfin_region_id": 595,
+   "realtor_location": "Lowndes County, GA",
+   "lat": 30.833145,
+   "lng": -83.268995
+  },
+  {
+   "name": "Lumpkin County",
+   "fips": "13187",
+   "type": "county",
+   "redfin_region_id": 596,
+   "realtor_location": "Lumpkin County, GA",
+   "lat": 34.56814,
+   "lng": -83.998925
+  },
+  {
+   "name": "McDuffie County",
+   "fips": "13189",
+   "type": "county",
+   "redfin_region_id": 597,
+   "realtor_location": "McDuffie County, GA",
+   "lat": 33.480613,
+   "lng": -82.479533
+  },
+  {
+   "name": "McIntosh County",
+   "fips": "13191",
+   "type": "county",
+   "redfin_region_id": 598,
+   "realtor_location": "McIntosh County, GA",
+   "lat": 31.485629,
+   "lng": -81.372141
+  },
+  {
+   "name": "Macon County",
+   "fips": "13193",
+   "type": "county",
+   "redfin_region_id": 599,
+   "realtor_location": "Macon County, GA",
+   "lat": 32.362686,
+   "lng": -84.051231
+  },
+  {
+   "name": "Madison County",
+   "fips": "13195",
+   "type": "county",
+   "redfin_region_id": 600,
+   "realtor_location": "Madison County, GA",
+   "lat": 34.128526,
+   "lng": -83.203737
+  },
+  {
+   "name": "Marion County",
+   "fips": "13197",
+   "type": "county",
+   "redfin_region_id": 601,
+   "realtor_location": "Marion County, GA",
+   "lat": 32.359312,
+   "lng": -84.528735
+  },
+  {
+   "name": "Meriwether County",
+   "fips": "13199",
+   "type": "county",
+   "redfin_region_id": 602,
+   "realtor_location": "Meriwether County, GA",
+   "lat": 33.029267,
+   "lng": -84.667058
+  },
+  {
+   "name": "Miller County",
+   "fips": "13201",
+   "type": "county",
+   "redfin_region_id": 603,
+   "realtor_location": "Miller County, GA",
+   "lat": 31.162931,
+   "lng": -84.730398
+  },
+  {
+   "name": "Mitchell County",
+   "fips": "13205",
+   "type": "county",
+   "redfin_region_id": 604,
+   "realtor_location": "Mitchell County, GA",
+   "lat": 31.228997,
+   "lng": -84.192038
+  },
+  {
+   "name": "Monroe County",
+   "fips": "13207",
+   "type": "county",
+   "redfin_region_id": 605,
+   "realtor_location": "Monroe County, GA",
+   "lat": 33.017404,
+   "lng": -83.922837
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "13209",
+   "type": "county",
+   "redfin_region_id": 606,
+   "realtor_location": "Montgomery County, GA",
+   "lat": 32.172108,
+   "lng": -82.533349
+  },
+  {
+   "name": "Morgan County",
+   "fips": "13211",
+   "type": "county",
+   "redfin_region_id": 607,
+   "realtor_location": "Morgan County, GA",
+   "lat": 33.598696,
+   "lng": -83.499435
+  },
+  {
+   "name": "Murray County",
+   "fips": "13213",
+   "type": "county",
+   "redfin_region_id": 608,
+   "realtor_location": "Murray County, GA",
+   "lat": 34.797097,
+   "lng": -84.73799
+  },
+  {
+   "name": "Muscogee County",
+   "fips": "13215",
+   "type": "county",
+   "redfin_region_id": 609,
+   "realtor_location": "Muscogee County, GA",
+   "lat": 32.510197,
+   "lng": -84.874946
+  },
+  {
+   "name": "Newton County",
+   "fips": "13217",
+   "type": "county",
+   "redfin_region_id": 610,
+   "realtor_location": "Newton County, GA",
+   "lat": 33.552751,
+   "lng": -83.85136
+  },
+  {
+   "name": "Oconee County",
+   "fips": "13219",
+   "type": "county",
+   "redfin_region_id": 611,
+   "realtor_location": "Oconee County, GA",
+   "lat": 33.834125,
+   "lng": -83.437728
+  },
+  {
+   "name": "Oglethorpe County",
+   "fips": "13221",
+   "type": "county",
+   "redfin_region_id": 612,
+   "realtor_location": "Oglethorpe County, GA",
+   "lat": 33.866806,
+   "lng": -83.074081
+  },
+  {
+   "name": "Paulding County",
+   "fips": "13223",
+   "type": "county",
+   "redfin_region_id": 613,
+   "realtor_location": "Paulding County, GA",
+   "lat": 33.92103,
+   "lng": -84.867169
+  },
+  {
+   "name": "Peach County",
+   "fips": "13225",
+   "type": "county",
+   "redfin_region_id": 614,
+   "realtor_location": "Peach County, GA",
+   "lat": 32.571324,
+   "lng": -83.831978
+  },
+  {
+   "name": "Pickens County",
+   "fips": "13227",
+   "type": "county",
+   "redfin_region_id": 615,
+   "realtor_location": "Pickens County, GA",
+   "lat": 34.456746,
+   "lng": -84.490351
+  },
+  {
+   "name": "Pierce County",
+   "fips": "13229",
+   "type": "county",
+   "redfin_region_id": 616,
+   "realtor_location": "Pierce County, GA",
+   "lat": 31.353998,
+   "lng": -82.21037
+  },
+  {
+   "name": "Pike County",
+   "fips": "13231",
+   "type": "county",
+   "redfin_region_id": 617,
+   "realtor_location": "Pike County, GA",
+   "lat": 33.081149,
+   "lng": -84.389462
+  },
+  {
+   "name": "Polk County",
+   "fips": "13233",
+   "type": "county",
+   "redfin_region_id": 618,
+   "realtor_location": "Polk County, GA",
+   "lat": 33.996015,
+   "lng": -85.188338
+  },
+  {
+   "name": "Pulaski County",
+   "fips": "13235",
+   "type": "county",
+   "redfin_region_id": 619,
+   "realtor_location": "Pulaski County, GA",
+   "lat": 32.238803,
+   "lng": -83.481845
+  },
+  {
+   "name": "Putnam County",
+   "fips": "13237",
+   "type": "county",
+   "redfin_region_id": 620,
+   "realtor_location": "Putnam County, GA",
+   "lat": 33.32106,
+   "lng": -83.37179
+  },
+  {
+   "name": "Quitman County",
+   "fips": "13239",
+   "type": "county",
+   "redfin_region_id": 621,
+   "realtor_location": "Quitman County, GA",
+   "lat": 31.862938,
+   "lng": -85.004798
+  },
+  {
+   "name": "Rabun County",
+   "fips": "13241",
+   "type": "county",
+   "redfin_region_id": 622,
+   "realtor_location": "Rabun County, GA",
+   "lat": 34.883934,
+   "lng": -83.40487
+  },
+  {
+   "name": "Randolph County",
+   "fips": "13243",
+   "type": "county",
+   "redfin_region_id": 623,
+   "realtor_location": "Randolph County, GA",
+   "lat": 31.762651,
+   "lng": -84.752311
+  },
+  {
+   "name": "Richmond County",
+   "fips": "13245",
+   "type": "county",
+   "redfin_region_id": 624,
+   "realtor_location": "Richmond County, GA",
+   "lat": 33.361486,
+   "lng": -82.074998
+  },
+  {
+   "name": "Rockdale County",
+   "fips": "13247",
+   "type": "county",
+   "redfin_region_id": 625,
+   "realtor_location": "Rockdale County, GA",
+   "lat": 33.652081,
+   "lng": -84.02637
+  },
+  {
+   "name": "Schley County",
+   "fips": "13249",
+   "type": "county",
+   "redfin_region_id": 626,
+   "realtor_location": "Schley County, GA",
+   "lat": 32.263444,
+   "lng": -84.322708
+  },
+  {
+   "name": "Screven County",
+   "fips": "13251",
+   "type": "county",
+   "redfin_region_id": 627,
+   "realtor_location": "Screven County, GA",
+   "lat": 32.744751,
+   "lng": -81.617585
+  },
+  {
+   "name": "Seminole County",
+   "fips": "13253",
+   "type": "county",
+   "redfin_region_id": 628,
+   "realtor_location": "Seminole County, GA",
+   "lat": 30.93396,
+   "lng": -84.867685
+  },
+  {
+   "name": "Spalding County",
+   "fips": "13255",
+   "type": "county",
+   "redfin_region_id": 629,
+   "realtor_location": "Spalding County, GA",
+   "lat": 33.262348,
+   "lng": -84.284905
+  },
+  {
+   "name": "Stephens County",
+   "fips": "13257",
+   "type": "county",
+   "redfin_region_id": 630,
+   "realtor_location": "Stephens County, GA",
+   "lat": 34.553582,
+   "lng": -83.290588
+  },
+  {
+   "name": "Stewart County",
+   "fips": "13259",
+   "type": "county",
+   "redfin_region_id": 631,
+   "realtor_location": "Stewart County, GA",
+   "lat": 32.073225,
+   "lng": -84.834912
+  },
+  {
+   "name": "Sumter County",
+   "fips": "13261",
+   "type": "county",
+   "redfin_region_id": 632,
+   "realtor_location": "Sumter County, GA",
+   "lat": 32.042266,
+   "lng": -84.204294
+  },
+  {
+   "name": "Talbot County",
+   "fips": "13263",
+   "type": "county",
+   "redfin_region_id": 633,
+   "realtor_location": "Talbot County, GA",
+   "lat": 32.704603,
+   "lng": -84.530029
+  },
+  {
+   "name": "Taliaferro County",
+   "fips": "13265",
+   "type": "county",
+   "redfin_region_id": 634,
+   "realtor_location": "Taliaferro County, GA",
+   "lat": 33.559319,
+   "lng": -82.875272
+  },
+  {
+   "name": "Tattnall County",
+   "fips": "13267",
+   "type": "county",
+   "redfin_region_id": 635,
+   "realtor_location": "Tattnall County, GA",
+   "lat": 32.043768,
+   "lng": -82.059208
+  },
+  {
+   "name": "Taylor County",
+   "fips": "13269",
+   "type": "county",
+   "redfin_region_id": 636,
+   "realtor_location": "Taylor County, GA",
+   "lat": 32.554667,
+   "lng": -84.251426
+  },
+  {
+   "name": "Telfair County",
+   "fips": "13271",
+   "type": "county",
+   "redfin_region_id": 637,
+   "realtor_location": "Telfair County, GA",
+   "lat": 31.913641,
+   "lng": -82.931063
+  },
+  {
+   "name": "Terrell County",
+   "fips": "13273",
+   "type": "county",
+   "redfin_region_id": 638,
+   "realtor_location": "Terrell County, GA",
+   "lat": 31.777191,
+   "lng": -84.439446
+  },
+  {
+   "name": "Thomas County",
+   "fips": "13275",
+   "type": "county",
+   "redfin_region_id": 639,
+   "realtor_location": "Thomas County, GA",
+   "lat": 30.864619,
+   "lng": -83.919815
+  },
+  {
+   "name": "Tift County",
+   "fips": "13277",
+   "type": "county",
+   "redfin_region_id": 640,
+   "realtor_location": "Tift County, GA",
+   "lat": 31.457003,
+   "lng": -83.525931
+  },
+  {
+   "name": "Toombs County",
+   "fips": "13279",
+   "type": "county",
+   "redfin_region_id": 641,
+   "realtor_location": "Toombs County, GA",
+   "lat": 32.117753,
+   "lng": -82.330597
+  },
+  {
+   "name": "Towns County",
+   "fips": "13281",
+   "type": "county",
+   "redfin_region_id": 642,
+   "realtor_location": "Towns County, GA",
+   "lat": 34.902529,
+   "lng": -83.732264
+  },
+  {
+   "name": "Treutlen County",
+   "fips": "13283",
+   "type": "county",
+   "redfin_region_id": 643,
+   "realtor_location": "Treutlen County, GA",
+   "lat": 32.409586,
+   "lng": -82.570882
+  },
+  {
+   "name": "Troup County",
+   "fips": "13285",
+   "type": "county",
+   "redfin_region_id": 644,
+   "realtor_location": "Troup County, GA",
+   "lat": 33.034482,
+   "lng": -85.02836
+  },
+  {
+   "name": "Turner County",
+   "fips": "13287",
+   "type": "county",
+   "redfin_region_id": 645,
+   "realtor_location": "Turner County, GA",
+   "lat": 31.7248,
+   "lng": -83.620319
+  },
+  {
+   "name": "Twiggs County",
+   "fips": "13289",
+   "type": "county",
+   "redfin_region_id": 646,
+   "realtor_location": "Twiggs County, GA",
+   "lat": 32.665847,
+   "lng": -83.425879
+  },
+  {
+   "name": "Union County",
+   "fips": "13291",
+   "type": "county",
+   "redfin_region_id": 647,
+   "realtor_location": "Union County, GA",
+   "lat": 34.833333,
+   "lng": -83.989257
+  },
+  {
+   "name": "Upson County",
+   "fips": "13293",
+   "type": "county",
+   "redfin_region_id": 648,
+   "realtor_location": "Upson County, GA",
+   "lat": 32.881837,
+   "lng": -84.292283
+  },
+  {
+   "name": "Walker County",
+   "fips": "13295",
+   "type": "county",
+   "redfin_region_id": 649,
+   "realtor_location": "Walker County, GA",
+   "lat": 34.735802,
+   "lng": -85.305456
+  },
+  {
+   "name": "Walton County",
+   "fips": "13297",
+   "type": "county",
+   "redfin_region_id": 650,
+   "realtor_location": "Walton County, GA",
+   "lat": 33.783887,
+   "lng": -83.731829
+  },
+  {
+   "name": "Ware County",
+   "fips": "13299",
+   "type": "county",
+   "redfin_region_id": 651,
+   "realtor_location": "Ware County, GA",
+   "lat": 31.050881,
+   "lng": -82.421507
+  },
+  {
+   "name": "Warren County",
+   "fips": "13301",
+   "type": "county",
+   "redfin_region_id": 652,
+   "realtor_location": "Warren County, GA",
+   "lat": 33.419169,
+   "lng": -82.688012
+  },
+  {
+   "name": "Washington County",
+   "fips": "13303",
+   "type": "county",
+   "redfin_region_id": 653,
+   "realtor_location": "Washington County, GA",
+   "lat": 32.971843,
+   "lng": -82.798112
+  },
+  {
+   "name": "Wayne County",
+   "fips": "13305",
+   "type": "county",
+   "redfin_region_id": 654,
+   "realtor_location": "Wayne County, GA",
+   "lat": 31.547845,
+   "lng": -81.912376
+  },
+  {
+   "name": "Webster County",
+   "fips": "13307",
+   "type": "county",
+   "redfin_region_id": 655,
+   "realtor_location": "Webster County, GA",
+   "lat": 32.046691,
+   "lng": -84.553828
+  },
+  {
+   "name": "Wheeler County",
+   "fips": "13309",
+   "type": "county",
+   "redfin_region_id": 656,
+   "realtor_location": "Wheeler County, GA",
+   "lat": 32.105258,
+   "lng": -82.733849
+  },
+  {
+   "name": "White County",
+   "fips": "13311",
+   "type": "county",
+   "redfin_region_id": 657,
+   "realtor_location": "White County, GA",
+   "lat": 34.644182,
+   "lng": -83.743
+  },
+  {
+   "name": "Whitfield County",
+   "fips": "13313",
+   "type": "county",
+   "redfin_region_id": 658,
+   "realtor_location": "Whitfield County, GA",
+   "lat": 34.801726,
+   "lng": -84.968541
+  },
+  {
+   "name": "Wilcox County",
+   "fips": "13315",
+   "type": "county",
+   "redfin_region_id": 659,
+   "realtor_location": "Wilcox County, GA",
+   "lat": 31.96272,
+   "lng": -83.438259
+  },
+  {
+   "name": "Wilkes County",
+   "fips": "13317",
+   "type": "county",
+   "redfin_region_id": 660,
+   "realtor_location": "Wilkes County, GA",
+   "lat": 33.779031,
+   "lng": -82.747921
+  },
+  {
+   "name": "Wilkinson County",
+   "fips": "13319",
+   "type": "county",
+   "redfin_region_id": 661,
+   "realtor_location": "Wilkinson County, GA",
+   "lat": 32.804266,
+   "lng": -83.175512
+  },
+  {
+   "name": "Worth County",
+   "fips": "13321",
+   "type": "county",
+   "redfin_region_id": 662,
+   "realtor_location": "Worth County, GA",
+   "lat": 31.551773,
+   "lng": -83.84996
+  }
+ ]
+}

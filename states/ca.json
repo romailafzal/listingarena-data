@@ -1,0 +1,528 @@
+{
+ "state": "CA",
+ "name": "California",
+ "counties": [
+  {
+   "name": "Alameda County",
+   "fips": "06001",
+   "type": "county",
+   "redfin_region_id": 303,
+   "realtor_location": "Alameda County, CA",
+   "lat": 37.647139,
+   "lng": -121.912488
+  },
+  {
+   "name": "Alpine County",
+   "fips": "06003",
+   "type": "county",
+   "redfin_region_id": 304,
+   "realtor_location": "Alpine County, CA",
+   "lat": 38.621783,
+   "lng": -119.798352
+  },
+  {
+   "name": "Amador County",
+   "fips": "06005",
+   "type": "county",
+   "redfin_region_id": 305,
+   "realtor_location": "Amador County, CA",
+   "lat": 38.443549,
+   "lng": -120.653858
+  },
+  {
+   "name": "Butte County",
+   "fips": "06007",
+   "type": "county",
+   "redfin_region_id": 306,
+   "realtor_location": "Butte County, CA",
+   "lat": 39.665336,
+   "lng": -121.603209
+  },
+  {
+   "name": "Calaveras County",
+   "fips": "06009",
+   "type": "county",
+   "redfin_region_id": 307,
+   "realtor_location": "Calaveras County, CA",
+   "lat": 38.191068,
+   "lng": -120.554107
+  },
+  {
+   "name": "Colusa County",
+   "fips": "06011",
+   "type": "county",
+   "redfin_region_id": 308,
+   "realtor_location": "Colusa County, CA",
+   "lat": 39.177739,
+   "lng": -122.237563
+  },
+  {
+   "name": "Contra Costa County",
+   "fips": "06013",
+   "type": "county",
+   "redfin_region_id": 309,
+   "realtor_location": "Contra Costa County, CA",
+   "lat": 37.919479,
+   "lng": -121.951543
+  },
+  {
+   "name": "Del Norte County",
+   "fips": "06015",
+   "type": "county",
+   "redfin_region_id": 310,
+   "realtor_location": "Del Norte County, CA",
+   "lat": 41.749903,
+   "lng": -123.980998
+  },
+  {
+   "name": "El Dorado County",
+   "fips": "06017",
+   "type": "county",
+   "redfin_region_id": 311,
+   "realtor_location": "El Dorado County, CA",
+   "lat": 38.785612,
+   "lng": -120.534225
+  },
+  {
+   "name": "Fresno County",
+   "fips": "06019",
+   "type": "county",
+   "redfin_region_id": 312,
+   "realtor_location": "Fresno County, CA",
+   "lat": 36.761006,
+   "lng": -119.655019
+  },
+  {
+   "name": "Glenn County",
+   "fips": "06021",
+   "type": "county",
+   "redfin_region_id": 313,
+   "realtor_location": "Glenn County, CA",
+   "lat": 39.602546,
+   "lng": -122.4017
+  },
+  {
+   "name": "Humboldt County",
+   "fips": "06023",
+   "type": "county",
+   "redfin_region_id": 314,
+   "realtor_location": "Humboldt County, CA",
+   "lat": 40.706655,
+   "lng": -123.926176
+  },
+  {
+   "name": "Imperial County",
+   "fips": "06025",
+   "type": "county",
+   "redfin_region_id": 315,
+   "realtor_location": "Imperial County, CA",
+   "lat": 33.040814,
+   "lng": -115.3554
+  },
+  {
+   "name": "Inyo County",
+   "fips": "06027",
+   "type": "county",
+   "redfin_region_id": 316,
+   "realtor_location": "Inyo County, CA",
+   "lat": 36.56216,
+   "lng": -117.404209
+  },
+  {
+   "name": "Kern County",
+   "fips": "06029",
+   "type": "county",
+   "redfin_region_id": 317,
+   "realtor_location": "Kern County, CA",
+   "lat": 35.346629,
+   "lng": -118.729506
+  },
+  {
+   "name": "Kings County",
+   "fips": "06031",
+   "type": "county",
+   "redfin_region_id": 318,
+   "realtor_location": "Kings County, CA",
+   "lat": 36.072478,
+   "lng": -119.81553
+  },
+  {
+   "name": "Lake County",
+   "fips": "06033",
+   "type": "county",
+   "redfin_region_id": 319,
+   "realtor_location": "Lake County, CA",
+   "lat": 39.094802,
+   "lng": -122.746757
+  },
+  {
+   "name": "Lassen County",
+   "fips": "06035",
+   "type": "county",
+   "redfin_region_id": 320,
+   "realtor_location": "Lassen County, CA",
+   "lat": 40.715287,
+   "lng": -120.621223
+  },
+  {
+   "name": "Los Angeles County",
+   "fips": "06037",
+   "type": "county",
+   "redfin_region_id": 321,
+   "realtor_location": "Los Angeles County, CA",
+   "lat": 34.196398,
+   "lng": -118.261862
+  },
+  {
+   "name": "Madera County",
+   "fips": "06039",
+   "type": "county",
+   "redfin_region_id": 322,
+   "realtor_location": "Madera County, CA",
+   "lat": 37.209821,
+   "lng": -119.749802
+  },
+  {
+   "name": "Marin County",
+   "fips": "06041",
+   "type": "county",
+   "redfin_region_id": 323,
+   "realtor_location": "Marin County, CA",
+   "lat": 38.051367,
+   "lng": -122.746396
+  },
+  {
+   "name": "Mariposa County",
+   "fips": "06043",
+   "type": "county",
+   "redfin_region_id": 324,
+   "realtor_location": "Mariposa County, CA",
+   "lat": 37.574343,
+   "lng": -119.911721
+  },
+  {
+   "name": "Mendocino County",
+   "fips": "06045",
+   "type": "county",
+   "redfin_region_id": 325,
+   "realtor_location": "Mendocino County, CA",
+   "lat": 39.432388,
+   "lng": -123.442881
+  },
+  {
+   "name": "Merced County",
+   "fips": "06047",
+   "type": "county",
+   "redfin_region_id": 326,
+   "realtor_location": "Merced County, CA",
+   "lat": 37.194806,
+   "lng": -120.722802
+  },
+  {
+   "name": "Modoc County",
+   "fips": "06049",
+   "type": "county",
+   "redfin_region_id": 327,
+   "realtor_location": "Modoc County, CA",
+   "lat": 41.592918,
+   "lng": -120.71837
+  },
+  {
+   "name": "Mono County",
+   "fips": "06051",
+   "type": "county",
+   "redfin_region_id": 328,
+   "realtor_location": "Mono County, CA",
+   "lat": 37.915836,
+   "lng": -118.875167
+  },
+  {
+   "name": "Monterey County",
+   "fips": "06053",
+   "type": "county",
+   "redfin_region_id": 329,
+   "realtor_location": "Monterey County, CA",
+   "lat": 36.240104,
+   "lng": -121.315578
+  },
+  {
+   "name": "Napa County",
+   "fips": "06055",
+   "type": "county",
+   "redfin_region_id": 330,
+   "realtor_location": "Napa County, CA",
+   "lat": 38.5071,
+   "lng": -122.325904
+  },
+  {
+   "name": "Nevada County",
+   "fips": "06057",
+   "type": "county",
+   "redfin_region_id": 331,
+   "realtor_location": "Nevada County, CA",
+   "lat": 39.297508,
+   "lng": -120.771343
+  },
+  {
+   "name": "Orange County",
+   "fips": "06059",
+   "type": "county",
+   "redfin_region_id": 332,
+   "realtor_location": "Orange County, CA",
+   "lat": 33.675687,
+   "lng": -117.777207
+  },
+  {
+   "name": "Placer County",
+   "fips": "06061",
+   "type": "county",
+   "redfin_region_id": 333,
+   "realtor_location": "Placer County, CA",
+   "lat": 39.062032,
+   "lng": -120.722718
+  },
+  {
+   "name": "Plumas County",
+   "fips": "06063",
+   "type": "county",
+   "redfin_region_id": 334,
+   "realtor_location": "Plumas County, CA",
+   "lat": 39.992295,
+   "lng": -120.824371
+  },
+  {
+   "name": "Riverside County",
+   "fips": "06065",
+   "type": "county",
+   "redfin_region_id": 335,
+   "realtor_location": "Riverside County, CA",
+   "lat": 33.729828,
+   "lng": -116.002239
+  },
+  {
+   "name": "Sacramento County",
+   "fips": "06067",
+   "type": "county",
+   "redfin_region_id": 336,
+   "realtor_location": "Sacramento County, CA",
+   "lat": 38.450136,
+   "lng": -121.344329
+  },
+  {
+   "name": "San Benito County",
+   "fips": "06069",
+   "type": "county",
+   "redfin_region_id": 337,
+   "realtor_location": "San Benito County, CA",
+   "lat": 36.611651,
+   "lng": -121.085811
+  },
+  {
+   "name": "San Bernardino County",
+   "fips": "06071",
+   "type": "county",
+   "redfin_region_id": 338,
+   "realtor_location": "San Bernardino County, CA",
+   "lat": 34.856661,
+   "lng": -116.181571
+  },
+  {
+   "name": "San Diego County",
+   "fips": "06073",
+   "type": "county",
+   "redfin_region_id": 339,
+   "realtor_location": "San Diego County, CA",
+   "lat": 33.023604,
+   "lng": -116.776117
+  },
+  {
+   "name": "San Francisco County",
+   "fips": "06075",
+   "type": "county",
+   "redfin_region_id": 340,
+   "realtor_location": "San Francisco County, CA",
+   "lat": 37.727239,
+   "lng": -123.032229
+  },
+  {
+   "name": "San Joaquin County",
+   "fips": "06077",
+   "type": "county",
+   "redfin_region_id": 341,
+   "realtor_location": "San Joaquin County, CA",
+   "lat": 37.934982,
+   "lng": -121.272244
+  },
+  {
+   "name": "San Luis Obispo County",
+   "fips": "06079",
+   "type": "county",
+   "redfin_region_id": 342,
+   "realtor_location": "San Luis Obispo County, CA",
+   "lat": 35.388189,
+   "lng": -120.448897
+  },
+  {
+   "name": "San Mateo County",
+   "fips": "06081",
+   "type": "county",
+   "redfin_region_id": 343,
+   "realtor_location": "San Mateo County, CA",
+   "lat": 37.414672,
+   "lng": -122.371546
+  },
+  {
+   "name": "Santa Barbara County",
+   "fips": "06083",
+   "type": "county",
+   "redfin_region_id": 344,
+   "realtor_location": "Santa Barbara County, CA",
+   "lat": 34.536677,
+   "lng": -120.038364
+  },
+  {
+   "name": "Santa Clara County",
+   "fips": "06085",
+   "type": "county",
+   "redfin_region_id": 345,
+   "realtor_location": "Santa Clara County, CA",
+   "lat": 37.221614,
+   "lng": -121.68954
+  },
+  {
+   "name": "Santa Cruz County",
+   "fips": "06087",
+   "type": "county",
+   "redfin_region_id": 346,
+   "realtor_location": "Santa Cruz County, CA",
+   "lat": 37.012347,
+   "lng": -122.007789
+  },
+  {
+   "name": "Shasta County",
+   "fips": "06089",
+   "type": "county",
+   "redfin_region_id": 347,
+   "realtor_location": "Shasta County, CA",
+   "lat": 40.760514,
+   "lng": -122.043556
+  },
+  {
+   "name": "Sierra County",
+   "fips": "06091",
+   "type": "county",
+   "redfin_region_id": 348,
+   "realtor_location": "Sierra County, CA",
+   "lat": 39.576925,
+   "lng": -120.521993
+  },
+  {
+   "name": "Siskiyou County",
+   "fips": "06093",
+   "type": "county",
+   "redfin_region_id": 349,
+   "realtor_location": "Siskiyou County, CA",
+   "lat": 41.587986,
+   "lng": -122.533287
+  },
+  {
+   "name": "Solano County",
+   "fips": "06095",
+   "type": "county",
+   "redfin_region_id": 350,
+   "realtor_location": "Solano County, CA",
+   "lat": 38.267226,
+   "lng": -121.939594
+  },
+  {
+   "name": "Sonoma County",
+   "fips": "06097",
+   "type": "county",
+   "redfin_region_id": 351,
+   "realtor_location": "Sonoma County, CA",
+   "lat": 38.525182,
+   "lng": -122.92611
+  },
+  {
+   "name": "Stanislaus County",
+   "fips": "06099",
+   "type": "county",
+   "redfin_region_id": 352,
+   "realtor_location": "Stanislaus County, CA",
+   "lat": 37.562316,
+   "lng": -121.002831
+  },
+  {
+   "name": "Sutter County",
+   "fips": "06101",
+   "type": "county",
+   "redfin_region_id": 353,
+   "realtor_location": "Sutter County, CA",
+   "lat": 39.03619,
+   "lng": -121.70394
+  },
+  {
+   "name": "Tehama County",
+   "fips": "06103",
+   "type": "county",
+   "redfin_region_id": 354,
+   "realtor_location": "Tehama County, CA",
+   "lat": 40.126157,
+   "lng": -122.232274
+  },
+  {
+   "name": "Trinity County",
+   "fips": "06105",
+   "type": "county",
+   "redfin_region_id": 355,
+   "realtor_location": "Trinity County, CA",
+   "lat": 40.647858,
+   "lng": -123.114666
+  },
+  {
+   "name": "Tulare County",
+   "fips": "06107",
+   "type": "county",
+   "redfin_region_id": 356,
+   "realtor_location": "Tulare County, CA",
+   "lat": 36.228834,
+   "lng": -118.781055
+  },
+  {
+   "name": "Tuolumne County",
+   "fips": "06109",
+   "type": "county",
+   "redfin_region_id": 357,
+   "realtor_location": "Tuolumne County, CA",
+   "lat": 38.021434,
+   "lng": -119.964733
+  },
+  {
+   "name": "Ventura County",
+   "fips": "06111",
+   "type": "county",
+   "redfin_region_id": 358,
+   "realtor_location": "Ventura County, CA",
+   "lat": 34.358748,
+   "lng": -119.133145
+  },
+  {
+   "name": "Yolo County",
+   "fips": "06113",
+   "type": "county",
+   "redfin_region_id": 359,
+   "realtor_location": "Yolo County, CA",
+   "lat": 38.679609,
+   "lng": -121.90275
+  },
+  {
+   "name": "Yuba County",
+   "fips": "06115",
+   "type": "county",
+   "redfin_region_id": 360,
+   "realtor_location": "Yuba County, CA",
+   "lat": 39.27013,
+   "lng": -121.344259
+  }
+ ]
+}

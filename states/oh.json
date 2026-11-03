@@ -1,0 +1,798 @@
+{
+ "state": "OH",
+ "name": "Ohio",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "39001",
+   "type": "county",
+   "redfin_region_id": 2160,
+   "realtor_location": "Adams County, OH",
+   "lat": 38.834468,
+   "lng": -83.478082
+  },
+  {
+   "name": "Allen County",
+   "fips": "39003",
+   "type": "county",
+   "redfin_region_id": 2161,
+   "realtor_location": "Allen County, OH",
+   "lat": 40.771627,
+   "lng": -84.106103
+  },
+  {
+   "name": "Ashland County",
+   "fips": "39005",
+   "type": "county",
+   "redfin_region_id": 2162,
+   "realtor_location": "Ashland County, OH",
+   "lat": 40.843273,
+   "lng": -82.270127
+  },
+  {
+   "name": "Ashtabula County",
+   "fips": "39007",
+   "type": "county",
+   "redfin_region_id": 2163,
+   "realtor_location": "Ashtabula County, OH",
+   "lat": 41.906637,
+   "lng": -80.745592
+  },
+  {
+   "name": "Athens County",
+   "fips": "39009",
+   "type": "county",
+   "redfin_region_id": 2164,
+   "realtor_location": "Athens County, OH",
+   "lat": 39.332755,
+   "lng": -82.045885
+  },
+  {
+   "name": "Auglaize County",
+   "fips": "39011",
+   "type": "county",
+   "redfin_region_id": 2165,
+   "realtor_location": "Auglaize County, OH",
+   "lat": 40.561309,
+   "lng": -84.224018
+  },
+  {
+   "name": "Belmont County",
+   "fips": "39013",
+   "type": "county",
+   "redfin_region_id": 2166,
+   "realtor_location": "Belmont County, OH",
+   "lat": 40.017682,
+   "lng": -80.967727
+  },
+  {
+   "name": "Brown County",
+   "fips": "39015",
+   "type": "county",
+   "redfin_region_id": 2167,
+   "realtor_location": "Brown County, OH",
+   "lat": 38.931377,
+   "lng": -83.866772
+  },
+  {
+   "name": "Butler County",
+   "fips": "39017",
+   "type": "county",
+   "redfin_region_id": 2168,
+   "realtor_location": "Butler County, OH",
+   "lat": 39.439747,
+   "lng": -84.565734
+  },
+  {
+   "name": "Carroll County",
+   "fips": "39019",
+   "type": "county",
+   "redfin_region_id": 2169,
+   "realtor_location": "Carroll County, OH",
+   "lat": 40.579884,
+   "lng": -81.090787
+  },
+  {
+   "name": "Champaign County",
+   "fips": "39021",
+   "type": "county",
+   "redfin_region_id": 2170,
+   "realtor_location": "Champaign County, OH",
+   "lat": 40.132775,
+   "lng": -83.767604
+  },
+  {
+   "name": "Clark County",
+   "fips": "39023",
+   "type": "county",
+   "redfin_region_id": 2171,
+   "realtor_location": "Clark County, OH",
+   "lat": 39.917032,
+   "lng": -83.783676
+  },
+  {
+   "name": "Clermont County",
+   "fips": "39025",
+   "type": "county",
+   "redfin_region_id": 2172,
+   "realtor_location": "Clermont County, OH",
+   "lat": 39.052054,
+   "lng": -84.149485
+  },
+  {
+   "name": "Clinton County",
+   "fips": "39027",
+   "type": "county",
+   "redfin_region_id": 2173,
+   "realtor_location": "Clinton County, OH",
+   "lat": 39.416681,
+   "lng": -83.804583
+  },
+  {
+   "name": "Columbiana County",
+   "fips": "39029",
+   "type": "county",
+   "redfin_region_id": 2174,
+   "realtor_location": "Columbiana County, OH",
+   "lat": 40.770073,
+   "lng": -80.778455
+  },
+  {
+   "name": "Coshocton County",
+   "fips": "39031",
+   "type": "county",
+   "redfin_region_id": 2175,
+   "realtor_location": "Coshocton County, OH",
+   "lat": 40.29671,
+   "lng": -81.930109
+  },
+  {
+   "name": "Crawford County",
+   "fips": "39033",
+   "type": "county",
+   "redfin_region_id": 2176,
+   "realtor_location": "Crawford County, OH",
+   "lat": 40.848524,
+   "lng": -82.924783
+  },
+  {
+   "name": "Cuyahoga County",
+   "fips": "39035",
+   "type": "county",
+   "redfin_region_id": 2177,
+   "realtor_location": "Cuyahoga County, OH",
+   "lat": 41.555037,
+   "lng": -81.604957
+  },
+  {
+   "name": "Darke County",
+   "fips": "39037",
+   "type": "county",
+   "redfin_region_id": 2178,
+   "realtor_location": "Darke County, OH",
+   "lat": 40.131467,
+   "lng": -84.621191
+  },
+  {
+   "name": "Defiance County",
+   "fips": "39039",
+   "type": "county",
+   "redfin_region_id": 2179,
+   "realtor_location": "Defiance County, OH",
+   "lat": 41.321679,
+   "lng": -84.486433
+  },
+  {
+   "name": "Delaware County",
+   "fips": "39041",
+   "type": "county",
+   "redfin_region_id": 2180,
+   "realtor_location": "Delaware County, OH",
+   "lat": 40.278941,
+   "lng": -83.007462
+  },
+  {
+   "name": "Erie County",
+   "fips": "39043",
+   "type": "county",
+   "redfin_region_id": 2181,
+   "realtor_location": "Erie County, OH",
+   "lat": 41.394143,
+   "lng": -82.586835
+  },
+  {
+   "name": "Fairfield County",
+   "fips": "39045",
+   "type": "county",
+   "redfin_region_id": 2182,
+   "realtor_location": "Fairfield County, OH",
+   "lat": 39.747694,
+   "lng": -82.626685
+  },
+  {
+   "name": "Fayette County",
+   "fips": "39047",
+   "type": "county",
+   "redfin_region_id": 2183,
+   "realtor_location": "Fayette County, OH",
+   "lat": 39.555246,
+   "lng": -83.461893
+  },
+  {
+   "name": "Franklin County",
+   "fips": "39049",
+   "type": "county",
+   "redfin_region_id": 2184,
+   "realtor_location": "Franklin County, OH",
+   "lat": 39.969875,
+   "lng": -83.009086
+  },
+  {
+   "name": "Fulton County",
+   "fips": "39051",
+   "type": "county",
+   "redfin_region_id": 2185,
+   "realtor_location": "Fulton County, OH",
+   "lat": 41.597264,
+   "lng": -84.124267
+  },
+  {
+   "name": "Gallia County",
+   "fips": "39053",
+   "type": "county",
+   "redfin_region_id": 2186,
+   "realtor_location": "Gallia County, OH",
+   "lat": 38.817046,
+   "lng": -82.301746
+  },
+  {
+   "name": "Geauga County",
+   "fips": "39055",
+   "type": "county",
+   "redfin_region_id": 2187,
+   "realtor_location": "Geauga County, OH",
+   "lat": 41.499322,
+   "lng": -81.173505
+  },
+  {
+   "name": "Greene County",
+   "fips": "39057",
+   "type": "county",
+   "redfin_region_id": 2188,
+   "realtor_location": "Greene County, OH",
+   "lat": 39.687479,
+   "lng": -83.894894
+  },
+  {
+   "name": "Guernsey County",
+   "fips": "39059",
+   "type": "county",
+   "redfin_region_id": 2189,
+   "realtor_location": "Guernsey County, OH",
+   "lat": 40.056665,
+   "lng": -81.497875
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "39061",
+   "type": "county",
+   "redfin_region_id": 2190,
+   "realtor_location": "Hamilton County, OH",
+   "lat": 39.196927,
+   "lng": -84.544187
+  },
+  {
+   "name": "Hancock County",
+   "fips": "39063",
+   "type": "county",
+   "redfin_region_id": 2191,
+   "realtor_location": "Hancock County, OH",
+   "lat": 41.000217,
+   "lng": -83.665947
+  },
+  {
+   "name": "Hardin County",
+   "fips": "39065",
+   "type": "county",
+   "redfin_region_id": 2192,
+   "realtor_location": "Hardin County, OH",
+   "lat": 40.660415,
+   "lng": -83.664077
+  },
+  {
+   "name": "Harrison County",
+   "fips": "39067",
+   "type": "county",
+   "redfin_region_id": 2193,
+   "realtor_location": "Harrison County, OH",
+   "lat": 40.292318,
+   "lng": -81.091565
+  },
+  {
+   "name": "Henry County",
+   "fips": "39069",
+   "type": "county",
+   "redfin_region_id": 2194,
+   "realtor_location": "Henry County, OH",
+   "lat": 41.331584,
+   "lng": -84.0689
+  },
+  {
+   "name": "Highland County",
+   "fips": "39071",
+   "type": "county",
+   "redfin_region_id": 2195,
+   "realtor_location": "Highland County, OH",
+   "lat": 39.184422,
+   "lng": -83.601359
+  },
+  {
+   "name": "Hocking County",
+   "fips": "39073",
+   "type": "county",
+   "redfin_region_id": 2196,
+   "realtor_location": "Hocking County, OH",
+   "lat": 39.490342,
+   "lng": -82.483447
+  },
+  {
+   "name": "Holmes County",
+   "fips": "39075",
+   "type": "county",
+   "redfin_region_id": 2197,
+   "realtor_location": "Holmes County, OH",
+   "lat": 40.565597,
+   "lng": -81.930001
+  },
+  {
+   "name": "Huron County",
+   "fips": "39077",
+   "type": "county",
+   "redfin_region_id": 2198,
+   "realtor_location": "Huron County, OH",
+   "lat": 41.14508,
+   "lng": -82.594641
+  },
+  {
+   "name": "Jackson County",
+   "fips": "39079",
+   "type": "county",
+   "redfin_region_id": 2199,
+   "realtor_location": "Jackson County, OH",
+   "lat": 39.013477,
+   "lng": -82.614142
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "39081",
+   "type": "county",
+   "redfin_region_id": 2200,
+   "realtor_location": "Jefferson County, OH",
+   "lat": 40.399384,
+   "lng": -80.763527
+  },
+  {
+   "name": "Knox County",
+   "fips": "39083",
+   "type": "county",
+   "redfin_region_id": 2201,
+   "realtor_location": "Knox County, OH",
+   "lat": 40.40362,
+   "lng": -82.422393
+  },
+  {
+   "name": "Lake County",
+   "fips": "39085",
+   "type": "county",
+   "redfin_region_id": 2202,
+   "realtor_location": "Lake County, OH",
+   "lat": 41.778142,
+   "lng": -81.19733
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "39087",
+   "type": "county",
+   "redfin_region_id": 2203,
+   "realtor_location": "Lawrence County, OH",
+   "lat": 38.603866,
+   "lng": -82.517186
+  },
+  {
+   "name": "Licking County",
+   "fips": "39089",
+   "type": "county",
+   "redfin_region_id": 2204,
+   "realtor_location": "Licking County, OH",
+   "lat": 40.091505,
+   "lng": -82.483435
+  },
+  {
+   "name": "Logan County",
+   "fips": "39091",
+   "type": "county",
+   "redfin_region_id": 2205,
+   "realtor_location": "Logan County, OH",
+   "lat": 40.387553,
+   "lng": -83.766343
+  },
+  {
+   "name": "Lorain County",
+   "fips": "39093",
+   "type": "county",
+   "redfin_region_id": 2206,
+   "realtor_location": "Lorain County, OH",
+   "lat": 41.438805,
+   "lng": -82.179722
+  },
+  {
+   "name": "Lucas County",
+   "fips": "39095",
+   "type": "county",
+   "redfin_region_id": 2207,
+   "realtor_location": "Lucas County, OH",
+   "lat": 41.682321,
+   "lng": -83.468903
+  },
+  {
+   "name": "Madison County",
+   "fips": "39097",
+   "type": "county",
+   "redfin_region_id": 2208,
+   "realtor_location": "Madison County, OH",
+   "lat": 39.896607,
+   "lng": -83.400885
+  },
+  {
+   "name": "Mahoning County",
+   "fips": "39099",
+   "type": "county",
+   "redfin_region_id": 2209,
+   "realtor_location": "Mahoning County, OH",
+   "lat": 41.01088,
+   "lng": -80.770396
+  },
+  {
+   "name": "Marion County",
+   "fips": "39101",
+   "type": "county",
+   "redfin_region_id": 2210,
+   "realtor_location": "Marion County, OH",
+   "lat": 40.588034,
+   "lng": -83.168803
+  },
+  {
+   "name": "Medina County",
+   "fips": "39103",
+   "type": "county",
+   "redfin_region_id": 2211,
+   "realtor_location": "Medina County, OH",
+   "lat": 41.116174,
+   "lng": -81.899764
+  },
+  {
+   "name": "Meigs County",
+   "fips": "39105",
+   "type": "county",
+   "redfin_region_id": 2212,
+   "realtor_location": "Meigs County, OH",
+   "lat": 39.089807,
+   "lng": -82.028397
+  },
+  {
+   "name": "Mercer County",
+   "fips": "39107",
+   "type": "county",
+   "redfin_region_id": 2213,
+   "realtor_location": "Mercer County, OH",
+   "lat": 40.535333,
+   "lng": -84.632059
+  },
+  {
+   "name": "Miami County",
+   "fips": "39109",
+   "type": "county",
+   "redfin_region_id": 2214,
+   "realtor_location": "Miami County, OH",
+   "lat": 40.053326,
+   "lng": -84.228413
+  },
+  {
+   "name": "Monroe County",
+   "fips": "39111",
+   "type": "county",
+   "redfin_region_id": 2215,
+   "realtor_location": "Monroe County, OH",
+   "lat": 39.726253,
+   "lng": -81.090983
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "39113",
+   "type": "county",
+   "redfin_region_id": 2216,
+   "realtor_location": "Montgomery County, OH",
+   "lat": 39.753736,
+   "lng": -84.290591
+  },
+  {
+   "name": "Morgan County",
+   "fips": "39115",
+   "type": "county",
+   "redfin_region_id": 2217,
+   "realtor_location": "Morgan County, OH",
+   "lat": 39.624946,
+   "lng": -81.861697
+  },
+  {
+   "name": "Morrow County",
+   "fips": "39117",
+   "type": "county",
+   "redfin_region_id": 2218,
+   "realtor_location": "Morrow County, OH",
+   "lat": 40.525266,
+   "lng": -82.797729
+  },
+  {
+   "name": "Muskingum County",
+   "fips": "39119",
+   "type": "county",
+   "redfin_region_id": 2219,
+   "realtor_location": "Muskingum County, OH",
+   "lat": 39.966046,
+   "lng": -81.943506
+  },
+  {
+   "name": "Noble County",
+   "fips": "39121",
+   "type": "county",
+   "redfin_region_id": 2220,
+   "realtor_location": "Noble County, OH",
+   "lat": 39.767232,
+   "lng": -81.452493
+  },
+  {
+   "name": "Ottawa County",
+   "fips": "39123",
+   "type": "county",
+   "redfin_region_id": 2221,
+   "realtor_location": "Ottawa County, OH",
+   "lat": 41.545495,
+   "lng": -83.012613
+  },
+  {
+   "name": "Paulding County",
+   "fips": "39125",
+   "type": "county",
+   "redfin_region_id": 2222,
+   "realtor_location": "Paulding County, OH",
+   "lat": 41.118948,
+   "lng": -84.582125
+  },
+  {
+   "name": "Perry County",
+   "fips": "39127",
+   "type": "county",
+   "redfin_region_id": 2223,
+   "realtor_location": "Perry County, OH",
+   "lat": 39.743187,
+   "lng": -82.237952
+  },
+  {
+   "name": "Pickaway County",
+   "fips": "39129",
+   "type": "county",
+   "redfin_region_id": 2224,
+   "realtor_location": "Pickaway County, OH",
+   "lat": 39.648947,
+   "lng": -83.052827
+  },
+  {
+   "name": "Pike County",
+   "fips": "39131",
+   "type": "county",
+   "redfin_region_id": 2225,
+   "realtor_location": "Pike County, OH",
+   "lat": 39.071341,
+   "lng": -83.052911
+  },
+  {
+   "name": "Portage County",
+   "fips": "39133",
+   "type": "county",
+   "redfin_region_id": 2226,
+   "realtor_location": "Portage County, OH",
+   "lat": 41.16897,
+   "lng": -81.196962
+  },
+  {
+   "name": "Preble County",
+   "fips": "39135",
+   "type": "county",
+   "redfin_region_id": 2227,
+   "realtor_location": "Preble County, OH",
+   "lat": 39.73881,
+   "lng": -84.644758
+  },
+  {
+   "name": "Putnam County",
+   "fips": "39137",
+   "type": "county",
+   "redfin_region_id": 2228,
+   "realtor_location": "Putnam County, OH",
+   "lat": 41.024533,
+   "lng": -84.129879
+  },
+  {
+   "name": "Richland County",
+   "fips": "39139",
+   "type": "county",
+   "redfin_region_id": 2229,
+   "realtor_location": "Richland County, OH",
+   "lat": 40.774159,
+   "lng": -82.542781
+  },
+  {
+   "name": "Ross County",
+   "fips": "39141",
+   "type": "county",
+   "redfin_region_id": 2230,
+   "realtor_location": "Ross County, OH",
+   "lat": 39.323895,
+   "lng": -83.059538
+  },
+  {
+   "name": "Sandusky County",
+   "fips": "39143",
+   "type": "county",
+   "redfin_region_id": 2231,
+   "realtor_location": "Sandusky County, OH",
+   "lat": 41.355319,
+   "lng": -83.142776
+  },
+  {
+   "name": "Scioto County",
+   "fips": "39145",
+   "type": "county",
+   "redfin_region_id": 2232,
+   "realtor_location": "Scioto County, OH",
+   "lat": 38.814889,
+   "lng": -82.998675
+  },
+  {
+   "name": "Seneca County",
+   "fips": "39147",
+   "type": "county",
+   "redfin_region_id": 2233,
+   "realtor_location": "Seneca County, OH",
+   "lat": 41.119992,
+   "lng": -83.127547
+  },
+  {
+   "name": "Shelby County",
+   "fips": "39149",
+   "type": "county",
+   "redfin_region_id": 2234,
+   "realtor_location": "Shelby County, OH",
+   "lat": 40.33668,
+   "lng": -84.204142
+  },
+  {
+   "name": "Stark County",
+   "fips": "39151",
+   "type": "county",
+   "redfin_region_id": 2235,
+   "realtor_location": "Stark County, OH",
+   "lat": 40.814131,
+   "lng": -81.365667
+  },
+  {
+   "name": "Summit County",
+   "fips": "39153",
+   "type": "county",
+   "redfin_region_id": 2236,
+   "realtor_location": "Summit County, OH",
+   "lat": 41.121847,
+   "lng": -81.534928
+  },
+  {
+   "name": "Trumbull County",
+   "fips": "39155",
+   "type": "county",
+   "redfin_region_id": 2237,
+   "realtor_location": "Trumbull County, OH",
+   "lat": 41.306374,
+   "lng": -80.7704
+  },
+  {
+   "name": "Tuscarawas County",
+   "fips": "39157",
+   "type": "county",
+   "redfin_region_id": 2238,
+   "realtor_location": "Tuscarawas County, OH",
+   "lat": 40.44749,
+   "lng": -81.471105
+  },
+  {
+   "name": "Union County",
+   "fips": "39159",
+   "type": "county",
+   "redfin_region_id": 2239,
+   "realtor_location": "Union County, OH",
+   "lat": 40.295901,
+   "lng": -83.367042
+  },
+  {
+   "name": "Van Wert County",
+   "fips": "39161",
+   "type": "county",
+   "redfin_region_id": 2240,
+   "realtor_location": "Van Wert County, OH",
+   "lat": 40.85552,
+   "lng": -84.585775
+  },
+  {
+   "name": "Vinton County",
+   "fips": "39163",
+   "type": "county",
+   "redfin_region_id": 2241,
+   "realtor_location": "Vinton County, OH",
+   "lat": 39.252042,
+   "lng": -82.485961
+  },
+  {
+   "name": "Warren County",
+   "fips": "39165",
+   "type": "county",
+   "redfin_region_id": 2242,
+   "realtor_location": "Warren County, OH",
+   "lat": 39.425663,
+   "lng": -84.16994
+  },
+  {
+   "name": "Washington County",
+   "fips": "39167",
+   "type": "county",
+   "redfin_region_id": 2243,
+   "realtor_location": "Washington County, OH",
+   "lat": 39.450676,
+   "lng": -81.490636
+  },
+  {
+   "name": "Wayne County",
+   "fips": "39169",
+   "type": "county",
+   "redfin_region_id": 2244,
+   "realtor_location": "Wayne County, OH",
+   "lat": 40.829661,
+   "lng": -81.887194
+  },
+  {
+   "name": "Williams County",
+   "fips": "39171",
+   "type": "county",
+   "redfin_region_id": 2245,
+   "realtor_location": "Williams County, OH",
+   "lat": 41.564959,
+   "lng": -84.584324
+  },
+  {
+   "name": "Wood County",
+   "fips": "39173",
+   "type": "county",
+   "redfin_region_id": 2246,
+   "realtor_location": "Wood County, OH",
+   "lat": 41.360183,
+   "lng": -83.622682
+  },
+  {
+   "name": "Wyandot County",
+   "fips": "39175",
+   "type": "county",
+   "redfin_region_id": 2247,
+   "realtor_location": "Wyandot County, OH",
+   "lat": 40.839782,
+   "lng": -83.313681
+  }
+ ]
+}

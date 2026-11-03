@@ -1,0 +1,2292 @@
+{
+ "state": "TX",
+ "name": "Texas",
+ "counties": [
+  {
+   "name": "Anderson County",
+   "fips": "48001",
+   "type": "county",
+   "redfin_region_id": 2640,
+   "realtor_location": "Anderson County, TX",
+   "lat": 31.841261,
+   "lng": -95.661727
+  },
+  {
+   "name": "Andrews County",
+   "fips": "48003",
+   "type": "county",
+   "redfin_region_id": 2641,
+   "realtor_location": "Andrews County, TX",
+   "lat": 32.312258,
+   "lng": -102.640206
+  },
+  {
+   "name": "Angelina County",
+   "fips": "48005",
+   "type": "county",
+   "redfin_region_id": 2642,
+   "realtor_location": "Angelina County, TX",
+   "lat": 31.251896,
+   "lng": -94.611134
+  },
+  {
+   "name": "Aransas County",
+   "fips": "48007",
+   "type": "county",
+   "redfin_region_id": 2643,
+   "realtor_location": "Aransas County, TX",
+   "lat": 28.122621,
+   "lng": -96.967501
+  },
+  {
+   "name": "Archer County",
+   "fips": "48009",
+   "type": "county",
+   "redfin_region_id": 2644,
+   "realtor_location": "Archer County, TX",
+   "lat": 33.616305,
+   "lng": -98.687267
+  },
+  {
+   "name": "Armstrong County",
+   "fips": "48011",
+   "type": "county",
+   "redfin_region_id": 2645,
+   "realtor_location": "Armstrong County, TX",
+   "lat": 34.964179,
+   "lng": -101.356636
+  },
+  {
+   "name": "Atascosa County",
+   "fips": "48013",
+   "type": "county",
+   "redfin_region_id": 2646,
+   "realtor_location": "Atascosa County, TX",
+   "lat": 28.891478,
+   "lng": -98.535381
+  },
+  {
+   "name": "Austin County",
+   "fips": "48015",
+   "type": "county",
+   "redfin_region_id": 2647,
+   "realtor_location": "Austin County, TX",
+   "lat": 29.891901,
+   "lng": -96.27017
+  },
+  {
+   "name": "Bailey County",
+   "fips": "48017",
+   "type": "county",
+   "redfin_region_id": 2648,
+   "realtor_location": "Bailey County, TX",
+   "lat": 34.067521,
+   "lng": -102.830345
+  },
+  {
+   "name": "Bandera County",
+   "fips": "48019",
+   "type": "county",
+   "redfin_region_id": 2649,
+   "realtor_location": "Bandera County, TX",
+   "lat": 29.756389,
+   "lng": -99.248285
+  },
+  {
+   "name": "Bastrop County",
+   "fips": "48021",
+   "type": "county",
+   "redfin_region_id": 2650,
+   "realtor_location": "Bastrop County, TX",
+   "lat": 30.100772,
+   "lng": -97.310639
+  },
+  {
+   "name": "Baylor County",
+   "fips": "48023",
+   "type": "county",
+   "redfin_region_id": 2651,
+   "realtor_location": "Baylor County, TX",
+   "lat": 33.618802,
+   "lng": -99.208189
+  },
+  {
+   "name": "Bee County",
+   "fips": "48025",
+   "type": "county",
+   "redfin_region_id": 2652,
+   "realtor_location": "Bee County, TX",
+   "lat": 28.416077,
+   "lng": -97.742586
+  },
+  {
+   "name": "Bell County",
+   "fips": "48027",
+   "type": "county",
+   "redfin_region_id": 2653,
+   "realtor_location": "Bell County, TX",
+   "lat": 31.04275,
+   "lng": -97.481268
+  },
+  {
+   "name": "Bexar County",
+   "fips": "48029",
+   "type": "county",
+   "redfin_region_id": 2654,
+   "realtor_location": "Bexar County, TX",
+   "lat": 29.448671,
+   "lng": -98.520147
+  },
+  {
+   "name": "Blanco County",
+   "fips": "48031",
+   "type": "county",
+   "redfin_region_id": 2655,
+   "realtor_location": "Blanco County, TX",
+   "lat": 30.266456,
+   "lng": -98.399217
+  },
+  {
+   "name": "Borden County",
+   "fips": "48033",
+   "type": "county",
+   "redfin_region_id": 2656,
+   "realtor_location": "Borden County, TX",
+   "lat": 32.73859,
+   "lng": -101.439199
+  },
+  {
+   "name": "Bosque County",
+   "fips": "48035",
+   "type": "county",
+   "redfin_region_id": 2657,
+   "realtor_location": "Bosque County, TX",
+   "lat": 31.900819,
+   "lng": -97.637641
+  },
+  {
+   "name": "Bowie County",
+   "fips": "48037",
+   "type": "county",
+   "redfin_region_id": 2658,
+   "realtor_location": "Bowie County, TX",
+   "lat": 33.446065,
+   "lng": -94.422393
+  },
+  {
+   "name": "Brazoria County",
+   "fips": "48039",
+   "type": "county",
+   "redfin_region_id": 2659,
+   "realtor_location": "Brazoria County, TX",
+   "lat": 29.167817,
+   "lng": -95.434647
+  },
+  {
+   "name": "Brazos County",
+   "fips": "48041",
+   "type": "county",
+   "redfin_region_id": 2660,
+   "realtor_location": "Brazos County, TX",
+   "lat": 30.656713,
+   "lng": -96.302394
+  },
+  {
+   "name": "Brewster County",
+   "fips": "48043",
+   "type": "county",
+   "redfin_region_id": 2661,
+   "realtor_location": "Brewster County, TX",
+   "lat": 29.808997,
+   "lng": -103.252458
+  },
+  {
+   "name": "Briscoe County",
+   "fips": "48045",
+   "type": "county",
+   "redfin_region_id": 2662,
+   "realtor_location": "Briscoe County, TX",
+   "lat": 34.525172,
+   "lng": -101.205893
+  },
+  {
+   "name": "Brooks County",
+   "fips": "48047",
+   "type": "county",
+   "redfin_region_id": 2663,
+   "realtor_location": "Brooks County, TX",
+   "lat": 27.034994,
+   "lng": -98.215276
+  },
+  {
+   "name": "Brown County",
+   "fips": "48049",
+   "type": "county",
+   "redfin_region_id": 2664,
+   "realtor_location": "Brown County, TX",
+   "lat": 31.764137,
+   "lng": -98.998456
+  },
+  {
+   "name": "Burleson County",
+   "fips": "48051",
+   "type": "county",
+   "redfin_region_id": 2665,
+   "realtor_location": "Burleson County, TX",
+   "lat": 30.493487,
+   "lng": -96.622091
+  },
+  {
+   "name": "Burnet County",
+   "fips": "48053",
+   "type": "county",
+   "redfin_region_id": 2666,
+   "realtor_location": "Burnet County, TX",
+   "lat": 30.78963,
+   "lng": -98.201187
+  },
+  {
+   "name": "Caldwell County",
+   "fips": "48055",
+   "type": "county",
+   "redfin_region_id": 2667,
+   "realtor_location": "Caldwell County, TX",
+   "lat": 29.832399,
+   "lng": -97.628141
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "48057",
+   "type": "county",
+   "redfin_region_id": 2668,
+   "realtor_location": "Calhoun County, TX",
+   "lat": 28.441719,
+   "lng": -96.579574
+  },
+  {
+   "name": "Callahan County",
+   "fips": "48059",
+   "type": "county",
+   "redfin_region_id": 2669,
+   "realtor_location": "Callahan County, TX",
+   "lat": 32.29315,
+   "lng": -99.372249
+  },
+  {
+   "name": "Cameron County",
+   "fips": "48061",
+   "type": "county",
+   "redfin_region_id": 2670,
+   "realtor_location": "Cameron County, TX",
+   "lat": 26.102923,
+   "lng": -97.478958
+  },
+  {
+   "name": "Camp County",
+   "fips": "48063",
+   "type": "county",
+   "redfin_region_id": 2671,
+   "realtor_location": "Camp County, TX",
+   "lat": 32.974581,
+   "lng": -94.979085
+  },
+  {
+   "name": "Carson County",
+   "fips": "48065",
+   "type": "county",
+   "redfin_region_id": 2672,
+   "realtor_location": "Carson County, TX",
+   "lat": 35.405496,
+   "lng": -101.355356
+  },
+  {
+   "name": "Cass County",
+   "fips": "48067",
+   "type": "county",
+   "redfin_region_id": 2673,
+   "realtor_location": "Cass County, TX",
+   "lat": 33.083698,
+   "lng": -94.357579
+  },
+  {
+   "name": "Castro County",
+   "fips": "48069",
+   "type": "county",
+   "redfin_region_id": 2674,
+   "realtor_location": "Castro County, TX",
+   "lat": 34.533621,
+   "lng": -102.258786
+  },
+  {
+   "name": "Chambers County",
+   "fips": "48071",
+   "type": "county",
+   "redfin_region_id": 2675,
+   "realtor_location": "Chambers County, TX",
+   "lat": 29.696374,
+   "lng": -94.669445
+  },
+  {
+   "name": "Cherokee County",
+   "fips": "48073",
+   "type": "county",
+   "redfin_region_id": 2676,
+   "realtor_location": "Cherokee County, TX",
+   "lat": 31.843881,
+   "lng": -95.156343
+  },
+  {
+   "name": "Childress County",
+   "fips": "48075",
+   "type": "county",
+   "redfin_region_id": 2677,
+   "realtor_location": "Childress County, TX",
+   "lat": 34.524624,
+   "lng": -100.208166
+  },
+  {
+   "name": "Clay County",
+   "fips": "48077",
+   "type": "county",
+   "redfin_region_id": 2678,
+   "realtor_location": "Clay County, TX",
+   "lat": 33.785904,
+   "lng": -98.212917
+  },
+  {
+   "name": "Cochran County",
+   "fips": "48079",
+   "type": "county",
+   "redfin_region_id": 2679,
+   "realtor_location": "Cochran County, TX",
+   "lat": 33.60844,
+   "lng": -102.830449
+  },
+  {
+   "name": "Coke County",
+   "fips": "48081",
+   "type": "county",
+   "redfin_region_id": 2680,
+   "realtor_location": "Coke County, TX",
+   "lat": 31.87711,
+   "lng": -100.635231
+  },
+  {
+   "name": "Coleman County",
+   "fips": "48083",
+   "type": "county",
+   "redfin_region_id": 2681,
+   "realtor_location": "Coleman County, TX",
+   "lat": 31.914205,
+   "lng": -99.346622
+  },
+  {
+   "name": "Collin County",
+   "fips": "48085",
+   "type": "county",
+   "redfin_region_id": 2682,
+   "realtor_location": "Collin County, TX",
+   "lat": 33.194494,
+   "lng": -96.579428
+  },
+  {
+   "name": "Collingsworth County",
+   "fips": "48087",
+   "type": "county",
+   "redfin_region_id": 2683,
+   "realtor_location": "Collingsworth County, TX",
+   "lat": 34.963358,
+   "lng": -100.272135
+  },
+  {
+   "name": "Colorado County",
+   "fips": "48089",
+   "type": "county",
+   "redfin_region_id": 2684,
+   "realtor_location": "Colorado County, TX",
+   "lat": 29.596296,
+   "lng": -96.508935
+  },
+  {
+   "name": "Comal County",
+   "fips": "48091",
+   "type": "county",
+   "redfin_region_id": 2685,
+   "realtor_location": "Comal County, TX",
+   "lat": 29.812377,
+   "lng": -98.258129
+  },
+  {
+   "name": "Comanche County",
+   "fips": "48093",
+   "type": "county",
+   "redfin_region_id": 2686,
+   "realtor_location": "Comanche County, TX",
+   "lat": 31.951645,
+   "lng": -98.549617
+  },
+  {
+   "name": "Concho County",
+   "fips": "48095",
+   "type": "county",
+   "redfin_region_id": 2687,
+   "realtor_location": "Concho County, TX",
+   "lat": 31.318883,
+   "lng": -99.863649
+  },
+  {
+   "name": "Cooke County",
+   "fips": "48097",
+   "type": "county",
+   "redfin_region_id": 2688,
+   "realtor_location": "Cooke County, TX",
+   "lat": 33.639196,
+   "lng": -97.210343
+  },
+  {
+   "name": "Coryell County",
+   "fips": "48099",
+   "type": "county",
+   "redfin_region_id": 2689,
+   "realtor_location": "Coryell County, TX",
+   "lat": 31.391177,
+   "lng": -97.798022
+  },
+  {
+   "name": "Cottle County",
+   "fips": "48101",
+   "type": "county",
+   "redfin_region_id": 2690,
+   "realtor_location": "Cottle County, TX",
+   "lat": 34.091906,
+   "lng": -100.276442
+  },
+  {
+   "name": "Crane County",
+   "fips": "48103",
+   "type": "county",
+   "redfin_region_id": 2691,
+   "realtor_location": "Crane County, TX",
+   "lat": 31.422796,
+   "lng": -102.487774
+  },
+  {
+   "name": "Crockett County",
+   "fips": "48105",
+   "type": "county",
+   "redfin_region_id": 2692,
+   "realtor_location": "Crockett County, TX",
+   "lat": 30.717532,
+   "lng": -101.404211
+  },
+  {
+   "name": "Crosby County",
+   "fips": "48107",
+   "type": "county",
+   "redfin_region_id": 2693,
+   "realtor_location": "Crosby County, TX",
+   "lat": 33.609144,
+   "lng": -101.29871
+  },
+  {
+   "name": "Culberson County",
+   "fips": "48109",
+   "type": "county",
+   "redfin_region_id": 2694,
+   "realtor_location": "Culberson County, TX",
+   "lat": 31.445908,
+   "lng": -104.526945
+  },
+  {
+   "name": "Dallam County",
+   "fips": "48111",
+   "type": "county",
+   "redfin_region_id": 2695,
+   "realtor_location": "Dallam County, TX",
+   "lat": 36.28637,
+   "lng": -102.59402
+  },
+  {
+   "name": "Dallas County",
+   "fips": "48113",
+   "type": "county",
+   "redfin_region_id": 2696,
+   "realtor_location": "Dallas County, TX",
+   "lat": 32.766987,
+   "lng": -96.778424
+  },
+  {
+   "name": "Dawson County",
+   "fips": "48115",
+   "type": "county",
+   "redfin_region_id": 2697,
+   "realtor_location": "Dawson County, TX",
+   "lat": 32.742528,
+   "lng": -101.948771
+  },
+  {
+   "name": "Deaf Smith County",
+   "fips": "48117",
+   "type": "county",
+   "redfin_region_id": 2698,
+   "realtor_location": "Deaf Smith County, TX",
+   "lat": 34.940766,
+   "lng": -102.607564
+  },
+  {
+   "name": "Delta County",
+   "fips": "48119",
+   "type": "county",
+   "redfin_region_id": 2699,
+   "realtor_location": "Delta County, TX",
+   "lat": 33.385933,
+   "lng": -95.67335
+  },
+  {
+   "name": "Denton County",
+   "fips": "48121",
+   "type": "county",
+   "redfin_region_id": 2700,
+   "realtor_location": "Denton County, TX",
+   "lat": 33.205132,
+   "lng": -97.12114
+  },
+  {
+   "name": "DeWitt County",
+   "fips": "48123",
+   "type": "county",
+   "redfin_region_id": 2701,
+   "realtor_location": "DeWitt County, TX",
+   "lat": 29.082346,
+   "lng": -97.361654
+  },
+  {
+   "name": "Dickens County",
+   "fips": "48125",
+   "type": "county",
+   "redfin_region_id": 2702,
+   "realtor_location": "Dickens County, TX",
+   "lat": 33.615363,
+   "lng": -100.787617
+  },
+  {
+   "name": "Dimmit County",
+   "fips": "48127",
+   "type": "county",
+   "redfin_region_id": 2703,
+   "realtor_location": "Dimmit County, TX",
+   "lat": 28.423587,
+   "lng": -99.765871
+  },
+  {
+   "name": "Donley County",
+   "fips": "48129",
+   "type": "county",
+   "redfin_region_id": 2704,
+   "realtor_location": "Donley County, TX",
+   "lat": 34.955036,
+   "lng": -100.815846
+  },
+  {
+   "name": "Duval County",
+   "fips": "48131",
+   "type": "county",
+   "redfin_region_id": 2705,
+   "realtor_location": "Duval County, TX",
+   "lat": 27.681123,
+   "lng": -98.497393
+  },
+  {
+   "name": "Eastland County",
+   "fips": "48133",
+   "type": "county",
+   "redfin_region_id": 2706,
+   "realtor_location": "Eastland County, TX",
+   "lat": 32.324645,
+   "lng": -98.83656
+  },
+  {
+   "name": "Ector County",
+   "fips": "48135",
+   "type": "county",
+   "redfin_region_id": 2707,
+   "realtor_location": "Ector County, TX",
+   "lat": 31.865301,
+   "lng": -102.542507
+  },
+  {
+   "name": "Edwards County",
+   "fips": "48137",
+   "type": "county",
+   "redfin_region_id": 2708,
+   "realtor_location": "Edwards County, TX",
+   "lat": 29.985933,
+   "lng": -100.3074
+  },
+  {
+   "name": "Ellis County",
+   "fips": "48139",
+   "type": "county",
+   "redfin_region_id": 2709,
+   "realtor_location": "Ellis County, TX",
+   "lat": 32.346878,
+   "lng": -96.79694
+  },
+  {
+   "name": "El Paso County",
+   "fips": "48141",
+   "type": "county",
+   "redfin_region_id": 2710,
+   "realtor_location": "El Paso County, TX",
+   "lat": 31.76648,
+   "lng": -106.241423
+  },
+  {
+   "name": "Erath County",
+   "fips": "48143",
+   "type": "county",
+   "redfin_region_id": 2711,
+   "realtor_location": "Erath County, TX",
+   "lat": 32.236661,
+   "lng": -98.220507
+  },
+  {
+   "name": "Falls County",
+   "fips": "48145",
+   "type": "county",
+   "redfin_region_id": 2712,
+   "realtor_location": "Falls County, TX",
+   "lat": 31.25193,
+   "lng": -96.934127
+  },
+  {
+   "name": "Fannin County",
+   "fips": "48147",
+   "type": "county",
+   "redfin_region_id": 2713,
+   "realtor_location": "Fannin County, TX",
+   "lat": 33.591161,
+   "lng": -96.104988
+  },
+  {
+   "name": "Fayette County",
+   "fips": "48149",
+   "type": "county",
+   "redfin_region_id": 2714,
+   "realtor_location": "Fayette County, TX",
+   "lat": 29.877886,
+   "lng": -96.921231
+  },
+  {
+   "name": "Fisher County",
+   "fips": "48151",
+   "type": "county",
+   "redfin_region_id": 2715,
+   "realtor_location": "Fisher County, TX",
+   "lat": 32.740473,
+   "lng": -100.40312
+  },
+  {
+   "name": "Floyd County",
+   "fips": "48153",
+   "type": "county",
+   "redfin_region_id": 2716,
+   "realtor_location": "Floyd County, TX",
+   "lat": 34.07373,
+   "lng": -101.303274
+  },
+  {
+   "name": "Foard County",
+   "fips": "48155",
+   "type": "county",
+   "redfin_region_id": 2717,
+   "realtor_location": "Foard County, TX",
+   "lat": 33.963306,
+   "lng": -99.816828
+  },
+  {
+   "name": "Fort Bend County",
+   "fips": "48157",
+   "type": "county",
+   "redfin_region_id": 2718,
+   "realtor_location": "Fort Bend County, TX",
+   "lat": 29.526602,
+   "lng": -95.771015
+  },
+  {
+   "name": "Franklin County",
+   "fips": "48159",
+   "type": "county",
+   "redfin_region_id": 2719,
+   "realtor_location": "Franklin County, TX",
+   "lat": 33.175846,
+   "lng": -95.219066
+  },
+  {
+   "name": "Freestone County",
+   "fips": "48161",
+   "type": "county",
+   "redfin_region_id": 2720,
+   "realtor_location": "Freestone County, TX",
+   "lat": 31.701749,
+   "lng": -96.144957
+  },
+  {
+   "name": "Frio County",
+   "fips": "48163",
+   "type": "county",
+   "redfin_region_id": 2721,
+   "realtor_location": "Frio County, TX",
+   "lat": 28.869383,
+   "lng": -99.109005
+  },
+  {
+   "name": "Gaines County",
+   "fips": "48165",
+   "type": "county",
+   "redfin_region_id": 2722,
+   "realtor_location": "Gaines County, TX",
+   "lat": 32.743942,
+   "lng": -102.631561
+  },
+  {
+   "name": "Galveston County",
+   "fips": "48167",
+   "type": "county",
+   "redfin_region_id": 2723,
+   "realtor_location": "Galveston County, TX",
+   "lat": 29.233453,
+   "lng": -94.888456
+  },
+  {
+   "name": "Garza County",
+   "fips": "48169",
+   "type": "county",
+   "redfin_region_id": 2724,
+   "realtor_location": "Garza County, TX",
+   "lat": 33.183792,
+   "lng": -101.301134
+  },
+  {
+   "name": "Gillespie County",
+   "fips": "48171",
+   "type": "county",
+   "redfin_region_id": 2725,
+   "realtor_location": "Gillespie County, TX",
+   "lat": 30.325093,
+   "lng": -98.94185
+  },
+  {
+   "name": "Glasscock County",
+   "fips": "48173",
+   "type": "county",
+   "redfin_region_id": 2726,
+   "realtor_location": "Glasscock County, TX",
+   "lat": 31.868006,
+   "lng": -101.521494
+  },
+  {
+   "name": "Goliad County",
+   "fips": "48175",
+   "type": "county",
+   "redfin_region_id": 2727,
+   "realtor_location": "Goliad County, TX",
+   "lat": 28.6607,
+   "lng": -97.430415
+  },
+  {
+   "name": "Gonzales County",
+   "fips": "48177",
+   "type": "county",
+   "redfin_region_id": 2728,
+   "realtor_location": "Gonzales County, TX",
+   "lat": 29.461912,
+   "lng": -97.49192
+  },
+  {
+   "name": "Gray County",
+   "fips": "48179",
+   "type": "county",
+   "redfin_region_id": 2729,
+   "realtor_location": "Gray County, TX",
+   "lat": 35.402542,
+   "lng": -100.812374
+  },
+  {
+   "name": "Grayson County",
+   "fips": "48181",
+   "type": "county",
+   "redfin_region_id": 2730,
+   "realtor_location": "Grayson County, TX",
+   "lat": 33.624524,
+   "lng": -96.675693
+  },
+  {
+   "name": "Gregg County",
+   "fips": "48183",
+   "type": "county",
+   "redfin_region_id": 2731,
+   "realtor_location": "Gregg County, TX",
+   "lat": 32.486401,
+   "lng": -94.816277
+  },
+  {
+   "name": "Grimes County",
+   "fips": "48185",
+   "type": "county",
+   "redfin_region_id": 2732,
+   "realtor_location": "Grimes County, TX",
+   "lat": 30.543231,
+   "lng": -95.988082
+  },
+  {
+   "name": "Guadalupe County",
+   "fips": "48187",
+   "type": "county",
+   "redfin_region_id": 2733,
+   "realtor_location": "Guadalupe County, TX",
+   "lat": 29.582671,
+   "lng": -97.948995
+  },
+  {
+   "name": "Hale County",
+   "fips": "48189",
+   "type": "county",
+   "redfin_region_id": 2734,
+   "realtor_location": "Hale County, TX",
+   "lat": 34.068436,
+   "lng": -101.822888
+  },
+  {
+   "name": "Hall County",
+   "fips": "48191",
+   "type": "county",
+   "redfin_region_id": 2735,
+   "realtor_location": "Hall County, TX",
+   "lat": 34.453189,
+   "lng": -100.576343
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "48193",
+   "type": "county",
+   "redfin_region_id": 2736,
+   "realtor_location": "Hamilton County, TX",
+   "lat": 31.707342,
+   "lng": -98.111756
+  },
+  {
+   "name": "Hansford County",
+   "fips": "48195",
+   "type": "county",
+   "redfin_region_id": 2737,
+   "realtor_location": "Hansford County, TX",
+   "lat": 36.272847,
+   "lng": -101.35693
+  },
+  {
+   "name": "Hardeman County",
+   "fips": "48197",
+   "type": "county",
+   "redfin_region_id": 2738,
+   "realtor_location": "Hardeman County, TX",
+   "lat": 34.289904,
+   "lng": -99.745697
+  },
+  {
+   "name": "Hardin County",
+   "fips": "48199",
+   "type": "county",
+   "redfin_region_id": 2739,
+   "realtor_location": "Hardin County, TX",
+   "lat": 30.329648,
+   "lng": -94.393178
+  },
+  {
+   "name": "Harris County",
+   "fips": "48201",
+   "type": "county",
+   "redfin_region_id": 2740,
+   "realtor_location": "Harris County, TX",
+   "lat": 29.857273,
+   "lng": -95.393037
+  },
+  {
+   "name": "Harrison County",
+   "fips": "48203",
+   "type": "county",
+   "redfin_region_id": 2741,
+   "realtor_location": "Harrison County, TX",
+   "lat": 32.547991,
+   "lng": -94.374434
+  },
+  {
+   "name": "Hartley County",
+   "fips": "48205",
+   "type": "county",
+   "redfin_region_id": 2742,
+   "realtor_location": "Hartley County, TX",
+   "lat": 35.840244,
+   "lng": -102.610047
+  },
+  {
+   "name": "Haskell County",
+   "fips": "48207",
+   "type": "county",
+   "redfin_region_id": 2743,
+   "realtor_location": "Haskell County, TX",
+   "lat": 33.175964,
+   "lng": -99.730774
+  },
+  {
+   "name": "Hays County",
+   "fips": "48209",
+   "type": "county",
+   "redfin_region_id": 2744,
+   "realtor_location": "Hays County, TX",
+   "lat": 30.061225,
+   "lng": -98.029267
+  },
+  {
+   "name": "Hemphill County",
+   "fips": "48211",
+   "type": "county",
+   "redfin_region_id": 2745,
+   "realtor_location": "Hemphill County, TX",
+   "lat": 35.815956,
+   "lng": -100.27921
+  },
+  {
+   "name": "Henderson County",
+   "fips": "48213",
+   "type": "county",
+   "redfin_region_id": 2746,
+   "realtor_location": "Henderson County, TX",
+   "lat": 32.211633,
+   "lng": -95.853418
+  },
+  {
+   "name": "Hidalgo County",
+   "fips": "48215",
+   "type": "county",
+   "redfin_region_id": 2747,
+   "realtor_location": "Hidalgo County, TX",
+   "lat": 26.396384,
+   "lng": -98.18099
+  },
+  {
+   "name": "Hill County",
+   "fips": "48217",
+   "type": "county",
+   "redfin_region_id": 2748,
+   "realtor_location": "Hill County, TX",
+   "lat": 31.982681,
+   "lng": -97.130668
+  },
+  {
+   "name": "Hockley County",
+   "fips": "48219",
+   "type": "county",
+   "redfin_region_id": 2749,
+   "realtor_location": "Hockley County, TX",
+   "lat": 33.605932,
+   "lng": -102.343398
+  },
+  {
+   "name": "Hood County",
+   "fips": "48221",
+   "type": "county",
+   "redfin_region_id": 2750,
+   "realtor_location": "Hood County, TX",
+   "lat": 32.430149,
+   "lng": -97.831677
+  },
+  {
+   "name": "Hopkins County",
+   "fips": "48223",
+   "type": "county",
+   "redfin_region_id": 2751,
+   "realtor_location": "Hopkins County, TX",
+   "lat": 33.148967,
+   "lng": -95.565434
+  },
+  {
+   "name": "Houston County",
+   "fips": "48225",
+   "type": "county",
+   "redfin_region_id": 2752,
+   "realtor_location": "Houston County, TX",
+   "lat": 31.323036,
+   "lng": -95.4216
+  },
+  {
+   "name": "Howard County",
+   "fips": "48227",
+   "type": "county",
+   "redfin_region_id": 2753,
+   "realtor_location": "Howard County, TX",
+   "lat": 32.30343,
+   "lng": -101.438721
+  },
+  {
+   "name": "Hudspeth County",
+   "fips": "48229",
+   "type": "county",
+   "redfin_region_id": 2754,
+   "realtor_location": "Hudspeth County, TX",
+   "lat": 31.450868,
+   "lng": -105.377549
+  },
+  {
+   "name": "Hunt County",
+   "fips": "48231",
+   "type": "county",
+   "redfin_region_id": 2755,
+   "realtor_location": "Hunt County, TX",
+   "lat": 33.123308,
+   "lng": -96.08423
+  },
+  {
+   "name": "Hutchinson County",
+   "fips": "48233",
+   "type": "county",
+   "redfin_region_id": 2756,
+   "realtor_location": "Hutchinson County, TX",
+   "lat": 35.837047,
+   "lng": -101.362746
+  },
+  {
+   "name": "Irion County",
+   "fips": "48235",
+   "type": "county",
+   "redfin_region_id": 2757,
+   "realtor_location": "Irion County, TX",
+   "lat": 31.303424,
+   "lng": -100.981304
+  },
+  {
+   "name": "Jack County",
+   "fips": "48237",
+   "type": "county",
+   "redfin_region_id": 2758,
+   "realtor_location": "Jack County, TX",
+   "lat": 33.23216,
+   "lng": -98.171177
+  },
+  {
+   "name": "Jackson County",
+   "fips": "48239",
+   "type": "county",
+   "redfin_region_id": 2759,
+   "realtor_location": "Jackson County, TX",
+   "lat": 28.959802,
+   "lng": -96.58908
+  },
+  {
+   "name": "Jasper County",
+   "fips": "48241",
+   "type": "county",
+   "redfin_region_id": 2760,
+   "realtor_location": "Jasper County, TX",
+   "lat": 30.752932,
+   "lng": -94.022294
+  },
+  {
+   "name": "Jeff Davis County",
+   "fips": "48243",
+   "type": "county",
+   "redfin_region_id": 2761,
+   "realtor_location": "Jeff Davis County, TX",
+   "lat": 30.625357,
+   "lng": -104.191873
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "48245",
+   "type": "county",
+   "redfin_region_id": 2762,
+   "realtor_location": "Jefferson County, TX",
+   "lat": 29.854,
+   "lng": -94.149331
+  },
+  {
+   "name": "Jim Hogg County",
+   "fips": "48247",
+   "type": "county",
+   "redfin_region_id": 2763,
+   "realtor_location": "Jim Hogg County, TX",
+   "lat": 27.053231,
+   "lng": -98.747572
+  },
+  {
+   "name": "Jim Wells County",
+   "fips": "48249",
+   "type": "county",
+   "redfin_region_id": 2764,
+   "realtor_location": "Jim Wells County, TX",
+   "lat": 27.733516,
+   "lng": -98.090814
+  },
+  {
+   "name": "Johnson County",
+   "fips": "48251",
+   "type": "county",
+   "redfin_region_id": 2765,
+   "realtor_location": "Johnson County, TX",
+   "lat": 32.379821,
+   "lng": -97.364959
+  },
+  {
+   "name": "Jones County",
+   "fips": "48253",
+   "type": "county",
+   "redfin_region_id": 2766,
+   "realtor_location": "Jones County, TX",
+   "lat": 32.743709,
+   "lng": -99.87443
+  },
+  {
+   "name": "Karnes County",
+   "fips": "48255",
+   "type": "county",
+   "redfin_region_id": 2767,
+   "realtor_location": "Karnes County, TX",
+   "lat": 28.908996,
+   "lng": -97.852205
+  },
+  {
+   "name": "Kaufman County",
+   "fips": "48257",
+   "type": "county",
+   "redfin_region_id": 2768,
+   "realtor_location": "Kaufman County, TX",
+   "lat": 32.598944,
+   "lng": -96.288377
+  },
+  {
+   "name": "Kendall County",
+   "fips": "48259",
+   "type": "county",
+   "redfin_region_id": 2769,
+   "realtor_location": "Kendall County, TX",
+   "lat": 29.943525,
+   "lng": -98.709269
+  },
+  {
+   "name": "Kenedy County",
+   "fips": "48261",
+   "type": "county",
+   "redfin_region_id": 2770,
+   "realtor_location": "Kenedy County, TX",
+   "lat": 26.890213,
+   "lng": -97.591143
+  },
+  {
+   "name": "Kent County",
+   "fips": "48263",
+   "type": "county",
+   "redfin_region_id": 2771,
+   "realtor_location": "Kent County, TX",
+   "lat": 33.18478,
+   "lng": -100.76972
+  },
+  {
+   "name": "Kerr County",
+   "fips": "48265",
+   "type": "county",
+   "redfin_region_id": 2772,
+   "realtor_location": "Kerr County, TX",
+   "lat": 30.059953,
+   "lng": -99.353339
+  },
+  {
+   "name": "Kimble County",
+   "fips": "48267",
+   "type": "county",
+   "redfin_region_id": 2773,
+   "realtor_location": "Kimble County, TX",
+   "lat": 30.479472,
+   "lng": -99.746396
+  },
+  {
+   "name": "King County",
+   "fips": "48269",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "King County, TX",
+   "lat": 33.614268,
+   "lng": -100.245345
+  },
+  {
+   "name": "Kinney County",
+   "fips": "48271",
+   "type": "county",
+   "redfin_region_id": 2775,
+   "realtor_location": "Kinney County, TX",
+   "lat": 29.347086,
+   "lng": -100.4177
+  },
+  {
+   "name": "Kleberg County",
+   "fips": "48273",
+   "type": "county",
+   "redfin_region_id": 2776,
+   "realtor_location": "Kleberg County, TX",
+   "lat": 27.438735,
+   "lng": -97.66062
+  },
+  {
+   "name": "Knox County",
+   "fips": "48275",
+   "type": "county",
+   "redfin_region_id": 2777,
+   "realtor_location": "Knox County, TX",
+   "lat": 33.61189,
+   "lng": -99.730356
+  },
+  {
+   "name": "Lamar County",
+   "fips": "48277",
+   "type": "county",
+   "redfin_region_id": 2778,
+   "realtor_location": "Lamar County, TX",
+   "lat": 33.667263,
+   "lng": -95.570348
+  },
+  {
+   "name": "Lamb County",
+   "fips": "48279",
+   "type": "county",
+   "redfin_region_id": 2779,
+   "realtor_location": "Lamb County, TX",
+   "lat": 34.068861,
+   "lng": -102.348018
+  },
+  {
+   "name": "Lampasas County",
+   "fips": "48281",
+   "type": "county",
+   "redfin_region_id": 2780,
+   "realtor_location": "Lampasas County, TX",
+   "lat": 31.196731,
+   "lng": -98.240889
+  },
+  {
+   "name": "La Salle County",
+   "fips": "48283",
+   "type": "county",
+   "redfin_region_id": 2781,
+   "realtor_location": "La Salle County, TX",
+   "lat": 28.351098,
+   "lng": -99.096774
+  },
+  {
+   "name": "Lavaca County",
+   "fips": "48285",
+   "type": "county",
+   "redfin_region_id": 2782,
+   "realtor_location": "Lavaca County, TX",
+   "lat": 29.382578,
+   "lng": -96.923633
+  },
+  {
+   "name": "Lee County",
+   "fips": "48287",
+   "type": "county",
+   "redfin_region_id": 2783,
+   "realtor_location": "Lee County, TX",
+   "lat": 30.321498,
+   "lng": -96.976823
+  },
+  {
+   "name": "Leon County",
+   "fips": "48289",
+   "type": "county",
+   "redfin_region_id": 2784,
+   "realtor_location": "Leon County, TX",
+   "lat": 31.300493,
+   "lng": -95.995622
+  },
+  {
+   "name": "Liberty County",
+   "fips": "48291",
+   "type": "county",
+   "redfin_region_id": 2785,
+   "realtor_location": "Liberty County, TX",
+   "lat": 30.158508,
+   "lng": -94.844061
+  },
+  {
+   "name": "Limestone County",
+   "fips": "48293",
+   "type": "county",
+   "redfin_region_id": 2786,
+   "realtor_location": "Limestone County, TX",
+   "lat": 31.547543,
+   "lng": -96.593623
+  },
+  {
+   "name": "Lipscomb County",
+   "fips": "48295",
+   "type": "county",
+   "redfin_region_id": 2787,
+   "realtor_location": "Lipscomb County, TX",
+   "lat": 36.2802,
+   "lng": -100.272683
+  },
+  {
+   "name": "Live Oak County",
+   "fips": "48297",
+   "type": "county",
+   "redfin_region_id": 2788,
+   "realtor_location": "Live Oak County, TX",
+   "lat": 28.351535,
+   "lng": -98.126961
+  },
+  {
+   "name": "Llano County",
+   "fips": "48299",
+   "type": "county",
+   "redfin_region_id": 2789,
+   "realtor_location": "Llano County, TX",
+   "lat": 30.707584,
+   "lng": -98.68469
+  },
+  {
+   "name": "Loving County",
+   "fips": "48301",
+   "type": "county",
+   "redfin_region_id": null,
+   "realtor_location": "Loving County, TX",
+   "lat": 31.844936,
+   "lng": -103.561229
+  },
+  {
+   "name": "Lubbock County",
+   "fips": "48303",
+   "type": "county",
+   "redfin_region_id": 2791,
+   "realtor_location": "Lubbock County, TX",
+   "lat": 33.611469,
+   "lng": -101.819944
+  },
+  {
+   "name": "Lynn County",
+   "fips": "48305",
+   "type": "county",
+   "redfin_region_id": 2792,
+   "realtor_location": "Lynn County, TX",
+   "lat": 33.178412,
+   "lng": -101.818493
+  },
+  {
+   "name": "McCulloch County",
+   "fips": "48307",
+   "type": "county",
+   "redfin_region_id": 2793,
+   "realtor_location": "McCulloch County, TX",
+   "lat": 31.205477,
+   "lng": -99.359856
+  },
+  {
+   "name": "McLennan County",
+   "fips": "48309",
+   "type": "county",
+   "redfin_region_id": 2794,
+   "realtor_location": "McLennan County, TX",
+   "lat": 31.549596,
+   "lng": -97.201511
+  },
+  {
+   "name": "McMullen County",
+   "fips": "48311",
+   "type": "county",
+   "redfin_region_id": 2795,
+   "realtor_location": "McMullen County, TX",
+   "lat": 28.384922,
+   "lng": -98.578853
+  },
+  {
+   "name": "Madison County",
+   "fips": "48313",
+   "type": "county",
+   "redfin_region_id": 2796,
+   "realtor_location": "Madison County, TX",
+   "lat": 30.966878,
+   "lng": -95.930372
+  },
+  {
+   "name": "Marion County",
+   "fips": "48315",
+   "type": "county",
+   "redfin_region_id": 2797,
+   "realtor_location": "Marion County, TX",
+   "lat": 32.798182,
+   "lng": -94.356853
+  },
+  {
+   "name": "Martin County",
+   "fips": "48317",
+   "type": "county",
+   "redfin_region_id": 2798,
+   "realtor_location": "Martin County, TX",
+   "lat": 32.30983,
+   "lng": -101.961836
+  },
+  {
+   "name": "Mason County",
+   "fips": "48319",
+   "type": "county",
+   "redfin_region_id": 2799,
+   "realtor_location": "Mason County, TX",
+   "lat": 30.703916,
+   "lng": -99.237302
+  },
+  {
+   "name": "Matagorda County",
+   "fips": "48321",
+   "type": "county",
+   "redfin_region_id": 2800,
+   "realtor_location": "Matagorda County, TX",
+   "lat": 28.77476,
+   "lng": -96.001532
+  },
+  {
+   "name": "Maverick County",
+   "fips": "48323",
+   "type": "county",
+   "redfin_region_id": 2801,
+   "realtor_location": "Maverick County, TX",
+   "lat": 28.729787,
+   "lng": -100.316678
+  },
+  {
+   "name": "Medina County",
+   "fips": "48325",
+   "type": "county",
+   "redfin_region_id": 2802,
+   "realtor_location": "Medina County, TX",
+   "lat": 29.353661,
+   "lng": -99.111085
+  },
+  {
+   "name": "Menard County",
+   "fips": "48327",
+   "type": "county",
+   "redfin_region_id": 2803,
+   "realtor_location": "Menard County, TX",
+   "lat": 30.885268,
+   "lng": -99.858861
+  },
+  {
+   "name": "Midland County",
+   "fips": "48329",
+   "type": "county",
+   "redfin_region_id": 2804,
+   "realtor_location": "Midland County, TX",
+   "lat": 31.814269,
+   "lng": -102.002454
+  },
+  {
+   "name": "Milam County",
+   "fips": "48331",
+   "type": "county",
+   "redfin_region_id": 2805,
+   "realtor_location": "Milam County, TX",
+   "lat": 30.791242,
+   "lng": -96.984395
+  },
+  {
+   "name": "Mills County",
+   "fips": "48333",
+   "type": "county",
+   "redfin_region_id": 2806,
+   "realtor_location": "Mills County, TX",
+   "lat": 31.494888,
+   "lng": -98.594623
+  },
+  {
+   "name": "Mitchell County",
+   "fips": "48335",
+   "type": "county",
+   "redfin_region_id": 2807,
+   "realtor_location": "Mitchell County, TX",
+   "lat": 32.304117,
+   "lng": -100.924392
+  },
+  {
+   "name": "Montague County",
+   "fips": "48337",
+   "type": "county",
+   "redfin_region_id": 2808,
+   "realtor_location": "Montague County, TX",
+   "lat": 33.678356,
+   "lng": -97.725014
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "48339",
+   "type": "county",
+   "redfin_region_id": 2809,
+   "realtor_location": "Montgomery County, TX",
+   "lat": 30.298801,
+   "lng": -95.50295
+  },
+  {
+   "name": "Moore County",
+   "fips": "48341",
+   "type": "county",
+   "redfin_region_id": 2810,
+   "realtor_location": "Moore County, TX",
+   "lat": 35.835676,
+   "lng": -101.890502
+  },
+  {
+   "name": "Morris County",
+   "fips": "48343",
+   "type": "county",
+   "redfin_region_id": 2811,
+   "realtor_location": "Morris County, TX",
+   "lat": 33.116466,
+   "lng": -94.731265
+  },
+  {
+   "name": "Motley County",
+   "fips": "48345",
+   "type": "county",
+   "redfin_region_id": 2812,
+   "realtor_location": "Motley County, TX",
+   "lat": 34.057899,
+   "lng": -100.793152
+  },
+  {
+   "name": "Nacogdoches County",
+   "fips": "48347",
+   "type": "county",
+   "redfin_region_id": 2813,
+   "realtor_location": "Nacogdoches County, TX",
+   "lat": 31.62056,
+   "lng": -94.62025
+  },
+  {
+   "name": "Navarro County",
+   "fips": "48349",
+   "type": "county",
+   "redfin_region_id": 2814,
+   "realtor_location": "Navarro County, TX",
+   "lat": 32.048448,
+   "lng": -96.476909
+  },
+  {
+   "name": "Newton County",
+   "fips": "48351",
+   "type": "county",
+   "redfin_region_id": 2815,
+   "realtor_location": "Newton County, TX",
+   "lat": 30.786718,
+   "lng": -93.73925
+  },
+  {
+   "name": "Nolan County",
+   "fips": "48353",
+   "type": "county",
+   "redfin_region_id": 2816,
+   "realtor_location": "Nolan County, TX",
+   "lat": 32.312338,
+   "lng": -100.418108
+  },
+  {
+   "name": "Nueces County",
+   "fips": "48355",
+   "type": "county",
+   "redfin_region_id": 2817,
+   "realtor_location": "Nueces County, TX",
+   "lat": 27.740032,
+   "lng": -97.516214
+  },
+  {
+   "name": "Ochiltree County",
+   "fips": "48357",
+   "type": "county",
+   "redfin_region_id": 2818,
+   "realtor_location": "Ochiltree County, TX",
+   "lat": 36.278744,
+   "lng": -100.815864
+  },
+  {
+   "name": "Oldham County",
+   "fips": "48359",
+   "type": "county",
+   "redfin_region_id": 2819,
+   "realtor_location": "Oldham County, TX",
+   "lat": 35.401921,
+   "lng": -102.59762
+  },
+  {
+   "name": "Orange County",
+   "fips": "48361",
+   "type": "county",
+   "redfin_region_id": 2820,
+   "realtor_location": "Orange County, TX",
+   "lat": 30.122323,
+   "lng": -93.8941
+  },
+  {
+   "name": "Palo Pinto County",
+   "fips": "48363",
+   "type": "county",
+   "redfin_region_id": 2821,
+   "realtor_location": "Palo Pinto County, TX",
+   "lat": 32.752204,
+   "lng": -98.317967
+  },
+  {
+   "name": "Panola County",
+   "fips": "48365",
+   "type": "county",
+   "redfin_region_id": 2822,
+   "realtor_location": "Panola County, TX",
+   "lat": 32.163978,
+   "lng": -94.305156
+  },
+  {
+   "name": "Parker County",
+   "fips": "48367",
+   "type": "county",
+   "redfin_region_id": 2823,
+   "realtor_location": "Parker County, TX",
+   "lat": 32.777096,
+   "lng": -97.805905
+  },
+  {
+   "name": "Parmer County",
+   "fips": "48369",
+   "type": "county",
+   "redfin_region_id": 2824,
+   "realtor_location": "Parmer County, TX",
+   "lat": 34.532163,
+   "lng": -102.784853
+  },
+  {
+   "name": "Pecos County",
+   "fips": "48371",
+   "type": "county",
+   "redfin_region_id": 2825,
+   "realtor_location": "Pecos County, TX",
+   "lat": 30.773298,
+   "lng": -102.718153
+  },
+  {
+   "name": "Polk County",
+   "fips": "48373",
+   "type": "county",
+   "redfin_region_id": 2826,
+   "realtor_location": "Polk County, TX",
+   "lat": 30.784553,
+   "lng": -94.837338
+  },
+  {
+   "name": "Potter County",
+   "fips": "48375",
+   "type": "county",
+   "redfin_region_id": 2827,
+   "realtor_location": "Potter County, TX",
+   "lat": 35.398675,
+   "lng": -101.893804
+  },
+  {
+   "name": "Presidio County",
+   "fips": "48377",
+   "type": "county",
+   "redfin_region_id": 2828,
+   "realtor_location": "Presidio County, TX",
+   "lat": 30.005891,
+   "lng": -104.261619
+  },
+  {
+   "name": "Rains County",
+   "fips": "48379",
+   "type": "county",
+   "redfin_region_id": 2829,
+   "realtor_location": "Rains County, TX",
+   "lat": 32.870457,
+   "lng": -95.795613
+  },
+  {
+   "name": "Randall County",
+   "fips": "48381",
+   "type": "county",
+   "redfin_region_id": 2830,
+   "realtor_location": "Randall County, TX",
+   "lat": 34.962529,
+   "lng": -101.895547
+  },
+  {
+   "name": "Reagan County",
+   "fips": "48383",
+   "type": "county",
+   "redfin_region_id": 2831,
+   "realtor_location": "Reagan County, TX",
+   "lat": 31.375191,
+   "lng": -101.514395
+  },
+  {
+   "name": "Real County",
+   "fips": "48385",
+   "type": "county",
+   "redfin_region_id": 2832,
+   "realtor_location": "Real County, TX",
+   "lat": 29.830097,
+   "lng": -99.812549
+  },
+  {
+   "name": "Red River County",
+   "fips": "48387",
+   "type": "county",
+   "redfin_region_id": 2833,
+   "realtor_location": "Red River County, TX",
+   "lat": 33.619625,
+   "lng": -95.048429
+  },
+  {
+   "name": "Reeves County",
+   "fips": "48389",
+   "type": "county",
+   "redfin_region_id": 2834,
+   "realtor_location": "Reeves County, TX",
+   "lat": 31.308366,
+   "lng": -103.712706
+  },
+  {
+   "name": "Refugio County",
+   "fips": "48391",
+   "type": "county",
+   "redfin_region_id": 2835,
+   "realtor_location": "Refugio County, TX",
+   "lat": 28.322116,
+   "lng": -97.162472
+  },
+  {
+   "name": "Roberts County",
+   "fips": "48393",
+   "type": "county",
+   "redfin_region_id": 2836,
+   "realtor_location": "Roberts County, TX",
+   "lat": 35.838596,
+   "lng": -100.836682
+  },
+  {
+   "name": "Robertson County",
+   "fips": "48395",
+   "type": "county",
+   "redfin_region_id": 2837,
+   "realtor_location": "Robertson County, TX",
+   "lat": 31.025481,
+   "lng": -96.514941
+  },
+  {
+   "name": "Rockwall County",
+   "fips": "48397",
+   "type": "county",
+   "redfin_region_id": 2838,
+   "realtor_location": "Rockwall County, TX",
+   "lat": 32.899886,
+   "lng": -96.41205
+  },
+  {
+   "name": "Runnels County",
+   "fips": "48399",
+   "type": "county",
+   "redfin_region_id": 2839,
+   "realtor_location": "Runnels County, TX",
+   "lat": 31.845119,
+   "lng": -99.982715
+  },
+  {
+   "name": "Rusk County",
+   "fips": "48401",
+   "type": "county",
+   "redfin_region_id": 2840,
+   "realtor_location": "Rusk County, TX",
+   "lat": 32.109423,
+   "lng": -94.756382
+  },
+  {
+   "name": "Sabine County",
+   "fips": "48403",
+   "type": "county",
+   "redfin_region_id": 2841,
+   "realtor_location": "Sabine County, TX",
+   "lat": 31.3433,
+   "lng": -93.851913
+  },
+  {
+   "name": "San Augustine County",
+   "fips": "48405",
+   "type": "county",
+   "redfin_region_id": 2842,
+   "realtor_location": "San Augustine County, TX",
+   "lat": 31.382449,
+   "lng": -94.16318
+  },
+  {
+   "name": "San Jacinto County",
+   "fips": "48407",
+   "type": "county",
+   "redfin_region_id": 2843,
+   "realtor_location": "San Jacinto County, TX",
+   "lat": 30.574388,
+   "lng": -95.163136
+  },
+  {
+   "name": "San Patricio County",
+   "fips": "48409",
+   "type": "county",
+   "redfin_region_id": 2844,
+   "realtor_location": "San Patricio County, TX",
+   "lat": 28.011794,
+   "lng": -97.517157
+  },
+  {
+   "name": "San Saba County",
+   "fips": "48411",
+   "type": "county",
+   "redfin_region_id": 2845,
+   "realtor_location": "San Saba County, TX",
+   "lat": 31.155138,
+   "lng": -98.819292
+  },
+  {
+   "name": "Schleicher County",
+   "fips": "48413",
+   "type": "county",
+   "redfin_region_id": 2846,
+   "realtor_location": "Schleicher County, TX",
+   "lat": 30.896233,
+   "lng": -100.527216
+  },
+  {
+   "name": "Scurry County",
+   "fips": "48415",
+   "type": "county",
+   "redfin_region_id": 2847,
+   "realtor_location": "Scurry County, TX",
+   "lat": 32.744353,
+   "lng": -100.913346
+  },
+  {
+   "name": "Shackelford County",
+   "fips": "48417",
+   "type": "county",
+   "redfin_region_id": 2848,
+   "realtor_location": "Shackelford County, TX",
+   "lat": 32.74382,
+   "lng": -99.347005
+  },
+  {
+   "name": "Shelby County",
+   "fips": "48419",
+   "type": "county",
+   "redfin_region_id": 2849,
+   "realtor_location": "Shelby County, TX",
+   "lat": 31.790139,
+   "lng": -94.142579
+  },
+  {
+   "name": "Sherman County",
+   "fips": "48421",
+   "type": "county",
+   "redfin_region_id": 2850,
+   "realtor_location": "Sherman County, TX",
+   "lat": 36.278593,
+   "lng": -101.899265
+  },
+  {
+   "name": "Smith County",
+   "fips": "48423",
+   "type": "county",
+   "redfin_region_id": 2851,
+   "realtor_location": "Smith County, TX",
+   "lat": 32.377016,
+   "lng": -95.270041
+  },
+  {
+   "name": "Somervell County",
+   "fips": "48425",
+   "type": "county",
+   "redfin_region_id": 2852,
+   "realtor_location": "Somervell County, TX",
+   "lat": 32.218071,
+   "lng": -97.769217
+  },
+  {
+   "name": "Starr County",
+   "fips": "48427",
+   "type": "county",
+   "redfin_region_id": 2853,
+   "realtor_location": "Starr County, TX",
+   "lat": 26.530903,
+   "lng": -98.740235
+  },
+  {
+   "name": "Stephens County",
+   "fips": "48429",
+   "type": "county",
+   "redfin_region_id": 2854,
+   "realtor_location": "Stephens County, TX",
+   "lat": 32.738052,
+   "lng": -98.839344
+  },
+  {
+   "name": "Sterling County",
+   "fips": "48431",
+   "type": "county",
+   "redfin_region_id": 2855,
+   "realtor_location": "Sterling County, TX",
+   "lat": 31.835773,
+   "lng": -101.054911
+  },
+  {
+   "name": "Stonewall County",
+   "fips": "48433",
+   "type": "county",
+   "redfin_region_id": 2856,
+   "realtor_location": "Stonewall County, TX",
+   "lat": 33.17958,
+   "lng": -100.253807
+  },
+  {
+   "name": "Sutton County",
+   "fips": "48435",
+   "type": "county",
+   "redfin_region_id": 2857,
+   "realtor_location": "Sutton County, TX",
+   "lat": 30.522185,
+   "lng": -100.513359
+  },
+  {
+   "name": "Swisher County",
+   "fips": "48437",
+   "type": "county",
+   "redfin_region_id": 2858,
+   "realtor_location": "Swisher County, TX",
+   "lat": 34.526319,
+   "lng": -101.743865
+  },
+  {
+   "name": "Tarrant County",
+   "fips": "48439",
+   "type": "county",
+   "redfin_region_id": 2859,
+   "realtor_location": "Tarrant County, TX",
+   "lat": 32.772119,
+   "lng": -97.291224
+  },
+  {
+   "name": "Taylor County",
+   "fips": "48441",
+   "type": "county",
+   "redfin_region_id": 2860,
+   "realtor_location": "Taylor County, TX",
+   "lat": 32.297126,
+   "lng": -99.89043
+  },
+  {
+   "name": "Terrell County",
+   "fips": "48443",
+   "type": "county",
+   "redfin_region_id": 2861,
+   "realtor_location": "Terrell County, TX",
+   "lat": 30.232343,
+   "lng": -102.072513
+  },
+  {
+   "name": "Terry County",
+   "fips": "48445",
+   "type": "county",
+   "redfin_region_id": 2862,
+   "realtor_location": "Terry County, TX",
+   "lat": 33.171229,
+   "lng": -102.339284
+  },
+  {
+   "name": "Throckmorton County",
+   "fips": "48447",
+   "type": "county",
+   "redfin_region_id": 2863,
+   "realtor_location": "Throckmorton County, TX",
+   "lat": 33.170695,
+   "lng": -99.205796
+  },
+  {
+   "name": "Titus County",
+   "fips": "48449",
+   "type": "county",
+   "redfin_region_id": 2864,
+   "realtor_location": "Titus County, TX",
+   "lat": 33.214599,
+   "lng": -94.966783
+  },
+  {
+   "name": "Tom Green County",
+   "fips": "48451",
+   "type": "county",
+   "redfin_region_id": 2865,
+   "realtor_location": "Tom Green County, TX",
+   "lat": 31.398823,
+   "lng": -100.463788
+  },
+  {
+   "name": "Travis County",
+   "fips": "48453",
+   "type": "county",
+   "redfin_region_id": 2866,
+   "realtor_location": "Travis County, TX",
+   "lat": 30.239513,
+   "lng": -97.69127
+  },
+  {
+   "name": "Trinity County",
+   "fips": "48455",
+   "type": "county",
+   "redfin_region_id": 2867,
+   "realtor_location": "Trinity County, TX",
+   "lat": 31.096675,
+   "lng": -95.151687
+  },
+  {
+   "name": "Tyler County",
+   "fips": "48457",
+   "type": "county",
+   "redfin_region_id": 2868,
+   "realtor_location": "Tyler County, TX",
+   "lat": 30.769295,
+   "lng": -94.375656
+  },
+  {
+   "name": "Upshur County",
+   "fips": "48459",
+   "type": "county",
+   "redfin_region_id": 2869,
+   "realtor_location": "Upshur County, TX",
+   "lat": 32.735349,
+   "lng": -94.941184
+  },
+  {
+   "name": "Upton County",
+   "fips": "48461",
+   "type": "county",
+   "redfin_region_id": 2870,
+   "realtor_location": "Upton County, TX",
+   "lat": 31.353816,
+   "lng": -102.041546
+  },
+  {
+   "name": "Uvalde County",
+   "fips": "48463",
+   "type": "county",
+   "redfin_region_id": 2871,
+   "realtor_location": "Uvalde County, TX",
+   "lat": 29.350308,
+   "lng": -99.768427
+  },
+  {
+   "name": "Val Verde County",
+   "fips": "48465",
+   "type": "county",
+   "redfin_region_id": 2872,
+   "realtor_location": "Val Verde County, TX",
+   "lat": 29.875285,
+   "lng": -101.143324
+  },
+  {
+   "name": "Van Zandt County",
+   "fips": "48467",
+   "type": "county",
+   "redfin_region_id": 2873,
+   "realtor_location": "Van Zandt County, TX",
+   "lat": 32.558787,
+   "lng": -95.836906
+  },
+  {
+   "name": "Victoria County",
+   "fips": "48469",
+   "type": "county",
+   "redfin_region_id": 2874,
+   "realtor_location": "Victoria County, TX",
+   "lat": 28.79637,
+   "lng": -96.971198
+  },
+  {
+   "name": "Walker County",
+   "fips": "48471",
+   "type": "county",
+   "redfin_region_id": 2875,
+   "realtor_location": "Walker County, TX",
+   "lat": 30.743163,
+   "lng": -95.569825
+  },
+  {
+   "name": "Waller County",
+   "fips": "48473",
+   "type": "county",
+   "redfin_region_id": 2876,
+   "realtor_location": "Waller County, TX",
+   "lat": 30.01359,
+   "lng": -95.982149
+  },
+  {
+   "name": "Ward County",
+   "fips": "48475",
+   "type": "county",
+   "redfin_region_id": 2877,
+   "realtor_location": "Ward County, TX",
+   "lat": 31.513069,
+   "lng": -103.105113
+  },
+  {
+   "name": "Washington County",
+   "fips": "48477",
+   "type": "county",
+   "redfin_region_id": 2878,
+   "realtor_location": "Washington County, TX",
+   "lat": 30.215075,
+   "lng": -96.410272
+  },
+  {
+   "name": "Webb County",
+   "fips": "48479",
+   "type": "county",
+   "redfin_region_id": 2879,
+   "realtor_location": "Webb County, TX",
+   "lat": 27.760799,
+   "lng": -99.340752
+  },
+  {
+   "name": "Wharton County",
+   "fips": "48481",
+   "type": "county",
+   "redfin_region_id": 2880,
+   "realtor_location": "Wharton County, TX",
+   "lat": 29.27848,
+   "lng": -96.229674
+  },
+  {
+   "name": "Wheeler County",
+   "fips": "48483",
+   "type": "county",
+   "redfin_region_id": 2881,
+   "realtor_location": "Wheeler County, TX",
+   "lat": 35.392593,
+   "lng": -100.253107
+  },
+  {
+   "name": "Wichita County",
+   "fips": "48485",
+   "type": "county",
+   "redfin_region_id": 2882,
+   "realtor_location": "Wichita County, TX",
+   "lat": 33.988212,
+   "lng": -98.70801
+  },
+  {
+   "name": "Wilbarger County",
+   "fips": "48487",
+   "type": "county",
+   "redfin_region_id": 2883,
+   "realtor_location": "Wilbarger County, TX",
+   "lat": 34.08492,
+   "lng": -99.24244
+  },
+  {
+   "name": "Willacy County",
+   "fips": "48489",
+   "type": "county",
+   "redfin_region_id": 2884,
+   "realtor_location": "Willacy County, TX",
+   "lat": 26.481861,
+   "lng": -97.594731
+  },
+  {
+   "name": "Williamson County",
+   "fips": "48491",
+   "type": "county",
+   "redfin_region_id": 2885,
+   "realtor_location": "Williamson County, TX",
+   "lat": 30.649082,
+   "lng": -97.605065
+  },
+  {
+   "name": "Wilson County",
+   "fips": "48493",
+   "type": "county",
+   "redfin_region_id": 2886,
+   "realtor_location": "Wilson County, TX",
+   "lat": 29.173883,
+   "lng": -98.086734
+  },
+  {
+   "name": "Winkler County",
+   "fips": "48495",
+   "type": "county",
+   "redfin_region_id": 2887,
+   "realtor_location": "Winkler County, TX",
+   "lat": 31.832862,
+   "lng": -103.054925
+  },
+  {
+   "name": "Wise County",
+   "fips": "48497",
+   "type": "county",
+   "redfin_region_id": 2888,
+   "realtor_location": "Wise County, TX",
+   "lat": 33.219095,
+   "lng": -97.653997
+  },
+  {
+   "name": "Wood County",
+   "fips": "48499",
+   "type": "county",
+   "redfin_region_id": 2889,
+   "realtor_location": "Wood County, TX",
+   "lat": 32.783588,
+   "lng": -95.382166
+  },
+  {
+   "name": "Yoakum County",
+   "fips": "48501",
+   "type": "county",
+   "redfin_region_id": 2890,
+   "realtor_location": "Yoakum County, TX",
+   "lat": 33.162339,
+   "lng": -102.832241
+  },
+  {
+   "name": "Young County",
+   "fips": "48503",
+   "type": "county",
+   "redfin_region_id": 2891,
+   "realtor_location": "Young County, TX",
+   "lat": 33.158778,
+   "lng": -98.67839
+  },
+  {
+   "name": "Zapata County",
+   "fips": "48505",
+   "type": "county",
+   "redfin_region_id": 2892,
+   "realtor_location": "Zapata County, TX",
+   "lat": 26.996981,
+   "lng": -99.182603
+  },
+  {
+   "name": "Zavala County",
+   "fips": "48507",
+   "type": "county",
+   "redfin_region_id": 2893,
+   "realtor_location": "Zavala County, TX",
+   "lat": 28.864652,
+   "lng": -99.75983
+  }
+ ]
+}

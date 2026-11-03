@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import csv
 import hashlib
 import json
 import os
@@ -75,14 +76,17 @@ def fetch_json(config: ProviderConfig, county: County, cursor: str | None = None
 
 def normalize_record(provider: str, record: dict[str, Any], county: County, fetched_at: str) -> dict[str, Any]:
     listing_type = str(record.get("listing_type") or record.get("type") or "sale").lower()
-    if listing_type in {"for_sale", "sold", "sale"}:
+    status = str(record.get("status") or "active").lower()
+    if listing_type == "sold" or status in {"sold", "closed"}:
+        listing_type = "sold"
+    elif listing_type in {"for_sale", "sale"}:
         listing_type = "sale"
     elif listing_type in {"for_rent", "rent", "rental"}:
         listing_type = "rent"
     return {
         "external_id": stable_id(provider, record),
         "listing_type": listing_type,
-        "status": record.get("status") or "active",
+        "status": record.get("status") or ("sold" if listing_type == "sold" else "active"),
         "address": record.get("address") or record.get("street_address"),
         "city": record.get("city"),
         "state": record.get("state") or county.state,
@@ -151,8 +155,13 @@ class StateStore:
         )
         self.connection.commit()
 
-    def records(self) -> list[dict[str, Any]]:
-        rows = self.connection.execute("SELECT payload FROM listings ORDER BY external_id").fetchall()
+    def records(self, provider: str | None = None) -> list[dict[str, Any]]:
+        if provider:
+            rows = self.connection.execute(
+                "SELECT payload FROM listings WHERE provider = ? ORDER BY external_id", (provider,)
+            ).fetchall()
+        else:
+            rows = self.connection.execute("SELECT payload FROM listings ORDER BY external_id").fetchall()
         return [json.loads(row[0]) for row in rows]
 
     def close(self) -> None:
@@ -164,3 +173,26 @@ def write_jsonl(path: Path, records: Iterable[dict[str, Any]]) -> None:
     with path.open("w", encoding="utf-8") as output:
         for record in records:
             output.write(json.dumps(record, sort_keys=True) + "\n")
+
+
+CSV_FIELDS = (
+    "external_id", "listing_type", "status", "address", "city", "state", "zip", "county",
+    "county_fips", "price", "beds", "baths", "sqft", "lot_sqft", "latitude", "longitude",
+    "listed_at", "sold_at", "history", "owner_info", "tax_info", "property_details",
+    "description", "photo_url", "source", "fetched_at",
+)
+
+
+def csv_value(value: Any) -> Any:
+    if isinstance(value, (dict, list)):
+        return json.dumps(value, sort_keys=True, ensure_ascii=True)
+    return value
+
+
+def write_csv(path: Path, records: Iterable[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as output:
+        writer = csv.DictWriter(output, fieldnames=CSV_FIELDS, extrasaction="ignore")
+        writer.writeheader()
+        for record in records:
+            writer.writerow({field: csv_value(record.get(field)) for field in CSV_FIELDS})

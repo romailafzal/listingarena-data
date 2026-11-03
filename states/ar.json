@@ -1,0 +1,681 @@
+{
+ "state": "AR",
+ "name": "Arkansas",
+ "counties": [
+  {
+   "name": "Arkansas County",
+   "fips": "05001",
+   "type": "county",
+   "redfin_region_id": 228,
+   "realtor_location": "Arkansas County, AR",
+   "lat": 34.28957,
+   "lng": -91.376547
+  },
+  {
+   "name": "Ashley County",
+   "fips": "05003",
+   "type": "county",
+   "redfin_region_id": 229,
+   "realtor_location": "Ashley County, AR",
+   "lat": 33.190835,
+   "lng": -91.772267
+  },
+  {
+   "name": "Baxter County",
+   "fips": "05005",
+   "type": "county",
+   "redfin_region_id": 230,
+   "realtor_location": "Baxter County, AR",
+   "lat": 36.280268,
+   "lng": -92.329949
+  },
+  {
+   "name": "Benton County",
+   "fips": "05007",
+   "type": "county",
+   "redfin_region_id": 231,
+   "realtor_location": "Benton County, AR",
+   "lat": 36.337819,
+   "lng": -94.256298
+  },
+  {
+   "name": "Boone County",
+   "fips": "05009",
+   "type": "county",
+   "redfin_region_id": 232,
+   "realtor_location": "Boone County, AR",
+   "lat": 36.304299,
+   "lng": -93.079236
+  },
+  {
+   "name": "Bradley County",
+   "fips": "05011",
+   "type": "county",
+   "redfin_region_id": 233,
+   "realtor_location": "Bradley County, AR",
+   "lat": 33.466549,
+   "lng": -92.169156
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "05013",
+   "type": "county",
+   "redfin_region_id": 234,
+   "realtor_location": "Calhoun County, AR",
+   "lat": 33.56046,
+   "lng": -92.513879
+  },
+  {
+   "name": "Carroll County",
+   "fips": "05015",
+   "type": "county",
+   "redfin_region_id": 235,
+   "realtor_location": "Carroll County, AR",
+   "lat": 36.33737,
+   "lng": -93.540972
+  },
+  {
+   "name": "Chicot County",
+   "fips": "05017",
+   "type": "county",
+   "redfin_region_id": 236,
+   "realtor_location": "Chicot County, AR",
+   "lat": 33.267139,
+   "lng": -91.297158
+  },
+  {
+   "name": "Clark County",
+   "fips": "05019",
+   "type": "county",
+   "redfin_region_id": 237,
+   "realtor_location": "Clark County, AR",
+   "lat": 34.053316,
+   "lng": -93.176208
+  },
+  {
+   "name": "Clay County",
+   "fips": "05021",
+   "type": "county",
+   "redfin_region_id": 238,
+   "realtor_location": "Clay County, AR",
+   "lat": 36.367302,
+   "lng": -90.418704
+  },
+  {
+   "name": "Cleburne County",
+   "fips": "05023",
+   "type": "county",
+   "redfin_region_id": 239,
+   "realtor_location": "Cleburne County, AR",
+   "lat": 35.566315,
+   "lng": -92.05995
+  },
+  {
+   "name": "Cleveland County",
+   "fips": "05025",
+   "type": "county",
+   "redfin_region_id": 240,
+   "realtor_location": "Cleveland County, AR",
+   "lat": 33.893201,
+   "lng": -92.188714
+  },
+  {
+   "name": "Columbia County",
+   "fips": "05027",
+   "type": "county",
+   "redfin_region_id": 241,
+   "realtor_location": "Columbia County, AR",
+   "lat": 33.223038,
+   "lng": -93.232843
+  },
+  {
+   "name": "Conway County",
+   "fips": "05029",
+   "type": "county",
+   "redfin_region_id": 242,
+   "realtor_location": "Conway County, AR",
+   "lat": 35.265702,
+   "lng": -92.689248
+  },
+  {
+   "name": "Craighead County",
+   "fips": "05031",
+   "type": "county",
+   "redfin_region_id": 243,
+   "realtor_location": "Craighead County, AR",
+   "lat": 35.827729,
+   "lng": -90.631421
+  },
+  {
+   "name": "Crawford County",
+   "fips": "05033",
+   "type": "county",
+   "redfin_region_id": 244,
+   "realtor_location": "Crawford County, AR",
+   "lat": 35.583011,
+   "lng": -94.236219
+  },
+  {
+   "name": "Crittenden County",
+   "fips": "05035",
+   "type": "county",
+   "redfin_region_id": 245,
+   "realtor_location": "Crittenden County, AR",
+   "lat": 35.197559,
+   "lng": -90.30512
+  },
+  {
+   "name": "Cross County",
+   "fips": "05037",
+   "type": "county",
+   "redfin_region_id": 246,
+   "realtor_location": "Cross County, AR",
+   "lat": 35.285692,
+   "lng": -90.763984
+  },
+  {
+   "name": "Dallas County",
+   "fips": "05039",
+   "type": "county",
+   "redfin_region_id": 247,
+   "realtor_location": "Dallas County, AR",
+   "lat": 33.967823,
+   "lng": -92.653999
+  },
+  {
+   "name": "Desha County",
+   "fips": "05041",
+   "type": "county",
+   "redfin_region_id": 248,
+   "realtor_location": "Desha County, AR",
+   "lat": 33.828752,
+   "lng": -91.244103
+  },
+  {
+   "name": "Drew County",
+   "fips": "05043",
+   "type": "county",
+   "redfin_region_id": 249,
+   "realtor_location": "Drew County, AR",
+   "lat": 33.587242,
+   "lng": -91.722778
+  },
+  {
+   "name": "Faulkner County",
+   "fips": "05045",
+   "type": "county",
+   "redfin_region_id": 250,
+   "realtor_location": "Faulkner County, AR",
+   "lat": 35.146548,
+   "lng": -92.336928
+  },
+  {
+   "name": "Franklin County",
+   "fips": "05047",
+   "type": "county",
+   "redfin_region_id": 251,
+   "realtor_location": "Franklin County, AR",
+   "lat": 35.508558,
+   "lng": -93.887665
+  },
+  {
+   "name": "Fulton County",
+   "fips": "05049",
+   "type": "county",
+   "redfin_region_id": 252,
+   "realtor_location": "Fulton County, AR",
+   "lat": 36.381322,
+   "lng": -91.819285
+  },
+  {
+   "name": "Garland County",
+   "fips": "05051",
+   "type": "county",
+   "redfin_region_id": 253,
+   "realtor_location": "Garland County, AR",
+   "lat": 34.578852,
+   "lng": -93.146932
+  },
+  {
+   "name": "Grant County",
+   "fips": "05053",
+   "type": "county",
+   "redfin_region_id": 254,
+   "realtor_location": "Grant County, AR",
+   "lat": 34.285568,
+   "lng": -92.422979
+  },
+  {
+   "name": "Greene County",
+   "fips": "05055",
+   "type": "county",
+   "redfin_region_id": 255,
+   "realtor_location": "Greene County, AR",
+   "lat": 36.120607,
+   "lng": -90.566346
+  },
+  {
+   "name": "Hempstead County",
+   "fips": "05057",
+   "type": "county",
+   "redfin_region_id": 256,
+   "realtor_location": "Hempstead County, AR",
+   "lat": 33.735953,
+   "lng": -93.664355
+  },
+  {
+   "name": "Hot Spring County",
+   "fips": "05059",
+   "type": "county",
+   "redfin_region_id": 257,
+   "realtor_location": "Hot Spring County, AR",
+   "lat": 34.315177,
+   "lng": -92.944147
+  },
+  {
+   "name": "Howard County",
+   "fips": "05061",
+   "type": "county",
+   "redfin_region_id": 258,
+   "realtor_location": "Howard County, AR",
+   "lat": 34.083064,
+   "lng": -93.990931
+  },
+  {
+   "name": "Independence County",
+   "fips": "05063",
+   "type": "county",
+   "redfin_region_id": 259,
+   "realtor_location": "Independence County, AR",
+   "lat": 35.737499,
+   "lng": -91.559942
+  },
+  {
+   "name": "Izard County",
+   "fips": "05065",
+   "type": "county",
+   "redfin_region_id": 260,
+   "realtor_location": "Izard County, AR",
+   "lat": 36.094879,
+   "lng": -91.913625
+  },
+  {
+   "name": "Jackson County",
+   "fips": "05067",
+   "type": "county",
+   "redfin_region_id": 261,
+   "realtor_location": "Jackson County, AR",
+   "lat": 35.596467,
+   "lng": -91.223205
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "05069",
+   "type": "county",
+   "redfin_region_id": 262,
+   "realtor_location": "Jefferson County, AR",
+   "lat": 34.277239,
+   "lng": -91.929673
+  },
+  {
+   "name": "Johnson County",
+   "fips": "05071",
+   "type": "county",
+   "redfin_region_id": 263,
+   "realtor_location": "Johnson County, AR",
+   "lat": 35.573359,
+   "lng": -93.466322
+  },
+  {
+   "name": "Lafayette County",
+   "fips": "05073",
+   "type": "county",
+   "redfin_region_id": 264,
+   "realtor_location": "Lafayette County, AR",
+   "lat": 33.240629,
+   "lng": -93.611514
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "05075",
+   "type": "county",
+   "redfin_region_id": 265,
+   "realtor_location": "Lawrence County, AR",
+   "lat": 36.041098,
+   "lng": -91.101153
+  },
+  {
+   "name": "Lee County",
+   "fips": "05077",
+   "type": "county",
+   "redfin_region_id": 266,
+   "realtor_location": "Lee County, AR",
+   "lat": 34.779505,
+   "lng": -90.779717
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "05079",
+   "type": "county",
+   "redfin_region_id": 267,
+   "realtor_location": "Lincoln County, AR",
+   "lat": 33.956385,
+   "lng": -91.742355
+  },
+  {
+   "name": "Little River County",
+   "fips": "05081",
+   "type": "county",
+   "redfin_region_id": 268,
+   "realtor_location": "Little River County, AR",
+   "lat": 33.701941,
+   "lng": -94.236287
+  },
+  {
+   "name": "Logan County",
+   "fips": "05083",
+   "type": "county",
+   "redfin_region_id": 269,
+   "realtor_location": "Logan County, AR",
+   "lat": 35.218654,
+   "lng": -93.72091
+  },
+  {
+   "name": "Lonoke County",
+   "fips": "05085",
+   "type": "county",
+   "redfin_region_id": 270,
+   "realtor_location": "Lonoke County, AR",
+   "lat": 34.755114,
+   "lng": -91.894132
+  },
+  {
+   "name": "Madison County",
+   "fips": "05087",
+   "type": "county",
+   "redfin_region_id": 271,
+   "realtor_location": "Madison County, AR",
+   "lat": 36.012545,
+   "lng": -93.724053
+  },
+  {
+   "name": "Marion County",
+   "fips": "05089",
+   "type": "county",
+   "redfin_region_id": 272,
+   "realtor_location": "Marion County, AR",
+   "lat": 36.266664,
+   "lng": -92.678577
+  },
+  {
+   "name": "Miller County",
+   "fips": "05091",
+   "type": "county",
+   "redfin_region_id": 273,
+   "realtor_location": "Miller County, AR",
+   "lat": 33.305505,
+   "lng": -93.901502
+  },
+  {
+   "name": "Mississippi County",
+   "fips": "05093",
+   "type": "county",
+   "redfin_region_id": 274,
+   "realtor_location": "Mississippi County, AR",
+   "lat": 35.766944,
+   "lng": -90.052207
+  },
+  {
+   "name": "Monroe County",
+   "fips": "05095",
+   "type": "county",
+   "redfin_region_id": 275,
+   "realtor_location": "Monroe County, AR",
+   "lat": 34.679512,
+   "lng": -91.20331
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "05097",
+   "type": "county",
+   "redfin_region_id": 276,
+   "realtor_location": "Montgomery County, AR",
+   "lat": 34.545656,
+   "lng": -93.664153
+  },
+  {
+   "name": "Nevada County",
+   "fips": "05099",
+   "type": "county",
+   "redfin_region_id": 277,
+   "realtor_location": "Nevada County, AR",
+   "lat": 33.666699,
+   "lng": -93.305072
+  },
+  {
+   "name": "Newton County",
+   "fips": "05101",
+   "type": "county",
+   "redfin_region_id": 278,
+   "realtor_location": "Newton County, AR",
+   "lat": 35.910742,
+   "lng": -93.215898
+  },
+  {
+   "name": "Ouachita County",
+   "fips": "05103",
+   "type": "county",
+   "redfin_region_id": 279,
+   "realtor_location": "Ouachita County, AR",
+   "lat": 33.591168,
+   "lng": -92.878413
+  },
+  {
+   "name": "Perry County",
+   "fips": "05105",
+   "type": "county",
+   "redfin_region_id": 280,
+   "realtor_location": "Perry County, AR",
+   "lat": 34.946363,
+   "lng": -92.926877
+  },
+  {
+   "name": "Phillips County",
+   "fips": "05107",
+   "type": "county",
+   "redfin_region_id": 281,
+   "realtor_location": "Phillips County, AR",
+   "lat": 34.423687,
+   "lng": -90.855593
+  },
+  {
+   "name": "Pike County",
+   "fips": "05109",
+   "type": "county",
+   "redfin_region_id": 282,
+   "realtor_location": "Pike County, AR",
+   "lat": 34.158191,
+   "lng": -93.658659
+  },
+  {
+   "name": "Poinsett County",
+   "fips": "05111",
+   "type": "county",
+   "redfin_region_id": 283,
+   "realtor_location": "Poinsett County, AR",
+   "lat": 35.56887,
+   "lng": -90.681104
+  },
+  {
+   "name": "Polk County",
+   "fips": "05113",
+   "type": "county",
+   "redfin_region_id": 284,
+   "realtor_location": "Polk County, AR",
+   "lat": 34.490915,
+   "lng": -94.230884
+  },
+  {
+   "name": "Pope County",
+   "fips": "05115",
+   "type": "county",
+   "redfin_region_id": 285,
+   "realtor_location": "Pope County, AR",
+   "lat": 35.456557,
+   "lng": -93.026818
+  },
+  {
+   "name": "Prairie County",
+   "fips": "05117",
+   "type": "county",
+   "redfin_region_id": 286,
+   "realtor_location": "Prairie County, AR",
+   "lat": 34.831116,
+   "lng": -91.55362
+  },
+  {
+   "name": "Pulaski County",
+   "fips": "05119",
+   "type": "county",
+   "redfin_region_id": 287,
+   "realtor_location": "Pulaski County, AR",
+   "lat": 34.770311,
+   "lng": -92.312996
+  },
+  {
+   "name": "Randolph County",
+   "fips": "05121",
+   "type": "county",
+   "redfin_region_id": 288,
+   "realtor_location": "Randolph County, AR",
+   "lat": 36.341298,
+   "lng": -91.028441
+  },
+  {
+   "name": "St. Francis County",
+   "fips": "05123",
+   "type": "county",
+   "redfin_region_id": 289,
+   "realtor_location": "St. Francis County, AR",
+   "lat": 35.022838,
+   "lng": -90.751506
+  },
+  {
+   "name": "Saline County",
+   "fips": "05125",
+   "type": "county",
+   "redfin_region_id": 290,
+   "realtor_location": "Saline County, AR",
+   "lat": 34.648525,
+   "lng": -92.674463
+  },
+  {
+   "name": "Scott County",
+   "fips": "05127",
+   "type": "county",
+   "redfin_region_id": 291,
+   "realtor_location": "Scott County, AR",
+   "lat": 34.858869,
+   "lng": -94.063641
+  },
+  {
+   "name": "Searcy County",
+   "fips": "05129",
+   "type": "county",
+   "redfin_region_id": 292,
+   "realtor_location": "Searcy County, AR",
+   "lat": 35.896387,
+   "lng": -92.695888
+  },
+  {
+   "name": "Sebastian County",
+   "fips": "05131",
+   "type": "county",
+   "redfin_region_id": 293,
+   "realtor_location": "Sebastian County, AR",
+   "lat": 35.196981,
+   "lng": -94.274989
+  },
+  {
+   "name": "Sevier County",
+   "fips": "05133",
+   "type": "county",
+   "redfin_region_id": 294,
+   "realtor_location": "Sevier County, AR",
+   "lat": 33.994877,
+   "lng": -94.243279
+  },
+  {
+   "name": "Sharp County",
+   "fips": "05135",
+   "type": "county",
+   "redfin_region_id": 295,
+   "realtor_location": "Sharp County, AR",
+   "lat": 36.173399,
+   "lng": -91.471069
+  },
+  {
+   "name": "Stone County",
+   "fips": "05137",
+   "type": "county",
+   "redfin_region_id": 296,
+   "realtor_location": "Stone County, AR",
+   "lat": 35.857001,
+   "lng": -92.140482
+  },
+  {
+   "name": "Union County",
+   "fips": "05139",
+   "type": "county",
+   "redfin_region_id": 297,
+   "realtor_location": "Union County, AR",
+   "lat": 33.168219,
+   "lng": -92.598145
+  },
+  {
+   "name": "Van Buren County",
+   "fips": "05141",
+   "type": "county",
+   "redfin_region_id": 298,
+   "realtor_location": "Van Buren County, AR",
+   "lat": 35.582953,
+   "lng": -92.515976
+  },
+  {
+   "name": "Washington County",
+   "fips": "05143",
+   "type": "county",
+   "redfin_region_id": 299,
+   "realtor_location": "Washington County, AR",
+   "lat": 35.978001,
+   "lng": -94.217269
+  },
+  {
+   "name": "White County",
+   "fips": "05145",
+   "type": "county",
+   "redfin_region_id": 300,
+   "realtor_location": "White County, AR",
+   "lat": 35.255118,
+   "lng": -91.753034
+  },
+  {
+   "name": "Woodruff County",
+   "fips": "05147",
+   "type": "county",
+   "redfin_region_id": 301,
+   "realtor_location": "Woodruff County, AR",
+   "lat": 35.192777,
+   "lng": -91.244535
+  },
+  {
+   "name": "Yell County",
+   "fips": "05149",
+   "type": "county",
+   "redfin_region_id": 302,
+   "realtor_location": "Yell County, AR",
+   "lat": 34.997713,
+   "lng": -93.408303
+  }
+ ]
+}

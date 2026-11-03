@@ -1,0 +1,609 @@
+{
+ "state": "FL",
+ "name": "Florida",
+ "counties": [
+  {
+   "name": "Alachua County",
+   "fips": "12001",
+   "type": "county",
+   "redfin_region_id": 437,
+   "realtor_location": "Alachua County, FL",
+   "lat": 29.67574,
+   "lng": -82.357221
+  },
+  {
+   "name": "Baker County",
+   "fips": "12003",
+   "type": "county",
+   "redfin_region_id": 438,
+   "realtor_location": "Baker County, FL",
+   "lat": 30.324442,
+   "lng": -82.302284
+  },
+  {
+   "name": "Bay County",
+   "fips": "12005",
+   "type": "county",
+   "redfin_region_id": 439,
+   "realtor_location": "Bay County, FL",
+   "lat": 30.15914,
+   "lng": -85.534395
+  },
+  {
+   "name": "Bradford County",
+   "fips": "12007",
+   "type": "county",
+   "redfin_region_id": 440,
+   "realtor_location": "Bradford County, FL",
+   "lat": 29.952386,
+   "lng": -82.166698
+  },
+  {
+   "name": "Brevard County",
+   "fips": "12009",
+   "type": "county",
+   "redfin_region_id": 441,
+   "realtor_location": "Brevard County, FL",
+   "lat": 28.298311,
+   "lng": -80.700333
+  },
+  {
+   "name": "Broward County",
+   "fips": "12011",
+   "type": "county",
+   "redfin_region_id": 442,
+   "realtor_location": "Broward County, FL",
+   "lat": 26.193535,
+   "lng": -80.476683
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "12013",
+   "type": "county",
+   "redfin_region_id": 443,
+   "realtor_location": "Calhoun County, FL",
+   "lat": 30.388801,
+   "lng": -85.197915
+  },
+  {
+   "name": "Charlotte County",
+   "fips": "12015",
+   "type": "county",
+   "redfin_region_id": 444,
+   "realtor_location": "Charlotte County, FL",
+   "lat": 26.906396,
+   "lng": -82.003657
+  },
+  {
+   "name": "Citrus County",
+   "fips": "12017",
+   "type": "county",
+   "redfin_region_id": 445,
+   "realtor_location": "Citrus County, FL",
+   "lat": 28.850292,
+   "lng": -82.595552
+  },
+  {
+   "name": "Clay County",
+   "fips": "12019",
+   "type": "county",
+   "redfin_region_id": 446,
+   "realtor_location": "Clay County, FL",
+   "lat": 29.986584,
+   "lng": -81.865036
+  },
+  {
+   "name": "Collier County",
+   "fips": "12021",
+   "type": "county",
+   "redfin_region_id": 447,
+   "realtor_location": "Collier County, FL",
+   "lat": 26.118786,
+   "lng": -81.400955
+  },
+  {
+   "name": "Columbia County",
+   "fips": "12023",
+   "type": "county",
+   "redfin_region_id": 448,
+   "realtor_location": "Columbia County, FL",
+   "lat": 30.221651,
+   "lng": -82.623371
+  },
+  {
+   "name": "DeSoto County",
+   "fips": "12027",
+   "type": "county",
+   "redfin_region_id": 449,
+   "realtor_location": "DeSoto County, FL",
+   "lat": 27.190581,
+   "lng": -81.806253
+  },
+  {
+   "name": "Dixie County",
+   "fips": "12029",
+   "type": "county",
+   "redfin_region_id": 450,
+   "realtor_location": "Dixie County, FL",
+   "lat": 29.552675,
+   "lng": -83.236232
+  },
+  {
+   "name": "Duval County",
+   "fips": "12031",
+   "type": "county",
+   "redfin_region_id": 451,
+   "realtor_location": "Duval County, FL",
+   "lat": 30.335245,
+   "lng": -81.648113
+  },
+  {
+   "name": "Escambia County",
+   "fips": "12033",
+   "type": "county",
+   "redfin_region_id": 452,
+   "realtor_location": "Escambia County, FL",
+   "lat": 30.529998,
+   "lng": -87.320322
+  },
+  {
+   "name": "Flagler County",
+   "fips": "12035",
+   "type": "county",
+   "redfin_region_id": 453,
+   "realtor_location": "Flagler County, FL",
+   "lat": 29.474891,
+   "lng": -81.286253
+  },
+  {
+   "name": "Franklin County",
+   "fips": "12037",
+   "type": "county",
+   "redfin_region_id": 454,
+   "realtor_location": "Franklin County, FL",
+   "lat": 29.677794,
+   "lng": -84.815213
+  },
+  {
+   "name": "Gadsden County",
+   "fips": "12039",
+   "type": "county",
+   "redfin_region_id": 455,
+   "realtor_location": "Gadsden County, FL",
+   "lat": 30.578687,
+   "lng": -84.612607
+  },
+  {
+   "name": "Gilchrist County",
+   "fips": "12041",
+   "type": "county",
+   "redfin_region_id": 456,
+   "realtor_location": "Gilchrist County, FL",
+   "lat": 29.723456,
+   "lng": -82.795801
+  },
+  {
+   "name": "Glades County",
+   "fips": "12043",
+   "type": "county",
+   "redfin_region_id": 457,
+   "realtor_location": "Glades County, FL",
+   "lat": 26.95481,
+   "lng": -81.19082
+  },
+  {
+   "name": "Gulf County",
+   "fips": "12045",
+   "type": "county",
+   "redfin_region_id": 458,
+   "realtor_location": "Gulf County, FL",
+   "lat": 29.859238,
+   "lng": -85.272013
+  },
+  {
+   "name": "Hamilton County",
+   "fips": "12047",
+   "type": "county",
+   "redfin_region_id": 459,
+   "realtor_location": "Hamilton County, FL",
+   "lat": 30.491187,
+   "lng": -82.951071
+  },
+  {
+   "name": "Hardee County",
+   "fips": "12049",
+   "type": "county",
+   "redfin_region_id": 460,
+   "realtor_location": "Hardee County, FL",
+   "lat": 27.492846,
+   "lng": -81.82158
+  },
+  {
+   "name": "Hendry County",
+   "fips": "12051",
+   "type": "county",
+   "redfin_region_id": 461,
+   "realtor_location": "Hendry County, FL",
+   "lat": 26.539967,
+   "lng": -81.152114
+  },
+  {
+   "name": "Hernando County",
+   "fips": "12053",
+   "type": "county",
+   "redfin_region_id": 462,
+   "realtor_location": "Hernando County, FL",
+   "lat": 28.555995,
+   "lng": -82.525969
+  },
+  {
+   "name": "Highlands County",
+   "fips": "12055",
+   "type": "county",
+   "redfin_region_id": 463,
+   "realtor_location": "Highlands County, FL",
+   "lat": 27.34108,
+   "lng": -81.342353
+  },
+  {
+   "name": "Hillsborough County",
+   "fips": "12057",
+   "type": "county",
+   "redfin_region_id": 464,
+   "realtor_location": "Hillsborough County, FL",
+   "lat": 27.88761,
+   "lng": -82.374417
+  },
+  {
+   "name": "Holmes County",
+   "fips": "12059",
+   "type": "county",
+   "redfin_region_id": 465,
+   "realtor_location": "Holmes County, FL",
+   "lat": 30.862007,
+   "lng": -85.815939
+  },
+  {
+   "name": "Indian River County",
+   "fips": "12061",
+   "type": "county",
+   "redfin_region_id": 466,
+   "realtor_location": "Indian River County, FL",
+   "lat": 27.700528,
+   "lng": -80.574789
+  },
+  {
+   "name": "Jackson County",
+   "fips": "12063",
+   "type": "county",
+   "redfin_region_id": 467,
+   "realtor_location": "Jackson County, FL",
+   "lat": 30.789249,
+   "lng": -85.208814
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "12065",
+   "type": "county",
+   "redfin_region_id": 468,
+   "realtor_location": "Jefferson County, FL",
+   "lat": 30.396898,
+   "lng": -83.921761
+  },
+  {
+   "name": "Lafayette County",
+   "fips": "12067",
+   "type": "county",
+   "redfin_region_id": 469,
+   "realtor_location": "Lafayette County, FL",
+   "lat": 29.990066,
+   "lng": -83.17851
+  },
+  {
+   "name": "Lake County",
+   "fips": "12069",
+   "type": "county",
+   "redfin_region_id": 470,
+   "realtor_location": "Lake County, FL",
+   "lat": 28.764113,
+   "lng": -81.712282
+  },
+  {
+   "name": "Lee County",
+   "fips": "12071",
+   "type": "county",
+   "redfin_region_id": 471,
+   "realtor_location": "Lee County, FL",
+   "lat": 26.563273,
+   "lng": -81.984182
+  },
+  {
+   "name": "Leon County",
+   "fips": "12073",
+   "type": "county",
+   "redfin_region_id": 472,
+   "realtor_location": "Leon County, FL",
+   "lat": 30.45931,
+   "lng": -84.2778
+  },
+  {
+   "name": "Levy County",
+   "fips": "12075",
+   "type": "county",
+   "redfin_region_id": 473,
+   "realtor_location": "Levy County, FL",
+   "lat": 29.271854,
+   "lng": -82.831233
+  },
+  {
+   "name": "Liberty County",
+   "fips": "12077",
+   "type": "county",
+   "redfin_region_id": 474,
+   "realtor_location": "Liberty County, FL",
+   "lat": 30.259849,
+   "lng": -84.86858
+  },
+  {
+   "name": "Madison County",
+   "fips": "12079",
+   "type": "county",
+   "redfin_region_id": 475,
+   "realtor_location": "Madison County, FL",
+   "lat": 30.447233,
+   "lng": -83.470416
+  },
+  {
+   "name": "Manatee County",
+   "fips": "12081",
+   "type": "county",
+   "redfin_region_id": 476,
+   "realtor_location": "Manatee County, FL",
+   "lat": 27.475556,
+   "lng": -82.393144
+  },
+  {
+   "name": "Marion County",
+   "fips": "12083",
+   "type": "county",
+   "redfin_region_id": 477,
+   "realtor_location": "Marion County, FL",
+   "lat": 29.202805,
+   "lng": -82.0431
+  },
+  {
+   "name": "Martin County",
+   "fips": "12085",
+   "type": "county",
+   "redfin_region_id": 478,
+   "realtor_location": "Martin County, FL",
+   "lat": 27.083604,
+   "lng": -80.398201
+  },
+  {
+   "name": "Miami-Dade County",
+   "fips": "12086",
+   "type": "county",
+   "redfin_region_id": 479,
+   "realtor_location": "Miami-Dade County, FL",
+   "lat": 25.616009,
+   "lng": -80.50375
+  },
+  {
+   "name": "Monroe County",
+   "fips": "12087",
+   "type": "county",
+   "redfin_region_id": 480,
+   "realtor_location": "Monroe County, FL",
+   "lat": 25.58612,
+   "lng": -81.022603
+  },
+  {
+   "name": "Nassau County",
+   "fips": "12089",
+   "type": "county",
+   "redfin_region_id": 481,
+   "realtor_location": "Nassau County, FL",
+   "lat": 30.605963,
+   "lng": -81.765087
+  },
+  {
+   "name": "Okaloosa County",
+   "fips": "12091",
+   "type": "county",
+   "redfin_region_id": 482,
+   "realtor_location": "Okaloosa County, FL",
+   "lat": 30.614325,
+   "lng": -86.59108
+  },
+  {
+   "name": "Okeechobee County",
+   "fips": "12093",
+   "type": "county",
+   "redfin_region_id": 483,
+   "realtor_location": "Okeechobee County, FL",
+   "lat": 27.385592,
+   "lng": -80.887388
+  },
+  {
+   "name": "Orange County",
+   "fips": "12095",
+   "type": "county",
+   "redfin_region_id": 484,
+   "realtor_location": "Orange County, FL",
+   "lat": 28.514391,
+   "lng": -81.323284
+  },
+  {
+   "name": "Osceola County",
+   "fips": "12097",
+   "type": "county",
+   "redfin_region_id": 485,
+   "realtor_location": "Osceola County, FL",
+   "lat": 28.059027,
+   "lng": -81.139312
+  },
+  {
+   "name": "Palm Beach County",
+   "fips": "12099",
+   "type": "county",
+   "redfin_region_id": 486,
+   "realtor_location": "Palm Beach County, FL",
+   "lat": 26.649126,
+   "lng": -80.448354
+  },
+  {
+   "name": "Pasco County",
+   "fips": "12101",
+   "type": "county",
+   "redfin_region_id": 487,
+   "realtor_location": "Pasco County, FL",
+   "lat": 28.309823,
+   "lng": -82.511006
+  },
+  {
+   "name": "Pinellas County",
+   "fips": "12103",
+   "type": "county",
+   "redfin_region_id": 488,
+   "realtor_location": "Pinellas County, FL",
+   "lat": 27.905342,
+   "lng": -82.798066
+  },
+  {
+   "name": "Polk County",
+   "fips": "12105",
+   "type": "county",
+   "redfin_region_id": 489,
+   "realtor_location": "Polk County, FL",
+   "lat": 27.953649,
+   "lng": -81.693534
+  },
+  {
+   "name": "Putnam County",
+   "fips": "12107",
+   "type": "county",
+   "redfin_region_id": 490,
+   "realtor_location": "Putnam County, FL",
+   "lat": 29.593896,
+   "lng": -81.732039
+  },
+  {
+   "name": "St. Johns County",
+   "fips": "12109",
+   "type": "county",
+   "redfin_region_id": 491,
+   "realtor_location": "St. Johns County, FL",
+   "lat": 29.890487,
+   "lng": -81.40004
+  },
+  {
+   "name": "St. Lucie County",
+   "fips": "12111",
+   "type": "county",
+   "redfin_region_id": 492,
+   "realtor_location": "St. Lucie County, FL",
+   "lat": 27.379814,
+   "lng": -80.443536
+  },
+  {
+   "name": "Santa Rosa County",
+   "fips": "12113",
+   "type": "county",
+   "redfin_region_id": 493,
+   "realtor_location": "Santa Rosa County, FL",
+   "lat": 30.675348,
+   "lng": -87.018919
+  },
+  {
+   "name": "Sarasota County",
+   "fips": "12115",
+   "type": "county",
+   "redfin_region_id": 494,
+   "realtor_location": "Sarasota County, FL",
+   "lat": 27.225327,
+   "lng": -82.423714
+  },
+  {
+   "name": "Seminole County",
+   "fips": "12117",
+   "type": "county",
+   "redfin_region_id": 495,
+   "realtor_location": "Seminole County, FL",
+   "lat": 28.690065,
+   "lng": -81.131975
+  },
+  {
+   "name": "Sumter County",
+   "fips": "12119",
+   "type": "county",
+   "redfin_region_id": 496,
+   "realtor_location": "Sumter County, FL",
+   "lat": 28.715444,
+   "lng": -82.069952
+  },
+  {
+   "name": "Suwannee County",
+   "fips": "12121",
+   "type": "county",
+   "redfin_region_id": 497,
+   "realtor_location": "Suwannee County, FL",
+   "lat": 30.189244,
+   "lng": -82.992754
+  },
+  {
+   "name": "Taylor County",
+   "fips": "12123",
+   "type": "county",
+   "redfin_region_id": 498,
+   "realtor_location": "Taylor County, FL",
+   "lat": 29.967146,
+   "lng": -83.639573
+  },
+  {
+   "name": "Union County",
+   "fips": "12125",
+   "type": "county",
+   "redfin_region_id": 499,
+   "realtor_location": "Union County, FL",
+   "lat": 30.05428,
+   "lng": -82.366918
+  },
+  {
+   "name": "Volusia County",
+   "fips": "12127",
+   "type": "county",
+   "redfin_region_id": 500,
+   "realtor_location": "Volusia County, FL",
+   "lat": 29.057769,
+   "lng": -81.161792
+  },
+  {
+   "name": "Wakulla County",
+   "fips": "12129",
+   "type": "county",
+   "redfin_region_id": 501,
+   "realtor_location": "Wakulla County, FL",
+   "lat": 30.091335,
+   "lng": -84.359111
+  },
+  {
+   "name": "Walton County",
+   "fips": "12131",
+   "type": "county",
+   "redfin_region_id": 502,
+   "realtor_location": "Walton County, FL",
+   "lat": 30.571247,
+   "lng": -86.162798
+  },
+  {
+   "name": "Washington County",
+   "fips": "12133",
+   "type": "county",
+   "redfin_region_id": 503,
+   "realtor_location": "Washington County, FL",
+   "lat": 30.602102,
+   "lng": -85.655805
+  }
+ ]
+}

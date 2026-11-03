@@ -1,0 +1,279 @@
+{
+ "homes": [
+  {
+   "homeData": {
+    "propertyId": "51576999",
+    "url": "/TX/Austin/8001-S-Interstate-35-78744/home/51576999",
+    "propertyType": 5,
+    "photosInfo": {
+     "photoRanges": [
+      {
+       "startPos": 0,
+       "endPos": 31,
+       "version": "9"
+      }
+     ]
+    },
+    "sashes": [
+     {
+      "sashTypeId": 7,
+      "sashTypeName": "New",
+      "sashTypeColor": "#2E7E36",
+      "timeOnRedfin": "111780279"
+     },
+     {
+      "sashTypeId": 35,
+      "sashTypeName": "1 MONTH FREE",
+      "sashTypeColor": "#E96727"
+     }
+    ],
+    "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=30.174646%2C-97.776107&channel=seekers-search_map&size=200x200&format=jpg&scale=1&zoom=11&key=AIzaSyA_29QNQgZnWV-qXu1LyNzrLuiHCDGCJGU&signature=QkAQ-jheqC9PXOV7qJs1z7R5ixA=",
+    "hasAttFiber": true,
+    "addressInfo": {
+     "centroid": {
+      "centroid": {
+       "latitude": 30.174646,
+       "longitude": -97.776107
+      }
+     },
+     "formattedStreetLine": "8001 S Interstate 35",
+     "city": "Austin",
+     "state": "TX",
+     "zip": "78744",
+     "streetlineDisplayLevel": 1,
+     "unitNumberDisplayLevel": 1,
+     "locationDisplayLevel": 1,
+     "countryCode": 1,
+     "postalCodeDisplayLevel": 1
+    }
+   },
+   "rentalExtension": {
+    "rentalId": "7e696d95-c51e-4b6e-9c9f-874f098a1062",
+    "bedRange": {
+     "min": 1,
+     "max": 3
+    },
+    "bathRange": {
+     "min": 1.0,
+     "max": 2.0
+    },
+    "sqftRange": {
+     "min": 625,
+     "max": 1375
+    },
+    "rentPriceRange": {
+     "min": 916,
+     "max": 1775
+    },
+    "lastUpdated": "2026-10-27T18:52:40.372793Z",
+    "numAvailableUnits": 21,
+    "status": 1,
+    "propertyName": "Ethos Apartments",
+    "rentalDetailsPageType": 6,
+    "searchRankScore": 1.0,
+    "freshnessTimestamp": "2026-10-26T13:13:03.328Z",
+    "description": "Find your ideal home and connect with a vibrant and welcoming community at Ethos Apartments. Choose from our spacious one, two, and three bedroom homes in Bluff Springs and discover the pleasures of...",
+    "revenuePerLead": 11.0,
+    "feedSourceInternalId": "lc5905177",
+    "isCommercialPaid": true,
+    "feedOriginalSource": "ZILLOW",
+    "mlsAgentEmail": "stop@rent.com",
+    "desktopPhone": "5128079949",
+    "mobileWebPhone": "5128079949",
+    "mobileAppPhone": "5128079949",
+    "feedSource": "RentPath",
+    "feedExternalId": "4w2k2cabx2ksp",
+    "leadRequiresMoveInDate": true,
+    "paidPhone": "5128078466",
+    "isTotalPrice": false,
+    "isInTotalPriceState": false,
+    "isIncomeRestricted": false,
+    "isSeniorLiving": false,
+    "isStudent": false,
+    "isMilitary": false
+   }
+  },
+  {
+   "homeData": {
+    "propertyId": "31342594",
+    "url": "/TX/Austin/6263-McNeil-Dr-78729/home/31342594",
+    "propertyType": 5,
+    "photosInfo": {
+     "photoRanges": [
+      {
+       "startPos": 0,
+       "endPos": 18,
+       "version": "1"
+      }
+     ]
+    },
+    "sashes": [
+     {
+      "sashTypeId": 35,
+      "sashTypeName": "1 MONTH FREE",
+      "sashTypeColor": "#E96727"
+     },
+     {
+      "sashTypeId": 31,
+      "sashTypeName": "3D Walkthrough",
+      "sashTypeColor": "#7556F2"
+     }
+    ],
+    "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=30.440315%2C-97.747084&channel=seekers-search_map&size=200x200&format=jpg&scale=1&zoom=11&key=AIzaSyA_29QNQgZnWV-qXu1LyNzrLuiHCDGCJGU&signature=MCKpvzKl2kkoExgthHUCgO_66UA=",
+    "hasAttFiber": false,
+    "addressInfo": {
+     "centroid": {
+      "centroid": {
+       "latitude": 30.440315,
+       "longitude": -97.747084
+      }
+     },
+     "formattedStreetLine": "6263 McNeil Dr",
+     "city": "Austin",
+     "state": "TX",
+     "zip": "78729",
+     "streetlineDisplayLevel": 1,
+     "unitNumberDisplayLevel": 1,
+     "locationDisplayLevel": 1,
+     "countryCode": 1,
+     "postalCodeDisplayLevel": 1
+    }
+   },
+   "rentalExtension": {
+    "rentalId": "ff552ae1-a536-4f8b-afb5-6ed8c3e3f588",
+    "bedRange": {
+     "min": 1,
+     "max": 3
+    },
+    "bathRange": {
+     "min": 1.0,
+     "max": 2.0
+    },
+    "sqftRange": {
+     "min": 619,
+     "max": 1381
+    },
+    "rentPriceRange": {
+     "min": 916,
+     "max": 1901
+    },
+    "lastUpdated": "2026-10-27T18:54:17.409624Z",
+    "numAvailableUnits": 31,
+    "status": 1,
+    "propertyName": "MAA Quarry Oaks",
+    "rentalDetailsPageType": 6,
+    "searchRankScore": 2.0,
+    "freshnessTimestamp": "2026-10-14T13:55:17.306Z",
+    "description": "TOUR YOUR WAY! We have a tour to fit your needs- virtual, self-guided, or agent-guided. Live the luxe life at MAA Quarry Oaks in Austin, TX. Apartment homes are available in one-, two-, and...",
+    "revenuePerLead": 11.0,
+    "feedSourceInternalId": "lc6993203",
+    "isCommercialPaid": true,
+    "feedOriginalSource": "ZILLOW",
+    "mlsAgentEmail": "stop@rent.com",
+    "desktopPhone": "7379776623",
+    "mobileWebPhone": "7379776623",
+    "mobileAppPhone": "7379776623",
+    "feedSource": "RentPath",
+    "feedExternalId": "1ymvmnjbfqtcm",
+    "leadRequiresMoveInDate": true,
+    "paidPhone": "7379750322",
+    "isTotalPrice": true,
+    "isInTotalPriceState": false,
+    "isIncomeRestricted": false,
+    "isSeniorLiving": false,
+    "isStudent": false,
+    "isMilitary": false
+   }
+  },
+  {
+   "homeData": {
+    "propertyId": "32394052",
+    "url": "/TX/Austin/3515-Manor-Rd-78723/home/32394052",
+    "propertyType": 5,
+    "photosInfo": {
+     "photoRanges": [
+      {
+       "startPos": 0,
+       "endPos": 32,
+       "version": "1"
+      }
+     ]
+    },
+    "sashes": [
+     {
+      "sashTypeId": 7,
+      "sashTypeName": "New",
+      "sashTypeColor": "#2E7E36",
+      "timeOnRedfin": "12943003"
+     }
+    ],
+    "staticMapUrl": "https://maps.google.com/maps/api/staticmap?sensor=false&style=feature%3Aadministrative.land_parcel%7Cvisibility%3Aoff&style=feature%3Alandscape.man_made%7Cvisibility%3Aoff&style=feature%3Atransit.station%7Chue%3A0xffa200&center=30.2886899%2C-97.6989752&channel=seekers-search_map&size=200x200&format=jpg&scale=1&zoom=11&key=AIzaSyA_29QNQgZnWV-qXu1LyNzrLuiHCDGCJGU&signature=QshLI1CAHTCv9V8-oUyAbvECR74=",
+    "hasAttFiber": false,
+    "addressInfo": {
+     "centroid": {
+      "centroid": {
+       "latitude": 30.2886899,
+       "longitude": -97.6989752
+      }
+     },
+     "formattedStreetLine": "3515 Manor Rd",
+     "city": "Austin",
+     "state": "TX",
+     "zip": "78723",
+     "streetlineDisplayLevel": 1,
+     "unitNumberDisplayLevel": 1,
+     "locationDisplayLevel": 1,
+     "countryCode": 1,
+     "postalCodeDisplayLevel": 1
+    }
+   },
+   "rentalExtension": {
+    "rentalId": "c505de28-0b1e-4a19-8754-e4182fd429be",
+    "bedRange": {
+     "min": 0,
+     "max": 4
+    },
+    "bathRange": {
+     "min": 1.0,
+     "max": 2.0
+    },
+    "sqftRange": {
+     "min": 475,
+     "max": 1614
+    },
+    "rentPriceRange": {
+     "min": 1106,
+     "max": 1932
+    },
+    "lastUpdated": "2026-10-27T16:52:22.106381Z",
+    "numAvailableUnits": 121,
+    "status": 1,
+    "propertyName": "Seabrook Square",
+    "rentalDetailsPageType": 6,
+    "searchRankScore": 3.0,
+    "freshnessTimestamp": "2026-10-27T16:40:20.661Z",
+    "description": "Seabrook Square is a vibrant affordable housing community in East Austin, offering modern apartments, live/work spaces for artists, and cultural amenities just minutes from downtown.  Seabrook Square...",
+    "revenuePerLead": 11.0,
+    "feedSourceInternalId": "lc7043406",
+    "isCommercialPaid": true,
+    "feedOriginalSource": "ZILLOW",
+    "mlsAgentEmail": "stop@rent.com",
+    "desktopPhone": "7374710812",
+    "mobileWebPhone": "7374710812",
+    "mobileAppPhone": "7374710812",
+    "feedSource": "RentPath",
+    "feedExternalId": "371sw5k27fyjv",
+    "leadRequiresMoveInDate": true,
+    "paidPhone": "7373633428",
+    "isTotalPrice": false,
+    "isInTotalPriceState": false,
+    "isIncomeRestricted": false,
+    "isSeniorLiving": false,
+    "isStudent": false,
+    "isMilitary": false
+   }
+  }
+ ],
+ "numMatchedHomes": 7003,
+ "numMatchedUnits": 25716
+}

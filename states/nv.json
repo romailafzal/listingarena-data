@@ -1,0 +1,159 @@
+{
+ "state": "NV",
+ "name": "Nevada",
+ "counties": [
+  {
+   "name": "Churchill County",
+   "fips": "32001",
+   "type": "county",
+   "redfin_region_id": 1864,
+   "realtor_location": "Churchill County, NV",
+   "lat": 39.53771,
+   "lng": -118.264166
+  },
+  {
+   "name": "Clark County",
+   "fips": "32003",
+   "type": "county",
+   "redfin_region_id": 1865,
+   "realtor_location": "Clark County, NV",
+   "lat": 36.21413,
+   "lng": -115.014398
+  },
+  {
+   "name": "Douglas County",
+   "fips": "32005",
+   "type": "county",
+   "redfin_region_id": 1866,
+   "realtor_location": "Douglas County, NV",
+   "lat": 38.905129,
+   "lng": -119.609019
+  },
+  {
+   "name": "Elko County",
+   "fips": "32007",
+   "type": "county",
+   "redfin_region_id": 1867,
+   "realtor_location": "Elko County, NV",
+   "lat": 41.141133,
+   "lng": -115.351424
+  },
+  {
+   "name": "Esmeralda County",
+   "fips": "32009",
+   "type": "county",
+   "redfin_region_id": 1868,
+   "realtor_location": "Esmeralda County, NV",
+   "lat": 37.778966,
+   "lng": -117.632382
+  },
+  {
+   "name": "Eureka County",
+   "fips": "32011",
+   "type": "county",
+   "redfin_region_id": 1869,
+   "realtor_location": "Eureka County, NV",
+   "lat": 39.977788,
+   "lng": -116.272208
+  },
+  {
+   "name": "Humboldt County",
+   "fips": "32013",
+   "type": "county",
+   "redfin_region_id": 1870,
+   "realtor_location": "Humboldt County, NV",
+   "lat": 41.407914,
+   "lng": -118.127591
+  },
+  {
+   "name": "Lander County",
+   "fips": "32015",
+   "type": "county",
+   "redfin_region_id": 1871,
+   "realtor_location": "Lander County, NV",
+   "lat": 39.90021,
+   "lng": -117.04724
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "32017",
+   "type": "county",
+   "redfin_region_id": 1872,
+   "realtor_location": "Lincoln County, NV",
+   "lat": 37.634605,
+   "lng": -114.863037
+  },
+  {
+   "name": "Lyon County",
+   "fips": "32019",
+   "type": "county",
+   "redfin_region_id": 1873,
+   "realtor_location": "Lyon County, NV",
+   "lat": 39.022213,
+   "lng": -119.197425
+  },
+  {
+   "name": "Mineral County",
+   "fips": "32021",
+   "type": "county",
+   "redfin_region_id": 1874,
+   "realtor_location": "Mineral County, NV",
+   "lat": 38.516647,
+   "lng": -118.416279
+  },
+  {
+   "name": "Nye County",
+   "fips": "32023",
+   "type": "county",
+   "redfin_region_id": 1875,
+   "realtor_location": "Nye County, NV",
+   "lat": 37.965864,
+   "lng": -116.459011
+  },
+  {
+   "name": "Pershing County",
+   "fips": "32027",
+   "type": "county",
+   "redfin_region_id": 1876,
+   "realtor_location": "Pershing County, NV",
+   "lat": 40.439639,
+   "lng": -118.409477
+  },
+  {
+   "name": "Storey County",
+   "fips": "32029",
+   "type": "county",
+   "redfin_region_id": 1877,
+   "realtor_location": "Storey County, NV",
+   "lat": 39.438385,
+   "lng": -119.524646
+  },
+  {
+   "name": "Washoe County",
+   "fips": "32031",
+   "type": "county",
+   "redfin_region_id": 1878,
+   "realtor_location": "Washoe County, NV",
+   "lat": 40.73132,
+   "lng": -119.663269
+  },
+  {
+   "name": "White Pine County",
+   "fips": "32033",
+   "type": "county",
+   "redfin_region_id": 1879,
+   "realtor_location": "White Pine County, NV",
+   "lat": 39.418176,
+   "lng": -114.900565
+  },
+  {
+   "name": "Carson City",
+   "fips": "32510",
+   "type": "independent_city",
+   "redfin_region_id": 1880,
+   "realtor_location": "Carson City, NV",
+   "lat": 39.15306,
+   "lng": -119.747368
+  }
+ ]
+}

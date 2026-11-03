@@ -1,0 +1,753 @@
+{
+ "state": "MI",
+ "name": "Michigan",
+ "counties": [
+  {
+   "name": "Alcona County",
+   "fips": "26001",
+   "type": "county",
+   "redfin_region_id": 1348,
+   "realtor_location": "Alcona County, MI",
+   "lat": 44.657509,
+   "lng": -83.29458
+  },
+  {
+   "name": "Alger County",
+   "fips": "26003",
+   "type": "county",
+   "redfin_region_id": 1349,
+   "realtor_location": "Alger County, MI",
+   "lat": 46.521736,
+   "lng": -86.657119
+  },
+  {
+   "name": "Allegan County",
+   "fips": "26005",
+   "type": "county",
+   "redfin_region_id": 1350,
+   "realtor_location": "Allegan County, MI",
+   "lat": 42.421251,
+   "lng": -86.261403
+  },
+  {
+   "name": "Alpena County",
+   "fips": "26007",
+   "type": "county",
+   "redfin_region_id": 1351,
+   "realtor_location": "Alpena County, MI",
+   "lat": 44.894954,
+   "lng": -83.426574
+  },
+  {
+   "name": "Antrim County",
+   "fips": "26009",
+   "type": "county",
+   "redfin_region_id": 1352,
+   "realtor_location": "Antrim County, MI",
+   "lat": 45.005455,
+   "lng": -85.175639
+  },
+  {
+   "name": "Arenac County",
+   "fips": "26011",
+   "type": "county",
+   "redfin_region_id": 1353,
+   "realtor_location": "Arenac County, MI",
+   "lat": 44.036833,
+   "lng": -83.740675
+  },
+  {
+   "name": "Baraga County",
+   "fips": "26013",
+   "type": "county",
+   "redfin_region_id": 1354,
+   "realtor_location": "Baraga County, MI",
+   "lat": 46.695859,
+   "lng": -88.36181
+  },
+  {
+   "name": "Barry County",
+   "fips": "26015",
+   "type": "county",
+   "redfin_region_id": 1355,
+   "realtor_location": "Barry County, MI",
+   "lat": 42.582811,
+   "lng": -85.31455
+  },
+  {
+   "name": "Bay County",
+   "fips": "26017",
+   "type": "county",
+   "redfin_region_id": 1356,
+   "realtor_location": "Bay County, MI",
+   "lat": 43.699711,
+   "lng": -83.978701
+  },
+  {
+   "name": "Benzie County",
+   "fips": "26019",
+   "type": "county",
+   "redfin_region_id": 1357,
+   "realtor_location": "Benzie County, MI",
+   "lat": 44.636844,
+   "lng": -86.231999
+  },
+  {
+   "name": "Berrien County",
+   "fips": "26021",
+   "type": "county",
+   "redfin_region_id": 1358,
+   "realtor_location": "Berrien County, MI",
+   "lat": 41.791382,
+   "lng": -86.742543
+  },
+  {
+   "name": "Branch County",
+   "fips": "26023",
+   "type": "county",
+   "redfin_region_id": 1359,
+   "realtor_location": "Branch County, MI",
+   "lat": 41.918455,
+   "lng": -85.066885
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "26025",
+   "type": "county",
+   "redfin_region_id": 1360,
+   "realtor_location": "Calhoun County, MI",
+   "lat": 42.24299,
+   "lng": -85.012385
+  },
+  {
+   "name": "Cass County",
+   "fips": "26027",
+   "type": "county",
+   "redfin_region_id": 1361,
+   "realtor_location": "Cass County, MI",
+   "lat": 41.917243,
+   "lng": -86.000142
+  },
+  {
+   "name": "Charlevoix County",
+   "fips": "26029",
+   "type": "county",
+   "redfin_region_id": 1362,
+   "realtor_location": "Charlevoix County, MI",
+   "lat": 45.618554,
+   "lng": -85.543684
+  },
+  {
+   "name": "Cheboygan County",
+   "fips": "26031",
+   "type": "county",
+   "redfin_region_id": 1363,
+   "realtor_location": "Cheboygan County, MI",
+   "lat": 45.476022,
+   "lng": -84.495431
+  },
+  {
+   "name": "Chippewa County",
+   "fips": "26033",
+   "type": "county",
+   "redfin_region_id": 1364,
+   "realtor_location": "Chippewa County, MI",
+   "lat": 46.321819,
+   "lng": -84.52063
+  },
+  {
+   "name": "Clare County",
+   "fips": "26035",
+   "type": "county",
+   "redfin_region_id": 1365,
+   "realtor_location": "Clare County, MI",
+   "lat": 43.991137,
+   "lng": -84.838325
+  },
+  {
+   "name": "Clinton County",
+   "fips": "26037",
+   "type": "county",
+   "redfin_region_id": 1366,
+   "realtor_location": "Clinton County, MI",
+   "lat": 42.950455,
+   "lng": -84.591695
+  },
+  {
+   "name": "Crawford County",
+   "fips": "26039",
+   "type": "county",
+   "redfin_region_id": 1367,
+   "realtor_location": "Crawford County, MI",
+   "lat": 44.680175,
+   "lng": -84.611343
+  },
+  {
+   "name": "Delta County",
+   "fips": "26041",
+   "type": "county",
+   "redfin_region_id": 1368,
+   "realtor_location": "Delta County, MI",
+   "lat": 45.805229,
+   "lng": -86.901938
+  },
+  {
+   "name": "Dickinson County",
+   "fips": "26043",
+   "type": "county",
+   "redfin_region_id": 1369,
+   "realtor_location": "Dickinson County, MI",
+   "lat": 46.012833,
+   "lng": -87.866139
+  },
+  {
+   "name": "Eaton County",
+   "fips": "26045",
+   "type": "county",
+   "redfin_region_id": 1370,
+   "realtor_location": "Eaton County, MI",
+   "lat": 42.58953,
+   "lng": -84.84645
+  },
+  {
+   "name": "Emmet County",
+   "fips": "26047",
+   "type": "county",
+   "redfin_region_id": 1371,
+   "realtor_location": "Emmet County, MI",
+   "lat": 45.590094,
+   "lng": -84.986822
+  },
+  {
+   "name": "Genesee County",
+   "fips": "26049",
+   "type": "county",
+   "redfin_region_id": 1372,
+   "realtor_location": "Genesee County, MI",
+   "lat": 43.021077,
+   "lng": -83.706372
+  },
+  {
+   "name": "Gladwin County",
+   "fips": "26051",
+   "type": "county",
+   "redfin_region_id": 1373,
+   "realtor_location": "Gladwin County, MI",
+   "lat": 43.98975,
+   "lng": -84.389816
+  },
+  {
+   "name": "Gogebic County",
+   "fips": "26053",
+   "type": "county",
+   "redfin_region_id": 1374,
+   "realtor_location": "Gogebic County, MI",
+   "lat": 46.488054,
+   "lng": -89.788314
+  },
+  {
+   "name": "Grand Traverse County",
+   "fips": "26055",
+   "type": "county",
+   "redfin_region_id": 1375,
+   "realtor_location": "Grand Traverse County, MI",
+   "lat": 44.718688,
+   "lng": -85.553848
+  },
+  {
+   "name": "Gratiot County",
+   "fips": "26057",
+   "type": "county",
+   "redfin_region_id": 1376,
+   "realtor_location": "Gratiot County, MI",
+   "lat": 43.292326,
+   "lng": -84.60469
+  },
+  {
+   "name": "Hillsdale County",
+   "fips": "26059",
+   "type": "county",
+   "redfin_region_id": 1377,
+   "realtor_location": "Hillsdale County, MI",
+   "lat": 41.927461,
+   "lng": -84.637479
+  },
+  {
+   "name": "Houghton County",
+   "fips": "26061",
+   "type": "county",
+   "redfin_region_id": 1378,
+   "realtor_location": "Houghton County, MI",
+   "lat": 46.998427,
+   "lng": -88.651903
+  },
+  {
+   "name": "Huron County",
+   "fips": "26063",
+   "type": "county",
+   "redfin_region_id": 1379,
+   "realtor_location": "Huron County, MI",
+   "lat": 43.907616,
+   "lng": -82.857045
+  },
+  {
+   "name": "Ingham County",
+   "fips": "26065",
+   "type": "county",
+   "redfin_region_id": 1380,
+   "realtor_location": "Ingham County, MI",
+   "lat": 42.603534,
+   "lng": -84.373811
+  },
+  {
+   "name": "Ionia County",
+   "fips": "26067",
+   "type": "county",
+   "redfin_region_id": 1381,
+   "realtor_location": "Ionia County, MI",
+   "lat": 42.94465,
+   "lng": -85.073766
+  },
+  {
+   "name": "Iosco County",
+   "fips": "26069",
+   "type": "county",
+   "redfin_region_id": 1382,
+   "realtor_location": "Iosco County, MI",
+   "lat": 44.386912,
+   "lng": -83.380141
+  },
+  {
+   "name": "Iron County",
+   "fips": "26071",
+   "type": "county",
+   "redfin_region_id": 1383,
+   "realtor_location": "Iron County, MI",
+   "lat": 46.170254,
+   "lng": -88.540526
+  },
+  {
+   "name": "Isabella County",
+   "fips": "26073",
+   "type": "county",
+   "redfin_region_id": 1384,
+   "realtor_location": "Isabella County, MI",
+   "lat": 43.645233,
+   "lng": -84.839424
+  },
+  {
+   "name": "Jackson County",
+   "fips": "26075",
+   "type": "county",
+   "redfin_region_id": 1385,
+   "realtor_location": "Jackson County, MI",
+   "lat": 42.248474,
+   "lng": -84.420868
+  },
+  {
+   "name": "Kalamazoo County",
+   "fips": "26077",
+   "type": "county",
+   "redfin_region_id": 1386,
+   "realtor_location": "Kalamazoo County, MI",
+   "lat": 42.246266,
+   "lng": -85.532854
+  },
+  {
+   "name": "Kalkaska County",
+   "fips": "26079",
+   "type": "county",
+   "redfin_region_id": 1387,
+   "realtor_location": "Kalkaska County, MI",
+   "lat": 44.678881,
+   "lng": -85.088992
+  },
+  {
+   "name": "Kent County",
+   "fips": "26081",
+   "type": "county",
+   "redfin_region_id": 1388,
+   "realtor_location": "Kent County, MI",
+   "lat": 43.032497,
+   "lng": -85.547446
+  },
+  {
+   "name": "Keweenaw County",
+   "fips": "26083",
+   "type": "county",
+   "redfin_region_id": 1389,
+   "realtor_location": "Keweenaw County, MI",
+   "lat": 47.367297,
+   "lng": -88.351332
+  },
+  {
+   "name": "Lake County",
+   "fips": "26085",
+   "type": "county",
+   "redfin_region_id": 1390,
+   "realtor_location": "Lake County, MI",
+   "lat": 43.995187,
+   "lng": -85.8114
+  },
+  {
+   "name": "Lapeer County",
+   "fips": "26087",
+   "type": "county",
+   "redfin_region_id": 1391,
+   "realtor_location": "Lapeer County, MI",
+   "lat": 43.088633,
+   "lng": -83.224325
+  },
+  {
+   "name": "Leelanau County",
+   "fips": "26089",
+   "type": "county",
+   "redfin_region_id": 1392,
+   "realtor_location": "Leelanau County, MI",
+   "lat": 45.146182,
+   "lng": -86.051574
+  },
+  {
+   "name": "Lenawee County",
+   "fips": "26091",
+   "type": "county",
+   "redfin_region_id": 1393,
+   "realtor_location": "Lenawee County, MI",
+   "lat": 41.896022,
+   "lng": -84.074356
+  },
+  {
+   "name": "Livingston County",
+   "fips": "26093",
+   "type": "county",
+   "redfin_region_id": 1394,
+   "realtor_location": "Livingston County, MI",
+   "lat": 42.602532,
+   "lng": -83.911718
+  },
+  {
+   "name": "Luce County",
+   "fips": "26095",
+   "type": "county",
+   "redfin_region_id": 1395,
+   "realtor_location": "Luce County, MI",
+   "lat": 46.510988,
+   "lng": -85.517552
+  },
+  {
+   "name": "Mackinac County",
+   "fips": "26097",
+   "type": "county",
+   "redfin_region_id": 1396,
+   "realtor_location": "Mackinac County, MI",
+   "lat": 46.167868,
+   "lng": -85.303762
+  },
+  {
+   "name": "Macomb County",
+   "fips": "26099",
+   "type": "county",
+   "redfin_region_id": 1397,
+   "realtor_location": "Macomb County, MI",
+   "lat": 42.671553,
+   "lng": -82.911456
+  },
+  {
+   "name": "Manistee County",
+   "fips": "26101",
+   "type": "county",
+   "redfin_region_id": 1398,
+   "realtor_location": "Manistee County, MI",
+   "lat": 44.245268,
+   "lng": -86.327537
+  },
+  {
+   "name": "Marquette County",
+   "fips": "26103",
+   "type": "county",
+   "redfin_region_id": 1399,
+   "realtor_location": "Marquette County, MI",
+   "lat": 46.656596,
+   "lng": -87.584028
+  },
+  {
+   "name": "Mason County",
+   "fips": "26105",
+   "type": "county",
+   "redfin_region_id": 1400,
+   "realtor_location": "Mason County, MI",
+   "lat": 43.957196,
+   "lng": -86.442937
+  },
+  {
+   "name": "Mecosta County",
+   "fips": "26107",
+   "type": "county",
+   "redfin_region_id": 1401,
+   "realtor_location": "Mecosta County, MI",
+   "lat": 43.635295,
+   "lng": -85.332751
+  },
+  {
+   "name": "Menominee County",
+   "fips": "26109",
+   "type": "county",
+   "redfin_region_id": 1402,
+   "realtor_location": "Menominee County, MI",
+   "lat": 45.535568,
+   "lng": -87.501457
+  },
+  {
+   "name": "Midland County",
+   "fips": "26111",
+   "type": "county",
+   "redfin_region_id": 1403,
+   "realtor_location": "Midland County, MI",
+   "lat": 43.648203,
+   "lng": -84.379414
+  },
+  {
+   "name": "Missaukee County",
+   "fips": "26113",
+   "type": "county",
+   "redfin_region_id": 1404,
+   "realtor_location": "Missaukee County, MI",
+   "lat": 44.325424,
+   "lng": -85.085471
+  },
+  {
+   "name": "Monroe County",
+   "fips": "26115",
+   "type": "county",
+   "redfin_region_id": 1405,
+   "realtor_location": "Monroe County, MI",
+   "lat": 41.916097,
+   "lng": -83.487106
+  },
+  {
+   "name": "Montcalm County",
+   "fips": "26117",
+   "type": "county",
+   "redfin_region_id": 1406,
+   "realtor_location": "Montcalm County, MI",
+   "lat": 43.312782,
+   "lng": -85.149468
+  },
+  {
+   "name": "Montmorency County",
+   "fips": "26119",
+   "type": "county",
+   "redfin_region_id": 1407,
+   "realtor_location": "Montmorency County, MI",
+   "lat": 45.024134,
+   "lng": -84.130107
+  },
+  {
+   "name": "Muskegon County",
+   "fips": "26121",
+   "type": "county",
+   "redfin_region_id": 1408,
+   "realtor_location": "Muskegon County, MI",
+   "lat": 43.428739,
+   "lng": -86.420908
+  },
+  {
+   "name": "Newaygo County",
+   "fips": "26123",
+   "type": "county",
+   "redfin_region_id": 1409,
+   "realtor_location": "Newaygo County, MI",
+   "lat": 43.562712,
+   "lng": -85.791372
+  },
+  {
+   "name": "Oakland County",
+   "fips": "26125",
+   "type": "county",
+   "redfin_region_id": 1410,
+   "realtor_location": "Oakland County, MI",
+   "lat": 42.660452,
+   "lng": -83.38421
+  },
+  {
+   "name": "Oceana County",
+   "fips": "26127",
+   "type": "county",
+   "redfin_region_id": 1411,
+   "realtor_location": "Oceana County, MI",
+   "lat": 43.603954,
+   "lng": -86.467177
+  },
+  {
+   "name": "Ogemaw County",
+   "fips": "26129",
+   "type": "county",
+   "redfin_region_id": 1412,
+   "realtor_location": "Ogemaw County, MI",
+   "lat": 44.33328,
+   "lng": -84.128073
+  },
+  {
+   "name": "Ontonagon County",
+   "fips": "26131",
+   "type": "county",
+   "redfin_region_id": 1413,
+   "realtor_location": "Ontonagon County, MI",
+   "lat": 46.835325,
+   "lng": -89.276912
+  },
+  {
+   "name": "Osceola County",
+   "fips": "26133",
+   "type": "county",
+   "redfin_region_id": 1414,
+   "realtor_location": "Osceola County, MI",
+   "lat": 43.997552,
+   "lng": -85.322283
+  },
+  {
+   "name": "Oscoda County",
+   "fips": "26135",
+   "type": "county",
+   "redfin_region_id": 1415,
+   "realtor_location": "Oscoda County, MI",
+   "lat": 44.687257,
+   "lng": -84.126905
+  },
+  {
+   "name": "Otsego County",
+   "fips": "26137",
+   "type": "county",
+   "redfin_region_id": 1416,
+   "realtor_location": "Otsego County, MI",
+   "lat": 45.021787,
+   "lng": -84.576603
+  },
+  {
+   "name": "Ottawa County",
+   "fips": "26139",
+   "type": "county",
+   "redfin_region_id": 1417,
+   "realtor_location": "Ottawa County, MI",
+   "lat": 43.054969,
+   "lng": -86.219349
+  },
+  {
+   "name": "Presque Isle County",
+   "fips": "26141",
+   "type": "county",
+   "redfin_region_id": 1418,
+   "realtor_location": "Presque Isle County, MI",
+   "lat": 45.252397,
+   "lng": -83.432283
+  },
+  {
+   "name": "Roscommon County",
+   "fips": "26143",
+   "type": "county",
+   "redfin_region_id": 1419,
+   "realtor_location": "Roscommon County, MI",
+   "lat": 44.339517,
+   "lng": -84.611271
+  },
+  {
+   "name": "Saginaw County",
+   "fips": "26145",
+   "type": "county",
+   "redfin_region_id": 1420,
+   "realtor_location": "Saginaw County, MI",
+   "lat": 43.328267,
+   "lng": -84.05541
+  },
+  {
+   "name": "St. Clair County",
+   "fips": "26147",
+   "type": "county",
+   "redfin_region_id": 1421,
+   "realtor_location": "St. Clair County, MI",
+   "lat": 42.928803,
+   "lng": -82.668913
+  },
+  {
+   "name": "St. Joseph County",
+   "fips": "26149",
+   "type": "county",
+   "redfin_region_id": 1422,
+   "realtor_location": "St. Joseph County, MI",
+   "lat": 41.911488,
+   "lng": -85.52287
+  },
+  {
+   "name": "Sanilac County",
+   "fips": "26151",
+   "type": "county",
+   "redfin_region_id": 1423,
+   "realtor_location": "Sanilac County, MI",
+   "lat": 43.449155,
+   "lng": -82.642815
+  },
+  {
+   "name": "Schoolcraft County",
+   "fips": "26153",
+   "type": "county",
+   "redfin_region_id": 1424,
+   "realtor_location": "Schoolcraft County, MI",
+   "lat": 46.021122,
+   "lng": -86.197029
+  },
+  {
+   "name": "Shiawassee County",
+   "fips": "26155",
+   "type": "county",
+   "redfin_region_id": 1425,
+   "realtor_location": "Shiawassee County, MI",
+   "lat": 42.951545,
+   "lng": -84.146352
+  },
+  {
+   "name": "Tuscola County",
+   "fips": "26157",
+   "type": "county",
+   "redfin_region_id": 1426,
+   "realtor_location": "Tuscola County, MI",
+   "lat": 43.487902,
+   "lng": -83.436618
+  },
+  {
+   "name": "Van Buren County",
+   "fips": "26159",
+   "type": "county",
+   "redfin_region_id": 1427,
+   "realtor_location": "Van Buren County, MI",
+   "lat": 42.28215,
+   "lng": -86.306076
+  },
+  {
+   "name": "Washtenaw County",
+   "fips": "26161",
+   "type": "county",
+   "redfin_region_id": 1428,
+   "realtor_location": "Washtenaw County, MI",
+   "lat": 42.252217,
+   "lng": -83.843423
+  },
+  {
+   "name": "Wayne County",
+   "fips": "26163",
+   "type": "county",
+   "redfin_region_id": 1429,
+   "realtor_location": "Wayne County, MI",
+   "lat": 42.284664,
+   "lng": -83.261953
+  },
+  {
+   "name": "Wexford County",
+   "fips": "26165",
+   "type": "county",
+   "redfin_region_id": 1430,
+   "realtor_location": "Wexford County, MI",
+   "lat": 44.331375,
+   "lng": -85.570046
+  }
+ ]
+}

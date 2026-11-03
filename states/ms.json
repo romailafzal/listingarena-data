@@ -1,0 +1,744 @@
+{
+ "state": "MS",
+ "name": "Mississippi",
+ "counties": [
+  {
+   "name": "Adams County",
+   "fips": "28001",
+   "type": "county",
+   "redfin_region_id": 1518,
+   "realtor_location": "Adams County, MS",
+   "lat": 31.486224,
+   "lng": -91.351797
+  },
+  {
+   "name": "Alcorn County",
+   "fips": "28003",
+   "type": "county",
+   "redfin_region_id": 1519,
+   "realtor_location": "Alcorn County, MS",
+   "lat": 34.886569,
+   "lng": -88.581109
+  },
+  {
+   "name": "Amite County",
+   "fips": "28005",
+   "type": "county",
+   "redfin_region_id": 1520,
+   "realtor_location": "Amite County, MS",
+   "lat": 31.203933,
+   "lng": -90.795542
+  },
+  {
+   "name": "Attala County",
+   "fips": "28007",
+   "type": "county",
+   "redfin_region_id": 1521,
+   "realtor_location": "Attala County, MS",
+   "lat": 33.090468,
+   "lng": -89.588622
+  },
+  {
+   "name": "Benton County",
+   "fips": "28009",
+   "type": "county",
+   "redfin_region_id": 1522,
+   "realtor_location": "Benton County, MS",
+   "lat": 34.809593,
+   "lng": -89.200213
+  },
+  {
+   "name": "Bolivar County",
+   "fips": "28011",
+   "type": "county",
+   "redfin_region_id": 1523,
+   "realtor_location": "Bolivar County, MS",
+   "lat": 33.799139,
+   "lng": -90.88412
+  },
+  {
+   "name": "Calhoun County",
+   "fips": "28013",
+   "type": "county",
+   "redfin_region_id": 1524,
+   "realtor_location": "Calhoun County, MS",
+   "lat": 33.936634,
+   "lng": -89.337114
+  },
+  {
+   "name": "Carroll County",
+   "fips": "28015",
+   "type": "county",
+   "redfin_region_id": 1525,
+   "realtor_location": "Carroll County, MS",
+   "lat": 33.440795,
+   "lng": -89.918887
+  },
+  {
+   "name": "Chickasaw County",
+   "fips": "28017",
+   "type": "county",
+   "redfin_region_id": 1526,
+   "realtor_location": "Chickasaw County, MS",
+   "lat": 33.933277,
+   "lng": -88.947558
+  },
+  {
+   "name": "Choctaw County",
+   "fips": "28019",
+   "type": "county",
+   "redfin_region_id": 1527,
+   "realtor_location": "Choctaw County, MS",
+   "lat": 33.345964,
+   "lng": -89.251332
+  },
+  {
+   "name": "Claiborne County",
+   "fips": "28021",
+   "type": "county",
+   "redfin_region_id": 1528,
+   "realtor_location": "Claiborne County, MS",
+   "lat": 31.97281,
+   "lng": -90.915424
+  },
+  {
+   "name": "Clarke County",
+   "fips": "28023",
+   "type": "county",
+   "redfin_region_id": 1529,
+   "realtor_location": "Clarke County, MS",
+   "lat": 32.045374,
+   "lng": -88.687976
+  },
+  {
+   "name": "Clay County",
+   "fips": "28025",
+   "type": "county",
+   "redfin_region_id": 1530,
+   "realtor_location": "Clay County, MS",
+   "lat": 33.65967,
+   "lng": -88.782468
+  },
+  {
+   "name": "Coahoma County",
+   "fips": "28027",
+   "type": "county",
+   "redfin_region_id": 1531,
+   "realtor_location": "Coahoma County, MS",
+   "lat": 34.230316,
+   "lng": -90.60401
+  },
+  {
+   "name": "Copiah County",
+   "fips": "28029",
+   "type": "county",
+   "redfin_region_id": 1532,
+   "realtor_location": "Copiah County, MS",
+   "lat": 31.866915,
+   "lng": -90.448758
+  },
+  {
+   "name": "Covington County",
+   "fips": "28031",
+   "type": "county",
+   "redfin_region_id": 1533,
+   "realtor_location": "Covington County, MS",
+   "lat": 31.633331,
+   "lng": -89.548897
+  },
+  {
+   "name": "DeSoto County",
+   "fips": "28033",
+   "type": "county",
+   "redfin_region_id": 1534,
+   "realtor_location": "DeSoto County, MS",
+   "lat": 34.874922,
+   "lng": -89.991211
+  },
+  {
+   "name": "Forrest County",
+   "fips": "28035",
+   "type": "county",
+   "redfin_region_id": 1535,
+   "realtor_location": "Forrest County, MS",
+   "lat": 31.18858,
+   "lng": -89.259447
+  },
+  {
+   "name": "Franklin County",
+   "fips": "28037",
+   "type": "county",
+   "redfin_region_id": 1536,
+   "realtor_location": "Franklin County, MS",
+   "lat": 31.477773,
+   "lng": -90.895457
+  },
+  {
+   "name": "George County",
+   "fips": "28039",
+   "type": "county",
+   "redfin_region_id": 1537,
+   "realtor_location": "George County, MS",
+   "lat": 30.855431,
+   "lng": -88.642268
+  },
+  {
+   "name": "Greene County",
+   "fips": "28041",
+   "type": "county",
+   "redfin_region_id": 1538,
+   "realtor_location": "Greene County, MS",
+   "lat": 31.212845,
+   "lng": -88.634811
+  },
+  {
+   "name": "Grenada County",
+   "fips": "28043",
+   "type": "county",
+   "redfin_region_id": 1539,
+   "realtor_location": "Grenada County, MS",
+   "lat": 33.770031,
+   "lng": -89.80274
+  },
+  {
+   "name": "Hancock County",
+   "fips": "28045",
+   "type": "county",
+   "redfin_region_id": 1540,
+   "realtor_location": "Hancock County, MS",
+   "lat": 30.391641,
+   "lng": -89.482791
+  },
+  {
+   "name": "Harrison County",
+   "fips": "28047",
+   "type": "county",
+   "redfin_region_id": 1541,
+   "realtor_location": "Harrison County, MS",
+   "lat": 30.416536,
+   "lng": -89.083376
+  },
+  {
+   "name": "Hinds County",
+   "fips": "28049",
+   "type": "county",
+   "redfin_region_id": 1542,
+   "realtor_location": "Hinds County, MS",
+   "lat": 32.267788,
+   "lng": -90.466017
+  },
+  {
+   "name": "Holmes County",
+   "fips": "28051",
+   "type": "county",
+   "redfin_region_id": 1543,
+   "realtor_location": "Holmes County, MS",
+   "lat": 33.125942,
+   "lng": -90.091197
+  },
+  {
+   "name": "Humphreys County",
+   "fips": "28053",
+   "type": "county",
+   "redfin_region_id": 1544,
+   "realtor_location": "Humphreys County, MS",
+   "lat": 33.130996,
+   "lng": -90.523421
+  },
+  {
+   "name": "Issaquena County",
+   "fips": "28055",
+   "type": "county",
+   "redfin_region_id": 1545,
+   "realtor_location": "Issaquena County, MS",
+   "lat": 32.755539,
+   "lng": -91.003535
+  },
+  {
+   "name": "Itawamba County",
+   "fips": "28057",
+   "type": "county",
+   "redfin_region_id": 1546,
+   "realtor_location": "Itawamba County, MS",
+   "lat": 34.281075,
+   "lng": -88.363127
+  },
+  {
+   "name": "Jackson County",
+   "fips": "28059",
+   "type": "county",
+   "redfin_region_id": 1547,
+   "realtor_location": "Jackson County, MS",
+   "lat": 30.456005,
+   "lng": -88.625101
+  },
+  {
+   "name": "Jasper County",
+   "fips": "28061",
+   "type": "county",
+   "redfin_region_id": 1548,
+   "realtor_location": "Jasper County, MS",
+   "lat": 32.016748,
+   "lng": -89.119176
+  },
+  {
+   "name": "Jefferson County",
+   "fips": "28063",
+   "type": "county",
+   "redfin_region_id": 1549,
+   "realtor_location": "Jefferson County, MS",
+   "lat": 31.733633,
+   "lng": -91.043878
+  },
+  {
+   "name": "Jefferson Davis County",
+   "fips": "28065",
+   "type": "county",
+   "redfin_region_id": 1550,
+   "realtor_location": "Jefferson Davis County, MS",
+   "lat": 31.564808,
+   "lng": -89.827086
+  },
+  {
+   "name": "Jones County",
+   "fips": "28067",
+   "type": "county",
+   "redfin_region_id": 1551,
+   "realtor_location": "Jones County, MS",
+   "lat": 31.616601,
+   "lng": -89.168532
+  },
+  {
+   "name": "Kemper County",
+   "fips": "28069",
+   "type": "county",
+   "redfin_region_id": 1552,
+   "realtor_location": "Kemper County, MS",
+   "lat": 32.750136,
+   "lng": -88.625631
+  },
+  {
+   "name": "Lafayette County",
+   "fips": "28071",
+   "type": "county",
+   "redfin_region_id": 1553,
+   "realtor_location": "Lafayette County, MS",
+   "lat": 34.353078,
+   "lng": -89.485385
+  },
+  {
+   "name": "Lamar County",
+   "fips": "28073",
+   "type": "county",
+   "redfin_region_id": 1554,
+   "realtor_location": "Lamar County, MS",
+   "lat": 31.197586,
+   "lng": -89.506369
+  },
+  {
+   "name": "Lauderdale County",
+   "fips": "28075",
+   "type": "county",
+   "redfin_region_id": 1555,
+   "realtor_location": "Lauderdale County, MS",
+   "lat": 32.403998,
+   "lng": -88.660449
+  },
+  {
+   "name": "Lawrence County",
+   "fips": "28077",
+   "type": "county",
+   "redfin_region_id": 1556,
+   "realtor_location": "Lawrence County, MS",
+   "lat": 31.550009,
+   "lng": -90.10753
+  },
+  {
+   "name": "Leake County",
+   "fips": "28079",
+   "type": "county",
+   "redfin_region_id": 1557,
+   "realtor_location": "Leake County, MS",
+   "lat": 32.76063,
+   "lng": -89.52225
+  },
+  {
+   "name": "Lee County",
+   "fips": "28081",
+   "type": "county",
+   "redfin_region_id": 1558,
+   "realtor_location": "Lee County, MS",
+   "lat": 34.29237,
+   "lng": -88.682439
+  },
+  {
+   "name": "Leflore County",
+   "fips": "28083",
+   "type": "county",
+   "redfin_region_id": 1559,
+   "realtor_location": "Leflore County, MS",
+   "lat": 33.54979,
+   "lng": -90.294934
+  },
+  {
+   "name": "Lincoln County",
+   "fips": "28085",
+   "type": "county",
+   "redfin_region_id": 1560,
+   "realtor_location": "Lincoln County, MS",
+   "lat": 31.535216,
+   "lng": -90.453566
+  },
+  {
+   "name": "Lowndes County",
+   "fips": "28087",
+   "type": "county",
+   "redfin_region_id": 1561,
+   "realtor_location": "Lowndes County, MS",
+   "lat": 33.471424,
+   "lng": -88.439723
+  },
+  {
+   "name": "Madison County",
+   "fips": "28089",
+   "type": "county",
+   "redfin_region_id": 1562,
+   "realtor_location": "Madison County, MS",
+   "lat": 32.63437,
+   "lng": -90.03416
+  },
+  {
+   "name": "Marion County",
+   "fips": "28091",
+   "type": "county",
+   "redfin_region_id": 1563,
+   "realtor_location": "Marion County, MS",
+   "lat": 31.230167,
+   "lng": -89.821712
+  },
+  {
+   "name": "Marshall County",
+   "fips": "28093",
+   "type": "county",
+   "redfin_region_id": 1564,
+   "realtor_location": "Marshall County, MS",
+   "lat": 34.76619,
+   "lng": -89.504231
+  },
+  {
+   "name": "Monroe County",
+   "fips": "28095",
+   "type": "county",
+   "redfin_region_id": 1565,
+   "realtor_location": "Monroe County, MS",
+   "lat": 33.89003,
+   "lng": -88.485038
+  },
+  {
+   "name": "Montgomery County",
+   "fips": "28097",
+   "type": "county",
+   "redfin_region_id": 1566,
+   "realtor_location": "Montgomery County, MS",
+   "lat": 33.500714,
+   "lng": -89.639625
+  },
+  {
+   "name": "Neshoba County",
+   "fips": "28099",
+   "type": "county",
+   "redfin_region_id": 1567,
+   "realtor_location": "Neshoba County, MS",
+   "lat": 32.752518,
+   "lng": -89.119274
+  },
+  {
+   "name": "Newton County",
+   "fips": "28101",
+   "type": "county",
+   "redfin_region_id": 1568,
+   "realtor_location": "Newton County, MS",
+   "lat": 32.40197,
+   "lng": -89.118412
+  },
+  {
+   "name": "Noxubee County",
+   "fips": "28103",
+   "type": "county",
+   "redfin_region_id": 1569,
+   "realtor_location": "Noxubee County, MS",
+   "lat": 33.106606,
+   "lng": -88.566152
+  },
+  {
+   "name": "Oktibbeha County",
+   "fips": "28105",
+   "type": "county",
+   "redfin_region_id": 1570,
+   "realtor_location": "Oktibbeha County, MS",
+   "lat": 33.422313,
+   "lng": -88.876151
+  },
+  {
+   "name": "Panola County",
+   "fips": "28107",
+   "type": "county",
+   "redfin_region_id": 1571,
+   "realtor_location": "Panola County, MS",
+   "lat": 34.365205,
+   "lng": -89.963065
+  },
+  {
+   "name": "Pearl River County",
+   "fips": "28109",
+   "type": "county",
+   "redfin_region_id": 1572,
+   "realtor_location": "Pearl River County, MS",
+   "lat": 30.774793,
+   "lng": -89.586904
+  },
+  {
+   "name": "Perry County",
+   "fips": "28111",
+   "type": "county",
+   "redfin_region_id": 1573,
+   "realtor_location": "Perry County, MS",
+   "lat": 31.169307,
+   "lng": -88.988755
+  },
+  {
+   "name": "Pike County",
+   "fips": "28113",
+   "type": "county",
+   "redfin_region_id": 1574,
+   "realtor_location": "Pike County, MS",
+   "lat": 31.177516,
+   "lng": -90.397725
+  },
+  {
+   "name": "Pontotoc County",
+   "fips": "28115",
+   "type": "county",
+   "redfin_region_id": 1575,
+   "realtor_location": "Pontotoc County, MS",
+   "lat": 34.227081,
+   "lng": -89.037239
+  },
+  {
+   "name": "Prentiss County",
+   "fips": "28117",
+   "type": "county",
+   "redfin_region_id": 1576,
+   "realtor_location": "Prentiss County, MS",
+   "lat": 34.620566,
+   "lng": -88.522184
+  },
+  {
+   "name": "Quitman County",
+   "fips": "28119",
+   "type": "county",
+   "redfin_region_id": 1577,
+   "realtor_location": "Quitman County, MS",
+   "lat": 34.252833,
+   "lng": -90.290171
+  },
+  {
+   "name": "Rankin County",
+   "fips": "28121",
+   "type": "county",
+   "redfin_region_id": 1578,
+   "realtor_location": "Rankin County, MS",
+   "lat": 32.267123,
+   "lng": -89.946063
+  },
+  {
+   "name": "Scott County",
+   "fips": "28123",
+   "type": "county",
+   "redfin_region_id": 1579,
+   "realtor_location": "Scott County, MS",
+   "lat": 32.411959,
+   "lng": -89.533486
+  },
+  {
+   "name": "Sharkey County",
+   "fips": "28125",
+   "type": "county",
+   "redfin_region_id": 1580,
+   "realtor_location": "Sharkey County, MS",
+   "lat": 32.892395,
+   "lng": -90.827613
+  },
+  {
+   "name": "Simpson County",
+   "fips": "28127",
+   "type": "county",
+   "redfin_region_id": 1581,
+   "realtor_location": "Simpson County, MS",
+   "lat": 31.902505,
+   "lng": -89.917709
+  },
+  {
+   "name": "Smith County",
+   "fips": "28129",
+   "type": "county",
+   "redfin_region_id": 1582,
+   "realtor_location": "Smith County, MS",
+   "lat": 32.019029,
+   "lng": -89.494876
+  },
+  {
+   "name": "Stone County",
+   "fips": "28131",
+   "type": "county",
+   "redfin_region_id": 1583,
+   "realtor_location": "Stone County, MS",
+   "lat": 30.790184,
+   "lng": -89.112297
+  },
+  {
+   "name": "Sunflower County",
+   "fips": "28133",
+   "type": "county",
+   "redfin_region_id": 1584,
+   "realtor_location": "Sunflower County, MS",
+   "lat": 33.605529,
+   "lng": -90.59509
+  },
+  {
+   "name": "Tallahatchie County",
+   "fips": "28135",
+   "type": "county",
+   "redfin_region_id": 1585,
+   "realtor_location": "Tallahatchie County, MS",
+   "lat": 33.954529,
+   "lng": -90.172243
+  },
+  {
+   "name": "Tate County",
+   "fips": "28137",
+   "type": "county",
+   "redfin_region_id": 1586,
+   "realtor_location": "Tate County, MS",
+   "lat": 34.649553,
+   "lng": -89.943105
+  },
+  {
+   "name": "Tippah County",
+   "fips": "28139",
+   "type": "county",
+   "redfin_region_id": 1587,
+   "realtor_location": "Tippah County, MS",
+   "lat": 34.763618,
+   "lng": -88.918819
+  },
+  {
+   "name": "Tishomingo County",
+   "fips": "28141",
+   "type": "county",
+   "redfin_region_id": 1588,
+   "realtor_location": "Tishomingo County, MS",
+   "lat": 34.738835,
+   "lng": -88.234827
+  },
+  {
+   "name": "Tunica County",
+   "fips": "28143",
+   "type": "county",
+   "redfin_region_id": 1589,
+   "realtor_location": "Tunica County, MS",
+   "lat": 34.652201,
+   "lng": -90.37177
+  },
+  {
+   "name": "Union County",
+   "fips": "28145",
+   "type": "county",
+   "redfin_region_id": 1590,
+   "realtor_location": "Union County, MS",
+   "lat": 34.489533,
+   "lng": -89.002339
+  },
+  {
+   "name": "Walthall County",
+   "fips": "28147",
+   "type": "county",
+   "redfin_region_id": 1591,
+   "realtor_location": "Walthall County, MS",
+   "lat": 31.164492,
+   "lng": -90.103431
+  },
+  {
+   "name": "Warren County",
+   "fips": "28149",
+   "type": "county",
+   "redfin_region_id": 1592,
+   "realtor_location": "Warren County, MS",
+   "lat": 32.356095,
+   "lng": -90.852384
+  },
+  {
+   "name": "Washington County",
+   "fips": "28151",
+   "type": "county",
+   "redfin_region_id": 1593,
+   "realtor_location": "Washington County, MS",
+   "lat": 33.273174,
+   "lng": -90.944446
+  },
+  {
+   "name": "Wayne County",
+   "fips": "28153",
+   "type": "county",
+   "redfin_region_id": 1594,
+   "realtor_location": "Wayne County, MS",
+   "lat": 31.642503,
+   "lng": -88.678214
+  },
+  {
+   "name": "Webster County",
+   "fips": "28155",
+   "type": "county",
+   "redfin_region_id": 1595,
+   "realtor_location": "Webster County, MS",
+   "lat": 33.612061,
+   "lng": -89.283961
+  },
+  {
+   "name": "Wilkinson County",
+   "fips": "28157",
+   "type": "county",
+   "redfin_region_id": 1596,
+   "realtor_location": "Wilkinson County, MS",
+   "lat": 31.161091,
+   "lng": -91.324617
+  },
+  {
+   "name": "Winston County",
+   "fips": "28159",
+   "type": "county",
+   "redfin_region_id": 1597,
+   "realtor_location": "Winston County, MS",
+   "lat": 33.078724,
+   "lng": -89.037391
+  },
+  {
+   "name": "Yalobusha County",
+   "fips": "28161",
+   "type": "county",
+   "redfin_region_id": 1598,
+   "realtor_location": "Yalobusha County, MS",
+   "lat": 34.030666,
+   "lng": -89.703807
+  },
+  {
+   "name": "Yazoo County",
+   "fips": "28163",
+   "type": "county",
+   "redfin_region_id": 1599,
+   "realtor_location": "Yazoo County, MS",
+   "lat": 32.765675,
+   "lng": -90.387928
+  }
+ ]
+}
