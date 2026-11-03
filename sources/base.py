@@ -30,6 +30,7 @@ class Page:
 class Source:
     name: str = ""
     workers: int = 2           # default max concurrent counties for this source
+    supports_since = False     # True: search_since() pages newest-updated first and stops at a watermark
 
     def search(self, county: County, listing_type: str, max_pages: int | None = None) -> Iterator[Page]:
         """Yield raw search-result pages for a county. Use iter_records() for records only."""

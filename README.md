@@ -62,6 +62,15 @@ No Docker? `uv run python -m tools.dev_postgres` starts a throwaway Postgres (pg
   `/api/listings` in chunks of `PUBLISH_CHUNK` (max 999) using the app's COLS; canonical `external_id = la:<hash>`;
   removed listings are sent once with `status = "removed"`.
 
+### Incremental collection
+
+`python -m jobs.collect ... --incremental` (or `LA_INCREMENTAL=1`) fetches, per county/type, only listings
+updated since the watermark in `fetch_watermarks` (migration 007; seeded from the last complete fetch).
+Sources opt in with `supports_since` + `search_since()`; today only Realtor (sorted by `last_update_date`).
+Incremental checkpoints carry `incremental`, `since`, `caught_up` and are never `complete`, so the loader
+removes nothing. The loader advances a watermark to the fetch's `started_at` in the load transaction, only
+when the fetch was complete or caught up, and skips the county re-merge when an incremental fetch found nothing.
+
 ## Suggested layout
 
 ```text
@@ -139,3 +148,19 @@ The normalized record retains `history`, `owner_info`, `tax_info`, and `property
 - Public app: `../listingarena-app`
 - Customer dashboard: `../listingarena-api-dashboard`
 - Workspace map: `../README.md`
+
+## Steps
+
+The names used in logs, Dagster and the monitor (`jobs/steps.py`; every worker count in `jobs/settings.py`):
+
+| Step | What it does | Run with | Concurrency (env, default) |
+|---|---|---|---|
+| **Collect** | Searches every county on Redfin and Realtor at the same time, merges by address, records new / changed / removed / relisted | `jobs.collect` | states one after another, `PIPELINE_GAP_HOURS` 3 between runs |
+| **Clean** | Stable ids, `row_hash`, drops site-specific columns | `normalization` | inside collect |
+| **Load** | Upserts into PostgreSQL and appends `listing_events` | `db.load` | one transaction per batch |
+| **Details** | Each listing's own page: price events, sales, taxes, schools | `jobs.fetch_details` | `DETAILS_WORKERS` 32 |
+| **Redfin-only** | Realtor property ids of listings only Redfin has, so Details reads their page | `jobs.redfin_only` | `REDFIN_ONLY_WORKERS` 8, `REDFIN_ONLY_RATE` 5/s |
+| **Photos** | First `PHOTOS_PER_LISTING` (3) photos of active rentals (+ sale in `SALE_PHOTOS_STATES`) to `PHOTOS_DIR` | `jobs.photos` | `PHOTOS_WORKERS` 8, `PHOTOS_RATE` 15/s |
+| **Floor plans** | Redfin rental buildings' units, daily / every 3 days / weekly by how often they change | `jobs.floor_plans` | `FLOOR_PLANS_WORKERS` 8, `FLOOR_PLANS_RATE` 5/s |
+
+Each extras job runs every `<JOB>_EVERY_MINUTES` (30) apart from the listings runs; a 403/429 pauses all of that job's workers.

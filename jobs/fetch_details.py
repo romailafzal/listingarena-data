@@ -36,6 +36,7 @@ sys.path.insert(0, str(ROOT))
 from psycopg.types.json import Jsonb  # noqa: E402
 
 from sources.details import DETAIL_COLUMNS, DETAIL_JSON, FETCHERS, DetailError, detail_client  # noqa: E402
+from jobs import settings  # noqa: E402
 from sources.http import BlockedError  # noqa: E402
 
 SOURCES = ("realtor", "redfin")
@@ -62,6 +63,15 @@ CROSS JOIN LATERAL jsonb_each_text(l.source_ids) AS s(source, sid)
 LEFT JOIN source_records sr ON sr.source = s.source AND sr.listing_type = l.listing_type AND sr.source_id = s.sid
 WHERE l.active AND s.source = ANY(%(sources)s) AND (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = s.source AND d.source_id = s.sid)
+"""
+# listings only Redfin has, whose Realtor property id the redfin_only step found: their Realtor page too
+SELECT_REDFIN_ONLY = """
+SELECT l.id, l.listing_type, l.property_key, l.county_fips, l.state, 'realtor', r.realtor_property_id, NULL, r.found_at
+FROM listing_realtor_ids r
+JOIN listings l ON l.id = r.listing_id AND l.active
+WHERE (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
+  AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = 'realtor' AND d.source_id = r.realtor_property_id
+                  AND d.fetched_at >= r.found_at)
 """
 KEYS = ("listing_id", "listing_type", "property_key", "county_fips", "state", "source", "source_id",
         "source_listing_id", "event_at")
@@ -93,6 +103,13 @@ def select_homes(conn, since: str, sources: list[str], state: str | None, limit:
         seen = {(r["source"], r["source_id"]) for r in rows}
         more = f" LIMIT {int(limit) - len(rows) + len(seen)}" if limit else ""
         for r in conn.execute(SELECT_MISSING + more, p):
+            d = dict(zip(KEYS, r))
+            if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
+                seen.add((d["source"], d["source_id"]))
+                rows.append(d)
+    if "realtor" in sources and (not limit or len(rows) < limit):
+        seen = {(r["source"], r["source_id"]) for r in rows}
+        for r in conn.execute(SELECT_REDFIN_ONLY, p):
             d = dict(zip(KEYS, r))
             if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
                 seen.add((d["source"], d["source_id"]))
@@ -253,8 +270,8 @@ def main(argv=None) -> int:
     ap.add_argument("--limit", type=int)
     ap.add_argument("--source", choices=SOURCES, help="only this source (default: both)")
     ap.add_argument("--include-missing", action="store_true", help="also active listings with no detail yet")
-    ap.add_argument("--inflight", type=int, default=int(os.environ.get("DETAIL_INFLIGHT", 3)),
-                    help="max simultaneous requests per source (default 3)")
+    ap.add_argument("--inflight", type=int, default=int(os.environ.get("DETAIL_INFLIGHT") or settings.DETAILS_WORKERS),
+                    help="max simultaneous requests per source (default DETAILS_WORKERS, jobs/settings.py)")
     ap.add_argument("--run-id", default="det_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M"))
     ap.add_argument("--out", default=str(ROOT / "exports"))
     ap.add_argument("--dry-run", action="store_true", help="only print what would be fetched")

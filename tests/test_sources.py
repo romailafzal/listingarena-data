@@ -134,6 +134,23 @@ class RealtorParserTest(unittest.TestCase):
         self.assertEqual(len(unbanded), realtor.MAX_RESULTS // realtor.PAGE_SIZE)   # stops at the 10k cap
         self.assertEqual({p.meta["price_band"] for p in pages} - {None}, {(0, 1_000_000), (1_000_000, None)})
 
+    def test_search_since_stops_at_watermark(self):
+        from datetime import datetime, timezone
+        client = mock.Mock()
+        bodies = []
+
+        def answer(method, url, headers=None, json=None):
+            bodies.append(json["variables"])
+            page = json["variables"]["offset"] // realtor.PAGE_SIZE   # page k: updated on Nov (10 - k)
+            ts = f"2026-11-{10 - page:02d}T12:00:00Z"
+            return {"data": {"home_search": {"total": 5000, "results": [{"property_id": f"{page}", "last_update_date": ts}]}}}
+        client.request_json.side_effect = answer
+        since = datetime(2026, 11, 8, tzinfo=timezone.utc)
+        pages = list(realtor.RealtorSource(client=client).search_since(TRAVIS, "sale", since))
+        self.assertEqual(len(pages), 4)                     # Nov 10, 9, 8 (after since), 7 (reaches it)
+        self.assertEqual(bodies[0]["sort"][0]["field"], "last_update_date")
+        self.assertTrue(pages[-1].meta["caught_up"])
+
 
 class HttpTest(unittest.TestCase):
     def test_prefix(self):

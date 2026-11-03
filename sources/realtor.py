@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import os
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterator
 
@@ -40,10 +40,12 @@ def fields() -> str:
 
 
 def build_body(location: str, listing_type: str, offset: int, limit: int = PAGE_SIZE,
-               price: tuple | None = None, today: date | None = None, dates: tuple | None = None) -> dict:
+               price: tuple | None = None, today: date | None = None, dates: tuple | None = None,
+               by_update: bool = False) -> dict:
     """price=(lo, hi|None) filters list_price (sale/rent). dates=(min_iso, max_iso|None) narrows the sold_date
     window (sold): sold_price filters return 0 results and list_price misses sold homes without a list price,
-    so sold searches > 10k are split by sold date instead."""
+    so sold searches > 10k are split by sold date instead. by_update sorts by last_update_date (newest changes
+    first) for incremental fetches."""
     q: dict = {"status": [STATUS[listing_type]], "search_location": {"location": location}}
     sort_field = "list_date"
     if listing_type == "sold":
@@ -51,6 +53,8 @@ def build_body(location: str, listing_type: str, offset: int, limit: int = PAGE_
         sort_field = "sold_date"
         if dates:
             q["sold_date"] = {"min": dates[0]} if dates[1] is None else {"min": dates[0], "max": dates[1]}
+    if by_update:
+        sort_field = "last_update_date"
     if price:
         lo, hi = price
         q["list_price"] = {"min": lo} if hi is None else {"min": lo, "max": hi}
@@ -60,6 +64,17 @@ def build_body(location: str, listing_type: str, offset: int, limit: int = PAGE_
             "variables": {"query": q, "limit": limit, "offset": offset,
                           # listing_id tie-break keeps paging stable (no repeats/skips)
                           "sort": [{"field": sort_field, "direction": "desc"}, {"field": "listing_id", "direction": "asc"}]}}
+
+
+def parse_ts(v) -> datetime | None:
+    """'2026-11-03T10:03:13Z' / '...00.000000Z' / '2026-10-23' -> aware datetime (UTC)."""
+    if not v:
+        return None
+    try:
+        d = datetime.fromisoformat(str(v).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return d if d.tzinfo else d.replace(tzinfo=timezone.utc)
 
 
 def parse_search(data: dict) -> tuple[list, int]:
@@ -127,6 +142,29 @@ class RealtorSource(Source):
                                   2 if isinstance(self.client.page_parallel, int) and self.client.page_parallel > 1 else 1):
             out += part
         return out
+
+    supports_since = True
+
+    def search_since(self, county: County, listing_type: str, since: datetime,
+                     max_pages: int | None = None) -> Iterator[Page]:
+        """Incremental: newest-updated first; stop after the first page that reaches a listing updated before
+        `since`. Searches with more changes than the 10k offset cap stop at the cap (meta caught_up=False)."""
+        n, offset = 0, 0
+        while max_pages is None or n < max_pages:
+            body = build_body(county.realtor_location, listing_type, offset, by_update=True)
+            data = self._fetch(body)
+            results, total = parse_search(data)
+            oldest = min(filter(None, (parse_ts(r.get("last_update_date")) for r in results)), default=None)
+            reached = not results or (oldest is not None and oldest < since)
+            offset += PAGE_SIZE
+            end = reached or offset >= total or offset > MAX_RESULTS - PAGE_SIZE
+            n += 1
+            meta = {"total": total, "offset": offset - PAGE_SIZE}
+            if end:
+                meta["caught_up"] = reached or offset >= total
+            yield Page(n, {"url": ENDPOINT, "body": body["variables"]}, data, results, meta)
+            if end:
+                return
 
     def search(self, county: County, listing_type: str, max_pages: int | None = None) -> Iterator[Page]:
         counter = [0]

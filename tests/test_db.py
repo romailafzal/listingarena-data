@@ -37,13 +37,13 @@ def _test_url():
 URL = _test_url() if psycopg else None
 
 
-def write_run(root: Path, run_id: str, src: str, rows: list, complete=True, error=None, t="sale", fips="48015"):
+def write_run(root: Path, run_id: str, src: str, rows: list, complete=True, error=None, t="sale", fips="48015", **cp_extra):
     cp = root / "checkpoints" / run_id / src / "tx" / f"{fips}_{t}.json"
     cp.parent.mkdir(parents=True, exist_ok=True)
     if error:
         cp.with_suffix(".error.json").write_text(json.dumps({"error": error, "blocked": True}))
         return
-    cp.write_text(json.dumps({"pages": 1, "records": len(rows), "complete": complete, "seconds": 1.0}))
+    cp.write_text(json.dumps({"pages": 1, "records": len(rows), "complete": complete, "seconds": 1.0, **cp_extra}))
     part = root / "silver" / src / run_id / "parts" / f"tx_{fips}_{t}.jsonl"
     part.parent.mkdir(parents=True, exist_ok=True)
     part.write_text("".join(json.dumps(r) + "\n" for r in rows))
@@ -60,7 +60,7 @@ class LoadTest(unittest.TestCase):
         from db.migrate import migrate
         self.conn = psycopg.connect(URL)
         for t in ("listing_events", "run_county_stats", "errors", "listings", "source_records", "properties", "runs",
-                  "schema_migrations"):
+                  "fetch_watermarks", "schema_migrations"):
             self.conn.execute(f"DROP TABLE IF EXISTS {t} CASCADE")
         self.conn.commit()
         migrate(self.conn)
@@ -102,10 +102,42 @@ class LoadTest(unittest.TestCase):
         self.assertEqual(self.events("r3"), [("relisted", "77474|20 elm|")])
         self.assertEqual(self.conn.execute("SELECT count(*) FROM listings WHERE active").fetchone()[0], 3)
 
+    def test_incremental(self):
+        from db.load import load_run
+        wm = lambda: self.conn.execute("SELECT fetched_through::text, full_sweep FROM fetch_watermarks").fetchall()  # noqa: E731
+        write_run(self.tmp, "r1", "realtor", [r("realtor", "a", "10 Oak St", 100), r("realtor", "b", "30 Pine Rd", 300)],
+                  started_at="2026-11-01T00:00:00+00:00")
+        load_run(self.conn, self.tmp, "r1", log=lambda *_: None)
+        self.assertEqual(wm(), [("2026-11-01 00:00:00+00", True)])
+
+        # incremental with one change: only that listing changes, nothing is removed, watermark advances
+        inc = dict(complete=False, incremental=True, caught_up=True, started_at="2026-11-01T08:00:00+00:00")
+        write_run(self.tmp, "r2", "realtor", [r("realtor", "a", "10 Oak St", 90)], **inc)
+        load_run(self.conn, self.tmp, "r2", log=lambda *_: None)
+        self.assertEqual(self.events("r2"), [("changed", "77474|10 oak|")])
+        self.assertEqual(self.conn.execute("SELECT count(*) FROM listings WHERE active").fetchone()[0], 2)
+        self.assertEqual(wm(), [("2026-11-01 08:00:00+00", False)])
+
+        # incremental with nothing new: no events, no re-merge, watermark still advances
+        write_run(self.tmp, "r3", "realtor", [], **{**inc, "started_at": "2026-11-01T16:00:00+00:00"})
+        res = load_run(self.conn, self.tmp, "r3", log=lambda *_: None)
+        self.assertEqual((self.events("r3"), res["units"]), ([], 1))
+        self.assertEqual(wm()[0][0], "2026-11-01 16:00:00+00")
+
+        # stopped at the 10k cap before reaching the watermark: data loads, watermark stays
+        write_run(self.tmp, "r4", "realtor", [r("realtor", "c", "40 Ash Ln", 400)],
+                  **{**inc, "caught_up": False, "started_at": "2026-11-02T00:00:00+00:00"})
+        load_run(self.conn, self.tmp, "r4", log=lambda *_: None)
+        self.assertEqual(self.events("r4"), [("new", "77474|40 ash|")])
+        self.assertEqual(wm()[0][0], "2026-11-01 16:00:00+00")
+
 
 @unittest.skipUnless(URL, "no Postgres reachable")
 class PublishTest(LoadTest):
     def test_lifecycle(self):  # not re-run here
+        pass
+
+    def test_incremental(self):
         pass
 
     def test_publish_chunks_and_idempotence(self):
