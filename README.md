@@ -62,6 +62,15 @@ No Docker? `uv run python -m tools.dev_postgres` starts a throwaway Postgres (pg
   `/api/listings` in chunks of `PUBLISH_CHUNK` (max 999) using the app's COLS; canonical `external_id = la:<hash>`;
   removed listings are sent once with `status = "removed"`.
 
+### Incremental collection
+
+`python -m jobs.collect ... --incremental` (or `LA_INCREMENTAL=1`) fetches, per county/type, only listings
+updated since the watermark in `fetch_watermarks` (migration 007; seeded from the last complete fetch).
+Sources opt in with `supports_since` + `search_since()`; today only Realtor (sorted by `last_update_date`).
+Incremental checkpoints carry `incremental`, `since`, `caught_up` and are never `complete`, so the loader
+removes nothing. The loader advances a watermark to the fetch's `started_at` in the load transaction, only
+when the fetch was complete or caught up, and skips the county re-merge when an incremental fetch found nothing.
+
 ## Suggested layout
 
 ```text

@@ -1,7 +1,12 @@
 """Collect search results per county from listing sources.
 
 python -m jobs.collect --states TX,FL --sources redfin,realtor --types sale,rent,sold --workers 4
-    [--counties 48015,48453] [--max-pages 2] [--run-id ID] [--out exports]
+    [--counties 48015,48453] [--max-pages 2] [--run-id ID] [--out exports] [--incremental]
+
+--incremental: for sources with search_since (Realtor), fetch only listings updated since the county's watermark
+(fetch_watermarks, minus LA_INCREMENTAL_OVERLAP_MIN, default 60) and stop paging there; such fetches are never
+"complete", so the loader removes nothing. Counties without a watermark get a full fetch; sources without
+search_since are skipped (they are refreshed by the full sweep).
 
 Layout (run_id defaults to today's date, so re-running the same day resumes):
   exports/bronze/<source>/<st>/<fips>/<run_id>/<type>_p0001.json.gz   raw response pages
@@ -19,7 +24,7 @@ import threading
 import time
 import traceback
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,6 +42,15 @@ def make_source(name: str) -> Source:
         from sources.realtor import RealtorSource
         return RealtorSource()
     raise SystemExit(f"unknown source {name!r}")
+
+
+def load_watermarks(sources: list[str], overlap_min: float) -> dict:
+    """(source, fips, type) -> fetched_through - overlap, for incremental fetches."""
+    from db.migrate import connect
+    with connect() as conn:
+        rows = conn.execute("SELECT source, county_fips, listing_type, fetched_through FROM fetch_watermarks "
+                            "WHERE source = ANY(%s)", (sources,)).fetchall()
+    return {(s, f, t): ts - timedelta(minutes=overlap_min) for s, f, t, ts in rows}
 
 
 def load_counties(states: list[str], fips: set[str] | None) -> list[County]:
@@ -67,8 +81,9 @@ def is_complete(pages: int, max_pages: int | None, total: int | None, unique_lis
 
 
 class Collector:
-    def __init__(self, out: Path, run_id: str, max_pages: int | None):
+    def __init__(self, out: Path, run_id: str, max_pages: int | None, watermarks: dict | None = None):
         self.out, self.run_id, self.max_pages = out, run_id, max_pages
+        self.watermarks = watermarks  # None = full fetch; else (source, fips, type) -> since (incremental)
         self.lock = threading.Lock()
         self.results: list[dict] = []
         self.progress = None
@@ -95,8 +110,13 @@ class Collector:
         bronze.mkdir(parents=True, exist_ok=True)
         seen, keys, rows, pages, total = set(), set(), [], 0, None
         lkey = getattr(source, "listing_key", None)
-        started = time.time()
-        for page in source.search(c, t, self.max_pages):
+        started, started_at = time.time(), datetime.now(timezone.utc).isoformat()
+        since = (self.watermarks or {}).get((source.name, c.fips, t))
+        caught_up = None
+        pager = source.search_since(c, t, since, self.max_pages) if since else source.search(c, t, self.max_pages)
+        for page in pager:
+            if since:
+                caught_up = page.meta.get("caught_up", caught_up)
             pages += 1
             if total is None:  # the first (unfiltered) page's total is the search total; band pages report band totals
                 total = page.meta.get("total")
@@ -118,10 +138,12 @@ class Collector:
         part.write_text("".join(json.dumps(r) + "\n" for r in rows))
         res = {"source": source.name, "state": c.state, "county": c.name, "fips": c.fips, "type": t,
                "pages": pages, "records": len(rows), "unique_listings": len(keys), "reported_total": total,
-               "complete": is_complete(pages, self.max_pages,
-                                       total if getattr(source, "total_is_exact", lambda _t: True)(t) else None,
-                                       len(keys)),
-               "seconds": round(time.time() - started, 1)}
+               "complete": not since and is_complete(pages, self.max_pages,
+                                                     total if getattr(source, "total_is_exact", lambda _t: True)(t) else None,
+                                                     len(keys)),
+               "seconds": round(time.time() - started, 1), "started_at": started_at}
+        if since:
+            res.update(incremental=True, since=since.isoformat(), caught_up=bool(caught_up))
         cp.parent.mkdir(parents=True, exist_ok=True)
         cp.write_text(json.dumps(res))
         cp.with_suffix(".error.json").unlink(missing_ok=True)
@@ -198,6 +220,7 @@ def main(argv=None) -> int:
     ap.add_argument("--max-pages", type=int, default=None, help="pages per county/type (testing)")
     ap.add_argument("--run-id", default=datetime.now().strftime("%Y%m%d"))
     ap.add_argument("--out", default=str(ROOT / "exports"))
+    ap.add_argument("--incremental", action="store_true", default=os.environ.get("LA_INCREMENTAL", "0") == "1")
     a = ap.parse_args(argv)
 
     types = [t.strip() for t in a.types.split(",") if t.strip()]
@@ -205,10 +228,17 @@ def main(argv=None) -> int:
         if t not in LISTING_TYPES:
             raise SystemExit(f"unknown type {t!r}")
     sources = {n: make_source(n.strip()) for n in a.sources.split(",") if n.strip()}
+    watermarks = None
+    if a.incremental:
+        skip = [n for n, s in sources.items() if not s.supports_since]
+        if skip:
+            print(f"incremental: skipping {', '.join(skip)} (no updated-since search; full sweep refreshes them)", flush=True)
+        sources = {n: s for n, s in sources.items() if s.supports_since}
+        watermarks = load_watermarks(list(sources), float(os.environ.get("LA_INCREMENTAL_OVERLAP_MIN", 60)))
     caps = dict(kv.split("=") for kv in a.source_workers.split(",") if "=" in kv)
     sems = {n: threading.BoundedSemaphore(int(caps.get(n, s.workers))) for n, s in sources.items()}
     counties = load_counties([s.strip() for s in a.states.split(",")], set(filter(None, a.counties.split(","))) or None)
-    col = Collector(Path(a.out), a.run_id, a.max_pages)
+    col = Collector(Path(a.out), a.run_id, a.max_pages, watermarks)
 
     tasks = [(s, c, t) for c in counties for s in sources.values() for t in types if s.supports(c)]
     skipped = [(s.name, c.fips) for c in counties for s in sources.values() if not s.supports(c)]
