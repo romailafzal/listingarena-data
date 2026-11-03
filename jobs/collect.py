@@ -51,6 +51,21 @@ def load_counties(states: list[str], fips: set[str] | None) -> list[County]:
     return out
 
 
+def completeness_tolerance(total: int) -> int:
+    """Listings may be added/removed while a big search is paged: allow max(2, 0.2%) shortfall."""
+    return max(2, -(-total * 2 // 1000))
+
+
+def is_complete(pages: int, max_pages: int | None, total: int | None, unique_listings: int) -> bool:
+    """Complete = every page/band fetched without error (else no checkpoint is written at all), not cut by
+    --max-pages, and distinct listings >= the source's reported total - tolerance. Listings are counted by the
+    source's listing key (Realtor: property_id+listing_id, because its total counts MLS listings and the same
+    home often appears once per MLS feed); records are then deduped per property."""
+    if max_pages is not None and pages >= max_pages:
+        return False
+    return not total or unique_listings >= total - completeness_tolerance(total)
+
+
 class Collector:
     def __init__(self, out: Path, run_id: str, max_pages: int | None):
         self.out, self.run_id, self.max_pages = out, run_id, max_pages
@@ -75,17 +90,20 @@ class Collector:
         pr(source.name, c.state, c.fips, t, "running")
         bronze = self.out / "bronze" / source.name / c.state.lower() / c.fips / self.run_id
         bronze.mkdir(parents=True, exist_ok=True)
-        seen, rows, pages, total = set(), [], 0, None
+        seen, keys, rows, pages, total = set(), set(), [], 0, None
+        lkey = getattr(source, "listing_key", None)
         started = time.time()
         for page in source.search(c, t, self.max_pages):
             pages += 1
-            total = page.meta.get("total", total)
+            if total is None:  # the first (unfiltered) page's total is the search total; band pages report band totals
+                total = page.meta.get("total")
             fetched = datetime.now(timezone.utc).isoformat()
             with gzip.open(bronze / f"{t}_p{page.number:04d}.json.gz", "wt", encoding="utf-8") as f:
                 json.dump({"source": source.name, "listing_type": t, "county_fips": c.fips, "fetched_at": fetched,
                            "request": page.request, "meta": page.meta, "response": page.response}, f)
             for raw in page.records:
                 rec = source.normalize(raw, t)
+                keys.add(lkey(raw) if lkey else rec["source_id"])
                 if rec["source_id"] in seen:
                     continue
                 seen.add(rec["source_id"])
@@ -96,9 +114,9 @@ class Collector:
         part.parent.mkdir(parents=True, exist_ok=True)
         part.write_text("".join(json.dumps(r) + "\n" for r in rows))
         res = {"source": source.name, "state": c.state, "county": c.name, "fips": c.fips, "type": t,
-               "pages": pages, "records": len(rows), "reported_total": total,
-               "complete": (self.max_pages is None or pages < self.max_pages)
-                           and (not total or len(rows) >= 0.95 * total), "seconds": round(time.time() - started, 1)}
+               "pages": pages, "records": len(rows), "unique_listings": len(keys), "reported_total": total,
+               "complete": is_complete(pages, self.max_pages, total, len(keys)),
+               "seconds": round(time.time() - started, 1)}
         cp.parent.mkdir(parents=True, exist_ok=True)
         cp.write_text(json.dumps(res))
         cp.with_suffix(".error.json").unlink(missing_ok=True)

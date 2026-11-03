@@ -135,7 +135,9 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
                                     WHERE source=%s AND listing_type=%s AND source_id = ANY(%s)""",
                                  (run_id, src, u.listing_type, gone))
                 st["removed"] = len(gone)
-            st.update(pages=cp.get("pages"), duration_s=cp.get("seconds"), complete=bool(cp.get("complete")))
+            st.update(pages=cp.get("pages"), duration_s=cp.get("seconds"), complete=bool(cp.get("complete")),
+                      reported_total=cp.get("reported_total"), unique_listings=cp.get("unique_listings"),
+                      unique_records=cp.get("records"))
             out["sources"][src] = st
         for src, err in u.failed.items():
             out["sources"][src] = {"errors": 1, "blocks": int(bool(err.get("blocked"))), "complete": False}
@@ -209,15 +211,18 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
         with conn.cursor() as cur:
             cur.executemany("""
                 INSERT INTO run_county_stats (run_id, state, county_fips, source, listing_type, fetched, new, changed, removed,
-                                              relisted, active, errors, blocks, pages, duration_s, complete)
-                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                                              relisted, active, errors, blocks, pages, duration_s, complete,
+                                              reported_total, unique_listings, unique_records)
+                VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
                 ON CONFLICT (run_id, county_fips, source, listing_type) DO UPDATE SET fetched=EXCLUDED.fetched, new=EXCLUDED.new,
                   changed=EXCLUDED.changed, removed=EXCLUDED.removed, relisted=EXCLUDED.relisted, active=EXCLUDED.active,
                   errors=EXCLUDED.errors, blocks=EXCLUDED.blocks, pages=EXCLUDED.pages, duration_s=EXCLUDED.duration_s,
-                  complete=EXCLUDED.complete, loaded_at=now()""",
+                  complete=EXCLUDED.complete, reported_total=EXCLUDED.reported_total,
+                  unique_listings=EXCLUDED.unique_listings, unique_records=EXCLUDED.unique_records, loaded_at=now()""",
                 [(run_id, u.state, u.fips, src, u.listing_type, s.get("fetched", 0), s.get("new", 0), s.get("changed", 0),
                   s.get("removed", 0), s.get("relisted", 0), s.get("active"), s.get("errors", 0), s.get("blocks", 0),
-                  s.get("pages"), s.get("duration_s"), bool(s.get("complete"))) for src, s in rows])
+                  s.get("pages"), s.get("duration_s"), bool(s.get("complete")), s.get("reported_total"),
+                  s.get("unique_listings"), s.get("unique_records")) for src, s in rows])
     return out
 
 
