@@ -73,6 +73,15 @@ WHERE (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = 'realtor' AND d.source_id = r.realtor_property_id
                   AND d.fetched_at >= r.found_at)
 """
+# and the mirror: listings only Realtor has, whose Redfin property id the realtor_only step found
+SELECT_REALTOR_ONLY = """
+SELECT l.id, l.listing_type, l.property_key, l.county_fips, l.state, 'redfin', r.redfin_property_id, NULL, r.found_at
+FROM listing_redfin_ids r
+JOIN listings l ON l.id = r.listing_id AND l.active
+WHERE (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
+  AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = 'redfin' AND d.source_id = r.redfin_property_id
+                  AND d.fetched_at >= r.found_at)
+"""
 KEYS = ("listing_id", "listing_type", "property_key", "county_fips", "state", "source", "source_id",
         "source_listing_id", "event_at")
 
@@ -107,9 +116,11 @@ def select_homes(conn, since: str, sources: list[str], state: str | None, limit:
             if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
                 seen.add((d["source"], d["source_id"]))
                 rows.append(d)
-    if "realtor" in sources and (not limit or len(rows) < limit):
+    for source, query in (("realtor", SELECT_REDFIN_ONLY), ("redfin", SELECT_REALTOR_ONLY)):
+        if source not in sources or (limit and len(rows) >= limit):
+            continue
         seen = {(r["source"], r["source_id"]) for r in rows}
-        for r in conn.execute(SELECT_REDFIN_ONLY, p):
+        for r in conn.execute(query, p):
             d = dict(zip(KEYS, r))
             if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
                 seen.add((d["source"], d["source_id"]))
