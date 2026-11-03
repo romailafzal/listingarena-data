@@ -1,6 +1,9 @@
 """Photos: download each active listing's first photos and store them once, named after their link.
 
-python -m jobs.photos [--state XX] [--limit N] [--workers N] [--rate N] [--coverage]
+python -m jobs.photos [--state XX] [--limit N] [--workers N] [--rate N] [--download] [--coverage]
+
+By default only the links are saved (listing_photos rows with no file yet, no requests); --download (or
+PHOTOS_DOWNLOAD=1) downloads them, once every listing has its listing data and links.
 
 Which listings: active rentals everywhere, and active sale listings in SALE_PHOTOS_STATES; new ones (no photos yet)
 and relisted ones (photos downloaded before the listing was last seen as new). Links come from listings.photo_url
@@ -15,6 +18,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -39,7 +43,8 @@ WHERE l.active
   AND (%(state)s::text IS NULL OR l.state = %(state)s)
   AND (l.photo_url IS NOT NULL OR d.photos IS NOT NULL)
   AND NOT EXISTS (SELECT 1 FROM listing_photos p WHERE p.listing_id = l.id
-                  AND (p.downloaded_at >= l.first_seen OR p.download_error = '404'))
+                  AND (p.downloaded_at >= l.first_seen OR p.download_error = '404'
+                       OR (NOT %(download)s AND p.downloaded_at IS NULL)))
 ORDER BY l.listing_type, l.id
 LIMIT %(limit)s
 """
@@ -64,8 +69,9 @@ def storage_key(state: str, url: str) -> str:
 
 
 class PhotoJob:
-    def __init__(self, conn, out: Path, pace: Pace, log=print):
+    def __init__(self, conn, out: Path, pace: Pace, log=print, download: bool = True):
         self.conn, self.out, self.pace, self.log = conn, out, pace, log
+        self.download_files = download
         self.session = requests.Session()
         self.stats = {"downloaded": 0, "already": 0, "missing": 0, "errors": 0, "bytes": 0}
 
@@ -102,8 +108,11 @@ class PhotoJob:
 
     def listing(self, row) -> list[tuple]:
         lid, state, photo_url, photos = row
+        urls = links(photo_url, photos, settings.PHOTOS_PER_LISTING)
+        if not self.download_files:
+            return [(lid, pos, url, None, None, None) for pos, url in enumerate(urls)]
         rows = []
-        for pos, url in enumerate(links(photo_url, photos, settings.PHOTOS_PER_LISTING)):
+        for pos, url in enumerate(urls):
             key = storage_key(state, url)
             size, err = self.download(url, key)
             rows.append((lid, pos, url, None if err else key, size, err))
@@ -113,11 +122,11 @@ class PhotoJob:
         with self.conn.transaction():
             self.conn.cursor().executemany(
                 """INSERT INTO listing_photos (listing_id, position, source_url, storage_key, bytes, downloaded_at, download_error)
-                   VALUES (%s, %s, %s, %s, %s, CASE WHEN %s::text IS NULL THEN now() END, %s)
+                   VALUES (%s, %s, %s, %s, %s, CASE WHEN %s::text IS NULL AND %s::text IS NOT NULL THEN now() END, %s)
                    ON CONFLICT (listing_id, position) DO UPDATE SET source_url = EXCLUDED.source_url,
                      storage_key = EXCLUDED.storage_key, bytes = EXCLUDED.bytes,
                      downloaded_at = EXCLUDED.downloaded_at, download_error = EXCLUDED.download_error""",
-                [(lid, pos, url, key, size, err, err) for lid, pos, url, key, size, err in rows])
+                [(lid, pos, url, key, size, err, key, err) for lid, pos, url, key, size, err in rows])
 
     def run(self, due: list, workers: int) -> dict:
         t0 = time.time()
@@ -137,6 +146,8 @@ def main(argv=None) -> int:
     ap.add_argument("--limit", type=int, default=200_000)
     ap.add_argument("--workers", type=int, default=settings.PHOTOS_WORKERS)
     ap.add_argument("--rate", type=float, default=settings.PHOTOS_RATE)
+    ap.add_argument("--download", action="store_true", default=os.environ.get("PHOTOS_DOWNLOAD") == "1",
+                    help="download the files too (default: save the links only)")
     ap.add_argument("--coverage", action="store_true", help="only count the coverage, download nothing")
     a = ap.parse_args(argv)
     from db.migrate import connect
@@ -147,11 +158,13 @@ def main(argv=None) -> int:
                 print(f"{r[0]}  {r[2]}/{r[1]} rentals with photos")
             return 0
         due = conn.execute(SELECT_DUE, {"state": a.state and a.state.upper(), "limit": a.limit,
-                                        "sale_states": sorted(settings.SALE_PHOTOS_STATES)}).fetchall()
+                                        "sale_states": sorted(settings.SALE_PHOTOS_STATES),
+                                        "download": a.download}).fetchall()
         print(f"[photos] {len(due)} listings due (state={a.state or 'all'}, workers={a.workers}, rate={a.rate}/s)",
               flush=True)
         res = PhotoJob(conn, Path(settings.PHOTOS_DIR), Pace(a.rate, settings.PHOTOS_PAUSE, "photos"),
-                       log=lambda m: print(m, flush=True)).run(due, a.workers)
+                       log=lambda m: print(m, flush=True), download=a.download).run(
+                           due, a.workers if a.download else 1)
     print(json.dumps(res), flush=True)
     return 0
 
