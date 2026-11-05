@@ -22,7 +22,7 @@ from typing import Any
 
 import requests
 
-from sources.proxy import ProxyBudgetExceeded, enabled_for, mask, pool_from_env
+from sources.proxy import ProxyBudgetExceeded, mask, mode_for, pool_from_env
 
 RETRY_STATUS = {403, 429, 500, 502, 503, 504}
 
@@ -168,10 +168,15 @@ class SourceClient:
         self.proxies = {"http": proxy, "https": proxy} if proxy else None
         # ProxyRotator gateway (per-source opt-in; an explicit <SOURCE>_PROXY wins). Shared thread cap + budget.
         explicit = os.environ.get(f"{name.upper()}_PROXY")
-        self.pool = pool_from_env() if (not explicit and enabled_for(name)) else None
+        self.mode = mode_for(name) if not explicit else "off"
+        self.pool = pool_from_env() if self.mode != "off" else None
+        if not self.pool:
+            self.mode = "off"
+        self._direct_until = 0.0       # hybrid: direct IP backed off (403/429) until this monotonic time
         if self.pool:
-            print(f"[{name}] using ProxyRotator gateway ({self.pool.summary()})", flush=True)
-        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0}
+            print(f"[{name}] ProxyRotator mode={self.mode} ({self.pool.summary()})", flush=True)
+        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0,
+                      "proxied": 0, "shifted_to_proxy": 0}
         self._stats_lock = threading.Lock()
         self.page_parallel = max(1, int(os.environ.get(f"{name.upper()}_PAGE_PARALLEL", 1)))
         cap = int(os.environ.get(f"{name.upper()}_MAX_INFLIGHT", 0) or 0)
@@ -205,16 +210,16 @@ class SourceClient:
             h.update(headers or {})
             self._count("requests")
             t0 = time.monotonic()
-            pidx, proxies = -1, self.proxies
+            pidx, proxies, token = -1, self.proxies, None
             if self.pool:
-                pidx, purl = self.pool.current()          # may raise ProxyBudgetExceeded -> caller skips
-                proxies = {"http": purl, "https": purl} if purl else self.proxies
-                self._fresh_session_if_rotated()
-                h.setdefault("accept-encoding", "gzip, deflate, br")
-            if self.limiter:
+                token, pidx, purl = self._route()
+                if pidx >= 0:
+                    proxies = {"http": purl, "https": purl}
+                    self._fresh_session_if_rotated()
+                    h.setdefault("accept-encoding", "gzip, deflate, br")
+            direct = pidx < 0
+            if direct and self.limiter:
                 self.limiter.acquire()
-            if pidx >= 0:
-                self.pool.sem.acquire()
             try:
                 r = self._session().request(method, url, headers=h, proxies=proxies, timeout=self.timeout, **kw)
             except requests.RequestException as e:
@@ -223,7 +228,7 @@ class SourceClient:
                 if pidx >= 0:
                     self.pool.record(len(url) + 500)
                     self.pool.fail(pidx)
-                if self.limiter:
+                if direct and self.limiter:
                     self.limiter.note_error()
             else:
                 self._count("latency_s", time.monotonic() - t0)
@@ -239,23 +244,51 @@ class SourceClient:
                     self.pool.fail(pidx)
                 last = "HTTP 403 (captcha/HTML)" if soft else f"HTTP {r.status_code}"
                 self._count("blocked" if blocked else "errors")
-                if self.limiter:
+                if direct and blocked and self.mode == "hybrid":
+                    self._direct_until = time.monotonic() + self.block_backoff * (attempt + 1)
+                    self._count("shifted_to_proxy")
+                if direct and self.limiter:
                     (self.limiter.note_block if blocked else self.limiter.note_error)()
             finally:
-                if pidx >= 0:
-                    self.pool.sem.release()
-                if self.limiter:
+                if self.pool:
+                    self.pool.release_slot(token)
+                if direct and self.limiter:
                     self.limiter.release()
             if attempt == self.retries - 1:
                 break
             self._count("retries")
             # through the gateway the next attempt is a new IP: short backoff instead of the long block backoff
-            wait = self.backoff(attempt, False) if pidx >= 0 else self.backoff(attempt, blocked)
+            # hybrid: a direct block is retried right away through the proxy (new IP), direct itself backs off
+            if pidx >= 0:
+                wait = self.backoff(attempt, False)
+            elif blocked and self.mode == "hybrid" and not self.pool.over_budget():
+                wait = 0.0
+            else:
+                wait = self.backoff(attempt, blocked)
             print(f"[{self.name}] {last} on {method} {url[:120]}; retry {attempt + 1} in {wait:.0f}s", flush=True)
             self.sleep(wait)
         if last and (last.startswith("HTTP 403") or last.startswith("HTTP 429")):
             raise BlockedError(f"[{self.name}] blocked: {last} {url[:200]}")
         raise RuntimeError(f"[{self.name}] failed after {self.retries} attempts: {last} {url[:200]}")
+
+    def _route(self):
+        """(slot token, endpoint index, proxy URL); index -1 = go direct. Hybrid: proxy when a global slot is free
+        (on top of the direct pool), and *only* proxy while direct is backed off. Over budget: hybrid -> direct."""
+        pool = self.pool
+        if pool.over_budget():
+            if self.mode == "proxy" and not pool.direct_fallback:
+                raise ProxyBudgetExceeded(f"[{self.name}] proxy bandwidth budget reached")
+            return None, -1, None
+        must = self.mode == "proxy" or time.monotonic() < self._direct_until
+        token = pool.slot() if must else pool.try_slot()
+        if token is None:
+            return None, -1, None
+        i, purl = pool.current()
+        if i < 0:
+            pool.release_slot(token)
+            return None, -1, None
+        self._count("proxied")
+        return token, i, purl
 
     def _fresh_session_if_rotated(self) -> None:
         """After a rotation, drop this thread's keep-alive connection so the gateway assigns a new exit IP."""

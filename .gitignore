@@ -22,3 +22,4 @@ exports/checkpoints/
 exports/state.sqlite3*
 exports/pgdata/
 data/proxy_usage.json
+data/proxy_slots/

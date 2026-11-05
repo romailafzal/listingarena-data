@@ -99,14 +99,21 @@ Never commit `.env.local`, provider keys, database passwords, or raw licensed da
 
 ### ProxyRotator (optional)
 
-`sources/proxy.py` routes a source's requests through the ProxyRotator rotating gateway (new exit IP per request,
-Basic auth). Opt-in per source family: Redfin on, Realtor off (`<SOURCE>_USE_PROXYROTATOR`); an explicit
-`<SOURCE>_PROXY` URL wins. Nothing changes unless `PROXYROTATOR_GATEWAY` is set. On 403/429/connection errors the
-client drops its connection (fresh IP), moves to the next endpoint and retires an endpoint after repeated failures.
-Proxied requests share a per-process thread cap (`PROXY_MAX_THREADS`, default 5) and a bandwidth budget counted
-up+down in `data/proxy_usage.json` (`PROXY_BUDGET_GB`, default 150, resets on `PROXY_RESET_DATE` monthly). At the
-budget, proxied traffic stops (skip, or direct with `PROXYROTATOR_DIRECT_FALLBACK=1`). Credentials are masked in all
-logs and exceptions. See `.env.example` for all names.
+`sources/proxy.py` adds the ProxyRotator rotating gateway (new exit IP per request, Basic auth). Nothing changes
+unless `PROXYROTATOR_GATEWAY` is set. Per source family `<SOURCE>_USE_PROXYROTATOR=hybrid|proxy|off` (Redfin and
+Realtor default `hybrid`; an explicit `<SOURCE>_PROXY` URL wins):
+
+- **hybrid**: our direct IP (existing adaptive cap) and the gateway run in parallel; a request takes a proxy slot when
+  one is free, otherwise goes direct. A direct 403/429 backs direct off and retries immediately through the proxy;
+  while direct is backed off the source runs proxy-only.
+- **proxy**: always through the gateway. **off**: direct only.
+
+Proxy concurrency is a machine-wide cap: `PROXY_MAX_THREADS` (default 10, never above 10) flock'd slot files in
+`data/proxy_slots/`, shared by all processes; a crashed process's slots free automatically. On 403/429/connection
+errors the connection is dropped (fresh IP) and endpoints rotate/retire. Bandwidth is counted up+down in
+`data/proxy_usage.json` (`PROXY_BUDGET_GB`, default 150; resets on `PROXY_RESET_DATE`, default 2026-11-09, monthly);
+at the budget hybrid falls back to direct only, proxy mode skips (or goes direct with
+`PROXYROTATOR_DIRECT_FALLBACK=1`). Credentials are masked in all logs and exceptions.
 
 ## Normalized output
 

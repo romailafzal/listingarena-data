@@ -11,12 +11,16 @@ Env (values only in .env, never logged):
   PROXYROTATOR_USERNAME       gateway username (omit both for IP-whitelist auth)
   PROXYROTATOR_PASSWORD       gateway password
   PROXYROTATOR_SCHEME         http (default) | socks5h
-  PROXY_MAX_THREADS           in-flight cap for proxied traffic per process (default 5; alias PROXYROTATOR_MAX_THREADS)
+  PROXY_MAX_THREADS           GLOBAL in-flight cap for proxied traffic across all processes (default 10, max 10)
   PROXY_BUDGET_GB             bandwidth budget per billing period, up+down, shared by all processes (default 150)
   PROXY_RESET_DATE            YYYY-MM-DD the counter resets (plan renewal; then monthly on that day). Default 2026-11-09
   PROXY_USAGE_FILE            persistent counter (default data/proxy_usage.json)
   PROXYROTATOR_DIRECT_FALLBACK  1 = when every endpoint is retired, go direct instead of waiting (default 0)
-  <SOURCE>_USE_PROXYROTATOR   1/0 per source family (REDFIN default 1, everything else default 0)
+  <SOURCE>_USE_PROXYROTATOR   hybrid | proxy | off per source family (REDFIN/REALTOR default hybrid when a gateway is
+                              set, others off). hybrid = our direct IP and the gateway in parallel (separate pools);
+                              direct 403/429 shifts the source onto the proxy. 1 = hybrid, 0 = off.
+  PROXY_SLOT_DIR              global slot directory (default data/proxy_slots): PROXY_MAX_THREADS (default 10, hard max
+                              10) flock'd slot files shared by every process; a crashed process's locks vanish with it
   <SOURCE>_PROXY              explicit proxy URL for one source; wins over ProxyRotator
 """
 from __future__ import annotations
@@ -25,12 +29,14 @@ import datetime as dt
 import fcntl
 import json
 import os
+import random
 import re
 import threading
 import time
 from urllib.parse import quote
 
-DEFAULT_ON = {"redfin"}
+DEFAULT_ON = {"redfin", "realtor"}
+HARD_MAX_THREADS = 10
 _CRED_RE = re.compile(r"(?P<scheme>[a-z0-9+.-]+://)(?P<cred>[^/@\s:]+(?::[^/@\s]*)?)@", re.I)
 
 
@@ -49,12 +55,62 @@ def family(name: str) -> str:
     return name.split("_", 1)[0].lower()
 
 
-def enabled_for(name: str) -> bool:
+def mode_for(name: str) -> str:
+    """'hybrid' | 'proxy' | 'off' for a source client name."""
     fam = family(name).upper()
     raw = os.environ.get(f"{name.upper()}_USE_PROXYROTATOR") or os.environ.get(f"{fam}_USE_PROXYROTATOR")
     if raw is None:
-        return family(name) in DEFAULT_ON
-    return raw.strip().lower() in ("1", "true", "yes", "on")
+        return "hybrid" if family(name) in DEFAULT_ON else "off"
+    v = raw.strip().lower()
+    if v in ("proxy", "only"):
+        return "proxy"
+    if v in ("hybrid", "1", "true", "yes", "on"):
+        return "hybrid"
+    return "off"
+
+
+def enabled_for(name: str) -> bool:
+    return mode_for(name) != "off"
+
+
+class GlobalSlots:
+    """Machine-wide cap: N slot files, each held with a non-blocking flock while a proxied request is in flight.
+    The kernel drops a flock when its process dies, so crashed processes never leave stale slots."""
+
+    def __init__(self, directory: str, n: int, poll: float = 0.05, sleep=time.sleep):
+        self.dir, self.n, self.poll, self.sleep = directory, max(1, min(HARD_MAX_THREADS, n)), poll, sleep
+        os.makedirs(directory, exist_ok=True)
+        self._start = 0
+
+    def try_acquire(self):
+        """An open fd holding a slot, or None when all N are taken."""
+        for k in range(self.n):
+            i = (self._start + k) % self.n
+            fd = os.open(os.path.join(self.dir, f"slot_{i}"), os.O_RDWR | os.O_CREAT, 0o600)
+            try:
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except OSError:
+                os.close(fd)
+                continue
+            self._start = i + 1
+            return fd
+        return None
+
+    def acquire(self, timeout: float | None = None):
+        t0 = time.monotonic()
+        while True:
+            fd = self.try_acquire()
+            if fd is not None or (timeout is not None and time.monotonic() - t0 >= timeout):
+                return fd
+            self.sleep(self.poll * random.uniform(0.5, 1.5))
+
+    @staticmethod
+    def release(fd) -> None:
+        if fd is not None:
+            try:
+                fcntl.flock(fd, fcntl.LOCK_UN)
+            finally:
+                os.close(fd)
 
 
 class ProxyBudgetExceeded(RuntimeError):
@@ -140,13 +196,17 @@ class UsageMeter:
 
 
 class ProxyPool:
+    """Gateway endpoints + rotation + thread cap + budget. Slot API: try_slot()/slot()/release_slot(token)."""
+
     def __init__(self, endpoints: list[str], max_threads: int = 5, retire_after: int = 3, cooldown: float = 120.0,
-                 direct_fallback: bool = False, clock=time.monotonic, meter: UsageMeter | None = None):
+                 direct_fallback: bool = False, clock=time.monotonic, meter: UsageMeter | None = None,
+                 slots: GlobalSlots | None = None):
         if not endpoints:
             raise ValueError("ProxyPool needs at least one endpoint")
         self.endpoints = endpoints
-        self.sem = threading.BoundedSemaphore(max(1, max_threads))
-        self.max_threads = max(1, max_threads)
+        self.max_threads = max(1, min(HARD_MAX_THREADS, max_threads))
+        self.slots = slots          # global cross-process cap; None -> in-process semaphore only
+        self.sem = threading.BoundedSemaphore(self.max_threads)
         self.retire_after, self.cooldown = retire_after, cooldown
         self.direct_fallback = direct_fallback
         self.clock = clock
@@ -158,6 +218,25 @@ class ProxyPool:
         self._retired_until = [0.0] * len(endpoints)
         self.generation = 0          # bumped on every rotation; clients drop their session when it changes
         self.stats = {"requests": 0, "ok": 0, "rotations": 0, "retired": 0, "direct": 0}
+
+    def try_slot(self):
+        if self.slots:
+            return self.slots.try_acquire()
+        return True if self.sem.acquire(blocking=False) else None
+
+    def slot(self):
+        if self.slots:
+            return self.slots.acquire()
+        self.sem.acquire()
+        return True
+
+    def release_slot(self, token) -> None:
+        if token is None:
+            return
+        if self.slots:
+            self.slots.release(token)
+        else:
+            self.sem.release()
 
     def over_budget(self) -> bool:
         if not (self.meter and self.meter.exhausted()):
@@ -252,8 +331,9 @@ def pool_from_env() -> ProxyPool | None:
                 meter = UsageMeter(os.environ.get("PROXY_USAGE_FILE") or os.path.join(here, "data", "proxy_usage.json"),
                                    float(os.environ.get("PROXY_BUDGET_GB", 150) or 150),
                                    dt.date.fromisoformat(os.environ.get("PROXY_RESET_DATE") or "2026-11-09"))
-                threads = os.environ.get("PROXY_MAX_THREADS") or os.environ.get("PROXYROTATOR_MAX_THREADS") or 5
-                _POOL = ProxyPool(eps, max_threads=int(threads), meter=meter,
+                threads = min(HARD_MAX_THREADS, int(os.environ.get("PROXY_MAX_THREADS") or 10))
+                slots = GlobalSlots(os.environ.get("PROXY_SLOT_DIR") or os.path.join(here, "data", "proxy_slots"), threads)
+                _POOL = ProxyPool(eps, max_threads=threads, meter=meter, slots=slots,
                                   direct_fallback=os.environ.get("PROXYROTATOR_DIRECT_FALLBACK", "0") == "1")
             if _POOL is not None:
                 import atexit
