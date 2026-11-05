@@ -4,6 +4,8 @@ Concurrency knobs (env, per source; NAME = REDFIN / REALTOR / ...):
   NAME_MIN_INTERVAL  global spacing between request *starts* (s). 0 = no pacing. Slots are reserved under a
                      lock but the wait happens outside it, so with 0 nothing is serialized.
   NAME_MAX_INFLIGHT  cap on simultaneous HTTP calls for this client (adaptive, see AdaptiveLimiter). Unset = no cap.
+  NAME_TIMEOUT       read timeout per request (s, default 30; connect timeout is 10). A request that times out is
+                     retried with backoff and counts as an error for the adaptive cap.
   NAME_PAGE_PARALLEL parallel page fetches inside one county/type search (read by the sources via
                      SourceClient.page_parallel). Default 1 = sequential pagination.
 Detail/per-home fetchers should create their OWN SourceClient (e.g. SourceClient("redfin_detail", ...)) so they
@@ -59,19 +61,23 @@ def parse_json(text: str) -> Any:
 
 
 class AdaptiveLimiter:
-    """Bounded in-flight cap that steps down on sustained blocks and back up after a quiet period.
+    """Bounded in-flight cap that steps down on sustained blocks or errors and back up after a quiet period.
 
     levels: caps from highest to lowest (e.g. [200, 100, 50]). A "sustained block" is >= `trip` block
-    responses (403/429/captcha) within `window` seconds; it drops one level. After `recover` seconds with no
-    block it climbs one level (never above levels[0]). Thread-safe; acquire()/release() wrap one HTTP call.
+    responses (403/429/captcha) within `window` seconds; >= `error_trip` errors (timeouts, dropped connections,
+    5xx, upstream "request aborted/timed out" answers: the source is overloaded) do the same. Either drops one
+    level. After `recover` seconds with neither it climbs one level (never above levels[0]). Thread-safe;
+    acquire()/release() wrap one HTTP call.
     """
 
     def __init__(self, name: str, levels: list[int], trip: int = 8, window: float = 60.0, recover: float = 900.0,
-                 clock=time.monotonic):
+                 clock=time.monotonic, error_trip: int | None = None):
         self.name, self.levels, self.trip, self.window, self.recover = name, levels, trip, window, recover
+        self.error_trip = error_trip or 2 * trip
         self.level, self.inflight, self.clock = 0, 0, clock
         self.cond = threading.Condition()
         self.blocks: list[float] = []
+        self.errors: list[float] = []
         self.last_block = self.last_change = clock()
 
     @property
@@ -92,14 +98,21 @@ class AdaptiveLimiter:
             self.cond.notify()
 
     def note_block(self) -> None:
+        self._note("blocks", self.trip, "blocks")
+
+    def note_error(self) -> None:
+        self._note("errors", self.error_trip, "errors/timeouts")
+
+    def _note(self, attr: str, trip: int, what: str) -> None:
         with self.cond:
             now = self.clock()
             self.last_block = now
-            self.blocks = [t for t in self.blocks if now - t < self.window] + [now]
-            if len(self.blocks) >= self.trip and self.level < len(self.levels) - 1 and now - self.last_change > self.window:
+            hits = [t for t in getattr(self, attr) if now - t < self.window] + [now]
+            setattr(self, attr, hits)
+            if len(hits) >= trip and self.level < len(self.levels) - 1 and now - self.last_change > self.window:
                 self.level += 1
-                self.last_change, self.blocks = now, []
-                print(f"[{self.name}] sustained blocks: in-flight cap -> {self.cap}", flush=True)
+                self.last_change, self.blocks, self.errors = now, [], []
+                print(f"[{self.name}] sustained {what}: in-flight cap -> {self.cap}", flush=True)
 
     def _maybe_recover(self) -> None:
         now = self.clock()
@@ -124,11 +137,13 @@ class SourceClient:
     Env vars: <SOURCE>_PROXY (e.g. REDFIN_PROXY) or HTTPS_PROXY/HTTP_PROXY; <SOURCE>_MIN_INTERVAL overrides the pace.
     """
 
-    def __init__(self, name: str, min_interval: float = 1.0, retries: int = 5, timeout: float = 60,
+    def __init__(self, name: str, min_interval: float = 1.0, retries: int = 5, timeout: float | None = None,
                  backoff_base: float = 2.0, block_backoff: float = 60.0, sleep=time.sleep):
         self.name = name
         self.min_interval = float(os.environ.get(f"{name.upper()}_MIN_INTERVAL", min_interval))
-        self.retries, self.timeout = retries, timeout
+        read = float(timeout or os.environ.get(f"{name.upper()}_TIMEOUT", 30))
+        # (connect, read): a dead connection fails in 10 s instead of hanging a county worker
+        self.retries, self.timeout = retries, (min(10.0, read), read)
         self.backoff_base, self.block_backoff = backoff_base, block_backoff
         self.sleep = sleep
         self._lock = threading.Lock()
@@ -141,7 +156,8 @@ class SourceClient:
         self.page_parallel = max(1, int(os.environ.get(f"{name.upper()}_PAGE_PARALLEL", 1)))
         cap = int(os.environ.get(f"{name.upper()}_MAX_INFLIGHT", 0) or 0)
         # 20 -> 10 -> 5 per worker style ladder: cap, cap/2, cap/4
-        self.limiter = AdaptiveLimiter(name, [cap, max(1, cap // 2), max(1, cap // 4)]) if cap > 0 else None
+        self.limiter = (AdaptiveLimiter(name, [cap, max(1, cap // 2), max(1, cap // 4)], recover=300.0)
+                        if cap > 0 else None)
 
     def _count(self, key: str, v: float = 1) -> None:
         with self._stats_lock:
@@ -176,6 +192,8 @@ class SourceClient:
             except requests.RequestException as e:
                 last, blocked = f"{type(e).__name__}: {e}", False
                 self._count("errors")
+                if self.limiter:
+                    self.limiter.note_error()
             else:
                 self._count("latency_s", time.monotonic() - t0)
                 soft = looks_blocked(r)
@@ -184,20 +202,32 @@ class SourceClient:
                 blocked = soft or r.status_code in (403, 429)
                 last = "HTTP 403 (captcha/HTML)" if soft else f"HTTP {r.status_code}"
                 self._count("blocked" if blocked else "errors")
-                if blocked and self.limiter:
-                    self.limiter.note_block()
+                if self.limiter:
+                    (self.limiter.note_block if blocked else self.limiter.note_error)()
             finally:
                 if self.limiter:
                     self.limiter.release()
             if attempt == self.retries - 1:
                 break
             self._count("retries")
-            wait = (self.block_backoff * (attempt + 1) if blocked else self.backoff_base ** (attempt + 1)) * random.uniform(1, 1.3)
+            wait = self.backoff(attempt, blocked)
             print(f"[{self.name}] {last} on {method} {url[:120]}; retry {attempt + 1} in {wait:.0f}s", flush=True)
             self.sleep(wait)
         if last and (last.startswith("HTTP 403") or last.startswith("HTTP 429")):
             raise BlockedError(f"[{self.name}] blocked: {last} {url[:200]}")
         raise RuntimeError(f"[{self.name}] failed after {self.retries} attempts: {last} {url[:200]}")
+
+    def backoff(self, attempt: int, blocked: bool = False) -> float:
+        """Exponential backoff with jitter (so parallel workers that failed together do not retry together)."""
+        base = self.block_backoff * (attempt + 1) if blocked else min(60.0, self.backoff_base ** (attempt + 1))
+        return base * random.uniform(0.5, 1.5)
+
+    def note_error(self) -> None:
+        """An application-level failure the source reported inside a 200 (e.g. upstream timeout): count it and let
+        the adaptive cap back off, like a transport error."""
+        self._count("errors")
+        if self.limiter:
+            self.limiter.note_error()
 
     def request_json(self, method: str, url: str, **kw) -> Any:
         r = self.request(method, url, **kw)

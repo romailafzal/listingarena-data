@@ -256,12 +256,32 @@ def main(argv=None) -> int:
                           float(os.environ.get("LA_LIVE_LOAD_SECONDS", 60)))
         live.start()
 
-    failures = 0
+    failures, finished = 0, [0]
+    hb_stop = threading.Event()
+
+    def heartbeat(every: float = float(os.environ.get("LA_HEARTBEAT_S", 300))) -> None:
+        """Every `every` s, one line IF requests were made since the last one: a slow-but-alive state keeps its
+        log moving (so the hang guard leaves it alone), a truly stuck one stays silent and is still caught."""
+        last = None
+        while not hb_stop.wait(every):
+            now = {n: s.client.stats["requests"] for n, s in sources.items()}
+            if now != last:
+                parts = []
+                for n, s in sources.items():
+                    st, lim = s.client.stats, s.client.limiter
+                    parts.append(f"{n} req={st['requests']} err={st['errors']} blocked={st['blocked']} "
+                                 f"retries={st['retries']}" + (f" cap={lim.cap} inflight={lim.inflight}" if lim else ""))
+                print(f"{time.strftime('%H:%M:%S')} heartbeat: {finished[0]}/{len(tasks)} county tasks done; "
+                      + "; ".join(parts), flush=True)
+            last = now
+
+    threading.Thread(target=heartbeat, daemon=True, name="heartbeat").start()
     pool = ThreadPoolExecutor(max_workers=a.workers)
     try:
         futs = {pool.submit(job, *task): task for task in tasks}
         for f in as_completed(futs):
             s, c, t = futs[f]
+            finished[0] += 1
             try:
                 r = f.result()
                 if live and not r.get("resumed"):
@@ -282,6 +302,7 @@ def main(argv=None) -> int:
         pool.shutdown(wait=False, cancel_futures=True)
         raise
     pool.shutdown(wait=True)
+    hb_stop.set()
     col.progress.flush()
     if live:
         live.stop.set()

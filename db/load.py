@@ -214,8 +214,12 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
             if removed:
                 conn.execute("""UPDATE listings SET active=false, removed_at=now(), updated_at=now(), last_run_id=%s
                                 WHERE listing_type=%s AND property_key = ANY(%s)""", (run_id, u.listing_type, removed))
-            ids = dict(conn.execute("SELECT property_key, id FROM listings WHERE county_fips=%s AND listing_type=%s",
-                                    (u.fips, u.listing_type)).fetchall())
+            # ids: known ones from `current`; only listings inserted just now are looked up (by the unique key)
+            ids = {k: c["id"] for k, c in current.items()}
+            fresh = [e["property_key"] for e in events if e["property_key"] not in ids]
+            if fresh:
+                ids.update(conn.execute("SELECT property_key, id FROM listings WHERE listing_type=%s AND property_key = ANY(%s)",
+                                        (u.listing_type, fresh)).fetchall())
             with conn.cursor() as cur:
                 for i in range(0, len(events), batch):
                     cur.executemany("""INSERT INTO listing_events (run_id, listing_id, property_key, listing_type, county_fips, event, changes)
@@ -283,6 +287,12 @@ def load_run(conn, exports: Path, run_id: str, states=None, fips=None, trigger="
         n0 = len(units)
         units = already_loaded(conn, exports, run_id, units)
         totals["skipped_loaded"] = n0 - len(units)
+    # End the implicit transaction opened by the queries above. Without this every load_unit's
+    # conn.transaction() is only a SAVEPOINT inside one transaction spanning the whole pass: hours long, nothing
+    # visible until the end, thousands of subtransactions (pg_subtrans thrash for every session), one failure
+    # rolls back the pass, and CREATE INDEX CONCURRENTLY / vacuum wait on it. Now each unit commits on its own.
+    conn.commit()
+    t_pass = time.time()
     for i, u in enumerate(units):
         wait_for_memory(log, "load unit")
         try:
@@ -299,7 +309,7 @@ def load_run(conn, exports: Path, run_id: str, states=None, fips=None, trigger="
         finally:
             u.release()
         if i % 100 == 0:
-            log(f"load: unit {i + 1}/{len(units)} rss {rss_mb():.0f} MB")
+            log(f"load: unit {i + 1}/{len(units)} {time.time() - t_pass:.0f}s rss {rss_mb():.0f} MB")
         m = r["merged"]
         log(f"{u.state} {u.fips} {u.listing_type:5} " + " ".join(f"{s}={v.get('fetched', 0)}" for s, v in r["sources"].items())
             + f" -> listings={m['active']} multi={m['multi_source']} new={m['new']} changed={m['changed']} "

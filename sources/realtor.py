@@ -101,16 +101,24 @@ class RealtorSource(Source):
         results with the same property_id. Count completeness on property_id+listing_id."""
         return f"{raw.get('property_id')}:{raw.get('listing_id')}"
 
-    def _fetch(self, body: dict) -> dict:
+    def _fetch(self, body: dict, attempts: int = 5) -> dict:
+        """Empty/errored home_search ("The user aborted a request.", "Your request has been timed out") means
+        Realtor's backend is overloaded: retry with exponential backoff + jitter and tell the client's adaptive
+        cap, so concurrency drops while the errors last instead of every worker failing its county."""
         last = None
-        for _ in range(3):  # empty/errored home_search is transient
+        for attempt in range(attempts):
             data = self.client.request_json("POST", ENDPOINT, headers=HEADERS, json=body)
             try:
                 parse_search(data)
                 return data
             except ValueError as e:
                 last = e
-                self.client.sleep(5)
+                self.client.note_error()
+                if attempt == attempts - 1:
+                    break
+                wait = self.client.backoff(attempt)
+                print(f"[realtor] {str(e)[:120]}; retry {attempt + 1} in {wait:.0f}s", flush=True)
+                self.client.sleep(wait)
         raise RuntimeError(f"realtor: {last}")
 
     @staticmethod
