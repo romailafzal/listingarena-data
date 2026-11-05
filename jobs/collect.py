@@ -295,11 +295,18 @@ def main(argv=None) -> int:
         summary[n] = dict(s.client.stats)
     sp = Path(a.out) / "checkpoints" / a.run_id / "http_stats.json"
     sp.parent.mkdir(parents=True, exist_ok=True)
-    prev = json.loads(sp.read_text()) if sp.exists() else {}
+    # every state of a run shares this file and several finish at once: a half-written or unreadable file only
+    # loses the stats, never the state's result, and the write below is atomic (temp file + rename)
+    try:
+        prev = json.loads(sp.read_text()) if sp.exists() else {}
+    except (OSError, ValueError):
+        prev = {}
     for n, st in summary.items():  # accumulate across resumed invocations
         for k, v in st.items():
             prev.setdefault(n, {})[k] = round(prev.get(n, {}).get(k, 0) + v, 3)
-    sp.write_text(json.dumps(prev))
+    tmp = sp.with_name(f"{sp.name}.{os.getpid()}.tmp")
+    tmp.write_text(json.dumps(prev))
+    os.replace(tmp, sp)
     return 1 if failures else 0
 
 
