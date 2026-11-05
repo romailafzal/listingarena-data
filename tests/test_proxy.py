@@ -173,3 +173,19 @@ def test_daily_cap_resets_at_midnight(tmp_path):
     day[0] = dt.date(2026, 11, 7)                        # local midnight
     assert not m.exhausted() and m.used_gb * 1e9 == 1500 and m.day_gb == 0
     assert pool.current()[0] == 0
+
+
+def test_env_file_loads_only_proxy_vars(tmp_path):
+    f = tmp_path / ".env"
+    f.write_text('DATABASE_URL=postgres://x\nPROXYROTATOR_GATEWAY="gw.test:11000"\nexport REDFIN_USE_PROXYROTATOR=hybrid\n')
+    with mock.patch.dict(os.environ, {}, clear=True):
+        proxy.load_env_file(str(f))
+        assert os.environ["PROXYROTATOR_GATEWAY"] == "gw.test:11000"
+        assert os.environ["REDFIN_USE_PROXYROTATOR"] == "hybrid" and "DATABASE_URL" not in os.environ
+
+
+def test_detail_client_tuple_timeout_and_hybrid():
+    with mock.patch("sources.http.pool_from_env", return_value=ProxyPool(["http://gw:1"])), \
+         mock.patch.dict(os.environ, {}, clear=True):
+        c = SourceClient("redfin_detail", timeout=(10, 20))
+    assert c.timeout == (10.0, 20.0) and c.mode == "hybrid"
