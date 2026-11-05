@@ -18,6 +18,12 @@ from db.migrate import connect  # noqa: E402
 from jobs.memguard import rss_mb  # noqa: E402
 
 
+def _progress(msg: str) -> None:
+    """Per-unit lines are dropped; the every-100-units progress line is kept so long passes show they are alive."""
+    if msg.startswith(("load: unit", "LOAD FAILED")):
+        print(f"{time.strftime('%H:%M:%S')} drain {msg}", flush=True)
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--run-id", required=True)
@@ -30,7 +36,7 @@ def main(argv=None) -> int:
         t0 = time.time()
         try:
             with connect() as conn:
-                r = load_run(conn, Path(a.out), a.run_id, trigger="drain", log=lambda *_: None)
+                r = load_run(conn, Path(a.out), a.run_id, trigger="drain", log=_progress)
             if r.get("units"):
                 print(f"{time.strftime('%H:%M:%S')} drain: {r['units']} units in {time.time() - t0:.0f}s "
                       f"(skipped {r.get('skipped_loaded', 0)}) active+={r.get('active', 0)} rss {rss_mb():.0f} MB",

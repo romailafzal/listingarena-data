@@ -245,3 +245,29 @@ def test_realtor_sold_bands_split_by_sold_date():
     q = b["variables"]["query"]
     assert q["sold_date"] == {"min": "2026-08-01", "max": "2026-08-31"} and "sold_price" not in q
     assert build_body("X", "sale", 0, price=(1, 2))["variables"]["query"]["list_price"] == {"min": 1, "max": 2}
+
+
+def test_limiter_backs_off_on_errors_and_recovers():
+    from sources.http import AdaptiveLimiter
+    now = [0.0]
+    lim = AdaptiveLimiter("t", [40, 20, 10], trip=2, window=60, recover=300, clock=lambda: now[0], error_trip=3)
+    now[0] = 61
+    lim.note_error(); lim.note_error()
+    assert lim.cap == 40
+    lim.note_error()
+    assert lim.cap == 20
+    now[0] = 61 + 301
+    lim.acquire(); lim.release()
+    assert lim.cap == 40
+
+
+def test_realtor_retries_upstream_abort_with_backoff():
+    from sources.http import SourceClient
+    from sources.realtor import RealtorSource
+    sleeps = []
+    c = SourceClient("realtor_t", min_interval=0, sleep=sleeps.append)
+    answers = [{"errors": [{"message": "The user aborted a request."}], "data": {"home_search": None}}] * 2
+    ok = {"data": {"home_search": {"results": [], "total": 0}}}
+    c.request_json = lambda *a, **k: answers.pop(0) if answers else ok
+    assert RealtorSource(c)._fetch({}) == ok
+    assert len(sleeps) == 2 and c.stats["errors"] == 2

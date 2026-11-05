@@ -14,6 +14,8 @@ ON CONFLICT (run_id, source, county_fips, listing_type) DO UPDATE SET status=EXC
 class Progress:
     def __init__(self, run_id: str):
         self.run_id, self.conn, self.lock = run_id, None, threading.Lock()
+        self.buf: dict = {}
+        self.buf_lock = threading.Lock()
         if os.environ.get("LA_PROGRESS", "1") == "0":
             return
         try:
@@ -21,8 +23,6 @@ class Progress:
             self.conn = connect(database_url())
             self.conn.autocommit = True
             self.conn.execute("SET synchronous_commit = off")  # progress rows are disposable; never wait on WAL
-            self.buf: dict = {}
-            self.buf_lock = threading.Lock()
             threading.Thread(target=self._flusher, daemon=True, name="progress-flush").start()
         except Exception as e:  # noqa: BLE001
             print(f"progress: disabled ({type(e).__name__}: {e})", flush=True)
