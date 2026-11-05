@@ -97,6 +97,24 @@ Copy `.env.example` to `.env.local` and fill in only the providers that have bee
 
 Never commit `.env.local`, provider keys, database passwords, or raw licensed data.
 
+### ProxyRotator (optional)
+
+`sources/proxy.py` adds the ProxyRotator rotating gateway (new exit IP per request, Basic auth). Nothing changes
+unless `PROXYROTATOR_GATEWAY` is set. Per source family `<SOURCE>_USE_PROXYROTATOR=hybrid|proxy|off` (Redfin and
+Realtor default `hybrid`; an explicit `<SOURCE>_PROXY` URL wins):
+
+- **hybrid**: our direct IP (existing adaptive cap) and the gateway run in parallel; a request takes a proxy slot when
+  one is free, otherwise goes direct. A direct 403/429 backs direct off and retries immediately through the proxy;
+  while direct is backed off the source runs proxy-only.
+- **proxy**: always through the gateway. **off**: direct only.
+
+Proxy concurrency is a machine-wide cap: `PROXY_MAX_THREADS` (default 10, never above 10) flock'd slot files in
+`data/proxy_slots/`, shared by all processes; a crashed process's slots free automatically. On 403/429/connection
+errors the connection is dropped (fresh IP) and endpoints rotate/retire. Bandwidth is counted up+down in
+`data/proxy_usage.json` (`PROXY_BUDGET_GB`, default 150; resets on `PROXY_RESET_DATE`, default 2026-11-09, monthly);
+plus a per-local-day cap `PROXY_DAILY_GB` (default 5, plan pauses at 10/day). At either cap hybrid falls back to direct only, proxy mode skips (or goes direct with
+`PROXYROTATOR_DIRECT_FALLBACK=1`). Credentials are masked in all logs and exceptions.
+
 ## Normalized output
 
 The first importer accepts the fields documented in `listingarena-app/README.md`, including `listing_type`, `external_id`, address fields, property facts, pricing, dates, coordinates, description, photo URL, and status. Every connector must preserve the provider name and source record ID in its internal metadata, and must produce a stable `external_id`.
