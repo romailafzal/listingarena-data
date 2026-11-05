@@ -157,3 +157,19 @@ def test_off_mode_never_proxies():
     with mock.patch("sources.http.pool_from_env", return_value=ProxyPool(["http://gw:1"])), \
          mock.patch.dict(os.environ, {"REALTOR_USE_PROXYROTATOR": "off"}, clear=True):
         assert SourceClient("realtor").pool is None
+
+
+def test_daily_cap_resets_at_midnight(tmp_path):
+    day = [dt.date(2026, 11, 6)]
+    m = UsageMeter(str(tmp_path / "u.json"), budget_gb=150, reset=dt.date(2026, 11, 9), daily_gb=1e-6,
+                   flush_bytes=1, today=lambda: day[0])
+    pool = ProxyPool(["http://gw:1"], meter=m)
+    m.add(1500)
+    assert m.exhausted()
+    with pytest.raises(ProxyBudgetExceeded):
+        pool.current()                                   # proxy mode skips
+    c = _hybrid_client(pool)
+    assert c._route() == (None, -1, None)                # hybrid -> direct only
+    day[0] = dt.date(2026, 11, 7)                        # local midnight
+    assert not m.exhausted() and m.used_gb * 1e9 == 1500 and m.day_gb == 0
+    assert pool.current()[0] == 0

@@ -7,12 +7,13 @@ the gateway hands out a new exit IP per request (or keeps one for up to 30 min o
 gateway endpoint, retiring an endpoint for a cooldown after repeated failures.
 
 Env (values only in .env, never logged):
-  PROXYROTATOR_GATEWAY        host:port (comma-separated for several gateways, e.g. rotating + sticky ports)
+  PROXYROTATOR_GATEWAY        host:port, e.g. gateway.proxyrotator.com:11000 (worldwide rotating resi/mobile) (comma-separated for several gateways, e.g. rotating + sticky ports)
   PROXYROTATOR_USERNAME       gateway username (omit both for IP-whitelist auth)
   PROXYROTATOR_PASSWORD       gateway password
   PROXYROTATOR_SCHEME         http (default) | socks5h
   PROXY_MAX_THREADS           GLOBAL in-flight cap for proxied traffic across all processes (default 10, max 10)
   PROXY_BUDGET_GB             bandwidth budget per billing period, up+down, shared by all processes (default 150)
+  PROXY_DAILY_GB              per-local-day cap (default 5; plan pauses at 10 GB/day). Resets at local midnight
   PROXY_RESET_DATE            YYYY-MM-DD the counter resets (plan renewal; then monthly on that day). Default 2026-11-09
   PROXY_USAGE_FILE            persistent counter (default data/proxy_usage.json)
   PROXYROTATOR_DIRECT_FALLBACK  1 = when every endpoint is retired, go direct instead of waiting (default 0)
@@ -135,17 +136,21 @@ class UsageMeter:
     """Bytes through the proxy, persisted to a JSON file shared across processes (flock'd read-modify-write)."""
 
     def __init__(self, path: str, budget_gb: float, reset: dt.date, flush_bytes: int = 2_000_000,
-                 flush_s: float = 30.0, today=dt.date.today, clock=time.monotonic):
+                 flush_s: float = 30.0, today=dt.date.today, clock=time.monotonic, daily_gb: float | None = None):
         self.path, self.budget = path, int(budget_gb * 1e9)
+        self.daily = int(daily_gb * 1e9) if daily_gb is not None else None
         self.reset, self.today, self.clock = reset, today, clock
         self.flush_bytes, self.flush_s = flush_bytes, flush_s
         self._lock = threading.Lock()
         self._pending = 0
         self._last_flush = clock()
+        self._day, self._day_total = self.today(), 0
         self._total = self._sync(0)
         self._logged_gb = int(self._total // 1e9)
 
     def _sync(self, delta: int) -> int:
+        """Add delta to the period and local-day totals on disk; refresh in-memory totals; return period bytes."""
+        day = self.today().isoformat()
         period = _period_start(self.reset, self.today()).isoformat()
         d = os.path.dirname(self.path)
         if d:
@@ -161,6 +166,10 @@ class UsageMeter:
                 st = {"period_start": period, "bytes": 0, "requests": 0}
             st["bytes"] = int(st.get("bytes", 0)) + delta
             st["requests"] = int(st.get("requests", 0)) + (1 if delta else 0)
+            if st.get("day") != day:
+                st["day"], st["day_bytes"] = day, 0
+            st["day_bytes"] = int(st.get("day_bytes", 0)) + delta
+            self._day, self._day_total = dt.date.fromisoformat(day), st["day_bytes"]
             st["updated"] = dt.datetime.now().isoformat(timespec="seconds")
             f.seek(0)
             f.truncate()
@@ -171,6 +180,7 @@ class UsageMeter:
         with self._lock:
             self._pending += n
             self._total += n
+            self._day_total += n
             if self._pending >= self.flush_bytes or self.clock() - self._last_flush >= self.flush_s:
                 self.flush_locked()
             gb = int(self._total // 1e9)
@@ -191,8 +201,18 @@ class UsageMeter:
     def used_gb(self) -> float:
         return self._total / 1e9
 
+    @property
+    def day_gb(self) -> float:
+        return self._day_total / 1e9
+
     def exhausted(self) -> bool:
-        return self._total >= self.budget
+        """Period budget or today's cap (PROXY_DAILY_GB) reached. Rolls over at local midnight."""
+        if self.today() != self._day:
+            with self._lock:
+                self.flush_locked()
+        if self._total >= self.budget:
+            return True
+        return self.daily is not None and self._day_total >= self.daily
 
 
 class ProxyPool:
@@ -240,10 +260,11 @@ class ProxyPool:
 
     def over_budget(self) -> bool:
         if not (self.meter and self.meter.exhausted()):
+            self._budget_logged = False
             return False
         if not self._budget_logged:
             self._budget_logged = True
-            print(f"[proxy] bandwidth budget reached ({self.meter.used_gb:.2f} GB): proxied traffic stopped, "
+            print(f"[proxy] bandwidth cap reached (period {self.meter.used_gb:.2f} GB, today {self.meter.day_gb:.2f} GB): proxied traffic stopped, "
                   f"{'falling back to direct' if self.direct_fallback else 'skipping proxied requests'}", flush=True)
         return True
 
@@ -296,7 +317,8 @@ class ProxyPool:
             self._i = (i + 1) % len(self.endpoints)
 
     def summary(self) -> str:
-        used = f" used_gb={self.meter.used_gb:.3f}/{self.meter.budget / 1e9:.0f}" if self.meter else ""
+        used = (f" used_gb={self.meter.used_gb:.3f}/{self.meter.budget / 1e9:.0f} today_gb={self.meter.day_gb:.3f}"
+                if self.meter else "")
         return f"proxyrotator{used} endpoints={len(self.endpoints)} threads={self.max_threads} " + \
             " ".join(f"{k}={v}" for k, v in self.stats.items())
 
@@ -330,7 +352,8 @@ def pool_from_env() -> ProxyPool | None:
                 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
                 meter = UsageMeter(os.environ.get("PROXY_USAGE_FILE") or os.path.join(here, "data", "proxy_usage.json"),
                                    float(os.environ.get("PROXY_BUDGET_GB", 150) or 150),
-                                   dt.date.fromisoformat(os.environ.get("PROXY_RESET_DATE") or "2026-11-09"))
+                                   dt.date.fromisoformat(os.environ.get("PROXY_RESET_DATE") or "2026-11-09"),
+                                   daily_gb=float(os.environ.get("PROXY_DAILY_GB", 5) or 5))
                 threads = min(HARD_MAX_THREADS, int(os.environ.get("PROXY_MAX_THREADS") or 10))
                 slots = GlobalSlots(os.environ.get("PROXY_SLOT_DIR") or os.path.join(here, "data", "proxy_slots"), threads)
                 _POOL = ProxyPool(eps, max_threads=threads, meter=meter, slots=slots,

@@ -112,7 +112,7 @@ Proxy concurrency is a machine-wide cap: `PROXY_MAX_THREADS` (default 10, never 
 `data/proxy_slots/`, shared by all processes; a crashed process's slots free automatically. On 403/429/connection
 errors the connection is dropped (fresh IP) and endpoints rotate/retire. Bandwidth is counted up+down in
 `data/proxy_usage.json` (`PROXY_BUDGET_GB`, default 150; resets on `PROXY_RESET_DATE`, default 2026-11-09, monthly);
-at the budget hybrid falls back to direct only, proxy mode skips (or goes direct with
+plus a per-local-day cap `PROXY_DAILY_GB` (default 5, plan pauses at 10/day). At either cap hybrid falls back to direct only, proxy mode skips (or goes direct with
 `PROXYROTATOR_DIRECT_FALLBACK=1`). Credentials are masked in all logs and exceptions.
 
 ## Normalized output
