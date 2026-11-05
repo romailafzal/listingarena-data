@@ -97,6 +97,17 @@ Copy `.env.example` to `.env.local` and fill in only the providers that have bee
 
 Never commit `.env.local`, provider keys, database passwords, or raw licensed data.
 
+### ProxyRotator (optional)
+
+`sources/proxy.py` routes a source's requests through the ProxyRotator rotating gateway (new exit IP per request,
+Basic auth). Opt-in per source family: Redfin on, Realtor off (`<SOURCE>_USE_PROXYROTATOR`); an explicit
+`<SOURCE>_PROXY` URL wins. Nothing changes unless `PROXYROTATOR_GATEWAY` is set. On 403/429/connection errors the
+client drops its connection (fresh IP), moves to the next endpoint and retires an endpoint after repeated failures.
+Proxied requests share a per-process thread cap (`PROXY_MAX_THREADS`, default 5) and a bandwidth budget counted
+up+down in `data/proxy_usage.json` (`PROXY_BUDGET_GB`, default 150, resets on `PROXY_RESET_DATE` monthly). At the
+budget, proxied traffic stops (skip, or direct with `PROXYROTATOR_DIRECT_FALLBACK=1`). Credentials are masked in all
+logs and exceptions. See `.env.example` for all names.
+
 ## Normalized output
 
 The first importer accepts the fields documented in `listingarena-app/README.md`, including `listing_type`, `external_id`, address fields, property facts, pricing, dates, coordinates, description, photo URL, and status. Every connector must preserve the provider name and source record ID in its internal metadata, and must produce a stable `external_id`.
