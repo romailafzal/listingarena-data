@@ -156,9 +156,14 @@ class SourceClient:
                  backoff_base: float = 2.0, block_backoff: float = 60.0, sleep=time.sleep):
         self.name = name
         self.min_interval = float(os.environ.get(f"{name.upper()}_MIN_INTERVAL", min_interval))
-        read = float(timeout or os.environ.get(f"{name.upper()}_TIMEOUT", 30))
+        # timeout: read seconds, or a (connect, read) pair
+        if isinstance(timeout, (tuple, list)):
+            connect, read = float(timeout[0]), float(timeout[1])
+        else:
+            read = float(timeout or os.environ.get(f"{name.upper()}_TIMEOUT", 30))
+            connect = min(10.0, read)
         # (connect, read): a dead connection fails in 10 s instead of hanging a county worker
-        self.retries, self.timeout = retries, (min(10.0, read), read)
+        self.retries, self.timeout = retries, (connect, read)
         self.backoff_base, self.block_backoff = backoff_base, block_backoff
         self.sleep = sleep
         self._lock = threading.Lock()
@@ -168,8 +173,9 @@ class SourceClient:
         self.proxies = {"http": proxy, "https": proxy} if proxy else None
         # ProxyRotator gateway (per-source opt-in; an explicit <SOURCE>_PROXY wins). Shared thread cap + budget.
         explicit = os.environ.get(f"{name.upper()}_PROXY")
-        self.mode = mode_for(name) if not explicit else "off"
-        self.pool = pool_from_env() if self.mode != "off" else None
+        pool = None if explicit else pool_from_env()      # also loads proxy settings from .env
+        self.mode = mode_for(name) if pool else "off"
+        self.pool = pool if self.mode != "off" else None
         if not self.pool:
             self.mode = "off"
         self._direct_until = 0.0       # hybrid: direct IP backed off (403/429) until this monotonic time

@@ -323,6 +323,29 @@ class ProxyPool:
             " ".join(f"{k}={v}" for k, v in self.stats.items())
 
 
+_ENV_PREFIXES = ("PROXYROTATOR_", "PROXY_")
+
+
+def load_env_file(path: str | None = None) -> None:
+    """Jobs run via plain `uv run` do not source .env; pick up only proxy settings from it (env wins)."""
+    path = path or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".env")
+    try:
+        lines = open(path).read().splitlines()
+    except OSError:
+        return
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        k, v = line.split("=", 1)
+        k = k.strip().removeprefix("export ").strip()
+        if k.startswith(_ENV_PREFIXES) or k.endswith("_USE_PROXYROTATOR"):
+            v = v.strip()
+            if len(v) >= 2 and v[0] == v[-1] and v[0] in "'\"":
+                v = v[1:-1]
+            os.environ.setdefault(k, v)
+
+
 def _build_endpoints() -> list[str]:
     gw = os.environ.get("PROXYROTATOR_GATEWAY", "").strip()
     if not gw:
@@ -347,6 +370,7 @@ def pool_from_env() -> ProxyPool | None:
     global _POOL
     with _POOL_LOCK:
         if _POOL is None:
+            load_env_file()
             eps = _build_endpoints()
             if eps:
                 here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
