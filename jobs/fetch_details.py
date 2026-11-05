@@ -1,7 +1,7 @@
 """Phase 2: fetch per-home detail for listings that are new / changed / relisted since a collection run.
 
 python -m jobs.fetch_details --since-run RUN_ID [--state XX] [--limit N] [--source redfin|realtor]
-    [--include-missing] [--inflight 3] [--run-id ID] [--out exports] [--dry-run]
+    [--include-missing] [--shard I/N] [--inflight 3] [--run-id ID] [--out exports] [--dry-run]
 
 Selection: listing_events (new, changed, relisted) of RUN_ID and every later run, on still-active listings, expanded
 to each backing source record (listings.source_ids). --include-missing adds active listings of those sources that
@@ -54,6 +54,7 @@ WHERE e.event IN ('new', 'changed', 'relisted')
   AND s.source = ANY(%(sources)s)
   AND (%(fips)s::text IS NULL OR e.county_fips LIKE %(fips)s)   -- uses listing_events_run (run_id, county_fips)
   AND (d.fetched_at IS NULL OR d.fetched_at < e.created_at)
+  AND (%(n)s = 1 OR l.id %% %(n)s = %(i)s)
 """
 SELECT_MISSING = """
 SELECT l.id, l.listing_type, l.property_key, l.county_fips, l.state, s.source, s.sid,
@@ -63,6 +64,7 @@ CROSS JOIN LATERAL jsonb_each_text(l.source_ids) AS s(source, sid)
 LEFT JOIN source_records sr ON sr.source = s.source AND sr.listing_type = l.listing_type AND sr.source_id = s.sid
 WHERE l.active AND s.source = ANY(%(sources)s) AND (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = s.source AND d.source_id = s.sid)
+  AND (%(n)s = 1 OR l.id %% %(n)s = %(i)s)
 """
 # listings only Redfin has, whose Realtor property id the redfin_only step found: their Realtor page too
 SELECT_REDFIN_ONLY = """
@@ -72,6 +74,17 @@ JOIN listings l ON l.id = r.listing_id AND l.active
 WHERE (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = 'realtor' AND d.source_id = r.realtor_property_id
                   AND d.fetched_at >= r.found_at)
+  AND (%(n)s = 1 OR l.id %% %(n)s = %(i)s)
+"""
+# and the mirror: listings only Realtor has, whose Redfin property id the realtor_only step found
+SELECT_REALTOR_ONLY = """
+SELECT l.id, l.listing_type, l.property_key, l.county_fips, l.state, 'redfin', r.redfin_property_id, NULL, r.found_at
+FROM listing_redfin_ids r
+JOIN listings l ON l.id = r.listing_id AND l.active
+WHERE (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
+  AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = 'redfin' AND d.source_id = r.redfin_property_id
+                  AND d.fetched_at >= r.found_at)
+  AND (%(n)s = 1 OR l.id %% %(n)s = %(i)s)
 """
 KEYS = ("listing_id", "listing_type", "property_key", "county_fips", "state", "source", "source_id",
         "source_listing_id", "event_at")
@@ -86,10 +99,11 @@ def state_fips_prefix(state: str) -> str:
 
 
 def select_homes(conn, since: str, sources: list[str], state: str | None, limit: int | None,
-                 include_missing: bool) -> list[dict]:
+                 include_missing: bool, shard: tuple[int, int] = (0, 1)) -> list[dict]:
     if conn.execute("SELECT 1 FROM runs WHERE run_id = %s", (since,)).fetchone() is None:
         raise SystemExit(f"unknown run id {since!r}")
-    p = {"since": since, "sources": list(sources), "fips": state_fips_prefix(state) + "%" if state else None}
+    p = {"since": since, "sources": list(sources), "fips": state_fips_prefix(state) + "%" if state else None,
+         "i": shard[0], "n": shard[1]}
     # no ORDER/DISTINCT in SQL so Postgres can stream and stop early under LIMIT; dedupe here (latest event wins)
     lim = f" LIMIT {int(limit) * 4}" if limit else ""
     best: dict = {}
@@ -107,9 +121,11 @@ def select_homes(conn, since: str, sources: list[str], state: str | None, limit:
             if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
                 seen.add((d["source"], d["source_id"]))
                 rows.append(d)
-    if "realtor" in sources and (not limit or len(rows) < limit):
+    for source, query in (("realtor", SELECT_REDFIN_ONLY), ("redfin", SELECT_REALTOR_ONLY)):
+        if source not in sources or (limit and len(rows) >= limit):
+            continue
         seen = {(r["source"], r["source_id"]) for r in rows}
-        for r in conn.execute(SELECT_REDFIN_ONLY, p):
+        for r in conn.execute(query, p):
             d = dict(zip(KEYS, r))
             if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
                 seen.add((d["source"], d["source_id"]))
@@ -272,6 +288,8 @@ def main(argv=None) -> int:
     ap.add_argument("--include-missing", action="store_true", help="also active listings with no detail yet")
     ap.add_argument("--inflight", type=int, default=int(os.environ.get("DETAIL_INFLIGHT") or settings.DETAILS_WORKERS),
                     help="max simultaneous requests per source (default DETAILS_WORKERS, jobs/settings.py)")
+    ap.add_argument("--shard", default="0/1", help="I/N: only homes whose listing id %% N = I, so N processes "
+                    "can share one state")
     ap.add_argument("--run-id", default="det_" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M"))
     ap.add_argument("--out", default=str(ROOT / "exports"))
     ap.add_argument("--dry-run", action="store_true", help="only print what would be fetched")
@@ -280,7 +298,8 @@ def main(argv=None) -> int:
     sources = [a.source] if a.source else list(SOURCES)
     with connect() as conn:
         conn.autocommit = True
-        homes = select_homes(conn, a.since_run, sources, a.state, a.limit, a.include_missing)
+        homes = select_homes(conn, a.since_run, sources, a.state, a.limit, a.include_missing,
+                             tuple(int(x) for x in a.shard.split("/")))
         print(f"[details] {len(homes)} homes to fetch (since {a.since_run}, state={a.state or 'all'}, "
               f"sources={','.join(sources)})", flush=True)
         if a.dry_run:

@@ -12,6 +12,7 @@ Layout (run_id defaults to today's date, so re-running the same day resumes):
   exports/bronze/<source>/<st>/<fips>/<run_id>/<type>_p0001.json.gz   raw response pages
   exports/silver/<source>/<run_id>.jsonl                              normalized records (assembled from parts)
   exports/checkpoints/<run_id>/<source>/<st>/<fips>_<type>.json        per-county completion marker
+  exports/replay/<run_id>/<source>/                                   every search response, replayed on resume
 """
 from __future__ import annotations
 
@@ -238,6 +239,8 @@ def main(argv=None) -> int:
     caps = dict(kv.split("=") for kv in a.source_workers.split(",") if "=" in kv)
     sems = {n: threading.BoundedSemaphore(int(caps.get(n, s.workers))) for n, s in sources.items()}
     counties = load_counties([s.strip() for s in a.states.split(",")], set(filter(None, a.counties.split(","))) or None)
+    # every search response of this run is kept, so a crash or restart mid-county replays it instead of refetching
+    os.environ["LA_REPLAY_DIR"] = str(Path(a.out) / "replay" / a.run_id)
     col = Collector(Path(a.out), a.run_id, a.max_pages, watermarks)
 
     tasks = [(s, c, t) for c in counties for s in sources.values() for t in types if s.supports(c)]
@@ -292,11 +295,18 @@ def main(argv=None) -> int:
         summary[n] = dict(s.client.stats)
     sp = Path(a.out) / "checkpoints" / a.run_id / "http_stats.json"
     sp.parent.mkdir(parents=True, exist_ok=True)
-    prev = json.loads(sp.read_text()) if sp.exists() else {}
+    # every state of a run shares this file and several finish at once: a half-written or unreadable file only
+    # loses the stats, never the state's result, and the write below is atomic (temp file + rename)
+    try:
+        prev = json.loads(sp.read_text()) if sp.exists() else {}
+    except (OSError, ValueError):
+        prev = {}
     for n, st in summary.items():  # accumulate across resumed invocations
         for k, v in st.items():
             prev.setdefault(n, {})[k] = round(prev.get(n, {}).get(k, 0) + v, 3)
-    sp.write_text(json.dumps(prev))
+    tmp = sp.with_name(f"{sp.name}.{os.getpid()}.tmp")
+    tmp.write_text(json.dumps(prev))
+    os.replace(tmp, sp)
     return 1 if failures else 0
 
 
