@@ -6,16 +6,22 @@ Concurrency knobs (env, per source; NAME = REDFIN / REALTOR / ...):
   NAME_MAX_INFLIGHT  cap on simultaneous HTTP calls for this client (adaptive, see AdaptiveLimiter). Unset = no cap.
   NAME_PAGE_PARALLEL parallel page fetches inside one county/type search (read by the sources via
                      SourceClient.page_parallel). Default 1 = sequential pagination.
+  LA_REPLAY_DIR      if set (jobs.collect sets it per run), every 200 response is saved there as it arrives and the
+                     same request later in the run is answered from it: a crashed or restarted collect replays
+                     what it already fetched and only requests what is still missing.
 Detail/per-home fetchers should create their OWN SourceClient (e.g. SourceClient("redfin_detail", ...)) so they
 get independent, lower limits; the search-level concurrency above must not be applied to detail calls.
 """
 from __future__ import annotations
 
+import gzip
+import hashlib
 import json
 import os
 import random
 import threading
 import time
+from pathlib import Path
 from typing import Any
 
 import requests
@@ -136,7 +142,7 @@ class SourceClient:
         self._local = threading.local()
         proxy = os.environ.get(f"{name.upper()}_PROXY") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
         self.proxies = {"http": proxy, "https": proxy} if proxy else None
-        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0}
+        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0, "replayed": 0}
         self._stats_lock = threading.Lock()
         self.page_parallel = max(1, int(os.environ.get(f"{name.upper()}_PAGE_PARALLEL", 1)))
         cap = int(os.environ.get(f"{name.upper()}_MAX_INFLIGHT", 0) or 0)
@@ -161,7 +167,35 @@ class SourceClient:
         if at > now:
             self.sleep(at - now)
 
+    def _replay_path(self, method: str, url: str, kw: dict) -> Path | None:
+        root = os.environ.get("LA_REPLAY_DIR")
+        if not root:
+            return None
+        key = json.dumps([method.upper(), url, kw.get("params"), kw.get("json"), kw.get("data")], sort_keys=True,
+                         default=str)
+        h = hashlib.sha1(key.encode()).hexdigest()
+        return Path(root) / self.name / h[:2] / f"{h}.gz"
+
     def request(self, method: str, url: str, headers: dict | None = None, **kw) -> requests.Response:
+        replay = self._replay_path(method, url, kw)
+        if replay is not None and replay.exists():
+            try:
+                r = requests.Response()
+                r.status_code, r.url, r.encoding = 200, url, "utf-8"
+                r._content = gzip.decompress(replay.read_bytes())
+                self._count("replayed")
+                return r
+            except (OSError, EOFError):
+                pass  # a half-written file from a crash: fetch it again
+        r = self._fetch(method, url, headers, **kw)
+        if replay is not None and r.status_code == 200:
+            replay.parent.mkdir(parents=True, exist_ok=True)
+            tmp = replay.with_suffix(f".{threading.get_ident()}.part")
+            tmp.write_bytes(gzip.compress(r.content, 3))
+            tmp.replace(replay)
+        return r
+
+    def _fetch(self, method: str, url: str, headers: dict | None = None, **kw) -> requests.Response:
         last = None
         for attempt in range(self.retries):
             self._wait_turn()
