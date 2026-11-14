@@ -147,9 +147,13 @@ class SourceClient:
                  backoff_base: float = 2.0, block_backoff: float = 60.0, sleep=time.sleep):
         self.name = name
         self.min_interval = float(os.environ.get(f"{name.upper()}_MIN_INTERVAL", min_interval))
-        read = float(timeout or os.environ.get(f"{name.upper()}_TIMEOUT", 30))
-        # (connect, read): a dead connection fails in 10 s instead of hanging a county worker
-        self.retries, self.timeout = retries, (min(10.0, read), read)
+        # timeout: read seconds, or a (connect, read) pair. A dead connection fails in <=10 s.
+        if isinstance(timeout, (tuple, list)):
+            connect, read = float(timeout[0]), float(timeout[1])
+        else:
+            read = float(timeout or os.environ.get(f"{name.upper()}_TIMEOUT", 30))
+            connect = min(10.0, read)
+        self.retries, self.timeout = retries, (connect, read)
         self.backoff_base, self.block_backoff = backoff_base, block_backoff
         self.sleep = sleep
         self._lock = threading.Lock()
