@@ -1,4 +1,4 @@
-"""Shared HTTP client: per-source pacing + in-flight cap, retry with backoff, block detection, proxies, rotating headers.
+"""Shared HTTP client: per-source pacing + in-flight cap, retry with backoff, block detection, rotating headers. All requests go direct (no proxy).
 
 Concurrency knobs (env, per source; NAME = REDFIN / REALTOR / ...):
   NAME_MIN_INTERVAL  global spacing between request *starts* (s). 0 = no pacing. Slots are reserved under a
@@ -22,7 +22,6 @@ from typing import Any
 
 import requests
 
-from sources.proxy import ProxyBudgetExceeded, mask, mode_for, pool_from_env
 
 RETRY_STATUS = {403, 429, 500, 502, 503, 504}
 
@@ -45,6 +44,10 @@ BASE_HEADERS = {"accept": "*/*", "accept-language": "en-US,en;q=0.9", "sec-fetch
 
 class BlockedError(RuntimeError):
     """The source kept refusing us (403/429) after all retries."""
+
+
+class SourceDisabled(BlockedError):
+    """The source was switched off for the rest of this run after too many blocked requests in a row."""
 
 
 def browser_headers() -> dict[str, str]:
@@ -125,19 +128,6 @@ class AdaptiveLimiter:
             self.cond.notify_all()
 
 
-def wire_bytes(r: requests.Response) -> int:
-    """Approximate bytes on the wire (up + down) for the bandwidth budget: compressed body + headers + request."""
-    try:
-        body = int(r.headers.get("content-length") or 0) or len(r.content)
-    except (TypeError, ValueError):
-        body = len(r.content)
-    req = r.request
-    up = len(req.url or "") + sum(len(k) + len(v) + 4 for k, v in req.headers.items()) + len(req.body or b"") \
-        if req is not None else 500
-    down = body + sum(len(k) + len(v) + 4 for k, v in r.headers.items()) + 20
-    return up + down
-
-
 def looks_blocked(r: requests.Response) -> bool:
     """Soft block: 200 with an HTML/captcha page where JSON was expected."""
     if r.status_code != 200:
@@ -149,7 +139,8 @@ def looks_blocked(r: requests.Response) -> bool:
 class SourceClient:
     """One per source. Thread-safe; spaces requests at least `min_interval` seconds apart (+ jitter).
 
-    Env vars: <SOURCE>_PROXY (e.g. REDFIN_PROXY) or HTTPS_PROXY/HTTP_PROXY; <SOURCE>_MIN_INTERVAL overrides the pace.
+    Env vars: <SOURCE>_MIN_INTERVAL overrides the pace; <SOURCE>_TRIP_BLOCKS (default 30) is how many blocked
+    requests in a row switch the source off for the rest of the run (SourceDisabled) instead of stalling it.
     """
 
     def __init__(self, name: str, min_interval: float = 1.0, retries: int = 5, timeout: float | None = None,
@@ -164,19 +155,10 @@ class SourceClient:
         self._lock = threading.Lock()
         self._next_at = 0.0
         self._local = threading.local()
-        proxy = os.environ.get(f"{name.upper()}_PROXY") or os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
-        self.proxies = {"http": proxy, "https": proxy} if proxy else None
-        # ProxyRotator gateway (per-source opt-in; an explicit <SOURCE>_PROXY wins). Shared thread cap + budget.
-        explicit = os.environ.get(f"{name.upper()}_PROXY")
-        self.mode = mode_for(name) if not explicit else "off"
-        self.pool = pool_from_env() if self.mode != "off" else None
-        if not self.pool:
-            self.mode = "off"
-        self._direct_until = 0.0       # hybrid: direct IP backed off (403/429) until this monotonic time
-        if self.pool:
-            print(f"[{name}] ProxyRotator mode={self.mode} ({self.pool.summary()})", flush=True)
-        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0,
-                      "proxied": 0, "shifted_to_proxy": 0}
+        self.trip_blocks = int(os.environ.get(f"{name.upper()}_TRIP_BLOCKS", 30))
+        self._blocks_in_row = 0
+        self.disabled = False
+        self.stats = {"requests": 0, "retries": 0, "blocked": 0, "errors": 0, "latency_s": 0.0}
         self._stats_lock = threading.Lock()
         self.page_parallel = max(1, int(os.environ.get(f"{name.upper()}_PAGE_PARALLEL", 1)))
         cap = int(os.environ.get(f"{name.upper()}_MAX_INFLIGHT", 0) or 0)
@@ -192,6 +174,7 @@ class SourceClient:
         s = getattr(self._local, "session", None)
         if s is None:
             s = self._local.session = requests.Session()
+            s.trust_env = False  # never pick up HTTP(S)_PROXY from the environment
         return s
 
     def _wait_turn(self) -> None:
@@ -202,101 +185,58 @@ class SourceClient:
         if at > now:
             self.sleep(at - now)
 
+    def _note_outcome(self, blocked: bool) -> None:
+        with self._stats_lock:
+            self._blocks_in_row = self._blocks_in_row + 1 if blocked else 0
+            if blocked and not self.disabled and self._blocks_in_row >= self.trip_blocks:
+                self.disabled = True
+                print(f"[{self.name}] {self._blocks_in_row} blocked requests in a row: source off for this run",
+                      flush=True)
+
     def request(self, method: str, url: str, headers: dict | None = None, **kw) -> requests.Response:
-        last = None
+        last, blocked = None, False
         for attempt in range(self.retries):
+            if self.disabled:
+                raise SourceDisabled(f"[{self.name}] switched off for this run after repeated blocks")
             self._wait_turn()
             h = browser_headers()
             h.update(headers or {})
             self._count("requests")
             t0 = time.monotonic()
-            pidx, proxies, token = -1, self.proxies, None
-            if self.pool:
-                token, pidx, purl = self._route()
-                if pidx >= 0:
-                    proxies = {"http": purl, "https": purl}
-                    self._fresh_session_if_rotated()
-                    h.setdefault("accept-encoding", "gzip, deflate, br")
-            direct = pidx < 0
-            if direct and self.limiter:
+            if self.limiter:
                 self.limiter.acquire()
             try:
-                r = self._session().request(method, url, headers=h, proxies=proxies, timeout=self.timeout, **kw)
+                r = self._session().request(method, url, headers=h, timeout=self.timeout, **kw)
             except requests.RequestException as e:
-                last, blocked = mask(f"{type(e).__name__}: {e}"), False
+                last, blocked = f"{type(e).__name__}: {e}", False
                 self._count("errors")
-                if pidx >= 0:
-                    self.pool.record(len(url) + 500)
-                    self.pool.fail(pidx)
-                if direct and self.limiter:
+                if self.limiter:
                     self.limiter.note_error()
             else:
                 self._count("latency_s", time.monotonic() - t0)
                 soft = looks_blocked(r)
-                if pidx >= 0:
-                    self.pool.record(wire_bytes(r))
                 if r.status_code not in RETRY_STATUS and not soft:
-                    if pidx >= 0:
-                        self.pool.ok(pidx)
+                    self._note_outcome(False)
                     return r
                 blocked = soft or r.status_code in (403, 429)
-                if pidx >= 0 and (blocked or r.status_code >= 500):
-                    self.pool.fail(pidx)
                 last = "HTTP 403 (captcha/HTML)" if soft else f"HTTP {r.status_code}"
                 self._count("blocked" if blocked else "errors")
-                if direct and blocked and self.mode == "hybrid":
-                    self._direct_until = time.monotonic() + self.block_backoff * (attempt + 1)
-                    self._count("shifted_to_proxy")
-                if direct and self.limiter:
+                if blocked:
+                    self._note_outcome(True)
+                if self.limiter:
                     (self.limiter.note_block if blocked else self.limiter.note_error)()
             finally:
-                if self.pool:
-                    self.pool.release_slot(token)
-                if direct and self.limiter:
+                if self.limiter:
                     self.limiter.release()
             if attempt == self.retries - 1:
                 break
             self._count("retries")
-            # through the gateway the next attempt is a new IP: short backoff instead of the long block backoff
-            # hybrid: a direct block is retried right away through the proxy (new IP), direct itself backs off
-            if pidx >= 0:
-                wait = self.backoff(attempt, False)
-            elif blocked and self.mode == "hybrid" and not self.pool.over_budget():
-                wait = 0.0
-            else:
-                wait = self.backoff(attempt, blocked)
+            wait = self.backoff(attempt, blocked)
             print(f"[{self.name}] {last} on {method} {url[:120]}; retry {attempt + 1} in {wait:.0f}s", flush=True)
             self.sleep(wait)
         if last and (last.startswith("HTTP 403") or last.startswith("HTTP 429")):
             raise BlockedError(f"[{self.name}] blocked: {last} {url[:200]}")
         raise RuntimeError(f"[{self.name}] failed after {self.retries} attempts: {last} {url[:200]}")
-
-    def _route(self):
-        """(slot token, endpoint index, proxy URL); index -1 = go direct. Hybrid: proxy when a global slot is free
-        (on top of the direct pool), and *only* proxy while direct is backed off. Over budget: hybrid -> direct."""
-        pool = self.pool
-        if pool.over_budget():
-            if self.mode == "proxy" and not pool.direct_fallback:
-                raise ProxyBudgetExceeded(f"[{self.name}] proxy bandwidth budget reached")
-            return None, -1, None
-        must = self.mode == "proxy" or time.monotonic() < self._direct_until
-        token = pool.slot() if must else pool.try_slot()
-        if token is None:
-            return None, -1, None
-        i, purl = pool.current()
-        if i < 0:
-            pool.release_slot(token)
-            return None, -1, None
-        self._count("proxied")
-        return token, i, purl
-
-    def _fresh_session_if_rotated(self) -> None:
-        """After a rotation, drop this thread's keep-alive connection so the gateway assigns a new exit IP."""
-        gen = self.pool.generation
-        if getattr(self._local, "gen", gen) != gen and getattr(self._local, "session", None) is not None:
-            self._local.session.close()
-            self._local.session = None
-        self._local.gen = gen
 
     def backoff(self, attempt: int, blocked: bool = False) -> float:
         """Exponential backoff with jitter (so parallel workers that failed together do not retry together)."""

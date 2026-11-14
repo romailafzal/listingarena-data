@@ -173,9 +173,15 @@ class HttpTest(unittest.TestCase):
         with self.assertRaises(BlockedError):
             self._client([403, 403, 403]).request("GET", "http://x")
 
-    def test_proxy_env(self):
-        with mock.patch.dict("os.environ", {"REDFIN_PROXY": "http://p:1"}):
-            self.assertEqual(SourceClient("redfin").proxies["https"], "http://p:1")
+    def test_switches_off_after_blocks_in_row(self):
+        from sources.http import SourceDisabled
+        with mock.patch.dict("os.environ", {"FAKE_TRIP_BLOCKS": "2"}):
+            c = self._client([403] * 10)
+            c.name = "fake"; c.trip_blocks = 2
+            with self.assertRaises(BlockedError):
+                c.request("GET", "http://x")
+            with self.assertRaises(SourceDisabled):
+                c.request("GET", "http://x")
 
 
 class FakeSource(Source):
