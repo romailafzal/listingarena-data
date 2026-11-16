@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from matching.address import property_key, split_unit, zip5  # noqa: E402
 from matching.changes import detect, diff  # noqa: E402
-from matching.merge import merge, merge_group  # noqa: E402
+from matching.merge import key_for, merge, merge_group  # noqa: E402
 
 
 def rec(source, sid, address="1200 Main St #304", zip_="78701", t="sale", **kw):
@@ -102,3 +102,46 @@ class ChangeTest(unittest.TestCase):
         from decimal import Decimal
         self.assertEqual(diff({"price": Decimal("100"), "sold_date": date(2026, 1, 2)},
                               {"price": 100, "sold_date": "2026-01-02"}), {})
+
+
+class FallbackKeyTest(unittest.TestCase):
+    """Lots with no house number and no coordinates used to be dropped at merge (no property_key)."""
+
+    def lot(self, **kw):
+        return {"source": "realtor", "source_id": "r1", "listing_type": "sold", "address": "Water Oak Ln Lot 48",
+                "zip": "30512", "lat": None, "lng": None, **kw}
+
+    def test_lot_without_number_or_coordinates_is_kept(self):
+        listings, nokey = merge([self.lot()])
+        self.assertEqual(nokey, [])
+        self.assertEqual(listings[0]["property_key"], "addr|30512|water oak|48")
+        self.assertEqual(listings[0]["source_ids"], {"realtor": "r1"})
+
+    def test_same_lot_from_two_sources_is_one_listing(self):
+        a, b = self.lot(), self.lot(source="redfin", source_id="f1", address="Water Oak Lane #48")
+        self.assertEqual(len(merge([a, b])[0]), 1)
+        self.assertEqual(len(merge([self.lot(), self.lot(source_id="r2", address="Water Oak Ln Lot 49")])[0]), 2)
+
+    def test_no_lot_designator_falls_back_to_source_id(self):
+        a, b = self.lot(address="Water Oak Ln"), self.lot(address="Water Oak Ln", source_id="r2")
+        listings, nokey = merge([a, b])
+        self.assertEqual(nokey, [])
+        self.assertEqual({l["property_key"] for l in listings}, {"src|realtor|r1", "src|realtor|r2"})
+        self.assertEqual(key_for({"address": None, "zip": None, "source": "realtor", "source_id": "r9"}), "src|realtor|r9")
+
+    def test_proper_keys_are_unchanged_and_not_duplicated(self):
+        home = {"source": "realtor", "source_id": "h1", "address": "123 Water Oak Ln", "zip": "30512"}
+        self.assertEqual(key_for(home), "30512|123 water oak|")
+        geo = self.lot(source="redfin", source_id="f1", lat=34.87654, lng=-83.95)
+        self.assertEqual(key_for(geo), "geo|34.8765|-83.95|48")
+        # the same lot, once with coordinates and once without: one listing under the coordinate key
+        listings, _ = merge([geo, self.lot()])
+        self.assertEqual(len(listings), 1)
+        self.assertEqual(listings[0]["property_key"], "geo|34.8765|-83.95|48")
+        self.assertEqual(listings[0]["sources"], ["realtor", "redfin"])
+        # two different coordinate lots share the address form: ambiguous, the record keeps its own key
+        geo2 = self.lot(source="redfin", source_id="f2", lat=35.0, lng=-84.0)
+        self.assertEqual(len(merge([geo, geo2, self.lot()])[0]), 3)
+
+    def test_records_with_nothing_usable_still_reported(self):
+        self.assertEqual(len(merge([{"listing_type": "sale", "address": None, "zip": None}])[1]), 1)

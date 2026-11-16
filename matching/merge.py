@@ -6,7 +6,7 @@ import json
 from collections import defaultdict
 from typing import Iterable
 
-from matching.address import normalize_address, property_key
+from matching.address import normalize_address, property_key, street_core, zip5
 from normalization.schema import APP_COLS
 
 DEFAULT_ORDER = ["realtor", "redfin", "homes"]
@@ -25,8 +25,34 @@ TRACKED = ["price", "list_price", "status", "beds", "baths", "sqft", "lot_sqft",
 CANON_FIELDS = [c for c in APP_COLS if c not in ("external_id",)]
 
 
+def fallback_key(rec: dict) -> str | None:
+    """Identity for a record with no house number and no coordinates (land lots like "Water Oak Ln Lot 48"),
+    which property_key() cannot key. The prefixes never collide with a proper key ("<zip>|..." / "geo|...").
+
+    addr|<zip>|<street>|<unit>  street + lot/unit designator + ZIP: the same lot from two sources still merges
+    src|<source>|<source_id>    nothing in the address tells two lots apart: one listing per source record
+    """
+    street, unit = normalize_address(rec.get("address"))
+    z = zip5(rec.get("zip"))
+    if street and unit and z:
+        return f"addr|{z}|{street_core('0 ' + street)[2:]}|{unit}"
+    if rec.get("source") and rec.get("source_id") not in (None, ""):
+        return f"src|{rec['source']}|{rec['source_id']}"
+    return None
+
+
 def key_for(rec: dict) -> str | None:
-    return property_key(rec.get("address"), rec.get("zip"), lat=rec.get("lat"), lng=rec.get("lng"))
+    return (property_key(rec.get("address"), rec.get("zip"), lat=rec.get("lat"), lng=rec.get("lng"))
+            or fallback_key(rec))
+
+
+def _lot_form(rec: dict) -> tuple | None:
+    """(zip, street, unit) of a no-house-number address, to pair a fallback-keyed record with a geo-keyed one."""
+    street, unit = normalize_address(rec.get("address"))
+    z = zip5(rec.get("zip"))
+    if not street or not unit or not z or street[0].isdigit():
+        return None
+    return z, street_core("0 " + street)[2:], unit
 
 
 def canonical_id(pkey: str) -> str:
@@ -73,12 +99,23 @@ def merge_group(pkey: str, listing_type: str, recs: list[dict]) -> dict:
 def merge(records: Iterable[dict]) -> tuple[list[dict], list[dict]]:
     """Returns (canonical listings, unmatched records without any usable key)."""
     groups: dict[tuple, list[dict]] = defaultdict(list)
-    nokey = []
+    nokey, keyed = [], []
+    geo: dict[tuple, set] = defaultdict(set)  # (type, zip, street, unit) -> geo keys of lots that have coordinates
     for r in records:
         k = r.get("property_key") or key_for(r)
         if not k:
             nokey.append(r)
             continue
+        keyed.append((k, r))
+        if k.startswith("geo|") and (lf := _lot_form(r)):
+            geo[(r["listing_type"], *lf)].add(k)
+    for k, r in keyed:
+        if k.startswith("addr|"):
+            # the same lot seen with coordinates by another source: join that listing instead of duplicating it
+            # (only when exactly one such lot exists; ambiguous ones keep their own key)
+            hit = geo.get((r["listing_type"], *k.split("|")[1:]))
+            if hit and len(hit) == 1:
+                k = next(iter(hit))
         r["property_key"] = k
         groups[(k, r["listing_type"])].append(r)
     return [merge_group(k, t, rs) for (k, t), rs in groups.items()], nokey
