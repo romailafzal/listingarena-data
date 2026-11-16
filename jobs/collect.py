@@ -80,6 +80,28 @@ def is_complete(pages: int, max_pages: int | None, total: int | None, unique_lis
     return not total or unique_listings >= total - completeness_tolerance(total)
 
 
+def retry_failed(failed: list, run_tasks, retries: int | None = None, wait: float | None = None,
+                 sleep=time.sleep, log=lambda m: print(m, flush=True)) -> list:
+    """Same-cycle retry of failed county fetches (network errors, timeouts, in-band errors), so a county is not left
+    on old data until the next pass. `failed` / the result: [((source, county, type), blocked)]; run_tasks(batch)
+    runs tasks and returns the same shape for the ones that failed again.
+
+    Bounded: LA_COUNTY_RETRIES rounds (default 2, 0 = off) with a pause of LA_COUNTY_RETRY_WAIT_S (default 120)
+    before each, through the same workers and request limits. Never retried here: counties the source refused
+    (BlockedError) and any county of a source that was switched off for the run (SourceClient.disabled)."""
+    retries = int(os.environ.get("LA_COUNTY_RETRIES", 2)) if retries is None else retries
+    wait = float(os.environ.get("LA_COUNTY_RETRY_WAIT_S", 120)) if wait is None else wait
+    for rnd in range(1, retries + 1):
+        again = [task for task, blocked in failed
+                 if not blocked and getattr(getattr(task[0], "client", None), "disabled", False) is not True]
+        if not again:
+            break
+        log(f"retry round {rnd}/{retries}: {len(again)} failed county tasks")
+        sleep(wait)
+        failed = [(task, blocked) for task, blocked in failed if task not in again] + run_tasks(again)
+    return failed
+
+
 class Collector:
     def __init__(self, out: Path, run_id: str, max_pages: int | None, watermarks: dict | None = None):
         self.out, self.run_id, self.max_pages = out, run_id, max_pages
@@ -256,7 +278,7 @@ def main(argv=None) -> int:
                           float(os.environ.get("LA_LIVE_LOAD_SECONDS", 60)))
         live.start()
 
-    failures, finished = 0, [0]
+    failures, finished = 0, [0]  # failures: county tasks still failed after the retry rounds
     hb_stop = threading.Event()
 
     def heartbeat(every: float = float(os.environ.get("LA_HEARTBEAT_S", 300))) -> None:
@@ -277,24 +299,35 @@ def main(argv=None) -> int:
 
     threading.Thread(target=heartbeat, daemon=True, name="heartbeat").start()
     pool = ThreadPoolExecutor(max_workers=a.workers)
-    try:
-        futs = {pool.submit(job, *task): task for task in tasks}
+
+    def run_tasks(batch: list, retry: bool = False) -> list:
+        """Run county tasks; returns [(task, blocked)] for the ones that failed (error marker written)."""
+        failed = []
+        futs = {pool.submit(job, *task): task for task in batch}
         for f in as_completed(futs):
             s, c, t = futs[f]
-            finished[0] += 1
+            if not retry:
+                finished[0] += 1
             try:
                 r = f.result()
                 if live and not r.get("resumed"):
                     live.add(c.fips)
-                print(f"{'resumed ' if r.get('resumed') else ''}{s.name:8} {c.state} {c.fips} {c.name:22} {t:5} "
-                      f"pages={r['pages']} records={r['records']} total={r['reported_total']}", flush=True)
+                print(f"{'resumed ' if r.get('resumed') else ''}{'retried ' if retry else ''}{s.name:8} {c.state} "
+                      f"{c.fips} {c.name:22} {t:5} pages={r['pages']} records={r['records']} "
+                      f"total={r['reported_total']}", flush=True)
             except Exception as e:  # noqa: BLE001 - keep other counties going; checkpoint not written
-                failures += 1
                 blocked = isinstance(e, BlockedError)
+                failed.append(((s, c, t), blocked))
                 print(f"{'BLOCKED' if blocked else 'FAILED'} {s.name} {c.fips} {t}: {e}", flush=True)
                 if not blocked:
                     traceback.print_exc()
                 col.record_error(s.name, c, t, e, blocked)
+        return failed
+
+    try:
+        failed = run_tasks(tasks)
+        failed = retry_failed(failed, lambda batch: run_tasks(batch, retry=True))
+        failures = len(failed)
     except BaseException:
         # Ctrl-C / Dagster termination: drop queued counties, let in-flight ones finish or die with the process.
         # Finished counties are checkpointed, so rerunning the same run_id resumes where this stopped.

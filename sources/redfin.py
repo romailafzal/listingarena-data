@@ -13,6 +13,12 @@ from sources.http import SourceClient
 GIS = "https://www.redfin.com/stingray/api/gis"
 RENTALS = "https://www.redfin.com/stingray/api/v1/search/rentals"
 PER_PAGE = 350                 # most the endpoints return per request
+# Short pages (Manhattan sale/sold: ~265 of 350 rows on every page while `start` moves on by 350): the slots a short
+# page left out are asked for again, from start + rows returned. Never more than one chain of FILL_DEPTH requests
+# per short page, and an area where FILL_GIVE_UP re-queries in a row bring nothing new is left alone (there the
+# site simply hides those rows). Re-queries go through the same client, so pacing and in-flight caps are unchanged.
+FILL_DEPTH = 3
+FILL_GIVE_UP = 2
 SOLD_DAYS = int(os.environ.get("SOLD_WITHIN_DAYS", 90))
 HEADERS = {"referer": "https://www.redfin.com/", "sec-fetch-site": "same-origin"}
 
@@ -28,9 +34,12 @@ def area_params(county: County, listing_type: str) -> list[dict]:
     return [{"region_id": county.redfin_region_id, "region_type": 5}]
 
 
-def build_url(area: dict, listing_type: str, page: int, per_page: int = PER_PAGE) -> str:
+def build_url(area: dict, listing_type: str, page: int, per_page: int = PER_PAGE, start: int | None = None) -> str:
+    """`start` overrides the page's nominal offset (re-query of the slots a short page left out)."""
+    if start is not None:
+        page = start // per_page + 1
     p = {"al": 1, "num_homes": per_page, "ord": "redfin-recommended-asc", "page_number": page,
-         "start": (page - 1) * per_page, "uipt": "1,2,3,4,5,6,7,8", "v": 8, **area}
+         "start": (page - 1) * per_page if start is None else start, "uipt": "1,2,3,4,5,6,7,8", "v": 8, **area}
     if listing_type == "sale":
         p.update(sf="1,2,3,5,6,7", status=9)            # active + coming soon + pending, all listing sources
         return f"{GIS}?{urlencode(p, quote_via=quote, safe=',')}"
@@ -97,13 +106,22 @@ class RedfinSource(Source):
                 self.client.sleep(15 * (attempt + 1))
         raise RuntimeError(f"redfin: {last}")
 
+    @staticmethod
+    def fills_short_pages(listing_type: str) -> bool:
+        """Rentals are left out: their short pages are homes the API never returns under any paging (see
+        total_is_exact), so asking again finds nothing."""
+        return listing_type != "rent"
+
     def search(self, county: County, listing_type: str, max_pages: int | None = None) -> Iterator[Page]:
         """Page 1 gives the total; the remaining expected pages are fetched `client.page_parallel` at a time
-        (in order), then pagination continues sequentially if Redfin returns more than the total suggested."""
+        (in order), then pagination continues sequentially if Redfin returns more than the total suggested.
+        A short page that is followed by more results left slots unread: those are re-queried at the end."""
         n = 0
         for area in area_params(county, listing_type):
             seen: set[str] = set()
             page, done, total = 1, False, None
+            short: list[tuple[int, int]] = []   # (start, end) of slots after a short page, last page still unknown
+            gaps: list[tuple[int, int]] = []    # the same, once a later page proved the short one was not the last
             while not done and (max_pages is None or n < max_pages):
                 par = self.client.page_parallel if isinstance(self.client.page_parallel, int) else 1
                 if page == 1 or par <= 1:
@@ -125,11 +143,44 @@ class RedfinSource(Source):
                     seen.update(property_id(h, listing_type) for h in new)
                     n += 1
                     yield Page(n, {"url": url}, data, new, {"total": total, "returned": len(homes)})
+                    if new:
+                        gaps += short  # new homes after a short page: it was not the last one
+                        short = [((page - 1) * PER_PAGE + len(homes), page * PER_PAGE)] if len(homes) < PER_PAGE else []
                     page += 1
                     # pages are not always full; stop on empty page, page of repeats, or reported total
                     if not homes or not new or (total is not None and len(seen) >= total):
                         done = True
                         break
+            if gaps and self.fills_short_pages(listing_type):
+                # the last page was short too: in an area with short pages that is no proof of the end
+                for page_ in self._fill(area, listing_type, gaps + short, seen, n, max_pages):
+                    n = page_.number
+                    yield page_
+
+    def _fill(self, area: dict, listing_type: str, gaps: list, seen: set, n: int, max_pages: int | None) -> Iterator[Page]:
+        """Re-query the slots short pages left out: each gap from its first unread slot, up to FILL_DEPTH times
+        while it keeps returning new homes without reaching the next page's start."""
+        fruitless = 0
+        for _ in range(FILL_DEPTH):
+            if max_pages is not None:
+                gaps = gaps[:max(0, max_pages - n)]
+            if not gaps or fruitless >= FILL_GIVE_UP:
+                return
+            urls = [build_url(area, listing_type, 0, start=s) for s, _e in gaps]
+            nxt = []
+            for (s, e), url, (data, (homes, total)) in zip(gaps, urls, fetch_ordered(
+                    lambda u: self._fetch(u, listing_type), urls, self.client.page_parallel)):
+                new = [h for h in homes if property_id(h, listing_type) not in seen]
+                seen.update(property_id(h, listing_type) for h in new)
+                n += 1
+                yield Page(n, {"url": url, "fill": True}, data, new,
+                           {"total": total, "returned": len(homes), "fill_start": s})
+                fruitless = 0 if new else fruitless + 1
+                if fruitless >= FILL_GIVE_UP:
+                    return
+                if new and s + len(homes) < e:
+                    nxt.append((s + len(homes), e))
+            gaps = nxt
 
     def normalize(self, raw: dict, listing_type: str) -> dict:
         return normalize_rental(raw) if listing_type == "rent" else normalize_gis(raw, listing_type)

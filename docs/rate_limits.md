@@ -74,3 +74,15 @@ Total wall time for Texas collection across all steps ≈ 45 min of fetching; 0 
   endpoints unaffected. Treat the detail path as blocked until a single request succeeds; then start at 1 in flight.
 - Realtor GraphQL `home`: 6 sequential requests, ~0.9 s each, no errors. Start at 2-3 in flight
   (`--inflight 3`, the default) and raise one step at a time only after a full day without blocks.
+
+## Coverage fixes (2026-11-16)
+- Redfin short pages (Manhattan sale/sold: ~265 of 350 rows per page): when a short page is followed by more
+  results, the slots it left out are re-queried from `start + rows returned` after the normal paging
+  (`sources/redfin.py: _fill`). At most `FILL_DEPTH` (3) requests per short page, and an area is left alone after
+  `FILL_GIVE_UP` (2) re-queries in a row that bring nothing new. Not for rentals. Same client, so `*_MAX_INFLIGHT`
+  and `*_MIN_INTERVAL` apply unchanged; counties with full pages make no extra request.
+- Failed county fetches are retried inside the same `jobs.collect` run: `LA_COUNTY_RETRIES` rounds (default 2,
+  0 = off) after `LA_COUNTY_RETRY_WAIT_S` (default 120). Counties the source refused (`BlockedError`) and sources
+  switched off after `<SOURCE>_TRIP_BLOCKS` blocked requests are not retried.
+- Lots with no house number and no coordinates get a fallback `property_key` (`matching/merge.py: fallback_key`):
+  `addr|zip|street|lot` or, without a lot designator, `src|source|source_id`.

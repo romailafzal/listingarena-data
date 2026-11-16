@@ -277,3 +277,78 @@ def test_realtor_retries_upstream_abort_with_backoff():
     c.request_json = lambda *a, **k: answers.pop(0) if answers else ok
     assert RealtorSource(c)._fetch({}) == ok
     assert len(sleeps) == 2 and c.stats["errors"] == 2
+
+
+class _PagedRedfin:
+    """Fake stingray: `total` homes in a fixed order; a request returns at most `cap` rows from `start`."""
+
+    def __init__(self, total, cap, parallel=1, hidden=()):
+        self.total, self.cap, self.page_parallel, self.hidden, self.urls = total, cap, parallel, set(hidden), []
+
+    def request_json(self, method, url, headers=None):
+        from urllib.parse import parse_qs, urlparse
+        q = parse_qs(urlparse(url).query)
+        start, num = int(q["start"][0]), int(q["num_homes"][0])
+        self.urls.append(url)
+        ids = [i for i in range(start, min(self.total, start + min(num, self.cap))) if i not in self.hidden]
+        return {"resultCode": 0, "payload": {"homes": [{"propertyId": i} for i in ids]}}
+
+    def sleep(self, s):
+        pass
+
+
+def _redfin_ids(client, listing_type="sale", max_pages=None):
+    pages = list(redfin.RedfinSource(client=client).search(TRAVIS, listing_type, max_pages))
+    assert [p.number for p in pages] == list(range(1, len(pages) + 1))
+    return [h["propertyId"] for p in pages for h in p.records], pages
+
+
+def test_redfin_short_pages_are_requeried():
+    """Manhattan: every page ~265 of 350 rows while start moves by 350; the left-out slots are fetched again."""
+    for par in (1, 4):
+        client = _PagedRedfin(total=2000, cap=265, parallel=par)
+        ids, pages = _redfin_ids(client)
+        assert sorted(ids) == list(range(2000)), par        # nothing skipped, nothing twice
+        fills = [p for p in pages if p.request.get("fill")]
+        assert len(fills) == 6 and "start=265&" in fills[0].request["url"]   # 6 short pages -> 6 re-queries
+        assert len(client.urls) <= 7 + 6 + par              # one re-query per short page (+ speculative pages)
+
+
+def test_redfin_full_pages_cost_no_extra_requests():
+    client = _PagedRedfin(total=1000, cap=350)
+    ids, pages = _redfin_ids(client)
+    assert sorted(ids) == list(range(1000))
+    assert len(client.urls) == 4 and not any(p.request.get("fill") for p in pages)   # 3 pages + the empty one
+    one = _PagedRedfin(total=120, cap=350)
+    assert len(_redfin_ids(one)[0]) == 120 and len(one.urls) == 2
+
+
+def test_redfin_requery_gives_up_when_nothing_new_and_respects_max_pages():
+    # rows the site never returns (hidden): pages are short but asking again brings nothing -> 2 tries, then stop
+    hidden = {i for i in range(3500) if i % 350 >= 300}
+    client = _PagedRedfin(total=3500, cap=350, hidden=hidden)
+    ids, pages = _redfin_ids(client)
+    assert len(ids) == 3000 and len(set(ids)) == 3000
+    assert sum(1 for p in pages if p.request.get("fill")) == redfin.FILL_GIVE_UP
+    assert len(_redfin_ids(_PagedRedfin(total=2000, cap=265), max_pages=3)[1]) == 3
+    # rentals are never re-queried
+    assert not redfin.RedfinSource.fills_short_pages("rent")
+
+
+def test_failed_counties_are_retried_in_the_same_run_bounded():
+    from jobs.collect import retry_failed
+    src, off = mock.Mock(), mock.Mock()
+    src.client.disabled, off.client.disabled = False, True
+    a, b, c, d = (src, TRAVIS, "sale"), (src, TRAVIS, "rent"), (src, TRAVIS, "sold"), (off, TRAVIS, "sale")
+    rounds, naps = [], []
+
+    def run(batch):                       # `a` recovers in round 1, `b` never does
+        rounds.append(list(batch))
+        return [(t, False) for t in batch if t == b]
+
+    left = retry_failed([(a, False), (b, False), (c, True), (d, False)], run, retries=2, wait=7, sleep=naps.append,
+                        log=lambda m: None)
+    assert rounds == [[a, b], [b]] and naps == [7, 7]                 # bounded: 2 rounds, paced
+    assert sorted(t[2] for t, _ in left) == ["rent", "sale", "sold"]  # b, blocked c and switched-off d stay failed
+    assert (c, True) in left and (d, False) in left                   # blocked / switched-off source: never retried
+    assert retry_failed([(a, False)], run, retries=0, wait=0, sleep=naps.append) == [(a, False)] and len(rounds) == 2
