@@ -148,6 +148,34 @@ class RunnerTest(unittest.TestCase):
         self.assertEqual(r["stopped"], ["realtor"])
         self.assertEqual(stored[0][1], "bronze/realtor_detail/tx/48015/det_t/1.json.gz")
 
+    def test_parallel_stores_use_capped_pool(self):
+        import threading as th
+        good = details.normalize_realtor(json.loads((FIX / "realtor_detail.json").read_text())["data"]["home"])
+        homes = [{"source": "realtor", "source_id": str(i), "state": "TX", "county_fips": "48015"} for i in range(40)]
+        made, busy, peak, lock = [], set(), [0], th.Lock()
+
+        class Conn:
+            autocommit = False
+            def close(self): pass
+
+        def store(conn, h, d, r, b):
+            with lock:
+                assert conn not in busy, "connection shared between threads"
+                busy.add(conn)
+                peak[0] = max(peak[0], len(busy))
+            import time; time.sleep(0.01)
+            with lock:
+                busy.discard(conn)
+            return True
+        with tempfile.TemporaryDirectory() as tmp, mock.patch.object(fd, "store_detail", store):
+            r = fd.DetailRunner(None, {"realtor": FakeFetcher({h["source_id"]: good for h in homes})}, Path(tmp),
+                                "det_t", inflight=8, log=lambda m: None,
+                                conn_factory=lambda: made.append(Conn()) or made[-1], max_conns=4).run(homes)
+        self.assertEqual(r["sources"]["realtor"]["fetched"], 40)
+        self.assertLessEqual(len(made), 4)
+        self.assertGreater(peak[0], 1)              # stores really overlap
+        self.assertTrue(all(c.autocommit for c in made))
+
 
 try:
     from tests.test_db import URL
