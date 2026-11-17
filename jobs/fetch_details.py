@@ -20,10 +20,12 @@ DETAIL_MAX_BLOCKS (default 3) consecutive BlockedErrors.
 from __future__ import annotations
 
 import argparse
+import contextlib
 import gzip
 import hashlib
 import json
 import os
+import queue
 import sys
 import threading
 import time
@@ -52,7 +54,7 @@ LEFT JOIN source_records sr ON sr.source = s.source AND sr.listing_type = l.list
 LEFT JOIN listing_details d ON d.source = s.source AND d.source_id = s.sid
 WHERE e.event IN ('new', 'changed', 'relisted')
   AND s.source = ANY(%(sources)s)
-  AND (%(fips)s::text IS NULL OR e.county_fips LIKE %(fips)s)   -- uses listing_events_run (run_id, county_fips)
+  AND (%(lo)s::text IS NULL OR (e.county_fips >= %(lo)s AND e.county_fips < %(hi)s))  -- index range, LIKE can't use it
   AND (d.fetched_at IS NULL OR d.fetched_at < e.created_at)
 """
 SELECT_MISSING = """
@@ -61,7 +63,7 @@ SELECT l.id, l.listing_type, l.property_key, l.county_fips, l.state, s.source, s
 FROM listings l
 CROSS JOIN LATERAL jsonb_each_text(l.source_ids) AS s(source, sid)
 LEFT JOIN source_records sr ON sr.source = s.source AND sr.listing_type = l.listing_type AND sr.source_id = s.sid
-WHERE l.active AND s.source = ANY(%(sources)s) AND (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
+WHERE l.active AND s.source = ANY(%(sources)s) AND (%(lo)s::text IS NULL OR (l.county_fips >= %(lo)s AND l.county_fips < %(hi)s))
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = s.source AND d.source_id = s.sid)
 """
 # listings only Redfin has, whose Realtor property id the redfin_only step found: their Realtor page too
@@ -69,7 +71,7 @@ SELECT_REDFIN_ONLY = """
 SELECT l.id, l.listing_type, l.property_key, l.county_fips, l.state, 'realtor', r.realtor_property_id, NULL, r.found_at
 FROM listing_realtor_ids r
 JOIN listings l ON l.id = r.listing_id AND l.active
-WHERE (%(fips)s::text IS NULL OR l.county_fips LIKE %(fips)s)
+WHERE (%(lo)s::text IS NULL OR (l.county_fips >= %(lo)s AND l.county_fips < %(hi)s))
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = 'realtor' AND d.source_id = r.realtor_property_id
                   AND d.fetched_at >= r.found_at)
 """
@@ -89,7 +91,13 @@ def select_homes(conn, since: str, sources: list[str], state: str | None, limit:
                  include_missing: bool) -> list[dict]:
     if conn.execute("SELECT 1 FROM runs WHERE run_id = %s", (since,)).fetchone() is None:
         raise SystemExit(f"unknown run id {since!r}")
-    p = {"since": since, "sources": list(sources), "fips": state_fips_prefix(state) + "%" if state else None}
+    fips = state_fips_prefix(state) if state else None
+    # county_fips range instead of LIKE 'NN%' (LIKE can't use the btree index under a non-C collation)
+    p = {"since": since, "sources": list(sources), "lo": fips, "hi": f"{int(fips) + 1:02d}" if fips else None}
+    # per-state selections are small: index nested loops beat hashing all of listing_details (was ~8 min/state)
+    if state:
+        conn.execute("SET enable_hashjoin = off")
+        conn.execute("SET enable_mergejoin = off")
     # no ORDER/DISTINCT in SQL so Postgres can stream and stop early under LIMIT; dedupe here (latest event wins)
     lim = f" LIMIT {int(limit) * 4}" if limit else ""
     best: dict = {}
@@ -114,6 +122,9 @@ def select_homes(conn, since: str, sources: list[str], state: str | None, limit:
             if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
                 seen.add((d["source"], d["source_id"]))
                 rows.append(d)
+    if state:
+        conn.execute("RESET enable_hashjoin")
+        conn.execute("RESET enable_mergejoin")
     return rows
 
 
@@ -199,14 +210,50 @@ def record_error(conn, run_id: str, home: dict, kind: str, msg: str) -> None:
 
 class DetailRunner:
     def __init__(self, conn, fetchers: dict, out: Path, run_id: str, inflight: int = 3,
-                 max_blocks: int = 3, log=print):
+                 max_blocks: int = 3, log=print, conn_factory=None, max_conns: int = 32):
         self.conn, self.fetchers, self.out, self.run_id = conn, fetchers, out, run_id
         self.inflight, self.max_blocks, self.log = inflight, max_blocks, log
         self.db_lock = threading.Lock()
+        # with conn_factory, stores run in parallel on a small pool of connections (one per worker, capped);
+        # without it (tests, old callers) every write shares self.conn under db_lock as before
+        self.conn_factory, self.max_conns = conn_factory, max(1, max_conns)
+        self._pool: queue.Queue = queue.Queue()
+        self._made, self._all = 0, []
         self.stats = {s: {"fetched": 0, "changed": 0, "errors": 0, "blocked": 0, "skipped": 0} for s in fetchers}
         self.consecutive_blocks = {s: 0 for s in fetchers}
         self.stopped: set[str] = set()
         self.slock = threading.Lock()
+
+    @contextlib.contextmanager
+    def db(self):
+        if self.conn_factory is None:
+            with self.db_lock:
+                yield self.conn
+            return
+        try:
+            c = self._pool.get_nowait()
+        except queue.Empty:
+            with self.db_lock:
+                make = self._made < self.max_conns
+                self._made += make
+            if make:
+                c = self.conn_factory()
+                c.autocommit = True
+                with self.db_lock:
+                    self._all.append(c)
+            else:
+                c = self._pool.get()
+        try:
+            yield c
+        finally:
+            self._pool.put(c)
+
+    def close(self) -> None:
+        for c in self._all:
+            try:
+                c.close()
+            except Exception:  # noqa: BLE001
+                pass
 
     def _inc(self, src: str, key: str, n: int = 1) -> None:
         with self.slock:
@@ -223,8 +270,8 @@ class DetailRunner:
             self._inc(src, "blocked", 1)
             with self.slock:
                 self.consecutive_blocks[src] += 1
-            with self.db_lock:
-                record_error(self.conn, self.run_id, home, "blocked", str(e))
+            with self.db() as c:
+                record_error(c, self.run_id, home, "blocked", str(e))
             if self.consecutive_blocks[src] >= self.max_blocks and src not in self.stopped:
                 self.stopped.add(src)
                 self.log(f"[details] {src}: {self.max_blocks} consecutive blocks; stopping this source for this run")
@@ -233,14 +280,14 @@ class DetailRunner:
             self._inc(src, "errors", 1)
             self.consecutive_blocks[src] = 0
             self.log(f"[details] {src} {home['source_id']}: {type(e).__name__}: {str(e)[:200]}")
-            with self.db_lock:
-                record_error(self.conn, self.run_id, home, "detail", f"{type(e).__name__}: {e}")
+            with self.db() as c:
+                record_error(c, self.run_id, home, "detail", f"{type(e).__name__}: {e}")
             return
         self.consecutive_blocks[src] = 0
         path = bronze_path(self.out, self.run_id, home)
         write_bronze(path, raw)
-        with self.db_lock:
-            changed = store_detail(self.conn, home, detail, self.run_id, str(path.relative_to(self.out)))
+        with self.db() as c:
+            changed = store_detail(c, home, detail, self.run_id, str(path.relative_to(self.out)))
         self._inc(src, "fetched", 1)
         self._inc(src, "changed", int(changed))
 
@@ -258,6 +305,7 @@ class DetailRunner:
                 self.log(f"[details] {i}/{len(futs)} homes, {time.time() - t0:.0f}s: {json.dumps(self.stats)}")
         for p in pools.values():
             p.shutdown()
+        self.close()
         return {"run_id": self.run_id, "homes": len(futs), "seconds": round(time.time() - t0, 1), "sources": self.stats,
                 "stopped": sorted(self.stopped),
                 "http": {s: f.client.stats for s, f in self.fetchers.items() if hasattr(f, "client")}}
@@ -290,7 +338,8 @@ def main(argv=None) -> int:
         fetchers = {s: FETCHERS[s](detail_client(s, inflight=a.inflight)) for s in sources}
         res = DetailRunner(conn, fetchers, Path(a.out), a.run_id, inflight=a.inflight,
                            max_blocks=int(os.environ.get("DETAIL_MAX_BLOCKS", 3)),
-                           log=lambda m: print(m, flush=True)).run(homes)
+                           log=lambda m: print(m, flush=True), conn_factory=connect,
+                           max_conns=min(a.inflight * len(sources), int(os.environ.get("DETAIL_DB_CONNS", 32)))).run(homes)
     print(json.dumps(res, default=str), flush=True)
     return 0 if not any(s["errors"] or s["blocked"] for s in res["sources"].values()) else 1
 
