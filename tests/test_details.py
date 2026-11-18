@@ -148,6 +148,18 @@ class RunnerTest(unittest.TestCase):
         self.assertEqual(r["stopped"], ["realtor"])
         self.assertEqual(stored[0][1], "bronze/realtor_detail/tx/48015/det_t/1.json.gz")
 
+    def test_home_not_found_is_recorded(self):
+        outcomes = {"1": details.DetailError('realtor home: HTTP 200, no home for 1: [{"extensions": {"code": "HOME_NOT_FOUND"}}]'),
+                    "2": details.DetailError("non-JSON")}
+        homes = [{"source": "realtor", "source_id": k, "state": "TX", "county_fips": "48015"} for k in outcomes]
+        nf = []
+        with tempfile.TemporaryDirectory() as tmp, \
+                mock.patch.object(fd, "record_error", lambda *a: None), \
+                mock.patch.object(fd, "record_not_found", lambda c, h: nf.append(h["source_id"])):
+            fd.DetailRunner(None, {"realtor": FakeFetcher(outcomes)}, Path(tmp), "det_t", inflight=1,
+                            log=lambda m: None, conn_factory=lambda: mock.Mock(), max_conns=1).run(homes)
+        self.assertEqual(nf, ["1"])                 # only the not-found page, not other errors
+
     def test_parallel_stores_use_capped_pool(self):
         import threading as th
         good = details.normalize_realtor(json.loads((FIX / "realtor_detail.json").read_text())["data"]["home"])
@@ -191,7 +203,7 @@ class StoreTest(unittest.TestCase):
         self.conn = psycopg.connect(URL, autocommit=True)
         migrate(self.conn)
         for t in ("listing_details", "listing_detail_history", "listing_detail_taxes", "listing_detail_schools",
-                  "listing_detail_comps", "listing_events", "listings", "properties", "runs"):
+                  "listing_detail_comps", "listing_events", "listings", "properties", "runs", "detail_not_found"):
             self.conn.execute(f"TRUNCATE {t} CASCADE")
 
     def tearDown(self):
@@ -221,6 +233,15 @@ class StoreTest(unittest.TestCase):
                              "listing_detail_comps": 3})
         # checkpoint: fetched after the event -> not selected again
         self.assertEqual(fd.select_homes(c, "r1", ["realtor"], None, None, True), [])
+        # a missing home whose page does not exist is skipped until the retry window passes
+        c.execute("TRUNCATE listing_details CASCADE")
+        c.execute("TRUNCATE listing_events")   # only the --include-missing path (a new event still refetches)
+        self.assertEqual(len(fd.select_homes(c, "r1", ["realtor"], None, None, True)), 1)
+        fd.record_not_found(c, homes[0])
+        self.assertEqual(fd.select_homes(c, "r1", ["realtor"], None, None, True), [])
+        c.execute("UPDATE detail_not_found SET checked_at = now() - interval '31 days'")
+        self.assertEqual(len(fd.select_homes(c, "r1", ["realtor"], None, None, True)), 1)
+        c.execute("TRUNCATE detail_not_found")
 
 
 if __name__ == "__main__":
