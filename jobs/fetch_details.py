@@ -65,6 +65,8 @@ CROSS JOIN LATERAL jsonb_each_text(l.source_ids) AS s(source, sid)
 LEFT JOIN source_records sr ON sr.source = s.source AND sr.listing_type = l.listing_type AND sr.source_id = s.sid
 WHERE l.active AND s.source = ANY(%(sources)s) AND (%(lo)s::text IS NULL OR (l.county_fips >= %(lo)s AND l.county_fips < %(hi)s))
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = s.source AND d.source_id = s.sid)
+  AND NOT EXISTS (SELECT 1 FROM detail_not_found n WHERE n.source = s.source AND n.source_id = s.sid
+                  AND n.checked_at > now() - make_interval(days => %(nf_days)s))
 """
 # listings only Redfin has, whose Realtor property id the redfin_only step found: their Realtor page too
 SELECT_REDFIN_ONLY = """
@@ -74,7 +76,13 @@ JOIN listings l ON l.id = r.listing_id AND l.active
 WHERE (%(lo)s::text IS NULL OR (l.county_fips >= %(lo)s AND l.county_fips < %(hi)s))
   AND NOT EXISTS (SELECT 1 FROM listing_details d WHERE d.source = 'realtor' AND d.source_id = r.realtor_property_id
                   AND d.fetched_at >= r.found_at)
+  AND NOT EXISTS (SELECT 1 FROM detail_not_found n WHERE n.source = 'realtor' AND n.source_id = r.realtor_property_id
+                  AND n.checked_at > now() - make_interval(days => %(nf_days)s))
 """
+NOT_FOUND_RETRY_DAYS = int(os.environ.get("DETAIL_NOT_FOUND_RETRY_DAYS", "30"))
+NOT_FOUND = ("HOME_NOT_FOUND", "no home for")
+
+
 KEYS = ("listing_id", "listing_type", "property_key", "county_fips", "state", "source", "source_id",
         "source_listing_id", "event_at")
 
@@ -93,7 +101,7 @@ def select_homes(conn, since: str, sources: list[str], state: str | None, limit:
         raise SystemExit(f"unknown run id {since!r}")
     fips = state_fips_prefix(state) if state else None
     # county_fips range instead of LIKE 'NN%' (LIKE can't use the btree index under a non-C collation)
-    p = {"since": since, "sources": list(sources), "lo": fips, "hi": f"{int(fips) + 1:02d}" if fips else None}
+    p = {"since": since, "sources": list(sources), "nf_days": NOT_FOUND_RETRY_DAYS, "lo": fips, "hi": f"{int(fips) + 1:02d}" if fips else None}
     # per-state selections are small: index nested loops beat hashing all of listing_details (was ~8 min/state)
     if state:
         conn.execute("SET enable_hashjoin = off")
@@ -197,6 +205,17 @@ def store_detail(conn, home: dict, detail: dict, run_id: str, bronze: str | None
     return True
 
 
+def record_not_found(conn, home: dict) -> None:
+    """The site has no page for this id: skip it for NOT_FOUND_RETRY_DAYS."""
+    try:
+        with conn.transaction():
+            conn.execute("""INSERT INTO detail_not_found (source, source_id) VALUES (%s, %s)
+                            ON CONFLICT (source, source_id) DO UPDATE SET checked_at = now()""",
+                         (home["source"], home["source_id"]))
+    except Exception as e:  # noqa: BLE001
+        print(f"[details] could not record not-found: {e}", flush=True)
+
+
 def record_error(conn, run_id: str, home: dict, kind: str, msg: str) -> None:
     try:
         with conn.transaction():
@@ -282,6 +301,8 @@ class DetailRunner:
             self.log(f"[details] {src} {home['source_id']}: {type(e).__name__}: {str(e)[:200]}")
             with self.db() as c:
                 record_error(c, self.run_id, home, "detail", f"{type(e).__name__}: {e}")
+                if isinstance(e, DetailError) and any(m in str(e) for m in NOT_FOUND):
+                    record_not_found(c, home)
             return
         self.consecutive_blocks[src] = 0
         path = bronze_path(self.out, self.run_id, home)
