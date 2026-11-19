@@ -346,11 +346,24 @@ def main(argv=None) -> int:
         summary[n] = dict(s.client.stats)
     sp = Path(a.out) / "checkpoints" / a.run_id / "http_stats.json"
     sp.parent.mkdir(parents=True, exist_ok=True)
-    prev = json.loads(sp.read_text()) if sp.exists() else {}
-    for n, st in summary.items():  # accumulate across resumed invocations
-        for k, v in st.items():
-            prev.setdefault(n, {})[k] = round(prev.get(n, {}).get(k, 0) + v, 3)
-    sp.write_text(json.dumps(prev))
+    # States run in parallel and share this file: lock it, tolerate a bad file, write atomically.
+    # Stats are informational, so a problem here must never fail the state.
+    try:
+        import fcntl
+        with open(sp.with_suffix(".lock"), "w") as lk:
+            fcntl.flock(lk, fcntl.LOCK_EX)
+            try:
+                prev = json.loads(sp.read_text()) if sp.exists() else {}
+            except (ValueError, OSError):
+                prev = {}
+            for n, st in summary.items():  # accumulate across resumed invocations
+                for k, v in st.items():
+                    prev.setdefault(n, {})[k] = round(prev.get(n, {}).get(k, 0) + v, 3)
+            tmp = sp.with_suffix(f".{os.getpid()}.tmp")
+            tmp.write_text(json.dumps(prev))
+            os.replace(tmp, sp)
+    except Exception as e:  # noqa: BLE001
+        print(f"collect: http stats not saved ({e})", flush=True)
     return 1 if failures else 0
 
 
