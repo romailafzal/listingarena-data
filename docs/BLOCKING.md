@@ -169,3 +169,13 @@ Reference = `/home/zsquare/Desktop/projects/data/datarivo_pipeline-main (1)/data
    cannot spill onto Redfin search.
 5. Fix the gateway 429: verify slots are released (`data/proxy_slots`), and test 5 then 10 concurrent
    CONNECTs from one process before running several processes through it.
+
+## 2026-11-20 cycle time (target 3-4 h)
+- Last cycle ~12 h: listings ~7 h (4 states at once, total 128 in flight; collect is ~90% of each state), details ~4 h
+  (re-queued ~611k homes without details every cycle). Fixed: details = new/relisted only + at most 5000 backlog per
+  state (DETAIL_MISSING_MAX); loader dup external_id after rekeys + deadlocks (406 LOAD FAILED in one run).
+- Open: reference-style collect (per-county, 8 counties in parallel, newest-first, price-band split over 10k, shared
+  rate limit with global pause on 403/429, details inline after homes). Not built yet: needs a rewrite of
+  jobs/collect.py and the Dagster job; must be tested on a few counties before a cycle uses it (no proxies).
+- Orchestrator main was behind the live checkout (feat/steady-cycle + uncommitted edits); synced in PR #19.
+  That reverts main's never-live timer-based incremental refresh in us_run.sh/watchdog.sh.
