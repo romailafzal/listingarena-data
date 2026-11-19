@@ -98,6 +98,52 @@ def _src_hash(r: dict) -> str:
     return row_hash(r, SRC_HASH_FIELDS)
 
 
+def carry_over(conn, run_id: str, u: "Unit", current: dict, incoming: dict) -> dict:
+    """Keys change when the matching rules change (or two sources' copies get joined). Without this the old row
+    would go missing and a new row with a new id would appear: details, history and the website id would split.
+    - rekey: an incoming key not in `current` whose source ids belong to absent current listing(s) takes over the
+      lowest-id one (row, id and external_id kept; only property_key changes)
+    - supersede: an absent current listing whose every source id is now part of an incoming listing is a duplicate
+      of it: deactivated (listing_state 'removed', event 'removed' {merged_into}) instead of going 'missing'.
+    Mutates `current` so detect() sees the result."""
+    absent = {k for k, c in current.items() if k not in incoming and c.get("active", True)}
+    sids = lambda m: {(s, str(v)) for s, v in (m.get("source_ids") or {}).items()}  # noqa: E731
+    owner = {}
+    for k in absent:
+        for x in sids(current[k]):
+            owner.setdefault(x, set()).add(k)
+    rekeyed = superseded = 0
+    for k in sorted(incoming):
+        if k in current:
+            continue
+        olds = sorted({o for x in sids(incoming[k]) for o in owner.get(x, ()) if o in absent},
+                      key=lambda o: current[o]["id"])
+        if not olds:
+            continue
+        o = olds[0]
+        if conn.execute("""UPDATE listings SET property_key=%s WHERE id=%s AND NOT EXISTS
+                             (SELECT 1 FROM listings WHERE property_key=%s AND listing_type=%s) RETURNING id""",
+                        (k, current[o]["id"], k, u.listing_type)).fetchone():
+            c = current.pop(o)
+            c["property_key"] = k
+            current[k] = c
+            absent.discard(o)
+            rekeyed += 1
+    have = {x: k for k, m in incoming.items() for x in sids(m)}
+    for o in sorted(absent):
+        mine = sids(current[o])
+        into = {have.get(x) for x in mine}
+        if mine and None not in into:
+            c = current.pop(o)
+            conn.execute("""UPDATE listings SET active=false, listing_state='removed', removed_at=now(), updated_at=now(),
+                            last_run_id=%s WHERE id=%s""", (run_id, c["id"]))
+            conn.execute("""INSERT INTO listing_events (run_id, listing_id, property_key, listing_type, county_fips, event,
+                            changes) VALUES (%s,%s,%s,%s,%s,'removed',%s)""",
+                         (run_id, c["id"], o, u.listing_type, u.fips, Jsonb({"merged_into": sorted(into)})))
+            superseded += 1
+    return {"rekeyed": rekeyed, "superseded": superseded}
+
+
 def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) -> dict:
     t0 = time.time()
     out = {"sources": {}, "merged": {}}
@@ -181,8 +227,7 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
                                         FROM listings WHERE county_fips=%s AND listing_type=%s""", (u.fips, u.listing_type)):
                 d = dict(zip(["id", "property_key", "active", "missing_since"] + LISTING_COLS, row))
                 current[d["property_key"]] = d
-            events = detect(current, incoming)
-            # properties
+            # properties first: listings.property_key references them (carry_over renames to new keys)
             props = []
             for m in merged:
                 street, unit = normalize_address(m.get("address"))
@@ -195,13 +240,15 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
                                        ON CONFLICT (property_key) DO UPDATE SET last_seen=now(),
                                          lat=coalesce(EXCLUDED.lat, properties.lat), lng=coalesce(EXCLUDED.lng, properties.lng)""",
                                     props[i:i + batch])
+            out_keys = carry_over(conn, run_id, u, current, incoming)
+            events = detect(current, incoming)
             touched = {e["property_key"] for e in events if e["event"] != "removed"}
             touched |= {k for k, m in incoming.items() if k in current and current[k]["row_hash"] != m["row_hash"]}
             upserts = [incoming[k] for k in touched]
             cols = ["property_key", "listing_type"] + LISTING_COLS
             sql = (f"INSERT INTO listings ({', '.join(cols)}, first_run_id, last_run_id) VALUES ({', '.join(['%s'] * (len(cols) + 2))}) "
                    f"ON CONFLICT (property_key, listing_type) DO UPDATE SET "
-                   + ", ".join(f"{c}=EXCLUDED.{c}" for c in LISTING_COLS)
+                   + ", ".join(f"{c}=EXCLUDED.{c}" for c in LISTING_COLS if c != "external_id")  # id is kept
                    + ", active=true, removed_at=NULL, missing_since=NULL, listing_state=NULL, updated_at=now(), last_seen=now(), "
                      "last_run_id=EXCLUDED.last_run_id")
             with conn.cursor() as cur:
@@ -245,7 +292,8 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
             cnt = defaultdict(int)
             for e in events:
                 cnt[e["event"]] += 1
-            out["merged"] = {"fetched": len(merged), "new": cnt["new"], "changed": cnt["changed"], "removed": cnt["removed"], "missing": cnt["missing"],
+            out["merged"] = {"rekeyed": out_keys["rekeyed"], "superseded": out_keys["superseded"],
+                             "fetched": len(merged), "new": cnt["new"], "changed": cnt["changed"], "removed": cnt["removed"], "missing": cnt["missing"],
                              "relisted": cnt["relisted"], "active": len(merged), "nokey": len(nokey),
                              "multi_source": sum(1 for m in merged if len(m["sources"]) > 1),
                              "complete": all(s.get("complete") for s in out["sources"].values()) and bool(out["sources"]),
