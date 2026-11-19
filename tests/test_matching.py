@@ -145,3 +145,17 @@ class FallbackKeyTest(unittest.TestCase):
 
     def test_records_with_nothing_usable_still_reported(self):
         self.assertEqual(len(merge([{"listing_type": "sale", "address": None, "zip": None}])[1]), 1)
+
+
+class JoinNearTest(unittest.TestCase):
+    def test_join_and_keep_apart(self):
+        from matching.merge import merge
+        base = {"listing_type": "sale", "zip": "77474", "beds": 3}
+        a = {**base, "source": "realtor", "source_id": "1", "address": "100 Mill Creek Rd", "lat": 29.78, "lng": -96.15}
+        b = {**base, "source": "redfin", "source_id": "2", "address": "100 Mill Creek", "lat": 29.7801, "lng": -96.15}
+        far = {**b, "source_id": "3", "lat": 29.80}
+        self.assertEqual(len(merge([a, b])[0]), 1)
+        self.assertEqual(len(merge([a, far])[0]), 2)       # 2 km apart: different homes
+        self.assertEqual(len(merge([a, {**b, "beds": 6}])[0]), 2)  # beds differ
+        self.assertEqual(len(merge([a, {**b, "address": "100 Oak St"}])[0]), 2)  # another street at the corner
+        self.assertEqual(len(merge([a, b, {**b, "source_id": "4", "address": "100 Mill Pond"}])[0]), 2)  # one join only

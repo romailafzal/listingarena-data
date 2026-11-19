@@ -173,3 +173,28 @@ class PublishTest(LoadTest):
         self.assertTrue(row["external_id"].startswith("la:"))
         self.assertEqual((row["lat"], row["lng"]), (30.0, -96.0))
         self.assertEqual(publish(self.conn, "u", "t", session=s)["pending"], 0)
+
+
+@unittest.skipUnless(URL, "no Postgres reachable (docker compose up -d postgres, or set TEST_DATABASE_URL)")
+class RekeyTest(LoadTest):
+    def test_key_change_keeps_row_and_joins_near_copies(self):
+        from db.load import load_run
+        near = {"lat": 29.78, "lng": -96.15}
+        write_run(self.tmp, "r1", "realtor", [r("realtor", "a", "100 Mill Creek Rd", 100, sqft=1500, **near)])
+        load_run(self.conn, self.tmp, "r1", log=lambda *_: None)
+        lid, ext = self.conn.execute("SELECT id, external_id FROM listings").fetchone()
+        # simulate a key made by older matching code
+        self.conn.execute("INSERT INTO properties (property_key) VALUES ('77474|100 mill|')")
+        self.conn.execute("UPDATE listings SET property_key='77474|100 mill|'")
+        self.conn.commit()
+        # r2: same realtor home; redfin's copy lacks the suffix and sits 10 m away -> one listing, same id
+        write_run(self.tmp, "r2", "realtor", [r("realtor", "a", "100 Mill Creek Rd", 100, sqft=1500, **near)])
+        write_run(self.tmp, "r2", "redfin", [r("redfin", "9", "100 Mill Creek", 101, sqft=1510, lat=29.7801, lng=-96.15)])
+        load_run(self.conn, self.tmp, "r2", log=lambda *_: None)
+        rows = self.conn.execute("SELECT id, external_id, property_key, active, sources FROM listings").fetchall()
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0][:2], (lid, ext))
+        self.assertEqual(rows[0][3:], (True, ["realtor", "redfin"]))
+        self.assertNotIn("new", [e for e, _ in self.events("r2")])
+
+    test_lifecycle = test_incremental = None
