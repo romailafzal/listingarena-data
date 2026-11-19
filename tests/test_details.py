@@ -246,3 +246,15 @@ class StoreTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class MissingCheckDecideTest(unittest.TestCase):
+    def test_decide(self):
+        from jobs.missing_check import decide
+        self.assertEqual(decide("sale", None, True), ("removed", False))
+        self.assertEqual(decide("sale", "sold", False), ("sold", False))
+        self.assertEqual(decide("sale", "off_market", False), ("off_market", False))
+        self.assertEqual(decide("sale", "for_sale", False), ("for_sale", True))
+        self.assertEqual(decide("sale", "pending", False), ("pending", True))
+        self.assertEqual(decide("sale", "for_rent", False), ("off_market", False))  # left the sale channel
+        self.assertEqual(decide("rent", "for_rent", False), ("for_rent", True))

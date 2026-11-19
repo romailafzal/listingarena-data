@@ -159,12 +159,12 @@ def store_detail(conn, home: dict, detail: dict, run_id: str, bronze: str | None
     h = detail_hash(detail)
     src, sid = home["source"], home["source_id"]
     cols = ["source", "source_id", "listing_type", "listing_id", "property_key", "county_fips", "state",
-            *DETAIL_COLUMNS, *DETAIL_JSON, "payload", "row_hash", "bronze_path", "run_id"]
+            *DETAIL_COLUMNS, *DETAIL_JSON, "row_hash", "bronze_path", "run_id"]
     vals = [src, sid, home.get("listing_type"), home.get("listing_id"), home.get("property_key"),
             home.get("county_fips"), home.get("state"),
             *[detail.get(c) for c in DETAIL_COLUMNS],
             *[Jsonb(detail[c]) if detail.get(c) is not None else None for c in DETAIL_JSON],
-            Jsonb(detail), h, bronze, run_id]
+            h, bronze, run_id]  # no payload copy: the typed columns + bronze file hold it (migration 013)
     upd = ", ".join(f"{c}=EXCLUDED.{c}" for c in cols[2:])
     with conn.transaction():
         prev = conn.execute("SELECT row_hash FROM listing_details WHERE source=%s AND source_id=%s", (src, sid)).fetchone()
