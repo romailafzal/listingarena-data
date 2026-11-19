@@ -164,7 +164,7 @@ def store_detail(conn, home: dict, detail: dict, run_id: str, bronze: str | None
             home.get("county_fips"), home.get("state"),
             *[detail.get(c) for c in DETAIL_COLUMNS],
             *[Jsonb(detail[c]) if detail.get(c) is not None else None for c in DETAIL_JSON],
-            h, bronze, run_id]  # no payload copy: the typed columns + bronze file hold it (migration 013)
+            h, bronze, run_id]  # no payload copy: the typed columns + bronze file hold it (migration 013 dropped it)
     upd = ", ".join(f"{c}=EXCLUDED.{c}" for c in cols[2:])
     with conn.transaction():
         prev = conn.execute("SELECT row_hash FROM listing_details WHERE source=%s AND source_id=%s", (src, sid)).fetchone()
