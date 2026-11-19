@@ -10,6 +10,7 @@ Per (county, listing_type) unit, in one transaction:
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import time
 from collections import defaultdict
@@ -229,7 +230,7 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
                 current[d["property_key"]] = d
             # properties first: listings.property_key references them (carry_over renames to new keys)
             props = []
-            for m in merged:
+            for m in sorted(merged, key=lambda m: m["property_key"]):  # one lock order across loaders
                 street, unit = normalize_address(m.get("address"))
                 props.append((m["property_key"], m.get("address"), unit or None, m.get("city"), m.get("state"),
                               m.get("zip"), m.get("county_fips"), m.get("lat"), m.get("lng")))
@@ -244,7 +245,16 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
             events = detect(current, incoming)
             touched = {e["property_key"] for e in events if e["event"] != "removed"}
             touched |= {k for k, m in incoming.items() if k in current and current[k]["row_hash"] != m["row_hash"]}
-            upserts = [incoming[k] for k in touched]
+            upserts = [incoming[k] for k in sorted(touched)]   # sorted: concurrent loaders lock rows in one order
+            # a rekeyed row keeps the external_id of its old key; a new listing that later arrives under that old key
+            # would collide on (listing_type, external_id) and fail the whole unit: give it a derived id instead
+            new_ids = {m["external_id"]: m for m in upserts if m["property_key"] not in current and m.get("external_id")}
+            if new_ids:
+                for (eid,) in conn.execute("SELECT external_id FROM listings WHERE listing_type=%s AND external_id = ANY(%s)",
+                                           (u.listing_type, list(new_ids))).fetchall():
+                    m = dict(new_ids[eid])
+                    m["external_id"] = "la:" + hashlib.sha1((m["property_key"] + ":" + eid).encode()).hexdigest()[:16]
+                    upserts[upserts.index(new_ids[eid])] = m
             cols = ["property_key", "listing_type"] + LISTING_COLS
             sql = (f"INSERT INTO listings ({', '.join(cols)}, first_run_id, last_run_id) VALUES ({', '.join(['%s'] * (len(cols) + 2))}) "
                    f"ON CONFLICT (property_key, listing_type) DO UPDATE SET "
