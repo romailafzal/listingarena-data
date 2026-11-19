@@ -179,3 +179,10 @@ Reference = `/home/zsquare/Desktop/projects/data/datarivo_pipeline-main (1)/data
   jobs/collect.py and the Dagster job; must be tested on a few counties before a cycle uses it (no proxies).
 - Orchestrator main was behind the live checkout (feat/steady-cycle + uncommitted edits); synced in PR #19.
   That reverts main's never-live timer-based incremental refresh in us_run.sh/watchdog.sh.
+- 2026-11-20 follow-up: daily sold = newest sold_date first, stop 1 day before the county watermark; incremental
+  searches over the 10k cap fall back to the full banded fetch (price bands sale/rent, sold-date bands sold); a
+  403/429 pauses all requests to that source on this machine for 120 s (SOURCE_PAUSE_S, file in .pause/). Shared rate
+  limit = per-process cap LA_TOTAL_INFLIGHT/PAR (us_run.sh), so the machine total stays <= 128 per source.
+- Redfin daily incremental: not feasible. Its gis search has no updated-since filter or last-update sort (only list
+  date / price / days-on-market orders), so price/status changes can't be found without a full scan. Redfin stays on
+  the weekly full pass; Realtor (which covers most homes) runs daily.
