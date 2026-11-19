@@ -52,7 +52,7 @@ JOIN listings l ON l.id = e.listing_id AND l.active
 CROSS JOIN LATERAL jsonb_each_text(l.source_ids) AS s(source, sid)
 LEFT JOIN source_records sr ON sr.source = s.source AND sr.listing_type = l.listing_type AND sr.source_id = s.sid
 LEFT JOIN listing_details d ON d.source = s.source AND d.source_id = s.sid
-WHERE e.event IN ('new', 'changed', 'relisted')
+WHERE e.event IN ('new', 'relisted')  -- price/status changes go to history, no re-fetch
   AND s.source = ANY(%(sources)s)
   AND (%(lo)s::text IS NULL OR (e.county_fips >= %(lo)s AND e.county_fips < %(hi)s))  -- index range, LIKE can't use it
   AND (d.fetched_at IS NULL OR d.fetched_at < e.created_at)
