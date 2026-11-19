@@ -14,6 +14,7 @@ get independent, lower limits; the search-level concurrency above must not be ap
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import os
 import random
 import threading
@@ -181,7 +182,35 @@ class SourceClient:
             s.trust_env = False  # never pick up HTTP(S)_PROXY from the environment
         return s
 
+    # Global pause (no proxies): a 403/429 from a source pauses every request to it, in every process on this
+    # machine, for SOURCE_PAUSE_S (120) seconds. Shared through a small file holding the pause-until epoch.
+    def _pause_file(self) -> Path:
+        d = Path(os.environ.get("LA_PAUSE_DIR") or Path(__file__).resolve().parent.parent / ".pause")
+        return d / self.name
+
+    def _pause_all(self) -> None:
+        secs = float(os.environ.get(f"{self.name.upper()}_PAUSE_S", os.environ.get("SOURCE_PAUSE_S", 120)))
+        if secs <= 0:
+            return
+        f = self._pause_file()
+        try:
+            f.parent.mkdir(parents=True, exist_ok=True)
+            tmp = f.with_suffix(f".{os.getpid()}")
+            tmp.write_text(str(time.time() + secs))
+            os.replace(tmp, f)
+            print(f"[{self.name}] blocked: pausing all requests to it for {secs:.0f}s", flush=True)
+        except OSError:
+            pass
+
+    def _paused_for(self) -> float:
+        try:
+            return max(0.0, float(self._pause_file().read_text()) - time.time())
+        except (OSError, ValueError):
+            return 0.0
+
     def _wait_turn(self) -> None:
+        while (p := self._paused_for()) > 0:
+            self.sleep(min(p, 30.0))
         with self._lock:
             now = time.monotonic()
             at = max(now, self._next_at)
@@ -227,6 +256,8 @@ class SourceClient:
                 self._count("blocked" if blocked else "errors")
                 if blocked:
                     self._note_outcome(True)
+                    if self._paused_for() <= 0:
+                        self._pause_all()
                 if self.limiter:
                     (self.limiter.note_block if blocked else self.limiter.note_error)()
             finally:

@@ -151,6 +151,35 @@ class RealtorParserTest(unittest.TestCase):
         self.assertEqual(bodies[0]["sort"][0]["field"], "last_update_date")
         self.assertTrue(pages[-1].meta["caught_up"])
 
+    def test_search_since_sold_by_sold_date_with_overlap(self):
+        from datetime import datetime, timezone
+        client = mock.Mock()
+        bodies = []
+
+        def answer(method, url, headers=None, json=None):
+            bodies.append(json["variables"])
+            page = json["variables"]["offset"] // realtor.PAGE_SIZE   # page k: sold on Nov (10 - k)
+            return {"data": {"home_search": {"total": 5000, "results": [
+                {"property_id": f"{page}", "last_sold_date": f"2026-11-{10 - page:02d}"}]}}}
+        client.request_json.side_effect = answer
+        since = datetime(2026, 11, 8, 12, tzinfo=timezone.utc)
+        pages = list(realtor.RealtorSource(client=client).search_since(TRAVIS, "sold", since))
+        self.assertEqual(bodies[0]["sort"][0]["field"], "sold_date")
+        self.assertEqual(len(pages), 4)   # stop = since - 1 day = Nov 7 12:00: Nov 10, 9, 8, then Nov 7 reaches it
+        self.assertTrue(pages[-1].meta["caught_up"])
+
+    def test_search_since_over_cap_falls_back_to_full(self):
+        from datetime import datetime, timezone
+        src = realtor.RealtorSource(client=mock.Mock())
+        src.client.request_json.return_value = {"data": {"home_search": {"total": 50_000, "results": [
+            {"property_id": "x", "last_update_date": "2026-11-10T00:00:00Z"}]}}}
+        full = [realtor.Page(1, {}, {}, [], {"total": 50_000}), realtor.Page(2, {}, {}, [], {"total": 50_000})]
+        with mock.patch.object(realtor.RealtorSource, "search", return_value=iter(full)) as s:
+            pages = list(src.search_since(TRAVIS, "sale", datetime(2026, 11, 1, tzinfo=timezone.utc)))
+        s.assert_called_once()
+        self.assertTrue(pages[-1].meta["caught_up"])
+        self.assertEqual(len({p.number for p in pages}), len(pages))
+
 
 class HttpTest(unittest.TestCase):
     def test_prefix(self):
@@ -352,3 +381,17 @@ def test_failed_counties_are_retried_in_the_same_run_bounded():
     assert sorted(t[2] for t, _ in left) == ["rent", "sale", "sold"]  # b, blocked c and switched-off d stay failed
     assert (c, True) in left and (d, False) in left                   # blocked / switched-off source: never retried
     assert retry_failed([(a, False)], run, retries=0, wait=0, sleep=naps.append) == [(a, False)] and len(rounds) == 2
+
+
+def test_global_pause_on_block(tmp_path, monkeypatch):
+    """A 403 pauses every request to that source (shared file), then requests go on."""
+    import time as _t
+    from sources.http import SourceClient
+    monkeypatch.setenv("LA_PAUSE_DIR", str(tmp_path))
+    monkeypatch.setenv("PAUSET_PAUSE_S", "0.3")
+    c = SourceClient("pauset", min_interval=0, retries=1, sleep=_t.sleep)
+    c._pause_all()
+    assert c._paused_for() > 0
+    t0 = _t.time()
+    c._wait_turn()
+    assert _t.time() - t0 >= 0.2 and c._paused_for() == 0

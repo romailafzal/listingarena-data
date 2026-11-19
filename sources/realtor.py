@@ -19,6 +19,7 @@ PAGE_SIZE = 200
 MAX_RESULTS = 10_000          # offset+limit cap per search; bigger searches are split by price band
 STATUS = {"sale": "for_sale", "rent": "for_rent", "sold": "sold"}
 SOLD_DAYS = int(os.environ.get("SOLD_WITHIN_DAYS", 90))
+SOLD_OVERLAP_DAYS = float(os.environ.get("SOLD_OVERLAP_DAYS", 1))
 
 FIELDS_FILE = Path(__file__).with_name("realtor_fields.graphql")
 FALLBACK_FIELDS = (
@@ -170,18 +171,38 @@ class RealtorSource(Source):
         """Incremental: newest-updated first; stop after the first page that reaches a listing updated before
         `since`. Searches with more changes than the 10k offset cap stop at the cap (meta caught_up=False)."""
         n, offset = 0, 0
+        # sold: newest sold_date first, stop a day (SOLD_OVERLAP_DAYS) before the watermark: a sale is dated by its
+        # closing day, which can be reported a little late. sale/rent: newest last_update_date first.
+        sold = listing_type == "sold"
+        stop_at = since - timedelta(days=SOLD_OVERLAP_DAYS) if sold else since
         while max_pages is None or n < max_pages:
-            body = build_body(county.realtor_location, listing_type, offset, by_update=True)
+            body = build_body(county.realtor_location, listing_type, offset, by_update=not sold)
             data = self._fetch(body)
             results, total = parse_search(data)
-            oldest = min(filter(None, (parse_ts(r.get("last_update_date")) for r in results)), default=None)
-            reached = not results or (oldest is not None and oldest < since)
+            stamp = (lambda r: parse_ts(r.get("last_sold_date") or (r.get("description") or {}).get("sold_date"))) \
+                if sold else (lambda r: parse_ts(r.get("last_update_date")))
+            oldest = min(filter(None, (stamp(r) for r in results)), default=None)
+            reached = not results or (oldest is not None and oldest < stop_at)
             offset += PAGE_SIZE
             end = reached or offset >= total or offset > MAX_RESULTS - PAGE_SIZE
             n += 1
             meta = {"total": total, "offset": offset - PAGE_SIZE}
             if end:
                 meta["caught_up"] = reached or offset >= total
+            if end and not meta["caught_up"]:
+                # more changes than the 10k cap: nothing may be left out, so fetch this county in full (price /
+                # sold-date bands) instead; the full fetch catches up and its last page says so
+                yield Page(n, {"url": ENDPOINT, "body": body["variables"]}, data, results, meta)
+                print(f"[realtor] {county.fips} {listing_type}: >10k changes since {since:%Y-%m-%d}, full fetch", flush=True)
+                last = None
+                for p in self.search(county, listing_type, max_pages):
+                    if last is not None:
+                        yield last
+                    last = Page(n + p.number, p.request, p.response, p.records, p.meta)
+                if last is not None:
+                    last.meta["caught_up"] = True
+                    yield last
+                return
             yield Page(n, {"url": ENDPOINT, "body": body["variables"]}, data, results, meta)
             if end:
                 return
