@@ -177,9 +177,9 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
             merged, nokey = merge(active)
             incoming = {m["property_key"]: m for m in merged}
             current = {}
-            for row in conn.execute(f"""SELECT id, property_key, active, {', '.join(c for c in LISTING_COLS)}
+            for row in conn.execute(f"""SELECT id, property_key, active, missing_since, {', '.join(c for c in LISTING_COLS)}
                                         FROM listings WHERE county_fips=%s AND listing_type=%s""", (u.fips, u.listing_type)):
-                d = dict(zip(["id", "property_key", "active"] + LISTING_COLS, row))
+                d = dict(zip(["id", "property_key", "active", "missing_since"] + LISTING_COLS, row))
                 current[d["property_key"]] = d
             events = detect(current, incoming)
             # properties
@@ -202,7 +202,8 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
             sql = (f"INSERT INTO listings ({', '.join(cols)}, first_run_id, last_run_id) VALUES ({', '.join(['%s'] * (len(cols) + 2))}) "
                    f"ON CONFLICT (property_key, listing_type) DO UPDATE SET "
                    + ", ".join(f"{c}=EXCLUDED.{c}" for c in LISTING_COLS)
-                   + ", active=true, removed_at=NULL, updated_at=now(), last_seen=now(), last_run_id=EXCLUDED.last_run_id")
+                   + ", active=true, removed_at=NULL, missing_since=NULL, listing_state=NULL, updated_at=now(), last_seen=now(), "
+                     "last_run_id=EXCLUDED.last_run_id")
             with conn.cursor() as cur:
                 for i in range(0, len(upserts), batch):
                     cur.executemany(sql, [[m["property_key"], u.listing_type]
@@ -210,10 +211,25 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
                                           + [run_id, run_id] for m in upserts[i:i + batch]])
             conn.execute("UPDATE listings SET last_seen=now(), last_run_id=%s WHERE county_fips=%s AND listing_type=%s AND active "
                          "AND property_key = ANY(%s)", (run_id, u.fips, u.listing_type, list(incoming)))
-            removed = [e["property_key"] for e in events if e["event"] == "removed"]
-            if removed:
-                conn.execute("""UPDATE listings SET active=false, removed_at=now(), updated_at=now(), last_run_id=%s
-                                WHERE listing_type=%s AND property_key = ANY(%s)""", (run_id, u.listing_type, removed))
+            # seen again: no longer missing (only the few rows that were)
+            back = [k for k in incoming if k in current and current[k].get("missing_since") is not None]
+            if back:
+                conn.execute("UPDATE listings SET missing_since=NULL WHERE listing_type=%s AND property_key = ANY(%s)",
+                             (u.listing_type, back))
+            # absent from a complete fetch: not removed yet. missing_since is set once; jobs.missing_check fetches the
+            # home's own page after MISSING_DAYS and only then marks it sold / off_market / removed. Only the first
+            # miss is an event ('missing'); later misses of an already-missing home are not.
+            absent = [e["property_key"] for e in events if e["event"] == "removed"]
+            already = {k for k in absent if current[k].get("missing_since") is not None}
+            for e in events:
+                if e["event"] == "removed":
+                    e["event"] = "missing"
+            events = [e for e in events if not (e["event"] == "missing" and e["property_key"] in already)]
+            fresh_missing = [k for k in absent if k not in already]
+            if fresh_missing:
+                conn.execute("""UPDATE listings SET missing_since=now(), last_run_id=%s
+                                WHERE listing_type=%s AND property_key = ANY(%s) AND missing_since IS NULL""",
+                             (run_id, u.listing_type, fresh_missing))
             # ids: known ones from `current`; only listings inserted just now are looked up (by the unique key)
             ids = {k: c["id"] for k, c in current.items()}
             fresh = [e["property_key"] for e in events if e["property_key"] not in ids]
@@ -229,7 +245,7 @@ def load_unit(conn: psycopg.Connection, run_id: str, u: Unit, batch: int = 500) 
             cnt = defaultdict(int)
             for e in events:
                 cnt[e["event"]] += 1
-            out["merged"] = {"fetched": len(merged), "new": cnt["new"], "changed": cnt["changed"], "removed": cnt["removed"],
+            out["merged"] = {"fetched": len(merged), "new": cnt["new"], "changed": cnt["changed"], "removed": cnt["removed"], "missing": cnt["missing"],
                              "relisted": cnt["relisted"], "active": len(merged), "nokey": len(nokey),
                              "multi_source": sum(1 for m in merged if len(m["sources"]) > 1),
                              "complete": all(s.get("complete") for s in out["sources"].values()) and bool(out["sources"]),

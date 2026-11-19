@@ -86,9 +86,12 @@ class LoadTest(unittest.TestCase):
         write_run(self.tmp, "r2", "redfin", [r("redfin", "1", "10 Oak St", 150, sqft=1500)])
         write_run(self.tmp, "r2", "realtor", [], error="HTTP 403")
         load_run(self.conn, self.tmp, "r2", log=lambda *_: None)
-        self.assertEqual(self.events("r2"), [("changed", "77474|10 oak|"), ("removed", "77474|20 elm|")])
+        self.assertEqual(self.events("r2"), [("changed", "77474|10 oak|"), ("missing", "77474|20 elm|")])
+        # absent from a complete fetch: still active, only marked missing (jobs.missing_check decides later)
         active = {k for (k,) in self.conn.execute("SELECT property_key FROM listings WHERE active")}
-        self.assertEqual(active, {"77474|10 oak|", "77474|30 pine|"})
+        self.assertEqual(active, {"77474|10 oak|", "77474|20 elm|", "77474|30 pine|"})
+        miss = lambda: self.conn.execute("SELECT missing_since IS NOT NULL FROM listings WHERE property_key='77474|20 elm|'").fetchone()[0]  # noqa: E731
+        self.assertTrue(miss())
         ch = self.conn.execute("SELECT changes FROM listing_events WHERE run_id='r2' AND event='changed'").fetchone()[0]
         # sqft: redfin has precedence; price: realtor (still active since its fetch failed) keeps precedence
         self.assertEqual(ch, {"sqft": {"before": None, "after": 1500}})
@@ -96,10 +99,15 @@ class LoadTest(unittest.TestCase):
         self.assertEqual(stats["realtor"], 1)
         self.assertEqual(self.conn.execute("SELECT kind FROM errors WHERE run_id='r2'").fetchone()[0], "blocked")
 
-        # r3: partial (incomplete) fetch never removes; 20 Elm comes back -> relisted
+        # r2b: missing again -> no second 'missing' event
+        write_run(self.tmp, "r2b", "redfin", [r("redfin", "1", "10 Oak St", 150, sqft=1500)])
+        write_run(self.tmp, "r2b", "realtor", [], error="HTTP 403")
+        load_run(self.conn, self.tmp, "r2b", log=lambda *_: None)
+        self.assertEqual(self.events("r2b"), [])
+        # r3: partial (incomplete) fetch never removes; 20 Elm comes back -> no longer missing
         write_run(self.tmp, "r3", "redfin", [r("redfin", "2", "20 Elm St", 200)], complete=False)
         load_run(self.conn, self.tmp, "r3", log=lambda *_: None)
-        self.assertEqual(self.events("r3"), [("relisted", "77474|20 elm|")])
+        self.assertFalse(miss())
         self.assertEqual(self.conn.execute("SELECT count(*) FROM listings WHERE active").fetchone()[0], 3)
 
     def test_incremental(self):

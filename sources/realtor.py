@@ -85,6 +85,18 @@ def parse_search(data: dict) -> tuple[list, int]:
     return hs.get("results") or [], hs.get("total") or 0
 
 
+
+def realtor_status(r: dict) -> str | None:
+    """Realtor's for_sale search also returns pending / contingent / coming soon homes, told apart only by flags.
+    They are their own status (not counted as for sale)."""
+    s, f = r.get("status"), r.get("flags") or {}
+    if s == "for_sale":
+        for flag, name in (("is_pending", "pending"), ("is_contingent", "contingent"), ("is_coming_soon", "coming_soon")):
+            if f.get(flag):
+                return name
+    return s
+
+
 class RealtorSource(Source):
     name = "realtor"
     workers = 2
@@ -249,7 +261,7 @@ class RealtorSource(Source):
             "lat": c.get("lat"), "lng": c.get("lon"),
             "description": d.get("text"),
             "photo_url": (r.get("primary_photo") or {}).get("href"),
-            "status": r.get("status"),
+            "status": realtor_status(r),
             "source": self.name, "source_id": str(r.get("property_id")),
             "url": r.get("href") or (f"https://www.realtor.com/realestateandhomes-detail/{r['permalink']}" if r.get("permalink") else None),
             "extra": realtor_extra(r),
