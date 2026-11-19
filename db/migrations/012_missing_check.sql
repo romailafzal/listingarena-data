@@ -26,4 +26,8 @@ ALTER TABLE listing_events ADD CONSTRAINT listing_events_event_check
 
 -- listing_details.payload is no longer written (owner approved dropping it; tools/drop_detail_payload.py empties it,
 -- a later migration drops it)
-ALTER TABLE listing_details ALTER COLUMN payload DROP NOT NULL;
+DO $$ BEGIN   -- guarded: 013 drops the column, and a re-run of this file (tests) must not fail
+  IF EXISTS (SELECT 1 FROM information_schema.columns WHERE table_name='listing_details' AND column_name='payload') THEN
+    ALTER TABLE listing_details ALTER COLUMN payload DROP NOT NULL;
+  END IF;
+END $$;
