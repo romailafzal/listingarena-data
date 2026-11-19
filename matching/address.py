@@ -88,10 +88,15 @@ def street_core(street: str) -> str:
     if not toks:
         return ""
     num, rest = toks[0], [t for t in toks[1:] if t not in DIRECTIONS]
-    while len(rest) > 1 and rest[-1] in SUFFIXES.values() and rest[-1] != "hwy":
-        rest.pop()
-    while len(rest) > 1 and rest[-1] in SUFFIXES and rest[-2] not in ("fm", "rm", "rr", "cr"):
-        rest.pop()  # "church lane ln"
+    # Drop ONE trailing suffix. Dropping every suffix merged different streets:
+    # "300 Biscayne Blvd Way" and "300 S Biscayne Blvd" both became "300 biscayne".
+    if len(rest) > 1 and rest[-1] in SUFFIXES.values() and rest[-1] != "hwy":
+        last = rest.pop()
+        # a spelled-out copy of the same suffix ("church lane ln") is still one suffix
+        if len(rest) > 1 and SUFFIXES.get(rest[-1]) == last and rest[-1] != last and rest[-2] not in ("fm", "rm", "rr", "cr"):
+            rest.pop()
+    elif len(rest) > 1 and rest[-1] in SUFFIXES and rest[-2] not in ("fm", "rm", "rr", "cr"):
+        rest.pop()  # spelled-out suffix left as the last word ("church lane")
     return " ".join([num] + rest)
 
 
