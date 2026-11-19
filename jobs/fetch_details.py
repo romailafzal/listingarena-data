@@ -81,6 +81,10 @@ WHERE (%(lo)s::text IS NULL OR (l.county_fips >= %(lo)s AND l.county_fips < %(hi
 """
 NOT_FOUND_RETRY_DAYS = int(os.environ.get("DETAIL_NOT_FOUND_RETRY_DAYS", "30"))
 NOT_FOUND = ("HOME_NOT_FOUND", "no home for")
+# --include-missing adds at most this many homes without details per process (0 = no cap). Refresh cycles fetch
+# details for new/changed/relisted homes; the old backlog (mostly pages the site will not serve) only trickles in,
+# so one cycle's details step stays well under an hour instead of re-queuing ~600k homes every cycle.
+MISSING_MAX = int(os.environ.get("DETAIL_MISSING_MAX", "5000"))
 
 
 KEYS = ("listing_id", "listing_type", "property_key", "county_fips", "state", "source", "source_id",
@@ -117,10 +121,13 @@ def select_homes(conn, since: str, sources: list[str], state: str | None, limit:
     rows = list(best.values())[:limit] if limit else list(best.values())
     if include_missing and (not limit or len(rows) < limit):
         seen = {(r["source"], r["source_id"]) for r in rows}
-        more = f" LIMIT {int(limit) - len(rows) + len(seen)}" if limit else ""
+        cap = len(rows) + MISSING_MAX if MISSING_MAX > 0 else None
+        if limit:
+            cap = min(cap, limit) if cap else limit
+        more = f" LIMIT {cap - len(rows) + len(seen)}" if cap else ""
         for r in conn.execute(SELECT_MISSING + more, p):
             d = dict(zip(KEYS, r))
-            if (d["source"], d["source_id"]) not in seen and (not limit or len(rows) < limit):
+            if (d["source"], d["source_id"]) not in seen and (not cap or len(rows) < cap):
                 seen.add((d["source"], d["source_id"]))
                 rows.append(d)
     if "realtor" in sources and (not limit or len(rows) < limit):
