@@ -258,7 +258,11 @@ def main(argv=None) -> int:
         sources = {n: s for n, s in sources.items() if s.supports_since}
         watermarks = load_watermarks(list(sources), float(os.environ.get("LA_INCREMENTAL_OVERLAP_MIN", 60)))
     caps = dict(kv.split("=") for kv in a.source_workers.split(",") if "=" in kv)
-    sems = {n: threading.BoundedSemaphore(int(caps.get(n, s.workers))) for n, s in sources.items()}
+    # one source per process (the Dagster job runs one collect per source): its county cap is --workers, not the
+    # source's class default (2), which held a 30-worker incremental pass to ~1.4 requests in flight (VA 17 min for
+    # 399 one-page requests). Requests stay bounded by <SOURCE>_MAX_INFLIGHT (us_run.sh: 128 total per source).
+    one = len(sources) == 1
+    sems = {n: threading.BoundedSemaphore(int(caps.get(n, a.workers if one else s.workers))) for n, s in sources.items()}
     counties = load_counties([s.strip() for s in a.states.split(",")], set(filter(None, a.counties.split(","))) or None)
     col = Collector(Path(a.out), a.run_id, a.max_pages, watermarks)
 

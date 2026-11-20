@@ -83,8 +83,8 @@ NOT_FOUND_RETRY_DAYS = int(os.environ.get("DETAIL_NOT_FOUND_RETRY_DAYS", "30"))
 NOT_FOUND = ("HOME_NOT_FOUND", "no home for")
 # --include-missing adds at most this many homes without details per process (0 = no cap). Refresh cycles fetch
 # details for new/changed/relisted homes; the old backlog (mostly pages the site will not serve) only trickles in,
-# so one cycle's details step stays well under an hour instead of re-queuing ~600k homes every cycle.
-MISSING_MAX = int(os.environ.get("DETAIL_MISSING_MAX", "5000"))
+# so one cycle's details step stays short (5000/state was ~250k homes, ~2 h) instead of re-queuing ~600k homes every cycle.
+MISSING_MAX = int(os.environ.get("DETAIL_MISSING_MAX", "500"))
 
 
 KEYS = ("listing_id", "listing_type", "property_key", "county_fips", "state", "source", "source_id",
