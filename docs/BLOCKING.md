@@ -186,3 +186,7 @@ Reference = `/home/zsquare/Desktop/projects/data/datarivo_pipeline-main (1)/data
 - Redfin daily incremental: not feasible. Its gis search has no updated-since filter or last-update sort (only list
   date / price / days-on-market orders), so price/status changes can't be found without a full scan. Redfin stays on
   the weekly full pass; Realtor (which covers most homes) runs daily.
+- 2026-11-21: us_refresh_20261121T0339 stalled 16 h: from ~07:30 Realtor failed DNS (NameResolutionError), then HTTP
+  429 from this PC; DNS errors were plain errors (fast retries, no pause). Fixed: DNS/refused = blocked, global pause
+  doubles 120 s -> 30 min while it repeats, 30 blocks in a row switch the source off for that state (counties fail
+  fast, next cycle retries). Rolled out after that cycle.
