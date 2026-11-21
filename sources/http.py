@@ -182,31 +182,46 @@ class SourceClient:
             s.trust_env = False  # never pick up HTTP(S)_PROXY from the environment
         return s
 
-    # Global pause (no proxies): a 403/429 from a source pauses every request to it, in every process on this
-    # machine, for SOURCE_PAUSE_S (120) seconds. Shared through a small file holding the pause-until epoch.
+    # Global pause (no proxies): a 403/429, or the host not resolving / refusing connections, pauses every request
+    # to the source, in every process on this machine. The pause doubles while the trouble keeps coming back
+    # (SOURCE_PAUSE_S 120 s -> 240 -> ... -> SOURCE_PAUSE_MAX_S 1800 s) and starts over once requests went through
+    # for a while. Shared through a small file: "<pause-until epoch> <level>".
     def _pause_file(self) -> Path:
         d = Path(os.environ.get("LA_PAUSE_DIR") or Path(__file__).resolve().parent.parent / ".pause")
         return d / self.name
 
-    def _pause_all(self) -> None:
-        secs = float(os.environ.get(f"{self.name.upper()}_PAUSE_S", os.environ.get("SOURCE_PAUSE_S", 120)))
-        if secs <= 0:
+    def _pause_state(self) -> tuple[float, int]:
+        try:
+            parts = self._pause_file().read_text().split()
+            return float(parts[0]), int(parts[1]) if len(parts) > 1 else 0
+        except (OSError, ValueError, IndexError):
+            return 0.0, 0
+
+    def _pause_all(self, why: str = "blocked") -> None:
+        base = float(os.environ.get(f"{self.name.upper()}_PAUSE_S", os.environ.get("SOURCE_PAUSE_S", 120)))
+        if base <= 0:
             return
+        cap = float(os.environ.get("SOURCE_PAUSE_MAX_S", 1800))
+        until, level = self._pause_state()
+        now = time.time()
+        if until > now:
+            return                                   # another worker/process already paused it
+        # trouble again within 2x the last pause after it ended: one level up; else start over
+        last = min(cap, base * 2 ** level)
+        level = level + 1 if until and now - until < 2 * last else 0
+        secs = min(cap, base * 2 ** level)
         f = self._pause_file()
         try:
             f.parent.mkdir(parents=True, exist_ok=True)
             tmp = f.with_suffix(f".{os.getpid()}")
-            tmp.write_text(str(time.time() + secs))
+            tmp.write_text(f"{now + secs} {level}")
             os.replace(tmp, f)
-            print(f"[{self.name}] blocked: pausing all requests to it for {secs:.0f}s", flush=True)
+            print(f"[{self.name}] {why}: pausing all requests to it for {secs:.0f}s (level {level})", flush=True)
         except OSError:
             pass
 
     def _paused_for(self) -> float:
-        try:
-            return max(0.0, float(self._pause_file().read_text()) - time.time())
-        except (OSError, ValueError):
-            return 0.0
+        return max(0.0, self._pause_state()[0] - time.time())
 
     def _wait_turn(self) -> None:
         while (p := self._paused_for()) > 0:
@@ -241,10 +256,18 @@ class SourceClient:
             try:
                 r = self._session().request(method, url, headers=h, timeout=self.timeout, **kw)
             except requests.RequestException as e:
-                last, blocked = f"{type(e).__name__}: {e}", False
-                self._count("errors")
+                last = f"{type(e).__name__}: {e}"
+                # DNS failure / refused connection: the source (or our network) is unreachable. Retrying fast just
+                # burns attempts: treat it like a block (global pause, lower cap, counts toward switching off).
+                blocked = isinstance(e, requests.ConnectionError) and not isinstance(e, requests.Timeout) and any(
+                    x in str(e) for x in ("NameResolution", "Failed to resolve", "Connection refused",
+                                          "Temporary failure in name resolution"))
+                self._count("blocked" if blocked else "errors")
+                if blocked:
+                    self._note_outcome(True)
+                    self._pause_all("unreachable")
                 if self.limiter:
-                    self.limiter.note_error()
+                    (self.limiter.note_block if blocked else self.limiter.note_error)()
             else:
                 self._count("latency_s", time.monotonic() - t0)
                 soft = looks_blocked(r)
@@ -256,8 +279,7 @@ class SourceClient:
                 self._count("blocked" if blocked else "errors")
                 if blocked:
                     self._note_outcome(True)
-                    if self._paused_for() <= 0:
-                        self._pause_all()
+                    self._pause_all(f"HTTP {r.status_code}" if not soft else "captcha")
                 if self.limiter:
                     (self.limiter.note_block if blocked else self.limiter.note_error)()
             finally:

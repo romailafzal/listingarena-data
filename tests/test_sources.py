@@ -395,3 +395,42 @@ def test_global_pause_on_block(tmp_path, monkeypatch):
     t0 = _t.time()
     c._wait_turn()
     assert _t.time() - t0 >= 0.2 and c._paused_for() == 0
+
+
+def test_pause_doubles_while_trouble_repeats(tmp_path, monkeypatch):
+    from sources.http import SourceClient
+    monkeypatch.setenv("LA_PAUSE_DIR", str(tmp_path))
+    monkeypatch.setenv("PAUSEX_PAUSE_S", "100")
+    c = SourceClient("pausex", min_interval=0, sleep=lambda s: None)
+    c._pause_all()
+    assert c._pause_state()[1] == 0 and 90 < c._paused_for() <= 100
+    c._pause_all()                                    # already paused: unchanged
+    assert c._pause_state()[1] == 0
+    (tmp_path / "pausex").write_text(f"{__import__('time').time() - 1} 0")   # pause just ended, trouble again
+    c._pause_all()
+    assert c._pause_state()[1] == 1 and 190 < c._paused_for() <= 200
+    (tmp_path / "pausex").write_text(f"{__import__('time').time() - 5000} 3")  # long quiet: start over
+    c._pause_all()
+    assert c._pause_state()[1] == 0
+
+
+def test_dns_failure_counts_as_blocked_and_switches_off(monkeypatch):
+    import requests as rq
+    from unittest import mock as m
+    from sources.http import SourceClient, SourceDisabled
+    monkeypatch.setenv("DNST_TRIP_BLOCKS", "3")
+    c = SourceClient("dnst", min_interval=0, retries=2, sleep=lambda s: None)
+    err = rq.ConnectionError("Failed to resolve 'www.realtor.com' (NameResolutionError)")
+    c._session = lambda: m.Mock(request=m.Mock(side_effect=err))
+    import pytest
+    with pytest.raises(RuntimeError):
+        c.request("GET", "http://x")
+    assert c.stats["blocked"] == 2 and c.stats["errors"] == 0
+    with pytest.raises(SourceDisabled):
+        for _ in range(3):
+            try:
+                c.request("GET", "http://x")
+            except SourceDisabled:
+                raise
+            except RuntimeError:
+                pass
