@@ -39,8 +39,17 @@ class Stop(Exception):
     pass
 
 
+PHOTO_PREFIX = "http://ap.rdcpix.com/"
+EXTRA = "allp:photos(limit:200){href} estimate{estimate} "   # alias: plain photos{href} is already in fields()
+HIST_BATCH = 50   # home() aliases per request (75+ fails with MAX_ROOT_FIELDS_LIMIT)
+HOME_FIELDS = ("property_id property_history{date event_name price listing{list_price status}} "
+               "tax_history{year tax assessment{total building land} market{total}}")
+
+
 def body(location, status, offset, limit=PAGE_SIZE, dates=None):
     b = build_body(location, "sold", offset, limit=limit, dates=dates)
+    if limit > 1:   # paging (not counting): every photo and the estimate in the same request
+        b["query"] = b["query"].replace("results{", "results{" + EXTRA, 1)
     q = b["variables"]["query"]
     q["status"] = [status]
     q.pop("sold_date", None)
@@ -110,10 +119,11 @@ class County:
 
 UPSERT = """
 INSERT INTO offmarket_homes (property_key, source_status, realtor_id, county_fips, state, address, city, zip, lat, lng,
-  property_type, beds, baths, sqft, lot_sqft, year_built, last_sold_date, last_sold_price, list_price, photo_url)
+  property_type, beds, baths, sqft, lot_sqft, year_built, last_sold_date, last_sold_price, list_price, photo_url,
+  photos, estimate)
 VALUES (%(property_key)s, %(source_status)s, %(realtor_id)s, %(county_fips)s, %(state)s, %(address)s, %(city)s, %(zip)s,
   %(lat)s, %(lng)s, %(property_type)s, %(beds)s, %(baths)s, %(sqft)s, %(lot_sqft)s, %(year_built)s, %(sold_date)s,
-  %(sold_price)s, %(list_price)s, %(photo_url)s)
+  %(sold_price)s, %(list_price)s, %(photo_url)s, %(photos)s, %(estimate)s)
 ON CONFLICT (property_key) DO UPDATE SET last_seen = now(),
   source_status = EXCLUDED.source_status, realtor_id = EXCLUDED.realtor_id,
   last_sold_date = greatest(offmarket_homes.last_sold_date, EXCLUDED.last_sold_date),
@@ -121,7 +131,9 @@ ON CONFLICT (property_key) DO UPDATE SET last_seen = now(),
                          THEN coalesce(EXCLUDED.last_sold_price, offmarket_homes.last_sold_price) ELSE offmarket_homes.last_sold_price END,
   beds = coalesce(EXCLUDED.beds, offmarket_homes.beds), baths = coalesce(EXCLUDED.baths, offmarket_homes.baths),
   sqft = coalesce(EXCLUDED.sqft, offmarket_homes.sqft), year_built = coalesce(EXCLUDED.year_built, offmarket_homes.year_built),
-  photo_url = coalesce(EXCLUDED.photo_url, offmarket_homes.photo_url)
+  photo_url = coalesce(EXCLUDED.photo_url, offmarket_homes.photo_url),
+  photos = coalesce(EXCLUDED.photos, offmarket_homes.photos), estimate = coalesce(EXCLUDED.estimate, offmarket_homes.estimate),
+  details_at = CASE WHEN EXCLUDED.realtor_id IS DISTINCT FROM offmarket_homes.realtor_id THEN NULL ELSE offmarket_homes.details_at END
 """
 
 
@@ -139,7 +151,92 @@ def row(src: RealtorSource, county, status, raw) -> dict | None:
             "baths": rec["baths"], "sqft": i(rec["sqft"]), "lot_sqft": i(rec["lot_sqft"]),
             "year_built": i(rec["year_built"]) if rec["year_built"] and 1600 < float(rec["year_built"]) < 2100 else None,
             "sold_date": rec["sold_date"], "sold_price": i(rec["price"]), "list_price": i(rec["list_price"]),
-            "photo_url": rec["photo_url"]}
+            "photo_url": rec["photo_url"], "photos": photos(raw), "estimate": i((raw.get("estimate") or {}).get("estimate"))}
+
+
+def photos(raw) -> list | None:
+    out = [p["href"].removeprefix(PHOTO_PREFIX) for p in (raw.get("allp") or raw.get("photos") or []) if p and p.get("href")]
+    return out or None
+
+
+def _n(v):
+    return None if v is None else int(round(float(v)))
+
+
+def compact_history(h: dict) -> tuple[list, list]:
+    ph = [[e.get("date"), e.get("event_name"), _n(e.get("price")), _n((e.get("listing") or {}).get("list_price")),
+           (e.get("listing") or {}).get("status")] for e in (h.get("property_history") or []) if e]
+    th = []
+    for t in h.get("tax_history") or []:
+        if not t:
+            continue
+        a, m = t.get("assessment") or {}, t.get("market") or {}
+        th.append([t.get("year"), _n(t.get("tax")), _n(a.get("total")), _n(a.get("building")), _n(a.get("land")),
+                   _n(m.get("total"))])
+    for rows in (ph, th):   # drop trailing nulls per entry: smaller jsonb
+        for r in rows:
+            while r and r[-1] is None:
+                r.pop()
+    return ph, th
+
+
+def history_county(conn, fips, inflight, stop_file, client=None) -> dict:
+    """Second pass: price + tax history for homes of a county without details_at, HIST_BATCH homes per request.
+    Resumes by details_at. Returns stats; stopped=True when the stop file appeared."""
+    import json
+    client = client or SourceClient("realtor", min_interval=float(os.environ.get("OFFMARKET_MIN_INTERVAL", 0.5)))
+    t0, done, filled, stopped = time.time(), 0, 0, False
+    req0 = client.stats["requests"]
+
+    def fetch(ids):
+        q = "query B{" + " ".join(f'h{i}:home(property_id:"{pid}"){{{HOME_FIELDS}}}' for i, pid in enumerate(ids)) + "}"
+        for attempt in range(5):
+            data = client.request_json("POST", ENDPOINT, headers=HEADERS,
+                                       json={"operationName": "B", "query": q, "variables": {}})
+            d = (data or {}).get("data")
+            if d is not None:
+                return ids, d
+            client.note_error()
+            if attempt == 4:
+                raise RuntimeError(f"realtor history: {str((data or {}).get('errors'))[:200]}")
+            client.sleep(client.backoff(attempt))
+
+    with ThreadPoolExecutor(inflight) as ex:
+        while True:
+            if stop_file and os.path.exists(stop_file):
+                stopped = True
+                break
+            ids = [r[0] for r in conn.execute(
+                "SELECT DISTINCT realtor_id FROM offmarket_homes WHERE county_fips=%s AND details_at IS NULL "
+                "AND realtor_id IS NOT NULL LIMIT %s", (fips, HIST_BATCH * inflight * 4))]
+            if not ids:
+                break
+            chunks = [ids[i:i + HIST_BATCH] for i in range(0, len(ids), HIST_BATCH)]
+            rows = []
+            for i in range(0, len(chunks), inflight):
+                if stop_file and os.path.exists(stop_file):
+                    stopped = True
+                    break
+                for got, d in ex.map(fetch, chunks[i:i + inflight]):
+                    for k, pid in enumerate(got):
+                        h = d.get(f"h{k}") or {}
+                        ph, th = compact_history(h)
+                        filled += bool(ph or th)
+                        rows.append((json.dumps(ph) if ph else None, json.dumps(th) if th else None, pid))
+            if rows:
+                with conn.cursor() as cur:
+                    cur.executemany("UPDATE offmarket_homes SET price_history=%s::jsonb, tax_history=%s::jsonb, "
+                                    "details_at=now() WHERE realtor_id=%s AND county_fips=%s",
+                                    [r + (fips,) for r in rows])
+                conn.commit()
+                done += len(rows)
+            if stopped:
+                break
+    if not stopped:
+        conn.execute("UPDATE offmarket_progress SET history_at=now() WHERE county_fips=%s", (fips,))
+        conn.commit()
+    return {"fips": fips, "history_homes": done, "with_history": filled,
+            "requests": client.stats["requests"] - req0, "seconds": round(time.time() - t0, 1), "stopped": stopped}
 
 
 def do_county(conn, county, inflight, stop_file, dry_run=False) -> dict:
@@ -215,6 +312,8 @@ def main(argv=None) -> int:
     ap.add_argument("--redo", action="store_true", help="also counties already done")
     ap.add_argument("--min-free-gb", type=float, default=float(os.environ.get("OFFMARKET_MIN_FREE_GB", 80)))
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--history-only", action="store_true", help="only the price/tax history pass")
+    ap.add_argument("--no-history", action="store_true", help="only the search pass")
     a = ap.parse_args(argv)
     fips = {f.strip() for f in a.fips.split(",") if f.strip()}
     states = [s.strip() for s in a.state.split(",") if s.strip()] or sorted({f"{_state_of(f)}" for f in fips})
@@ -235,8 +334,28 @@ def main(argv=None) -> int:
                 return 3
             if a.stop_file and os.path.exists(a.stop_file):
                 return 0
-            out = do_county(conn, c, a.inflight, a.stop_file, a.dry_run)
-            print(f"[offmarket] {out}", flush=True)
+            if not a.history_only:
+                out = do_county(conn, c, a.inflight, a.stop_file, a.dry_run)
+                print(f"[offmarket] {out}", flush=True)
+                if out["stopped"]:
+                    return 0
+            if not a.dry_run and not a.no_history:
+                out = history_county(conn, c.fips, a.inflight, a.stop_file)
+                print(f"[offmarket] history {out}", flush=True)
+                if out["stopped"]:
+                    return 0
+        if a.dry_run or a.no_history:
+            return 0
+        # counties searched before history existed (or with homes still missing it): history only
+        wanted = {c.fips for c in counties}
+        for (f,) in conn.execute("SELECT county_fips FROM offmarket_progress WHERE finished_at IS NOT NULL "
+                                 "AND history_at IS NULL ORDER BY finished_at").fetchall():
+            if f not in wanted:
+                continue
+            if a.stop_file and os.path.exists(a.stop_file):
+                return 0
+            out = history_county(conn, f, a.inflight, a.stop_file)
+            print(f"[offmarket] history {out}", flush=True)
             if out["stopped"]:
                 return 0
     return 0
