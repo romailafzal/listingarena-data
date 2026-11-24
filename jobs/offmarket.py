@@ -32,6 +32,7 @@ from sources.realtor import ENDPOINT, HEADERS, MAX_RESULTS, PAGE_SIZE, RealtorSo
 
 STATUSES = ("sold", "off_market")
 FIRST_DAY = date(2000, 1, 1)   # older than anything the search returns; bands with 0 homes cost one request
+LAST_DAY = date(2099, 12, 31)  # fixed, so the same county splits into the same bands on a later day (resume)
 
 
 class Stop(Exception):
@@ -49,8 +50,9 @@ def body(location, status, offset, limit=PAGE_SIZE, dates=None):
 
 
 class County:
-    def __init__(self, county, client: SourceClient, inflight: int, stop_file: str | None):
+    def __init__(self, county, client: SourceClient, inflight: int, stop_file: str | None, done_bands=()):
         self.c, self.client, self.inflight, self.stop_file = county, client, inflight, stop_file
+        self.done_bands = set(done_bands)
         self.src = RealtorSource(client)
         self.bands = 0
 
@@ -82,7 +84,8 @@ class County:
                     yield parse_search(data)[0]
 
     def run(self):
-        """Yield (status, raw) for every home; returns via self.api_total / self.complete."""
+        """Yield (status, raw) for every home, and (None, band_key) after each band is fully paged.
+        Bands in self.done_bands (saved by an earlier, stopped run) are skipped."""
         self.api_total, self.complete = 0, True
         for status in STATUSES:
             whole = self.total(status)
@@ -90,15 +93,19 @@ class County:
             if whole <= MAX_RESULTS:
                 bands = [(None, whole)] if whole else []
             else:
-                bands = self.split(status, FIRST_DAY, date.today() + timedelta(days=1))
+                bands = self.split(status, FIRST_DAY, LAST_DAY)
                 if sum(n for _, n in bands) < whole:   # homes without a sold date are not in any band
                     bands.insert(0, (None, min(whole, MAX_RESULTS)))
                     self.complete = False
             self.bands += len(bands)
             for dates, n in bands:
+                key = f"{status}:{dates[0]}:{dates[1]}" if dates else f"{status}:all"
+                if key in self.done_bands:
+                    continue
                 for results in self.pages(status, dates, n):
                     for r in results:
                         yield status, r
+                yield None, key
 
 
 UPSERT = """
@@ -137,7 +144,12 @@ def row(src: RealtorSource, county, status, raw) -> dict | None:
 
 def do_county(conn, county, inflight, stop_file, dry_run=False) -> dict:
     client = SourceClient("realtor", min_interval=float(os.environ.get("OFFMARKET_MIN_INTERVAL", 0.5)))
-    job = County(county, client, inflight, stop_file)
+    done_bands = []
+    if not dry_run:   # resume: bands an earlier stopped run already saved
+        row_ = conn.execute("SELECT done_bands FROM offmarket_progress WHERE county_fips=%s AND finished_at IS NULL",
+                            (county.fips,)).fetchone()
+        done_bands = list(row_[0]) if row_ else []
+    job = County(county, client, inflight, stop_file, done_bands)
     t0, fetched, batch, keys = time.time(), 0, {}, set()
     if not dry_run:
         conn.execute("INSERT INTO offmarket_progress (county_fips, state, started_at) VALUES (%s,%s,now()) "
@@ -154,6 +166,13 @@ def do_county(conn, county, inflight, stop_file, dry_run=False) -> dict:
     stopped = False
     try:
         for status, raw in job.run():
+            if status is None:   # a band is complete: save it and remember it
+                flush()
+                if not dry_run:
+                    conn.execute("UPDATE offmarket_progress SET done_bands = array_append(done_bands, %s) "
+                                 "WHERE county_fips=%s", (raw, county.fips))
+                    conn.commit()
+                continue
             fetched += 1
             r = row(job.src, county, status, raw)
             if r:
@@ -176,7 +195,8 @@ def do_county(conn, county, inflight, stop_file, dry_run=False) -> dict:
         conn.execute("""UPDATE offmarket_progress SET finished_at = CASE WHEN %(stopped)s THEN NULL ELSE now() END,
                         complete=%(complete)s, api_total=%(api_total)s, fetched=%(fetched)s, homes=%(homes)s,
                         requests=%(requests)s, blocked=%(blocked)s, errors=%(errors)s, seconds=%(seconds)s, bands=%(bands)s,
-                        note = CASE WHEN %(stopped)s THEN 'stopped (pipeline busy)' END WHERE county_fips=%(fips)s""", out)
+                        note = CASE WHEN %(stopped)s THEN 'stopped (pipeline busy)' END,
+                        done_bands = CASE WHEN %(stopped)s THEN done_bands ELSE '{}' END WHERE county_fips=%(fips)s""", out)
         conn.commit()
     return out
 
