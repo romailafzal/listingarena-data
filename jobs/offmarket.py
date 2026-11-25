@@ -27,7 +27,7 @@ sys.path.insert(0, str(ROOT))
 
 from jobs.collect import load_counties  # noqa: E402
 from matching.merge import key_for  # noqa: E402
-from sources.http import SourceClient  # noqa: E402
+from sources.http import BlockedError, SourceClient  # noqa: E402
 from sources.realtor import ENDPOINT, HEADERS, MAX_RESULTS, PAGE_SIZE, RealtorSource, build_body, parse_search  # noqa: E402
 
 STATUSES = ("sold", "off_market")
@@ -256,9 +256,20 @@ def do_county(conn, county, inflight, stop_file, dry_run=False) -> dict:
 
     def flush():
         if batch and not dry_run:
-            with conn.cursor() as cur:
-                cur.executemany(UPSERT, list(batch.values()))
-            conn.commit()
+            try:
+                with conn.cursor() as cur:
+                    cur.executemany(UPSERT, list(batch.values()))
+                conn.commit()
+            except Exception as e:   # one bad home must not stop the job: save the rest one by one
+                conn.rollback()
+                print(f"[offmarket] batch failed ({type(e).__name__}: {str(e)[:120]}); saving one by one", flush=True)
+                for rr in batch.values():
+                    try:
+                        conn.execute(UPSERT, rr)
+                        conn.commit()
+                    except Exception as e1:
+                        conn.rollback()
+                        print(f"[offmarket] skipped bad home {rr.get('property_key')}: {str(e1)[:120]}", flush=True)
         batch.clear()
     stopped = False
     try:
@@ -298,6 +309,20 @@ def do_county(conn, county, inflight, stop_file, dry_run=False) -> dict:
     return out
 
 
+def county_error(conn, fips, e) -> None:
+    """Log a county that failed (not blocked) and record it, so the run moves on and the health check sees it."""
+    import traceback
+    print(f"[offmarket] ERROR county {fips}: {type(e).__name__}: {str(e)[:200]}", flush=True)
+    traceback.print_exc()
+    try:
+        conn.rollback()
+        conn.execute("UPDATE offmarket_progress SET note = %s WHERE county_fips = %s",
+                     (f"error {time.strftime('%Y-%m-%d %H:%M')}: {type(e).__name__}: {str(e)[:150]}", fips))
+        conn.commit()
+    except Exception:
+        conn.rollback()
+
+
 def nvme_free_gb() -> float:
     st = os.statvfs("/")
     return st.f_bavail * st.f_frsize / 1e9
@@ -334,16 +359,22 @@ def main(argv=None) -> int:
                 return 3
             if a.stop_file and os.path.exists(a.stop_file):
                 return 0
-            if not a.history_only:
-                out = do_county(conn, c, a.inflight, a.stop_file, a.dry_run)
-                print(f"[offmarket] {out}", flush=True)
-                if out["stopped"]:
-                    return 0
-            if not a.dry_run and not a.no_history:
-                out = history_county(conn, c.fips, a.inflight, a.stop_file)
-                print(f"[offmarket] history {out}", flush=True)
-                if out["stopped"]:
-                    return 0
+            try:
+                if not a.history_only:
+                    out = do_county(conn, c, a.inflight, a.stop_file, a.dry_run)
+                    print(f"[offmarket] {out}", flush=True)
+                    if out["stopped"]:
+                        return 0
+                if not a.dry_run and not a.no_history:
+                    out = history_county(conn, c.fips, a.inflight, a.stop_file)
+                    print(f"[offmarket] history {out}", flush=True)
+            except BlockedError:
+                raise   # blocked: stop everything, the next idle run tries again
+            except Exception as e:   # anything else: note it, skip this county, keep going
+                county_error(conn, c.fips, e)
+                continue
+            if not a.dry_run and not a.no_history and out["stopped"]:   # history stopped (pipeline busy)
+                return 0
         if a.dry_run or a.no_history:
             return 0
         # counties searched before history existed (or with homes still missing it): history only
@@ -354,7 +385,13 @@ def main(argv=None) -> int:
                 continue
             if a.stop_file and os.path.exists(a.stop_file):
                 return 0
-            out = history_county(conn, f, a.inflight, a.stop_file)
+            try:
+                out = history_county(conn, f, a.inflight, a.stop_file)
+            except BlockedError:
+                raise
+            except Exception as e:
+                county_error(conn, f, e)
+                continue
             print(f"[offmarket] history {out}", flush=True)
             if out["stopped"]:
                 return 0
