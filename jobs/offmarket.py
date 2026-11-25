@@ -148,7 +148,7 @@ def row(src: RealtorSource, county, status, raw) -> dict | None:
     return {"property_key": k, "source_status": status, "realtor_id": rec["source_id"], "county_fips": county.fips,
             "state": county.state, "address": rec["address"], "city": rec["city"], "zip": rec["zip"],
             "lat": rec["lat"], "lng": rec["lng"], "property_type": rec["property_type"], "beds": rec["beds"],
-            "baths": rec["baths"], "sqft": i(rec["sqft"]), "lot_sqft": i(rec["lot_sqft"]),
+            "baths": rec["baths"], "sqft": i(rec["sqft"]) if rec["sqft"] and 0 < float(rec["sqft"]) < 2e9 else None, "lot_sqft": i(rec["lot_sqft"]),
             "year_built": i(rec["year_built"]) if rec["year_built"] and 1600 < float(rec["year_built"]) < 2100 else None,
             "sold_date": rec["sold_date"], "sold_price": i(rec["price"]), "list_price": i(rec["list_price"]),
             "photo_url": rec["photo_url"], "photos": photos(raw), "estimate": i((raw.get("estimate") or {}).get("estimate"))}
