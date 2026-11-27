@@ -339,6 +339,10 @@ def main(argv=None) -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--history-only", action="store_true", help="only the price/tax history pass")
     ap.add_argument("--no-history", action="store_true", help="only the search pass")
+    ap.add_argument("--search-first", action="store_true", default=os.environ.get("OFFMARKET_SEARCH_FIRST") == "1",
+                    help="search every county first (most homes per hour), price/tax history afterwards")
+    ap.add_argument("--biggest-first", action="store_true", default=os.environ.get("OFFMARKET_BIGGEST_FIRST") == "1",
+                    help="order counties by size (most active listings in the last 14 days) instead of state order")
     a = ap.parse_args(argv)
     fips = {f.strip() for f in a.fips.split(",") if f.strip()}
     states = [s.strip() for s in a.state.split(",") if s.strip()] or sorted({f"{_state_of(f)}" for f in fips})
@@ -349,6 +353,8 @@ def main(argv=None) -> int:
         return 0
     from db.migrate import connect
     with connect() as conn:
+        if a.biggest_first:
+            counties = by_size(conn, counties)
         done = set() if a.redo else {r[0] for r in conn.execute(
             "SELECT county_fips FROM offmarket_progress WHERE finished_at IS NOT NULL")}
         for c in counties:
@@ -365,7 +371,7 @@ def main(argv=None) -> int:
                     print(f"[offmarket] {out}", flush=True)
                     if out["stopped"]:
                         return 0
-                if not a.dry_run and not a.no_history:
+                if not a.dry_run and not a.no_history and not a.search_first:
                     out = history_county(conn, c.fips, a.inflight, a.stop_file)
                     print(f"[offmarket] history {out}", flush=True)
             except BlockedError:
@@ -373,7 +379,7 @@ def main(argv=None) -> int:
             except Exception as e:   # anything else: note it, skip this county, keep going
                 county_error(conn, c.fips, e)
                 continue
-            if not a.dry_run and not a.no_history and out["stopped"]:   # history stopped (pipeline busy)
+            if not a.dry_run and not a.no_history and not a.search_first and out["stopped"]:   # history stopped (pipeline busy)
                 return 0
         if a.dry_run or a.no_history:
             return 0
@@ -396,6 +402,21 @@ def main(argv=None) -> int:
             if out["stopped"]:
                 return 0
     return 0
+
+
+def by_size(conn, counties: list) -> list:
+    """Biggest counties first: most active listings in any run of the last 14 days (unknown = last)."""
+    try:
+        conn.execute("SET statement_timeout = '60s'")
+        size = dict(conn.execute("SELECT county_fips, max(active) FROM run_county_stats "
+                                 "WHERE loaded_at > now() - interval '14 days' GROUP BY 1").fetchall())
+        conn.execute("SET statement_timeout = 0")
+        conn.commit()
+    except Exception as e:   # sizes are only an ordering hint
+        conn.rollback()
+        print(f"[offmarket] county sizes unavailable ({str(e)[:120]}); state order", flush=True)
+        return counties
+    return sorted(counties, key=lambda c: -(size.get(c.fips) or 0))
 
 
 def _state_of(fips: str) -> str:
