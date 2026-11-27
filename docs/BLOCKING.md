@@ -190,3 +190,8 @@ Reference = `/home/zsquare/Desktop/projects/data/datarivo_pipeline-main (1)/data
   429 from this PC; DNS errors were plain errors (fast retries, no pause). Fixed: DNS/refused = blocked, global pause
   doubles 120 s -> 30 min while it repeats, 30 blocks in a row switch the source off for that state (counties fail
   fast, next cycle retries). Rolled out after that cycle.
+
+## 2026-11-27 Off-market continuous; full-run pool slots
+- Off-market search (realtor, inflight 2, min_interval 0.5 s): 3.54M homes, 20.3k requests, 0 blocked over 246 counties; ~440k homes/h while running. History pass (50 homes/request): ~94k homes/h. It only had ~44% of wall time (idle-only), ~29k homes/h overall.
+- Now its own service (listingarena-offmarket), inflight 4, also during the details phase (details: realtor inflight 60 x 4 states, 0 blocked); pauses only during listings fetch. Biggest counties first, search before history.
+- Full run 2026-11-27 (8h15m, 0 blocked, realtor ~4-5 s per request): waits came from Dagster pool slots held by dead runs (8/10 realtor, 7/10 redfin: "blocked by limit for pool") and a 2-12 min count(*) check per state. Fixed (orch#29): stale slots freed at run start, EXISTS check.
